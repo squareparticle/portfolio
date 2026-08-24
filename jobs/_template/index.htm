@@ -74,7 +74,7 @@
                     if(resume) $('#resumeLink').attr('href',resume); else $('#resumeNav').hide();
 
                     createMeunCategories();
-                    createCategories();
+                    await createCategories();
                     await getPage('main');
                     $('#placeFooter').load(PortfolioResources.sharedAsset('footer.htm'));
                     $(window).resize(resizeCategCells);

@@ -36,17 +36,19 @@ function resizeCategCells(){
     var picHeight=first.width(); $('.gridbox').css('height',picHeight+'px');
 }
 
-function createCategories() {
+async function createCategories() {
     var holder=$("#Categories").empty();
-    $.each(jsonData.categories || [], function(_, value) {
+    for(let categoryIndex=0;categoryIndex<(jsonData.categories || []).length;categoryIndex++) {
+        let value=jsonData.categories[categoryIndex];
         var id=value.id+'Thumb';
         var box=$("<div>",{id:id,"class":"col-xs-6 col-sm-4 col-md-3 box1 gridbox"}).css('background-color',value.color || '#777');
         box.click(function(){changePanel(value.id);$(window).scrollTop(0);});
-        var img=$("<img>",{id:value.id+'Img',src:PortfolioResources.asset(value.icon,jsonData._resourceBase),"class":"categCell"}).height('80%').width('80%');
+        var iconUrl=await PortfolioResources.resolveAsset(value.icon,jsonData._resourceBase);
+        var img=$("<img>",{id:value.id+'Img',src:iconUrl,"class":"categCell"}).height('80%').width('80%');
         var title=$("<div>",{id:value.id+'Title',"class":"row categCellTitle"}).html('&nbsp;'+value.name).hide();
         box.append(img,title); holder.append(box);
         box.mouseenter(function(){title.show();img.animateCss('bounceIn');}).mouseleave(function(){title.hide();});
-    });
+    }
     resizeCategCells();
 }
 
@@ -87,7 +89,7 @@ async function changePanel(panelID, targetSkillRef){
     var introText=category.intro.text || '';
     if(category.intro.mobileText && isBootstrapSize('xs')) introText=category.intro.mobileText;
     $('#subjectText').html(introText);
-    $('#subjectIMG').attr('src',PortfolioResources.asset(category.intro.image,jsonData._resourceBase)).css({width:'100%',height:'auto'});
+    $('#subjectIMG').attr('src',await PortfolioResources.resolveAsset(category.intro.image,jsonData._resourceBase)).css({width:'100%',height:'auto'});
 
     var templates=await Promise.all([
         $.get(PortfolioResources.sharedAsset('skilltile.htm')),
@@ -136,13 +138,14 @@ function renderSkillTile(holder, category, ref, value, index, skillTileHTML, ski
 
     if(media.gallery && media.gallery.length){
         var table=$('#'+prefix+'_table'), rowIndex=0, rowDiv=null;
-        $.each(media.gallery,function(tableIndex,path){
+        for(var tableIndex=0;tableIndex<media.gallery.length;tableIndex++){
+            var path=media.gallery[tableIndex];
             var mobBy=isBootstrapSize('xs')?2:(isBootstrapSize('sm')?3:4);
             if(tableIndex % mobBy === 0){ rowDiv=$('<div>',{'class':'row top-buffer'}); table.append(rowDiv); rowIndex++; }
             var url=PortfolioResources.asset(path,value._resourceBase);
             var imageDiv=$('<div>',{'class':'col-xs-6 col-sm-4 col-md-3'}), img=$('<img>',{src:url,width:'100%',height:'auto'}).css({cursor:'pointer'});
             img.click(function(){openNav(url);}); imageDiv.append(img); rowDiv.append(imageDiv);
-        });
+        }
     }
     if(media.htmlBlock) $('#'+prefix+'_block').html(media.htmlBlock);
 }

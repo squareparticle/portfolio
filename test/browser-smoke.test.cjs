@@ -34,12 +34,13 @@ test.before(async () => {
 });
 test.after(async () => { await browser.close(); await new Promise(resolve => server.close(resolve)); });
 
-async function pageAt(url, paths) {
+async function pageAt(url, paths, routes) {
     const page = await browser.newPage();
     const consoleErrors = [], failed = [];
     page.on('console', message => { if (message.type() === 'error') consoleErrors.push(message.text()); });
     page.on('requestfailed', request => failed.push(request.url()));
     if (paths) await page.addInitScript(value => { window.PORTFOLIO_PATHS = value; }, paths);
+    for (const route of routes || []) await page.route(route.pattern, route.handler);
     await page.goto(url, {waitUntil:'domcontentloaded'});
     return {page, consoleErrors, failed};
 }
@@ -71,6 +72,7 @@ test('default portfolio renders and Featured Read More navigates to its skill', 
 
 test('default About Me renders migrated content and nested jobs fall back to it', {timeout: 10000}, async () => {
     const {page} = await pageAt(baseUrl + '/');
+    await page.locator('#featuredSlides .item').first().waitFor({state:'visible'});
     await page.locator('#aboutNav').click();
     await page.locator('#aboutSections .jumbotron').first().waitFor({state:'visible'});
     assert.equal(await page.locator('#aboutSections .jumbotron').count(), 6);
@@ -79,11 +81,34 @@ test('default About Me renders migrated content and nested jobs fall back to it'
     await page.close();
 
     const nested = await pageAt(baseUrl + '/jobs/_template/');
+    await nested.page.locator('#featuredSlides .item').first().waitFor({state:'visible'});
     await nested.page.locator('#aboutNav').click();
     await nested.page.locator('#aboutSections .jumbotron').first().waitFor({state:'visible'});
     assert.equal(await nested.page.locator('#aboutSections .jumbotron').count(), 6);
     assert.match(await nested.page.locator('#aboutHeadline').innerText(), /Coding and being creative/);
     await nested.page.close();
+});
+
+test('nested jobs resolve shared category icons and intro graphics from the site root', {timeout: 10000}, async () => {
+    const {page} = await pageAt(baseUrl + '/jobs/_template/');
+    await page.locator('#featuredSlides .item').first().waitFor({state:'visible'});
+    await page.locator('#MobileImg').waitFor({state:'visible'});
+    assert.equal(new URL(await page.locator('#MobileImg').getAttribute('src'), baseUrl).pathname, '/images/logo/andriod.png');
+    await page.locator('#MobileThumb').click();
+    await page.locator('#subjectIMG').waitFor({state:'visible'});
+    assert.equal(new URL(await page.locator('#subjectIMG').getAttribute('src'), baseUrl).pathname, '/images/skills/mobile/title.png');
+    await page.close();
+});
+
+test('root portfolio category assets still resolve from its own root', {timeout: 10000}, async () => {
+    const root = await pageAt(baseUrl + '/');
+    await root.page.locator('#featuredSlides .item').first().waitFor({state:'visible'});
+    await root.page.locator('#ModelingImg').waitFor({state:'visible'});
+    assert.equal(new URL(await root.page.locator('#ModelingImg').getAttribute('src'), baseUrl).pathname, '/images/logo/blender.png');
+    await root.page.locator('#MobileThumb').click();
+    await root.page.locator('#subjectIMG').waitFor({state:'visible'});
+    assert.equal(new URL(await root.page.locator('#subjectIMG').getAttribute('src'), baseUrl).pathname, '/images/skills/mobile/title.png');
+    await root.page.close();
 });
 
 test('missing portfolio media does not prevent visible content', {timeout: 10000}, async () => {

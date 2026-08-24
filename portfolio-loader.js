@@ -63,6 +63,26 @@
         return join(base || sharedBase, path);
     }
 
+    function assetCandidates(path, base) {
+        if (!path || /^(https?:)?\/\//i.test(path) || path.charAt(0) === '/') return [path];
+        var preferredBase = base === undefined ? sharedBase : base;
+        var preferred = join(preferredBase, path);
+        // Manifest data in a job folder may still reference shared media. Try a
+        // same-named job asset first so job-local overrides remain possible.
+        if (preferredBase === jobBase && jobBase !== sharedBase) {
+            var shared = join(sharedBase, path);
+            return preferred === shared ? [preferred] : [preferred, shared];
+        }
+        return [preferred];
+    }
+
+    async function resolveAsset(path, base) {
+        var urls = assetCandidates(path, base);
+        if (urls.length === 1) return urls[0];
+        for (var i = 0; i < urls.length; i++) if (await exists(urls[i])) return urls[i];
+        return urls[urls.length - 1];
+    }
+
     function sharedAsset(path) { return asset(path, sharedBase); }
     function localAsset(path) { return asset(path, jobBase); }
 
@@ -90,6 +110,8 @@
         loadPageJson: loadPageJson,
         loadSkill: loadSkill,
         asset: asset,
+        assetCandidates: assetCandidates,
+        resolveAsset: resolveAsset,
         sharedAsset: sharedAsset,
         localAsset: localAsset,
         resolveResume: resolveResume

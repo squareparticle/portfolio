@@ -34,6 +34,15 @@ test('nested job portfolios resolve shared defaults from the site root', () => {
     ]);
 });
 
+test('job-local icon candidates take precedence over shared category assets', () => {
+    assert.deepEqual(rules.resourceCandidates('.', '', 'images/logo/custom.png'), [
+        'images/logo/custom.png', '/images/logo/custom.png'
+    ]);
+    assert.deepEqual(rules.resourceCandidates('.', '', 'images/skills/custom/title.png'), [
+        'images/skills/custom/title.png', '/images/skills/custom/title.png'
+    ]);
+});
+
 test('every Featured skill resolves to one normal category', () => {
     assert.deepEqual(rules.validateManifest({ categories: [{id: 'web', skills: ['a']}], featured: ['a'] }), []);
     assert.match(rules.validateManifest({ categories: [{id: 'web', skills: ['a']}], featured: ['missing'] })[0], /Featured skill/);

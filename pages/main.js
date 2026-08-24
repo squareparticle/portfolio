@@ -9,7 +9,8 @@ async function initMain(){
     }
 
     var indicators=$('#featuredIndicators').empty(), slides=$('#featuredSlides').empty();
-    $.each(featuredSkills,function(index,skill){
+    for(var index=0;index<featuredSkills.length;index++){
+        var skill=featuredSkills[index];
         var feature=skill.featured || {};
         indicators.append($('<li>',{'data-target':'#myCarousel','data-slide-to':index,'class':index===0?'active':''}));
         var item=$('<div>',{'class':'item'+(index===0?' active':''),'data-feature-index':index});
@@ -17,7 +18,7 @@ async function initMain(){
         var caption=$('<div>',{'class':'carousel-caption'}).append($('<h3>').text(feature.overlayTitle || skill.title));
         caption.append(document.createTextNode(feature.overlayText || skill.subtitle || ''));
         item.append(caption); slides.append(item);
-    });
+    }
 
     function showFeature(index){
         currentFeaturedIndex=index;
@@ -25,12 +26,13 @@ async function initMain(){
         var feature=skill.featured || {};
         $('#Description_sm,#Description_lg').text(feature.description || skill.text || '');
         var support=$('#featuredSupporting').empty();
-        $.each(feature.supportingImages || [], function(i,imgPath){
+        for(var i=0;i<(feature.supportingImages || []).length;i++){
+            var imgPath=feature.supportingImages[i];
             var imgUrl=PortfolioResources.asset(imgPath,skill._resourceBase);
             var col=$('<div>',{'class':'col-md-12'}), thumb=$('<div>',{'class':'thumbnail'}), a=$('<a>',{href:imgUrl,target:'_blank'});
             a.append($('<img>',{src:imgUrl,alt:(skill.title+' supporting image '+(i+1))}).css('width','100%'));
             thumb.append(a); col.append(thumb); support.append(col); col.find('img').animateCss('rubberBand');
-        });
+        }
         $('#featuredReadMore').off('click').on('click',function(e){e.preventDefault(); openFeaturedSkill(skill._ref);});
     }
 
