@@ -4,6 +4,9 @@
     root.PortfolioRules = api;
 })(typeof window !== 'undefined' ? window : globalThis, function () {
     function join(base, path) {
+        // An empty base represents the site root (used by nested job portfolios),
+        // while `.` deliberately remains relative to the current portfolio.
+        if (base === '') return '/' + path.replace(/^\.\//, '');
         if (!base || base === '.') return path;
         return base.replace(/\/$/, '') + '/' + path.replace(/^\.\//, '');
     }

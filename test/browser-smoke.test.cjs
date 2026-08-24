@@ -47,15 +47,43 @@ async function pageAt(url, paths) {
 test('default portfolio renders and Featured Read More navigates to its skill', {timeout: 10000}, async () => {
     const {page, consoleErrors} = await pageAt(baseUrl + '/');
     await page.locator('#featuredReadMore').waitFor({state:'visible'});
+    await page.locator('#featuredSlides .item').first().waitFor({state:'visible'});
     assert.ok((await page.locator('body').innerText()).trim().length > 100);
-    const firstRef = await page.locator('#featuredReadMore').evaluate(() => window.jsonData.featured[0]);
-    await page.locator('#featuredReadMore').evaluate((button, ref) => {
-        window.openFeaturedSkill(ref);
-        button.click();
-    }, firstRef);
-    await page.locator('#' + ('skill-' + firstRef.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase())).waitFor({state:'visible'});
+    assert.equal(await page.locator('#featuredSlides .item').count(), 5);
+    assert.equal(await page.locator('#featuredSlides .item.active img').count(), 1);
+    assert.equal(await page.locator('#featuredSupporting img').count(), 3);
+    assert.match(await page.locator('#featuredSlides .item.active .carousel-caption').innerText(), /Web Design/);
+    assert.match(await page.locator('#Description_lg').innerText(), /Designed and developed the UI and UX/);
+    for (let index = 1; index < 5; index++) {
+        await page.locator('.right.carousel-control').click();
+        await page.locator(`#featuredSlides .item.active[data-feature-index="${index}"]`).waitFor({state:'visible'});
+        assert.equal(await page.locator('#featuredSlides .item.active img').count(), 1);
+        assert.equal(await page.locator('#featuredSupporting img').count(), 3);
+        assert.ok((await page.locator('#featuredSlides .item.active .carousel-caption').innerText()).trim().length > 0);
+        assert.ok((await page.locator('#Description_lg').innerText()).trim().length > 0);
+    }
+    const activeRef = await page.locator('#featuredReadMore').evaluate(() => window.jsonData.featured[window.currentFeaturedIndex]);
+    await page.locator('#featuredReadMore').click();
+    await page.locator('#' + ('skill-' + activeRef.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase())).waitFor({state:'visible'});
     assert.equal(consoleErrors.filter(text => /Portfolio data could not|Unable to load/.test(text)).length, 0);
     await page.close();
+});
+
+test('default About Me renders migrated content and nested jobs fall back to it', {timeout: 10000}, async () => {
+    const {page} = await pageAt(baseUrl + '/');
+    await page.locator('#aboutNav').click();
+    await page.locator('#aboutSections .jumbotron').first().waitFor({state:'visible'});
+    assert.equal(await page.locator('#aboutSections .jumbotron').count(), 6);
+    assert.match(await page.locator('#aboutHeadline').innerText(), /Coding and being creative/);
+    assert.match(await page.locator('#aboutSections').innerText(), /Before College/);
+    await page.close();
+
+    const nested = await pageAt(baseUrl + '/jobs/_template/');
+    await nested.page.locator('#aboutNav').click();
+    await nested.page.locator('#aboutSections .jumbotron').first().waitFor({state:'visible'});
+    assert.equal(await nested.page.locator('#aboutSections .jumbotron').count(), 6);
+    assert.match(await nested.page.locator('#aboutHeadline').innerText(), /Coding and being creative/);
+    await nested.page.close();
 });
 
 test('missing portfolio media does not prevent visible content', {timeout: 10000}, async () => {
@@ -64,6 +92,17 @@ test('missing portfolio media does not prevent visible content', {timeout: 10000
     await page.reload({waitUntil:'domcontentloaded'});
     await page.locator('#featuredReadMore').waitFor({state:'visible'});
     assert.ok((await page.locator('body').innerText()).trim().length > 100);
+    await page.close();
+});
+
+test('Featured carousel remains usable when one supporting image is missing', {timeout: 10000}, async () => {
+    const {page} = await pageAt(baseUrl + '/');
+    await page.route('**/images/Design_2.jpg', route => route.fulfill({status:404, body:'missing'}));
+    await page.reload({waitUntil:'domcontentloaded'});
+    await page.locator('#featuredReadMore').waitFor({state:'visible'});
+    assert.equal(await page.locator('#featuredSlides .item.active img').count(), 1);
+    assert.equal(await page.locator('#featuredSupporting img').count(), 3);
+    assert.match(await page.locator('#Description_lg').innerText(), /Designed and developed the UI and UX/);
     await page.close();
 });
 

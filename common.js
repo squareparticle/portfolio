@@ -55,10 +55,10 @@ async function getPage(page){
     $('#skillsNav,#aboutNav,#mainNav').removeClass('active'); $('#'+page+'Nav').addClass('active');
     if($('#content').length) $('#content').remove();
     $('#contentHolder').append($("<div>",{id:'content'}));
-    $('#content').load(PortfolioResources.sharedAsset('pages/'+page+'.htm'), async function(){
-        var functionName='init'+page.toLowerCase().replace(/\b[a-z]/g,function(letter){return letter.toUpperCase();});
-        if(typeof window[functionName]==='function') await window[functionName](); else eval(functionName+'()');
-    });
+    var pageHtml=await $.get(PortfolioResources.sharedAsset('pages/'+page+'.htm'));
+    $('#content').html(pageHtml);
+    var functionName='init'+page.toLowerCase().replace(/\b[a-z]/g,function(letter){return letter.toUpperCase();});
+    if(typeof window[functionName]==='function') await window[functionName](); else eval(functionName+'()');
 }
 
 function createMeunCategories() {

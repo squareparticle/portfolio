@@ -25,6 +25,15 @@ test('missing local banner and aboutme resources fall back to defaults', () => {
     assert.equal(rules.resourceCandidates('jobs/acme', '.', 'aboutme.json', 'defaults/aboutme.json')[1], 'defaults/aboutme.json');
 });
 
+test('nested job portfolios resolve shared defaults from the site root', () => {
+    assert.deepEqual(rules.resourceCandidates('.', '', 'aboutme.json', 'defaults/aboutme.json'), [
+        'aboutme.json', '/defaults/aboutme.json'
+    ]);
+    assert.deepEqual(rules.resourceCandidates('.', '', 'skills/example.json'), [
+        'skills/example.json', '/skills/example.json'
+    ]);
+});
+
 test('every Featured skill resolves to one normal category', () => {
     assert.deepEqual(rules.validateManifest({ categories: [{id: 'web', skills: ['a']}], featured: ['a'] }), []);
     assert.match(rules.validateManifest({ categories: [{id: 'web', skills: ['a']}], featured: ['missing'] })[0], /Featured skill/);
