@@ -1,6 +1,3 @@
-**One-line repo description:**
-Modular JSON-driven portfolio system for generating job-specific versions of Jamie Whitten’s portfolio from reusable project skills.
-
 # Jamie Whitten Portfolio
 
 A modular, JSON-driven portfolio system designed to generate targeted portfolio versions for individual job applications while reusing a shared library of real project experience.
