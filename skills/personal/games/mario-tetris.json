@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "personal/games/mario-tetris",
+  "title": "Tetris Challenge (1997)",
+  "subtitle": "Turbo C++, Assembly, Shadow RAM",
+  "text": "When in college, I was challenged into a who can build the best Tetris game contest.  This was my entry.",
+  "media": {
+    "image": "images/skills/jams/tetris.jpg",
+    "gallery": [
+      "images/skills/jams/tetris_1.gif",
+      "images/skills/jams/tetris_2.gif",
+      "images/skills/jams/tetris_3.gif",
+      "images/skills/jams/tetris_4.gif"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Jams",
+    "legacyIndex": 5
+  }
+}

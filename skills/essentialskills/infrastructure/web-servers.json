@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "essentialskills/infrastructure/web-servers",
+  "title": "Web Servers",
+  "subtitle": "LAMP (Linux, Apache, MySQL, PHP), MEAN (MongoDB, Express, Angular, NodeJS), IIS, Apache, Tomcat",
+  "text": "I install, maintain and update many web servers for Essential Skills. I use Angular for adminstrative applications and Apache for large scale customer applications. ",
+  "media": {
+    "image": "images/skills/cloud/node.jpg"
+  },
+  "source": {
+    "legacyCategory": "Cloud",
+    "legacyIndex": 2
+  }
+}

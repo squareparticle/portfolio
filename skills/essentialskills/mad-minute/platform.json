@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "essentialskills/mad-minute/platform",
+  "title": "Mad Minute",
+  "subtitle": "Javascript, React, Canvas, JQuery, HTML5, CSS3, Ajax, PHP, JSON, AWS (CloudFront, EC2, Ubuntu, SimpleDB)",
+  "text": "I developed a Math Mad Minute application as a contract role for Essential Skills. This project required integration into the React version of the Teacher Dashboard.",
+  "media": {
+    "image": "images/skills/work/madminute.gif",
+    "gallery": [
+      "images/skills/work/madminute_1.png"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Work",
+    "legacyIndex": 3
+  }
+}

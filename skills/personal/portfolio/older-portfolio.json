@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "personal/portfolio/older-portfolio",
+  "title": "Older Portfolio (2007)",
+  "subtitle": "ASP, JSP, PHP, MySQL, Javascript, VBScript",
+  "text": "While hiring staff in the past, I became inspired by some creative portfolios.  Thus, I constructed my own while I was studying several server side languages.  I ended up porting the server side end to 3 languages in order to examine their differences.",
+  "media": {
+    "image": "images/skills/fullstack/portfolio.jpg"
+  },
+  "source": {
+    "legacyCategory": "Fullstack",
+    "legacyIndex": 7
+  }
+}

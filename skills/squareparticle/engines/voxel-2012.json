@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "squareparticle/engines/voxel-2012",
+  "title": "Voxel (2012)",
+  "subtitle": "Java 1.5, LWJGL, OpenGL 2.0, Qubicle",
+  "text": "I created a Voxel engine using LWJGL and Java. I started by constructing a 3D array of chunks (8x8x8 cubes each) and clustering 8x8x4 chunks on screen. Then I generated the materials, ground level, caves and biomes using 3D Perlin noise and a cellular automata method. Next, I calculated lighting per Voxel. To increase performance, I culled all hidden cubes and faces. Then I created a QEF file loader so that I could model my objects and levels with Qubicle.",
+  "mobileText": "I created a Voxel engine using LWJGL and Java. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+  "media": {
+    "image": "images/skills/engines/voxel.jpg",
+    "gallery": [
+      "images/skills/engines/voxel_1.jpg",
+      "images/skills/engines/voxel_2.png",
+      "images/skills/engines/voxel_3.jpg",
+      "images/skills/engines/voxel_4.jpg"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Engines",
+    "legacyIndex": 7
+  }
+}

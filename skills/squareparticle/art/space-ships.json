@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "squareparticle/art/space-ships",
+  "title": "Space Ships (2009 - present)",
+  "subtitle": "3DSMax, MilkShape, Blender",
+  "text": "I created many low polygon ships for H-0p3 and Bridge Captain. Below are a few examples.",
+  "media": {
+    "image": "images/skills/modeling/ship.jpg",
+    "gallery": [
+      "images/skills/modeling/ship_1.png",
+      "images/skills/modeling/ship_2.jpg",
+      "images/skills/modeling/ship_3.jpg",
+      "images/skills/modeling/ship_4.jpg",
+      "images/skills/modeling/ship_5.jpg",
+      "images/skills/modeling/ship_6.png",
+      "images/skills/modeling/ship_7.jpg",
+      "images/skills/modeling/ship_8.jpg"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Modeling",
+    "legacyIndex": 3
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "essentialskills/infrastructure/aws",
+  "title": "Amazon AWS (2011 - now)",
+  "subtitle": "Ubuntu, EC2, AMI, Load Balancers, S3, CloudFront, SES, SDB, Route 53",
+  "text": "I mainly use AWS APIs alongside <strong>Java, PHP and NodeJS</strong> for the purpose of building web services and server side coding.  Additionally, I developed tools for monitoring and launching EC2s, data backups, web deploys, database restructuring, and issuing daily automated e-mails using languages such as <strong>Python, Perl and Bash</strong>.",
+  "media": {
+    "image": "images/skills/cloud/ubuntu.png"
+  },
+  "source": {
+    "legacyCategory": "Cloud",
+    "legacyIndex": 0
+  }
+}

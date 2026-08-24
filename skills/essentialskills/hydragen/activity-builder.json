@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "essentialskills/hydragen/activity-builder",
+  "title": "Activity Builder",
+  "subtitle": "",
+  "text": "I constructed many activity builder applications for content creators and program designers.  Instead of programming 100's of activities with 1000's of variations, I created a tool to allow non developers to build their own programs.  Some of these tools allowed for dragging and dropping widgets, entering questions and testing them live in the editor.",
+  "mobileText": "I constructed many activity builder applications for content creators and program designers. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+  "media": {
+    "image": "images/skills/tools/actbuilder.jpg",
+    "gallery": [
+      "images/skills/tools/actbuilder_1.jpg",
+      "images/skills/tools/actbuilder_2.jpg",
+      "images/skills/tools/actbuilder_3.jpg"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Tools",
+    "legacyIndex": 7
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "squareparticle/game-jams/ludum-dare-23",
+  "title": "Lumdum Dare 23 (2012)",
+  "subtitle": "Java 1.5, C.E.L.L. Theme (Tiny World)",
+  "text": "You start off 5000 years in the past where you need to grow five nations in your tiny world. These nations will fight/trade with each other, but be careful as the wrong decision can spark civil wars that can overthrow your control. <a href=\"http://ludumdare.com/compo/ludum-dare-23/?action=preview&uid=12696\">Link</a>",
+  "media": {
+    "image": "images/skills/jams/ludum.jpg",
+    "htmlBlock": "<div class=\"embed-responsive embed-responsive-16by9\"> <iframe class=embed-responsive-item src=\"//www.youtube.com/embed/jDLuFf02_KU?rel=0\" allowfullscreen></iframe> </div>"
+  },
+  "source": {
+    "legacyCategory": "Jams",
+    "legacyIndex": 2
+  }
+}

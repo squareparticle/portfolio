@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "essentialskills/magies/production-tool",
+  "title": "Magie Maker",
+  "subtitle": "React, Spine, NodeJS, AWS Lambda",
+  "text": "I developed a tool to allow artists to collate their project work into our Magie system.  This application uploads compressed Spine files and builds a testing website for them usnig AWS Lambda.",
+  "media": {
+    "image": "images/skills/fullstack/magiemaker.gif",
+    "gallery": [
+      "images/skills/fullstack/magiemaker_1.gif"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Fullstack",
+    "legacyIndex": 1
+  }
+}

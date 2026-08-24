@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "essentialskills/data/isam-btree",
+  "title": "ISAM BTree",
+  "subtitle": "Java 1.1.8 - 1.6, Hex Editor",
+  "text": "Most schools don't have back-end servers to run databases; therefore, it was imperative to create our own serverless database for a few projects. One project used serialized objects and three other projects used ISAM BTrees. The challenging part was handling file locking of concurrent users across multiple platforms.",
+  "media": {
+    "image": "images/skills/databases/btree.jpg"
+  },
+  "source": {
+    "legacyCategory": "Databases",
+    "legacyIndex": 0
+  }
+}

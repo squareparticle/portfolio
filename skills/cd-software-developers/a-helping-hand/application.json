@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "cd-software-developers/a-helping-hand/application",
+  "title": "A Helping Hand",
+  "subtitle": "Visual Basic 6, OLE",
+  "text": "I became a stake stakeholder in the early days of CD Software Developers when a friend and I developed an application they sold to funeral homes.",
+  "media": {
+    "image": "images/skills/company/vb.jpg"
+  },
+  "source": {
+    "legacyCategory": "Company",
+    "legacyIndex": 5
+  }
+}

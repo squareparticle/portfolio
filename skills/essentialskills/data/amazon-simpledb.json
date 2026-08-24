@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "essentialskills/data/amazon-simpledb",
+  "title": "Amazon SDB",
+  "subtitle": "",
+  "text": "I have mainly used Amazon's SimpleDB for dealing with the data of 1000's of concurrent students across North America.",
+  "media": {
+    "image": "images/skills/databases/cloud.jpg"
+  },
+  "source": {
+    "legacyCategory": "Databases",
+    "legacyIndex": 3
+  }
+}

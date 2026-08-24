@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "essentialskills/infrastructure/servers",
+  "title": "Servers",
+  "subtitle": "Novell 3 - 6, Linux (Ubuntu, Knoppix, Red Hat, Darwin), Unix (AIX), Windows (NT, 2000, 2003, 2008),  OS X Server",
+  "text": "I supported Essentials Skills school software on a varierty of server platforms. In order to debug server side problems, I helped IT create a protected subnetwork of hot swappable servers and clients.",
+  "media": {
+    "image": "images/skills/cloud/novell.png"
+  },
+  "source": {
+    "legacyCategory": "Cloud",
+    "legacyIndex": 1
+  }
+}

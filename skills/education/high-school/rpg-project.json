@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "education/high-school/rpg-project",
+  "title": "High School Project (1994)",
+  "subtitle": "Turing, Delux Paint Animation, AAPlay, GWS",
+  "text": "For my Computer Science project, I choose to create a RPG.  I successfully completed a fully playable game in two months.  You can explore the map, find secrets, talk to towns people, grind for xp and money, learn spells, level up and defeat the Wizzard King.",
+  "media": {
+    "image": "images/skills/eng/rpg.gif",
+    "gallery": [
+      "images/skills/eng/hs.jpg",
+      "images/skills/eng/dq_1.png",
+      "images/skills/eng/dq_2.jpg"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Eng",
+    "legacyIndex": 2
+  }
+}

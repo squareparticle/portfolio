@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "squareparticle/cell/engine",
+  "title": "C.E.L.L. (Cross Emulation Library Layer)",
+  "subtitle": "Merged (XNA, JME, Blackberry SDK, Android SDK, JavaSE)",
+  "text": "Every language has a unique API to draw images, play sounds, manage files, store arrays, handle input etc... However, most languages share a C like syntax.  By building a native layer per platform, I can create a common UI engine (MicroGen) above any C like language. Using the MicroGen engine, I proceeded to construct a game engine (PlatformerLib) with physics, common AI, collision and scripting abilities.</br></br>To create a game, the developer has four choices: <ul><li>Start coding above the PlatformerLib layer beginning with a skeleton template.</li><li>Create scripts for graphic layers, mobs, player and game events.</li><li>Use the GUI editor to build the game like Unity.</li><li>Use a combination of any of the choices above.</li></ul> </br> I wrote an article for the Software Developer Journal explaining the entire engine and how I made C# syntax compatible with Java.",
+  "mobileText": "Every language has a unique API to draw images, play sounds, manage files, store arrays, handle input etc... <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+  "media": {
+    "image": "images/skills/engines/cell.jpg",
+    "gallery": [
+      "images/skills/engines/cell_9.jpg",
+      "images/skills/engines/cell_6.jpg",
+      "images/skills/engines/cell_7.jpg",
+      "images/skills/engines/cell_8.jpg"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Engines",
+    "legacyIndex": 3
+  }
+}

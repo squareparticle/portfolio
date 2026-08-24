@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "education/humber/cpu-emulator",
+  "title": "Software CPU Emulator",
+  "subtitle": "Turbo C++, GCC, DOS, AIX, VI, Pico",
+  "text": "My favorite school project was to invent a custom Assembly language and compiler.  From there, we created a software CPU emulator to execute the binary files. Basically, we modeled DOS's \"debug.exe\" interface.",
+  "media": {
+    "image": "images/skills/eng/cpu.jpg"
+  },
+  "source": {
+    "legacyCategory": "Eng",
+    "legacyIndex": 1
+  }
+}

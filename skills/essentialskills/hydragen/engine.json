@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "essentialskills/hydragen/engine",
+  "title": "Hydra-Gen Engine",
+  "subtitle": "Java 1.6, AWS, JNLP, Applet, MySQL, ISAM, BNF Custom Scripting",
+  "text": "At work I lead a team on an ambitious SR&ED project to construct an engine capable of producing all future applications for both web and desktop. Hydra-Gen stands for one engine that can generate many application types.  The principle concept was to give content creators the means to build their own software. This was accomplished by creating scriptable pages, panels, widgets coupled with custom XML BNF syntax.  Pages are usually populated from a massive database store (MassCon) where user input is saved through our Rosetta Database (SmartDB).  SmartDB is compatible with SimpleDB, SQL Server, MySQL, and other flat file formats such as Access, Burkley and our custom ISAM BTree.  ",
+  "mobileText": "At work I lead a team on an ambitious SR&ED project to construct an engine capable of producing all future applications for both web and desktop. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+  "media": {
+    "image": "images/skills/engines/hydra.jpg",
+    "gallery": [
+      "images/skills/engines/hydra_1.jpg",
+      "images/skills/engines/hydra_2.jpg",
+      "images/skills/engines/hydra_3.jpg",
+      "images/skills/engines/hydra_4.jpg",
+      "images/skills/engines/hydra_5.jpg",
+      "images/skills/engines/hydra_6.jpg",
+      "images/skills/engines/hydra_7.jpg",
+      "images/skills/engines/hydra_8.jpg"
+    ],
+    "htmlBlock": "<!--<strong>some stuff here</strong>-->"
+  },
+  "source": {
+    "legacyCategory": "Engines",
+    "legacyIndex": 4
+  },
+  "featured": {
+    "heroImage": "images/JavaSE.png",
+    "supportingImages": [
+      "images/JavaSE_1.jpg",
+      "images/JavaSE_2.jpg",
+      "images/JavaSE_3.jpg"
+    ],
+    "overlayTitle": "Java SE",
+    "overlayText": "Java 1.1 - 1.6, JNI, JNLP, XML-RPC, ISAM, AWS, Hydra-Gen",
+    "description": "Led a team of 7 for 5 years on a huge SR&ED project where I architected a widget based framework to allow non-programmers the ability to script interactive activities."
+  }
+}

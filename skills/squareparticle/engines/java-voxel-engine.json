@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "squareparticle/engines/java-voxel-engine",
+  "title": "3D Voxel Engine",
+  "subtitle": "Javascript, Canvas, Perlin Noise, Math, WebRTC, Batch Scripts",
+  "text": "I taught my 14-year-old to design and develop a voxel gaming engine during Covid 2020. <a target='_blank' href='http://jamiewhitten.net.s3.amazonaws.com/bradengine/portfolio/index.html'>View Engine</a>",
+  "mobileText": "I taught my 14-year-old to design and develop a voxel gaming engine during Covid 2020. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+  "media": {
+    "image": "images/skills/engines/bradmc.gif",
+    "gallery": [
+      "images/skills/engines/bradmc_1.png",
+      "images/skills/engines/bradmc_2.gif",
+      "images/skills/engines/bradmc_3.gif"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Engines",
+    "legacyIndex": 2
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "essentialskills/internal-tools/project-manager",
+  "title": "Project Manager",
+  "subtitle": "Django, AWS",
+  "text": "I contracted a customer Project Manager application for Essential Skills.  This program is used internally to track developer project timelines. It's main purpose is to track project interruptions, predict future schedules, share tasks and analyze project history.",
+  "media": {
+    "image": "images/skills/fullstack/taskmanager.gif"
+  },
+  "source": {
+    "legacyCategory": "Fullstack",
+    "legacyIndex": 2
+  }
+}

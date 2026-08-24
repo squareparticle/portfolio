@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "squareparticle/game-jams/molyjam-2013",
+  "title": "Molly Jam (2013)",
+  "subtitle": "Java 1.5, LWJGL, Qubicle Theme (Combinded 5 themes)",
+  "text": "Rescue the red headed princess from the big bad trolls while looking awesome! This game was based off a few quotes from Peter Molyneux. The quotes I choose where: <br><br><ul><li>\"If you go into battle, you could win a ginger-haired person\"</li><li>\"What do the taps mean ?\"</li><li>\"Pull the right trigger to see the most interesting thing in the world\"</li><li>\"Golden acorn\"</li><li>\"Collect a million gold coins\"</li></ui>",
+  "mobileText": "Rescue the red headed princess from the big bad trolls while looking awesome! This game was based off a few quotes from Peter Molyneux. The quotes I choose where: <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+  "media": {
+    "image": "images/skills/jams/molly2.jpg",
+    "gallery": [
+      "images/skills/jams/voxel_1.gif",
+      "images/skills/jams/voxel_2.gif",
+      "images/skills/jams/voxel_3.gif",
+      "images/skills/jams/voxel_4.gif"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Jams",
+    "legacyIndex": 1
+  }
+}

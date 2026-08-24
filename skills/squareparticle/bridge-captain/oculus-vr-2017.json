@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "squareparticle/bridge-captain/oculus-vr-2017",
+  "title": "Bridge Captain VR (2017)",
+  "subtitle": "Unity, Oculus VR",
+  "text": "It became clear after a few months that targeting the GearVR was limiting the gameplay considerably. Thus, I dropped support and started over again, this time targeting VR on Desktop.  Now I can create fully working consoles and add greater depth to the battles and exploration.",
+  "media": {
+    "youtube": "https://www.youtube.com/embed/zuMqoZhQKjE",
+    "gallery": [
+      "images/skills/company/bcvr_1.gif",
+      "images/skills/company/bcvr_2.gif",
+      "images/skills/company/bcvr_3.jpg",
+      "images/skills/company/bcvr_4.png"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Company",
+    "legacyIndex": 3
+  }
+}

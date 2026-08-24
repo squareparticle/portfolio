@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "education/high-school/pre-rendered-graphics",
+  "title": "High School Pre-rendered Graphics",
+  "subtitle": "Turing, 3DS4",
+  "text": "A friend and I started playing with 3DS4 back in high school to create pre-rendered graphics for our games about a year before Donkey Kong Country made it the new trend.",
+  "media": {
+    "youtube": "https://www.youtube.com/embed/K2Pn5qwa0Bg",
+    "gallery": [
+      "images/skills/eng/perrender_1.gif",
+      "images/skills/eng/perrender_2.gif",
+      "images/skills/eng/perrender_3.gif",
+      "images/skills/eng/perrender_4.gif"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Eng",
+    "legacyIndex": 3
+  }
+}

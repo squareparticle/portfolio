@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "squareparticle/santas-route/mobile-releases",
+  "title": "Santa's Route (2010) / Santa's Recession Bender (2011)",
+  "subtitle": "Java, C#, XNA, Android SDK, Blackberry SDK, C.E.L.L.",
+  "text": "For my first official public release I focused on creating a small game utilizing XNA. I ended up pulling together an artist, musician and voice actor to create an endless runner within the last two weeks leading up to Christmas 2010. I later ported the game to Android while incorporating OpenFeint (scoreboards) and HeyZap (social playing). The following year I released a mature version of the game called Santa's Recession Bender.  This version had five additional unlockable levels. Santa's route was featured three times on AppsLib as well as making it in the Daily Planet website user creation section.",
+  "mobileText": "For my first official public release I focused on creating a small game utilizing XNA. I ended up pulling together an artist, musician and voice actor to create an endless runner within the last two weeks leading up to Christmas 2010. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+  "media": {
+    "youtube": "https://www.youtube.com/embed/OXmF7MaLfYM",
+    "gallery": [
+      "images/skills/mobile/santa_1.gif",
+      "images/skills/mobile/sr_2.jpg",
+      "images/skills/mobile/santa_2.gif",
+      "images/skills/mobile/sr_4.jpg"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Mobile",
+    "legacyIndex": 1
+  }
+}

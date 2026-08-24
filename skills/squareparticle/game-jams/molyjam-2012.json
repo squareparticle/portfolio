@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "squareparticle/game-jams/molyjam-2012",
+  "title": "Molly Jam (2012)",
+  "subtitle": "Java 1.5, C.E.L.L. Theme (Only see enemies in the mirrors)",
+  "text": "Escape from Mirror Mansion was mentioned in an article on the Wired Magazine's mobile site. The theme I choose for this game was \"Only see enemies in the mirrors.\"",
+  "media": {
+    "image": "images/skills/jams/molly1.jpg",
+    "htmlBlock": "<div class=\"embed-responsive embed-responsive-16by9\"> <iframe class=embed-responsive-item src=\"//www.youtube.com/embed/PbdGYPc9oEE?rel=0\" allowfullscreen></iframe> </div>"
+  },
+  "source": {
+    "legacyCategory": "Jams",
+    "legacyIndex": 0
+  }
+}

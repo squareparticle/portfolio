@@ -1,0 +1,17 @@
+{
+  "name": "jamie-whitten-portfolio",
+  "private": true,
+  "scripts": {
+    "test": "node --test test/*.test.cjs",
+    "test:browser": "node --test test/browser-smoke.test.cjs"
+  },
+  "dependencies": {
+    "animate.css": "3.5.2",
+    "bootstrap": "3.3.7",
+    "font-awesome": "4.6.3",
+    "jquery": "3.2.1"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "squareparticle/tools/particle-editor",
+  "title": "Particle Editor",
+  "subtitle": "Java 1.1.8",
+  "text": "In order to get a stronger handle on OOP using Swing, I decided to create a GUI based particle editor.  Later on, I used projects like this one to teach junior programmers Object Oriented Design.",
+  "media": {
+    "image": "images/skills/tools/particle.jpg"
+  },
+  "source": {
+    "legacyCategory": "Tools",
+    "legacyIndex": 5
+  }
+}

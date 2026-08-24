@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Jamie Whitten's Portfolio</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/node_modules/animate.css/animate.min.css">
+
+      <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+      <link rel="stylesheet" href="/pages/main.css">
+      <link rel="stylesheet" href="/header.css">
+      <link rel="stylesheet" href="/content.css">
+      <link rel="stylesheet" href="/overlay.css">
+      <link rel="stylesheet" href="/footer.css">
+
+      <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script>window.PORTFOLIO_PATHS = {jobBase:".", sharedBase:"/"};</script>
+      <script src="/portfolio-rules.js"></script>
+      <script src="/portfolio-loader.js"></script>
+      <script src="/common.js"></script>
+      <script src="/pages/main.js"></script>
+      <script src="/pages/about.js"></script>
+    </head>
+
+    <body style="background-color:#eee;">
+        <div class="device-xs visible-xs"></div>
+        <div class="device-sm visible-sm"></div>
+        <div class="device-md visible-md"></div>
+        <div class="device-lg visible-lg"></div>
+
+        <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <img class="imgHor" id="overImage" height="auto" width="80%" src="" alt="" />
+            </div>
+        </div>
+
+        <div id="placeHeader"></div>
+        <div id="contentHolder"></div>
+
+        <p>&nbsp;</p>
+
+        <div class="container">
+            <div class="panel panel-default">
+                <div id="Categories" class="row"></div>
+            </div>
+        </div>
+
+        <div id="placeFooter"></div>
+
+        <script>
+            var jsonData = null;
+
+            (async function(){
+                try {
+                    jsonData = await PortfolioResources.loadManifest();
+                    var manifestErrors = PortfolioRules.validateManifest(jsonData);
+                    if (manifestErrors.length) throw new Error(manifestErrors.join('; '));
+                    buildFeaturedLocations();
+
+                    await new Promise(function(resolve){
+                        $("#placeHeader").load(PortfolioResources.sharedAsset("header.htm"), resolve);
+                    });
+                    var banner = await PortfolioResources.loadPageJson('banner');
+                    $('#bannerTitle').text(banner.title || '');
+                    $('#bannerText').text(banner.text || '');
+                    if(banner.backgroundImage) $('#portfolioBanner').css('background-image', "url('"+PortfolioResources.asset(banner.backgroundImage,banner._resourceBase)+"')");
+                    $('#brandLogo').attr('src',PortfolioResources.sharedAsset('images/logo/logo2.png'));
+                    $('#testbounce').animateCss('fadeInDownBig');
+
+                    var resume = await PortfolioResources.resolveResume();
+                    if(resume) $('#resumeLink').attr('href',resume); else $('#resumeNav').hide();
+
+                    createMeunCategories();
+                    createCategories();
+                    await getPage('main');
+                    $('#placeFooter').load(PortfolioResources.sharedAsset('footer.htm'));
+                    $(window).resize(resizeCategCells);
+                } catch(e) {
+                    console.error(e);
+                    $('#contentHolder').html('<div class="container"><div class="alert alert-danger">Portfolio data could not be loaded.</div></div>');
+                }
+            })();
+        </script>
+
+    </body>
+</html>

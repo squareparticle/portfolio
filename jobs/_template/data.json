@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "featured": [
+    "essentialskills/learning-platform/school-programs",
+    "essentialskills/teacher-dashboard/assignment-reporting",
+    "essentialskills/customer-platform/management-analysis",
+    "essentialskills/hydragen/engine",
+    "squareparticle/bridge-captain/gear-vr-2016"
+  ],
+  "categories": [
+    {
+      "id": "Mobile",
+      "name": "Mobile Apps",
+      "icon": "images/logo/andriod.png",
+      "color": "#DE5D74",
+      "intro": {
+        "title": "Mobile Releases",
+        "text": "I started making Blackberry games in 2009 with a couple of friends (a musician and a Blackberry insider). However, after attending a Microsoft conference I decided to create games for WP7 and Xbox 360, which ultimately led me to Android development. At which point, I expanded the team by adding artists, writers, musicians and voice actors.",
+        "mobileText": "I started making Blackberry games in 2009 with a couple of friends (a musician and a Blackberry insider). <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+        "image": "images/skills/mobile/title.png"
+      },
+      "skills": [
+        "squareparticle/h0p3/mobile-release",
+        "squareparticle/santas-route/mobile-releases",
+        "squareparticle/flag-hunt/mobile-release",
+        "squareparticle/live-wallpaper/android",
+        "squareparticle/bridge-captain/android-2012"
+      ]
+    },
+    {
+      "id": "Modeling",
+      "name": "Modeling",
+      "icon": "images/logo/blender.png",
+      "color": "#5B40B8",
+      "intro": {
+        "title": "3D Modeling",
+        "text": "I don't consider myself an artist, but I have had a difficult time finding them. Therefore, I have created the majority of my own graphics over the years.  This has made me proficient in programs such as 3D Studio, MilkShape, Blender and Photoshop.",
+        "mobileText": "I don't consider myself an artist, but... <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+        "image": "images/skills/modeling/title.gif"
+      },
+      "skills": [
+        "squareparticle/bridge-captain/low-poly-modeling",
+        "squareparticle/santas-route/3d-modeling",
+        "personal/modeling/early-work",
+        "squareparticle/art/space-ships"
+      ]
+    },
+    {
+      "id": "Cloud",
+      "name": "Cloud & Servers",
+      "icon": "images/logo/cloud.jpg",
+      "color": "#252122",
+      "intro": {
+        "title": "Cloud & Servers",
+        "text": "When I moved from desktop servers to web servers I choose AWS for cloud storage, database scaling and security.",
+        "image": "images/skills/cloud/title.jpg"
+      },
+      "skills": [
+        "essentialskills/infrastructure/aws",
+        "essentialskills/infrastructure/servers",
+        "essentialskills/infrastructure/web-servers"
+      ]
+    },
+    {
+      "id": "Tools",
+      "name": "Tool Creations",
+      "icon": "images/logo/ubuntu.png",
+      "color": "#307099",
+      "intro": {
+        "title": "Tool Creation",
+        "text": "I develop tools that simplify the core processes of my frameworks and engines for the purpose of automation, scripting, and WYSIWYG. Essentially, most of these tools were designed for content producers.",
+        "image": "images/skills/tools/title.jpg"
+      },
+      "skills": [
+        "squareparticle/cell/editor",
+        "squareparticle/bridge-captain/mission-editor",
+        "squareparticle/bridge-captain/live-mission-editor",
+        "squareparticle/unity-block-game-maker/editor",
+        "squareparticle/bridge-captain/planet-builder",
+        "squareparticle/tools/particle-editor",
+        "squareparticle/tools/3d-file-viewer",
+        "essentialskills/hydragen/activity-builder"
+      ]
+    },
+    {
+      "id": "Work",
+      "name": "Work",
+      "icon": "images/logo/ess.png",
+      "color": "#eeeeee",
+      "intro": {
+        "title": "Work Experience",
+        "text": "I joined Essential Skills as a junior developer in May of 1999. From there I grew to lead developer, department manager and now part owner.",
+        "image": "images/skills/work/title.jpg"
+      },
+      "skills": [
+        "essentialskills/home-user/platform",
+        "essentialskills/magies/reward-system",
+        "essentialskills/read-to-succeed/platform",
+        "essentialskills/mad-minute/platform",
+        "essentialskills/learning-platform/school-programs",
+        "essentialskills/learning-platform/teacher-programs",
+        "essentialskills/assessment/diagnostic-software",
+        "essentialskills/authoring/teacher-content-editor",
+        "essentialskills/platform-migrations/flash-port",
+        "essentialskills/leadership/teaching-mentoring"
+      ]
+    },
+    {
+      "id": "Fullstack",
+      "name": "Full Stack",
+      "icon": "images/logo/mean.png",
+      "color": "#FFB000",
+      "intro": {
+        "title": "Full Stack",
+        "text": "Over the years I have been responsible to architect, design and develop every aspect of numerous internal, external and large scale web applications.",
+        "image": "images/skills/fullstack/title.jpg"
+      },
+      "skills": [
+        "essentialskills/teacher-dashboard/react",
+        "essentialskills/magies/production-tool",
+        "essentialskills/internal-tools/project-manager",
+        "essentialskills/customer-platform/management-analysis",
+        "essentialskills/web-platform/school-applications",
+        "essentialskills/teacher-dashboard/assignment-reporting",
+        "essentialskills/customer-platform/product-order-page",
+        "personal/portfolio/older-portfolio"
+      ]
+    },
+    {
+      "id": "Eng",
+      "name": "Computer Engineering",
+      "icon": "images/logo/humber.jpg",
+      "color": "#001f4d",
+      "intro": {
+        "title": "Education",
+        "text": "I graduated in 1998 with a 3 year diploma in Computer Engineering from Humber College. Subsequent to college, I took networking courses at DeVry (Domain Controller and Novell).  I became Java certified after attending a week long Java University conference in San Francisco. I have also attended many programming conferences in Toronto, New York and Washington DC., including one at Apple and a week long course at Sun MicroSystems.",
+        "mobileText": "I graduated in 1998 with a 3 year diploma in Computer Engineering from Humber College. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+        "image": "images/skills/eng/mouse.gif"
+      },
+      "skills": [
+        "education/humber/robot-maze",
+        "education/humber/cpu-emulator",
+        "education/high-school/rpg-project",
+        "education/high-school/pre-rendered-graphics"
+      ]
+    },
+    {
+      "id": "Engines",
+      "name": "Engines",
+      "icon": "images/logo/engine.png",
+      "color": "#99CD7A",
+      "intro": {
+        "title": "Engines and Frameworks",
+        "text": "When developing larger projects, I usually prepare a modular based foundation as a vehicle to simplify the process. I do this by first understanding the program flow and calculating all the minimum components and layers required. Next, I usually accomplish automation by providing a scripting layer to the foundation. </br></br> <strong>Example:</strong> This entire website itself is generated using a single JSON file.",
+        "mobileText": "When developing larger projects, I usually prepare a modular based foundation as a vehicle to simplify the process. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+        "image": "images/skills/engines/title.jpg"
+      },
+      "skills": [
+        "squareparticle/bradengine/engine",
+        "squareparticle/engines/java-3d-engine",
+        "squareparticle/engines/java-voxel-engine",
+        "squareparticle/cell/engine",
+        "essentialskills/hydragen/engine",
+        "squareparticle/engines/fx-prototype-2008",
+        "squareparticle/engines/3d-engine-2007",
+        "squareparticle/engines/voxel-2012"
+      ]
+    },
+    {
+      "id": "Doc",
+      "name": "Documentation",
+      "icon": "images/logo/uml.png",
+      "color": "#6535B3",
+      "intro": {
+        "title": "Documentation",
+        "text": "As a developer, manager and entrepreneur I have created lots of documentation: <br><br> <ul><li>80 page business plan and grant document for Square Particle</li><li>Many SRS and Vision documents with accompanying PowerPoint presentations</li><li>100's of UML design documents</li><li>Articles, Blogs and Advertisements</li><li>Computer Science courses and company handbooks</li><li>Many taxes and grant documents for Essential Skills</li><li>Working with Microsoft for our company to become partner</li><li>Code commenting; however, I strive to make my code self readable and focus on commenting the obscure and meta sections</li></ul>",
+        "mobileText": "As a developer, manager and entrepreneur I have created lots of documentation:  <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+        "image": "images/skills/doc/title.jpg"
+      },
+      "skills": [
+        "essentialskills/docs/wordpress-knowledge-base",
+        "essentialskills/architecture/uml",
+        "essentialskills/sred/taxes-grants"
+      ]
+    },
+    {
+      "id": "Databases",
+      "name": "Databases",
+      "icon": "images/logo/database.jpg",
+      "color": "#333333",
+      "intro": {
+        "title": "Databases",
+        "text": "I have employed a variety of databases for my projects.<br><br><ul><li> <strong>Relational:</strong> DB2, SQLServer, MySQL, ADO.NET, ODBC, JDBC, ODBC, Stored Procedure etc...</li><li> <strong>Non-relational:</strong> SimpleDB, MongoDB, Mongoose, etc..</li><li> <strong>Flat file:</strong> Access, BerkeleyDB, etc...</li><li> <strong>Proprietary:</strong> ISAM, Serialize objects, XML based,  etc...</li></ul>",
+        "image": "images/skills/databases/title.png"
+      },
+      "skills": [
+        "essentialskills/data/isam-btree",
+        "essentialskills/data/rosetta-layer",
+        "essentialskills/data/sql",
+        "essentialskills/data/amazon-simpledb"
+      ]
+    },
+    {
+      "id": "Jams",
+      "name": "Game Jams",
+      "icon": "images/logo/jams.png",
+      "color": "#4588B3",
+      "intro": {
+        "title": "48 Hour Game Jams",
+        "text": "From time to time I challenge myself by joining a weekend game jam. These jams force me through many development cycles at an accelerated pace, thereby, advancing my my knowledge and experience quickly.",
+        "image": "images/skills/jams/title.gif"
+      },
+      "skills": [
+        "squareparticle/game-jams/molyjam-2012",
+        "squareparticle/game-jams/molyjam-2013",
+        "squareparticle/game-jams/ludum-dare-23",
+        "squareparticle/bridge-captain/ludum-dare-october-challenge",
+        "squareparticle/game-jams/tojam-2012",
+        "personal/games/mario-tetris"
+      ]
+    },
+    {
+      "id": "Company",
+      "name": "Square Particle",
+      "icon": "images/logo/company.png",
+      "color": "#595EA4",
+      "intro": {
+        "title": "Square Particle",
+        "text": "In 2010 I founded the indie gaming company Square Particle Corp.  Throughout the years, I have worked with about 20 people to build games and other applications. (Writers, musicians, programmers, artists and a media company) We have released games for the Xbox 360, Android, Blackberry, Window Phone and on desktop.  <a onclick=\"changePanel('Mobile')\" href=\"#\">See games</a>",
+        "mobileText": "In 2010 I founded the indie gaming company Square Particle Corp. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+        "image": "images/skills/company/title.png"
+      },
+      "skills": [
+        "squareparticle/bridge-captain/libgdx-remake-2014",
+        "squareparticle/bridge-captain/unity-3d-2015",
+        "squareparticle/bridge-captain/gear-vr-2016",
+        "squareparticle/bridge-captain/oculus-vr-2017",
+        "squareparticle/prototypes/unfinished-games",
+        "cd-software-developers/a-helping-hand/application",
+        "scary-pixel/always-fresh/prototype",
+        "independent/health-holder/application",
+        "squareparticle/bridge-captain/book-series"
+      ]
+    }
+  ]
+}

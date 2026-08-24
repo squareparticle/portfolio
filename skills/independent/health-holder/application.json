@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "independent/health-holder/application",
+  "title": "Health Holder",
+  "subtitle": "Java 1.2",
+  "text": "I decided to become a healthier person, so I sought out a nutritionist. After seeing her for a while, we worked together to build a software version of her dietary plan.",
+  "media": {
+    "image": "images/skills/company/health.jpg",
+    "gallery": [
+      "images/skills/company/health_1.jpg",
+      "images/skills/company/health_2.jpg",
+      "images/skills/company/health_3.jpg",
+      "images/skills/company/health_4.jpg"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Company",
+    "legacyIndex": 7
+  }
+}

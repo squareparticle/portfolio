@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "squareparticle/prototypes/unfinished-games",
+  "title": "Unfinished Games",
+  "subtitle": "",
+  "text": "Over the years I have worked on many games with people that did't get out of the prototype stage.  Below are a few examples.",
+  "media": {
+    "youtube": "https://www.youtube.com/embed/_INxF5p1qfw",
+    "gallery": [
+      "images/skills/company/uf_1.gif",
+      "images/skills/company/uf_2.gif",
+      "images/skills/company/uf_3.jpg",
+      "images/skills/company/uf_4.jpg",
+      "images/skills/company/uf_5.jpg",
+      "images/skills/company/uf_6.jpg",
+      "images/skills/company/uf_7.jpg",
+      "images/skills/company/uf_8.jpg"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Company",
+    "legacyIndex": 4
+  }
+}

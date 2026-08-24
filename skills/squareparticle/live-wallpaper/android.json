@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "squareparticle/live-wallpaper/android",
+  "title": "Live Wallpaper (2011)",
+  "subtitle": "Java, Android SDK",
+  "text": "To advertise my Santa game I decided to create a live wallpaper.  From there, I had the idea of creating a space based live wallpaper that connects to a server and battles your friends.",
+  "media": {
+    "youtube": "https://www.youtube.com/embed/3bdG3j51zfA",
+    "gallery": [
+      "images/skills/mobile/livewall_1.jpg",
+      "images/skills/mobile/livewall_2.jpg",
+      "images/skills/mobile/livewall_3.jpg",
+      "images/skills/mobile/livewall_4.jpg"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Mobile",
+    "legacyIndex": 3
+  }
+}

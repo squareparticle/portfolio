@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "essentialskills/learning-platform/teacher-programs",
+  "title": "Teacher Programs",
+  "subtitle": "J2SE, Java2D, ISAM DB, BerkeleyDB, JNI, JNLP, Flash, AWS, SimpleDB, PHP",
+  "text": "I designed, architected and developed numerous assignment and reporting applications for schools. Giving teachers the capability of managing students, printing charts and reports, issuing tests and managing assignments.",
+  "media": {
+    "image": "images/skills/work/marksman.jpg",
+    "gallery": [
+      "images/skills/work/marksman_1.png",
+      "images/skills/work/marksman_2.png",
+      "images/skills/work/marksman_3.png",
+      "images/skills/work/marksman_4.jpg"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Work",
+    "legacyIndex": 5
+  }
+}

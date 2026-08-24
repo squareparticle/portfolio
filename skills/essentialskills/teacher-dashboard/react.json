@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "essentialskills/teacher-dashboard/react",
+  "title": "Teacher Dashboard",
+  "subtitle": "React 16, Bootstrap, Chartjs, Redux, Redux-Observable, RXJS, Axios, Lodash",
+  "text": "I redesigned and developed the Admin/Teacher dashboard using React.",
+  "media": {
+    "image": "images/skills/fullstack/dashboard.gif",
+    "gallery": [
+      "images/skills/fullstack/dashboard_1.gif",
+      "images/skills/fullstack/dashboard_2.gif"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Fullstack",
+    "legacyIndex": 0
+  }
+}

@@ -1,0 +1,13 @@
+.carousel-caption{
+    background: rgba(0,0,0,0.5);
+}
+.categCell{
+    position:absolute; top:0; bottom:0; right:0; left:0; margin:auto;
+}
+.categCellTitle{
+    position:absolute; bottom: 0px; width: 100%; background-color:black; color: white;
+}
+.description {
+    min-height: 100%;
+    height: 100%;
+}

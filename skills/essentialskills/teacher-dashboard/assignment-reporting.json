@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "essentialskills/teacher-dashboard/assignment-reporting",
+  "title": "Teacher Assignment and Reporting App (2017)",
+  "subtitle": "JQuery, Bootstrap, Ajax, PHP, JSON, AWS (CloudFront, EC2, Ubuntu, SimpleDB)",
+  "text": "After analyzing the competition's trends, I reconstructed the teacher dashboard application to modernize its interface and user experience for today's market. ",
+  "media": {
+    "image": "images/skills/fullstack/title.jpg",
+    "gallery": [
+      "images/skills/fullstack/reporting_1.png",
+      "images/skills/fullstack/reporting_2.png",
+      "images/skills/fullstack/reporting_3.png",
+      "images/skills/fullstack/reporting_4.png"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Fullstack",
+    "legacyIndex": 5
+  },
+  "featured": {
+    "heroImage": "images/Responsive.jpg",
+    "supportingImages": [
+      "images/Responsive_1.jpg",
+      "images/Responsive_2.jpg",
+      "images/Responsive_3.jpg"
+    ],
+    "overlayTitle": "Responsive Design",
+    "overlayText": "Bootstrap, CSS, jQuery, Canvas",
+    "description": "Designed and currently developing a teacher friendly dashboard used to assess students, create assignments as well as view reports with the districts, schools and parents."
+  }
+}

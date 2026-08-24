@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "essentialskills/data/rosetta-layer",
+  "title": "Rosetta Layer",
+  "subtitle": "SQL Server, MySQL, AccessDB, ISAM, SimpleDB, BerkeleyDB ",
+  "text": "Some projects I have created require multiple database plugins. Thus, I have developed a Rosetta API that allows the user to choose their database back-end. This works for both server based and flat file based databases. Essentially, the business layer talks to entities that get piped through a helper class to determine the native implementation required.",
+  "media": {
+    "image": "images/skills/databases/db_1.jpg"
+  },
+  "source": {
+    "legacyCategory": "Databases",
+    "legacyIndex": 1
+  }
+}

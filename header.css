@@ -1,0 +1,23 @@
+.navbar {
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 1.2em;
+}
+.jumbotron {
+    background-color:#373a48;
+    color:white;
+}
+.thinjumbotron{
+    margin: 0;
+    padding: 0;
+}
+.centerbackgroundImage{
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.my-class {
+    display: block !important;
+ }

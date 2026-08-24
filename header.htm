@@ -1,0 +1,28 @@
+<div id="portfolioBanner" class="jumbotron thinjumbotron centerbackgroundImage">
+    <div id="testbounce" class="container">
+        <h1 id="bannerTitle"></h1>
+        <div class="hidden-xs hidden-sm"><p id="bannerText"></p></div>
+    </div>
+</div>
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img id="brandLogo" src="images/logo/logo2.png" height="100%"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li id="aboutNav"><a onclick="getPage('about')" href="#">About Me</a></li>
+                <li id="mainNav" class="active"><a onclick="getPage('main')" href="#">Portfolio</a></li>
+                <li id="skillsNav" class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Skills <span class="caret"></span></a>
+                    <ul id="SkillsDropdown" class="dropdown-menu"></ul>
+                </li>
+                <li id="contactNav"><a onclick="scrollToBottom()" href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right"><li id="resumeNav"><a id="resumeLink" href="#">Download Resume</a></li></ul>
+        </div>
+    </div>
+</nav>

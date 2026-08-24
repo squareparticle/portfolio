@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "squareparticle/cell/editor",
+  "title": "C.E.L.L. Editor",
+  "subtitle": "XNA, JME, Blackberry SDK, Android SDK, JavaSE",
+  "text": "A visual editor for C.E.L.L. was necessary in order to increase productivity for the game designers using it. The editor focuses on level and menu design as well as key binding, collision, events and scripting. This editor has been used for a variety of games and prototypes including RPGs, platformers, infinite runners, side scrolling shooters, puzzle games and even strategy games.",
+  "mobileText": "A visual editor for C.E.L.L. was necessary in order to increase productivity for the game designers using it.  <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+  "media": {
+    "youtube": "https://www.youtube.com/embed/hdJJCdgDeZw",
+    "gallery": [
+      "images/skills/tools/cell_1.jpg",
+      "images/skills/tools/cell_2.jpg",
+      "images/skills/tools/cell_3.jpg",
+      "images/skills/tools/cell_4.jpg"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Tools",
+    "legacyIndex": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "squareparticle/flag-hunt/mobile-release",
+  "title": "Flag Hunt (2011)",
+  "subtitle": "Java, C#, XNA, Android SDK, Blackberry SDK, C.E.L.L.",
+  "text": "I released a contemporary chess like war game that uses radar to find invisible pieces. The game gained over 100k downloads across five different platforms after launch. This fun AI experiment took me nearly three months to complete. Desktop multiplayer was being piped through an EC2 server.",
+  "media": {
+    "youtube": "https://www.youtube.com/embed/XTO_48zeyAE",
+    "gallery": [
+      "images/skills/mobile/flaghunt_1.jpg",
+      "images/skills/mobile/flaghunt.gif",
+      "images/skills/mobile/flaghunt_3.jpg",
+      "images/skills/mobile/flaghunt_4.jpg"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Mobile",
+    "legacyIndex": 2
+  }
+}

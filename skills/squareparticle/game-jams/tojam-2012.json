@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "squareparticle/game-jams/tojam-2012",
+  "title": "ToJam (2012)",
+  "subtitle": "Java 1.5, C.E.L.L. Theme (The World is NOT Ending)",
+  "text": "I created a RPG where the hero has already beat the last boss and saved the world.  Now it's up to you to keep him from getting bored. You have to do quests, such as going fishing, cleaning the basement, finding the King's cat and making the king's dinner all before you get too bored.",
+  "media": {
+    "image": "images/skills/jams/tojam.jpg",
+    "gallery": [
+      "images/skills/jams/go_1.gif",
+      "images/skills/jams/go_2.gif",
+      "images/skills/jams/go_3.gif",
+      "images/skills/jams/go_4.gif"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Jams",
+    "legacyIndex": 4
+  }
+}

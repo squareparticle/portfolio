@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "squareparticle/bridge-captain/book-series",
+  "title": "Book Series",
+  "subtitle": "",
+  "text": "To build Bridge Captain's backstory, I collaborated with writers at a California media company to create a book series that I released on Amazon.",
+  "media": {
+    "image": "images/skills/company/books.jpg",
+    "gallery": [
+      "images/skills/company/books_1.jpg",
+      "images/skills/company/books_2.jpg",
+      "images/skills/company/books_3.jpg",
+      "images/skills/company/book_4.jpg"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Company",
+    "legacyIndex": 8
+  }
+}

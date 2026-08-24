@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "essentialskills/assessment/diagnostic-software",
+  "title": "Student Assessment Software (2002 - 2005)",
+  "subtitle": "Java 1.1.8 - Java 1.2, Swing, ISAM BTree Database, MVC",
+  "text": "I worked together with teachers to design an early learning diagnostic application that analyses why the students get the questions incorrect. Example: A student spelled 'cave' as cav, or caiv or kaav, etc... For this project, I partnered with a Sun MicroSystems consultant in order to build a MVC swing based engine with a custom networkable ISAM database.",
+  "media": {
+    "image": "images/skills/work/assessment.jpg"
+  },
+  "source": {
+    "legacyCategory": "Work",
+    "legacyIndex": 6
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "squareparticle/engines/java-3d-engine",
+  "title": "3D Engine",
+  "subtitle": "Javascript, Canvas, Cannon Physics, WebRTC, Math, Batch Scripts",
+  "text": "I taught my kids (11 and 14) to design and develop a software 3D graphics and gaming engine during Covid 2020. <a target='_blank' href='http://jamiewhitten.net.s3.amazonaws.com/bradengine/portfolio/index.html'>View Engine</a>",
+  "mobileText": "I taught my kids (11 and 14) to design and develop a software 3D graphics and gaming engine during Covid 2020. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+  "media": {
+    "image": "images/skills/engines/bradeng3d.gif",
+    "gallery": [
+      "images/skills/engines/brad3d_1.gif",
+      "images/skills/engines/brad3d_2.gif",
+      "images/skills/engines/brad3d_3.gif",
+      "images/skills/engines/brad3d_4.gif",
+      "images/skills/engines/brad3d_5.gif",
+      "images/skills/engines/brad3d_6.gif",
+      "images/skills/engines/brad3d_7.gif"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Engines",
+    "legacyIndex": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "essentialskills/data/sql",
+  "title": "SQL",
+  "subtitle": "SQL Server, MySQL, AccessDB, ODBC, ADO.NET, JDBC",
+  "text": "Over the years I have built many internal tools such as customer support databases, knowlegebases, and activity catalogs using a variety of database back-ends.",
+  "media": {
+    "image": "images/skills/databases/sql.jpg"
+  },
+  "source": {
+    "legacyCategory": "Databases",
+    "legacyIndex": 2
+  }
+}

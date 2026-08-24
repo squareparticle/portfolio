@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "personal/modeling/early-work",
+  "title": "Earlier Work (1995 - 2005)",
+  "subtitle": "3DS4 (Dos), 3DS Max (Windows)",
+  "text": "In high school and college I loved to dabble in 3D creation software for making game graphics and animations.",
+  "media": {
+    "image": "images/skills/modeling/old.jpg",
+    "gallery": [
+      "images/skills/modeling/old_1.jpg",
+      "images/skills/modeling/old_2.jpg",
+      "images/skills/modeling/old_3.jpg",
+      "images/skills/modeling/old_4.png",
+      "images/skills/modeling/old_5.jpg",
+      "images/skills/modeling/old_6.jpg",
+      "images/skills/modeling/old_7.jpg",
+      "images/skills/modeling/old_8.png"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Modeling",
+    "legacyIndex": 2
+  }
+}

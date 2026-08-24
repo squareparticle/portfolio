@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "education/humber/robot-maze",
+  "title": "Robot Maze Project",
+  "subtitle": "Assembly, MicroC, Assembly, 68HC11",
+  "text": "Our final term project to graduate College was to create a robot that could find the solution to solve a maze.  The robot runs through the maze once in order to find the end points and then a second time to solve the maze. <br><br>A micro-controller was connected to a custom board that would read the optical sensors to find its location compared to the walls as well as the floor color.  Black indicates the end of the maze. A message to the motor driver would power the DC motors in order to rotate the wheels a single step. Each step was measured by a shaft encoder (a hole in the gear where a laser can pass through per revolution).  Steps where counted until the robot reaches a fork in the path.<br><br>The first time the maze is ran, the robot would always turn right by turning both wheels in opposite directions like a tank.  Along the way the robot keeps building an internal map and stores it in a secondary 8K memory card.",
+  "mobileText": "Our final term project to graduate College was to create a robot that could find the solution to solve a maze.  The robot runs through the maze once in order to find the end points and then a second time to solve the maze.  <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+  "media": {
+    "youtube": "https://www.youtube.com/embed/OfgJGQZlIQA",
+    "gallery": [
+      "images/skills/eng/mouse_1.gif",
+      "images/skills/eng/mouse_2.jpg",
+      "images/skills/eng/mouse_3.jpg",
+      "images/skills/eng/mouse_4.jpg"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Eng",
+    "legacyIndex": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "essentialskills/architecture/uml",
+  "title": "UML",
+  "subtitle": "Visio, Paper, Photoshop",
+  "text": "I find UML style documentation to be a highly affect tool when designing projects, retaining a reference, reverse engineering for refactoring or debugging, as well as learning or teaching an application's structure.<br><br> The images bellow show diagrams I created of 3DForge's weapons firing for both beam and projectile weapons.  Since they decided to create a singleton to fire all weapons in the game, it was extremely difficult for me to work with multiple weapons.  Thus, I refactored their code into the 3rd diagram. This not only removes the singleton and allows me to instantiate new weapons on the fly, but it also combines the beams and projectiles as just weapons.",
+  "mobileText": "I find UML style documentation to be a highly affect tool when designing projects, retaining a reference, reverse engineering for refactoring or debugging... <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+  "media": {
+    "image": "images/skills/doc/uml.jpg",
+    "gallery": [
+      "images/skills/doc/uml_1.png",
+      "images/skills/doc/uml_2.png",
+      "images/skills/doc/uml_3.png",
+      "images/skills/doc/doc_1.jpg"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Doc",
+    "legacyIndex": 1
+  }
+}

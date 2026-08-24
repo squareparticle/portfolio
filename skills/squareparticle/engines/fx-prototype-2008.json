@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "squareparticle/engines/fx-prototype-2008",
+  "title": "FX Engine Prototype(2008)",
+  "subtitle": "Java 1.4",
+  "text": "Before Hydra-Gen, I created a working prototype. This engine had XAML like scripting abilities in that all the data binding, event handling, component layout, animations, and code binding was scripted in XML format. I incorporated 3D, particle, blurring, fractal and clipping effects as additional engine components.",
+  "mobileText": "Before Hydra-Gen, I created a working prototype. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+  "media": {
+    "image": "images/skills/engines/javafx.jpg",
+    "gallery": [
+      "images/skills/engines/javafx_1.gif",
+      "images/skills/engines/javafx_4.gif",
+      "images/skills/engines/javafx_3.gif",
+      "images/skills/engines/javafx_2.gif"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Engines",
+    "legacyIndex": 5
+  }
+}

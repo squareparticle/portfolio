@@ -1,0 +1,78 @@
+{
+  "title": "About Me",
+  "image": "images/profile.jpg",
+  "headline": "Coding and being creative is my life! I love to learn, create and experiment both at work and at home.",
+  "sections": [
+    {
+      "title": "Before College",
+      "items": [
+        "Became interested in coding as a child writing simple Vic-20 games by altering examples I found in computer magazines",
+        "Taught myself procedural coding by reverse engineering the Gorillas game for QBasic",
+        "Learned 3D Studio 4.0 (Dos) with a buddy and started making pre-rendered games in Turing a year before Donkey Kong Country",
+        "Built a fully playable RPG (similar to Dragon Warrior) as my high school Computer Science project and the teacher didn't understand how to play it...",
+        "Created software used for a hospital's psychology test (QBasic)",
+        "Built a finished Mario themed version of Tetris in C++/Assembly"
+      ]
+    },
+    {
+      "title": "College (3 year Computer Engineering at Humber)",
+      "items": [
+        "Programmed the Motorola 68HC11 micro-controller to control a robot that could solve a maze",
+        "Built a custom assembly language and CPU emulator",
+        "Built a custom UDP protocol and markup language for a mock intranet web browser",
+        "Worked with custom printer, serial port and mouse drivers"
+      ]
+    },
+    {
+      "title": "Professional Experience",
+      "items": [
+        "Led a team of 7 using tools such as Visio, UML, Asana, Basecamp, Beanstalk SVN, Hyjoki, Waterfall, Agile",
+        "Wrote the SR&ED claims from 2006 - 2011",
+        "Created semi programmable scripting language incorporating BNF Grammar",
+        "Created XML GUI layout managers before JavaFX and Silverlight",
+        "Taught OOD to jr developers by illustrating the 3D pipeline in software",
+        "Built software for LANs supported on Windows NT, Windows Server, Macintosh Server, Novell 4 - 6",
+        "Built two networkable custom ISAM Btree databases + API's",
+        "Worked mainly with Java SE 1 - 6, JNI, XMLRPC, JNLP, C#, PHP, SQL, JDBC, AWS, LAMP, Shell Scripts",
+        "Other projects using C++, Python, ASP.NET, SQL Server with stored procedures, Servlets, Ant",
+        "Last 6 years have been MEAN(MongoDB, Express, Angular, Node), Bootstrap, HTML5, CSS3, Canvas, JQuery",
+        "Last 3 years have been React, Redux, Django, AWS Lambda, CSS Grid, Flexbox, Spine"
+      ]
+    },
+    {
+      "title": "Side Companies",
+      "items": [
+        "Square Particle Corp - Created a gaming company and released games for Android, WP7, Xbox 360, BlackBerry and PC",
+        "Square Particle Corp - Coauthored seven Sci-fi books",
+        "CD Software Developers - Formed a business with several partners/investors to create software to be distributed by funeral homes (VB.NET, OLE, ODBC)",
+        "Scary Pixel - Worked with a partner to build a working prototype for a bid on a Tim Hortons contract (C#, Java)"
+      ]
+    },
+    {
+      "title": "Indie Projects",
+      "items": [
+        "Built a 2D gaming framework similar to Unity (Cross-platform, Cross language, Custom Scripting, WYSIWYG interface)",
+        "Participated in four 48 hour Game Jams and one 30 day Game Jam",
+        "Created complete game engines in C++, Direct X 5 - 9c, Java, Open GL 1 - 2, MDX, JadEngine, LWJGL, LibGDX and XNA",
+        "Shortly after the release of Minecraft, I created my own procedural Voxel engine",
+        "Created a XAML like 3D game engine with networking capabilities",
+        "To learn Unity, I decided to partner with an asset creator and develop GUI tools for building maze like games",
+        "Now I am working on a Oculus/Gear VR game Called Bridge Captain"
+      ]
+    },
+    {
+      "title": "Accomplishments",
+      "items": [
+        "100k+ Flag Hunt players (Featured in Germany)",
+        "10,000's of school children use the software I created daily",
+        "Santa's Route was featured three times on AppsLib",
+        "Santa's Route was on the Daily Planet Website",
+        "Wired did an online article that mentioned my MolyJam 2013 game",
+        "A 30 page article about my C.E.L.L. framework was published in the Software Developer Journal",
+        "My software got my employer's company Microsoft Certified Partner 2005 - 2008",
+        "My work has brought my employer large returns for over a decade from SR&ED (Scientific Research and Experimental Development) and OMDC (Ontario Media Development Corporation)",
+        "Building games with my kids in GameMaker, RPG Maker and JavaScript :)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "squareparticle/bridge-captain/android-2012",
+  "title": "Bridge Captain (2012)",
+  "subtitle": "JavaSE, Android SDK, C.E.L.L.",
+  "text": "You are the captain of a Earth United Space Vessel. Your mission is to search unregulated space for a ship that has gone missing. As the captain, you can make choices on how to go about finding this ship. You can either fight, bribe, barter or interrogate your way around the system. But be careful who you trust...",
+  "media": {
+    "youtube": "https://www.youtube.com/embed/Jm8CFnqUxDI",
+    "gallery": [
+      "images/skills/mobile/bc_1.gif",
+      "images/skills/mobile/bc_2.gif",
+      "images/skills/mobile/bc_3.gif",
+      "images/skills/mobile/bc_4.gif",
+      "images/skills/mobile/bc_5.jpg",
+      "images/skills/mobile/bc_6.jpg",
+      "images/skills/mobile/bc_7.jpg",
+      "images/skills/mobile/bc_5.gif"
+    ]
+  },
+  "source": {
+    "legacyCategory": "Mobile",
+    "legacyIndex": 4
+  }
+}
