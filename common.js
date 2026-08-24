@@ -44,8 +44,8 @@ async function createCategories() {
         var box=$("<div>",{id:id,"class":"col-xs-6 col-sm-4 col-md-3 box1 gridbox"}).css('background-color',value.color || '#777');
         box.click(function(){changePanel(value.id);$(window).scrollTop(0);});
         var iconUrl=await PortfolioResources.resolveAsset(value.icon,jsonData._resourceBase);
-        var img=$("<img>",{id:value.id+'Img',src:iconUrl,"class":"categCell"}).height('80%').width('80%');
-        var title=$("<div>",{id:value.id+'Title',"class":"row categCellTitle"}).html('&nbsp;'+value.name).hide();
+        let img=$("<img>",{id:value.id+'Img',src:iconUrl,"class":"categCell"}).height('80%').width('80%');
+        let title=$("<div>",{id:value.id+'Title',"class":"row categCellTitle"}).html('&nbsp;'+value.name).hide();
         box.append(img,title); holder.append(box);
         box.mouseenter(function(){title.show();img.animateCss('bounceIn');}).mouseleave(function(){title.hide();});
     }

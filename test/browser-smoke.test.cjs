@@ -45,6 +45,24 @@ async function pageAt(url, paths, routes) {
     return {page, consoleErrors, failed};
 }
 
+async function assertCategoryHoverTargetsOwnIcon(page) {
+    const icons = page.locator('#Categories img');
+    assert.ok(await icons.count() >= 3);
+    async function animatedIds() {
+        return await icons.evaluateAll(elements => elements
+            .filter(element => element.classList.contains('animated') && element.classList.contains('bounceIn'))
+            .map(element => element.id));
+    }
+
+    await page.locator('#MobileThumb').hover();
+    assert.deepEqual(await animatedIds(), ['MobileImg']);
+    await page.waitForTimeout(1100);
+
+    await page.locator('#ModelingThumb').hover();
+    assert.deepEqual(await animatedIds(), ['ModelingImg']);
+    assert.ok(!(await animatedIds()).includes('CompanyImg'));
+}
+
 test('default portfolio renders and Featured Read More navigates to its skill', {timeout: 10000}, async () => {
     const {page, consoleErrors} = await pageAt(baseUrl + '/');
     await page.locator('#featuredReadMore').waitFor({state:'visible'});
@@ -68,6 +86,18 @@ test('default portfolio renders and Featured Read More navigates to its skill', 
     await page.locator('#' + ('skill-' + activeRef.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase())).waitFor({state:'visible'});
     assert.equal(consoleErrors.filter(text => /Portfolio data could not|Unable to load/.test(text)).length, 0);
     await page.close();
+});
+
+test('category hover animates only the hovered icon in root and nested portfolios', {timeout: 10000}, async () => {
+    const root = await pageAt(baseUrl + '/');
+    await root.page.locator('#featuredSlides .item').first().waitFor({state:'visible'});
+    await assertCategoryHoverTargetsOwnIcon(root.page);
+    await root.page.close();
+
+    const nested = await pageAt(baseUrl + '/jobs/_template/');
+    await nested.page.locator('#featuredSlides .item').first().waitFor({state:'visible'});
+    await assertCategoryHoverTargetsOwnIcon(nested.page);
+    await nested.page.close();
 });
 
 test('default About Me renders migrated content and nested jobs fall back to it', {timeout: 10000}, async () => {
