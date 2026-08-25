@@ -53,10 +53,18 @@
         }
         return {
             subtitle: metadata.join(' · '),
-            description: skill.description || '',
+            description: skill.descriptionHtml || skill.description || '',
             primary: primary,
-            gallery: items.filter(function (item) { return item.type === 'image'; }).map(function (item) { return item.src; })
+            items: items,
+            gallery: items.filter(function (item) { return item.type === 'image' && item.display !== false; }).map(function (item) { return item.src; })
         };
+    }
+
+    function featureMedia(skill) {
+        var items = (skill.media && skill.media.items) || [];
+        var heroes = items.filter(function (item) { return (item.roles || []).indexOf('featureHero') !== -1; });
+        var supporting = items.filter(function (item) { return (item.roles || []).indexOf('featureSupporting') !== -1; });
+        return {hero: heroes[0] || null, supporting: supporting};
     }
 
     function skillView(skill) {
@@ -70,5 +78,5 @@
         };
     }
 
-    return { resourceCandidates: resourceCandidates, categoryLocations: categoryLocations, validateManifest: validateManifest, skillView: skillView };
+    return { resourceCandidates: resourceCandidates, categoryLocations: categoryLocations, validateManifest: validateManifest, skillView: skillView, featureMedia: featureMedia };
 });

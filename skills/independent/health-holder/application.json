@@ -26,5 +26,10 @@
       {"type": "image", "src": "images/skills/company/health_3.jpg"},
       {"type": "image", "src": "images/skills/company/health_4.jpg"}
     ]
+  },
+  "meta": {
+    "technologyVersions": {
+      "java": "1.2"
+    }
   }
 }

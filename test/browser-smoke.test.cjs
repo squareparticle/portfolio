@@ -150,6 +150,7 @@ test('Health Holder renders from the normal skill schema', {timeout: 10000}, asy
     assert.match(await skill.innerText(), /Health Holder/);
     assert.match(await skill.innerText(), /Desktop Application · Java/);
     assert.match(await skill.innerText(), /food-group targets and detailed nutritional values/);
+    assert.doesNotMatch(await skill.innerText(), /1\.2/);
     assert.equal(await skill.locator('img').count(), 5);
     await page.close();
 });

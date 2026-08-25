@@ -73,3 +73,35 @@ test('normal-schema skills render platform, technologies, primary media, and gal
     assert.deepEqual(view.primary, {type: 'image', src: 'health.jpg'});
     assert.deepEqual(view.gallery, ['health_1.jpg']);
 });
+
+test('normal-schema media defaults to visible and preserves roles for Featured selection', () => {
+    const skill = {
+        title: 'Example',
+        description: 'Public description',
+        media: {
+            thumbnail: 'thumbnail.jpg',
+            items: [
+                {type: 'image', src: 'hero.jpg', display: false, roles: ['featureHero']},
+                {type: 'image', src: 'support-1.jpg', roles: ['featureSupporting']},
+                {type: 'image', src: 'support-2.jpg', roles: ['featureSupporting']}
+            ]
+        },
+        meta: {technologyVersions: {java: '1.2'}}
+    };
+    const view = rules.skillView(skill);
+    const feature = rules.featureMedia(skill);
+    assert.deepEqual(view.gallery, ['support-1.jpg', 'support-2.jpg']);
+    assert.equal(view.items[0].roles[0], 'featureHero');
+    assert.deepEqual(feature.hero, skill.media.items[0]);
+    assert.deepEqual(feature.supporting, skill.media.items.slice(1));
+    assert.notEqual(feature.hero.src, skill.media.thumbnail);
+    assert.equal(view.description.includes('1.2'), false);
+});
+
+test('legacy skill media and copy remain supported', () => {
+    const view = rules.skillView({subtitle: 'Java 1.2', text: 'Legacy copy', media: {image: 'legacy.jpg', gallery: ['detail.jpg']}});
+    assert.equal(view.subtitle, 'Java 1.2');
+    assert.equal(view.description, 'Legacy copy');
+    assert.deepEqual(view.primary, {type: 'image', src: 'legacy.jpg'});
+    assert.deepEqual(view.gallery, ['detail.jpg']);
+});
