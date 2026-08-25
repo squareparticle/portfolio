@@ -172,6 +172,23 @@ test('C.E.L.L. v2 engine and editor render without exposing metadata', {timeout:
     await page.close();
 });
 
+test('Hydra-Gen v2 skills render galleries and keep metadata hidden', {timeout: 10000}, async () => {
+    const {page} = await pageAt(baseUrl + '/');
+    await page.locator('#featuredSlides .item').first().waitFor({state:'visible'});
+    await page.locator('#EnginesThumb').click();
+    const engine = page.locator('#skill-essentialskills-hydragen-engine');
+    await engine.waitFor({state:'visible'});
+    assert.match(await engine.innerText(), /Content Authoring System/);
+    assert.equal(await engine.locator('img').count(), 9);
+    assert.doesNotMatch(await engine.innerText(), /architectureTerminology/);
+    await page.locator('#ToolsThumb').click();
+    const builder = page.locator('#skill-essentialskills-hydragen-activity-builder');
+    await builder.waitFor({state:'visible'});
+    assert.match(await builder.innerText(), /non-developers to build their own programs/);
+    assert.equal(await builder.locator('img').count(), 4);
+    await page.close();
+});
+
 test('missing portfolio media does not prevent visible content', {timeout: 10000}, async () => {
     const {page} = await pageAt(baseUrl + '/');
     await page.route('**/images/**', route => route.fulfill({status:404, body:'missing'}));
