@@ -1,35 +1,12 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "squareparticle/bridge-captain/gear-vr-2016",
   "title": "Bridge Captain Gear VR (2016)",
-  "subtitle": "Unity, Gear VR",
-  "text": "Once I got the Gear VR for Christmas 2016, I never left my room for a week and self determined that VR was the future of gaming! I quickly learned that VR game design is considerably different then typical game design. Thus, I had to scrap Bridge Captain 3D and start over again. I was able to get the entire polygon count to ~10K polygons and it ran pretty smooth on my S6 Edge.",
-  "media": {
-    "image": "images/skills/company/gvr.gif",
-    "gallery": [
-      "images/skills/company/gvr_1.gif",
-      "images/skills/company/gvr_2.gif",
-      "images/skills/company/gvr_3.gif",
-      "images/skills/company/gvr_4.gif",
-      "images/skills/company/gvr_5.gif",
-      "images/skills/company/gvr_6.gif",
-      "images/skills/company/gvr_7.gif",
-      "images/skills/company/gvr_8.gif"
-    ]
-  },
-  "source": {
-    "legacyCategory": "Company",
-    "legacyIndex": 2
-  },
-  "featured": {
-    "heroImage": "images/Gaming.jpg",
-    "supportingImages": [
-      "images/Gaming_1.jpg",
-      "images/Gaming_2.jpg",
-      "images/Gaming_3.jpg"
-    ],
-    "overlayTitle": "Gaming",
-    "overlayText": "Unity, C#, GearVR, Oculus VR",
-    "description": "Built many 2D/3D games and graphic engines with XAML like scripting using Direct X and Open GL. This includes an optimized procedurally generated Voxel engine."
-  }
+  "project": "Bridge Captain",
+  "platform": {"label": "Application Type", "values": ["Mobile VR Game"]},
+  "technologies": ["Unity", "Gear VR"],
+  "date": {"from":"2016","to":"2016","display":false},
+  "description": "Once I got the Gear VR for Christmas 2016, I never left my room for a week and determined that VR was the future of gaming! I quickly learned that VR game design is considerably different than typical game design. Thus, I had to scrap Bridge Captain 3D and start over again. I was able to get the entire polygon count to ~10K polygons, and it ran pretty smoothly on my S6 Edge.",
+  "media": {"thumbnail":"images/skills/company/gvr.gif","primary":{"type":"image","src":"images/skills/company/gvr.gif"},"items":[{"type":"image","src":"images/skills/company/gvr_1.gif"},{"type":"image","src":"images/skills/company/gvr_2.gif"},{"type":"image","src":"images/skills/company/gvr_3.gif"},{"type":"image","src":"images/skills/company/gvr_4.gif"},{"type":"image","src":"images/skills/company/gvr_5.gif"},{"type":"image","src":"images/skills/company/gvr_6.gif"},{"type":"image","src":"images/skills/company/gvr_7.gif"},{"type":"image","src":"images/skills/company/gvr_8.gif"},{"type":"image","src":"images/Gaming.jpg","display":false,"roles":["featureHero"]},{"type":"image","src":"images/Gaming_1.jpg","display":false,"roles":["featureSupporting"]},{"type":"image","src":"images/Gaming_2.jpg","display":false,"roles":["featureSupporting"]},{"type":"image","src":"images/Gaming_3.jpg","display":false,"roles":["featureSupporting"]}]},
+  "featured": {"heroImage":"images/Gaming.jpg","supportingImages":["images/Gaming_1.jpg","images/Gaming_2.jpg","images/Gaming_3.jpg"],"overlayTitle":"Gaming","overlayText":"Unity, C#, GearVR, Oculus VR","description":"Built many 2D/3D games and graphic engines with XAML like scripting using Direct X and Open GL. This includes an optimized procedurally generated Voxel engine."}
 }

@@ -1,21 +1,12 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "squareparticle/bridge-captain/libgdx-remake-2014",
   "title": "Bridge Captain Remake (2014)",
-  "subtitle": "Java 1.6, LibGDX, OpenGL 1.2",
-  "text": "After the mild success of the original Bridge Captain, I wanted to continue to expand the game and make it more interesting. I did this by inserting the player into a 3D universe and adding more features to the bridge.  While the writers were building additional missions, I was remastering the game.",
-  "media": {
-    "youtube": "https://www.youtube.com/embed/kzdRXIpKMRg",
-    "gallery": [
-      "images/skills/company/bcr_1.jpg",
-      "images/skills/company/bcr_2.jpg",
-      "images/skills/company/bcr_3.jpg",
-      "images/skills/company/bcr_4.jpg"
-    ],
-    "htmlBlock": "<div class=\"embed-responsive embed-responsive-16by9\"> <iframe class=embed-responsive-item src=\"//www.youtube.com/embed/ILICI8YQq3Q?rel=0\" allowfullscreen></iframe> </div>"
-  },
-  "source": {
-    "legacyCategory": "Company",
-    "legacyIndex": 0
-  }
+  "project": "Bridge Captain",
+  "platform": {"label":"Application Type","values":["Desktop Game"]},
+  "technologies":["Java","LibGDX","OpenGL"],
+  "date":{"from":"2014","to":"2014","display":false},
+  "description":"After the mild success of the original Bridge Captain, I wanted to continue to expand the game and make it more interesting. I did this by inserting the player into a 3D universe and adding more features to the bridge. While the writers were building additional missions, I was remastering the game.",
+  "media":{"primary":{"type":"youtube","id":"kzdRXIpKMRg"},"items":[{"type":"image","src":"images/skills/company/bcr_1.jpg"},{"type":"image","src":"images/skills/company/bcr_2.jpg"},{"type":"image","src":"images/skills/company/bcr_3.jpg"},{"type":"image","src":"images/skills/company/bcr_4.jpg"},{"type":"embed","src":"//www.youtube.com/embed/ILICI8YQq3Q?rel=0"}]},
+  "meta":{"technologyVersions":{"java":"1.6","opengl":"1.2"}}
 }

@@ -1,15 +1,11 @@
 {
-  "schemaVersion": 1,
-  "id": "squareparticle/bridge-captain/live-mission-editor",
-  "title": "New Mission Editor",
-  "subtitle": "Unity",
-  "text": "The Unity remake of Bridge Captain required me to rebuild the mission editor.  This time I built the editor right into the game itself.  First I created a custom asset management database combined with a command and event system.  This editor allows the game designer to script not only missions and dialogue, but also all other assets in the game as well. Missions can be build and scrubbed through during gameplay and testing. The editor also includes a mission console for debugging.",
-  "mobileText": "The Unity remake of Bridge Captain required me to rebuild the mission editor.  <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
-  "media": {
-    "image": "images/skills/tools/bceditor.gif"
-  },
-  "source": {
-    "legacyCategory": "Tools",
-    "legacyIndex": 2
-  }
+  "schemaVersion":2,
+  "id":"squareparticle/bridge-captain/live-mission-editor",
+  "title":"New Mission Editor",
+  "project":"Bridge Captain",
+  "platform":{"label":"Application Type","values":["In-Game Editor"]},
+  "technologies":["Unity"],
+  "date":{"from":null,"to":null,"display":false},
+  "description":"The Unity remake of Bridge Captain required me to rebuild the mission editor. This time I built the editor right into the game itself. First I created a custom asset-management database combined with a command and event system. This editor allows the game designer to script not only missions and dialogue, but also all other assets in the game as well. Missions can be built and scrubbed through during gameplay and testing. The editor also includes a mission console for debugging.",
+  "media":{"thumbnail":"images/skills/tools/bceditor.gif","primary":{"type":"image","src":"images/skills/tools/bceditor.gif"},"items":[]}
 }

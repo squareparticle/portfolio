@@ -56,7 +56,8 @@
             description: skill.descriptionHtml || skill.description || '',
             primary: primary,
             items: items,
-            gallery: items.filter(function (item) { return item.type === 'image' && item.display !== false; }).map(function (item) { return item.src; })
+            gallery: items.filter(function (item) { return item.type === 'image' && item.display !== false; }).map(function (item) { return item.src; }),
+            embeds: items.filter(function (item) { return item.type === 'embed' && item.display !== false; }).map(function (item) { return item.src; })
         };
     }
 
@@ -74,7 +75,8 @@
             subtitle: skill.subtitle || '',
             description: skill.text || '',
             primary: media.image ? {type: 'image', src: media.image} : (media.youtube ? {type: 'youtube', src: media.youtube} : null),
-            gallery: media.gallery || []
+            gallery: media.gallery || [],
+            embeds: media.htmlBlock ? [media.htmlBlock] : []
         };
     }
 

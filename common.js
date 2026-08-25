@@ -147,7 +147,14 @@ function renderSkillTile(holder, category, ref, value, index, skillTileHTML, ski
             img.click(function(){openNav(url);}); imageDiv.append(img); rowDiv.append(imageDiv);
         }
     }
-    if(media.htmlBlock) $('#'+prefix+'_block').html(media.htmlBlock);
+    if(view.embeds && view.embeds.length){
+        var blocks=$('#'+prefix+'_block');
+        for(var embedIndex=0;embedIndex<view.embeds.length;embedIndex++){
+            var embed=view.embeds[embedIndex];
+            if(/^<[^>]+>/.test(embed)) blocks.append(embed);
+            else blocks.append($('<div>',{'class':'embed-responsive embed-responsive-16by9'}).append($('<iframe>',{'class':'embed-responsive-item',src:embed,frameborder:'0',allowfullscreen:'allowfullscreen'})));
+        }
+    }
 }
 
 function openFeaturedSkill(ref){

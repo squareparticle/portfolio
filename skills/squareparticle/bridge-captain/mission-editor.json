@@ -1,15 +1,1 @@
-{
-  "schemaVersion": 1,
-  "id": "squareparticle/bridge-captain/mission-editor",
-  "title": "Mission Editor",
-  "subtitle": "JavaSE",
-  "text": "I gathered together a team of volunteer scifi writers from a hand full of film schools to help me create missions for Bridge Captain.  Thus, I created a tool for them to enter the dialogue, script missions and to chain sequences. The writers debugged their missions by playing the game through the editor or printing it out and reading it. ",
-  "mobileText": "I gathered together a team of volunteer scifi writers from a hand full of film schools to help me create missions for Bridge Captain.  <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
-  "media": {
-    "image": "images/skills/tools/bceditor.jpg"
-  },
-  "source": {
-    "legacyCategory": "Tools",
-    "legacyIndex": 1
-  }
-}
+{"schemaVersion":2,"id":"squareparticle/bridge-captain/mission-editor","title":"Mission Editor","project":"Bridge Captain","platform":{"label":"Application Type","values":["Desktop Editor"]},"technologies":["Java"],"date":{"from":null,"to":null,"display":false},"description":"I gathered together a team of volunteer sci-fi writers from a handful of film schools to help me create missions for Bridge Captain. Thus, I created a tool for them to enter the dialogue, script missions, and chain sequences. The writers debugged their missions by playing the game through the editor or printing it out and reading it.","media":{"thumbnail":"images/skills/tools/bceditor.jpg","primary":{"type":"image","src":"images/skills/tools/bceditor.jpg"},"items":[]}}
