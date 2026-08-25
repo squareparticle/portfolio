@@ -174,6 +174,45 @@ test('Health Holder renders from the normal skill schema', {timeout: 10000}, asy
     await page.close();
 });
 
+test('skill details support concise cards, single sections, and multi-section disclosure', {timeout: 10000}, async () => {
+    const {page} = await pageAt(baseUrl + '/');
+    await page.locator('#featuredSlides .item').first().waitFor({state:'visible'});
+    await page.locator('#MobileThumb').click();
+    const h0p3 = page.locator('#skill-squareparticle-h0p3-mobile-release');
+    await h0p3.waitFor({state:'visible'});
+    assert.equal(await page.locator('#skill-squareparticle-flag-hunt-mobile-release .skill-details-toggle').count(), 0);
+    assert.equal(await h0p3.locator('.skill-details-toggle').count(), 1);
+    assert.equal(await h0p3.locator('.skill-details-section-toggle').count(), 3);
+    assert.doesNotMatch(await h0p3.innerText(), /primarily an early mobile release/);
+    await h0p3.locator('.skill-details-toggle').click();
+    await h0p3.locator('.skill-details-section-toggle', {hasText:'Game Systems'}).click();
+    assert.match(await h0p3.locator('.skill-details-section-content').nth(1).innerText(), /Commodity trading/);
+    await h0p3.locator('.skill-details-section-toggle', {hasText:'Game Systems'}).click();
+    assert.equal(await h0p3.locator('.skill-details-section-content').nth(1).evaluate(node => node.classList.contains('in')), false);
+
+    await page.evaluate(async () => {
+        const original = await window.loadSkill('squareparticle/h0p3/mobile-release');
+        const cloneRef = 'squareparticle/flag-hunt/mobile-release';
+        window.skillCache[cloneRef] = Promise.resolve(Object.assign({}, original, {
+            id: cloneRef,
+            title: 'Single details example',
+            details: {sections: [{title: 'One section', paragraphs: ['Single-section content.'], items: ['One item']}]}
+        }));
+        const category = window.jsonData.categories.find(value => value.id === 'Mobile');
+        category.skills = ['squareparticle/h0p3/mobile-release', cloneRef];
+        await window.changePanel('Mobile');
+    });
+    const single = page.locator('#skill-squareparticle-flag-hunt-mobile-release');
+    await single.waitFor({state:'visible'});
+    const ids = await page.locator('.skill-details [id]').evaluateAll(nodes => nodes.map(node => node.id));
+    assert.equal(new Set(ids).size, ids.length);
+    assert.equal(await single.locator('.skill-details-section-toggle').count(), 0);
+    await single.locator('.skill-details-toggle').click();
+    assert.match(await single.locator('.skill-details-content').innerText(), /One section/);
+    assert.match(await single.locator('.skill-details-content').innerText(), /One item/);
+    await page.close();
+});
+
 test('C.E.L.L. v2 engine and editor render without exposing metadata', {timeout: 10000}, async () => {
     const {page} = await pageAt(baseUrl + '/');
     await page.locator('#featuredSlides .item').first().waitFor({state:'visible'});

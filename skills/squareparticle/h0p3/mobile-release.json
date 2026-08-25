@@ -2,24 +2,68 @@
   "schemaVersion": 2,
   "id": "squareparticle/h0p3/mobile-release",
   "title": "H-0P3 (2009)",
-  "project": "H0p3",
+  "project": "H-0P3",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Mobile Application"
+      "Mobile Game"
     ]
   },
+
   "technologies": [
     "JavaME",
-    "Blackberry SDK"
+    "BlackBerry SDK"
   ],
+
   "date": {
     "from": "2009",
     "to": "2009",
     "display": false
   },
-  "description": "Initially I started creating mobile games after attending a Java conference in Toronto.  The first one I built was a single player 4x space combat game inspired by the BBS game Trade Wars.",
+
+  "description": "H-0P3 was an early mobile 4X-style space combat and trading game inspired by the classic BBS game Trade Wars. Built with JavaME and the BlackBerry SDK, it explored many of the systems I would later expand into larger space-game projects, including Bridge Captain.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "The Game",
+        "paragraphs": [
+          "H-0P3 was a single-player 4X-style space combat and trading game built for early smartphones. It combined exploration, tactical combat, trading, resource gathering, ship management, and progression inside a larger galaxy structure."
+        ]
+      },
+      {
+        "title": "Game Systems",
+        "items": [
+          "Real-time and tactical ship combat",
+          "Multiple ships and ship classes",
+          "Ship and planetary scanning",
+          "Star-system and planetary navigation",
+          "Banking and money transfers",
+          "Inventory and mission systems",
+          "Mining and resource extraction",
+          "Commodity trading",
+          "Ship outfitting and upgrades",
+          "Rank, fame, and party progression"
+        ]
+      },
+      {
+        "title": "Project Evolution",
+        "paragraphs": [
+          "H-0P3 established a number of the space-game ideas I wanted to keep exploring. Rather than simply expanding the same release, I later moved those ideas into the much larger Bridge Captain project, where the scope grew into deeper exploration, narrative, ship systems, crew interaction, and tactical gameplay."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/mobile/hop3.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/mobile/hop3.jpg"
+    },
+
     "items": [
       {
         "type": "image",
@@ -69,15 +113,16 @@
         "type": "image",
         "src": "images/skills/mobile/hop3_12.jpg"
       }
-    ],
-    "thumbnail": "images/skills/mobile/hop3.jpg",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/mobile/hop3.jpg"
-    }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "JavaME, Blackberry SDK",
+    "historicalNotes": [
+      "H-0P3 was primarily an early mobile release used to gain experience with the BlackBerry/mobile ecosystem.",
+      "It was not expanded to Android or heavily marketed with trailers.",
+      "The original intention was to revisit and expand the concept, but Bridge Captain later became the larger successor direction."
+    ],
+
     "provenance": {
       "legacyCategory": "Mobile",
       "legacyIndex": 0

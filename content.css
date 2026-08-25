@@ -6,3 +6,15 @@
     cursor: pointer;    
 }
 
+.skill-details { margin: 18px 20px 0; }
+.skill-details-toggle, .skill-details-section-toggle { color: #4d79ff; font-weight: bold; padding: 0; text-decoration: none; }
+.skill-details-toggle:hover, .skill-details-toggle:focus, .skill-details-section-toggle:hover, .skill-details-section-toggle:focus { color: #8aa7ff; text-decoration: none; }
+.skill-details-content { padding-top: 8px; }
+.skill-details-section { border-top: 1px solid rgba(255,255,255,.16); padding: 7px 0; }
+.skill-details-section-toggle, .skill-details-title { font-size: 17px; }
+.skill-details-section-content, .skill-details-content { font-size: 16px; line-height: 1.45; }
+.skill-details-section-content { padding: 6px 0 0 18px; }
+.skill-details-content p, .skill-details-content ul { font-size: inherit; }
+.skill-details-section-content p:last-child, .skill-details-section-content ul:last-child { margin-bottom: 0; }
+.skill-details-title { margin: 4px 0 10px; font-weight: bold; }
+

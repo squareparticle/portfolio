@@ -118,6 +118,7 @@ function renderSkillTile(holder, category, ref, value, index, skillTileHTML, ski
     var prefix='skill_'+index;
     var tileHTML=html.replace('--IMGID--',prefix+'_img').replace('--TITLEID--',prefix+'_title').replace('--TEXTID--',prefix+'_text')
         .replace('--YOUTUBEID--',prefix+'_youtube').replace('--IMGTABLE--',prefix+'_table').replace('--HTMLBLOCK--',prefix+'_block')
+        .replace('--DETAILSID--',prefix+'_details')
         .replace('--LEFTWIDTHID--',prefix+'_left').replace('--RIGHTWIDTHID--',prefix+'_right')
         .replace('--IMG--', primary && primary.type === 'image' ? PortfolioResources.asset(primary.src,value._resourceBase) : '');
     tileHTML=tileHTML.replace('--TITLESUBTEXT--',view.subtitle);
@@ -155,6 +156,35 @@ function renderSkillTile(holder, category, ref, value, index, skillTileHTML, ski
             else blocks.append($('<div>',{'class':'embed-responsive embed-responsive-16by9'}).append($('<iframe>',{'class':'embed-responsive-item',src:embed,frameborder:'0',allowfullscreen:'allowfullscreen'})));
         }
     }
+    renderSkillDetails($('#'+prefix+'_details'), value.details, prefix);
+}
+
+function renderSkillDetails(holder, details, prefix){
+    var sections=(details && details.sections) || [];
+    if(!sections.length) return;
+    var contentId=prefix+'_details_content';
+    if(sections.length===1){
+        var section=sections[0], toggle=$('<button>',{type:'button','class':'btn btn-link skill-details-toggle','data-toggle':'collapse','data-target':'#'+contentId,'aria-expanded':'false','aria-controls':contentId}).text('Read More ');
+        toggle.append($('<span>',{'class':'caret'})); holder.append(toggle);
+        var content=$('<div>',{id:contentId,'class':'collapse skill-details-content'}); appendDetailSection(content,section,true); holder.append(content); return;
+    }
+    var summary=$('<button>',{type:'button','class':'btn btn-link skill-details-toggle','data-toggle':'collapse','data-target':'#'+contentId,'aria-expanded':'false','aria-controls':contentId}).text('Read More ');
+    summary.append($('<span>',{'class':'caret'})); holder.append(summary);
+    var group=$('<div>',{id:contentId,'class':'collapse skill-details-content'});
+    sections.forEach(function(section,index){
+        var sectionId=prefix+'_details_section_'+index;
+        var row=$('<div>',{'class':'skill-details-section'});
+        var toggle=$('<button>',{type:'button','class':'btn btn-link skill-details-section-toggle','data-toggle':'collapse','data-target':'#'+sectionId,'aria-expanded':'false','aria-controls':sectionId});
+        toggle.append(document.createTextNode('▸ '+(section.title || 'Details')));
+        row.append(toggle); var sectionContent=$('<div>',{id:sectionId,'class':'collapse skill-details-section-content'}); appendDetailSection(sectionContent,section,false); row.append(sectionContent); group.append(row);
+    });
+    holder.append(group);
+}
+
+function appendDetailSection(holder, section, includeTitle){
+    if(includeTitle && section.title) holder.append($('<h4>',{'class':'skill-details-title'}).text(section.title));
+    (section.paragraphs || []).forEach(function(paragraph){ holder.append($('<p>').text(paragraph)); });
+    if(section.items && section.items.length){ var list=$('<ul>'); section.items.forEach(function(item){list.append($('<li>').text(item));}); holder.append(list); }
 }
 
 function openFeaturedSkill(ref){
