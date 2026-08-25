@@ -1,14 +1,39 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/assessment/diagnostic-software",
   "title": "Student Assessment Software (2002 - 2005)",
-  "subtitle": "Java 1.1.8 - Java 1.2, Swing, ISAM BTree Database, MVC",
-  "text": "I worked together with teachers to design an early learning diagnostic application that analyses why the students get the questions incorrect. Example: A student spelled 'cave' as cav, or caiv or kaav, etc... For this project, I partnered with a Sun MicroSystems consultant in order to build a MVC swing based engine with a custom networkable ISAM database.",
-  "media": {
-    "image": "images/skills/work/assessment.jpg"
+  "project": "Assessment",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Application"
+    ]
   },
-  "source": {
-    "legacyCategory": "Work",
-    "legacyIndex": 6
+  "technologies": [
+    "Java - Java",
+    "Swing",
+    "ISAM BTree Database",
+    "MVC"
+  ],
+  "date": {
+    "from": "2002",
+    "to": "2005",
+    "display": false
+  },
+  "description": "I worked together with teachers to design an early learning diagnostic application that analyses why the students get the questions incorrect. Example: A student spelled 'cave' as cav, or caiv or kaav, etc... For this project, I partnered with a Sun MicroSystems consultant in order to build a MVC swing based engine with a custom networkable ISAM database.",
+  "media": {
+    "items": [],
+    "thumbnail": "images/skills/work/assessment.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/work/assessment.jpg"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "Java 1.1.8 - Java 1.2, Swing, ISAM BTree Database, MVC",
+    "provenance": {
+      "legacyCategory": "Work",
+      "legacyIndex": 6
+    }
   }
 }

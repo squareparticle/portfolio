@@ -1,20 +1,55 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "personal/games/mario-tetris",
   "title": "Tetris Challenge (1997)",
-  "subtitle": "Turbo C++, Assembly, Shadow RAM",
-  "text": "When in college, I was challenged into a who can build the best Tetris game contest.  This was my entry.",
-  "media": {
-    "image": "images/skills/jams/tetris.jpg",
-    "gallery": [
-      "images/skills/jams/tetris_1.gif",
-      "images/skills/jams/tetris_2.gif",
-      "images/skills/jams/tetris_3.gif",
-      "images/skills/jams/tetris_4.gif"
+  "project": "Games",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Game"
     ]
   },
-  "source": {
-    "legacyCategory": "Jams",
-    "legacyIndex": 5
+  "technologies": [
+    "Turbo C++",
+    "Assembly",
+    "Shadow RAM"
+  ],
+  "date": {
+    "from": "1997",
+    "to": "1997",
+    "display": false
+  },
+  "description": "When in college, I was challenged into a who can build the best Tetris game contest.  This was my entry.",
+  "media": {
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/jams/tetris_1.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/jams/tetris_2.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/jams/tetris_3.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/jams/tetris_4.gif"
+      }
+    ],
+    "thumbnail": "images/skills/jams/tetris.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/jams/tetris.jpg"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "Turbo C++, Assembly, Shadow RAM",
+    "provenance": {
+      "legacyCategory": "Jams",
+      "legacyIndex": 5
+    }
   }
 }

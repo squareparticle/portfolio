@@ -1,21 +1,94 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/teacher-dashboard/assignment-reporting",
   "title": "Teacher Assignment and Reporting App (2017)",
-  "subtitle": "JQuery, Bootstrap, Ajax, PHP, JSON, AWS (CloudFront, EC2, Ubuntu, SimpleDB)",
-  "text": "After analyzing the competition's trends, I reconstructed the teacher dashboard application to modernize its interface and user experience for today's market. ",
-  "media": {
-    "image": "images/skills/fullstack/title.jpg",
-    "gallery": [
-      "images/skills/fullstack/reporting_1.png",
-      "images/skills/fullstack/reporting_2.png",
-      "images/skills/fullstack/reporting_3.png",
-      "images/skills/fullstack/reporting_4.png"
+  "project": "Teacher Dashboard",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Application"
     ]
   },
-  "source": {
-    "legacyCategory": "Fullstack",
-    "legacyIndex": 5
+  "technologies": [
+    "JQuery",
+    "Bootstrap",
+    "Ajax",
+    "PHP",
+    "JSON",
+    "AWS (CloudFront",
+    "EC2",
+    "Ubuntu",
+    "SimpleDB"
+  ],
+  "date": {
+    "from": "2017",
+    "to": "2017",
+    "display": false
+  },
+  "description": "After analyzing the competition's trends, I reconstructed the teacher dashboard application to modernize its interface and user experience for today's market. ",
+  "media": {
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/fullstack/reporting_1.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/fullstack/reporting_2.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/fullstack/reporting_3.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/fullstack/reporting_4.png"
+      },
+      {
+        "type": "image",
+        "src": "images/Responsive.jpg",
+        "display": false,
+        "roles": [
+          "featureHero"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "images/Responsive_1.jpg",
+        "display": false,
+        "roles": [
+          "featureSupporting"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "images/Responsive_2.jpg",
+        "display": false,
+        "roles": [
+          "featureSupporting"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "images/Responsive_3.jpg",
+        "display": false,
+        "roles": [
+          "featureSupporting"
+        ]
+      }
+    ],
+    "thumbnail": "images/skills/fullstack/title.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/fullstack/title.jpg"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "JQuery, Bootstrap, Ajax, PHP, JSON, AWS (CloudFront, EC2, Ubuntu, SimpleDB)",
+    "provenance": {
+      "legacyCategory": "Fullstack",
+      "legacyIndex": 5
+    }
   },
   "featured": {
     "heroImage": "images/Responsive.jpg",

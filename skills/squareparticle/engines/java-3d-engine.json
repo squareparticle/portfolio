@@ -1,24 +1,72 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "squareparticle/engines/java-3d-engine",
   "title": "3D Engine",
-  "subtitle": "Javascript, Canvas, Cannon Physics, WebRTC, Math, Batch Scripts",
-  "text": "I taught my kids (11 and 14) to design and develop a software 3D graphics and gaming engine during Covid 2020. <a target='_blank' href='http://jamiewhitten.net.s3.amazonaws.com/bradengine/portfolio/index.html'>View Engine</a>",
-  "mobileText": "I taught my kids (11 and 14) to design and develop a software 3D graphics and gaming engine during Covid 2020. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
-  "media": {
-    "image": "images/skills/engines/bradeng3d.gif",
-    "gallery": [
-      "images/skills/engines/brad3d_1.gif",
-      "images/skills/engines/brad3d_2.gif",
-      "images/skills/engines/brad3d_3.gif",
-      "images/skills/engines/brad3d_4.gif",
-      "images/skills/engines/brad3d_5.gif",
-      "images/skills/engines/brad3d_6.gif",
-      "images/skills/engines/brad3d_7.gif"
+  "project": "3D Engine",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Game Engine"
     ]
   },
-  "source": {
-    "legacyCategory": "Engines",
-    "legacyIndex": 1
+  "technologies": [
+    "Javascript",
+    "Canvas",
+    "Cannon Physics",
+    "WebRTC",
+    "Math",
+    "Batch Scripts"
+  ],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "I taught my kids (11 and 14) to design and develop a software 3D graphics and gaming engine during Covid 2020. View Engine",
+  "media": {
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad3d_1.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad3d_2.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad3d_3.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad3d_4.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad3d_5.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad3d_6.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad3d_7.gif"
+      }
+    ],
+    "thumbnail": "images/skills/engines/bradeng3d.gif",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/engines/bradeng3d.gif"
+    }
+  },
+  "descriptionHtml": "I taught my kids (11 and 14) to design and develop a software 3D graphics and gaming engine during Covid 2020. <a target='_blank' href='http://jamiewhitten.net.s3.amazonaws.com/bradengine/portfolio/index.html'>View Engine</a>",
+  "meta": {
+    "legacySubtitle": "Javascript, Canvas, Cannon Physics, WebRTC, Math, Batch Scripts",
+    "legacyMobileText": "I taught my kids (11 and 14) to design and develop a software 3D graphics and gaming engine during Covid 2020. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+    "provenance": {
+      "legacyCategory": "Engines",
+      "legacyIndex": 1
+    }
   }
 }

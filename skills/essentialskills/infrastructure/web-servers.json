@@ -1,14 +1,45 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/infrastructure/web-servers",
   "title": "Web Servers",
-  "subtitle": "LAMP (Linux, Apache, MySQL, PHP), MEAN (MongoDB, Express, Angular, NodeJS), IIS, Apache, Tomcat",
-  "text": "I install, maintain and update many web servers for Essential Skills. I use Angular for adminstrative applications and Apache for large scale customer applications. ",
-  "media": {
-    "image": "images/skills/cloud/node.jpg"
+  "project": "Infrastructure",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Cloud / Server Infrastructure"
+    ]
   },
-  "source": {
-    "legacyCategory": "Cloud",
-    "legacyIndex": 2
+  "technologies": [
+    "LAMP (Linux",
+    "Apache",
+    "MySQL",
+    "PHP)",
+    "MEAN (MongoDB",
+    "Express",
+    "Angular",
+    "NodeJS)",
+    "IIS",
+    "Tomcat"
+  ],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "I install, maintain and update many web servers for Essential Skills. I use Angular for adminstrative applications and Apache for large scale customer applications. ",
+  "media": {
+    "items": [],
+    "thumbnail": "images/skills/cloud/node.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/cloud/node.jpg"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "LAMP (Linux, Apache, MySQL, PHP), MEAN (MongoDB, Express, Angular, NodeJS), IIS, Apache, Tomcat",
+    "provenance": {
+      "legacyCategory": "Cloud",
+      "legacyIndex": 2
+    }
   }
 }

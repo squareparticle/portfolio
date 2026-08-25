@@ -1,14 +1,37 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/platform-migrations/flash-port",
   "title": "Flash Port (2007?)",
-  "subtitle": "Director, Flash",
-  "text": "For the first web engine, we ported one program and the marks manager to the Flash platform.  This is when we discovered that our content was too large for Flash even when the media was fed in dynamically.",
-  "media": {
-    "image": "images/skills/work/flash.png"
+  "project": "Platform Migrations",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Application"
+    ]
   },
-  "source": {
-    "legacyCategory": "Work",
-    "legacyIndex": 8
+  "technologies": [
+    "Director",
+    "Flash"
+  ],
+  "date": {
+    "from": "2007",
+    "to": "2007",
+    "display": false
+  },
+  "description": "For the first web engine, we ported one program and the marks manager to the Flash platform.  This is when we discovered that our content was too large for Flash even when the media was fed in dynamically.",
+  "media": {
+    "items": [],
+    "thumbnail": "images/skills/work/flash.png",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/work/flash.png"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "Director, Flash",
+    "provenance": {
+      "legacyCategory": "Work",
+      "legacyIndex": 8
+    }
   }
 }

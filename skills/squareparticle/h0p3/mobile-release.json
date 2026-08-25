@@ -1,28 +1,86 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "squareparticle/h0p3/mobile-release",
   "title": "H-0P3 (2009)",
-  "subtitle": "JavaME, Blackberry SDK",
-  "text": "Initially I started creating mobile games after attending a Java conference in Toronto.  The first one I built was a single player 4x space combat game inspired by the BBS game Trade Wars.",
-  "media": {
-    "image": "images/skills/mobile/hop3.jpg",
-    "gallery": [
-      "images/skills/mobile/hop3_1.jpg",
-      "images/skills/mobile/hop3_2.jpg",
-      "images/skills/mobile/hop3_3.jpg",
-      "images/skills/mobile/hop3_4.jpg",
-      "images/skills/mobile/hop3_5.jpg",
-      "images/skills/mobile/hop3_6.jpg",
-      "images/skills/mobile/hop3_7.jpg",
-      "images/skills/mobile/hop3_8.jpg",
-      "images/skills/mobile/hop3_9.jpg",
-      "images/skills/mobile/hop3_10.jpg",
-      "images/skills/mobile/hop3_11.jpg",
-      "images/skills/mobile/hop3_12.jpg"
+  "project": "H0p3",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Mobile Application"
     ]
   },
-  "source": {
-    "legacyCategory": "Mobile",
-    "legacyIndex": 0
+  "technologies": [
+    "JavaME",
+    "Blackberry SDK"
+  ],
+  "date": {
+    "from": "2009",
+    "to": "2009",
+    "display": false
+  },
+  "description": "Initially I started creating mobile games after attending a Java conference in Toronto.  The first one I built was a single player 4x space combat game inspired by the BBS game Trade Wars.",
+  "media": {
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/mobile/hop3_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/hop3_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/hop3_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/hop3_4.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/hop3_5.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/hop3_6.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/hop3_7.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/hop3_8.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/hop3_9.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/hop3_10.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/hop3_11.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/hop3_12.jpg"
+      }
+    ],
+    "thumbnail": "images/skills/mobile/hop3.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/mobile/hop3.jpg"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "JavaME, Blackberry SDK",
+    "provenance": {
+      "legacyCategory": "Mobile",
+      "legacyIndex": 0
+    }
   }
 }

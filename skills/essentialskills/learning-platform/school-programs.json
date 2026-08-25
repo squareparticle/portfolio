@@ -1,21 +1,95 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/learning-platform/school-programs",
   "title": "School Programs (1999 - Present)",
-  "subtitle": "J2SE, Java2D, ISAM DB, BerkeleyDB, JNI, JNLP, Flash, AWS, SimpleDB, PHP",
-  "text": "I designed, architected and developed or led teams to develop a total of 81 (K-6) school programs in Java, HTML5 and Flash. Programs such as Math, Science, Reading, etc... These programs were designed by many teachers and each one is expected to take a child months to complete.",
-  "media": {
-    "image": "images/skills/work/java.jpg",
-    "gallery": [
-      "images/skills/work/java_1.jpg",
-      "images/skills/work/java_2.jpg",
-      "images/skills/work/java_3.png",
-      "images/skills/work/java_4.jpg"
+  "project": "Learning Platform",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Application"
     ]
   },
-  "source": {
-    "legacyCategory": "Work",
-    "legacyIndex": 4
+  "technologies": [
+    "J2SE",
+    "Java2D",
+    "ISAM DB",
+    "BerkeleyDB",
+    "JNI",
+    "JNLP",
+    "Flash",
+    "AWS",
+    "SimpleDB",
+    "PHP"
+  ],
+  "date": {
+    "from": "1999",
+    "to": null,
+    "display": false
+  },
+  "description": "I designed, architected and developed or led teams to develop a total of 81 (K-6) school programs in Java, HTML5 and Flash. Programs such as Math, Science, Reading, etc... These programs were designed by many teachers and each one is expected to take a child months to complete.",
+  "media": {
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/work/java_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/work/java_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/work/java_3.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/work/java_4.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/Design.png",
+        "display": false,
+        "roles": [
+          "featureHero"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "images/Design_1.jpg",
+        "display": false,
+        "roles": [
+          "featureSupporting"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "images/Design_2.jpg",
+        "display": false,
+        "roles": [
+          "featureSupporting"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "images/Design_3.jpg",
+        "display": false,
+        "roles": [
+          "featureSupporting"
+        ]
+      }
+    ],
+    "thumbnail": "images/skills/work/java.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/work/java.jpg"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "J2SE, Java2D, ISAM DB, BerkeleyDB, JNI, JNLP, Flash, AWS, SimpleDB, PHP",
+    "provenance": {
+      "legacyCategory": "Work",
+      "legacyIndex": 4
+    }
   },
   "featured": {
     "heroImage": "images/Design.png",

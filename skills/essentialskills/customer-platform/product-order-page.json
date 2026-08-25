@@ -1,14 +1,39 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/customer-platform/product-order-page",
   "title": "Customer Product Order Page (2005 ?)",
-  "subtitle": "C#, ASP.NET, IIS, SQL Server",
-  "text": "During the height of ASP.NETs popularity, I redesigned and rebuilt Essential Skill's website using ASP.NET. The code was set-up to only allow the content and title sections to change, but the header, footer and navigation bar remain static. The products and their descriptions were dynamically loaded from an SQL Server database.",
-  "media": {
-    "image": "images/skills/fullstack/asp.net.jpg"
+  "project": "Customer Platform",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Application"
+    ]
   },
-  "source": {
-    "legacyCategory": "Fullstack",
-    "legacyIndex": 6
+  "technologies": [
+    "C#",
+    "ASP.NET",
+    "IIS",
+    "SQL Server"
+  ],
+  "date": {
+    "from": "2005",
+    "to": "2005",
+    "display": false
+  },
+  "description": "During the height of ASP.NETs popularity, I redesigned and rebuilt Essential Skill's website using ASP.NET. The code was set-up to only allow the content and title sections to change, but the header, footer and navigation bar remain static. The products and their descriptions were dynamically loaded from an SQL Server database.",
+  "media": {
+    "items": [],
+    "thumbnail": "images/skills/fullstack/asp.net.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/fullstack/asp.net.jpg"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "C#, ASP.NET, IIS, SQL Server",
+    "provenance": {
+      "legacyCategory": "Fullstack",
+      "legacyIndex": 6
+    }
   }
 }

@@ -1,17 +1,44 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/magies/production-tool",
   "title": "Magie Maker",
-  "subtitle": "React, Spine, NodeJS, AWS Lambda",
-  "text": "I developed a tool to allow artists to collate their project work into our Magie system.  This application uploads compressed Spine files and builds a testing website for them usnig AWS Lambda.",
-  "media": {
-    "image": "images/skills/fullstack/magiemaker.gif",
-    "gallery": [
-      "images/skills/fullstack/magiemaker_1.gif"
+  "project": "Magies",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Application"
     ]
   },
-  "source": {
-    "legacyCategory": "Fullstack",
-    "legacyIndex": 1
+  "technologies": [
+    "React",
+    "Spine",
+    "NodeJS",
+    "AWS Lambda"
+  ],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "I developed a tool to allow artists to collate their project work into our Magie system.  This application uploads compressed Spine files and builds a testing website for them usnig AWS Lambda.",
+  "media": {
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/fullstack/magiemaker_1.gif"
+      }
+    ],
+    "thumbnail": "images/skills/fullstack/magiemaker.gif",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/fullstack/magiemaker.gif"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "React, Spine, NodeJS, AWS Lambda",
+    "provenance": {
+      "legacyCategory": "Fullstack",
+      "legacyIndex": 1
+    }
   }
 }

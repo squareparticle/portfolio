@@ -1,14 +1,38 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/sred/taxes-grants",
   "title": "Taxes and Grants",
-  "subtitle": "SR&ED, OMDC",
-  "text": "Before outsourcing to a 3rd party, I spent about 5 years <strong>successfully</strong> writing our Scientific Research and Experimental Development Tax reports as well as our Ontario Media Development Corporation grant reports.",
-  "media": {
-    "image": "images/skills/doc/doc_1.png"
+  "project": "Sred",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Documentation"
+    ]
   },
-  "source": {
-    "legacyCategory": "Doc",
-    "legacyIndex": 2
+  "technologies": [
+    "SR&ED",
+    "OMDC"
+  ],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "Before outsourcing to a 3rd party, I spent about 5 years successfully writing our Scientific Research and Experimental Development Tax reports as well as our Ontario Media Development Corporation grant reports.",
+  "media": {
+    "items": [],
+    "thumbnail": "images/skills/doc/doc_1.png",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/doc/doc_1.png"
+    }
+  },
+  "descriptionHtml": "Before outsourcing to a 3rd party, I spent about 5 years <strong>successfully</strong> writing our Scientific Research and Experimental Development Tax reports as well as our Ontario Media Development Corporation grant reports.",
+  "meta": {
+    "legacySubtitle": "SR&ED, OMDC",
+    "provenance": {
+      "legacyCategory": "Doc",
+      "legacyIndex": 2
+    }
   }
 }

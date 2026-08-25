@@ -1,21 +1,93 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/customer-platform/management-analysis",
   "title": "Customer Management and Analysis (2016)",
-  "subtitle": "MongoDB, Express, AngularJS, NodeJS, Bootstrap, AWS, SDB",
-  "text": "Created a customer service and marketing web application.<br><ul><li>Flags potential customer issues</li><li>Flags renewals and tracks contacts</li><li>Charts customer usage with graphs</li><li>Analyses trails</li><li>Stores quotes, company messages, internal school notes and renewal notes</li></ul>",
-  "media": {
-    "image": "images/skills/fullstack/angular.jpg",
-    "gallery": [
-      "images/skills/fullstack/angular_1.jpg",
-      "images/skills/fullstack/angular_2.png",
-      "images/skills/fullstack/angular_3.jpg",
-      "images/skills/fullstack/angular_4.jpg"
+  "project": "Customer Platform",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Application"
     ]
   },
-  "source": {
-    "legacyCategory": "Fullstack",
-    "legacyIndex": 3
+  "technologies": [
+    "MongoDB",
+    "Express",
+    "AngularJS",
+    "NodeJS",
+    "Bootstrap",
+    "AWS",
+    "SDB"
+  ],
+  "date": {
+    "from": "2016",
+    "to": "2016",
+    "display": false
+  },
+  "description": "Created a customer service and marketing web application. Flags potential customer issues Flags renewals and tracks contacts Charts customer usage with graphs Analyses trails Stores quotes, company messages, internal school notes and renewal notes",
+  "media": {
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/fullstack/angular_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/fullstack/angular_2.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/fullstack/angular_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/fullstack/angular_4.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/Angular.jpg",
+        "display": false,
+        "roles": [
+          "featureHero"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "images/Angular_1.jpg",
+        "display": false,
+        "roles": [
+          "featureSupporting"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "images/Angular_2.jpg",
+        "display": false,
+        "roles": [
+          "featureSupporting"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "images/Angular_3.jpg",
+        "display": false,
+        "roles": [
+          "featureSupporting"
+        ]
+      }
+    ],
+    "thumbnail": "images/skills/fullstack/angular.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/fullstack/angular.jpg"
+    }
+  },
+  "descriptionHtml": "Created a customer service and marketing web application.<br><ul><li>Flags potential customer issues</li><li>Flags renewals and tracks contacts</li><li>Charts customer usage with graphs</li><li>Analyses trails</li><li>Stores quotes, company messages, internal school notes and renewal notes</li></ul>",
+  "meta": {
+    "legacySubtitle": "MongoDB, Express, AngularJS, NodeJS, Bootstrap, AWS, SDB",
+    "provenance": {
+      "legacyCategory": "Fullstack",
+      "legacyIndex": 3
+    }
   },
   "featured": {
     "heroImage": "images/Angular.jpg",

@@ -1,20 +1,53 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "squareparticle/live-wallpaper/android",
   "title": "Live Wallpaper (2011)",
-  "subtitle": "Java, Android SDK",
-  "text": "To advertise my Santa game I decided to create a live wallpaper.  From there, I had the idea of creating a space based live wallpaper that connects to a server and battles your friends.",
-  "media": {
-    "youtube": "https://www.youtube.com/embed/3bdG3j51zfA",
-    "gallery": [
-      "images/skills/mobile/livewall_1.jpg",
-      "images/skills/mobile/livewall_2.jpg",
-      "images/skills/mobile/livewall_3.jpg",
-      "images/skills/mobile/livewall_4.jpg"
+  "project": "Live Wallpaper",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Mobile Application"
     ]
   },
-  "source": {
-    "legacyCategory": "Mobile",
-    "legacyIndex": 3
+  "technologies": [
+    "Java",
+    "Android SDK"
+  ],
+  "date": {
+    "from": "2011",
+    "to": "2011",
+    "display": false
+  },
+  "description": "To advertise my Santa game I decided to create a live wallpaper.  From there, I had the idea of creating a space based live wallpaper that connects to a server and battles your friends.",
+  "media": {
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/mobile/livewall_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/livewall_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/livewall_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/livewall_4.jpg"
+      }
+    ],
+    "primary": {
+      "type": "youtube",
+      "id": "3bdG3j51zfA"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "Java, Android SDK",
+    "provenance": {
+      "legacyCategory": "Mobile",
+      "legacyIndex": 3
+    }
   }
 }

@@ -1,14 +1,39 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/authoring/teacher-content-editor",
   "title": "Teacher Created Content Editor",
-  "subtitle": "Java 1.1.8, Swing, QuickTime, media.dll",
-  "text": "I designed and created tools for teachers, which allows them to build their own spelling programs.  The teachers audibly record word lists into a recursive menu structure while the program generates the necessary lessons to teach the students.",
-  "media": {
-    "image": "images/skills/work/spelling.jpg"
+  "project": "Authoring",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Developer Tool"
+    ]
   },
-  "source": {
-    "legacyCategory": "Work",
-    "legacyIndex": 7
+  "technologies": [
+    "Java",
+    "Swing",
+    "QuickTime",
+    "media.dll"
+  ],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "I designed and created tools for teachers, which allows them to build their own spelling programs.  The teachers audibly record word lists into a recursive menu structure while the program generates the necessary lessons to teach the students.",
+  "media": {
+    "items": [],
+    "thumbnail": "images/skills/work/spelling.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/work/spelling.jpg"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "Java 1.1.8, Swing, QuickTime, media.dll",
+    "provenance": {
+      "legacyCategory": "Work",
+      "legacyIndex": 7
+    }
   }
 }

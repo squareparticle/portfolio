@@ -1,15 +1,39 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "squareparticle/tools/3d-file-viewer",
   "title": "3D file Viewer",
-  "subtitle": "C++, Java2D, C#",
-  "text": "Since college I have been fascinated with how the 3D pipeline operates. Before I started working in DirectX 5.0, I attempted to tackle 3D myself using Turbo C++. I got as far as matrices, FOV, culling, z-buffering, lighting and rasterization. I then translated the code to Java as well as C# and constructed a DirectX, OBJ and 3DS file viewer.  Later I used this technique to display 3D objects in an environment where I don't have native access to the 3D accelerator such a Java2D applet.",
-  "mobileText": "Since college I have been fascinated with how the 3D pipeline operates. Before I started working in DirectX 5.0, I attempted to tackle 3D myself using Turbo C++. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
-  "media": {
-    "image": "images/skills/tools/3dviewer.jpg"
+  "project": "Tools",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Developer Tool"
+    ]
   },
-  "source": {
-    "legacyCategory": "Tools",
-    "legacyIndex": 6
+  "technologies": [
+    "C++",
+    "Java2D",
+    "C#"
+  ],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "Since college I have been fascinated with how the 3D pipeline operates. Before I started working in DirectX 5.0, I attempted to tackle 3D myself using Turbo C++. I got as far as matrices, FOV, culling, z-buffering, lighting and rasterization. I then translated the code to Java as well as C# and constructed a DirectX, OBJ and 3DS file viewer.  Later I used this technique to display 3D objects in an environment where I don't have native access to the 3D accelerator such a Java2D applet.",
+  "media": {
+    "items": [],
+    "thumbnail": "images/skills/tools/3dviewer.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/tools/3dviewer.jpg"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "C++, Java2D, C#",
+    "legacyMobileText": "Since college I have been fascinated with how the 3D pipeline operates. Before I started working in DirectX 5.0, I attempted to tackle 3D myself using Turbo C++. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+    "provenance": {
+      "legacyCategory": "Tools",
+      "legacyIndex": 6
+    }
   }
 }

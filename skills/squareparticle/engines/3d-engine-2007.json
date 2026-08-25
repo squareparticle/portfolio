@@ -1,15 +1,39 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "squareparticle/engines/3d-engine-2007",
   "title": "3D Engine (2007)",
-  "subtitle": "Java 1.4, JOGL, OpenGL",
-  "text": "To learn OpenGL I developed a comprehensive 2D/3D game engine in Java using JOGL.  This engine had XAML like scripting abilities in that all the UI layout, object transformations, animations and code binding was scriptable in XML format. Later I ended up creating a two player cart racing game. My experience making this project gave me the idea for creating the FX Engine.",
-  "mobileText": "To learn OpenGL I developed a comprehensive 2D/3D game engine in Java using JOGL. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
-  "media": {
-    "image": "images/skills/engines/xaml3d.gif"
+  "project": "3D Engine (2007)",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Game Engine"
+    ]
   },
-  "source": {
-    "legacyCategory": "Engines",
-    "legacyIndex": 6
+  "technologies": [
+    "Java",
+    "JOGL",
+    "OpenGL"
+  ],
+  "date": {
+    "from": "2007",
+    "to": "2007",
+    "display": false
+  },
+  "description": "To learn OpenGL I developed a comprehensive 2D/3D game engine in Java using JOGL.  This engine had XAML like scripting abilities in that all the UI layout, object transformations, animations and code binding was scriptable in XML format. Later I ended up creating a two player cart racing game. My experience making this project gave me the idea for creating the FX Engine.",
+  "media": {
+    "items": [],
+    "thumbnail": "images/skills/engines/xaml3d.gif",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/engines/xaml3d.gif"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "Java 1.4, JOGL, OpenGL",
+    "legacyMobileText": "To learn OpenGL I developed a comprehensive 2D/3D game engine in Java using JOGL. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+    "provenance": {
+      "legacyCategory": "Engines",
+      "legacyIndex": 6
+    }
   }
 }

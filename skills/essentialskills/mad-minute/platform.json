@@ -1,17 +1,53 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/mad-minute/platform",
   "title": "Mad Minute",
-  "subtitle": "Javascript, React, Canvas, JQuery, HTML5, CSS3, Ajax, PHP, JSON, AWS (CloudFront, EC2, Ubuntu, SimpleDB)",
-  "text": "I developed a Math Mad Minute application as a contract role for Essential Skills. This project required integration into the React version of the Teacher Dashboard.",
-  "media": {
-    "image": "images/skills/work/madminute.gif",
-    "gallery": [
-      "images/skills/work/madminute_1.png"
+  "project": "Mad Minute",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Application"
     ]
   },
-  "source": {
-    "legacyCategory": "Work",
-    "legacyIndex": 3
+  "technologies": [
+    "Javascript",
+    "React",
+    "Canvas",
+    "JQuery",
+    "HTML5",
+    "CSS3",
+    "Ajax",
+    "PHP",
+    "JSON",
+    "AWS (CloudFront",
+    "EC2",
+    "Ubuntu",
+    "SimpleDB"
+  ],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "I developed a Math Mad Minute application as a contract role for Essential Skills. This project required integration into the React version of the Teacher Dashboard.",
+  "media": {
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/work/madminute_1.png"
+      }
+    ],
+    "thumbnail": "images/skills/work/madminute.gif",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/work/madminute.gif"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "Javascript, React, Canvas, JQuery, HTML5, CSS3, Ajax, PHP, JSON, AWS (CloudFront, EC2, Ubuntu, SimpleDB)",
+    "provenance": {
+      "legacyCategory": "Work",
+      "legacyIndex": 3
+    }
   }
 }

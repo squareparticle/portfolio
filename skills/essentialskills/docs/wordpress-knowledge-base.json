@@ -1,15 +1,44 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/docs/wordpress-knowledge-base",
   "title": "Wordpress",
-  "subtitle": "Wordpress, Prism Syntax Highlighter, Custom Sidebars, Media Library, TablePress, Ubuntu, MySQL, PHP",
-  "text": "I set up and installed a WordPress site as a knowledge base for our company's technical documentation. The research includes functional programming, React, Redux, Django, Docker, TypeScript, etc...",
-  "mobileText": "I set up and installed a WordPress site as a knowledge base for our company's technical documentation. The research includes functional programming, React, Redux, Django, Docker, TypeScript, etc...<a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
-  "media": {
-    "image": "images/skills/doc/wordpress.gif"
+  "project": "Docs",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Documentation"
+    ]
   },
-  "source": {
-    "legacyCategory": "Doc",
-    "legacyIndex": 0
+  "technologies": [
+    "Wordpress",
+    "Prism Syntax Highlighter",
+    "Custom Sidebars",
+    "Media Library",
+    "TablePress",
+    "Ubuntu",
+    "MySQL",
+    "PHP"
+  ],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "I set up and installed a WordPress site as a knowledge base for our company's technical documentation. The research includes functional programming, React, Redux, Django, Docker, TypeScript, etc...",
+  "media": {
+    "items": [],
+    "thumbnail": "images/skills/doc/wordpress.gif",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/doc/wordpress.gif"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "Wordpress, Prism Syntax Highlighter, Custom Sidebars, Media Library, TablePress, Ubuntu, MySQL, PHP",
+    "legacyMobileText": "I set up and installed a WordPress site as a knowledge base for our company's technical documentation. The research includes functional programming, React, Redux, Django, Docker, TypeScript, etc...<a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+    "provenance": {
+      "legacyCategory": "Doc",
+      "legacyIndex": 0
+    }
   }
 }

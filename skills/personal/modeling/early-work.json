@@ -1,24 +1,70 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "personal/modeling/early-work",
   "title": "Earlier Work (1995 - 2005)",
-  "subtitle": "3DS4 (Dos), 3DS Max (Windows)",
-  "text": "In high school and college I loved to dabble in 3D creation software for making game graphics and animations.",
-  "media": {
-    "image": "images/skills/modeling/old.jpg",
-    "gallery": [
-      "images/skills/modeling/old_1.jpg",
-      "images/skills/modeling/old_2.jpg",
-      "images/skills/modeling/old_3.jpg",
-      "images/skills/modeling/old_4.png",
-      "images/skills/modeling/old_5.jpg",
-      "images/skills/modeling/old_6.jpg",
-      "images/skills/modeling/old_7.jpg",
-      "images/skills/modeling/old_8.png"
+  "project": "Modeling",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Developer Tool"
     ]
   },
-  "source": {
-    "legacyCategory": "Modeling",
-    "legacyIndex": 2
+  "technologies": [
+    "3DS4",
+    "3DS Max (Windows"
+  ],
+  "date": {
+    "from": "1995",
+    "to": "2005",
+    "display": false
+  },
+  "description": "In high school and college I loved to dabble in 3D creation software for making game graphics and animations.",
+  "media": {
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/modeling/old_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/old_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/old_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/old_4.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/old_5.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/old_6.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/old_7.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/old_8.png"
+      }
+    ],
+    "thumbnail": "images/skills/modeling/old.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/modeling/old.jpg"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "3DS4 (Dos), 3DS Max (Windows)",
+    "provenance": {
+      "legacyCategory": "Modeling",
+      "legacyIndex": 2
+    }
   }
 }

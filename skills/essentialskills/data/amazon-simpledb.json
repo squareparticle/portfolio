@@ -1,14 +1,33 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/data/amazon-simpledb",
   "title": "Amazon SDB",
-  "subtitle": "",
-  "text": "I have mainly used Amazon's SimpleDB for dealing with the data of 1000's of concurrent students across North America.",
-  "media": {
-    "image": "images/skills/databases/cloud.jpg"
+  "project": "Data",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Persistence Architecture"
+    ]
   },
-  "source": {
-    "legacyCategory": "Databases",
-    "legacyIndex": 3
+  "technologies": [],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "I have mainly used Amazon's SimpleDB for dealing with the data of 1000's of concurrent students across North America.",
+  "media": {
+    "items": [],
+    "thumbnail": "images/skills/databases/cloud.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/databases/cloud.jpg"
+    }
+  },
+  "meta": {
+    "provenance": {
+      "legacyCategory": "Databases",
+      "legacyIndex": 3
+    }
   }
 }

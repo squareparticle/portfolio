@@ -1,20 +1,56 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "squareparticle/engines/java-voxel-engine",
   "title": "3D Voxel Engine",
-  "subtitle": "Javascript, Canvas, Perlin Noise, Math, WebRTC, Batch Scripts",
-  "text": "I taught my 14-year-old to design and develop a voxel gaming engine during Covid 2020. <a target='_blank' href='http://jamiewhitten.net.s3.amazonaws.com/bradengine/portfolio/index.html'>View Engine</a>",
-  "mobileText": "I taught my 14-year-old to design and develop a voxel gaming engine during Covid 2020. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
-  "media": {
-    "image": "images/skills/engines/bradmc.gif",
-    "gallery": [
-      "images/skills/engines/bradmc_1.png",
-      "images/skills/engines/bradmc_2.gif",
-      "images/skills/engines/bradmc_3.gif"
+  "project": "3D Voxel Engine",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Game Engine"
     ]
   },
-  "source": {
-    "legacyCategory": "Engines",
-    "legacyIndex": 2
+  "technologies": [
+    "Javascript",
+    "Canvas",
+    "Perlin Noise",
+    "Math",
+    "WebRTC",
+    "Batch Scripts"
+  ],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "I taught my 14-year-old to design and develop a voxel gaming engine during Covid 2020. View Engine",
+  "media": {
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/engines/bradmc_1.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/bradmc_2.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/bradmc_3.gif"
+      }
+    ],
+    "thumbnail": "images/skills/engines/bradmc.gif",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/engines/bradmc.gif"
+    }
+  },
+  "descriptionHtml": "I taught my 14-year-old to design and develop a voxel gaming engine during Covid 2020. <a target='_blank' href='http://jamiewhitten.net.s3.amazonaws.com/bradengine/portfolio/index.html'>View Engine</a>",
+  "meta": {
+    "legacySubtitle": "Javascript, Canvas, Perlin Noise, Math, WebRTC, Batch Scripts",
+    "legacyMobileText": "I taught my 14-year-old to design and develop a voxel gaming engine during Covid 2020. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+    "provenance": {
+      "legacyCategory": "Engines",
+      "legacyIndex": 2
+    }
   }
 }

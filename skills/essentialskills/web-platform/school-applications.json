@@ -1,20 +1,64 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/web-platform/school-applications",
   "title": "School Web Applications (2014 - Present)",
-  "subtitle": "Javascript, Canvas, JQuery, HTML5, CSS3, Ajax, PHP, JSON, AWS (CloudFront, EC2, Ubuntu, SimpleDB)",
-  "text": "From 2014 - 2016 I ported all Hydra-Gen school programs from Java Applet to HTML5 due to the browser war on Java. Engine life-cycles are getting shorter as technology advances; thus, I made sure to greatly simplify this engine to it's core basics.  ",
-  "media": {
-    "image": "images/skills/fullstack/canvas.jpg",
-    "gallery": [
-      "images/skills/fullstack/canvas_1.jpg",
-      "images/skills/fullstack/canvas_2.jpg",
-      "images/skills/fullstack/canvas_3.jpg",
-      "images/skills/fullstack/canvas_4.jpg"
+  "project": "Web Platform",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Application"
     ]
   },
-  "source": {
-    "legacyCategory": "Fullstack",
-    "legacyIndex": 4
+  "technologies": [
+    "Javascript",
+    "Canvas",
+    "JQuery",
+    "HTML5",
+    "CSS3",
+    "Ajax",
+    "PHP",
+    "JSON",
+    "AWS (CloudFront",
+    "EC2",
+    "Ubuntu",
+    "SimpleDB"
+  ],
+  "date": {
+    "from": "2014",
+    "to": null,
+    "display": false
+  },
+  "description": "From 2014 - 2016 I ported all Hydra-Gen school programs from Java Applet to HTML5 due to the browser war on Java. Engine life-cycles are getting shorter as technology advances; thus, I made sure to greatly simplify this engine to it's core basics.  ",
+  "media": {
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/fullstack/canvas_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/fullstack/canvas_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/fullstack/canvas_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/fullstack/canvas_4.jpg"
+      }
+    ],
+    "thumbnail": "images/skills/fullstack/canvas.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/fullstack/canvas.jpg"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "Javascript, Canvas, JQuery, HTML5, CSS3, Ajax, PHP, JSON, AWS (CloudFront, EC2, Ubuntu, SimpleDB)",
+    "provenance": {
+      "legacyCategory": "Fullstack",
+      "legacyIndex": 4
+    }
   }
 }

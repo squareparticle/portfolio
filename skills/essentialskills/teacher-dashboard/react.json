@@ -1,18 +1,52 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/teacher-dashboard/react",
   "title": "Teacher Dashboard",
-  "subtitle": "React 16, Bootstrap, Chartjs, Redux, Redux-Observable, RXJS, Axios, Lodash",
-  "text": "I redesigned and developed the Admin/Teacher dashboard using React.",
-  "media": {
-    "image": "images/skills/fullstack/dashboard.gif",
-    "gallery": [
-      "images/skills/fullstack/dashboard_1.gif",
-      "images/skills/fullstack/dashboard_2.gif"
+  "project": "Teacher Dashboard",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Application"
     ]
   },
-  "source": {
-    "legacyCategory": "Fullstack",
-    "legacyIndex": 0
+  "technologies": [
+    "React",
+    "Bootstrap",
+    "Chartjs",
+    "Redux",
+    "Redux-Observable",
+    "RXJS",
+    "Axios",
+    "Lodash"
+  ],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "I redesigned and developed the Admin/Teacher dashboard using React.",
+  "media": {
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/fullstack/dashboard_1.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/fullstack/dashboard_2.gif"
+      }
+    ],
+    "thumbnail": "images/skills/fullstack/dashboard.gif",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/fullstack/dashboard.gif"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "React 16, Bootstrap, Chartjs, Redux, Redux-Observable, RXJS, Axios, Lodash",
+    "provenance": {
+      "legacyCategory": "Fullstack",
+      "legacyIndex": 0
+    }
   }
 }

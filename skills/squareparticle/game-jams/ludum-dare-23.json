@@ -1,15 +1,43 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "squareparticle/game-jams/ludum-dare-23",
   "title": "Lumdum Dare 23 (2012)",
-  "subtitle": "Java 1.5, C.E.L.L. Theme (Tiny World)",
-  "text": "You start off 5000 years in the past where you need to grow five nations in your tiny world. These nations will fight/trade with each other, but be careful as the wrong decision can spark civil wars that can overthrow your control. <a href=\"http://ludumdare.com/compo/ludum-dare-23/?action=preview&uid=12696\">Link</a>",
-  "media": {
-    "image": "images/skills/jams/ludum.jpg",
-    "htmlBlock": "<div class=\"embed-responsive embed-responsive-16by9\"> <iframe class=embed-responsive-item src=\"//www.youtube.com/embed/jDLuFf02_KU?rel=0\" allowfullscreen></iframe> </div>"
+  "project": "Game Jams",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Game"
+    ]
   },
-  "source": {
-    "legacyCategory": "Jams",
-    "legacyIndex": 2
+  "technologies": [
+    "Java",
+    "C.E.L.L. Theme (Tiny World"
+  ],
+  "date": {
+    "from": "2012",
+    "to": "2012",
+    "display": false
+  },
+  "description": "You start off 5000 years in the past where you need to grow five nations in your tiny world. These nations will fight/trade with each other, but be careful as the wrong decision can spark civil wars that can overthrow your control. Link",
+  "media": {
+    "items": [
+      {
+        "type": "embed",
+        "src": "//www.youtube.com/embed/jDLuFf02_KU?rel=0"
+      }
+    ],
+    "thumbnail": "images/skills/jams/ludum.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/jams/ludum.jpg"
+    }
+  },
+  "descriptionHtml": "You start off 5000 years in the past where you need to grow five nations in your tiny world. These nations will fight/trade with each other, but be careful as the wrong decision can spark civil wars that can overthrow your control. <a href=\"http://ludumdare.com/compo/ludum-dare-23/?action=preview&uid=12696\">Link</a>",
+  "meta": {
+    "legacySubtitle": "Java 1.5, C.E.L.L. Theme (Tiny World)",
+    "provenance": {
+      "legacyCategory": "Jams",
+      "legacyIndex": 2
+    }
   }
 }

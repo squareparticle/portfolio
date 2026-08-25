@@ -1,20 +1,54 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "squareparticle/bradengine/engine",
   "title": "(Basic Reusable Application Designer)Engine",
-  "subtitle": "Javascript, Canvas, WebRTC, Box2D",
-  "text": "I designed and developed a 2D graphics and gaming engine to teach my kids (10 and 13) programming skills during the summer break of 2019. <a target='_blank' href='http://jamiewhitten.net.s3.amazonaws.com/bradengine/portfolio/index.html'>View Engine</a>",
-  "mobileText": "I designed and developed a 2D graphics and gaming engine to teach my kids (10 and 13) programming skills during the summer break of 2019. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
-  "media": {
-    "image": "images/skills/engines/bradeng.gif",
-    "gallery": [
-      "images/skills/engines/brad_1.gif",
-      "images/skills/engines/brad_2.gif",
-      "images/skills/engines/brad_3.gif"
+  "project": "Bradengine",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Game Engine"
     ]
   },
-  "source": {
-    "legacyCategory": "Engines",
-    "legacyIndex": 0
+  "technologies": [
+    "Javascript",
+    "Canvas",
+    "WebRTC",
+    "Box2D"
+  ],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "I designed and developed a 2D graphics and gaming engine to teach my kids (10 and 13) programming skills during the summer break of 2019. View Engine",
+  "media": {
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad_1.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad_2.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad_3.gif"
+      }
+    ],
+    "thumbnail": "images/skills/engines/bradeng.gif",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/engines/bradeng.gif"
+    }
+  },
+  "descriptionHtml": "I designed and developed a 2D graphics and gaming engine to teach my kids (10 and 13) programming skills during the summer break of 2019. <a target='_blank' href='http://jamiewhitten.net.s3.amazonaws.com/bradengine/portfolio/index.html'>View Engine</a>",
+  "meta": {
+    "legacySubtitle": "Javascript, Canvas, WebRTC, Box2D",
+    "legacyMobileText": "I designed and developed a 2D graphics and gaming engine to teach my kids (10 and 13) programming skills during the summer break of 2019. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+    "provenance": {
+      "legacyCategory": "Engines",
+      "legacyIndex": 0
+    }
   }
 }

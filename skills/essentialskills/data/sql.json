@@ -1,14 +1,41 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/data/sql",
   "title": "SQL",
-  "subtitle": "SQL Server, MySQL, AccessDB, ODBC, ADO.NET, JDBC",
-  "text": "Over the years I have built many internal tools such as customer support databases, knowlegebases, and activity catalogs using a variety of database back-ends.",
-  "media": {
-    "image": "images/skills/databases/sql.jpg"
+  "project": "Data",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Persistence Architecture"
+    ]
   },
-  "source": {
-    "legacyCategory": "Databases",
-    "legacyIndex": 2
+  "technologies": [
+    "SQL Server",
+    "MySQL",
+    "AccessDB",
+    "ODBC",
+    "ADO.NET",
+    "JDBC"
+  ],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "Over the years I have built many internal tools such as customer support databases, knowlegebases, and activity catalogs using a variety of database back-ends.",
+  "media": {
+    "items": [],
+    "thumbnail": "images/skills/databases/sql.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/databases/sql.jpg"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "SQL Server, MySQL, AccessDB, ODBC, ADO.NET, JDBC",
+    "provenance": {
+      "legacyCategory": "Databases",
+      "legacyIndex": 2
+    }
   }
 }

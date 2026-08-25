@@ -1,24 +1,71 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "squareparticle/art/space-ships",
   "title": "Space Ships (2009 - present)",
-  "subtitle": "3DSMax, MilkShape, Blender",
-  "text": "I created many low polygon ships for H-0p3 and Bridge Captain. Below are a few examples.",
-  "media": {
-    "image": "images/skills/modeling/ship.jpg",
-    "gallery": [
-      "images/skills/modeling/ship_1.png",
-      "images/skills/modeling/ship_2.jpg",
-      "images/skills/modeling/ship_3.jpg",
-      "images/skills/modeling/ship_4.jpg",
-      "images/skills/modeling/ship_5.jpg",
-      "images/skills/modeling/ship_6.png",
-      "images/skills/modeling/ship_7.jpg",
-      "images/skills/modeling/ship_8.jpg"
+  "project": "Art",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Developer Tool"
     ]
   },
-  "source": {
-    "legacyCategory": "Modeling",
-    "legacyIndex": 3
+  "technologies": [
+    "3DSMax",
+    "MilkShape",
+    "Blender"
+  ],
+  "date": {
+    "from": "2009",
+    "to": null,
+    "display": false
+  },
+  "description": "I created many low polygon ships for H-0p3 and Bridge Captain. Below are a few examples.",
+  "media": {
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/modeling/ship_1.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/ship_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/ship_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/ship_4.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/ship_5.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/ship_6.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/ship_7.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/ship_8.jpg"
+      }
+    ],
+    "thumbnail": "images/skills/modeling/ship.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/modeling/ship.jpg"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "3DSMax, MilkShape, Blender",
+    "provenance": {
+      "legacyCategory": "Modeling",
+      "legacyIndex": 3
+    }
   }
 }

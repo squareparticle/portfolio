@@ -1,20 +1,53 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "squareparticle/santas-route/3d-modeling",
   "title": "Santa's Route 3D (2015)",
-  "subtitle": "Blender",
-  "text": "I decided to remake Santa's Route as my first Unity game. This is where I learned how to draw and rig models in blender as well as attach motion capture in Unity. My goal was to release on lower end Android devices; therefore, I tried to keep all the models low polygon.",
-  "media": {
-    "image": "images/skills/modeling/title.jpg",
-    "gallery": [
-      "images/skills/modeling/sr_1.jpg",
-      "images/skills/modeling/sr_2.jpg",
-      "images/skills/modeling/sr.jpg",
-      "images/skills/modeling/sr_4.jpg"
+  "project": "Santas Route",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Game"
     ]
   },
-  "source": {
-    "legacyCategory": "Modeling",
-    "legacyIndex": 1
+  "technologies": [
+    "Blender"
+  ],
+  "date": {
+    "from": "2015",
+    "to": "2015",
+    "display": false
+  },
+  "description": "I decided to remake Santa's Route as my first Unity game. This is where I learned how to draw and rig models in blender as well as attach motion capture in Unity. My goal was to release on lower end Android devices; therefore, I tried to keep all the models low polygon.",
+  "media": {
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/modeling/sr_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/sr_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/sr.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/sr_4.jpg"
+      }
+    ],
+    "thumbnail": "images/skills/modeling/title.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/modeling/title.jpg"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "Blender",
+    "provenance": {
+      "legacyCategory": "Modeling",
+      "legacyIndex": 1
+    }
   }
 }

@@ -1,19 +1,52 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "education/high-school/rpg-project",
   "title": "High School Project (1994)",
-  "subtitle": "Turing, Delux Paint Animation, AAPlay, GWS",
-  "text": "For my Computer Science project, I choose to create a RPG.  I successfully completed a fully playable game in two months.  You can explore the map, find secrets, talk to towns people, grind for xp and money, learn spells, level up and defeat the Wizzard King.",
-  "media": {
-    "image": "images/skills/eng/rpg.gif",
-    "gallery": [
-      "images/skills/eng/hs.jpg",
-      "images/skills/eng/dq_1.png",
-      "images/skills/eng/dq_2.jpg"
+  "project": "High School",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Game"
     ]
   },
-  "source": {
-    "legacyCategory": "Eng",
-    "legacyIndex": 2
+  "technologies": [
+    "Turing",
+    "Delux Paint Animation",
+    "AAPlay",
+    "GWS"
+  ],
+  "date": {
+    "from": "1994",
+    "to": "1994",
+    "display": false
+  },
+  "description": "For my Computer Science project, I choose to create a RPG.  I successfully completed a fully playable game in two months.  You can explore the map, find secrets, talk to towns people, grind for xp and money, learn spells, level up and defeat the Wizzard King.",
+  "media": {
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/eng/hs.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/eng/dq_1.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/eng/dq_2.jpg"
+      }
+    ],
+    "thumbnail": "images/skills/eng/rpg.gif",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/eng/rpg.gif"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "Turing, Delux Paint Animation, AAPlay, GWS",
+    "provenance": {
+      "legacyCategory": "Eng",
+      "legacyIndex": 2
+    }
   }
 }

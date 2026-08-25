@@ -1,21 +1,54 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "squareparticle/unity-block-game-maker/editor",
   "title": "Unity Asset",
-  "subtitle": "Unity Editor",
-  "text": "To learn Unity 4.0 I teamed up with a Unity asset creator from Bulgaria and developed a tiled game maker for artists and designers.  The game maker is operated through the Unity editor by painting levels using ground, obstacles and NPC tiles.  All tileable prefabs including skin animated characters are first run through an automated normalization process.  Flags are checked to apply AI attributes such as walking, searching, colliding and shooting.  Additional custom AI can be added to the existing AI pool if required.  Furthermore, the game designer can choose from array of camera types such as first person, third person, orbital and birds eye view.      ",
-  "mobileText": "To learn Unity 4.0 I teamed up with a Unity asset creator from Bulgaria and developed a tiled game maker for artists and designers.   <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
-  "media": {
-    "image": "images/skills/tools/blockmaker.jpg",
-    "gallery": [
-      "images/skills/tools/blockmaker_3.gif",
-      "images/skills/tools/blockmaker_4.gif",
-      "images/skills/tools/blockmaker_1.jpg",
-      "images/skills/tools/blockmaker_2.jpg"
+  "project": "Unity Block Game Maker",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Developer Tool"
     ]
   },
-  "source": {
-    "legacyCategory": "Tools",
-    "legacyIndex": 3
+  "technologies": [
+    "Unity Editor"
+  ],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "To learn Unity 4.0 I teamed up with a Unity asset creator from Bulgaria and developed a tiled game maker for artists and designers.  The game maker is operated through the Unity editor by painting levels using ground, obstacles and NPC tiles.  All tileable prefabs including skin animated characters are first run through an automated normalization process.  Flags are checked to apply AI attributes such as walking, searching, colliding and shooting.  Additional custom AI can be added to the existing AI pool if required.  Furthermore, the game designer can choose from array of camera types such as first person, third person, orbital and birds eye view.      ",
+  "media": {
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/tools/blockmaker_3.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/tools/blockmaker_4.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/tools/blockmaker_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/tools/blockmaker_2.jpg"
+      }
+    ],
+    "thumbnail": "images/skills/tools/blockmaker.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/tools/blockmaker.jpg"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "Unity Editor",
+    "legacyMobileText": "To learn Unity 4.0 I teamed up with a Unity asset creator from Bulgaria and developed a tiled game maker for artists and designers.   <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+    "provenance": {
+      "legacyCategory": "Tools",
+      "legacyIndex": 3
+    }
   }
 }

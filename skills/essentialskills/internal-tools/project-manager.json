@@ -1,14 +1,37 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/internal-tools/project-manager",
   "title": "Project Manager",
-  "subtitle": "Django, AWS",
-  "text": "I contracted a customer Project Manager application for Essential Skills.  This program is used internally to track developer project timelines. It's main purpose is to track project interruptions, predict future schedules, share tasks and analyze project history.",
-  "media": {
-    "image": "images/skills/fullstack/taskmanager.gif"
+  "project": "Internal Tools",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Developer Tool"
+    ]
   },
-  "source": {
-    "legacyCategory": "Fullstack",
-    "legacyIndex": 2
+  "technologies": [
+    "Django",
+    "AWS"
+  ],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "I contracted a customer Project Manager application for Essential Skills.  This program is used internally to track developer project timelines. It's main purpose is to track project interruptions, predict future schedules, share tasks and analyze project history.",
+  "media": {
+    "items": [],
+    "thumbnail": "images/skills/fullstack/taskmanager.gif",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/fullstack/taskmanager.gif"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "Django, AWS",
+    "provenance": {
+      "legacyCategory": "Fullstack",
+      "legacyIndex": 2
+    }
   }
 }

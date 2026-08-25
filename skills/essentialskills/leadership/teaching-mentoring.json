@@ -1,12 +1,30 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/leadership/teaching-mentoring",
   "title": "Teaching 2004 - 2015",
-  "subtitle": "",
-  "text": "I taught new programmers with University and College backgrounds how to apply their skill-sets towards our company projects. My courses were designed to place all new programmers at the same level before allowing them access to the main code repository. <br><br><center><u>My Coarse</u></center><br><strong><div class='row'><div class='col-md-4'>Custom build data Structures</strong><br><ul><li>Vector</li><li>LinkList</li><li>HashTable</li><li>Binary Tree</li></ul></div><div class='col-md-4'><strong>Sorting Algorithms</strong><br><ul><li>Insertion</li><li>Bubble</li><li>Quick</li></ul></div><div class='col-md-4'><strong>Design Patterns</strong><br><ul><li>Singlton</li><li>Observer</li><li>MVC</li><li>Factory</li></ul></div><div class='col-md-4'><strong>OOD</strong><br><ul><li>Custom GUI components</li><li>SQL and Entities</li><li>Abstract layers</li><li>Encapsulation versus Inheritance</li></ul></div><div class='col-md-4'><strong>The end project was a choice of</strong><br><ul><li>Procedural Fractal Terrain Generator</li><li>Particle Editor</li><li>3D Software Pipeline</li></ul></div></div>",
-  "mobileText": "I taught new programmers with University and College backgrounds how to apply their skill-sets towards our company projects. My courses were designed to place all new programmers at the same level before allowing them access to the main code repository.",
-  "source": {
-    "legacyCategory": "Work",
-    "legacyIndex": 9
+  "project": "Leadership",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Technical Leadership"
+    ]
+  },
+  "technologies": [],
+  "date": {
+    "from": "2004",
+    "to": "2015",
+    "display": false
+  },
+  "description": "I taught new programmers with University and College backgrounds how to apply their skill-sets towards our company projects. My courses were designed to place all new programmers at the same level before allowing them access to the main code repository. My Coarse Custom build data Structures Vector LinkList HashTable Binary Tree Sorting Algorithms Insertion Bubble Quick Design Patterns Singlton Observer MVC Factory OOD Custom GUI components SQL and Entities Abstract layers Encapsulation versus Inheritance The end project was a choice of Procedural Fractal Terrain Generator Particle Editor 3D Software Pipeline",
+  "media": {
+    "items": []
+  },
+  "descriptionHtml": "I taught new programmers with University and College backgrounds how to apply their skill-sets towards our company projects. My courses were designed to place all new programmers at the same level before allowing them access to the main code repository. <br><br><center><u>My Coarse</u></center><br><strong><div class='row'><div class='col-md-4'>Custom build data Structures</strong><br><ul><li>Vector</li><li>LinkList</li><li>HashTable</li><li>Binary Tree</li></ul></div><div class='col-md-4'><strong>Sorting Algorithms</strong><br><ul><li>Insertion</li><li>Bubble</li><li>Quick</li></ul></div><div class='col-md-4'><strong>Design Patterns</strong><br><ul><li>Singlton</li><li>Observer</li><li>MVC</li><li>Factory</li></ul></div><div class='col-md-4'><strong>OOD</strong><br><ul><li>Custom GUI components</li><li>SQL and Entities</li><li>Abstract layers</li><li>Encapsulation versus Inheritance</li></ul></div><div class='col-md-4'><strong>The end project was a choice of</strong><br><ul><li>Procedural Fractal Terrain Generator</li><li>Particle Editor</li><li>3D Software Pipeline</li></ul></div></div>",
+  "meta": {
+    "legacyMobileText": "I taught new programmers with University and College backgrounds how to apply their skill-sets towards our company projects. My courses were designed to place all new programmers at the same level before allowing them access to the main code repository.",
+    "provenance": {
+      "legacyCategory": "Work",
+      "legacyIndex": 9
+    }
   }
 }

@@ -1,14 +1,42 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/home-user/platform",
   "title": "Home User",
-  "subtitle": "Javascript, Lambda, Python, JSON, SimpleDB, PHP, Infusionsoft",
-  "text": "I designed and developed a home user version of the Essential Skills school software.  Parents pay monthly for access to K-6 Reading and Math programs. This project required a separate free trial system that limits our EC2 costs down to a single medium server. ",
-  "media": {
-    "image": "images/skills/work/homeuser.gif"
+  "project": "Home User",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Application"
+    ]
   },
-  "source": {
-    "legacyCategory": "Work",
-    "legacyIndex": 0
+  "technologies": [
+    "Javascript",
+    "Lambda",
+    "Python",
+    "JSON",
+    "SimpleDB",
+    "PHP",
+    "Infusionsoft"
+  ],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "I designed and developed a home user version of the Essential Skills school software.  Parents pay monthly for access to K-6 Reading and Math programs. This project required a separate free trial system that limits our EC2 costs down to a single medium server. ",
+  "media": {
+    "items": [],
+    "thumbnail": "images/skills/work/homeuser.gif",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/work/homeuser.gif"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "Javascript, Lambda, Python, JSON, SimpleDB, PHP, Infusionsoft",
+    "provenance": {
+      "legacyCategory": "Work",
+      "legacyIndex": 0
+    }
   }
 }

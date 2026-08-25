@@ -1,17 +1,53 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "essentialskills/magies/reward-system",
   "title": "Magies",
-  "subtitle": "Spine, Javascript, Canvas, JQuery, HTML5, CSS3, Ajax, PHP, JSON, AWS (CloudFront, EC2, Ubuntu, SimpleDB) ",
-  "text": "I developed and help design a Magies card system in which students collect throughout their lessons.  As the students master the activities they collect gems that are used as currency to evolve their Magies.",
-  "media": {
-    "image": "images/skills/work/spine.gif",
-    "gallery": [
-      "images/skills/work/spine_1.gif"
+  "project": "Magies",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Application"
     ]
   },
-  "source": {
-    "legacyCategory": "Work",
-    "legacyIndex": 1
+  "technologies": [
+    "Spine",
+    "Javascript",
+    "Canvas",
+    "JQuery",
+    "HTML5",
+    "CSS3",
+    "Ajax",
+    "PHP",
+    "JSON",
+    "AWS (CloudFront",
+    "EC2",
+    "Ubuntu",
+    "SimpleDB)"
+  ],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "I developed and help design a Magies card system in which students collect throughout their lessons.  As the students master the activities they collect gems that are used as currency to evolve their Magies.",
+  "media": {
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/work/spine_1.gif"
+      }
+    ],
+    "thumbnail": "images/skills/work/spine.gif",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/work/spine.gif"
+    }
+  },
+  "meta": {
+    "legacySubtitle": "Spine, Javascript, Canvas, JQuery, HTML5, CSS3, Ajax, PHP, JSON, AWS (CloudFront, EC2, Ubuntu, SimpleDB) ",
+    "provenance": {
+      "legacyCategory": "Work",
+      "legacyIndex": 1
+    }
   }
 }
