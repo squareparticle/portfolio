@@ -165,7 +165,7 @@ function renderSkillMetadata(holder, metadata){
 
 function renderSkillDetails(holder, details, prefix){
     var sections=(details && details.sections) || [];
-    if(!sections.length) return;
+    if(!sections.length){ holder.remove(); return; }
     var contentId=prefix+'_details_content';
     if(sections.length===1){
         var section=sections[0], toggle=$('<button>',{type:'button','class':'btn btn-link skill-details-toggle','data-toggle':'collapse','data-target':'#'+contentId,'aria-expanded':'false','aria-controls':contentId}).text('Read More ');

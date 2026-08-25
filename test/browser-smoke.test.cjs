@@ -192,12 +192,20 @@ test('skill details support concise cards, single sections, and multi-section di
         const gallery = node.closest('.jumbotron').querySelector('[id$="_table"]');
         return Boolean(node.compareDocumentPosition(gallery) & Node.DOCUMENT_POSITION_FOLLOWING);
     }), true);
+    assert.equal(await h0p3.locator('.skill-details').evaluate(node => node.closest('#skill_0_right') === null), true);
+    assert.equal(await h0p3.locator('.skill-details').evaluate(node => {
+        const right = node.closest('.jumbotron').querySelector('#skill_0_right');
+        return node.getBoundingClientRect().width > right.getBoundingClientRect().width;
+    }), true);
     assert.doesNotMatch(await h0p3.innerText(), /primarily an early mobile release/);
     await h0p3.locator('.skill-details-toggle').click();
     await h0p3.locator('.skill-details-section-toggle', {hasText:'Game Systems'}).click();
     assert.match(await h0p3.locator('.skill-details-section-content').nth(1).innerText(), /Commodity trading/);
     await h0p3.locator('.skill-details-section-toggle', {hasText:'Game Systems'}).click();
     assert.equal(await h0p3.locator('.skill-details-section-content').nth(1).evaluate(node => node.classList.contains('in')), false);
+    await page.setViewportSize({width:390, height:844});
+    await h0p3.waitFor({state:'visible'});
+    assert.equal(await h0p3.locator('.skill-details').evaluate(node => node.getBoundingClientRect().width > 0), true);
 
     await page.evaluate(async () => {
         const original = await window.loadSkill('squareparticle/h0p3/mobile-release');
