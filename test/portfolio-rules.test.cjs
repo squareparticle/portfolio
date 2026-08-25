@@ -35,12 +35,17 @@ test('nested job portfolios resolve shared defaults from the site root', () => {
 });
 
 test('job-local icon candidates take precedence over shared category assets', () => {
-    assert.deepEqual(rules.resourceCandidates('.', '', 'images/logo/custom.png'), [
-        'images/logo/custom.png', '/images/logo/custom.png'
+    assert.deepEqual(rules.resourceCandidates('.', '', 'images/categories/custom.png'), [
+        'images/categories/custom.png', '/images/categories/custom.png'
     ]);
     assert.deepEqual(rules.resourceCandidates('.', '', 'images/skills/custom/title.png'), [
         'images/skills/custom/title.png', '/images/skills/custom/title.png'
     ]);
+});
+
+test('category intro image defaults to its icon and accepts an explicit override', () => {
+    assert.equal(rules.categoryIntroImage({icon: 'images/categories/narrative.png', intro: {title: 'Narrative'}}), 'images/categories/narrative.png');
+    assert.equal(rules.categoryIntroImage({icon: 'images/categories/narrative.png', intro: {image: 'images/category-intros/narrative.jpg'}}), 'images/category-intros/narrative.jpg');
 });
 
 test('every Featured skill resolves to one normal category', () => {

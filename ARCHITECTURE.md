@@ -28,7 +28,7 @@ The manifest is composition, not evidence. It chooses featured skills and assign
     {
       "id": "Company",
       "name": "Square Particle",
-      "icon": "images/logo/company.png",
+      "icon": "images/categories/company.png",
       "color": "#...",
       "intro": {
         "title": "...",

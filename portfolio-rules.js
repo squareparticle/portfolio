@@ -25,6 +25,10 @@
         return locations;
     }
 
+    function categoryIntroImage(category) {
+        return (category.intro && category.intro.image) || category.icon;
+    }
+
     function validateManifest(manifest) {
         var locations = categoryLocations(manifest), errors = [];
         Object.keys(locations).forEach(function (ref) {
@@ -80,5 +84,5 @@
         };
     }
 
-    return { resourceCandidates: resourceCandidates, categoryLocations: categoryLocations, validateManifest: validateManifest, skillView: skillView, featureMedia: featureMedia };
+    return { resourceCandidates: resourceCandidates, categoryLocations: categoryLocations, categoryIntroImage: categoryIntroImage, validateManifest: validateManifest, skillView: skillView, featureMedia: featureMedia };
 });

@@ -11,7 +11,7 @@
     {
       "id": "Mobile",
       "name": "Mobile Apps",
-      "icon": "images/logo/andriod.png",
+      "icon": "images/categories/andriod.png",
       "color": "#DE5D74",
       "intro": {
         "title": "Mobile Releases",
@@ -30,7 +30,7 @@
     {
       "id": "Modeling",
       "name": "Modeling",
-      "icon": "images/logo/blender.png",
+      "icon": "images/categories/blender.png",
       "color": "#5B40B8",
       "intro": {
         "title": "3D Modeling",
@@ -48,7 +48,7 @@
     {
       "id": "Cloud",
       "name": "Cloud & Servers",
-      "icon": "images/logo/cloud.jpg",
+      "icon": "images/categories/cloud.jpg",
       "color": "#252122",
       "intro": {
         "title": "Cloud & Servers",
@@ -64,7 +64,7 @@
     {
       "id": "Tools",
       "name": "Tool Creations",
-      "icon": "images/logo/ubuntu.png",
+      "icon": "images/categories/ubuntu.png",
       "color": "#307099",
       "intro": {
         "title": "Tool Creation",
@@ -85,7 +85,7 @@
     {
       "id": "Work",
       "name": "Work",
-      "icon": "images/logo/ess.png",
+      "icon": "images/categories/ess.png",
       "color": "#eeeeee",
       "intro": {
         "title": "Work Experience",
@@ -108,7 +108,7 @@
     {
       "id": "Fullstack",
       "name": "Full Stack",
-      "icon": "images/logo/mean.png",
+      "icon": "images/categories/mean.png",
       "color": "#FFB000",
       "intro": {
         "title": "Full Stack",
@@ -129,7 +129,7 @@
     {
       "id": "Eng",
       "name": "Computer Engineering",
-      "icon": "images/logo/humber.jpg",
+      "icon": "images/categories/humber.jpg",
       "color": "#001f4d",
       "intro": {
         "title": "Education",
@@ -147,7 +147,7 @@
     {
       "id": "Engines",
       "name": "Engines",
-      "icon": "images/logo/engine.png",
+      "icon": "images/categories/engine.png",
       "color": "#99CD7A",
       "intro": {
         "title": "Engines and Frameworks",
@@ -169,7 +169,7 @@
     {
       "id": "Doc",
       "name": "Documentation",
-      "icon": "images/logo/uml.png",
+      "icon": "images/categories/uml.png",
       "color": "#6535B3",
       "intro": {
         "title": "Documentation",
@@ -186,7 +186,7 @@
     {
       "id": "Databases",
       "name": "Databases",
-      "icon": "images/logo/database.jpg",
+      "icon": "images/categories/database.jpg",
       "color": "#333333",
       "intro": {
         "title": "Databases",
@@ -203,7 +203,7 @@
     {
       "id": "Jams",
       "name": "Game Jams",
-      "icon": "images/logo/jams.png",
+      "icon": "images/categories/jams.png",
       "color": "#4588B3",
       "intro": {
         "title": "48 Hour Game Jams",
@@ -222,7 +222,7 @@
     {
       "id": "Company",
       "name": "Square Particle",
-      "icon": "images/logo/company.png",
+      "icon": "images/categories/company.png",
       "color": "#595EA4",
       "intro": {
         "title": "Square Particle",

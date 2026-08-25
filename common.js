@@ -89,7 +89,7 @@ async function changePanel(panelID, targetSkillRef){
     var introText=category.intro.text || '';
     if(category.intro.mobileText && isBootstrapSize('xs')) introText=category.intro.mobileText;
     $('#subjectText').html(introText);
-    $('#subjectIMG').attr('src',await PortfolioResources.resolveAsset(category.intro.image,jsonData._resourceBase)).css({width:'100%',height:'auto'});
+    $('#subjectIMG').attr('src',await PortfolioResources.resolveAsset(PortfolioRules.categoryIntroImage(category),jsonData._resourceBase)).css({width:'100%',height:'auto'});
 
     var templates=await Promise.all([
         $.get(PortfolioResources.sharedAsset('skilltile.htm')),

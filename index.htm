@@ -67,7 +67,7 @@
                     $('#bannerTitle').text(banner.title || '');
                     $('#bannerText').text(banner.text || '');
                     if(banner.backgroundImage) $('#portfolioBanner').css('background-image', "url('"+PortfolioResources.asset(banner.backgroundImage,banner._resourceBase)+"')");
-                    $('#brandLogo').attr('src',PortfolioResources.sharedAsset('images/logo/logo2.png'));
+                    $('#brandLogo').attr('src',PortfolioResources.sharedAsset('images/branding/logo2.png'));
                     $('#testbounce').animateCss('fadeInDownBig');
 
                     var resume = await PortfolioResources.resolveResume();

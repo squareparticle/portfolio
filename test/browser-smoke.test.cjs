@@ -123,7 +123,7 @@ test('nested jobs resolve shared category icons and intro graphics from the site
     const {page} = await pageAt(baseUrl + '/jobs/_template/');
     await page.locator('#featuredSlides .item').first().waitFor({state:'visible'});
     await page.locator('#MobileImg').waitFor({state:'visible'});
-    assert.equal(new URL(await page.locator('#MobileImg').getAttribute('src'), baseUrl).pathname, '/images/logo/andriod.png');
+    assert.equal(new URL(await page.locator('#MobileImg').getAttribute('src'), baseUrl).pathname, '/images/categories/andriod.png');
     await page.locator('#MobileThumb').click();
     await page.locator('#subjectIMG').waitFor({state:'visible'});
     assert.equal(new URL(await page.locator('#subjectIMG').getAttribute('src'), baseUrl).pathname, '/images/skills/mobile/title.png');
@@ -134,11 +134,30 @@ test('root portfolio category assets still resolve from its own root', {timeout:
     const root = await pageAt(baseUrl + '/');
     await root.page.locator('#featuredSlides .item').first().waitFor({state:'visible'});
     await root.page.locator('#ModelingImg').waitFor({state:'visible'});
-    assert.equal(new URL(await root.page.locator('#ModelingImg').getAttribute('src'), baseUrl).pathname, '/images/logo/blender.png');
+    assert.equal(new URL(await root.page.locator('#ModelingImg').getAttribute('src'), baseUrl).pathname, '/images/categories/blender.png');
     await root.page.locator('#MobileThumb').click();
     await root.page.locator('#subjectIMG').waitFor({state:'visible'});
     assert.equal(new URL(await root.page.locator('#subjectIMG').getAttribute('src'), baseUrl).pathname, '/images/skills/mobile/title.png');
     await root.page.close();
+});
+
+test('category intro image falls back to the icon and honours an explicit override', {timeout: 10000}, async () => {
+    const {page} = await pageAt(baseUrl + '/');
+    await page.locator('#featuredSlides .item').first().waitFor({state:'visible'});
+    await page.evaluate(async () => {
+        const category = window.jsonData.categories.find(value => value.id === 'Mobile');
+        delete category.intro.image;
+        await window.changePanel('Mobile');
+    });
+    await page.locator('#subjectIMG').waitFor({state:'visible'});
+    assert.equal(new URL(await page.locator('#subjectIMG').getAttribute('src'), baseUrl).pathname, '/images/categories/andriod.png');
+    await page.evaluate(async () => {
+        const category = window.jsonData.categories.find(value => value.id === 'Mobile');
+        category.intro.image = 'images/skills/mobile/title.png';
+        await window.changePanel('Mobile');
+    });
+    assert.equal(new URL(await page.locator('#subjectIMG').getAttribute('src'), baseUrl).pathname, '/images/skills/mobile/title.png');
+    await page.close();
 });
 
 test('Health Holder renders from the normal skill schema', {timeout: 10000}, async () => {
