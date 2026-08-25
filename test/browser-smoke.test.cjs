@@ -141,6 +141,19 @@ test('root portfolio category assets still resolve from its own root', {timeout:
     await root.page.close();
 });
 
+test('Health Holder renders from the normal skill schema', {timeout: 10000}, async () => {
+    const {page} = await pageAt(baseUrl + '/');
+    await page.locator('#featuredSlides .item').first().waitFor({state:'visible'});
+    await page.locator('#CompanyThumb').click();
+    const skill = page.locator('#skill-independent-health-holder-application');
+    await skill.waitFor({state:'visible'});
+    assert.match(await skill.innerText(), /Health Holder/);
+    assert.match(await skill.innerText(), /Desktop Application · Java/);
+    assert.match(await skill.innerText(), /food-group targets and detailed nutritional values/);
+    assert.equal(await skill.locator('img').count(), 5);
+    await page.close();
+});
+
 test('missing portfolio media does not prevent visible content', {timeout: 10000}, async () => {
     const {page} = await pageAt(baseUrl + '/');
     await page.route('**/images/**', route => route.fulfill({status:404, body:'missing'}));

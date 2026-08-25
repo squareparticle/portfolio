@@ -113,33 +113,33 @@ async function changePanel(panelID, targetSkillRef){
 }
 
 function renderSkillTile(holder, category, ref, value, index, skillTileHTML, skillTileNoImageHTML){
-    var media=value.media || {}, hasPrimary=!!media.image || !!media.youtube;
+    var media=value.media || {}, view=PortfolioRules.skillView(value), primary=view.primary, hasPrimary=!!primary;
     var html=hasPrimary ? skillTileHTML : skillTileNoImageHTML;
     var prefix='skill_'+index;
     var tileHTML=html.replace('--IMGID--',prefix+'_img').replace('--TITLEID--',prefix+'_title').replace('--TEXTID--',prefix+'_text')
         .replace('--YOUTUBEID--',prefix+'_youtube').replace('--IMGTABLE--',prefix+'_table').replace('--HTMLBLOCK--',prefix+'_block')
         .replace('--LEFTWIDTHID--',prefix+'_left').replace('--RIGHTWIDTHID--',prefix+'_right')
-        .replace('--IMG--', media.image ? PortfolioResources.asset(media.image,value._resourceBase) : '');
-    tileHTML=tileHTML.replace('--TITLESUBTEXT--',value.subtitle || '');
+        .replace('--IMG--', primary && primary.type === 'image' ? PortfolioResources.asset(primary.src,value._resourceBase) : '');
+    tileHTML=tileHTML.replace('--TITLESUBTEXT--',view.subtitle);
     var wrapper=$('<div>',{id:skillAnchor(ref),'data-skill-ref':ref}).html(tileHTML); holder.append(wrapper);
     $('#'+prefix+'_title').text(value.title || '');
-    $('#'+prefix+'_text').html((value.mobileText && isBootstrapSize('xs')) ? value.mobileText : (value.text || ''));
+    $('#'+prefix+'_text').html((value.mobileText && isBootstrapSize('xs')) ? value.mobileText : view.description);
 
-    if(media.image){
+    if(primary && primary.type === 'image'){
         $('#'+prefix+'_youtube').remove();
-        var imgUrl=PortfolioResources.asset(media.image,value._resourceBase);
+        var imgUrl=PortfolioResources.asset(primary.src,value._resourceBase);
         $('#'+prefix+'_img').attr('src',imgUrl).css({width:'100%',height:'auto'}).off('click').on('click',function(){openNav(imgUrl);});
-    } else if(media.youtube){
-        $('#'+prefix+'_img').remove(); $('#'+prefix+'_youtube').attr('src',media.youtube);
+    } else if(primary && primary.type === 'youtube'){
+        $('#'+prefix+'_img').remove(); $('#'+prefix+'_youtube').attr('src',primary.src || ('https://www.youtube.com/embed/' + primary.id));
         if(isBootstrapSize('md')){$('#'+prefix+'_left').removeClass().addClass('col-md-5');$('#'+prefix+'_right').removeClass().addClass('col-md-7');}
     } else {
         $('#'+prefix+'_img,#'+prefix+'_youtube').remove();
     }
 
-    if(media.gallery && media.gallery.length){
+    if(view.gallery && view.gallery.length){
         var table=$('#'+prefix+'_table'), rowIndex=0, rowDiv=null;
-        for(var tableIndex=0;tableIndex<media.gallery.length;tableIndex++){
-            var path=media.gallery[tableIndex];
+        for(var tableIndex=0;tableIndex<view.gallery.length;tableIndex++){
+            var path=view.gallery[tableIndex];
             var mobBy=isBootstrapSize('xs')?2:(isBootstrapSize('sm')?3:4);
             if(tableIndex % mobBy === 0){ rowDiv=$('<div>',{'class':'row top-buffer'}); table.append(rowDiv); rowIndex++; }
             var url=PortfolioResources.asset(path,value._resourceBase);

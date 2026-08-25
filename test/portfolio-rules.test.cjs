@@ -55,3 +55,21 @@ test('duplicate normal-category skills require explicit schema support', () => {
         {id: 'b', allowDuplicateSkills: true, skills: ['same']}
     ]}), []);
 });
+
+test('normal-schema skills render platform, technologies, primary media, and gallery', () => {
+    const view = rules.skillView({
+        title: 'Health Holder',
+        platform: {label: 'Platform', values: ['Desktop Application']},
+        technologies: ['Java'],
+        date: {from: null, to: null, display: false},
+        description: 'A desktop nutrition application.',
+        media: {
+            primary: {type: 'image', src: 'health.jpg'},
+            items: [{type: 'image', src: 'health_1.jpg'}, {type: 'youtube', id: 'abc123'}]
+        }
+    });
+    assert.equal(view.subtitle, 'Desktop Application · Java');
+    assert.equal(view.description, 'A desktop nutrition application.');
+    assert.deepEqual(view.primary, {type: 'image', src: 'health.jpg'});
+    assert.deepEqual(view.gallery, ['health_1.jpg']);
+});

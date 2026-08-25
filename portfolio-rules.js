@@ -39,5 +39,36 @@
         return errors;
     }
 
-    return { resourceCandidates: resourceCandidates, categoryLocations: categoryLocations, validateManifest: validateManifest };
+    function normalSkillView(skill) {
+        var media = skill.media || {};
+        var primary = media.primary || null;
+        var items = media.items || [];
+        var platform = skill.platform || {};
+        var metadata = [];
+        if (platform.values && platform.values.length) metadata.push(platform.values.join(', '));
+        if (skill.technologies && skill.technologies.length) metadata.push(skill.technologies.join(', '));
+        if (skill.date && skill.date.display) {
+            var dates = [skill.date.from, skill.date.to].filter(Boolean);
+            if (dates.length) metadata.push(dates.join(' – '));
+        }
+        return {
+            subtitle: metadata.join(' · '),
+            description: skill.description || '',
+            primary: primary,
+            gallery: items.filter(function (item) { return item.type === 'image'; }).map(function (item) { return item.src; })
+        };
+    }
+
+    function skillView(skill) {
+        if (skill.description !== undefined || (skill.media && skill.media.primary)) return normalSkillView(skill);
+        var media = skill.media || {};
+        return {
+            subtitle: skill.subtitle || '',
+            description: skill.text || '',
+            primary: media.image ? {type: 'image', src: media.image} : (media.youtube ? {type: 'youtube', src: media.youtube} : null),
+            gallery: media.gallery || []
+        };
+    }
+
+    return { resourceCandidates: resourceCandidates, categoryLocations: categoryLocations, validateManifest: validateManifest, skillView: skillView };
 });
