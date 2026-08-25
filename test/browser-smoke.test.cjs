@@ -155,6 +155,23 @@ test('Health Holder renders from the normal skill schema', {timeout: 10000}, asy
     await page.close();
 });
 
+test('C.E.L.L. v2 engine and editor render without exposing metadata', {timeout: 10000}, async () => {
+    const {page} = await pageAt(baseUrl + '/');
+    await page.locator('#featuredSlides .item').first().waitFor({state:'visible'});
+    await page.locator('#EnginesThumb').click();
+    const engine = page.locator('#skill-squareparticle-cell-engine');
+    await engine.waitFor({state:'visible'});
+    assert.match(await engine.innerText(), /Cross Emulation Library Layer/);
+    assert.equal(await engine.locator('img').count(), 5);
+    assert.doesNotMatch(await engine.innerText(), /architectureLineage/);
+    await page.locator('#ToolsThumb').click();
+    const editor = page.locator('#skill-squareparticle-cell-editor');
+    await editor.waitFor({state:'visible'});
+    assert.match(await editor.innerText(), /Visual Game Editor/);
+    assert.equal(await editor.locator('iframe').count(), 1);
+    await page.close();
+});
+
 test('missing portfolio media does not prevent visible content', {timeout: 10000}, async () => {
     const {page} = await pageAt(baseUrl + '/');
     await page.route('**/images/**', route => route.fulfill({status:404, body:'missing'}));
