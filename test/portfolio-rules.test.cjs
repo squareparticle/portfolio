@@ -79,6 +79,13 @@ test('normal-schema skills render platform, technologies, primary media, and gal
     assert.deepEqual(view.gallery, ['health_1.jpg']);
 });
 
+test('canonical dates format equal years and ranges while hidden dates stay suppressed', () => {
+    assert.equal(rules.formatDate({from:'2009', to:'2009', display:true}), '2009');
+    assert.equal(rules.formatDate({from:'2009', to:'2011', display:true}), '2009 – 2011');
+    assert.equal(rules.formatDate({from:'2009', to:null, display:false}), '');
+    assert.equal(rules.formatDate({from:null, to:null, display:true}), '');
+});
+
 test('normal-schema media defaults to visible and preserves roles for Featured selection', () => {
     const skill = {
         title: 'Example',

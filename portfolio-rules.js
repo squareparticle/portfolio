@@ -49,20 +49,24 @@
         var items = media.items || [];
         var platform = skill.platform || {};
         var metadata = [];
-        if (platform.values && platform.values.length) metadata.push(platform.values.join(', '));
-        if (skill.technologies && skill.technologies.length) metadata.push(skill.technologies.join(', '));
-        if (skill.date && skill.date.display) {
-            var dates = [skill.date.from, skill.date.to].filter(Boolean);
-            if (dates.length) metadata.push(dates.join(' – '));
-        }
+        if (platform.values && platform.values.length) metadata.push({type:'platform', text:platform.values.join(', ')});
+        if (skill.technologies && skill.technologies.length) metadata.push({type:'technologies', text:skill.technologies.join(', ')});
+        var dateText = formatDate(skill.date);
+        if (dateText) metadata.push({type:'date', text:dateText});
         return {
-            subtitle: metadata.join(' · '),
+            subtitle: metadata.map(function (item) { return item.text; }).join(' · '),
+            metadata: metadata,
             description: skill.descriptionHtml || skill.description || '',
             primary: primary,
             items: items,
             gallery: items.filter(function (item) { return item.type === 'image' && item.display !== false; }).map(function (item) { return item.src; }),
             embeds: items.filter(function (item) { return item.type === 'embed' && item.display !== false; }).map(function (item) { return item.src; })
         };
+    }
+
+    function formatDate(date) {
+        if (!date || !date.display || !date.from) return '';
+        return !date.to || date.to === date.from ? date.from : date.from + ' – ' + date.to;
     }
 
     function featureMedia(skill) {
@@ -77,6 +81,7 @@
         var media = skill.media || {};
         return {
             subtitle: skill.subtitle || '',
+            metadata: skill.subtitle ? [{type:'legacy', text:skill.subtitle}] : [],
             description: skill.text || '',
             primary: media.image ? {type: 'image', src: media.image} : (media.youtube ? {type: 'youtube', src: media.youtube} : null),
             gallery: media.gallery || [],
@@ -84,5 +89,5 @@
         };
     }
 
-    return { resourceCandidates: resourceCandidates, categoryLocations: categoryLocations, categoryIntroImage: categoryIntroImage, validateManifest: validateManifest, skillView: skillView, featureMedia: featureMedia };
+    return { resourceCandidates: resourceCandidates, categoryLocations: categoryLocations, categoryIntroImage: categoryIntroImage, validateManifest: validateManifest, skillView: skillView, featureMedia: featureMedia, formatDate: formatDate };
 });

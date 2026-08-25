@@ -17,4 +17,6 @@
 .skill-details-content p, .skill-details-content ul { font-size: inherit; }
 .skill-details-section-content p:last-child, .skill-details-section-content ul:last-child { margin-bottom: 0; }
 .skill-details-title { margin: 4px 0 10px; font-weight: bold; }
+.skill-meta { display: flex; flex-wrap: wrap; align-items: baseline; font-size: 18px; line-height: 1.35; }
+.skill-meta-group:not(:last-child)::after { content: '·'; display: inline-block; margin: 0 7px; }
 

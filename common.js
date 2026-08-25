@@ -117,13 +117,13 @@ function renderSkillTile(holder, category, ref, value, index, skillTileHTML, ski
     var html=hasPrimary ? skillTileHTML : skillTileNoImageHTML;
     var prefix='skill_'+index;
     var tileHTML=html.replace('--IMGID--',prefix+'_img').replace('--TITLEID--',prefix+'_title').replace('--TEXTID--',prefix+'_text')
-        .replace('--YOUTUBEID--',prefix+'_youtube').replace('--IMGTABLE--',prefix+'_table').replace('--HTMLBLOCK--',prefix+'_block')
+        .replace('--YOUTUBEID--',prefix+'_youtube').replace('--METAID--',prefix+'_meta').replace('--IMGTABLE--',prefix+'_table').replace('--HTMLBLOCK--',prefix+'_block')
         .replace('--DETAILSID--',prefix+'_details')
         .replace('--LEFTWIDTHID--',prefix+'_left').replace('--RIGHTWIDTHID--',prefix+'_right')
         .replace('--IMG--', primary && primary.type === 'image' ? PortfolioResources.asset(primary.src,value._resourceBase) : '');
-    tileHTML=tileHTML.replace('--TITLESUBTEXT--',view.subtitle);
     var wrapper=$('<div>',{id:skillAnchor(ref),'data-skill-ref':ref}).html(tileHTML); holder.append(wrapper);
     $('#'+prefix+'_title').text(value.title || '');
+    renderSkillMetadata($('#'+prefix+'_meta'), view.metadata);
     $('#'+prefix+'_text').html((value.mobileText && isBootstrapSize('xs')) ? value.mobileText : view.description);
 
     if(primary && primary.type === 'image'){
@@ -157,6 +157,10 @@ function renderSkillTile(holder, category, ref, value, index, skillTileHTML, ski
         }
     }
     renderSkillDetails($('#'+prefix+'_details'), value.details, prefix);
+}
+
+function renderSkillMetadata(holder, metadata){
+    (metadata || []).forEach(function(item){ holder.append($('<span>',{'class':'skill-meta-group skill-'+item.type}).text(item.text)); });
 }
 
 function renderSkillDetails(holder, details, prefix){

@@ -167,7 +167,8 @@ test('Health Holder renders from the normal skill schema', {timeout: 10000}, asy
     const skill = page.locator('#skill-independent-health-holder-application');
     await skill.waitFor({state:'visible'});
     assert.match(await skill.innerText(), /Health Holder/);
-    assert.match(await skill.innerText(), /Desktop Application · Java/);
+    assert.equal(await skill.locator('.skill-platform').innerText(), 'Desktop Application');
+    assert.equal(await skill.locator('.skill-technologies').innerText(), 'Java');
     assert.match(await skill.innerText(), /food-group targets and detailed nutritional values/);
     assert.doesNotMatch(await skill.innerText(), /1\.2/);
     assert.equal(await skill.locator('img').count(), 5);
@@ -183,6 +184,14 @@ test('skill details support concise cards, single sections, and multi-section di
     assert.equal(await page.locator('#skill-squareparticle-flag-hunt-mobile-release .skill-details-toggle').count(), 0);
     assert.equal(await h0p3.locator('.skill-details-toggle').count(), 1);
     assert.equal(await h0p3.locator('.skill-details-section-toggle').count(), 3);
+    assert.equal(await h0p3.locator('.skill-meta .skill-platform').innerText(), 'Mobile Game');
+    assert.equal(await h0p3.locator('.skill-meta .skill-technologies').innerText(), 'JavaME, BlackBerry SDK');
+    assert.equal(await h0p3.locator('.skill-meta .skill-date').innerText(), '2009');
+    assert.deepEqual(await h0p3.locator('.skill-meta').evaluate(node => ({display:getComputedStyle(node).display, wrap:getComputedStyle(node).flexWrap})), {display:'flex', wrap:'wrap'});
+    assert.equal(await h0p3.locator('.skill-details').evaluate(node => {
+        const gallery = node.closest('.jumbotron').querySelector('[id$="_table"]');
+        return Boolean(node.compareDocumentPosition(gallery) & Node.DOCUMENT_POSITION_FOLLOWING);
+    }), true);
     assert.doesNotMatch(await h0p3.innerText(), /primarily an early mobile release/);
     await h0p3.locator('.skill-details-toggle').click();
     await h0p3.locator('.skill-details-section-toggle', {hasText:'Game Systems'}).click();

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "squareparticle/h0p3/mobile-release",
-  "title": "H-0P3 (2009)",
+  "title": "H-0P3",
   "project": "H-0P3",
 
   "platform": {
@@ -19,7 +19,7 @@
   "date": {
     "from": "2009",
     "to": "2009",
-    "display": false
+    "display": true
   },
 
   "description": "H-0P3 was an early mobile 4X-style space combat and trading game inspired by the classic BBS game Trade Wars. Built with JavaME and the BlackBerry SDK, it explored many of the systems I would later expand into larger space-game projects, including Bridge Captain.",
