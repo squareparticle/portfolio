@@ -1,11 +1,415 @@
 {
   "schemaVersion": 2,
   "id": "squareparticle/bridge-captain/android-2012",
-  "title": "Bridge Captain (2012)",
+  "title": "Bridge Captain",
   "project": "Bridge Captain",
-  "platform": {"label": "Application Type", "values": ["Desktop Game", "Mobile Game"]},
-  "technologies": ["Java", "Android SDK", "C.E.L.L."],
-  "date": {"from": "2012", "to": "2012", "display": false},
-  "description": "You are the captain of an Earth United Space Vessel. Your mission is to search unregulated space for a ship that has gone missing. As the captain, you can make choices on how to go about finding this ship. You can either fight, bribe, barter, or interrogate your way around the system. But be careful who you trust...",
-  "media": {"primary": {"type": "youtube", "id": "Jm8CFnqUxDI"}, "items": [{"type":"image","src":"images/skills/mobile/bc_1.gif"},{"type":"image","src":"images/skills/mobile/bc_2.gif"},{"type":"image","src":"images/skills/mobile/bc_3.gif"},{"type":"image","src":"images/skills/mobile/bc_4.gif"},{"type":"image","src":"images/skills/mobile/bc_5.jpg"},{"type":"image","src":"images/skills/mobile/bc_6.jpg"},{"type":"image","src":"images/skills/mobile/bc_7.jpg"},{"type":"image","src":"images/skills/mobile/bc_5.gif"}]}
+
+  "platform": {
+    "label": "Released Platform",
+    "values": [
+      "Android"
+    ]
+  },
+
+  "technologies": [
+    "Java",
+    "Android SDK",
+    "C.E.L.L."
+  ],
+
+  "date": {
+    "from": "2012",
+    "to": "2012",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Producer / Project Lead",
+    "total": 25,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Writing"
+        ],
+        "relationship": "partner",
+        "contribution": "Served as the original main writer and helped establish the story structure and mission content."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Art"
+        ],
+        "relationship": "partner",
+        "contribution": "Created character and conversation artwork, including portraits and visual assets used when speaking with characters."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Music",
+          "Sound",
+          "Story"
+        ],
+        "relationship": "partner",
+        "contribution": "Created music and sound and also contributed to story development."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Business",
+          "Administration",
+          "Banking"
+        ],
+        "relationship": "partner",
+        "contribution": "Helped with business administration, banking, and the operational side of the project."
+      },
+      {
+        "count": 4,
+        "roles": [
+          "Game Art",
+          "Environment Art",
+          "Character Art"
+        ],
+        "relationship": "contractor",
+        "contribution": "A California media company provided a dedicated paid production team that created much of the expanded top-down exploration artwork for planets, ships, people, aliens, and related environments."
+      },
+      {
+        "count": 3,
+        "roles": [
+          "Writing"
+        ],
+        "relationship": "volunteer",
+        "contribution": "High-school film and art students contributed mission and story content using the custom mission-authoring workflow."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Music"
+        ],
+        "relationship": "volunteer",
+        "contribution": "A high-school student contributed music."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Concept Art"
+        ],
+        "relationship": "volunteer",
+        "contribution": "A high-school art student contributed concept artwork."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "3D Art"
+        ],
+        "relationship": "volunteer",
+        "contribution": "A high-school 3D artist helped create pre-rendered ship artwork."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Writing",
+          "Writing Team Lead"
+        ],
+        "relationship": "volunteer",
+        "contribution": "A second main writer recruited through Reddit organized and coordinated an additional remote writing team."
+      },
+      {
+        "count": 10,
+        "roles": [
+          "Writing",
+          "Story Development"
+        ],
+        "relationship": "volunteer",
+        "contribution": "Additional remote volunteer writers contributed missions, encounters, dialogue, and story content under the second main writer."
+      }
+    ]
+  },
+
+  "roles": [
+    "Producer / Project Lead",
+    "Lead Developer",
+    "Game Designer",
+    "Engine Developer",
+    "Gameplay Programmer",
+    "Narrative Director",
+    "Art Director",
+    "UI/UX Designer",
+    "Mission Systems Developer",
+    "Tools Developer",
+    "World / Level Designer",
+    "Combat Systems Developer",
+    "Economy / Trading Systems Developer",
+    "Release Manager",
+    "Store / Commerce Setup",
+    "Marketing",
+    "Advertising",
+    "Trailer Creator",
+    "QA / Testing",
+    "Support & Maintenance",
+    "Team Coordinator",
+    "Mentor",
+    "Investor"
+  ],
+
+  "description": "Bridge Captain began as a 30-day Android challenge and quickly grew into the defining project of Square Particle's early years. The original release already contained a complete branching science-fiction story, a detailed starship bridge, working missions, navigation, system management, and exploration. Strong early sales and requests for more content led me to expand it into a much larger authored universe with a 25-person production team, custom mission-authoring tools, top-down exploration, ship combat, factions, trading, and handcrafted solar systems.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "The 30-Day Release",
+        "paragraphs": [
+          "Bridge Captain began as a Ludum Dare October Challenge project. I released the Android version on Google Play around day 28 or 29 of the 30-day challenge through Square Particle.",
+          "The original version already contained a complete approximately 40-minute branching story with a beginning, missions, Easter eggs, and a full ending path. Players commanded an Earth United starship and navigated a detailed solar system from the ship's bridge."
+        ]
+      },
+      {
+        "title": "Original Bridge Simulation",
+        "paragraphs": [
+          "The first release centered on the bridge itself. I created the bridge graphics, consoles, navigation interface, system map, and related UI. Players could move between bridge consoles and use dedicated systems for navigation, ship operations, communications, and missions."
+        ],
+        "items": [
+          "Detailed bridge and console interface",
+          "Navigation and system map",
+          "Mission and story progression",
+          "Branching dialogue and choices",
+          "Working Easter eggs",
+          "Ship-system management",
+          "A complete playable story from beginning to end"
+        ]
+      },
+      {
+        "title": "Early Commercial Response",
+        "paragraphs": [
+          "The game sold roughly 300 paid copies within only a couple of days. I pulled the release because the response convinced me the idea deserved a much larger production, and players were already asking for more content.",
+          "Rather than continuing to sell the small challenge version, I began expanding Bridge Captain into the game I originally imagined it could become."
+        ]
+      },
+      {
+        "title": "Expansion Into a Larger Universe",
+        "paragraphs": [
+          "The expanded C.E.L.L. version grew far beyond the original bridge-focused release. I planned a universe of roughly 50 to 100 solar systems, with a substantial portion designed to contain rich authored stories, factions, missions, locations, and unique themes.",
+          "Development ultimately reached roughly ten handcrafted solar systems at varying levels of completion before the project transitioned toward a desktop-focused 3D rebuild."
+        ]
+      },
+      {
+        "title": "Top-Down Exploration",
+        "paragraphs": [
+          "The expanded game added direct top-down exploration outside the bridge. Players could walk through planets, boarded ships, asteroids, prisons, and other authored locations, meet characters, trigger missions, and interact with the world.",
+          "From the mission system's perspective, walking up to a character was another way of reaching a story node. This allowed the same underlying narrative architecture to drive bridge conversations, planetary encounters, ship interiors, and environmental story events."
+        ]
+      },
+      {
+        "title": "Mission & Narrative System",
+        "paragraphs": [
+          "Bridge Captain's mission system became the backbone of the project. Missions were built from linked pieces of story content that could branch in multiple directions depending on where the player was, who they encountered, what items they carried, previous decisions, combat outcomes, faction state, or other mission conditions.",
+          "The system was intentionally open-ended. A mission path could originate from another ship, a planet, a person, a store, an abandoned location, a choice made earlier in the story, or almost any other gameplay event."
+        ]
+      },
+      {
+        "title": "Custom Mission Editor",
+        "paragraphs": [
+          "As the writing team grew, manually integrating story content became impossible. I built a custom mission-authoring tool so writers could create and connect story content themselves without needing to edit game code.",
+          "The writers did not think of the system as a modern visual node editor, but conceptually that is what it was. They created individual mission files or sub-missions and linked those pieces together into larger branching structures."
+        ],
+        "items": [
+          "Branching mission structures",
+          "Reusable mission and dialogue nodes",
+          "File-to-file linking",
+          "Conditional story paths",
+          "Mission start and completion commands",
+          "Dialogue transitions",
+          "Event-driven outcomes",
+          "Stores and interaction outcomes",
+          "Combat and non-combat resolutions"
+        ]
+      },
+      {
+        "title": "Distributed Writing Workflow",
+        "paragraphs": [
+          "The editor allowed a geographically distributed writing team to work on Bridge Captain directly. Local high-school film and art students participated in weekly meetings at my house, while a second main writer recruited through Reddit organized additional remote writers in the United States.",
+          "All story content ultimately flowed through me as narrative director and arbiter so the growing universe remained coherent while still allowing contributors significant creative freedom."
+        ]
+      },
+      {
+        "title": "Choice-Driven Encounters",
+        "paragraphs": [
+          "The game's fight, bribe, barter, interrogate, steal, trade, and conversation options were largely expressions of the flexible mission system rather than isolated hard-coded mechanics. Writers could create very different outcomes from the same underlying tools.",
+          "For example, a location might open into a store, reveal an angry hermit who refused entry, trigger a negotiation, allow theft, lead to combat, or branch into an entirely different mission depending on authored conditions and player choices."
+        ]
+      },
+      {
+        "title": "Ship Combat",
+        "paragraphs": [
+          "The expanded version added external real-time ship combat. Players manually steered the ship and controlled combat directly rather than resolving battles only through story choices.",
+          "The ship's available power could be routed between Shields, Weapons, and Engines. Increasing one system meant making a tactical tradeoff against the others, allowing players to prioritize defense, offensive capability, or movement and travel speed."
+        ]
+      },
+      {
+        "title": "Exploration, Scanning & Mining",
+        "paragraphs": [
+          "Players could explore star systems, scan planets, mine resources, and discover hidden content. Resources gathered through scanning and mining fed into the game's trading and economy systems and provided a way to earn money.",
+          "Scanning could also reveal Easter-egg missions and other authored discoveries, tying economic exploration directly back into the narrative system."
+        ]
+      },
+      {
+        "title": "Trading & Economy",
+        "paragraphs": [
+          "The expanded C.E.L.L. version contained a functioning trading system. Much of the economic interaction was implemented through the same mission architecture used for narrative encounters, allowing stores, trades, resource exchanges, and unusual location-specific interactions to be authored without creating a separate bespoke system for every scenario."
+        ]
+      },
+      {
+        "title": "Factions & Authored Systems",
+        "paragraphs": [
+          "Several solar systems contained their own factions, themes, missions, characters, and local conflicts. The goal was not simply to generate a large empty universe, but to create enough hand-authored systems that exploration would repeatedly lead to meaningful stories and distinct locations."
+        ]
+      },
+      {
+        "title": "A 25-Person Production",
+        "paragraphs": [
+          "At its peak, the expanded 2012 Bridge Captain production involved approximately 25 people across programming, writing, art, music, business, and media production.",
+          "I served as producer and project lead while also remaining the lead developer, game designer, narrative director, art director, and technical owner of the project."
+        ]
+      },
+      {
+        "title": "Art & Media Production",
+        "paragraphs": [
+          "I created the original bridge, console, navigation, system-map, UI, and core visual presentation. As the project expanded, a California media company provided a dedicated paid team to create much of the artwork required for the new top-down environments, characters, aliens, ships, and locations.",
+          "The original comic-book artist from my earlier games also returned to create character and conversation artwork, while student artists contributed concept work and pre-rendered 3D ships."
+        ]
+      },
+      {
+        "title": "Production Leadership",
+        "paragraphs": [
+          "Bridge Captain required coordinating contributors with very different disciplines and levels of experience. I ran weekly local meetings, directed story and visual work, mentored younger contributors, reviewed incoming content, made final design decisions, and integrated the resulting work into the game.",
+          "Although everyone had opportunities to influence the project, I acted as the final arbiter for story, graphics, gameplay, technical direction, and overall scope."
+        ]
+      },
+      {
+        "title": "Business & Release Operations",
+        "paragraphs": [
+          "I handled the independent-development business responsibilities around the project, including release management, storefront setup, taxes, payment systems, marketing, advertising, trailers, updates, testing, support, and project investment. My wife also contributed substantially to business administration and banking."
+        ]
+      },
+      {
+        "title": "Built on C.E.L.L.",
+        "paragraphs": [
+          "Bridge Captain was built on top of my existing C.E.L.L. framework. C.E.L.L. was designed as a constrained cross-platform API rather than a component-based engine: when application code followed its API rules, the project could be translated from Java to C# in a largely automated pass.",
+          "Bridge Captain did not require me to fundamentally restructure C.E.L.L. to support its growing gameplay scope. Instead, the game continued building increasingly complex systems on top of the existing API."
+        ]
+      },
+      {
+        "title": "Why the Project Moved to Desktop",
+        "paragraphs": [
+          "The scope continued expanding as the team tried to make missions feel meaningfully different rather than repeatedly reusing the same encounters. After investing heavily in exploration, content, combat, tools, and world-building, I concluded that the project deserved a desktop-focused presentation and true 3D graphics.",
+          "That decision led to the later LibGDX/OpenGL rebuild and eventually, after I discovered Unity, to the version that became my preferred direction for Bridge Captain."
+        ]
+      },
+      {
+        "title": "The Heart of Square Particle",
+        "paragraphs": [
+          "Bridge Captain became the defining project of Square Particle for years. It connected nearly every discipline I was interested in: engine development, gameplay systems, narrative tooling, world building, team leadership, art direction, business, cross-platform development, and eventually VR.",
+          "It was also the project whose ambition repeatedly pushed it into larger and larger generations, making it both the heart of Square Particle and the project that continually challenged the limits of what I was trying to build."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "primary": {
+      "type": "youtube",
+      "id": "Jm8CFnqUxDI"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/mobile/bc_1.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/bc_2.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/bc_3.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/bc_4.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/bc_5.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/bc_6.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/bc_7.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/mobile/bc_5.gif"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "Bridge Captain was one of the defining projects in Square Particle's history and remained a major long-running project across several later engine generations.",
+      "Jamie describes Bridge Captain as both the heart of Square Particle for many years and its white whale because its ambition repeatedly drove larger rebuilds.",
+      "The original Android version was developed for the Ludum Dare October Challenge and was placed on Google Play around day 28 or 29 of the approximately 30-day project.",
+      "The challenge version already contained an approximately 40-minute complete branching story with missions, Easter eggs, bridge consoles, navigation, a system map, and detailed solar-system content.",
+      "The original challenge version did not yet contain top-down walking exploration, planetary scanning and mining, direct external ship combat, broader solar-system selection, or the later trading system.",
+      "The original release sold approximately 300 paid copies within a couple of days.",
+      "Jamie pulled the game because sales exceeded his expectations and users were requesting substantially more content.",
+      "The expanded C.E.L.L. version was not publicly rereleased because continued feature growth repeatedly pushed the project farther from a finished commercial milestone.",
+      "Jamie originally imagined approximately 50 to 100 solar systems, with at least roughly one quarter intended to contain substantial authored content.",
+      "Approximately ten handcrafted solar systems reached varying levels of near-completion during the expanded C.E.L.L. generation.",
+      "Top-down exploration of planets, boarded ships, asteroids, prisons, and other locations was implemented in this generation.",
+      "The trading system was implemented and reused the flexible mission architecture.",
+      "Planet scanning and mining generated resources that fed the economy and could also reveal Easter-egg missions.",
+      "External ship combat was manually controlled and included constrained power routing between Shields, Weapons, and Engines.",
+      "Several solar systems contained factions and distinct authored stories.",
+      "The crew inside the player's ship primarily existed for narrative purposes rather than as a formal stat, rank, or job-management system.",
+      "The mission system supported arbitrary linked story structures driven by locations, characters, ships, items, previous decisions, combat outcomes, stores, and other events.",
+      "The original main writer's story content was initially difficult to integrate by hand, motivating Jamie to build the mission-authoring tool before the later feature expansion.",
+      "The mission editor conceptually behaved like a node system even though Jamie had not yet encountered modern visual node-editor interfaces. Writers linked mission files and sub-missions together rather than visually wiring graphical nodes.",
+      "The editor allowed non-programmer writers to directly create branching mission content.",
+      "The second main writer was recruited through Reddit and later assembled an additional remote writing team.",
+      "Six high-school film and art students participated locally and met weekly at Jamie's house.",
+      "The six students included three writers, one music contributor, one concept artist, and one 3D artist who helped create pre-rendered ships.",
+      "The peak team size during the expanded 2012 C.E.L.L. generation was approximately 25 people.",
+      "The team included partners, volunteer writers and students, and approximately 3 to 5 paid contractors from a California media company.",
+      "The California company's CEO was highly enthusiastic about Bridge Captain and assigned a dedicated production team because the game reminded him of Star Trek: 25th Anniversary.",
+      "The California media work was paid by Jamie.",
+      "The original comic-book artist from Santa's Route and Flag Hunt returned as a project partner and created character/conversation artwork.",
+      "The recurring music partner contributed music, sound, and story.",
+      "The first main writer was a project partner.",
+      "Jamie's wife was a project partner who primarily helped with business administration and banking.",
+      "Jamie acted as producer/project lead, lead developer, game designer, narrative director, art director, coordinator, mentor, and final arbiter for story, graphics, gameplay, and technical direction.",
+      "All contributors had creative input, but final project decisions flowed through Jamie.",
+      "The large unpaid/partner/volunteer team gradually contracted over roughly six months as development continued. This is retained as historical context rather than highlighted in public-facing copy.",
+      "The commercial 2012 release was Android-only.",
+      "Jamie intended eventually to sell the expanded version on Steam but never reached that commercial release milestone.",
+      "Bridge Captain ran on C.E.L.L., which exposed a constrained API allowing compliant Java application code to be translated to C# in a largely automated pass.",
+      "Jamie does not remember Bridge Captain requiring significant architectural changes to C.E.L.L.; the game primarily built increasingly complex systems on top of the existing API.",
+      "The decision to rebuild in LibGDX came from the belief that the project's expanding scope deserved a desktop-focused experience and true 3D presentation.",
+      "Jamie had not yet discovered Unity when the initial LibGDX decision was made.",
+      "After later discovering Unity, it became the preferred direction for the desktop/3D evolution of Bridge Captain."
+    ],
+
+    "confidence": {
+      "originalReleaseSales": "high",
+      "originalStoryLength": "high",
+      "peakTeamSize": "high",
+      "contractorTeamSize": "medium",
+      "plannedSolarSystemCount": "medium",
+      "completedSolarSystemCount": "medium"
+    }
+  }
 }

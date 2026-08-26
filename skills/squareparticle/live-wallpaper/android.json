@@ -1,25 +1,133 @@
 {
   "schemaVersion": 2,
   "id": "squareparticle/live-wallpaper/android",
-  "title": "Live Wallpaper (2011)",
+  "title": "Android Live Wallpapers",
   "project": "Live Wallpaper",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Mobile Application"
+      "Android Live Wallpaper"
     ]
   },
+
   "technologies": [
     "Java",
-    "Android SDK"
+    "Android SDK",
+    "Amazon S3",
+    "PHP",
+    "XML"
   ],
+
   "date": {
     "from": "2011",
     "to": "2011",
-    "display": false
+    "display": true
   },
-  "description": "To advertise my Santa game I decided to create a live wallpaper.  From there, I had the idea of creating a space based live wallpaper that connects to a server and battles your friends.",
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Lead / Primary Developer",
+    "total": 2,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Art"
+        ],
+        "relationship": "partner",
+        "contribution": "Provided and adapted Santa artwork from the Santa's Route project for the promotional live wallpaper."
+      }
+    ]
+  },
+
+  "roles": [
+    "Lead / Primary Developer",
+    "Game / Simulation Designer",
+    "Android Developer",
+    "UI/UX Designer",
+    "Game Artist",
+    "Network Programmer",
+    "Backend Developer",
+    "QA / Testing",
+    "Release / Store Management",
+    "Marketing"
+  ],
+
+  "description": "I built two Android live wallpapers in 2011. The first was a lightweight Santa's Route promotional wallpaper with snowfall and 3D parallax. The second grew into a passive space-battle simulation that reused parts of H-0P3, maintained a persistent territorial campaign, and explored asynchronous multiplayer through lightweight cloud-hosted state.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Santa's Route Wallpaper",
+        "paragraphs": [
+          "The first live wallpaper was a small promotional experiment for Santa's Route. I used artwork from the game, added animated snowfall, and created a 3D parallax effect that responded as the user swiped between Android home-screen pages.",
+          "The wallpaper was released for free on Android as a lightweight way to promote the game."
+        ]
+      },
+      {
+        "title": "Space Battle Wallpaper",
+        "paragraphs": [
+          "After experimenting with the Santa wallpaper, I built a more ambitious space-battle version using portions of my earlier H-0P3 code and graphics as a starting point. I created additional artwork specifically for the wallpaper and designed it as a passive persistent simulation rather than a traditional interactive game."
+        ]
+      },
+      {
+        "title": "Persistent Campaign Simulation",
+        "paragraphs": [
+          "Two opposing forces continuously contested map sectors throughout the day. Battles occurred at random intervals and shifted territorial control back and forth like a pendulum, with neither side designed to permanently eliminate the other.",
+          "The campaign state persisted locally so the wallpaper could remember territory and remaining forces between sessions."
+        ]
+      },
+      {
+        "title": "Elapsed-Time Battles",
+        "paragraphs": [
+          "The wallpaper did not continuously run expensive battle animations in the background. Most of the time the user was looking at relatively static imagery. When the phone became active again, the simulation calculated what should have happened during the elapsed time and updated the campaign state accordingly.",
+          "This allowed the wallpaper to create the impression of a battle continuing while the phone was locked without continuously consuming processing and battery resources."
+        ]
+      },
+      {
+        "title": "Orientation & Home-Screen Layout",
+        "paragraphs": [
+          "The space-battle wallpaper had separate layouts for portrait and landscape orientation. In portrait mode, the artwork was designed across multiple home-screen pages so different portions of the battle scene became visible as the user swiped between launcher pages.",
+          "When the phone rotated into landscape, the wallpaper used a different horizontal composition rather than simply stretching the portrait layout."
+        ]
+      },
+      {
+        "title": "Async Multiplayer Experiment",
+        "paragraphs": [
+          "I also experimented with an asynchronous phone-to-phone multiplayer architecture inspired by the lower-cost networking work I had explored for Flag Hunt. Each device was represented by cloud-hosted XML state containing values such as sectors controlled and fighters remaining.",
+          "The concept used Amazon S3 as persistent shared storage, with lightweight server endpoints used to update device state and link one player's data to another player's state."
+        ]
+      },
+      {
+        "title": "Multiplayer Scope",
+        "paragraphs": [
+          "The multiplayer work remained experimental rather than becoming a finished public matchmaking system. The core state-sharing idea was functional, but I had not yet completed a clean mechanism for pairing players. One direction I considered was using a separate setup application to create the link between two devices' cloud-hosted state."
+        ]
+      },
+      {
+        "title": "Visual Design",
+        "paragraphs": [
+          "I created nearly all of the graphics used in the space-battle wallpaper, including the space-combat presentation and additional artwork built specifically for the project. The design also reused portions of my earlier H-0P3 visual work.",
+          "The Santa wallpaper used artwork from the Santa's Route project, with the original project artist contributing and adapting the Santa artwork while I handled the wallpaper implementation and effects."
+        ]
+      },
+      {
+        "title": "Project Direction",
+        "paragraphs": [
+          "The wallpapers were intentionally quick experiments rather than long-term products. The Santa version explored live-wallpaper promotion, while the space version let me experiment with passive simulation, persistence, orientation-aware presentation, and low-cost asynchronous networking.",
+          "I eventually moved on when live wallpapers showed limited traction and Bridge Captain became the more compelling project direction."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "primary": {
+      "type": "youtube",
+      "id": "3bdG3j51zfA"
+    },
+
     "items": [
       {
         "type": "image",
@@ -37,14 +145,42 @@
         "type": "image",
         "src": "images/skills/mobile/livewall_4.jpg"
       }
-    ],
-    "primary": {
-      "type": "youtube",
-      "id": "3bdG3j51zfA"
-    }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "Java, Android SDK",
+    "historicalNotes": [
+      "The Santa's Route live wallpaper and space-battle wallpaper were both quick Android experiments created around the same period in 2011.",
+      "The Santa wallpaper was definitely uploaded to the Android store and was distributed for free as promotion for Santa's Route.",
+      "The current Google Play Developer Console no longer makes Jamie's old application history easy to reconstruct.",
+      "The Santa wallpaper primarily consisted of snowfall and a 3D parallax effect while swiping between Android home-screen pages.",
+      "The Santa's Route project artist was the same partner artist who worked on the original game and contributed/adapted the Santa artwork used by the wallpaper.",
+      "The space-battle wallpaper reused portions of H-0P3 code and graphics, with Jamie creating additional assets specifically for the wallpaper.",
+      "Jamie created approximately 99% of the space-battle wallpaper's graphics.",
+      "The source of the explosion animation is no longer remembered confidently and should not be attributed to Jamie without qualification.",
+      "The space-battle simulation randomly transferred map sectors between two opposing sides throughout the day and intentionally behaved like a pendulum rather than allowing permanent victory.",
+      "Campaign progress persisted locally. Jamie believes this was file-backed storage but does not remember the exact Android persistence mechanism confidently enough to state it publicly.",
+      "Battles were simulated from elapsed time when the device became active rather than continuously animating while the phone was locked.",
+      "Portrait and landscape orientations used different compositions.",
+      "Portrait presentation could span multiple Android launcher pages so different sections of the artwork became visible while swiping.",
+      "The asynchronous multiplayer work reused the same general Amazon S3 low-cost-state concept explored during Flag Hunt networking experiments.",
+      "Each device was intended to have its own folder and XML state file containing statistics such as sectors controlled and fighters remaining.",
+      "Jamie believes PHP endpoints were used to update the S3-hosted state, but this implementation detail is memory-based rather than source-verified.",
+      "The multiplayer concept did not reach a completed public matchmaking system.",
+      "Jamie remembers considering a separate setup application that would link one player's cloud state to another player's folder.",
+      "There was no direct gameplay interaction in the first space-battle wallpaper version; it was designed as a passive simulation.",
+      "The space wallpaper's public-release status is uncertain.",
+      "Jamie stopped pursuing the live-wallpaper direction because the format gained little traction and Bridge Captain became the next major project."
+    ],
+
+    "confidence": {
+      "santaWallpaperRelease": "high",
+      "spaceWallpaperRelease": "low",
+      "localPersistenceMechanism": "low",
+      "phpS3UpdateImplementation": "medium",
+      "explosionArtworkSource": "low"
+    },
+
     "provenance": {
       "legacyCategory": "Mobile",
       "legacyIndex": 3

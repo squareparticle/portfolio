@@ -1,1 +1,161 @@
-{"schemaVersion":2,"id":"squareparticle/bridge-captain/low-poly-modeling","title":"H-0P3 (2009) Bridge Captain (2016)","project":"H-0P3 and Bridge Captain","platform":{"label":"Application Type","values":["Game Assets"]},"technologies":["3DS Max","MilkShape","Blender"],"date":{"from":"2009","to":"2016","display":false},"description":"I created all the 3D models and textures for the H-0P3 and Bridge Captain games. My goal was to keep them low polygon, so that they would run at 60 fps in stereoscopic VR on mobile devices. The bridge and all seven crew members are ~10K polygons in total.","media":{"thumbnail":"images/skills/modeling/bc.gif","primary":{"type":"image","src":"images/skills/modeling/bc.gif"},"items":[{"type":"image","src":"images/skills/modeling/bc_1.jpg"},{"type":"image","src":"images/skills/modeling/bc_2.jpg"},{"type":"image","src":"images/skills/modeling/bc_3.jpg"},{"type":"image","src":"images/skills/modeling/bc_4.jpg"}]}}
+{
+  "schemaVersion": 2,
+  "id": "squareparticle/bridge-captain/low-poly-modeling",
+  "title": "Low-Poly 3D Modeling & VR Optimization",
+  "project": "H-0P3 / Bridge Captain",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Game Assets",
+      "Mobile VR"
+    ]
+  },
+
+  "technologies": [
+    "MilkShape",
+    "3ds Max",
+    "Blender",
+    "Photoshop",
+    "Unity",
+    "Gear VR"
+  ],
+
+  "date": {
+    "from": "2009",
+    "to": "2016",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Solo 3D / Technical Artist",
+    "total": 1
+  },
+
+  "roles": [
+    "3D Modeler",
+    "Texture Artist",
+    "Technical Artist",
+    "Character Rigger",
+    "VR Optimization"
+  ],
+
+  "description": "Across H-0P3 and Bridge Captain, I created low-poly 3D models, hand-painted textures, character rigs, and game-ready environments when the projects required custom assets. For Bridge Captain VR, I designed the entire bridge environment and seven crew members around the performance limits of mobile stereoscopic VR, keeping the complete scene to roughly 10,000 polygons while maintaining 60 FPS on a Galaxy S6 Edge / Gear VR.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Learning to Build My Own Assets",
+        "paragraphs": [
+          "I was never primarily a professional artist, but independent game development often meant creating the assets I needed myself. Over the years I worked with MilkShape, 3ds Max, and Blender to create low-poly ships, environments, props, characters, and other production assets."
+        ]
+      },
+      {
+        "title": "H-0P3 Modeling",
+        "paragraphs": [
+          "H-0P3 was one of my earliest projects where I created my own 3D game assets. I modeled the ships and other visual elements myself and used the project as an opportunity to develop the practical 3D skills needed to support my own game designs."
+        ]
+      },
+      {
+        "title": "Bridge Captain VR",
+        "paragraphs": [
+          "For the Gear VR generation of Bridge Captain, I modeled the bridge environment, consoles, crew members, and related assets primarily in Blender. I also created most of the textures myself in Photoshop and set up the final scene lighting in Unity."
+        ]
+      },
+      {
+        "title": "Character Modeling & Rigging",
+        "paragraphs": [
+          "I created all seven crew characters used in the VR bridge and rigged them in Blender. The characters were deliberately stylized and low-poly so they could remain visible inside the bridge without overwhelming the rendering budget."
+        ]
+      },
+      {
+        "title": "Designed for Mobile VR",
+        "paragraphs": [
+          "The target hardware was a Samsung Galaxy S6 Edge running Gear VR, where the scene needed to render stereoscopically at 60 FPS. Rather than building high-detail assets and trying to optimize them afterward, I authored the bridge and characters around a low-poly visual style from the beginning."
+        ]
+      },
+      {
+        "title": "10K-Polygon Complete Bridge",
+        "paragraphs": [
+          "The complete bridge environment plus all seven crew members came to roughly 10,000 polygons in the working VR build. That was already enough to support playable missions while maintaining the target performance.",
+          "I had not yet finished adding all of the visual variety I originally wanted, but based on the performance headroom I expected roughly 20,000 polygons would still have provided ample room for the completed scene."
+        ]
+      },
+      {
+        "title": "Texture & Visual Workflow",
+        "paragraphs": [
+          "Most of the Bridge Captain textures were hand-painted in Photoshop. I used the modeling tools to keep geometry intentionally simple, then relied on stylized textures, lighting, silhouettes, and color separation to give the environment and characters enough visual identity without requiring high geometric detail."
+        ]
+      },
+      {
+        "title": "Technical Art Mindset",
+        "paragraphs": [
+          "My focus was always on making the art serve the game rather than treating modeling as a standalone discipline. I approached assets from the perspective of a developer who needed them to fit memory, rendering, gameplay, platform, and performance constraints.",
+          "I have also used LOD and model-optimization techniques on other projects, although Bridge Captain VR did not require an additional heavy optimization pass because the assets had already been authored at a deliberately low geometric cost."
+        ]
+      },
+      {
+        "title": "Later Asset Strategy",
+        "paragraphs": [
+          "As my Unity work expanded, I increasingly relied on purchased production asset libraries when they made more sense than creating everything myself. That allowed me to spend more time on engine, gameplay, systems, and tools while still retaining enough 3D knowledge to modify, integrate, optimize, and direct game assets when needed."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/modeling/bc.gif",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/modeling/bc.gif"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/modeling/bc_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/bc_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/bc_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/bc_4.jpg"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "Jamie does not consider himself primarily an artist, but regularly created his own art and 3D assets when independent projects required it.",
+      "Jamie used MilkShape, 3ds Max, and Blender across his early 3D game-development work.",
+      "Bridge Captain VR modeling was done primarily in Blender.",
+      "Jamie modeled the Bridge Captain VR bridge, consoles, crew members, and related assets himself.",
+      "Jamie created and rigged all seven crew characters in Blender.",
+      "Most Bridge Captain VR textures were hand-painted by Jamie in Photoshop.",
+      "Final lighting for the Bridge Captain VR bridge was configured in Unity.",
+      "The complete working bridge environment plus seven crew members totaled approximately 10,000 polygons.",
+      "The approximate 10,000-polygon scene already supported playable missions and maintained the target frame rate.",
+      "Jamie estimates that approximately 20,000 polygons would have provided sufficient budget for the additional visual variety he still intended to add.",
+      "The performance target was 60 FPS stereoscopic rendering on a Samsung Galaxy S6 Edge using Gear VR.",
+      "Bridge Captain VR did not require a major later polygon-optimization pass because the assets were intentionally authored at a low geometric cost from the beginning.",
+      "Jamie has used LOD optimization techniques elsewhere, but significant LOD work was not necessary for this particular Bridge Captain VR scene.",
+      "Nearly all of the Bridge Captain VR modeling work represented hand-built low-poly assets rather than optimized-down high-poly source models.",
+      "Jamie later increasingly used purchased Unity asset libraries, including Synty-style assets, when custom modeling was no longer the best use of development time."
+    ],
+
+    "confidence": {
+      "bridgeCrewAndEnvironmentPolygonCount": "high",
+      "vrTargetFrameRate": "high",
+      "galaxyS6EdgeTarget": "high",
+      "twentyThousandPolygonHeadroomEstimate": "medium"
+    }
+  }
+}
