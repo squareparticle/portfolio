@@ -183,7 +183,19 @@ test('skill details support concise cards, single sections, and multi-section di
     await h0p3.waitFor({state:'visible'});
     assert.equal(await page.locator('#skill-squareparticle-flag-hunt-mobile-release .skill-details-toggle').count(), 0);
     assert.equal(await h0p3.locator('.skill-details-toggle').count(), 1);
-    assert.equal(await h0p3.locator('.skill-details-section-toggle').count(), 3);
+    assert.equal(await h0p3.locator('.skill-details-section-toggle').count(), 7);
+    assert.equal(await h0p3.locator('.skill-project-scope').count(), 1);
+    assert.equal(await h0p3.locator('.skill-position-label').innerText(), 'Lead Developer / Game Designer');
+    assert.equal(await h0p3.locator('.skill-team-total').innerText(), 'Team 3');
+    assert.equal(await h0p3.locator('.skill-contributor-pill').count(), 1);
+    assert.equal(await h0p3.locator('.skill-contributor-pill').innerText(), '2× Content Creation');
+    assert.match(await h0p3.locator('.skill-contributor-pill').getAttribute('aria-label'), /2 volunteer contributors: Content Creation/);
+    assert.equal(await h0p3.locator('.skill-contributor-pill').evaluate(node => node.classList.contains('relationship-volunteer')), true);
+    assert.deepEqual(await h0p3.locator('.skill-relationship-key').allTextContents(), ['● Volunteer']);
+    assert.doesNotMatch(await h0p3.locator('.skill-details-content').textContent(), /Helped populate maps, items, stores/);
+    assert.equal(await h0p3.locator('.skill-details-heading', {hasText:'My Roles'}).count(), 1);
+    assert.equal(await h0p3.locator('.skill-role-pill').count(), 9);
+    assert.deepEqual(await h0p3.locator('.skill-role-pill').evaluateAll(nodes => nodes.slice(0, 3).map(node => node.innerText)), ['Game Designer', 'Lead Developer', 'Engine / Systems Programmer']);
     assert.equal(await h0p3.locator('.skill-meta .skill-platform').innerText(), 'Mobile Game');
     assert.equal(await h0p3.locator('.skill-meta .skill-technologies').innerText(), 'JavaME, BlackBerry SDK');
     assert.equal(await h0p3.locator('.skill-meta .skill-date').innerText(), '2009');
@@ -206,6 +218,8 @@ test('skill details support concise cards, single sections, and multi-section di
     await page.setViewportSize({width:390, height:844});
     await h0p3.waitFor({state:'visible'});
     assert.equal(await h0p3.locator('.skill-details').evaluate(node => node.getBoundingClientRect().width > 0), true);
+    await h0p3.locator('.skill-details-toggle').click();
+    assert.equal(await h0p3.locator('.skill-role-pills').evaluate(node => getComputedStyle(node).flexWrap === 'wrap' && node.scrollWidth <= node.clientWidth), true);
 
     await page.evaluate(async () => {
         const original = await window.loadSkill('squareparticle/h0p3/mobile-release');
@@ -213,6 +227,8 @@ test('skill details support concise cards, single sections, and multi-section di
         window.skillCache[cloneRef] = Promise.resolve(Object.assign({}, original, {
             id: cloneRef,
             title: 'Single details example',
+            team: undefined,
+            roles: undefined,
             details: {sections: [{title: 'One section', paragraphs: ['Single-section content.'], items: ['One item']}]}
         }));
         const category = window.jsonData.categories.find(value => value.id === 'Mobile');
@@ -224,9 +240,41 @@ test('skill details support concise cards, single sections, and multi-section di
     const ids = await page.locator('.skill-details [id]').evaluateAll(nodes => nodes.map(node => node.id));
     assert.equal(new Set(ids).size, ids.length);
     assert.equal(await single.locator('.skill-details-section-toggle').count(), 0);
+    assert.equal(await single.locator('.skill-project-scope, .skill-roles').count(), 0);
     await single.locator('.skill-details-toggle').click();
     assert.match(await single.locator('.skill-details-content').innerText(), /One section/);
     assert.match(await single.locator('.skill-details-content').innerText(), /One item/);
+    await page.close();
+});
+
+test('structured skill data controls Read More availability and excludes empty or meta-only values', {timeout: 10000}, async () => {
+    const {page} = await pageAt(baseUrl + '/');
+    await page.locator('#featuredSlides .item').first().waitFor({state:'visible'});
+    await page.evaluate(async () => {
+        const base = await window.loadSkill('squareparticle/h0p3/mobile-release');
+        const category = window.jsonData.categories.find(value => value.id === 'Mobile');
+        const makeSkill = (id, extra) => Object.assign({}, base, {id, title:id, details:undefined, team:undefined, roles:undefined, meta:{team:{total:99}, roles:['Hidden role']}}, extra);
+        window.skillCache['test/team-only'] = Promise.resolve(makeSkill('test/team-only', {team:{myPositionLabel:'Project Lead', total:4, contributors:[]}}));
+        window.skillCache['test/multi-contributor'] = Promise.resolve(makeSkill('test/multi-contributor', {team:{contributors:[{count:3, roles:['Art', 'Animation'], relationship:'paid'}]}}));
+        window.skillCache['test/roles-only'] = Promise.resolve(makeSkill('test/roles-only', {roles:['Designer', 'Developer']}));
+        window.skillCache['test/neither'] = Promise.resolve(makeSkill('test/neither', {}));
+        category.skills = ['test/team-only', 'test/multi-contributor', 'test/roles-only', 'test/neither'];
+        await window.changePanel('Mobile');
+    });
+    const teamOnly=page.locator('#skill-test-team-only'), multiContributor=page.locator('#skill-test-multi-contributor'), rolesOnly=page.locator('#skill-test-roles-only'), neither=page.locator('#skill-test-neither');
+    assert.equal(await teamOnly.locator('.skill-details-toggle').count(), 1);
+    assert.equal(await teamOnly.locator('.skill-position-label').innerText(), 'Project Lead');
+    assert.equal(await teamOnly.locator('.skill-team-total').innerText(), 'Team 4');
+    assert.equal(await teamOnly.locator('.skill-contributors').count(), 0);
+    assert.equal(await teamOnly.locator('.skill-relationship-legend').count(), 0);
+    assert.equal(await multiContributor.locator('.skill-contributor-pill').count(), 1);
+    assert.equal(await multiContributor.locator('.skill-contributor-pill').innerText(), '3× Art / Animation');
+    assert.equal(await multiContributor.locator('.skill-relationship-key').count(), 1);
+    assert.equal(await multiContributor.locator('.skill-relationship-key').innerText(), '● Paid');
+    assert.equal(await rolesOnly.locator('.skill-details-toggle').count(), 1);
+    assert.deepEqual(await rolesOnly.locator('.skill-role-pill').evaluateAll(nodes => nodes.map(node => node.innerText)), ['Designer', 'Developer']);
+    assert.equal(await neither.locator('.skill-details-toggle').count(), 0);
+    assert.doesNotMatch(await neither.innerText(), /Hidden role|99/);
     await page.close();
 });
 

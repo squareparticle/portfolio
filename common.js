@@ -156,25 +156,29 @@ function renderSkillTile(holder, category, ref, value, index, skillTileHTML, ski
             else blocks.append($('<div>',{'class':'embed-responsive embed-responsive-16by9'}).append($('<iframe>',{'class':'embed-responsive-item',src:embed,frameborder:'0',allowfullscreen:'allowfullscreen'})));
         }
     }
-    renderSkillDetails($('#'+prefix+'_details'), value.details, prefix);
+    renderSkillDetails($('#'+prefix+'_details'), value.details, value.team, value.roles, prefix);
 }
 
 function renderSkillMetadata(holder, metadata){
     (metadata || []).forEach(function(item){ holder.append($('<span>',{'class':'skill-meta-group skill-'+item.type}).text(item.text)); });
 }
 
-function renderSkillDetails(holder, details, prefix){
+function renderSkillDetails(holder, details, team, roles, prefix){
     var sections=(details && details.sections) || [];
-    if(!sections.length){ holder.remove(); return; }
+    var hasTeam=!!team;
+    var publicRoles=(roles || []).filter(nonEmptyText);
+    if(!sections.length && !hasTeam && !publicRoles.length){ holder.remove(); return; }
     var contentId=prefix+'_details_content';
+    var structured=function(content){ renderSkillProjectScope(content, team, publicRoles); };
     if(sections.length===1){
         var section=sections[0], toggle=$('<button>',{type:'button','class':'btn btn-link skill-details-toggle','data-toggle':'collapse','data-target':'#'+contentId,'aria-expanded':'false','aria-controls':contentId}).text('Read More ');
         toggle.append($('<span>',{'class':'caret'})); holder.append(toggle);
-        var content=$('<div>',{id:contentId,'class':'collapse skill-details-content'}); appendDetailSection(content,section,true); holder.append(content); return;
+        var content=$('<div>',{id:contentId,'class':'collapse skill-details-content'}); structured(content); appendDetailSection(content,section,true); holder.append(content); return;
     }
     var summary=$('<button>',{type:'button','class':'btn btn-link skill-details-toggle','data-toggle':'collapse','data-target':'#'+contentId,'aria-expanded':'false','aria-controls':contentId}).text('Read More ');
     summary.append($('<span>',{'class':'caret'})); holder.append(summary);
     var group=$('<div>',{id:contentId,'class':'collapse skill-details-content'});
+    structured(group);
     sections.forEach(function(section,index){
         var sectionId=prefix+'_details_section_'+index;
         var row=$('<div>',{'class':'skill-details-section'});
@@ -183,6 +187,53 @@ function renderSkillDetails(holder, details, prefix){
         row.append(toggle); var sectionContent=$('<div>',{id:sectionId,'class':'collapse skill-details-section-content'}); appendDetailSection(sectionContent,section,false); row.append(sectionContent); group.append(row);
     });
     holder.append(group);
+}
+
+function positiveCount(value){ return typeof value === 'number' && isFinite(value) && value > 0; }
+function nonEmptyText(value){ return typeof value === 'string' && value.trim().length > 0; }
+
+var contributorRelationships={
+    paid:'Paid', volunteer:'Volunteer', partner:'Partner', contractor:'Contractor', employee:'Employee'
+};
+
+function contributorRelationshipLabel(relationship){ return contributorRelationships[relationship] || 'Contributor'; }
+
+function renderSkillProjectScope(holder, team, roles){
+    if(team){
+        var scope=$('<section>',{'class':'skill-project-scope','aria-label':'Team Scope'});
+        scope.append($('<h4>',{'class':'skill-details-heading'}).text('Team Scope'));
+        var facts=$('<div>',{'class':'skill-team-facts'});
+        if(nonEmptyText(team.myPositionLabel)) facts.append($('<span>',{'class':'skill-position-label'}).text(team.myPositionLabel.trim()));
+        if(positiveCount(team.total)) facts.append($('<span>',{'class':'skill-team-total'}).append(document.createTextNode('Team ')).append($('<strong>').text(team.total)));
+        if(facts.children().length) scope.append(facts);
+        holder.append(scope);
+
+        var contributors=(team.contributors || []).filter(function(contributor){ return contributor && positiveCount(contributor.count) && (contributor.roles || []).filter(nonEmptyText).length; });
+        if(contributors.length){
+            var contributorSection=$('<section>',{'class':'skill-contributors','aria-label':'Contributors'});
+            contributorSection.append($('<h4>',{'class':'skill-details-heading'}).text('Contributors'));
+            var pills=$('<div>',{'class':'skill-contributor-pills'}), relationships={};
+            contributors.forEach(function(contributor){
+                var contributorRoles=contributor.roles.filter(nonEmptyText).map(function(role){ return role.trim(); });
+                var relationship=contributorRelationshipLabel(contributor.relationship), relationshipKey=contributorRelationships[contributor.relationship] ? contributor.relationship : 'unknown';
+                relationships[relationshipKey]=relationship;
+                var accessibleLabel=contributor.count+' '+relationship.toLowerCase()+' contributor'+(contributor.count === 1 ? '' : 's')+': '+contributorRoles.join(' / ');
+                var pill=$('<span>',{'class':'skill-contributor-pill relationship-'+relationshipKey,'aria-label':accessibleLabel,title:accessibleLabel}).text(contributor.count+'× '+contributorRoles.join(' / '));
+                pills.append(pill);
+            });
+            contributorSection.append(pills);
+            var legend=$('<div>',{'class':'skill-relationship-legend','aria-label':'Contributor relationship legend'});
+            Object.keys(relationships).forEach(function(key){ legend.append($('<span>',{'class':'skill-relationship-key relationship-'+key}).text('● '+relationships[key])); });
+            contributorSection.append(legend); holder.append(contributorSection);
+        }
+    }
+    if(roles.length){
+        var rolesSection=$('<section>',{'class':'skill-roles','aria-label':'Roles'});
+        rolesSection.append($('<h4>',{'class':'skill-details-heading'}).text('My Roles'));
+        var pills=$('<div>',{'class':'skill-role-pills'});
+        roles.forEach(function(role){ pills.append($('<span>',{'class':'skill-role-pill'}).text(role.trim())); });
+        rolesSection.append(pills); holder.append(rolesSection);
+    }
 }
 
 function appendDetailSection(holder, section, includeTitle){

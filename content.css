@@ -10,6 +10,22 @@
 .skill-details-toggle, .skill-details-section-toggle { color: #4d79ff; font-weight: bold; padding: 0; text-decoration: none; }
 .skill-details-toggle:hover, .skill-details-toggle:focus, .skill-details-section-toggle:hover, .skill-details-section-toggle:focus { color: #8aa7ff; text-decoration: none; }
 .skill-details-content { padding-top: 8px; }
+.skill-project-scope, .skill-roles { margin: 4px 0 16px; }
+.skill-contributors { margin: 4px 0 16px; }
+.skill-details-heading { margin: 0 0 7px; font-size: 15px; font-weight: bold; text-transform: uppercase; letter-spacing: .04em; color: rgba(255,255,255,.78); }
+.skill-team-facts, .skill-role-pills, .skill-contributor-pills { display: flex; flex-wrap: wrap; align-items: baseline; gap: 7px; }
+.skill-position-label { color: rgba(255,255,255,.94); font-size: 16px; }
+.skill-team-total { padding: 3px 8px; border: 1px solid rgba(255,255,255,.22); border-radius: 3px; background: rgba(255,255,255,.04); color: rgba(255,255,255,.76); font-size: 13px; }
+.skill-team-total strong { color: #fff; font-size: 16px; }
+.skill-role-pill { display: inline-block; padding: 3px 8px; border: 1px solid rgba(138,167,255,.48); border-radius: 12px; color: rgba(220,228,255,.92); font-size: 13px; line-height: 1.35; }
+.skill-contributor-pill { display: inline-block; padding: 4px 9px; border: 1px solid rgba(255,255,255,.28); border-radius: 3px; background: rgba(255,255,255,.06); color: rgba(255,255,255,.9); font-size: 13px; line-height: 1.35; }
+.skill-relationship-legend { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 7px; font-size: 12px; color: rgba(255,255,255,.58); }
+.relationship-paid { border-color: rgba(108,190,157,.6); color: #a8d8c4; }
+.relationship-volunteer { border-color: rgba(127,169,238,.65); color: #aec8f4; }
+.relationship-partner { border-color: rgba(183,139,225,.65); color: #d0b3ef; }
+.relationship-contractor { border-color: rgba(223,170,103,.65); color: #edc58e; }
+.relationship-employee { border-color: rgba(110,196,199,.65); color: #a8dbdc; }
+.skill-relationship-key { white-space: nowrap; }
 .skill-details-section { border-top: 1px solid rgba(255,255,255,.16); padding: 7px 0; }
 .skill-details-section-toggle, .skill-details-title { font-size: 17px; }
 .skill-details-section-content, .skill-details-content { font-size: 16px; line-height: 1.45; }

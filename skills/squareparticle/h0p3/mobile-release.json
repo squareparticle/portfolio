@@ -22,6 +22,34 @@
     "display": true
   },
 
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Lead Developer / Game Designer",
+    "total": 3,
+    "contributors": [
+      {
+        "count": 2,
+        "roles": [
+          "Content Creation"
+        ],
+        "relationship": "volunteer",
+        "contribution": "Helped populate maps, items, stores, logistics, and other game content using a custom content-entry tool."
+      }
+    ]
+  },
+
+  "roles": [
+    "Game Designer",
+    "Lead Developer",
+    "Engine / Systems Programmer",
+    "UI/UX Designer",
+    "Game Artist",
+    "3D Modeler",
+    "Tools Developer",
+    "Web Designer",
+    "Graphic Designer"
+  ],
+
   "description": "H-0P3 was an early mobile 4X-style space combat and trading game inspired by the classic BBS game Trade Wars. Built with JavaME and the BlackBerry SDK, it explored many of the systems I would later expand into larger space-game projects, including Bridge Captain.",
 
   "details": {
@@ -35,7 +63,7 @@
       {
         "title": "Game Systems",
         "items": [
-          "Real-time and tactical ship combat",
+          "Real-time and automated tactical ship combat",
           "Multiple ships and ship classes",
           "Ship and planetary scanning",
           "Star-system and planetary navigation",
@@ -45,6 +73,30 @@
           "Commodity trading",
           "Ship outfitting and upgrades",
           "Rank, fame, and party progression"
+        ]
+      },
+      {
+        "title": "UI, Graphics & 3D",
+        "paragraphs": [
+          "I designed and created the game's interface, graphics, ship presentation, 3D models, and other visual assets. H-0P3 was also my first mobile project to apply my own 3D mathematics to features such as the planetary scanning display."
+        ]
+      },
+      {
+        "title": "Mobile Combat & Controls",
+        "paragraphs": [
+          "The interface and combat systems were designed around the constraints of early smartphones rather than desktop-style controls. Battles could progress automatically while the player made higher-level tactical decisions through compact on-screen controls and command updates."
+        ]
+      },
+      {
+        "title": "Content & Tooling",
+        "paragraphs": [
+          "Two volunteer contributors helped populate H-0P3 with maps, items, stores, logistics, and other game content. I built a content-entry tool so they could contribute without editing source code or raw game data directly."
+        ]
+      },
+      {
+        "title": "Promotional Website",
+        "paragraphs": [
+          "I also began building a promotional website for H-0P3 using the same visual language as the game. The site was not completed or used for a full marketing launch, but it included custom page layouts, navigation, ship and galaxy presentation, and original sci-fi UI and graphic design."
         ]
       },
       {
@@ -120,7 +172,12 @@
     "historicalNotes": [
       "H-0P3 was primarily an early mobile release used to gain experience with the BlackBerry/mobile ecosystem.",
       "It was not expanded to Android or heavily marketed with trailers.",
-      "The original intention was to revisit and expand the concept, but Bridge Captain later became the larger successor direction."
+      "The original intention was to revisit and expand the concept, but Bridge Captain later became the larger successor direction.",
+      "Two volunteer content contributors helped populate maps, items, stores, logistics, and other game content using a custom tool Jamie built for them.",
+      "Jamie created the game's UI, graphics, 3D models, and other visual assets.",
+      "H-0P3 included Jamie's first mobile use of his own 3D mathematics for the planetary scanning presentation.",
+      "A promotional H-0P3 website was started but not completed or used for a full marketing launch.",
+      "Jamie created the promotional website's visual design, layouts, navigation, and graphics."
     ],
 
     "provenance": {
