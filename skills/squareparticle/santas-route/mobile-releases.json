@@ -1,29 +1,144 @@
 {
   "schemaVersion": 2,
   "id": "squareparticle/santas-route/mobile-releases",
-  "title": "Santa's Route (2010) / Santa's Recession Bender (2011)",
-  "project": "Santas Route",
+  "title": "Santa's Route / Santa's Recession Bender",
+  "project": "Santa's Route",
+
   "platform": {
-    "label": "Application Type",
+    "label": "Released Platforms",
     "values": [
-      "Mobile Application"
+      "Windows Phone 7",
+      "Android",
+      "BlackBerry"
     ]
   },
+
   "technologies": [
-    "Java",
     "C#",
     "XNA",
+    "Java",
     "Android SDK",
-    "Blackberry SDK",
+    "BlackBerry SDK",
     "C.E.L.L."
   ],
+
   "date": {
     "from": "2010",
     "to": "2011",
-    "display": false
+    "display": true
   },
-  "description": "For my first official public release I focused on creating a small game utilizing XNA. I ended up pulling together an artist, musician and voice actor to create an endless runner within the last two weeks leading up to Christmas 2010. I later ported the game to Android while incorporating OpenFeint (scoreboards) and HeyZap (social playing). The following year I released a mature version of the game called Santa's Recession Bender.  This version had five additional unlockable levels. Santa's route was featured three times on AppsLib as well as making it in the Daily Planet website user creation section.",
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Lead Developer / Game Designer",
+    "total": 4,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Art"
+        ],
+        "relationship": "partner",
+        "contribution": "Created essentially all original visual artwork for Santa's Route and the redesigned artwork for Santa's Recession Bender."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Music",
+          "Sound",
+          "Vocals",
+          "QA"
+        ],
+        "relationship": "partner",
+        "contribution": "Created music and sound, added vocals and lyrics in parts of the games, and contributed to testing and QA."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Voice Acting",
+          "Game Design",
+          "Level Design",
+          "Planning",
+          "QA"
+        ],
+        "relationship": "partner",
+        "contribution": "Provided voice acting and contributed to game design, level design, planning, testing, and QA."
+      }
+    ]
+  },
+
+  "roles": [
+    "Lead Developer",
+    "Game Designer",
+    "Engine Developer",
+    "UI/UX Designer",
+    "Level Designer",
+    "Porting / Platform Developer",
+    "Release Manager",
+    "Store / Commerce Setup",
+    "Marketing",
+    "Advertising",
+    "Trailer Creator",
+    "QA / Testing",
+    "Support & Maintenance",
+    "Investor"
+  ],
+
+  "description": "Santa's Route was a Christmas-themed endless runner developed as a fast production sprint on top of my existing C.E.L.L. engine. It became my first larger multi-platform mobile release and my first game built with a small multidisciplinary team, shipping on Windows Phone 7, Android, and BlackBerry.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Santa's Route",
+        "paragraphs": [
+          "Santa's Route was developed during a roughly two-week production sprint leading up to Christmas 2010 using an already-established C.E.L.L. engine. The game was an endless runner built around collecting presents, avoiding obstacles, scoring, and progressively more difficult play."
+        ]
+      },
+      {
+        "title": "First Team Production",
+        "paragraphs": [
+          "Santa's Route was my first game-development experiment with a small multidisciplinary team contributing to the same production from different disciplines. An artist handled the visual artwork, a musician created music and sound while also contributing vocals and QA, and a voice actor contributed voice work as well as game design, level design, planning, and testing."
+        ]
+      },
+      {
+        "title": "Cross-Platform Release",
+        "paragraphs": [
+          "I handled the engineering and porting work required to release Santa's Route on Windows Phone 7, Android, and BlackBerry. The project also ran on Windows, macOS, and Linux through the underlying cross-platform engine, although those desktop builds were not distributed through commercial storefronts."
+        ]
+      },
+      {
+        "title": "Platform Integrations & Operations",
+        "paragraphs": [
+          "I personally integrated OpenFeint for leaderboards, HeyZap for social features, and Google advertising. I also handled storefront setup, packaging and releases, tax and payment configuration, version updates, leaderboard maintenance, customer support, and ongoing store maintenance."
+        ]
+      },
+      {
+        "title": "Marketing & Recognition",
+        "paragraphs": [
+          "I handled much of the game's promotion, including social media, paid advertising, trailers, promotional material such as free wallpapers, and outreach to sites that might feature the game. AppsLib selected Santa's Route for homepage exposure three times after direct communication with its staff, and the game also appeared in the user-creation section of the Daily Planet website associated with the Discovery Channel television program."
+        ]
+      },
+      {
+        "title": "Santa's Recession Bender",
+        "paragraphs": [
+          "In 2011 the same team created Santa's Recession Bender, a larger satirical follow-up with entirely new artwork, new music, sound and voice content, five additional unlockable levels, and a new menu and progression system. Rather than remaining a pure endless runner, later levels introduced increasingly elaborate and deliberately absurd gameplay mechanics."
+        ]
+      },
+      {
+        "title": "Project Evolution",
+        "paragraphs": [
+          "Santa's Route demonstrated that the C.E.L.L. engine could support a real team production and multiple commercial mobile platforms. The project also pushed me beyond development into the full lifecycle of releasing and operating an independent game: team coordination, storefronts, integrations, marketing, advertising, support, maintenance, and follow-up releases."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "primary": {
+      "type": "youtube",
+      "id": "OXmF7MaLfYM"
+    },
+
     "items": [
       {
         "type": "image",
@@ -41,15 +156,27 @@
         "type": "image",
         "src": "images/skills/mobile/sr_4.jpg"
       }
-    ],
-    "primary": {
-      "type": "youtube",
-      "id": "OXmF7MaLfYM"
-    }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "Java, C#, XNA, Android SDK, Blackberry SDK, C.E.L.L.",
-    "legacyMobileText": "For my first official public release I focused on creating a small game utilizing XNA. I ended up pulling together an artist, musician and voice actor to create an endless runner within the last two weeks leading up to Christmas 2010. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+    "historicalNotes": [
+      "H-0P3 predates Santa's Route as Jamie's first released mobile game; Santa's Route was the first larger multi-platform team release.",
+      "The C.E.L.L. engine was already substantially developed before Santa's Route began.",
+      "Santa's Route was produced during an approximately two-week sprint leading up to Christmas 2010 rather than being engineered from scratch in two weeks.",
+      "The three other team members were partners in the games they worked on, with a share in those game projects rather than ownership of Square Particle.",
+      "Santa's Route definitely shipped on Windows Phone 7, Android, and BlackBerry.",
+      "Android distribution included Google Play, AppsLib, Amazon, and several other Android storefronts.",
+      "Desktop builds worked on Windows, macOS, and Linux but were not formally distributed through stores.",
+      "AppsLib staff communicated directly with Jamie regarding the game and selected Santa's Route for approximately week-long homepage features three times.",
+      "The Daily Planet reference was to the website associated with the Discovery Channel/CTV science television program.",
+      "Santa's Recession Bender was created as post-2008-financial-crash satire.",
+      "The follow-up humor included a Santa displaced from a BlackBerry-like company, beer replacing cookies as a source of energy, and increasingly absurd later-level mechanics such as a science-fiction-style land speeder and incendiary attacks on naughty houses.",
+      "Santa's Recession Bender performed poorly on Google Play, reducing the motivation to promote or port it broadly to the other platforms.",
+      "Jamie personally integrated OpenFeint, HeyZap, and Google advertising.",
+      "Jamie handled game development, engine work, UI/UX, level design, porting, storefront and commerce setup, releases, marketing, advertising, trailers, QA, support, maintenance, and investment in the project."
+    ],
+
     "provenance": {
       "legacyCategory": "Mobile",
       "legacyIndex": 1
