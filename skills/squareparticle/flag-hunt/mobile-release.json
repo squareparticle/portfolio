@@ -1,29 +1,193 @@
 {
   "schemaVersion": 2,
   "id": "squareparticle/flag-hunt/mobile-release",
-  "title": "Flag Hunt (2011)",
+  "title": "Flag Hunt",
   "project": "Flag Hunt",
+
   "platform": {
-    "label": "Application Type",
+    "label": "Release Scope",
     "values": [
-      "Mobile Application"
+      "5 Platforms"
     ]
   },
+
   "technologies": [
     "Java",
     "C#",
     "XNA",
     "Android SDK",
-    "Blackberry SDK",
-    "C.E.L.L."
+    "BlackBerry SDK",
+    "C.E.L.L.",
+    "AWS EC2",
+    "Sockets"
   ],
+
   "date": {
     "from": "2011",
     "to": "2011",
-    "display": false
+    "display": true
   },
-  "description": "I released a contemporary chess like war game that uses radar to find invisible pieces. The game gained over 100k downloads across five different platforms after launch. This fun AI experiment took me nearly three months to complete. Desktop multiplayer was being piped through an EC2 server.",
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Lead Developer / Game Designer",
+    "total": 6,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Art"
+        ],
+        "relationship": "partner",
+        "contribution": "Created the title-screen, mascot, poster, and marketing artwork while I created the gameplay and UI artwork."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Music",
+          "Sound",
+          "QA"
+        ],
+        "relationship": "partner",
+        "contribution": "Created the music, helped with sound, and contributed extensively to gameplay testing and QA."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "QA"
+        ],
+        "relationship": "partner",
+        "contribution": "Provided gameplay testing and QA."
+      },
+      {
+        "count": 2,
+        "roles": [
+          "QA"
+        ],
+        "relationship": "volunteer",
+        "contribution": "Provided gameplay testing and helped evaluate the game's balance and difficulty."
+      }
+    ]
+  },
+
+  "roles": [
+    "Lead Developer",
+    "Game Designer",
+    "AI Programmer",
+    "Engine Developer",
+    "UI/UX Designer",
+    "Gameplay Artist",
+    "Level Designer",
+    "Network Programmer",
+    "Porting / Platform Developer",
+    "Release Manager",
+    "Store / Commerce Setup",
+    "Marketing",
+    "Advertising",
+    "Trailer Creator",
+    "QA / Testing",
+    "Support & Maintenance",
+    "Investor"
+  ],
+
+  "description": "Flag Hunt was a contemporary chess-like strategy game built around hidden information, radar, asymmetric piece abilities, and two distinct objective modes. Developed in roughly three months using C.E.L.L., it became a successful cross-platform release with more than 100,000 downloads while also serving as a major experiment in game AI and network multiplayer.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "The Game",
+        "paragraphs": [
+          "Flag Hunt was a turn-based strategy game inspired by chess but built around very different movement, visibility, and objective rules. Players maneuvered hidden pieces across the board while using radar, spies, bombs, and the flag itself to gather information, deceive the opponent, defend territory, and complete the selected objective."
+        ]
+      },
+      {
+        "title": "Find the Flag",
+        "paragraphs": [
+          "In Find mode the flag could move, and the objective was to move your flag successfully to the opposite side of the board. Spies could act as decoys and appear as flags when detected by radar, creating an information and deception layer on top of the tactical movement."
+        ]
+      },
+      {
+        "title": "Capture the Flag",
+        "paragraphs": [
+          "In Capture mode the flag was stationary and had to be defended. Players needed to locate and destroy the opponent's flag while protecting their own, producing a more traditional attack-and-defense strategy game with battles developing between the two objectives."
+        ]
+      },
+      {
+        "title": "Hidden Information & Radar",
+        "paragraphs": [
+          "Different hidden pieces had different information capabilities. Radar could detect hidden pieces within roughly a two-space radius, while spies had a smaller detection range. Flags and bombs could not reveal hidden enemy pieces themselves. This created a tactical information game where players had to reason about what they could see, what the opponent might know, and what unidentified pieces might actually be."
+        ]
+      },
+      {
+        "title": "Boards & Custom Setup",
+        "paragraphs": [
+          "Flag Hunt supported both small and large board configurations. Players could also create custom starting layouts by arranging the pieces on their own side of the board in any order, adding another strategic layer before the first move was made."
+        ]
+      },
+      {
+        "title": "Game AI",
+        "paragraphs": [
+          "The AI became one of the hardest parts of the project. I first had to balance the unusual movement rules, then build an opponent that could play effectively against human strategies despite the game not behaving like conventional chess."
+        ],
+        "items": [
+          "The AI needed to make deliberate strategic decisions rather than simply choose random legal moves.",
+          "Because the computer technically had access to the full board state, I had to prevent it from exploiting hidden information in a way that would make the game unfair.",
+          "The challenge eventually shifted from making the AI strong enough to beat players to making it strong without allowing it to win all the time.",
+          "I tuned the final behavior through repeated play and tester feedback until it could provide a difficult but beatable opponent.",
+          "The resulting strategy strongly reflected the way I personally played the game, making matches feel in many ways like playing against my own tactics."
+        ]
+      },
+      {
+        "title": "Local Two-Player",
+        "paragraphs": [
+          "The mobile two-player mode was designed around the game's hidden information. Between turns, a privacy panel covered the game board so the device could be physically passed to the other player without revealing the previous player's hidden piece positions."
+        ]
+      },
+      {
+        "title": "Network Multiplayer",
+        "paragraphs": [
+          "I also built a fully playable desktop network multiplayer version using sockets and an AWS EC2 server. I chose not to release the hosted multiplayer publicly because the ongoing server cost was difficult to justify for a game whose audience largely expected to play for free."
+        ]
+      },
+      {
+        "title": "Lower-Cost Multiplayer Experiment",
+        "paragraphs": [
+          "After the EC2 version worked, I experimented with an S3-based architecture intended to reduce or eliminate the cost of maintaining a continuously running multiplayer server. I eventually stopped pursuing the network version as the economics of operating the game became clearer."
+        ]
+      },
+      {
+        "title": "Cross-Platform Release",
+        "paragraphs": [
+          "Flag Hunt was built with C.E.L.L. and could run anywhere the engine supported. The game ultimately accumulated more than 100,000 downloads across five platforms. Surviving memories include Windows Phone 7 distribution, Android storefront releases, Xbox 360 activity, and desktop builds running on Windows, macOS, and Linux."
+        ]
+      },
+      {
+        "title": "Release & Operations",
+        "paragraphs": [
+          "I handled the full independent-release lifecycle around the game, including porting, storefront setup, tax and payment configuration, version updates, maintenance, customer support, social-media marketing, paid advertising, trailer production, QA, and ongoing store management."
+        ]
+      },
+      {
+        "title": "Audience & Reach",
+        "paragraphs": [
+          "One major promotional feature produced roughly 30,000 downloads in a single week from Germany. Although I no longer have enough surviving analytics to reconstruct the exact storefront and per-platform totals, Flag Hunt's combined recorded reach exceeded 100,000 downloads across five platforms."
+        ]
+      },
+      {
+        "title": "Why It Connected",
+        "paragraphs": [
+          "My impression was that the game found an audience because strategy and chess players were looking for something familiar enough to understand but different enough to feel new. The combination of hidden pieces, radar, asymmetric information, custom setups, and objective-based play gave it a distinct identity without requiring players to learn an entirely unfamiliar genre."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "primary": {
+      "type": "youtube",
+      "id": "XTO_48zeyAE"
+    },
+
     "items": [
       {
         "type": "image",
@@ -41,14 +205,49 @@
         "type": "image",
         "src": "images/skills/mobile/flaghunt_4.jpg"
       }
-    ],
-    "primary": {
-      "type": "youtube",
-      "id": "XTO_48zeyAE"
-    }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "Java, C#, XNA, Android SDK, Blackberry SDK, C.E.L.L.",
+    "historicalNotes": [
+      "Flag Hunt was developed in roughly three months from game development through release and porting.",
+      "The artist, musician, and former Santa's Route voice actor were the same three project partners who had worked with Jamie on Santa's Route.",
+      "The artist created approximately half of the overall visual material, including title screens, mascot artwork, posters, and marketing art.",
+      "Jamie created the UI/UX artwork and all gameplay artwork.",
+      "The musician created music, helped with sound, and also participated heavily in testing and QA.",
+      "The previous Santa's Route voice actor did not perform voice work in Flag Hunt but participated as a QA tester.",
+      "Additional volunteer QA came from Jamie's son and the musician's son.",
+      "Five people including Jamie participated in gameplay testing overall.",
+      "The musician's son became an especially enthusiastic player, making him useful for repeated gameplay and balance testing.",
+      "The AI was tuned to avoid both random behavior and unfair use of perfect board knowledge.",
+      "Jamie does not remember the exact AI algorithm strongly enough to label it as a specific textbook technique.",
+      "The final AI reflected strategies Jamie personally used while playing the game.",
+      "Find mode allowed the flag to move and included decoy spies that could appear to radar as flags.",
+      "Capture mode used a stationary flag that had to be defended while the opponent attempted to locate and destroy it.",
+      "Radar had approximately a two-space detection radius and spies approximately a one-space radius; bombs and flags could not detect hidden enemy pieces.",
+      "Local multiplayer used a privacy panel between turns so players could pass the same device without seeing each other's hidden positions.",
+      "The EC2/socket multiplayer implementation was fully playable but was never publicly released because of operating-cost concerns.",
+      "Jamie experimented with an S3-only or S3-centered multiplayer architecture as a lower-cost alternative before discontinuing network development.",
+      "Flag Hunt accumulated more than 100,000 downloads across five platforms according to Jamie's contemporaneous portfolio records.",
+      "The exact five-platform download breakdown is no longer recoverable and should not be converted into an Android-only install claim.",
+      "Jamie remembers approximately 30,000 downloads arriving during one week after a feature in Germany, possibly through AppsLib, but the exact storefront is uncertain.",
+      "Jamie remembers a few thousand Xbox 360 plays and a few hundred purchases, but these are approximate recollections rather than preserved analytics.",
+      "Windows Phone 7 distribution is remembered confidently.",
+      "Because Flag Hunt was built with C.E.L.L., functional desktop builds also ran on Windows, macOS, and Linux, but compatibility should not automatically be treated as evidence of commercial storefront release.",
+      "The game had no leaderboard because there was no conventional score.",
+      "Jamie believes the game's strongest audience was strategy and chess players looking for a new variation on familiar strategic play.",
+      "Jamie handled development, game design, AI, engine work, UI/UX, gameplay art, level design, network programming, porting, storefront setup, releases, marketing, advertising, trailers, QA, support, maintenance, and investment."
+    ],
+
+    "confidence": {
+      "downloadTotal": "high",
+      "fivePlatformClaim": "high",
+      "exactPlatformBreakdown": "low",
+      "germanFeatureStorefront": "low",
+      "xboxActivityNumbers": "low",
+      "aiAlgorithmDetails": "low"
+    },
+
     "provenance": {
       "legacyCategory": "Mobile",
       "legacyIndex": 2
