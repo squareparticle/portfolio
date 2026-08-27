@@ -131,7 +131,13 @@ function renderSkillTile(holder, category, ref, value, index, skillTileHTML, ski
         var imgUrl=PortfolioResources.asset(primary.src,value._resourceBase);
         $('#'+prefix+'_img').attr('src',imgUrl).css({width:'100%',height:'auto'}).off('click').on('click',function(){openNav(imgUrl);});
     } else if(primary && primary.type === 'youtube'){
-        $('#'+prefix+'_img').remove(); $('#'+prefix+'_youtube').attr('src',primary.src || ('https://www.youtube.com/embed/' + primary.id));
+        $('#'+prefix+'_img').remove();
+        $('#'+prefix+'_youtube').attr({
+            src:primary.src || ('https://www.youtube.com/embed/' + primary.id),
+            title:(value.title || 'Portfolio') + ' video',
+            allow:'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen',
+            allowfullscreen:'allowfullscreen'
+        });
         if(isBootstrapSize('md')){$('#'+prefix+'_left').removeClass().addClass('col-md-5');$('#'+prefix+'_right').removeClass().addClass('col-md-7');}
     } else {
         $('#'+prefix+'_img,#'+prefix+'_youtube').remove();
@@ -153,7 +159,11 @@ function renderSkillTile(holder, category, ref, value, index, skillTileHTML, ski
         for(var embedIndex=0;embedIndex<view.embeds.length;embedIndex++){
             var embed=view.embeds[embedIndex];
             if(/^<[^>]+>/.test(embed)) blocks.append(embed);
-            else blocks.append($('<div>',{'class':'embed-responsive embed-responsive-16by9'}).append($('<iframe>',{'class':'embed-responsive-item',src:embed,frameborder:'0',allowfullscreen:'allowfullscreen'})));
+            else blocks.append($('<div>',{'class':'embed-responsive embed-responsive-16by9'}).append($('<iframe>',{
+                'class':'embed-responsive-item', src:embed, frameborder:'0', title:'Embedded media',
+                allow:'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen',
+                allowfullscreen:'allowfullscreen'
+            })));
         }
     }
     renderSkillDetails($('#'+prefix+'_details'), value.details, value.team, value.roles, prefix);

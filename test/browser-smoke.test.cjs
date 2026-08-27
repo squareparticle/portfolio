@@ -292,6 +292,9 @@ test('C.E.L.L. v2 engine and editor render without exposing metadata', {timeout:
     await editor.waitFor({state:'visible'});
     assert.match(await editor.innerText(), /Visual Game Editor/);
     assert.equal(await editor.locator('iframe').count(), 1);
+    const video = editor.locator('iframe');
+    assert.match(await video.getAttribute('allow'), /fullscreen/);
+    assert.notEqual(await video.getAttribute('allowfullscreen'), null);
     await page.close();
 });
 
