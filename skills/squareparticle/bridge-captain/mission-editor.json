@@ -1,1 +1,192 @@
-{"schemaVersion":2,"id":"squareparticle/bridge-captain/mission-editor","title":"Mission Editor","project":"Bridge Captain","platform":{"label":"Application Type","values":["Desktop Editor"]},"technologies":["Java"],"date":{"from":null,"to":null,"display":false},"description":"I gathered together a team of volunteer sci-fi writers from a handful of film schools to help me create missions for Bridge Captain. Thus, I created a tool for them to enter the dialogue, script missions, and chain sequences. The writers debugged their missions by playing the game through the editor or printing it out and reading it.","media":{"thumbnail":"images/skills/tools/bceditor.jpg","primary":{"type":"image","src":"images/skills/tools/bceditor.jpg"},"items":[]}}
+{
+  "schemaVersion": 2,
+  "id": "squareparticle/bridge-captain/mission-editor",
+  "title": "Bridge Captain Mission & Dialogue Authoring Tool",
+  "project": "Bridge Captain",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Desktop Authoring Tool"
+    ]
+  },
+
+  "technologies": [
+    "Java",
+    "Swing",
+    "Custom Mission Scripts"
+  ],
+
+  "date": {
+    "from": "2013",
+    "to": "2015",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Solo Tool Developer",
+    "total": 1
+  },
+
+  "roles": [
+    "Tools Developer",
+    "Narrative Systems Developer",
+    "Editor Architect",
+    "UI/UX Designer",
+    "Scripting Systems Developer",
+    "Technical Designer"
+  ],
+
+  "description": "I built a Java/Swing mission-authoring tool so Bridge Captain's writing team could create branching dialogue and scripted mission sequences without writing event code directly. Writers selected human-readable actions, filled in simple parameters, tested missions immediately inside the game, and generated printable mission views that exposed broken links before content was promoted into the main game source.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Why I Built It",
+        "paragraphs": [
+          "After the original 30-day Bridge Captain release, the project quickly expanded and I began recruiting additional writers. Manually converting everyone's story ideas into mission scripts would not scale, so by roughly January 2013 I had built a dedicated mission and dialogue authoring tool."
+        ]
+      },
+      {
+        "title": "Built for Non-Programmer Writers",
+        "paragraphs": [
+          "The editor was designed so writers could focus on dialogue, choices, and mission structure rather than the underlying scripting syntax.",
+          "Instead of typing event commands directly, writers selected actions from human-readable lists. Each action opened a compact parameter wizard, and the editor generated the underlying mission code."
+        ]
+      },
+      {
+        "title": "Mission Structure",
+        "paragraphs": [
+          "Each mission file contained metadata, dialogue states, player responses, and event actions. Missions could branch internally and could also start, remove, complete, or chain into other missions."
+        ],
+        "items": [
+          "Mission name and location metadata",
+          "Speaker and visual metadata",
+          "Dialogue states",
+          "Answer choices",
+          "Dialogue branching",
+          "Mission start and completion",
+          "Message add/remove operations",
+          "Mission-to-mission chaining"
+        ]
+      },
+      {
+        "title": "Generated Event Actions",
+        "paragraphs": [
+          "The writer-facing UI translated readable authoring choices into the game's lower-level mission event format. I could still edit the generated scripts manually when needed, but contributors did not need to understand the event syntax."
+        ],
+        "items": [
+          "GOTO_DIALOG",
+          "START_MISSION",
+          "MISSION_OVER",
+          "REMOVE_MESSAGE",
+          "ADD_MESSAGE",
+          "Additional parameterized game actions exposed through the editor"
+        ]
+      },
+      {
+        "title": "Branching Dialogue",
+        "paragraphs": [
+          "Dialogue answers could jump to different dialogue states or trigger mission events. This allowed writers to build conversations where a player's choice changed what happened next without hard-coding each branch in Java."
+        ]
+      },
+      {
+        "title": "Live Mission Testing",
+        "paragraphs": [
+          "The editor could launch Bridge Captain directly into the mission being authored so writers could test their content immediately inside the real game.",
+          "When a mission depended on earlier events, the authoring workflow could also begin at another mission in the chain so a larger sequence could be tested in context."
+        ]
+      },
+      {
+        "title": "Printable Mission View",
+        "paragraphs": [
+          "The editor could generate a flattened printable view of the mission so writers could read the entire conversation and branching structure at once instead of clicking through every path individually.",
+          "The print view also exposed broken links, making it useful for both proofreading and structural validation."
+        ]
+      },
+      {
+        "title": "Runtime Debugging",
+        "paragraphs": [
+          "The editor itself did not expose the full runtime state as authorable conditions. When deeper debugging was needed, the game could be run with the Java console visible so mission and game state could be inspected while the content was being tested."
+        ]
+      },
+      {
+        "title": "Distributed Writing Workflow",
+        "paragraphs": [
+          "Every writer received the authoring tool and created mission content directly. Contributors packaged their work into ZIP files and emailed it to me.",
+          "I then played the submitted missions, reviewed and edited the content, fixed integration issues, and promoted approved files into the golden game source."
+        ]
+      },
+      {
+        "title": "Source-Control Gatekeeping",
+        "paragraphs": [
+          "The workflow deliberately separated contributor-authored content from the canonical game source. Writers could work independently without direct access to the production codebase, while I remained the final integration and narrative-quality gate."
+        ]
+      },
+      {
+        "title": "Survived an Engine Rewrite",
+        "paragraphs": [
+          "The mission system and editor continued to be used even after Bridge Captain moved from the C.E.L.L. generation into the LibGDX generation. The narrative format was sufficiently separated from the renderer and engine implementation that the same authoring workflow remained useful across the rewrite."
+        ]
+      },
+      {
+        "title": "Replaced by the Unity Generation",
+        "paragraphs": [
+          "The Java mission editor remained in use until Bridge Captain moved into Unity. At that point I replaced it with a later in-game authoring system that allowed story, mission, and cutscene work to happen directly inside the running Unity game."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/tools/bceditor.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/tools/bceditor.jpg"
+    },
+
+    "items": []
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The Bridge Captain mission editor was created after the October 2012 30-day challenge release and was in use by approximately January 2013.",
+      "The tool was written in Java/Swing.",
+      "It was created before and during the expansion of the Bridge Captain writing team.",
+      "Writers did not manually type event commands unless Jamie chose to edit the generated scripts himself.",
+      "The editor exposed human-readable action lists, with each action using a single-page parameter wizard.",
+      "The editor generated the underlying mission-event code from writer selections.",
+      "Mission files contained metadata, dialogue states, answer choices, and event actions.",
+      "Surviving mission files include events such as GOTO_DIALOG, START_MISSION, MISSION_OVER, REMOVE_MESSAGE, and ADD_MESSAGE.",
+      "The editor could launch Bridge Captain directly into the mission being edited.",
+      "Authors could also begin testing from another mission in a chain when earlier context was required.",
+      "The printable mission view showed the full dialogue/branching structure and exposed broken links.",
+      "Runtime state checks were not authored directly through the editor; deeper debugging used the Java console while the game was running.",
+      "Every writer was given the tool and used it to enter mission content.",
+      "Writers sent Jamie ZIP files containing their authored missions.",
+      "Jamie reviewed, played, edited, and integrated contributor submissions into the golden source.",
+      "The workflow prevented distributed writers from needing direct access to the production source repository.",
+      "The same mission system and Java authoring tool remained useful through the later LibGDX Bridge Captain generation.",
+      "The Java tool was retired when the project moved into Unity and Jamie created a later in-game mission/story editor.",
+      "This editor should not be confused with the general C.E.L.L. Visual Game Editor."
+    ],
+
+    "confidence": {
+      "startByJanuary2013": "high",
+      "javaSwingImplementation": "high",
+      "writerFacingActionWizard": "high",
+      "printViewBrokenLinkDetection": "high",
+      "directMissionLaunch": "high",
+      "continuedThroughLibGDX": "high",
+      "retiredAtUnityTransition": "high"
+    },
+
+    "projectTerminology": [
+      "Bridge Captain Mission Editor",
+      "Mission & Dialogue Authoring Tool",
+      "Mission Scripts"
+    ]
+  }
+}
