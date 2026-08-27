@@ -1,12 +1,259 @@
 {
   "schemaVersion": 2,
   "id": "squareparticle/cell/editor",
-  "title": "C.E.L.L. Editor",
+  "title": "C.E.L.L. Visual Game Editor",
   "project": "C.E.L.L.",
-  "platform": {"label": "Application Type", "values": ["Visual Game Editor"]},
-  "technologies": ["XNA", "JME", "BlackBerry SDK", "Android SDK", "Java"],
-  "date": {"from": null, "to": null, "display": false},
-  "description": "A visual editor for C.E.L.L. was necessary to increase productivity for the game designers using it. The editor focuses on level and menu design, as well as key binding, collision, events, and scripting. This editor has been used for a variety of games and prototypes, including RPGs, platformers, infinite runners, side-scrolling shooters, puzzle games, and strategy games.",
-  "media": {"primary": {"type": "youtube", "id": "hdJJCdgDeZw"}, "items": [{"type": "image", "src": "images/skills/tools/cell_1.jpg"}, {"type": "image", "src": "images/skills/tools/cell_2.jpg"}, {"type": "image", "src": "images/skills/tools/cell_3.jpg"}, {"type": "image", "src": "images/skills/tools/cell_4.jpg"}]},
-  "meta": {"projectTerminology": ["C.E.L.L. visual editor", "Cross Emulation Library Layer"]}
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Visual Game Editor"
+    ]
+  },
+
+  "technologies": [
+    "Java",
+    "Swing",
+    "AWT / Canvas",
+    "C.E.L.L. Scripts"
+  ],
+
+  "date": {
+    "from": "2010",
+    "to": "2015",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Solo Editor Developer",
+    "total": 1
+  },
+
+  "roles": [
+    "Editor Architect",
+    "Tools Developer",
+    "Game Engine Developer",
+    "UI/UX Designer",
+    "Scripting Systems Developer",
+    "Technical Designer"
+  ],
+
+  "description": "I built the C.E.L.L. Visual Game Editor as a desktop authoring environment for creating games without hand-writing every scene and level script. Written in Java/Swing, the editor provided visual level construction, reusable entities, tile painting, collision and trigger layers, input mapping, camera setup, menus, HUDs, and action scripting, then exported portable .CELL scripts that ran across the engine's supported platforms.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Why I Built It",
+        "paragraphs": [
+          "C.E.L.L. already allowed games to be built through its API and custom scripting system, but writing every object, level, menu, trigger, and collision definition by hand became increasingly inefficient.",
+          "I built the visual editor before Santa's Route so developers, level designers, and artists could construct and test game content visually while still targeting the same portable C.E.L.L. runtime."
+        ]
+      },
+      {
+        "title": "Desktop Authoring Environment",
+        "paragraphs": [
+          "The editor itself was a Java desktop application built with Swing and Java's AWT/Canvas-style drawing APIs. It ran as a development tool on the desktop while producing game-definition files that were independent of the editor platform."
+        ]
+      },
+      {
+        "title": "Portable .CELL Scripts",
+        "paragraphs": [
+          "The editor saved game content as custom .CELL scripts. Those scripts called the highest-level C.E.L.L. game API and configured the entities, layers, actions, cameras, input, and other game objects needed by the runtime.",
+          "This separation meant the Java editor did not need to exist on the final target device. The exported scripts could be consumed by C.E.L.L. wherever the engine itself ran."
+        ]
+      },
+      {
+        "title": "Visual Level Design",
+        "paragraphs": [
+          "The primary purpose of the editor was real-time visual level design. Objects could be dragged from reusable definitions into the scene and positioned visually, while size and other configuration values were controlled through side-panel properties."
+        ]
+      },
+      {
+        "title": "Layer System",
+        "paragraphs": [
+          "Game scenes were composed from specialized layers that represented different kinds of runtime behavior."
+        ],
+        "items": [
+          "HUD and Button Layers",
+          "Entity Layers",
+          "Image Layers",
+          "Scrolling Background Layers",
+          "Parallax Layers",
+          "Trigger / Action Layers",
+          "Collision Layers"
+        ]
+      },
+      {
+        "title": "Tile & Collision Painting",
+        "paragraphs": [
+          "For tile-based games, designers could select tiles from a palette and paint them directly into the level.",
+          "Collision was authored separately by painting onto a collision layer, allowing the visual presentation and gameplay collision map to remain independent."
+        ]
+      },
+      {
+        "title": "Reusable Objects & Entities",
+        "paragraphs": [
+          "The Objects tab was used to define reusable game entities and their configurable properties. Once an object definition existed, instances could be dragged into levels and reused throughout the same game or across other projects."
+        ]
+      },
+      {
+        "title": "Actions & Trigger Scripting",
+        "paragraphs": [
+          "The Actions tab allowed designers to create reusable actions and attach custom scripts to trigger regions and game events.",
+          "The scripting system used my own command language with predefined commands plus access to the C.E.L.L. API."
+        ],
+        "items": [
+          "Move objects",
+          "Hide or show objects",
+          "Call C.E.L.L. API functions",
+          "Play sounds",
+          "Change screens",
+          "Trigger scripted events",
+          "Control entities",
+          "Connect gameplay events to menus and HUD elements"
+        ]
+      },
+      {
+        "title": "Input Configuration",
+        "paragraphs": [
+          "The Input tab allowed device controls to be configured without hard-coding each game's input setup. Mouse, keyboard, and touch input could be mapped to the actions needed by the game."
+        ]
+      },
+      {
+        "title": "Camera Configuration",
+        "paragraphs": [
+          "The editor included a dedicated camera tab where designers could configure camera behavior and define an array of cameras for a game or scene."
+        ]
+      },
+      {
+        "title": "Menus & HUDs",
+        "paragraphs": [
+          "Menus were built from the same layer-and-action concepts as game levels. Buttons could be placed visually and attached to actions, while entities could be connected to score and other gameplay state.",
+          "Most non-entity text was represented through image assets rather than dedicated hard-coded text widgets."
+        ]
+      },
+      {
+        "title": "Immediate Test / Play Workflow",
+        "paragraphs": [
+          "The editor included a Play workflow that launched the authored game in a separate window. This made it possible to build a level visually, run it immediately, make changes, and test again without manually reconstructing the scene through source code."
+        ]
+      },
+      {
+        "title": "Used by Real Projects",
+        "paragraphs": [
+          "The editor was used for released games, working prototypes, and game-jam projects rather than existing only as a theoretical engine tool."
+        ],
+        "items": [
+          "RPGs",
+          "Platformers",
+          "Infinite runners",
+          "Side-scrolling shooters",
+          "Puzzle games",
+          "Strategy games"
+        ]
+      },
+      {
+        "title": "Team Usage",
+        "paragraphs": [
+          "I was the primary user of the editor, but other developers, level designers, and artists also used it to create and modify game content. The goal was to let contributors work at the level of scenes, objects, and game behavior without requiring them to understand the underlying engine implementation."
+        ]
+      },
+      {
+        "title": "What It Was Not Used For",
+        "paragraphs": [
+          "Bridge Captain was intentionally not built with this editor. Its bridge interface, tightly integrated systems, and unusually complex UI did not fit the normal drag-and-drop level model well enough to justify forcing the project through the editor.",
+          "I made the same kind of choice later with Unity: not every game or interface benefits from visual GUI authoring simply because the tool exists."
+        ]
+      },
+      {
+        "title": "Reusable Game Authoring",
+        "paragraphs": [
+          "The editor reduced the amount of handwritten .CELL scripting required for each project, but its main value was visual authoring. Reusable objects, actions, layers, input mappings, cameras, and scripts made it possible to assemble new games much faster while still retaining access to the underlying engine API when custom behavior was needed."
+        ]
+      },
+      {
+        "title": "Why Development Ended",
+        "paragraphs": [
+          "The editor remained useful throughout the C.E.L.L. era, but once I discovered Unity, maintaining my own complete visual game-authoring environment no longer made sense. Unity provided a much larger general-purpose editor ecosystem, allowing me to focus more of my effort on game systems, tools, and gameplay rather than continuing to rebuild editor infrastructure myself."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "primary": {
+      "type": "youtube",
+      "id": "hdJJCdgDeZw"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/tools/cell_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/tools/cell_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/tools/cell_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/tools/cell_4.jpg"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The C.E.L.L. Visual Game Editor was built before Santa's Route and was used during Santa's Route development.",
+      "The editor itself was a solo project written in Java using Swing and Java AWT/Canvas-style rendering.",
+      "The editor ran on desktop Java but exported portable custom .CELL scripts for the C.E.L.L. runtime.",
+      ".CELL scripts called the highest-level engine API and configured entities, layers, actions, cameras, input, and other game definitions.",
+      "The editor's primary purpose was real-time visual level authoring rather than simply reducing script typing.",
+      "Objects could be dragged and dropped into scenes, while sizing and configuration values were edited through side-panel controls.",
+      "Supported layer types included HUD/button, entity, image/background, scrolling/parallax, trigger/action, and collision layers.",
+      "Tile maps could be painted from a tile palette.",
+      "Collision was painted independently onto collision layers.",
+      "Reusable object/entity definitions were created in an Objects tab and instantiated into scenes.",
+      "Actions were defined in an Actions tab and could have custom C.E.L.L. scripts attached to triggers and events.",
+      "The custom scripting language provided canned commands plus access to the underlying C.E.L.L. API.",
+      "Actions could move or hide objects, play sounds, change screens, call engine APIs, and trigger other runtime behavior.",
+      "The Input tab supported configuration of mouse, keyboard, and touch input.",
+      "The Camera tab supported camera configuration and arrays of cameras.",
+      "Menus and HUDs were authored using layers, buttons, actions, and game entities.",
+      "Non-entity text was generally represented as image assets rather than hard-coded text widgets.",
+      "The Play command launched the authored game in a separate window for immediate testing.",
+      "Editor definitions and systems were reusable across multiple games.",
+      "The editor was used for real released games, prototypes, and game-jam projects spanning RPGs, platformers, infinite runners, side-scrolling shooters, puzzle games, and strategy games.",
+      "Other developers, level designers, and artists used the editor, although Jamie remained its heaviest user.",
+      "Bridge Captain did not use the C.E.L.L. editor because its highly integrated bridge UI and systems did not fit the editor's normal drag-and-drop game structure.",
+      "The separate Bridge Captain mission editor should not be confused with the general C.E.L.L. Visual Game Editor.",
+      "Development of the editor effectively ended when Jamie discovered Unity and no longer saw value in maintaining a complete proprietary visual-authoring environment.",
+      "The long Software Developer Journal article about C.E.L.L. focused on the broader engine technology and should be attached to the separate C.E.L.L. engine skill rather than this editor card."
+    ],
+
+    "confidence": {
+      "editorPredatesSantasRoute": "high",
+      "editorLanguageJavaSwing": "high",
+      "cellScriptOutput": "high",
+      "genreUsage": "high",
+      "editorEndAfterUnityAdoption": "high",
+      "exactStartYear": "medium"
+    },
+
+    "projectTerminology": [
+      "C.E.L.L. Visual Game Editor",
+      "Cross Emulation Library Layer",
+      ".CELL scripts"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Tools",
+      "legacySkill": "squareparticle/cell/editor"
+    }
+  }
 }
