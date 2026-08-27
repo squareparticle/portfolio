@@ -143,7 +143,7 @@ function renderSkillTile(holder, category, ref, value, index, skillTileHTML, ski
             var path=view.gallery[tableIndex];
             var mobBy=isBootstrapSize('xs')?2:(isBootstrapSize('sm')?3:4);
             if(tableIndex % mobBy === 0){ rowDiv=$('<div>',{'class':'row top-buffer'}); table.append(rowDiv); rowIndex++; }
-            var url=PortfolioResources.asset(path,value._resourceBase);
+            let url=PortfolioResources.asset(path,value._resourceBase);
             var imageDiv=$('<div>',{'class':'col-xs-6 col-sm-4 col-md-3'}), img=$('<img>',{src:url,width:'100%',height:'auto'}).css({cursor:'pointer'});
             img.click(function(){openNav(url);}); imageDiv.append(img); rowDiv.append(imageDiv);
         }

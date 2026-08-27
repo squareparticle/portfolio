@@ -1,24 +1,101 @@
 {
   "schemaVersion": 2,
   "id": "squareparticle/santas-route/3d-modeling",
-  "title": "Santa's Route 3D (2015)",
-  "project": "Santas Route",
+  "title": "Santa's Route 3D",
+  "project": "Santa's Route",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Game"
+      "3D Mobile Game"
     ]
   },
+
   "technologies": [
-    "Blender"
+    "Unity",
+    "C#",
+    "Blender",
+    "Photoshop",
+    "Mixamo"
   ],
+
   "date": {
     "from": "2015",
     "to": "2015",
-    "display": false
+    "display": true
   },
-  "description": "I decided to remake Santa's Route as my first Unity game. This is where I learned how to draw and rig models in blender as well as attach motion capture in Unity. My goal was to release on lower end Android devices; therefore, I tried to keep all the models low polygon.",
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Solo Developer",
+    "total": 1
+  },
+
+  "roles": [
+    "Solo Developer",
+    "Game Designer",
+    "Unity Developer",
+    "3D Modeler",
+    "Texture Artist",
+    "Character Rigger",
+    "Technical Artist",
+    "Level Designer",
+    "UI/UX Designer",
+    "Mobile Optimization"
+  ],
+
+  "description": "Santa's Route 3D was my first complete Unity game and a hands-on way to learn the full 3D asset and animation pipeline. I rebuilt the original mobile game in 3D, creating every model, texture, environment, prop, character rig, level, and UI element myself while targeting lower-end Android hardware.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "First Complete Unity Game",
+        "paragraphs": [
+          "I rebuilt the original Santa's Route as my first complete Unity game. The gameplay remained intentionally faithful to the Android version, allowing me to focus on learning Unity, 3D production, animation, physics, and mobile performance rather than redesigning the game itself."
+        ]
+      },
+      {
+        "title": "Complete 3D Asset Pipeline",
+        "paragraphs": [
+          "I created all of the project's 3D models and textures myself, including Santa, the level geometry, buildings, props, gameplay objects, and other environmental assets. I also built the complete level and created the game's UI."
+        ]
+      },
+      {
+        "title": "Character Rigging & Animation",
+        "paragraphs": [
+          "I modeled and rigged Santa myself in Blender, then attached motion-capture animation inside Unity. Some animation data came from Mixamo, while a much larger collection came from freely shared motion-capture resources I discovered through the /r/gamedev community."
+        ]
+      },
+      {
+        "title": "Unity Physics",
+        "paragraphs": [
+          "The game was essentially a direct 3D recreation of the original Santa's Route mechanics, but Unity's physics system allowed objects to behave more naturally. Missed presents, for example, could tumble and roll off rooftops instead of relying on the simpler behavior of the original 2D/mobile implementation."
+        ]
+      },
+      {
+        "title": "Designed for Lower-End Android",
+        "paragraphs": [
+          "I deliberately kept the models low-poly because the intended target was lower-end Android hardware. The project was an opportunity to learn how Unity's 3D workflow, physics, animation, and rendering behaved under mobile performance constraints."
+        ]
+      },
+      {
+        "title": "Learning Project",
+        "paragraphs": [
+          "I completed the working game but chose not to release it commercially. At the time I was not satisfied with Unity's mobile behavior and support, and the finished product was ultimately still Santa's Route presented in 3D.",
+          "Once I had learned what I wanted from the project, I moved on rather than committing to another release and support cycle."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/modeling/title.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/modeling/title.jpg"
+    },
+
     "items": [
       {
         "type": "image",
@@ -36,15 +113,32 @@
         "type": "image",
         "src": "images/skills/modeling/sr_4.jpg"
       }
-    ],
-    "thumbnail": "images/skills/modeling/title.jpg",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/modeling/title.jpg"
-    }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "Blender",
+    "historicalNotes": [
+      "Santa's Route 3D was a completely solo project.",
+      "Jamie created all 3D models and textures used in the game.",
+      "Jamie modeled and rigged Santa himself in Blender.",
+      "Motion-capture animation came partly from Mixamo and partly from several gigabytes of freely shared mocap data discovered through the /r/gamedev community.",
+      "Jamie built the entire 3D level, props, environment, gameplay assets, and UI.",
+      "The gameplay was intentionally almost a direct port of the earlier Android Santa's Route rather than a redesign.",
+      "Unity physics improved physical behavior such as missed presents rolling naturally off rooftops.",
+      "The project was primarily undertaken as a Unity and 3D-development learning experience.",
+      "The full game reached a working state but was never commercially released.",
+      "Jamie chose not to release it because he was not satisfied with Unity's mobile behavior at the time and did not see enough value in supporting another version of Santa's Route simply because it was 3D.",
+      "The project targeted lower-end Android devices and used deliberately low-poly assets."
+    ],
+
+    "confidence": {
+      "soloProject": "high",
+      "allModelsAndTexturesCreatedByJamie": "high",
+      "mixamoUsage": "high",
+      "redditMocapSource": "high",
+      "commercialRelease": "high"
+    },
+
     "provenance": {
       "legacyCategory": "Modeling",
       "legacyIndex": 1

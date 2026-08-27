@@ -41,7 +41,7 @@
     "VR Optimization"
   ],
 
-  "description": "Across H-0P3 and Bridge Captain, I created low-poly 3D models, hand-painted textures, character rigs, and game-ready environments when the projects required custom assets. For Bridge Captain VR, I designed the entire bridge environment and seven crew members around the performance limits of mobile stereoscopic VR, keeping the complete scene to roughly 10,000 polygons while maintaining 60 FPS on a Galaxy S6 Edge / Gear VR.",
+  "description": "Across H-0P3 and Bridge Captain, I created low-poly 3D models, hand-painted textures, character rigs, spacecraft, and game-ready environments when the projects required custom assets. For Bridge Captain VR, I designed the entire bridge environment and seven crew members around the performance limits of mobile stereoscopic VR, keeping the complete scene to roughly 10,000 polygons while maintaining 60 FPS on a Galaxy S6 Edge / Gear VR.",
 
   "details": {
     "sections": [
@@ -55,6 +55,12 @@
         "title": "H-0P3 Modeling",
         "paragraphs": [
           "H-0P3 was one of my earliest projects where I created my own 3D game assets. I modeled the ships and other visual elements myself and used the project as an opportunity to develop the practical 3D skills needed to support my own game designs."
+        ]
+      },
+      {
+        "title": "Low-Poly Spacecraft",
+        "paragraphs": [
+          "Across H-0P3 and Bridge Captain, I created a range of low-poly spacecraft using the same performance-first modeling approach. These ships were built in tools such as 3ds Max, MilkShape, and Blender and were designed to fit the visual and performance constraints of the projects they supported."
         ]
       },
       {
@@ -128,6 +134,38 @@
       {
         "type": "image",
         "src": "images/skills/modeling/bc_4.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/ship_1.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/ship_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/ship_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/ship_4.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/ship_5.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/ship_6.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/ship_7.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/ship_8.jpg"
       }
     ]
   },
@@ -136,6 +174,7 @@
     "historicalNotes": [
       "Jamie does not consider himself primarily an artist, but regularly created his own art and 3D assets when independent projects required it.",
       "Jamie used MilkShape, 3ds Max, and Blender across his early 3D game-development work.",
+      "Jamie created a substantial collection of low-poly spacecraft across the H-0P3 and Bridge Captain generations; these were previously represented by a separate portfolio card and are now consolidated into the broader low-poly modeling skill.",
       "Bridge Captain VR modeling was done primarily in Blender.",
       "Jamie modeled the Bridge Captain VR bridge, consoles, crew members, and related assets himself.",
       "Jamie created and rigged all seven crew characters in Blender.",

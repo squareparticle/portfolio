@@ -1,25 +1,59 @@
 {
   "schemaVersion": 2,
   "id": "personal/modeling/early-work",
-  "title": "Earlier Work (1995 - 2005)",
-  "project": "Modeling",
+  "title": "Early 3D Modeling",
+  "project": "Personal 3D Work",
+
   "platform": {
-    "label": "Application Type",
+    "label": "Focus",
     "values": [
-      "Developer Tool"
+      "3D Modeling & Animation"
     ]
   },
+
   "technologies": [
-    "3DS4",
-    "3DS Max (Windows"
+    "3D Studio 4",
+    "3ds Max"
   ],
+
   "date": {
     "from": "1995",
     "to": "2005",
-    "display": false
+    "display": true
   },
-  "description": "In high school and college I loved to dabble in 3D creation software for making game graphics and animations.",
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Personal Work",
+    "total": 1
+  },
+
+  "roles": [
+    "3D Modeler",
+    "Animator"
+  ],
+
+  "description": "My interest in 3D graphics started in high school and continued through college, where I used tools such as 3D Studio 4 and later 3ds Max to learn modeling, animation, and the basics of creating game-oriented 3D artwork.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Early 3D Learning",
+        "paragraphs": [
+          "This work represents my early experimentation with 3D modeling and animation before I began using those skills directly in later game projects. I created models and animations primarily as a way to learn the tools and understand how 3D assets were constructed."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/modeling/old.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/modeling/old.jpg"
+    },
+
     "items": [
       {
         "type": "image",
@@ -53,15 +87,16 @@
         "type": "image",
         "src": "images/skills/modeling/old_8.png"
       }
-    ],
-    "thumbnail": "images/skills/modeling/old.jpg",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/modeling/old.jpg"
-    }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "3DS4 (Dos), 3DS Max (Windows)",
+    "historicalNotes": [
+      "This work was primarily personal learning and experimentation from high school through college.",
+      "It predates Jamie's later production use of 3D modeling in H-0P3, Santa's Route 3D, and Bridge Captain.",
+      "3D Studio 4 was used during the DOS era, followed later by 3ds Max on Windows."
+    ],
+
     "provenance": {
       "legacyCategory": "Modeling",
       "legacyIndex": 2

@@ -312,6 +312,24 @@ test('Hydra-Gen v2 skills render galleries and keep metadata hidden', {timeout: 
     await page.close();
 });
 
+test('each skill gallery image opens its own full-size image', {timeout: 10000}, async () => {
+    const {page} = await pageAt(baseUrl + '/');
+    await page.locator('#featuredSlides .item').first().waitFor({state:'visible'});
+    await page.locator('#EnginesThumb').click();
+    const gallery = page.locator('#skill-essentialskills-hydragen-engine [id$="_table"] img');
+    await gallery.first().waitFor({state:'visible'});
+    assert.ok(await gallery.count() > 1);
+
+    for (const index of [0, 1]) {
+        const expectedSrc = await gallery.nth(index).getAttribute('src');
+        await gallery.nth(index).click();
+        assert.equal(await page.locator('#myNav').evaluate(node => node.style.height), '100%');
+        assert.equal(await page.locator('#overImage').getAttribute('src'), expectedSrc);
+        await page.locator('#myNav .closebtn').click();
+    }
+    await page.close();
+});
+
 test('missing portfolio media does not prevent visible content', {timeout: 10000}, async () => {
     const {page} = await pageAt(baseUrl + '/');
     await page.route('**/images/**', route => route.fulfill({status:404, body:'missing'}));

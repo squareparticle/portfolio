@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 2,
+  "id": "personal/dragon-quest/early-rpg-engine-development",
+  "title": "Dragon Quest: Early RPG & Engine Development",
+  "project": "Dragon Quest",
+
+  "platform": {
+    "label": "Project Type",
+    "values": [
+      "Personal RPG / Engine Development"
+    ]
+  },
+
+  "technologies": [
+    "GW-BASIC",
+    "Turing",
+    "Turbo C++",
+    "C++",
+    "DirectX 5-era",
+    "Lua",
+    "3D Studio 4",
+    "Deluxe Paint Animation"
+  ],
+
+  "date": {
+    "from": "1987",
+    "to": "2002",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Solo Developer",
+    "total": 1
+  },
+
+  "roles": [
+    "Solo Developer",
+    "Game Designer",
+    "Engine Developer",
+    "Gameplay Programmer",
+    "Graphics Programmer",
+    "Tools Developer",
+    "Scripting Systems Developer",
+    "3D Modeler",
+    "Animator",
+    "UI Developer"
+  ],
+
+  "description": "Dragon Quest was a personal RPG project I repeatedly rebuilt from childhood through college as my programming and graphics skills evolved. Across versions in GW-BASIC, Turing, Turbo C++, and later C++ with early DirectX and Lua scripting, it became my long-running laboratory for learning game systems, graphics, scripting, tooling, animation, and engine design.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "1987: First Playable Version",
+        "paragraphs": [
+          "I created the first version of Dragon Quest at age 12 on a Tandy 1000 EX using GW-BASIC. It was a text adventure with ASCII graphics and was complete enough for my friends to play from beginning to end."
+        ]
+      },
+      {
+        "title": "1993: Complete High-School RPG",
+        "paragraphs": [
+          "In high school I rebuilt Dragon Quest in Turing as a much more ambitious RPG and completed it in roughly three months for a school project.",
+          "The game played more like a traditional console RPG, with a full story, combat, character leveling, new spells, equipment purchases, secrets, explorable buildings, a castle, NPC conversations, and a final boss that required the player to become strong enough to defeat."
+        ],
+        "items": [
+          "Story-driven progression",
+          "Turn-based RPG combat",
+          "Character leveling",
+          "Unlockable spells",
+          "Equipment purchases",
+          "Town exploration",
+          "Hidden rooms and secrets",
+          "Castle exploration",
+          "NPC conversations",
+          "Final boss progression"
+        ]
+      },
+      {
+        "title": "Early 3D & FMV",
+        "paragraphs": [
+          "I created graphics and animation using 3D Studio 4 for DOS, Deluxe Paint Animation, and graphics drawn directly in code. For the Turing version I also created pre-rendered FMV sequences in 3D Studio 4 and launched an external playback executable from the game when a movie needed to play."
+        ]
+      },
+      {
+        "title": "Early Sprite Rendering",
+        "paragraphs": [
+          "This work predates modern PNG alpha-channel workflows. Drawing sprites with transparent backgrounds required explicit masking and raster operations rather than simply loading an image with transparency.",
+          "I remember using combinations of bitwise-style drawing operations such as AND/XOR-style masking to composite sprites, and these techniques could still be expensive on the 486-class hardware I was working with."
+        ]
+      },
+      {
+        "title": "Turbo C++ Rewrite",
+        "paragraphs": [
+          "Sometime between the mid-1990s and 2000 I rebuilt Dragon Quest again in Turbo C++. This generation was less about finishing another story-driven RPG and more about learning how to build the underlying game technology myself.",
+          "The surviving gameplay memory is a Zelda-like exploration prototype where the player could move around the world and interact with the environment, including cutting down trees."
+        ]
+      },
+      {
+        "title": "2002 C++ / DirectX Generation",
+        "paragraphs": [
+          "By 2002 I had rebuilt the idea again as a Windows C++ game and engine technology demo using early DirectX-era graphics APIs. This version was intended as the technical foundation for a more mature RPG rather than a finished story-driven game."
+        ],
+        "items": [
+          "3D world rendering",
+          "Player movement and exploration",
+          "Environment interaction",
+          "Cutscene support",
+          "Runtime scripting",
+          "Weather and environmental state changes",
+          "Developer console",
+          "Game-state manipulation"
+        ]
+      },
+      {
+        "title": "Lua Scripting",
+        "paragraphs": [
+          "I embedded Lua into the C++ project so game behavior and cutscene logic could be driven through scripting rather than being hard-coded entirely in the engine.",
+          "The scripting layer became part of the foundation for controlling runtime behavior and experimenting with game-state changes."
+        ]
+      },
+      {
+        "title": "Runtime Developer Console",
+        "paragraphs": [
+          "The 2002 version included a dropdown developer console inspired by the style of consoles used in games such as Doom. It exposed predefined commands that could change the running game without restarting it.",
+          "I used the console to test and manipulate systems such as weather and visual world state, including effects such as changing water into lava."
+        ]
+      },
+      {
+        "title": "Engine-First Development",
+        "paragraphs": [
+          "The later Dragon Quest versions increasingly became engine and technology projects rather than attempts to immediately finish another RPG. I would rebuild the same basic idea whenever I learned a new language, graphics API, or architectural technique so I could understand the entire stack myself.",
+          "By the 2002 generation, most of the major foundation was present for a mature RPG framework. The major pieces I remember still missing were the final Zelda-like combat system and sound."
+        ]
+      },
+      {
+        "title": "Path Toward C.E.L.L.",
+        "paragraphs": [
+          "Projects like Dragon Quest established the pattern that eventually led to C.E.L.L.: building reusable game technology, separating game behavior from engine internals, creating tools and scripting interfaces, and repeatedly looking for ways to make game development easier across future projects.",
+          "The technology changed dramatically over the years, but the core instinct remained the same: build the underlying systems once, then use them to make the game itself easier to create."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/modeling/old.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/modeling/old.jpg"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/modeling/old_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/old_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/old_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/old_4.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/old_5.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/old_6.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/old_7.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/modeling/old_8.png"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "Dragon Quest was a recurring personal game-development project that Jamie rebuilt several times from childhood through college.",
+      "The first version was created in 1987 at age 12 on a Tandy 1000 EX using GW-BASIC.",
+      "The 1987 version was a playable text adventure with ASCII graphics that Jamie's friends could play.",
+      "Jamie named his project Dragon Quest after receiving Dragon Warrior through Nintendo Power. This predates the North American Dragon Warrior series later adopting the Dragon Quest name.",
+      "The 1993 Turing version was built in roughly three months as a high-school project and was a complete playable RPG.",
+      "The high-school RPG included story, combat, leveling, spells, equipment, secrets, town and castle exploration, NPC conversations, and a final boss.",
+      "Jamie created all of the visual work himself.",
+      "Graphics were created using 3D Studio 4 for DOS, Deluxe Paint Animation, and graphics drawn directly in code.",
+      "FMV sequences were pre-rendered in 3D Studio 4 and played by shelling out from Turing to an external DOS playback executable.",
+      "Jamie remembers the external FMV player name as something similar to AAPlay, but the exact executable name is uncertain.",
+      "Early sprite transparency required explicit mask/raster operations rather than modern PNG alpha blending.",
+      "Jamie remembers AND/XOR-style compositing techniques but does not remember the exact raster-operation sequence confidently enough to document it as an exact implementation.",
+      "A later Turbo C++ rewrite was created sometime after 1995 and before 2000.",
+      "The Turbo C++ generation was primarily a technology demo rather than a complete story-driven RPG.",
+      "The strongest surviving memory of the Turbo C++ version is Zelda-like movement and environment interaction, including cutting down trees.",
+      "The 2002 generation was another fresh rewrite using C++ for Windows.",
+      "Jamie now believes the 2002 generation most likely used DirectX 5-era APIs. Exact DirectX version should be treated as memory-based rather than source-verified.",
+      "Lua was embedded into the C++ project for cutscenes and runtime scripting.",
+      "The 2002 project contained a dropdown developer console influenced by Doom-style consoles.",
+      "The console appears from surviving screenshots and memory to have exposed predefined/canned commands rather than arbitrary unrestricted Lua entry.",
+      "Runtime commands could alter systems such as weather and visual/environmental state, including changing water into lava.",
+      "The 2002 project was primarily an engine/game technology demo that could have supported a fuller story-based RPG.",
+      "Jamie remembers the main missing pieces for a more mature game being Zelda-like combat and sound.",
+      "Every Dragon Quest generation was developed solo.",
+      "These repeated personal engine and RPG projects were important conceptual predecessors to C.E.L.L."
+    ],
+
+    "confidence": {
+      "firstVersionYear": "high",
+      "turingVersionYear": "high",
+      "turboCppVersionDate": "low",
+      "directX5Version": "medium",
+      "externalFmvPlayerName": "low",
+      "spriteMaskingImplementation": "medium"
+    },
+
+    "provenance": {
+      "derivedFrom": "personal/modeling/early-work"
+    }
+  }
+}
