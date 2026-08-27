@@ -1,33 +1,181 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/infrastructure/servers",
-  "title": "Servers",
-  "project": "Infrastructure",
+  "title": "Cross-Platform Server & Test Infrastructure",
+  "project": "Essential Skills Infrastructure",
+
   "platform": {
-    "label": "Application Type",
+    "label": "Infrastructure Scope",
     "values": [
-      "Cloud / Server Infrastructure"
+      "Server Administration",
+      "Compatibility Testing"
     ]
   },
+
   "technologies": [
-    "Novell",
-    "Linux (Ubuntu",
+    "Novell NetWare",
+    "Windows NT",
+    "Windows 2000 Server",
+    "Windows Server 2003",
+    "OS X Server",
+    "Linux",
+    "Ubuntu",
     "Knoppix",
     "Red Hat",
-    "Darwin)",
-    "Unix",
-    "Windows (NT",
-    "2000",
-    "2003",
-    "2008)",
-    "OS X Server"
+    "AIX",
+    "IIS",
+    "Apache",
+    "Tomcat",
+    "LAMP",
+    "TCP/IP",
+    "DHCP",
+    "DNS",
+    "Routing",
+    "NAT",
+    "RAID",
+    "KVM",
+    "TeamViewer"
   ],
+
   "date": {
-    "from": null,
-    "to": null,
-    "display": false
+    "from": "1999",
+    "to": "2012",
+    "display": true
   },
-  "description": "I supported Essentials Skills school software on a varierty of server platforms. In order to debug server side problems, I helped IT create a protected subnetwork of hot swappable servers and clients.",
+
+  "team": {
+    "myPosition": "contributor",
+    "myPositionLabel": "Developer / Infrastructure Contributor",
+    "total": null
+  },
+
+  "roles": [
+    "Developer Support Engineer",
+    "Systems Administrator",
+    "Server Administrator",
+    "Network / Environment Troubleshooting",
+    "Platform Compatibility Testing"
+  ],
+
+  "description": "Before Essential Skills moved most production infrastructure into the cloud, supporting cross-platform school software meant understanding the server and network environments it actually ran inside. From 1999 through roughly 2012, I worked across Novell, Windows Server, Mac, Linux, and Unix environments and helped build an isolated compatibility lab where difficult customer problems could be reproduced against real operating-system and server configurations.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Developer-Driven Infrastructure Support",
+        "paragraphs": [
+          "My server-administration experience grew out of software development and technical support rather than a desire to become a dedicated IT administrator. Essential Skills software had to run inside many different school environments, so debugging application problems often required understanding the surrounding servers, permissions, networks, file systems, and client operating systems."
+        ]
+      },
+      {
+        "title": "Cross-Platform School Environments",
+        "paragraphs": [
+          "The software had to coexist with a wide range of infrastructure used by schools during the late 1990s and 2000s. I became hands-on with multiple generations of Novell, Windows Server, Mac server, Linux, and Unix systems so we could reproduce and diagnose environment-specific problems."
+        ],
+        "items": [
+          "Novell NetWare 3 through 6",
+          "Windows NT",
+          "Windows 2000 Server",
+          "Windows Server 2003",
+          "OS X Server",
+          "Linux distributions including Knoppix and Red Hat",
+          "Ubuntu and related Debian-based systems in later development work",
+          "AIX administration and permissions through college training"
+        ]
+      },
+      {
+        "title": "Novell Administration",
+        "paragraphs": [
+          "I worked directly with Novell environments, including installation and configuration, user and group management, shares, permissions, login scripts, print services, and troubleshooting software behavior inside school NetWare networks."
+        ]
+      },
+      {
+        "title": "Windows Server Administration",
+        "paragraphs": [
+          "I set up and administered Windows NT, Windows 2000, and Windows Server 2003 environments for compatibility testing and internal infrastructure. This included domains, users and groups, permissions, shares, DNS, DHCP, IIS, policies, and related server services."
+        ]
+      },
+      {
+        "title": "Domain & Network Test Environment",
+        "paragraphs": [
+          "For the compatibility lab I built my own NT/2000-era domain-controller setup and helped divide the company intranet into an isolated test segment. This allowed us to change domain, DHCP, DNS, permission, and server configurations without disrupting the rest of the office."
+        ]
+      },
+      {
+        "title": "Dedicated Compatibility Lab",
+        "paragraphs": [
+          "Essential Skills maintained a dedicated room for reproducing customer software problems. The lab contained multiple Macs, PCs, servers, KVM switches, and servers with hot-swappable drives representing many different operating-system and server configurations.",
+          "We maintained roughly twenty swappable Windows and server environments. Macs were represented by multiple physical machines rather than drive-swapped configurations."
+        ]
+      },
+      {
+        "title": "Microsoft Certified Partner Resources",
+        "paragraphs": [
+          "I helped Essential Skills become a Microsoft Certified Partner, which gave the company access to a large library of Microsoft software, installation media, and product keys. That made it much easier to maintain representative historical Windows and server configurations inside the test lab."
+        ]
+      },
+      {
+        "title": "Reproducing Customer Problems",
+        "paragraphs": [
+          "When a school problem could not be diagnosed over the phone, we attempted to recreate the customer's environment internally. That might mean physically swapping a server drive, booting a specific version of Windows or NetWare, changing permissions or network configuration, and running the same Essential Skills software under equivalent conditions.",
+          "The goal was to reproduce software failures rather than guess at them from a generic development workstation."
+        ]
+      },
+      {
+        "title": "Networking",
+        "paragraphs": [
+          "I used practical networking knowledge from college and production support to configure and troubleshoot TCP/IP networks, DHCP, DNS, subnets, routing, NAT, switches, and firewalls.",
+          "I understood packet-level troubleshooting concepts, but the problems I encountered generally did not require packet sniffing or deep protocol analysis."
+        ]
+      },
+      {
+        "title": "Mac & OS X Server",
+        "paragraphs": [
+          "Mac compatibility was a major part of the support burden. I personally configured OS X Server environments so we could test the software against real Mac network and server setups rather than treating the Mac client as an isolated desktop."
+        ]
+      },
+      {
+        "title": "Linux & Unix",
+        "paragraphs": [
+          "I had been installing and experimenting with Linux distributions since college and later used Linux extensively in development and server work. Earlier compatibility environments included distributions such as Knoppix and Red Hat.",
+          "My AIX experience came primarily from approximately three years of college training, where I learned Unix permissions and administration. It should be treated as formal training rather than production AIX administration."
+        ]
+      },
+      {
+        "title": "Internal Application Servers",
+        "paragraphs": [
+          "Before cloud infrastructure became the norm, we also hosted internal web applications and tools ourselves. I worked with IIS, Apache, Tomcat, and LAMP stacks supporting systems such as customer-service applications, internal knowledgebases, and other business tools."
+        ]
+      },
+      {
+        "title": "Backups & Physical Resilience",
+        "paragraphs": [
+          "Pre-cloud backup planning included RAID and removable drives. Because the office had experienced break-ins, backup drives were periodically taken offsite by staff so a physical incident at the office would not destroy both the production data and its backups."
+        ]
+      },
+      {
+        "title": "Remote Support Evolution",
+        "paragraphs": [
+          "Much of the earliest support work happened during the dial-up and T1 era, when practical remote server access was limited. Diagnosis was commonly performed over the phone and then reproduced in the lab.",
+          "Later, tools such as TeamViewer made it possible to work directly with customer environments when school IT staff installed remote-access software."
+        ]
+      },
+      {
+        "title": "Transition to Cloud Infrastructure",
+        "paragraphs": [
+          "This broad server and compatibility work gradually declined as Essential Skills moved toward AWS and browser-based applications. By roughly 2012, cloud-hosted services and modern web deployment had eliminated much of the need to reproduce customer-owned server environments in the same way."
+        ]
+      },
+      {
+        "title": "Why the Lab Mattered",
+        "paragraphs": [
+          "The practical lesson was that Java's 'write once, run anywhere' promise did not eliminate the differences between real school networks, server platforms, permissions, client operating systems, and administrative policies.",
+          "The compatibility lab gave the development and support teams a controlled way to understand those differences and fix software behavior based on evidence rather than assumptions."
+        ]
+      }
+    ]
+  },
+
   "media": {
     "items": [],
     "thumbnail": "images/skills/cloud/novell.png",
@@ -36,8 +184,45 @@
       "src": "images/skills/cloud/novell.png"
     }
   },
+
   "meta": {
-    "legacySubtitle": "Novell 3 - 6, Linux (Ubuntu, Knoppix, Red Hat, Darwin), Unix (AIX), Windows (NT, 2000, 2003, 2008),  OS X Server",
+    "historicalNotes": [
+      "This experience was primarily developer-driven compatibility and infrastructure troubleshooting rather than a dedicated IT career path.",
+      "Jamie's broad pre-cloud server support was strongest from approximately 1999 through 2012 and declined as Essential Skills migrated infrastructure into AWS.",
+      "Jamie was hands-on with Novell installation/configuration, users, groups, shares, permissions, login scripts, and print services.",
+      "Windows Server production/test experience is confidently remembered through Windows Server 2003. Older portfolio wording also listed 2008, but this should not be treated as a hard claim unless independently recovered.",
+      "Jamie built an NT/2000-era domain-controller environment for the Essential Skills testing lab.",
+      "The testing environment divided part of the company intranet into an isolated network segment so server/network settings could be changed safely.",
+      "The compatibility lab was organizationally owned by the IT department, while Jamie helped design its topology and setup because of the development/support requirements.",
+      "The lab contained many Macs and PCs, multiple servers, KVM switches, and servers using hot-swappable drives.",
+      "Roughly twenty swappable Windows/server configurations were maintained using physical drives and manual setup.",
+      "Mac environments used multiple physical Mac computers rather than hot-swappable drive configurations.",
+      "Jamie helped Essential Skills become a Microsoft Certified Partner and still has the historical plaques.",
+      "Microsoft's partner program supplied extensive installation media and product keys that helped populate the compatibility lab with many Microsoft operating systems and server versions.",
+      "When issues could not be diagnosed by telephone support, the team attempted to reproduce the customer's environment internally.",
+      "Jamie used TCP/IP, DHCP, DNS, subnets, routing, NAT, switches, and firewalls in practical infrastructure work.",
+      "Jamie understands packet-level troubleshooting concepts but does not remember needing packet sniffing for this work.",
+      "Most computer construction, cabling, and hardware work was handled by vendors or internal IT staff, although Jamie occasionally built computers and crimped network cables when necessary.",
+      "Pre-cloud backup practice included RAID and removable drives taken offsite because Essential Skills had experienced office break-ins.",
+      "Jamie configured OS X Server himself for software compatibility testing.",
+      "Jamie had installed and experimented with Linux since college.",
+      "AIX permissions and administration came from college training rather than real-world production AIX ownership.",
+      "In later years Jamie used Ubuntu desktop extensively, including building the teacher content-creation / Spelling List Editor development environment when Docker could not be used conveniently on his Windows Home setup.",
+      "Internal pre-cloud web systems used IIS, Apache, Tomcat, and LAMP stacks for tools such as customer-service applications and knowledgebases.",
+      "Early customer support occurred largely during the dial-up/T1 era, so direct remote server administration was uncommon.",
+      "Later support sometimes used TeamViewer when customers installed it.",
+      "The historical purpose of the lab was to cope with the fact that cross-platform Java software still behaved differently across real customer server/network environments."
+    ],
+
+    "confidence": {
+      "dateRange": "high",
+      "novellAdministration": "high",
+      "windowsThrough2003": "high",
+      "windowsServer2008": "low",
+      "testLabConfigurationCount": "medium",
+      "aixProductionUse": "high"
+    },
+
     "provenance": {
       "legacyCategory": "Cloud",
       "legacyIndex": 1

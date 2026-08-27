@@ -1,31 +1,294 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/infrastructure/aws",
-  "title": "Amazon AWS (2011 - now)",
-  "project": "Infrastructure",
+  "title": "AWS Cloud Architecture & Production Operations",
+  "project": "Essential Skills Production Infrastructure",
+
   "platform": {
-    "label": "Application Type",
+    "label": "Infrastructure Scope",
     "values": [
-      "Cloud / Server Infrastructure"
+      "Production Cloud Infrastructure"
     ]
   },
+
   "technologies": [
+    "AWS",
     "Ubuntu",
     "EC2",
     "AMI",
-    "Load Balancers",
+    "Elastic Beanstalk",
+    "Elastic Load Balancing",
+    "Auto Scaling",
+    "Lambda",
+    "API Gateway",
     "S3",
     "CloudFront",
+    "Glacier",
     "SES",
-    "SDB",
-    "Route 53"
+    "SQS",
+    "SimpleDB",
+    "DynamoDB",
+    "Aurora",
+    "MySQL",
+    "Route 53",
+    "IAM",
+    "CloudWatch",
+    "CloudTrail",
+    "GuardDuty",
+    "Python",
+    "Node.js",
+    "PHP",
+    "Bash",
+    "Perl",
+    "Docker"
   ],
+
   "date": {
     "from": "2011",
-    "to": "2011",
-    "display": false
+    "to": null,
+    "display": true
   },
-  "description": "I mainly use AWS APIs alongside Java, PHP and NodeJS for the purpose of building web services and server side coding. Additionally, I developed tools for monitoring and launching EC2s, data backups, web deploys, database restructuring, and issuing daily automated e-mails using languages such as Python, Perl and Bash .",
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Cloud Architect / Infrastructure Lead",
+    "total": null
+  },
+
+  "roles": [
+    "Cloud Architect",
+    "Infrastructure Lead",
+    "AWS Administrator",
+    "Linux Administrator",
+    "Cloud Security Administrator",
+    "Backend Developer",
+    "Serverless Developer",
+    "Database Architect / Administrator",
+    "Release / Deployment Owner",
+    "Automation Developer",
+    "Monitoring / Reliability",
+    "Cost Optimization"
+  ],
+
+  "description": "I designed and operated Essential Skills' AWS infrastructure from its early cloud adoption around 2011 through heavy production use supporting 40,000+ schools, 500,000+ students, and approximately 80,000 monthly active users. I was the primary architectural decision maker across cloud topology, scaling, Linux administration, databases, serverless APIs, security, monitoring, deployment, backups, and cost management.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Moving Essential Skills to AWS",
+        "paragraphs": [
+          "Essential Skills began adopting AWS around 2011 as our Java WebStart applications increasingly required internet-accessible data and services. Moving infrastructure into the cloud also removed the limitations of hosting critical systems in-house while supporting schools distributed throughout North America.",
+          "I designed the AWS topology and became the primary technical decision maker responsible for how our production infrastructure was structured, secured, scaled, maintained, and evolved."
+        ]
+      },
+      {
+        "title": "Production Infrastructure",
+        "paragraphs": [
+          "I provisioned and administered Ubuntu-based EC2 infrastructure and managed the surrounding production environment, including Apache and NGINX, SSL, SSH, firewall and security-group configuration, operating-system updates, AMIs, backups, archival storage, networking, DNS, load balancing, and application deployment."
+        ],
+        "items": [
+          "Ubuntu / Linux administration",
+          "EC2 provisioning and maintenance",
+          "Apache and NGINX configuration",
+          "SSL and SSH",
+          "Security groups and firewall configuration",
+          "AMI creation and recovery",
+          "S3 backups",
+          "Glacier archival",
+          "Route 53",
+          "Elastic Load Balancing",
+          "Elastic Beanstalk",
+          "CloudFront"
+        ]
+      },
+      {
+        "title": "Scaling Production Applications",
+        "paragraphs": [
+          "The production environment had multiple independently scaling workloads, including the school application, home-user application, trial systems, free phonics programs, login and endpoint services, and the Spelling List Editor.",
+          "Before adopting managed Elastic Beanstalk scaling, I built an earlier custom autoscaling system around EC2 instances, load balancing, monitoring, and scripts. I later moved appropriate applications onto AWS-managed scaling infrastructure."
+        ]
+      },
+      {
+        "title": "Elastic Beanstalk",
+        "paragraphs": [
+          "I configured and operated Elastic Beanstalk environments, including deployment configuration, instance management, scaling, environment settings, security configuration, and production troubleshooting.",
+          "I also configured application security controls such as Content Security Policy headers as the web platform evolved."
+        ]
+      },
+      {
+        "title": "Serverless Development",
+        "paragraphs": [
+          "Lambda became my preferred approach for services that did not require permanently running servers. I built serverless systems primarily in Python and Node.js and exposed many of them through API Gateway."
+        ],
+        "items": [
+          "OpenAI API integration",
+          "ElevenLabs API integration",
+          "Amazon Polly integration",
+          "Edlink API integration",
+          "Version 7 database services",
+          "Spelling List Editor services",
+          "WebRTC-related endpoints",
+          "Magies upload and automatic formatting",
+          "S3 read/write services",
+          "Marks recoding for free programs",
+          "Security and password-processing services",
+          "Customer and account processing"
+        ]
+      },
+      {
+        "title": "Custom Email Platform",
+        "paragraphs": [
+          "I built a custom email platform around Amazon SES rather than relying on a collection of unrelated mail integrations. It supported both large email campaigns and application-generated transactional messages.",
+          "The system maintained roughly twenty reusable templates with variables populated at send time and logged delivery transactions to DynamoDB."
+        ],
+        "items": [
+          "Mass customer email campaigns",
+          "Password-reset messages",
+          "Trial-expiration notifications",
+          "Support auto-replies",
+          "System notifications",
+          "Internal notifications",
+          "Template variable substitution",
+          "DynamoDB transaction logging",
+          "Custom authorization token tied to email identity and date"
+        ]
+      },
+      {
+        "title": "Queued Account Processing",
+        "paragraphs": [
+          "For systems such as Infusionsoft, external account creation could take one to two minutes to complete. I used SQS to decouple incoming account requests from later processing so our side could continue working without waiting synchronously for the external platform."
+        ]
+      },
+      {
+        "title": "API Gateway",
+        "paragraphs": [
+          "I used API Gateway extensively to expose production endpoints for both internal and customer-facing services. It became the front door for many Lambda-based systems, including AI services, text-to-speech, database APIs, email, identity and rostering integrations, WebRTC support, and application-specific backend functionality."
+        ]
+      },
+      {
+        "title": "S3 & CloudFront",
+        "paragraphs": [
+          "S3 and CloudFront were used heavily for static application assets, media distribution, HTTPS websites, backups, and application delivery. I also configured CloudFront in front of EC2-hosted applications where appropriate and managed security headers and domain configuration around those deployments."
+        ]
+      },
+      {
+        "title": "Database Architecture",
+        "paragraphs": [
+          "Database architecture and administration ultimately flowed through me. I designed schemas and access patterns, handled migrations and restructuring, evaluated storage technologies, and maintained production data systems."
+        ],
+        "items": [
+          "Amazon SimpleDB",
+          "DynamoDB",
+          "Aurora",
+          "MySQL",
+          "Database migrations",
+          "Schema design",
+          "Data-access patterns",
+          "Production administration",
+          "Backup and recovery planning"
+        ]
+      },
+      {
+        "title": "Database Cost Evaluation",
+        "paragraphs": [
+          "I evaluated database technologies using real workloads rather than choosing them solely from feature comparisons. Over the years I tested options including SimpleDB, DynamoDB, Aurora, Cassandra, and MySQL while comparing operational complexity, scaling behavior, and actual cost.",
+          "These evaluations informed long-term architectural decisions for a platform where database usage could become one of the largest recurring infrastructure costs."
+        ]
+      },
+      {
+        "title": "Security & IAM",
+        "paragraphs": [
+          "I designed the AWS access model and created IAM roles and permissions for employees, administrators, and contractors. I remained the primary decision maker for production access.",
+          "When I did not want an outside contractor to receive even limited access to the main production account, I created controlled sandbox AWS accounts and attached them to the broader ESS environment so work could remain isolated."
+        ],
+        "items": [
+          "IAM roles and policies",
+          "Contractor access controls",
+          "Sandbox account isolation",
+          "Security groups",
+          "CSP headers",
+          "CloudTrail",
+          "GuardDuty",
+          "Password and encryption systems",
+          "Production security reviews"
+        ]
+      },
+      {
+        "title": "Monitoring & Reliability",
+        "paragraphs": [
+          "I configured CloudWatch monitoring and alarms for the production environment and used those signals to support scaling and reliability decisions. Earlier in the AWS lifecycle, monitoring also fed the custom autoscaling system I built before moving toward AWS-managed scaling."
+        ]
+      },
+      {
+        "title": "Automation & Operations Tooling",
+        "paragraphs": [
+          "I built operational tools and scripts in Python, Perl, and Bash for recurring infrastructure work rather than manually repeating every maintenance task."
+        ],
+        "items": [
+          "EC2 launch and management",
+          "Backup automation",
+          "Deployment support",
+          "Database restructuring and migration",
+          "Automated email processing",
+          "File and data movement",
+          "Environment maintenance"
+        ]
+      },
+      {
+        "title": "Controlled Release Pipeline",
+        "paragraphs": [
+          "Our deployment workflow was deliberately staged even though it was not a fully automated CI/CD pipeline. Development changes were committed to Git, promoted into staging for QA, and only moved into production once the complete application and endpoint environment had been tested."
+        ],
+        "items": [
+          "Development EC2 environments with Git repositories",
+          "Dedicated endpoint/login development environment",
+          "Staging EC2 deployment and QA",
+          "Elastic Beanstalk staging deployments",
+          "S3 and CloudFront staging assets",
+          "AWS CLI promotion of approved CloudFront assets to production",
+          "Production configuration updates",
+          "Git pull and Elastic Beanstalk production deployment",
+          "Immediate production QA after release"
+        ]
+      },
+      {
+        "title": "Legacy Platform Maintenance",
+        "paragraphs": [
+          "Long-running production systems occasionally outlived the vendor integrations they depended on. The original ESS service endpoints were written in PHP 4 and continued operating through PHP 5. During a later PHP compatibility transition, Amazon's legacy SimpleDB SDK stopped functioning.",
+          "Because the old SimpleDB integration was no longer receiving the level of vendor support we needed, I traced through the SDK implementation, identified the incompatibilities introduced by the newer PHP runtime, and reworked the integration so the production system could continue operating."
+        ]
+      },
+      {
+        "title": "Cost Management",
+        "paragraphs": [
+          "I owned AWS cost management as part of the architecture role. I regularly reviewed instance sizing, database choices, storage strategies, scaling behavior, and reserved-capacity options.",
+          "I also held roughly twice-yearly meetings with our AWS EdTech contacts to review architecture, cost, security, and potential platform improvements."
+        ],
+        "items": [
+          "Reserved instance planning",
+          "Instance right-sizing",
+          "Database cost comparisons",
+          "Storage and CDN cost analysis",
+          "Scaling-cost evaluation",
+          "Architecture reviews with AWS EdTech specialists"
+        ]
+      },
+      {
+        "title": "Azure & Google Cloud Evaluations",
+        "paragraphs": [
+          "AWS remained the production platform, but I also evaluated Azure and Google Cloud as potential backup, migration, and cost alternatives. These were architecture and migration experiments rather than production deployments."
+        ]
+      },
+      {
+        "title": "Long-Term Infrastructure Ownership",
+        "paragraphs": [
+          "One of the less visible parts of owning production infrastructure for this long was continuously adapting to AWS and runtime changes. Service deprecations, SDK changes, operating-system updates, language changes, security requirements, and application growth all eventually reached me because I was responsible for keeping the platform working.",
+          "I continued using AWS after my primary Essential Skills employment ended and also use it for Square Particle projects."
+        ]
+      }
+    ]
+  },
+
   "media": {
     "items": [],
     "thumbnail": "images/skills/cloud/ubuntu.png",
@@ -34,9 +297,63 @@
       "src": "images/skills/cloud/ubuntu.png"
     }
   },
-  "descriptionHtml": "I mainly use AWS APIs alongside <strong>Java, PHP and NodeJS</strong> for the purpose of building web services and server side coding.  Additionally, I developed tools for monitoring and launching EC2s, data backups, web deploys, database restructuring, and issuing daily automated e-mails using languages such as <strong>Python, Perl and Bash</strong>.",
+
   "meta": {
-    "legacySubtitle": "Ubuntu, EC2, AMI, Load Balancers, S3, CloudFront, SES, SDB, Route 53",
+    "historicalNotes": [
+      "Jamie began using AWS around 2011 and remained the primary AWS architectural decision maker throughout Essential Skills' heavy production use through 2026.",
+      "Another department had a backup administrator, but Jamie designed the AWS topology and controlled the primary infrastructure decisions.",
+      "Jamie created IAM roles and permissions for employees, administrators, and contractors.",
+      "AWS adoption was initially motivated in part by Java WebStart applications needing internet-accessible databases and by the operational advantages of cloud hosting for schools distributed across North America.",
+      "Jamie personally provisioned and administered Ubuntu EC2 infrastructure, Apache, NGINX, SSL, SSH, security groups, operating-system updates, AMIs, backups, and Glacier archival.",
+      "Jamie configured Elastic Beanstalk environments, deployments, scaling, environment settings, troubleshooting, and Content Security Policy headers.",
+      "Lambda became Jamie's preferred serverless platform and was used heavily with Python and Node.js.",
+      "Serverless projects included OpenAI, ElevenLabs, Polly, Edlink, Version 7 database services, Spelling List Editor APIs, WebRTC endpoints, Magies processing, S3 operations, Marks recoding, account processing, and security/password systems.",
+      "Jamie built a custom SES platform for both bulk campaigns and transactional/system email.",
+      "The email system maintained roughly twenty templates and populated variables before sending.",
+      "Email transactions were logged to DynamoDB.",
+      "The email system used a custom authorization token associated with email identity and date to restrict usage.",
+      "SES was also used for internal system notifications.",
+      "Infusionsoft account creation could take approximately one to two minutes, so Jamie used SQS to queue incoming account work for later asynchronous processing.",
+      "API Gateway was used extensively for production endpoints including OpenAI, ElevenLabs, Edlink, Polly, email, Version 7 database services, WebRTC, and Spelling List Editor services.",
+      "S3 and CloudFront were used primarily for static media, HTTPS websites, deployment assets, backups, and content delivery.",
+      "Jamie also configured CloudFront in front of selected EC2 applications.",
+      "All significant database architecture flowed through Jamie, including schema design, access patterns, migrations, restructuring, and administration.",
+      "Production and evaluated data technologies included SimpleDB, DynamoDB, Aurora, MySQL, and Cassandra.",
+      "Jamie compared database technologies using real workload costs and found SimpleDB particularly economical for appropriate workloads.",
+      "Jamie configured CloudWatch alarms and production monitoring.",
+      "Before relying on managed AWS scaling, Jamie created a custom autoscaling system using load balancing, EC2 instances, monitoring, and scripts.",
+      "Independent scaling environments were needed for multiple ESS products including school applications, home-user applications, trials, free phonics programs, and the Spelling List Editor.",
+      "Jamie owned AWS cost management and held roughly biannual architecture, cost, and security meetings with AWS EdTech specialists.",
+      "Reserved instances and right-sizing were regularly used to manage production cost.",
+      "Jamie designed production access cautiously and sometimes created separate controlled AWS sandbox accounts for contractors rather than granting access to the main ESS account.",
+      "AWS security responsibilities included IAM, security groups, CSP headers, CloudTrail, GuardDuty, encryption/password work, and broader production security review.",
+      "The ESS deployment workflow was controlled and staged but should not be described as a fully automated CI/CD pipeline.",
+      "Development code was managed in Git on EC2.",
+      "Static JavaScript and related CloudFront assets were manually promoted through S3 because the CloudFront-hosted asset workflow was not directly Git-pull based.",
+      "A separate development EC2 and Git repository handled login/database-touching PHP endpoints.",
+      "Staging included Git updates, Elastic Beanstalk deployment, and QA before production promotion.",
+      "Production promotion included AWS CLI asset copying, domain/configuration updates, production Git pulls, Elastic Beanstalk deployment, and immediate production QA.",
+      "The original ESS endpoints were written in PHP 4 and continued functioning through PHP 5.",
+      "During a later PHP/runtime compatibility transition, Amazon's older SimpleDB SDK stopped working.",
+      "Because the legacy SimpleDB integration was no longer sufficiently supported, Jamie studied the vendor SDK implementation and modified/reworked it to restore compatibility with the newer PHP runtime.",
+      "Jamie remembers the breaking runtime transition as occurring around later PHP-generation changes, but the exact version should not be stated confidently.",
+      "The SimpleDB compatibility remediation took roughly one week and was completed before modern AI coding assistants were available.",
+      "Jamie was the recipient and responsible owner for AWS deprecation and compatibility notices affecting ESS infrastructure.",
+      "Azure and Google Cloud were evaluated for backup, migration, architecture, and cost comparisons but were not used as primary production platforms.",
+      "Jamie continues to use AWS for Square Particle and continues maintaining ESS infrastructure after the end of his primary employment."
+    ],
+
+    "confidence": {
+      "awsStartYear": "high",
+      "primaryInfrastructureOwnership": "high",
+      "productionScale": "high",
+      "customAutoscalingSystem": "high",
+      "sesTemplateCount": "medium",
+      "php4Origin": "high",
+      "simpleDbSdkRepair": "high",
+      "exactBreakingPhpVersion": "low"
+    },
+
     "provenance": {
       "legacyCategory": "Cloud",
       "legacyIndex": 0

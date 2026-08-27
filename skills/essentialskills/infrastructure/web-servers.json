@@ -1,32 +1,200 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/infrastructure/web-servers",
-  "title": "Web Servers",
-  "project": "Infrastructure",
+  "title": "Full-Stack Application Architecture & Modernization",
+  "project": "Essential Skills Web Platform",
+
   "platform": {
-    "label": "Application Type",
+    "label": "Application Scope",
     "values": [
-      "Cloud / Server Infrastructure"
+      "Production Full-Stack Web Applications"
     ]
   },
+
   "technologies": [
-    "LAMP (Linux",
-    "Apache",
-    "MySQL",
-    "PHP)",
-    "MEAN (MongoDB",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "jQuery",
+    "Canvas",
+    "Flash",
+    "ASP",
+    "ASP.NET",
+    "C#",
+    "PHP",
+    "Java",
+    "Tomcat",
+    "Node.js",
     "Express",
+    "AngularJS",
     "Angular",
-    "NodeJS)",
-    "IIS",
-    "Tomcat"
+    "React",
+    "Redux",
+    "RxJS",
+    "Django",
+    "Python",
+    "HTMX",
+    "Alpine.js",
+    "Tailwind CSS",
+    "Vite",
+    "GraphQL",
+    "REST",
+    "AWS Lambda",
+    "API Gateway"
   ],
+
   "date": {
-    "from": null,
+    "from": "2005",
     "to": null,
-    "display": false
+    "display": true
   },
-  "description": "I install, maintain and update many web servers for Essential Skills. I use Angular for adminstrative applications and Apache for large scale customer applications. ",
+
+  "roles": [
+    "Software Architect",
+    "Senior Full-Stack Developer",
+    "Technical Lead",
+    "Frontend Developer",
+    "Backend Developer",
+    "API / Integration Developer",
+    "UI/UX Designer",
+    "Cloud Application Developer",
+    "Migration / Modernization Lead"
+  ],
+
+  "description": "I have built and modernized production web applications since 2005, leading the evolution of Essential Skills from early ASP.NET and PHP systems through HTML5, MEAN, React, Angular, serverless APIs, Django, and later lightweight server-driven architectures. Much of that work involved repeatedly migrating an 80+ application education platform while supporting 40,000+ schools, 500,000+ students, and approximately 80,000 monthly active users.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Early Web Development",
+        "paragraphs": [
+          "My earliest professional web work included company websites and smaller internal applications built with HTML, JavaScript, Perl, and classic ASP. By 2005 I was building larger full-stack systems rather than isolated web pages."
+        ]
+      },
+      {
+        "title": "2005 ASP.NET Customer Order System",
+        "paragraphs": [
+          "One of my first substantial full-stack web applications was a customer order system built with ASP.NET, C#, IIS, and SQL Server. It was a large production project and marked a shift from smaller web tools toward end-to-end web application architecture."
+        ]
+      },
+      {
+        "title": "Java WebStart & PHP Services",
+        "paragraphs": [
+          "Around 2010, Java WebStart applications increasingly required internet-accessible services and data. I initially experimented with Java/Tomcat-based approaches, then adopted PHP for many production endpoints because it provided a simpler and more practical service layer for the existing Java application ecosystem."
+        ]
+      },
+      {
+        "title": "From Desktop Java to the Browser",
+        "paragraphs": [
+          "The largest modernization effort came when browser and platform changes made Java Applet/WebStart-style delivery increasingly impractical. I led the migration of the Essential Skills software suite into browser-based HTML5 applications.",
+          "Depending on how programs were grouped internally, some people described the suite as 60+ applications. I count more than 80 production applications because many had their own executable identity, icon, dashboard, portal, or major user-facing workflow."
+        ]
+      },
+      {
+        "title": "Flash False Start",
+        "paragraphs": [
+          "Before committing fully to HTML5, another developer and I rebuilt one application and dashboard in Flash over several weeks. It worked, but the direction of the web was already changing quickly enough that I abandoned Flash and moved the migration effort toward standards-based HTML5 instead."
+        ]
+      },
+      {
+        "title": "HTML5 / JavaScript / Canvas Migration",
+        "paragraphs": [
+          "From roughly 2014 through 2016, I rebuilt the education software suite using HTML5, JavaScript, Canvas, jQuery, PHP, and cloud-backed services. This included large numbers of interactive learning activities, dashboards, portals, menus, teacher-facing tools, and student-facing applications."
+        ],
+        "items": [
+          "HTML5 application architecture",
+          "JavaScript and jQuery",
+          "Canvas-based interactive activities",
+          "Responsive browser UI",
+          "PHP backend services",
+          "Cloud-hosted data",
+          "Teacher dashboards and portals",
+          "Large-scale application migration"
+        ]
+      },
+      {
+        "title": "First MEAN Production System",
+        "paragraphs": [
+          "The Customer App became my first major MEAN production application, using MongoDB, Express, AngularJS, and Node.js. It supported internal business workflows such as customer management, support, quotes, trials, and account administration."
+        ]
+      },
+      {
+        "title": "React Production Development",
+        "paragraphs": [
+          "I later moved into React for major production systems including the Teacher Dashboard and user-content creation tools. I spent roughly six to eight months in focused React development and continued maintaining the Teacher Dashboard long after its initial release."
+        ],
+        "items": [
+          "React",
+          "Redux",
+          "RxJS",
+          "Component-based UI architecture",
+          "Production dashboard maintenance",
+          "Content-authoring workflows"
+        ]
+      },
+      {
+        "title": "Angular & Serverless Content Authoring",
+        "paragraphs": [
+          "I later moved back to Angular for the Version 7 teacher-content generation and authoring work. This became another roughly six-to-eight-month period of concentrated framework development.",
+          "The early serverless version used Angular with GraphQL and cloud APIs. As the product evolved into the Spelling List Editor, I simplified the architecture and removed GraphQL where it no longer provided enough value."
+        ]
+      },
+      {
+        "title": "Django Internal Tooling",
+        "paragraphs": [
+          "I built a Django-based project and workload-management system as an internal development tool. It was my only substantial Django application, but I spent several months refining it into a useful production-quality internal system."
+        ]
+      },
+      {
+        "title": "Python Automation & Data Processing",
+        "paragraphs": [
+          "Python was used heavily for internal tooling, scheduled processes, data cleanup, and integration work rather than primarily for customer-facing websites.",
+          "Nightly jobs crawled and reorganized data for faster querying, synchronized rostering information, processed expiring trials and account cleanup, checked for emails that needed to be sent, and performed recurring maintenance across the platform."
+        ]
+      },
+      {
+        "title": "Backend Languages Across Generations",
+        "paragraphs": [
+          "The backend stack evolved with the application architecture rather than being tied to one language. Over the years I used PHP, Node.js, Python, Java, and C# in production systems, choosing the implementation that fit the application generation and operational constraints."
+        ]
+      },
+      {
+        "title": "API & Integration Development",
+        "paragraphs": [
+          "Full-stack work increasingly included API design and integration. I built REST-style JSON endpoints, earlier XML-RPC-style services, serverless APIs through Lambda and API Gateway, GraphQL-backed application services where appropriate, and integrations with external platforms.",
+          "Authentication and identity work eventually became large enough to deserve its own separate portfolio skill rather than being folded entirely into this card."
+        ]
+      },
+      {
+        "title": "Modern Server-Driven Architecture",
+        "paragraphs": [
+          "For later administrative systems such as the Customer SSO framework, I deliberately moved away from heavy single-page application architecture where it was not necessary. I used HTMX, Alpine.js, Tailwind CSS, Vite, and PHP to build a lighter server-driven interface while still preserving responsive, interactive behavior.",
+          "That architectural choice was intentional: after years of React and Angular production work, I had enough experience to choose when a large frontend framework added value and when a simpler model reduced complexity."
+        ]
+      },
+      {
+        "title": "Why the Stack Kept Changing",
+        "paragraphs": [
+          "The framework changes were driven by platform constraints and product requirements rather than by chasing new technology. Each migration solved a specific problem: desktop Java delivery became unsustainable, HTML5 became the browser standard, MEAN simplified modern web application development, React and Angular supported increasingly complex authoring interfaces, serverless APIs reduced infrastructure overhead, and later server-driven architectures reduced frontend complexity where a full SPA was unnecessary."
+        ]
+      },
+      {
+        "title": "Modernization as a Core Responsibility",
+        "paragraphs": [
+          "A large part of my full-stack career has been maintaining the business value of long-lived software while replacing the underlying technology around it. I repeatedly migrated applications without losing the accumulated product knowledge, workflows, content, and customer expectations that had grown around them.",
+          "That meant understanding both the old and new architecture deeply enough to decide what should be preserved, what should be rewritten, and what should be removed."
+        ]
+      },
+      {
+        "title": "Production Scale",
+        "paragraphs": [
+          "These systems were not isolated prototypes. The Essential Skills platform supported more than 40,000 schools, more than 500,000 students, and approximately 80,000 monthly active users across student applications, teacher tools, administrative systems, trial platforms, content-authoring tools, and supporting services."
+        ]
+      }
+    ]
+  },
+
   "media": {
     "items": [],
     "thumbnail": "images/skills/cloud/node.jpg",
@@ -35,8 +203,48 @@
       "src": "images/skills/cloud/node.jpg"
     }
   },
+
   "meta": {
-    "legacySubtitle": "LAMP (Linux, Apache, MySQL, PHP), MEAN (MongoDB, Express, Angular, NodeJS), IIS, Apache, Tomcat",
+    "historicalNotes": [
+      "Jamie's first substantial full-stack web project was approximately 2005, although simpler company websites and smaller Perl/HTML/JavaScript/classic ASP applications existed earlier.",
+      "The 2005 customer order application used ASP.NET, C#, IIS, and SQL Server.",
+      "This was Jamie's only major ASP.NET web application; his broader .NET experience also included desktop C# and VB.NET work outside the scope of this card.",
+      "Professional PHP use began around 2010 with Java WebStart-related endpoints and cloud-connected services.",
+      "Tomcat was used for internal tools, portions of websites, and early Java WebStart service experiments before PHP became the preferred production endpoint technology.",
+      "The Essential Skills application portfolio is sometimes described internally as 60+ programs because some applications were grouped together. Jamie counts more than 80 production applications when individually branded/executable applications, dashboards, portals, and separate user-facing systems are counted individually.",
+      "Before the large HTML5 migration, Jamie and another developer spent several weeks successfully porting one application/dashboard to Flash before abandoning that direction in favor of HTML5.",
+      "The major Java-to-browser migration covered the entire production application ecosystem rather than a small subset.",
+      "The early HTML5 generation relied heavily on JavaScript, jQuery, Canvas, PHP, and cloud-hosted data/services.",
+      "The Customer App was Jamie's first major MEAN application.",
+      "Major React work included the Teacher Dashboard and user-content creation systems.",
+      "Jamie spent approximately six to eight months in focused React development and continued maintaining the Teacher Dashboard long term.",
+      "Jamie later moved back to Angular for the Version 7 teacher-content / Spelling List Editor generation.",
+      "The Angular development period also involved roughly six to eight months of concentrated framework work.",
+      "GraphQL was primarily used in the serverless Version 7 teacher-content creator and was later removed as the system evolved into the Spelling List Editor.",
+      "GraphQL was not used in the later HTMX/Alpine/Tailwind/Vite Customer SSO/admin framework.",
+      "The Django project-management/workload application was Jamie's only substantial Django system and took several months to refine.",
+      "Python was used extensively for internal tools, scheduled crawlers, rostering synchronization, data cleanup/reorganization, trial expiration processing, email checks, and recurring maintenance.",
+      "PHP, Node.js, Python, Java, and C# were all used in production backend development across different generations.",
+      "Authentication/SSO work is intentionally kept separate because it is large enough to justify its own portfolio skill.",
+      "Deep database architecture is intentionally kept separate because dedicated database skills exist elsewhere in the portfolio.",
+      "Jamie was the architect/lead developer across many full-stack teams and migrations, but no single team count accurately represents this umbrella skill.",
+      "The framework transitions should be explained as architectural decisions driven by platform and product needs rather than as experimentation with technology trends.",
+      "Jamie intentionally moved away from React for new work after significant production experience, while continuing to maintain existing React systems.",
+      "Later server-driven work using HTMX, Alpine.js, Tailwind CSS, Vite, and PHP was a deliberate attempt to reduce frontend complexity where a heavy SPA framework was unnecessary.",
+      "Jamie's strongest recurring full-stack pattern is modernization: repeatedly rebuilding long-lived products across new technology generations while preserving their business logic, workflows, and accumulated product knowledge.",
+      "The public date range begins in 2005 because that is the first confidently remembered large full-stack web application milestone, while earlier smaller web work remains historical context."
+    ],
+
+    "confidence": {
+      "largeFullStackStartYear": "high",
+      "pre2005WebWork": "medium",
+      "phpStartAround2010": "high",
+      "applicationCountOver80": "high",
+      "flashMigrationExperiment": "high",
+      "reactFocusedDevelopmentDuration": "medium",
+      "angularFocusedDevelopmentDuration": "medium"
+    },
+
     "provenance": {
       "legacyCategory": "Cloud",
       "legacyIndex": 2
