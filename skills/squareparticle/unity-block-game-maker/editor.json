@@ -1,24 +1,252 @@
 {
   "schemaVersion": 2,
   "id": "squareparticle/unity-block-game-maker/editor",
-  "title": "Unity Asset",
+  "title": "Unity Block Game Maker",
   "project": "Unity Block Game Maker",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Developer Tool"
+      "Unity Editor Extension",
+      "Game Authoring Tool"
     ]
   },
+
   "technologies": [
-    "Unity Editor"
+    "Unity",
+    "C#",
+    "Unity Editor API",
+    "Custom Inspectors",
+    "Prefabs",
+    "PNG Masks"
   ],
+
   "date": {
-    "from": null,
-    "to": null,
-    "display": false
+    "from": "2015",
+    "to": "2015",
+    "display": true
   },
-  "description": "To learn Unity 4.0 I teamed up with a Unity asset creator from Bulgaria and developed a tiled game maker for artists and designers.  The game maker is operated through the Unity editor by painting levels using ground, obstacles and NPC tiles.  All tileable prefabs including skin animated characters are first run through an automated normalization process.  Flags are checked to apply AI attributes such as walking, searching, colliding and shooting.  Additional custom AI can be added to the existing AI pool if required.  Furthermore, the game designer can choose from array of camera types such as first person, third person, orbital and birds eye view.      ",
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Tool Developer & Technical Lead",
+    "total": 2,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "3D Artist",
+          "Asset Creator"
+        ],
+        "relationship": "partner",
+        "contribution": "Provided the sample-game artwork and assets used to demonstrate the game-maker workflow."
+      }
+    ]
+  },
+
+  "roles": [
+    "Unity Tools Developer",
+    "Editor Extension Developer",
+    "Gameplay Systems Developer",
+    "Technical Designer",
+    "Tool Architect"
+  ],
+
+  "description": "I built a visual game-authoring extension inside Unity that let artists and designers normalize arbitrary 3D assets, add them to reusable palettes, paint playable levels onto layered grids, choose a camera style, and press Play. The editor stored level layouts as compact PNG masks, while a matching runtime builder reconstructed the 3D world from prefabs, normalized their physical fit, generated supporting level geometry, and exposed extension hooks for game-specific behavior.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "From Unity Learning Project to Finished Tool",
+        "paragraphs": [
+          "I originally started this project while learning Unity, working with a Unity asset creator from Bulgaria who supplied the sample-game artwork.",
+          "The project grew into a completed reusable game-authoring tool rather than remaining a small learning prototype. We ultimately shelved it before release when my partner decided near the end that the workflow would be too complicated for customers."
+        ]
+      },
+      {
+        "title": "Paint Levels Like an Image Editor",
+        "paragraphs": [
+          "The central workflow was intentionally simple: select an asset from a palette and paint it directly onto the level grid.",
+          "The editor was integrated into Unity and presented ground, obstacle, and NPC palettes alongside the paintable map. This made level construction closer to using a simple paint program than manually positioning every prefab in a 3D scene."
+        ]
+      },
+      {
+        "title": "Layered Level Authoring",
+        "paragraphs": [
+          "Levels were divided into specialized layers so different kinds of game content could be edited independently while still being viewed together."
+        ],
+        "items": [
+          "Ground layer",
+          "Block / obstacle layer",
+          "NPC layer",
+          "Layer overlay and fading controls",
+          "Independent prefab palettes for each layer"
+        ]
+      },
+      {
+        "title": "PNG Mask Level Format",
+        "paragraphs": [
+          "The editor stored each painted layer as a compact PNG mask rather than requiring hundreds of individually authored scene objects or a proprietary binary level format.",
+          "Each mask encoded which prefab from that layer's palette belonged in each grid cell. Separate masks represented ground, blocks, and NPCs."
+        ],
+        "items": [
+          "Ground mask",
+          "Block mask",
+          "NPC mask",
+          "Palette-index based tile IDs",
+          "Reloadable and editable level data"
+        ]
+      },
+      {
+        "title": "Editor & Runtime as a Data Pipeline",
+        "paragraphs": [
+          "The editor and runtime were two halves of the same data-driven system. The editor painted prefab IDs into PNG masks, and the runtime TileBuilder read those masks and reconstructed the playable 3D level.",
+          "This kept authoring data compact and decoupled the visual editor from the final instantiated Unity hierarchy."
+        ]
+      },
+      {
+        "title": "Generated Playable Levels",
+        "paragraphs": [
+          "At runtime, TileBuilder iterated through the ground, block, and NPC masks, looked up the corresponding prefab index, instantiated the correct Unity object, normalized and positioned it, and organized the generated objects into level hierarchies.",
+          "The builder also generated supporting gameplay geometry such as invisible border blocks so the player and movable objects remained inside the playable map."
+        ]
+      },
+      {
+        "title": "Automated Asset Normalization",
+        "paragraphs": [
+          "A major part of the workflow was allowing assets from different sources to work together without manually resizing and rebuilding every prefab.",
+          "The normalization system standardized objects to the expected game-cell dimensions so unrelated environment assets, characters, and obstacles fit together consistently."
+        ],
+        "items": [
+          "Scale normalization",
+          "Collider scaling",
+          "Orientation correction",
+          "Pivot normalization",
+          "Consistent fit within the playable grid"
+        ]
+      },
+      {
+        "title": "Runtime Bounds-Based Fitting",
+        "paragraphs": [
+          "The runtime builder also measured instantiated prefab bounds and could scale objects relative to the configured cell size.",
+          "Per-prefab configuration controlled whether an object should scale, whether height should be preserved, whether proportions should remain locked, and how the object should align vertically inside the game space."
+        ]
+      },
+      {
+        "title": "Why Normalization Mattered",
+        "paragraphs": [
+          "Third-party Unity assets frequently arrive at very different scales, pivots, orientations, and collider sizes. Without normalization, one character might be tiny while another could be larger than an entire room.",
+          "The normalization pipeline made the painting workflow predictable: once processed, assets fit the same physical rules and could be combined without repeatedly fixing individual models."
+        ]
+      },
+      {
+        "title": "Prefab Behaviors",
+        "paragraphs": [
+          "Gameplay behavior was attached to the prefabs being painted rather than encoded directly into the level masks.",
+          "Characters, enemies, movable blocks, cameras, and other objects could therefore carry normal Unity components and reuse those behaviors everywhere the prefab appeared."
+        ],
+        "items": [
+          "Enemy behavior",
+          "Player behavior",
+          "Follow behavior",
+          "Sliding / movable blocks",
+          "Collision behavior",
+          "Shooting and other prefab-level gameplay scripts"
+        ]
+      },
+      {
+        "title": "Game-Specific Extension Hooks",
+        "paragraphs": [
+          "The generic TileBuilder exposed game-specific callbacks through an ILevel interface. As ground, blocks, and NPCs were instantiated, the current game could inspect those generated objects and connect them to its own gameplay systems.",
+          "This kept the level builder reusable while allowing individual games to add custom rules without modifying the core authoring pipeline."
+        ],
+        "items": [
+          "processGroundGrid(...)",
+          "processBlockGrid(...)",
+          "processNPCGrid(...)"
+        ]
+      },
+      {
+        "title": "Example Game Integration",
+        "paragraphs": [
+          "The included demo game used these extension points to configure objects such as sliding blocks and register generated enemies with the game controller.",
+          "This demonstrated that the tool was intended to create reusable playable foundations while still allowing developers to layer game-specific logic on top."
+        ]
+      },
+      {
+        "title": "Camera Options",
+        "paragraphs": [
+          "The runtime supported multiple camera strategies so designers could reuse the same authored level structure with different styles of presentation."
+        ],
+        "items": [
+          "Main camera",
+          "Level-authored camera",
+          "Follow camera",
+          "First-person camera",
+          "Orbit camera",
+          "Bird's-eye style views through configured level/follow cameras"
+        ]
+      },
+      {
+        "title": "Playable Demo Framework",
+        "paragraphs": [
+          "The sample project was more than a static level viewer. It included a functional game loop and progression systems demonstrating how the generated levels could be used in a complete game."
+        ],
+        "items": [
+          "Multiple levels",
+          "Lives",
+          "Score",
+          "High scores",
+          "Star thresholds",
+          "Time bonuses",
+          "Level locking and unlocking",
+          "Win and lose states",
+          "Level-select screen",
+          "Score screen",
+          "HUD",
+          "Enemies",
+          "Sliding puzzle / combat blocks"
+        ]
+      },
+      {
+        "title": "Authoring State vs Runtime State",
+        "paragraphs": [
+          "TileBuilder was intentionally treated as temporary level-construction infrastructure rather than a place to keep long-lived game state.",
+          "Persistent per-level/session information was copied into separate runtime structures such as LevelStats, keeping level-generation data separate from the player's changing game state."
+        ]
+      },
+      {
+        "title": "Reusable Unity Editor Tooling",
+        "paragraphs": [
+          "The level painter was built as custom Unity Editor tooling rather than as a separate desktop application. The surviving editor code uses custom inspector/editor integration, prefab palettes, mouse-driven grid painting, AssetDatabase operations, and generated level assets.",
+          "This kept the workflow inside a normal Unity project while providing a much more specialized authoring experience for grid-based game construction."
+        ]
+      },
+      {
+        "title": "Simple Intended Workflow",
+        "paragraphs": [
+          "The intended workflow was essentially: import or create assets, normalize them, add them to a palette, paint the level, choose the camera and game configuration, and press Play.",
+          "The included sample games demonstrated that the painted maps became functioning 3D gameplay environments rather than only visual mockups."
+        ]
+      },
+      {
+        "title": "Completed but Shelved",
+        "paragraphs": [
+          "The tool and demonstration content were finished, but the planned release was shelved when my partner became concerned that customers would find the workflow too complicated.",
+          "For me, the project had already succeeded as an intensive Unity-learning and reusable-tool-development project, although I was disappointed that the usability concern was raised so late."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/tools/blockmaker.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/tools/blockmaker.jpg"
+    },
+
     "items": [
       {
         "type": "image",
@@ -36,16 +264,72 @@
         "type": "image",
         "src": "images/skills/tools/blockmaker_2.jpg"
       }
-    ],
-    "thumbnail": "images/skills/tools/blockmaker.jpg",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/tools/blockmaker.jpg"
-    }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "Unity Editor",
-    "legacyMobileText": "To learn Unity 4.0 I teamed up with a Unity asset creator from Bulgaria and developed a tiled game maker for artists and designers.   <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+    "historicalNotes": [
+      "The project dates to approximately 2015 and was created while Jamie was learning Unity.",
+      "Jamie partnered with a Unity asset creator from Bulgaria who supplied the sample-game art and assets.",
+      "Jamie developed the game-maker/editor architecture and tooling.",
+      "The tool was completed but never released because the partner became concerned near the end that the workflow was too complicated for customers.",
+      "The intended workflow was: normalize assets, add them to palettes, paint the level, configure the game/camera, and press Play.",
+      "The surviving editor source confirms a custom Unity inspector/grid painter with separate ground, block, and NPC layers.",
+      "Each layer used its own prefab palette.",
+      "The editor supported mouse-driven painting directly into grid cells.",
+      "Layers could be overlaid with visual fading while editing.",
+      "Level data was stored using separate PNG masks for ground, blocks, and NPCs.",
+      "Mask values represented indexes into the corresponding prefab palette.",
+      "The editor supported creation and reopening of maps, configurable dimensions, visualization rebuilding, and generated level assets.",
+      "The runtime TileBuilder code confirms that those PNG masks were read at runtime to reconstruct playable 3D levels.",
+      "TileBuilder iterated through mask pixels, looked up palette prefab indexes, instantiated objects, positioned them, and organized them into generated ground, block, NPC, and border hierarchies.",
+      "The runtime generated invisible border geometry around levels.",
+      "The runtime source confirms bounds-based scaling relative to configured cell dimensions.",
+      "Per-prefab TileDescription configuration controlled scaling, proportional scaling, height handling, and vertical alignment.",
+      "The final normalization workflow also standardized collider dimensions, orientation, and pivot.",
+      "Gameplay behavior lived primarily on reusable Unity prefabs/components rather than being encoded directly into the level masks.",
+      "Surviving runtime/sample code includes behavior classes such as EnemyBehaviour, Player, FollowPlayer, and SlidableBlock.",
+      "The generic level builder exposed game-specific hooks through an ILevel interface, including processGroundGrid, processBlockGrid, and processNPCGrid.",
+      "The sample game used those callbacks to connect generated level objects to game-specific systems.",
+      "The original portfolio description identified walking, searching, colliding, and shooting as reusable behaviors.",
+      "The earlier idea of a distinct extensible 'AI pool' should not be emphasized publicly because the surviving code more clearly supports prefab behaviors plus ILevel extension hooks.",
+      "The runtime camera enum includes main camera, level camera, follow camera, first-person camera, and orbit camera.",
+      "The historical portfolio also described bird's-eye camera support; this may have been represented through configured level/follow camera modes rather than a separately named enum in the recovered snapshot.",
+      "The included demonstration code contains multiple levels, lives, score/high-score handling, stars, time bonuses, level locking/unlocking, HUDs, score screens, win/lose flow, enemies, and movable/sliding blocks.",
+      "TileBuilder was intentionally temporary and not intended to hold dynamic game state.",
+      "Persistent session/level information was separated into structures such as LevelStats.",
+      "A SetPivot utility found in the older editor source was third-party code by Yilmaz Kiymaz / VoxelBoy and must not be presented as Jamie-authored functionality."
+    ],
+
+    "confidence": {
+      "date2015": "high",
+      "partnerProvidedSampleArt": "high",
+      "jamieBuiltEditorArchitecture": "high",
+      "completedButUnreleased": "high",
+      "pngMaskLevelFormat": "high",
+      "runtimeMaskReconstruction": "high",
+      "layeredGridPainter": "high",
+      "normalizationScaleAndBounds": "high",
+      "normalizationColliderOrientationPivot": "high",
+      "prefabBehaviorArchitecture": "high",
+      "iLevelExtensionHooks": "high",
+      "cameraModesFromRuntimeCode": "high",
+      "birdseyeHistoricalSupport": "medium",
+      "distinctAiPoolArchitecture": "low"
+    },
+
+    "projectTerminology": [
+      "Unity Block Game Maker",
+      "TileBuilder",
+      "TileDescription",
+      "ILevel",
+      "LevelStats",
+      "Ground Mask",
+      "Block Mask",
+      "NPC Mask",
+      "Asset Normalization"
+    ],
+
     "provenance": {
       "legacyCategory": "Tools",
       "legacyIndex": 3

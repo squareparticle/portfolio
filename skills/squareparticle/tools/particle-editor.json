@@ -1,33 +1,124 @@
 {
   "schemaVersion": 2,
   "id": "squareparticle/tools/particle-editor",
-  "title": "Particle Editor",
-  "project": "Tools",
+  "title": "Java Particle System Editor",
+  "project": "Essential Skills Developer Training",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Developer Tool"
+      "Developer Training Tool",
+      "Animation Tool"
     ]
   },
+
   "technologies": [
-    "Java"
+    "Java",
+    "Swing",
+    "AWT",
+    "Object-Oriented Design"
   ],
+
   "date": {
-    "from": null,
-    "to": null,
-    "display": false
+    "from": "2000",
+    "to": "2010",
+    "display": true
   },
-  "description": "In order to get a stronger handle on OOP using Swing, I decided to create a GUI based particle editor.  Later on, I used projects like this one to teach junior programmers Object Oriented Design.",
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Solo Developer & Instructor",
+    "total": 1
+  },
+
+  "roles": [
+    "Software Developer",
+    "Technical Instructor",
+    "UI/UX Developer",
+    "Object-Oriented Design Mentor"
+  ],
+
+  "description": "I built a Java/Swing particle-system editor as part of the internal Essential Skills training course I used with junior developers. The project taught object-oriented design, Swing/AWT GUI development, and how to build reusable visual effects that could be adapted into creative animations and rewards for children's educational software.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Built as a Teaching Tool",
+        "paragraphs": [
+          "I created the particle editor as part of the internal programming course I used to train junior developers at Essential Skills.",
+          "The goal was not just to teach Java syntax. The project gave developers a concrete visual system where they could practice object-oriented design while immediately seeing the results of their code."
+        ]
+      },
+      {
+        "title": "Object-Oriented Design",
+        "paragraphs": [
+          "The particle system was structured around reusable objects and configurable behaviors, making it a practical way to teach encapsulation, composition, state, and interaction between classes."
+        ]
+      },
+      {
+        "title": "Swing & AWT GUI Development",
+        "paragraphs": [
+          "The project also taught developers how to construct real desktop tooling with Java Swing and AWT rather than limiting training exercises to console applications.",
+          "The editor used GUI controls to change particle-system properties while displaying the resulting effect visually."
+        ]
+      },
+      {
+        "title": "Live Visual Experimentation",
+        "paragraphs": [
+          "The editor provided a visual environment for experimenting with particle effects and animation parameters. Developers could change settings and immediately see how those values affected the resulting motion and appearance."
+        ]
+      },
+      {
+        "title": "Educational Software Connection",
+        "paragraphs": [
+          "The larger teaching goal was to show junior programmers how the same programming techniques could be used to create engaging visual feedback for children's software.",
+          "Particle effects and related animation techniques were useful for activity rewards and other lightweight visual effects in the Essential Skills product suite."
+        ]
+      },
+      {
+        "title": "Used in Junior Developer Training",
+        "paragraphs": [
+          "This was not merely an example I prepared and discarded. I used this exact project as part of the training material for junior developers over many years."
+        ]
+      }
+    ]
+  },
+
   "media": {
-    "items": [],
     "thumbnail": "images/skills/tools/particle.jpg",
+
     "primary": {
       "type": "image",
       "src": "images/skills/tools/particle.jpg"
-    }
+    },
+
+    "items": []
   },
+
   "meta": {
-    "legacySubtitle": "Java 1.1.8",
+    "historicalNotes": [
+      "The particle editor was used approximately from 2000 through 2010 as part of Jamie's internal Essential Skills junior-developer training course.",
+      "It was a solo-developed Java/Swing/AWT project.",
+      "Its main purpose was teaching object-oriented programming, Swing/AWT development, and the creation of visual animations for children's educational software.",
+      "Jamie used this exact project with junior developers rather than only teaching similar concepts abstractly.",
+      "Particle-style effects and related techniques were also useful for visual rewards and animations inside Essential Skills activities.",
+      "The original portfolio card describes the project as a GUI-based particle editor created to strengthen OOP using Swing and later used to teach junior programmers Object Oriented Design."
+    ],
+
+    "confidence": {
+      "date2000To2010": "high",
+      "teachingPurpose": "high",
+      "soloDevelopment": "high",
+      "usedWithJuniorDevelopers": "high",
+      "swingAwtOopFocus": "high"
+    },
+
+    "projectTerminology": [
+      "Particle Editor",
+      "Java Particle System Editor",
+      "Junior Developer Training"
+    ],
+
     "provenance": {
       "legacyCategory": "Tools",
       "legacyIndex": 5

@@ -1,11 +1,291 @@
 {
-  "schemaVersion":2,
-  "id":"squareparticle/bridge-captain/live-mission-editor",
-  "title":"New Mission Editor",
-  "project":"Bridge Captain",
-  "platform":{"label":"Application Type","values":["In-Game Editor"]},
-  "technologies":["Unity"],
-  "date":{"from":null,"to":null,"display":false},
-  "description":"The Unity remake of Bridge Captain required me to rebuild the mission editor. This time I built the editor right into the game itself. First I created a custom asset-management database combined with a command and event system. This editor allows the game designer to script not only missions and dialogue, but also all other assets in the game as well. Missions can be built and scrubbed through during gameplay and testing. The editor also includes a mission console for debugging.",
-  "media":{"thumbnail":"images/skills/tools/bceditor.gif","primary":{"type":"image","src":"images/skills/tools/bceditor.gif"},"items":[]}
+  "schemaVersion": 2,
+  "id": "squareparticle/bridge-captain/live-mission-editor",
+  "title": "Bridge Captain Live Mission, Resource & Command Editor",
+  "project": "Bridge Captain",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "In-Game Runtime Editor"
+    ]
+  },
+
+  "technologies": [
+    "Unity",
+    "C#",
+    "JSON",
+    "Custom Command System",
+    "Custom Event System"
+  ],
+
+  "date": {
+    "from": "2015",
+    "to": null,
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Solo Tool Developer",
+    "total": 1
+  },
+
+  "roles": [
+    "Runtime Editor Architect",
+    "Tools Developer",
+    "Narrative Systems Developer",
+    "Game Systems Developer",
+    "Scripting Systems Developer",
+    "UI/UX Designer",
+    "Technical Designer"
+  ],
+
+  "description": "For the Unity generation of Bridge Captain, I replaced the external mission editor with a live runtime authoring system built directly into the game. It combined mission and dialogue editing with a JSON-backed resource registry, reusable resource groups, a generalized command/event system, runtime debugging, and mission scrubbing so I could edit, save, replay, and test game sequences without leaving the running application.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Why I Rebuilt the Editor",
+        "paragraphs": [
+          "The earlier Java mission editor had worked well for the original C.E.L.L. and LibGDX generations, but the Unity version of Bridge Captain had become much more interconnected. Missions were no longer just dialogue trees: they interacted with crew, bridge consoles, space objects, screens, animations, resource groups, and the surrounding game world.",
+          "Rather than keep authoring content in a separate application, I moved the tooling into the running game so the game itself became the visualization and testing environment."
+        ]
+      },
+      {
+        "title": "Live Runtime Authoring",
+        "paragraphs": [
+          "Commands and mission sequences could be edited while Bridge Captain was running, saved, and immediately replayed without restarting the application.",
+          "This shortened the loop between authoring and testing because I could make a change in the same environment where the resulting sequence actually executed."
+        ]
+      },
+      {
+        "title": "JSON-Backed Runtime Data",
+        "paragraphs": [
+          "The system used JSON-backed data files for game scripts, configuration, resources, resource groups, and command sequences. This created a custom data-driven layer on top of Unity rather than requiring every mission or interaction to be hard-coded into Unity scenes."
+        ],
+        "items": [
+          "Game script sequences",
+          "Resource definitions",
+          "Resource groups",
+          "Runtime configuration",
+          "Characters and command parameters",
+          "Ordered game events and commands"
+        ]
+      },
+      {
+        "title": "Resource Registry",
+        "paragraphs": [
+          "I built a custom runtime resource registry that described game content independently from individual Unity scenes. Resources could reference prefab or scene paths, hierarchy locations, parent resources, loading behavior, instantiation rules, and performance requirements.",
+          "Commands could then refer to these named resources rather than requiring every mission to know how each Unity object was constructed."
+        ]
+      },
+      {
+        "title": "Reusable Resource Groups",
+        "paragraphs": [
+          "Individual resources could be combined into named resource groups. These groups could represent larger collections of runtime content and could be inserted, removed, shown, queued, or restored as a unit.",
+          "The architecture was capable of swapping larger combinations such as room states, set pieces, bridge elements, characters, and related content, although I did not heavily use it for complete room replacement."
+        ]
+      },
+      {
+        "title": "Push / Pop Content States",
+        "paragraphs": [
+          "Enqueue and Dequeue operations provided a stack-like workflow for resource groups. A temporary collection of content could be introduced for a mission or scene and then removed to return to the previous content arrangement."
+        ]
+      },
+      {
+        "title": "Generalized Command System",
+        "paragraphs": [
+          "The editor was built on a reusable command and event architecture rather than a collection of mission-specific hard-coded functions. Sequences contained ordered events, and each event contained commands that manipulated runtime systems."
+        ],
+        "items": [
+          "Delay execution",
+          "Play animations",
+          "Show or hide resources",
+          "Insert or remove resources",
+          "Insert or remove resource groups",
+          "Enqueue or dequeue resource groups",
+          "Run other game events",
+          "Execute animation scripts"
+        ]
+      },
+      {
+        "title": "Bridge Captain Game Commands",
+        "paragraphs": [
+          "Bridge Captain extended the generic command framework with domain-specific commands for the bridge, crew, space encounters, communication systems, and mission flow."
+        ],
+        "items": [
+          "Toggle runtime objects",
+          "Show viewscreen, space, warp, and hologram displays",
+          "Fire weapons",
+          "Set alert states",
+          "Set onscreen targets",
+          "Show quick dialogue",
+          "Blink console controls",
+          "Run or add hail messages",
+          "Highlight radar objects",
+          "Add space objects to solar systems",
+          "Attach communication scripts to space objects",
+          "Attach scan scripts to space objects",
+          "Attach destruction scripts to space objects"
+        ]
+      },
+      {
+        "title": "Reactive Space Encounters",
+        "paragraphs": [
+          "Space objects could have different scripts attached for communication, scanning, and destruction. This allowed an encounter to react differently depending on what the player actually did.",
+          "For example, hailing an object could launch one sequence, scanning it another, and destroying it a third."
+        ]
+      },
+      {
+        "title": "Dynamic World Authoring",
+        "paragraphs": [
+          "Commands could add space objects directly into solar systems from the scripted runtime layer. This allowed mission logic to introduce new ships, encounters, or other space content without requiring those objects to be permanently authored into a Unity scene."
+        ]
+      },
+      {
+        "title": "Crew & Console Interaction",
+        "paragraphs": [
+          "The system included Bridge Captain-specific character and console concepts such as Science, Communications, Weapons, Navigation, Engineering, and First Officer.",
+          "These represented both bridge stations and crew members the player could interact with. The First Officer provided a more narrative interface where the captain could give orders using Star Trek-style language and scenarios instead of issuing everything through a conventional technical console."
+        ]
+      },
+      {
+        "title": "Mission & Sequence Scrubbing",
+        "paragraphs": [
+          "Mission execution tracked the active event and command position, allowing sequences to be restarted or resumed from earlier points. This gave me a practical scrubbing workflow for moving backward through mission content, changing it, and replaying from that section.",
+          "I treat this as mission and sequence replay rather than claiming complete deterministic world-state restoration. Older versions may not have captured every piece of runtime state perfectly, even though in practice I do not remember the system noticeably drifting or breaking during normal use."
+        ]
+      },
+      {
+        "title": "Command-Level Playback Control",
+        "paragraphs": [
+          "The runtime could play an entire event, begin at a selected command within an event, restart the current event, restart a sequence, stop execution, and resume execution.",
+          "That command-pointer model was the foundation of the live editing and scrubbing workflow."
+        ]
+      },
+      {
+        "title": "Command Watch & Debugging",
+        "paragraphs": [
+          "A live command watcher displayed commands being executed by the runtime. The editor also included a mission/command console and related debugging windows so I could inspect execution while sequences were running."
+        ]
+      },
+      {
+        "title": "Cutscene Authoring",
+        "paragraphs": [
+          "The same command system could be used to construct cutscenes by coordinating resources, characters, animation, timing, screens, and other game events.",
+          "As Bridge Captain moved more deeply into VR, I reduced my emphasis on traditional cutscenes because taking control away from the player felt less natural in an immersive environment."
+        ]
+      },
+      {
+        "title": "Live Resource Management",
+        "paragraphs": [
+          "The tooling included dedicated runtime windows for managing individual resources and resource groups. This made the resource architecture directly inspectable and editable rather than hiding it entirely behind mission scripts."
+        ]
+      },
+      {
+        "title": "Performance-Aware Resources",
+        "paragraphs": [
+          "Resource definitions could include performance-level information, allowing the runtime to filter or select content based on configured hardware capability.",
+          "This originated while Bridge Captain was being optimized aggressively for Gear VR and remained part of the architecture as development expanded toward PC VR."
+        ]
+      },
+      {
+        "title": "Gear VR to PC VR",
+        "paragraphs": [
+          "The Unity generation was initially designed around the severe performance constraints of Gear VR. As the project expanded into PC VR, much of the earlier mobile-VR-aware resource and performance architecture remained in place."
+        ]
+      },
+      {
+        "title": "Automatic Script Backups",
+        "paragraphs": [
+          "Saving scripts created timestamped backups of the game-script data, giving the live authoring workflow an additional safety layer while content was being changed rapidly."
+        ]
+      },
+      {
+        "title": "Solo Development Phase",
+        "paragraphs": [
+          "Unlike the earlier Java mission-editor era, this version was developed during a largely solo engineering period. I no longer had active writers or animators using the system while I was building it, so I was simultaneously the tool developer, primary content author, tester, and animator when animation work was required."
+        ]
+      },
+      {
+        "title": "Beyond a Dialogue Editor",
+        "paragraphs": [
+          "Although this system evolved from the earlier Bridge Captain mission editor, its scope became substantially broader. Missions, dialogue, resources, runtime objects, crew interactions, space encounters, animations, screens, and world changes could all be orchestrated through the same data-driven command architecture.",
+          "The result was effectively a live content-authoring layer embedded inside Bridge Captain rather than a standalone dialogue tool."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/tools/bceditor.gif",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/tools/bceditor.gif"
+    },
+
+    "items": []
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "This tool replaced the earlier standalone Java/Swing Bridge Captain mission editor when the project moved into Unity.",
+      "The Unity editor was built directly into the running game.",
+      "The uploaded historical source shows a Live Command Console with separate resource, resource-group, command, command-watch, configuration, backup, character-selection, parameter-selection, and performance-related tooling.",
+      "Mission and command sequence data was persisted in JSON.",
+      "Multiple sequence files could be loaded and cached.",
+      "Sequence execution tracked the current event and command pointer.",
+      "The runtime could start an event from a selected command index, restart events, restart sequences, stop execution, and resume execution.",
+      "This command-position control supported the remembered mission scrubbing workflow.",
+      "Do not describe scrubbing as guaranteed full deterministic world-state restoration. The historical code proves command/event repositioning and replay but does not establish complete arbitrary state snapshotting.",
+      "Jamie does not remember meaningful drift or breakage during normal use, although older versions may not have perfectly restored every piece of runtime state.",
+      "Commands could be edited while the game was running, saved, and rerun immediately.",
+      "The system supported cutscene creation, although traditional cutscenes became less important as Bridge Captain moved into VR.",
+      "The resource system functioned as a custom JSON-backed runtime asset/resource registry rather than a conventional relational database.",
+      "Dynamic resources could contain prefab/path data, hierarchy placement, parent-resource references, custom loading behavior, instantiate/find behavior, and performance-level information.",
+      "Resources could be assembled into reusable resource groups.",
+      "Enqueue_ResourceGroup and Dequeue_ResourceGroup functioned as a push/pop-style content-state mechanism.",
+      "The architecture was capable of swapping larger combinations of bridge states, rooms, set pieces, and characters, although this was not a heavily used workflow.",
+      "The generalized command system supported delays, animations, resources, resource groups, other game events, and animation scripts.",
+      "Bridge Captain-specific commands controlled screens, weapons, alert state, holograms, crew interactions, radar highlighting, hails, space objects, and other game behavior.",
+      "Space objects could have separate communication, scan, and destruction scripts, allowing encounters to react to player interaction.",
+      "AddSpaceObjectToSystem could introduce objects dynamically into solar systems from scripted content.",
+      "Science, Communications, Weapons, Navigation, Engineering, and First Officer represented bridge-console and crew interaction concepts.",
+      "The First Officer provided a narrative-style way to issue captain orders using Star Trek-like terminology and situations.",
+      "Performance-aware resource handling originated in the Gear VR optimization period and remained as the project expanded toward PC VR.",
+      "Saving scripts produced timestamped backups.",
+      "The uploaded older code contains backup-management UI where some restore/remove functionality may have been incomplete in that snapshot.",
+      "This was primarily a solo development period. There were no active writers or animators using the editor while Jamie was building this generation.",
+      "Jamie acted as the animator when animation work was required during this phase.",
+      "This tool should be distinguished from both the earlier standalone Bridge Captain Mission & Dialogue Authoring Tool and the general C.E.L.L. Visual Game Editor."
+    ],
+
+    "confidence": {
+      "unityStartAround2015": "high",
+      "csharpImplementation": "high",
+      "jsonSequenceArchitecture": "high",
+      "liveEditingAndReplay": "high",
+      "resourceRegistryArchitecture": "high",
+      "resourceGroupStackBehavior": "high",
+      "reactiveSpaceObjectScripts": "high",
+      "gearVRPerformanceOrigin": "high",
+      "fullStateRewind": "low",
+      "exactEndDate": "low"
+    },
+
+    "projectTerminology": [
+      "Live Command Console",
+      "Live Resource Manager",
+      "Live Resource Group Manager",
+      "Live Command Manager",
+      "Command Watch",
+      "GameEvent",
+      "DynamicResource",
+      "ResourceGroup",
+      "Mission Scrubbing",
+      "Runtime Authoring"
+    ]
+  }
 }

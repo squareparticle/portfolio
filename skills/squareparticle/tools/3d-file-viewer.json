@@ -1,36 +1,170 @@
 {
   "schemaVersion": 2,
   "id": "squareparticle/tools/3d-file-viewer",
-  "title": "3D file Viewer",
-  "project": "Tools",
+  "title": "Software 3D Renderer & Model Viewer",
+  "project": "Essential Skills Developer Training",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Developer Tool"
+      "3D Graphics Tool",
+      "Developer Training Tool"
     ]
   },
+
   "technologies": [
     "C++",
+    "Java",
     "Java2D",
-    "C#"
+    "C#",
+    "Software Rasterization",
+    "3D Mathematics"
   ],
+
   "date": {
-    "from": null,
-    "to": null,
-    "display": false
+    "from": "1998",
+    "to": "2010",
+    "display": true
   },
-  "description": "Since college I have been fascinated with how the 3D pipeline operates. Before I started working in DirectX 5.0, I attempted to tackle 3D myself using Turbo C++. I got as far as matrices, FOV, culling, z-buffering, lighting and rasterization. I then translated the code to Java as well as C# and constructed a DirectX, OBJ and 3DS file viewer.  Later I used this technique to display 3D objects in an environment where I don't have native access to the 3D accelerator such a Java2D applet.",
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Solo Developer & Instructor",
+    "total": 1
+  },
+
+  "roles": [
+    "Graphics Programmer",
+    "Software Developer",
+    "Technical Instructor",
+    "3D Systems Developer"
+  ],
+
+  "description": "Before relying on hardware-accelerated 3D APIs, I built my own software 3D rendering pipeline from the math up. Starting in Turbo C++ in the late 1990s and later rewriting it in Java and C#, I implemented transforms, field of view, backface culling, Z-buffering, lighting, flat shading, wireframe rendering, and rasterization, then wrote parsers for Microsoft .X, OBJ, and 3DS models. The Java version was later used for lightweight 3D animations in Essential Skills software and as the advanced project in my junior-developer training course.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Learning the 3D Pipeline from First Principles",
+        "paragraphs": [
+          "I became interested in how the 3D graphics pipeline worked while still in college and initially attacked the problem without relying on a 3D engine.",
+          "The first version was written in Turbo C++ in the late 1990s, before I moved into DirectX development."
+        ]
+      },
+      {
+        "title": "Custom Software Renderer",
+        "paragraphs": [
+          "The renderer was my own software pipeline rather than a wrapper around OpenGL, Java3D, or another existing renderer."
+        ],
+        "items": [
+          "Matrix transformations",
+          "Field-of-view projection",
+          "Camera translation and rotation",
+          "Backface culling",
+          "Z-buffering",
+          "Lighting",
+          "Flat shading",
+          "Wireframe rendering",
+          "Triangle rasterization"
+        ]
+      },
+      {
+        "title": "No Hardware 3D Required",
+        "paragraphs": [
+          "Because the rendering pipeline ran in software, I could display simple 3D content in environments where I did not have direct access to a native 3D accelerator.",
+          "This later made the Java version useful inside Java2D-based educational applications and applet-era environments."
+        ]
+      },
+      {
+        "title": "Custom Model Parsers",
+        "paragraphs": [
+          "I wrote the model-file parsers myself rather than depending entirely on third-party import libraries."
+        ],
+        "items": [
+          "Microsoft .X",
+          "Wavefront OBJ",
+          "3D Studio 3DS"
+        ]
+      },
+      {
+        "title": "Rewritten Across Languages",
+        "paragraphs": [
+          "After the original Turbo C++ version, I rebuilt the renderer in Java in the early 2000s and later implemented the same approach again in C#.",
+          "Rewriting the system across languages reinforced the underlying graphics concepts because the renderer was based on my own math and pipeline rather than a particular framework."
+        ]
+      },
+      {
+        "title": "3D Model Viewer",
+        "paragraphs": [
+          "The rendering code became a reusable model viewer where imported meshes could be inspected and manipulated using the software renderer.",
+          "The viewer supported transform and rendering controls such as camera position, rotation, field of view, lighting, wireframe, and flat-shaded rendering."
+        ]
+      },
+      {
+        "title": "Used in Essential Skills Software",
+        "paragraphs": [
+          "The Java rendering techniques were later used for simple 3D animations and visual rewards inside Essential Skills educational programs where a native hardware-accelerated 3D engine was not appropriate or available."
+        ]
+      },
+      {
+        "title": "Advanced Junior Developer Course",
+        "paragraphs": [
+          "I also used the 3D renderer/model-viewer project as the final advanced project in the internal Essential Skills junior-developer course.",
+          "It brought together object-oriented design, mathematics, file parsing, graphics programming, and GUI development in a single system and served as a capstone-style exercise for developers ready to tackle the deeper mechanics of rendering."
+        ]
+      }
+    ]
+  },
+
   "media": {
-    "items": [],
     "thumbnail": "images/skills/tools/3dviewer.jpg",
+
     "primary": {
       "type": "image",
       "src": "images/skills/tools/3dviewer.jpg"
-    }
+    },
+
+    "items": []
   },
+
   "meta": {
-    "legacySubtitle": "C++, Java2D, C#",
-    "legacyMobileText": "Since college I have been fascinated with how the 3D pipeline operates. Before I started working in DirectX 5.0, I attempted to tackle 3D myself using Turbo C++. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+    "historicalNotes": [
+      "The first software-renderer version dates to the late 1990s and was written in Turbo C++.",
+      "Jamie later rewrote the renderer in Java in the early 2000s and again in C#.",
+      "The exact first year is not source-anchored; 1998 is used as an approximate portfolio start date.",
+      "The rendering pipeline was Jamie's own software rasterizer rather than Java3D/OpenGL or another existing renderer.",
+      "Implemented capabilities included matrix transforms, field-of-view projection, camera transforms, backface culling, Z-buffering, lighting, flat shading, wireframe rendering, and rasterization.",
+      "Texture mapping was not implemented in this renderer.",
+      "Jamie wrote parsers for Microsoft .X, Wavefront OBJ, and 3D Studio 3DS formats.",
+      "The Java version was used for primitive 3D animations/rewards in Essential Skills programs.",
+      "Software rendering was useful in Java2D/applet-era environments where native 3D accelerator access was unavailable or undesirable.",
+      "The project was solo-developed.",
+      "This became the final/advanced project in Jamie's internal junior-developer training course.",
+      "Many junior developers found the advanced 3D project intimidating; public framing should describe it as an advanced or capstone-style project rather than emphasizing that some developers chose not to attempt it.",
+      "The original portfolio title '3D file Viewer' understates the work because the model viewer sat on top of Jamie's custom software 3D pipeline."
+    ],
+
+    "confidence": {
+      "late1990sTurboCppStart": "high",
+      "approximateStart1998": "medium",
+      "early2000sJavaRewrite": "high",
+      "csharpRewrite": "high",
+      "customSoftwareRasterizer": "high",
+      "customXObj3dsParsers": "high",
+      "noTextureMapping": "high",
+      "usedInEssentialSkillsPrograms": "high",
+      "advancedTrainingProject": "high"
+    },
+
+    "projectTerminology": [
+      "Software 3D Renderer",
+      "3D Model Viewer",
+      "Microsoft .X",
+      "OBJ",
+      "3DS",
+      "Software Rasterization"
+    ],
+
     "provenance": {
       "legacyCategory": "Tools",
       "legacyIndex": 6

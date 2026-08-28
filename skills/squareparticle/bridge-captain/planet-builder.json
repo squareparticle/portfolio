@@ -1,1 +1,210 @@
-{"schemaVersion":2,"id":"squareparticle/bridge-captain/planet-builder","title":"Planet Builder","project":"Bridge Captain","platform":{"label":"Application Type","values":["Desktop Editor"]},"technologies":["BlackBerry SDK","Android SDK","Java","XNA","Unity"],"date":{"from":null,"to":null,"display":false},"description":"I implemented fractal and Perlin noise algorithms to create both tileable and infinite terrain. From there, I created an editor that would procedurally generate planet surfaces. Later I used 3D Perlin noise to create clusters in my Voxel engine.","media":{"thumbnail":"images/skills/tools/noise.gif","primary":{"type":"image","src":"images/skills/tools/noise.gif"},"items":[{"type":"image","src":"images/skills/tools/planet_1.jpg"},{"type":"image","src":"images/skills/tools/planet_2.jpg"},{"type":"image","src":"images/skills/tools/planet_3.jpg"},{"type":"image","src":"images/skills/tools/planet_4.jpg"},{"type":"image","src":"images/skills/tools/planet_5.jpg"},{"type":"image","src":"images/skills/tools/planet_6.jpg"},{"type":"image","src":"images/skills/tools/planet_7.jpg"},{"type":"image","src":"images/skills/tools/planet_8.jpg"}]}}
+{
+  "schemaVersion": 2,
+  "id": "squareparticle/bridge-captain/planet-builder",
+  "title": "Procedural Planet & Terrain Builder",
+  "project": "Bridge Captain",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Procedural Content Tool",
+      "Terrain Generator"
+    ]
+  },
+
+  "technologies": [
+    "Java",
+    "LibGDX",
+    "Unity",
+    "Perlin Noise",
+    "Fractal Noise",
+    "Heightmaps"
+  ],
+
+  "date": {
+    "from": "2014",
+    "to": "2014",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Solo Developer",
+    "total": 1
+  },
+
+  "roles": [
+    "Procedural Generation Developer",
+    "Tools Developer",
+    "Game Systems Developer"
+  ],
+
+  "description": "I built a procedural planet and terrain generator as a weekend project for the LibGDX generation of Bridge Captain. Using fractal and Perlin-noise techniques, the tool generated configurable color terrain maps and grayscale heightmaps, supported seamless tiled output, created lakes and plateaus through adjustable terrain shaping, and produced assets that I continued using later in the Unity/VR versions of the game.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Built for Bridge Captain",
+        "paragraphs": [
+          "I originally built the tool to generate planetary surfaces for the LibGDX generation of Bridge Captain.",
+          "Although it started as a small weekend project, the generated planet assets remained useful enough that I continued using the same approach later when Bridge Captain moved into Unity and VR."
+        ]
+      },
+      {
+        "title": "Procedural Terrain Generation",
+        "paragraphs": [
+          "The generator used fractal and Perlin-noise techniques to create synthetic terrain rather than relying entirely on hand-authored planet textures.",
+          "The same core algorithm could produce very different worlds by changing terrain-shaping parameters and the color palette supplied to the generator."
+        ]
+      },
+      {
+        "title": "Configurable Planet Styles",
+        "paragraphs": [
+          "The tool accepted a list of colors that were mapped across the generated terrain values. Changing that palette allowed the same procedural system to create visibly different planet types."
+        ],
+        "items": [
+          "Multiple configurable terrain colors",
+          "Different planet appearances from the same generator",
+          "Color and grayscale output"
+        ]
+      },
+      {
+        "title": "Terrain Shaping Controls",
+        "paragraphs": [
+          "I exposed controls for shaping the character of the generated terrain rather than producing only one fixed noise pattern."
+        ],
+        "items": [
+          "Roughness",
+          "Plateau shaping",
+          "Lake and lake-bed formation",
+          "Shadow-casting angle"
+        ]
+      },
+      {
+        "title": "Heightmaps & Shadow Casting",
+        "paragraphs": [
+          "The generator could also output a grayscale version of the terrain. I used this as a heightmap for calculating and casting shadows across the generated planetary surface.",
+          "This let the procedural terrain contribute to the final visual treatment rather than serving only as a texture source."
+        ]
+      },
+      {
+        "title": "Seamless Tiled Terrain",
+        "paragraphs": [
+          "I built a fractal version that tiled perfectly, allowing opposite edges of the generated terrain to match seamlessly.",
+          "This was useful for surfaces that needed to repeat without obvious seams."
+        ]
+      },
+      {
+        "title": "Continuous Noise Sampling",
+        "paragraphs": [
+          "The underlying procedural algorithm was not limited to one fixed image and could be sampled continuously across coordinates, making it suitable in principle for infinite terrain generation.",
+          "I did not build a chunked infinite-terrain system as part of this editor, so I keep that distinction separate from the later voxel-engine work."
+        ]
+      },
+      {
+        "title": "Animated & Displaced Terrain Effects",
+        "paragraphs": [
+          "I also reused the procedural field for animated effects such as lava and manipulated the generated depth/displacement to produce different planetary surface treatments."
+        ]
+      },
+      {
+        "title": "Used Across Engine Generations",
+        "paragraphs": [
+          "The output from this tool was used in the Bridge Captain LibGDX version and continued into the later Unity/VR generation.",
+          "That made the generator a reusable production tool rather than a one-off procedural-noise experiment."
+        ]
+      },
+      {
+        "title": "Separate Voxel Evolution",
+        "paragraphs": [
+          "I later used 3D Perlin noise in a separate voxel-engine project, where the problem expanded into chunked volumetric generation. That work was a different system and is kept separate from this planet-builder card."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/tools/noise.gif",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/tools/noise.gif"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/tools/planet_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/tools/planet_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/tools/planet_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/tools/planet_4.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/tools/planet_5.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/tools/planet_6.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/tools/planet_7.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/tools/planet_8.jpg"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The exact date is not source-anchored. Approximately 2014 is used because Jamie remembers building the tool around the Bridge Captain LibGDX generation, after the 2012 C.E.L.L./Android release and before the 2015 Unity/VR work.",
+      "This was a solo weekend project.",
+      "The tool was originally created to generate planets for Bridge Captain LibGDX.",
+      "The same procedural approach and generated assets continued to be used in later Unity/VR Bridge Captain work.",
+      "The tool generated both colored terrain and grayscale heightmaps.",
+      "The grayscale output was used for height-based shadow casting.",
+      "Remembered controls include roughness, plateau shaping for lakes/lake beds, and the angle used for shadow casting.",
+      "The generator accepted configurable color lists/palettes to create different planet appearances.",
+      "Jamie built a fractal implementation that tiled perfectly.",
+      "The editor itself did not implement chunked terrain streaming.",
+      "The underlying algorithm could be sampled continuously and was suitable in principle for infinite terrain, but Jamie did not ship an infinite-terrain system using this editor.",
+      "Jamie animated the procedural field for effects such as lava.",
+      "Jamie also used depth/Z displacement to create different planetary treatments.",
+      "Later 3D Perlin-noise chunking belonged to a separate voxel-engine project and should not be conflated with this tool.",
+      "The original portfolio description said the tool created both tileable and infinite terrain. Public wording should be more conservative: seamless tiled generation was implemented, while continuous sampling made infinite terrain possible in principle but a chunked infinite-terrain implementation was not shipped in this project."
+    ],
+
+    "confidence": {
+      "date2014": "medium",
+      "soloWeekendProject": "high",
+      "bridgeCaptainLibGdxPurpose": "high",
+      "usedLaterInUnityVr": "high",
+      "colorAndGrayscaleOutput": "high",
+      "heightmapShadowUse": "high",
+      "roughnessPlateauShadowControls": "high",
+      "seamlessTiling": "high",
+      "infiniteTerrainCapabilityButNotShipped": "high",
+      "laterVoxelWorkSeparate": "high"
+    },
+
+    "projectTerminology": [
+      "Planet Builder",
+      "Procedural Planet & Terrain Builder",
+      "Perlin Noise",
+      "Fractal Noise",
+      "Heightmap"
+    ]
+  }
+}
