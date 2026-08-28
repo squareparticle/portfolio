@@ -1,29 +1,217 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/home-user/platform",
-  "title": "Home User",
+  "title": "Home User Subscription & Parent Platform",
   "project": "Home User",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Application"
+      "Consumer Subscription Platform",
+      "Parent Portal"
     ]
   },
+
   "technologies": [
-    "Javascript",
-    "Lambda",
-    "Python",
-    "JSON",
-    "SimpleDB",
+    "JavaScript",
+    "HTML",
+    "CSS",
     "PHP",
-    "Infusionsoft"
+    "Python",
+    "AWS Lambda",
+    "Amazon SES",
+    "SimpleDB",
+    "Amazon S3",
+    "CloudFront",
+    "EC2",
+    "Elastic Beanstalk",
+    "AngularJS",
+    "Wix",
+    "Infusionsoft",
+    "Google Sign-In"
   ],
+
   "date": {
-    "from": null,
+    "from": "2018",
     "to": null,
-    "display": false
+    "display": true
   },
-  "description": "I designed and developed a home user version of the Essential Skills school software.  Parents pay monthly for access to K-6 Reading and Math programs. This project required a separate free trial system that limits our EC2 costs down to a single medium server. ",
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Software Architect & Lead Developer",
+    "total": 2,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Web Developer"
+        ],
+        "relationship": "employee",
+        "contribution": "Built and maintained the Wix storefront/payment-facing portion after Jamie's initial Wix experimentation and integration design."
+      }
+    ]
+  },
+
+  "roles": [
+    "Software Architect",
+    "Senior Full-Stack Developer",
+    "Product Developer",
+    "Cloud Developer",
+    "Integration Developer",
+    "UI/UX Developer"
+  ],
+
+  "description": "I designed and led development of a direct-to-parent subscription version of the Essential Skills education platform. The product combined a Wix storefront with a separate email-based account system, activation and subscription workflows, a family-focused parent portal, progress reporting, AWS-backed account and usage services, and internal support tools. It continues to operate with essentially no advertising and generates enough recurring revenue to offset a substantial portion of the platform's overall AWS costs.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Direct-to-Parent Product",
+        "paragraphs": [
+          "Home User adapted the existing Essential Skills school platform into a consumer subscription product for families.",
+          "Parents purchased access to the K-6 Reading and Math suite, which represented most of the company's core educational programs while excluding some specialized products such as Science and ELL."
+        ]
+      },
+      {
+        "title": "Subscription Plans",
+        "paragraphs": [
+          "The product supported both individual and family subscriptions with monthly and annual payment options."
+        ],
+        "items": [
+          "Single Student plan",
+          "Family plan for up to 5 students",
+          "Monthly billing",
+          "Annual billing"
+        ]
+      },
+      {
+        "title": "Wix Storefront & Purchase Integration",
+        "paragraphs": [
+          "Wix served as the storefront and payment-facing system. I initially experimented with the Wix implementation and designed the integration, while another web developer handled the production storefront work.",
+          "My application layer consumed purchase information and handled the account, activation, licensing, usage, and support workflows behind the storefront."
+        ]
+      },
+      {
+        "title": "Activation Workflow",
+        "paragraphs": [
+          "A completed Wix purchase triggered the Home User provisioning flow. The system sent an activation email through my Amazon SES/Lambda email platform.",
+          "The customer followed the activation link, supplied their name, created the student profiles allowed by the purchased plan, and then gained access to the learning programs."
+        ]
+      },
+      {
+        "title": "Separate Home Login Model",
+        "paragraphs": [
+          "Home User required a different identity model from the school platform. School users normally entered through a School ID-based flow, while Home User accounts were based on the parent's email address.",
+          "Google sign-in was also supported for home users."
+        ]
+      },
+      {
+        "title": "Parent Portal",
+        "paragraphs": [
+          "I built a family-oriented parent portal as a trimmed-down counterpart to the teacher-facing school dashboard.",
+          "The portal was implemented with JavaScript, HTML, CSS, and PHP and focused on the information a parent needed rather than classroom-management workflows."
+        ]
+      },
+      {
+        "title": "Student Progress & Reporting",
+        "paragraphs": [
+          "Parents could monitor student progress through summaries, in-application notifications, reports, and visual charts."
+        ],
+        "items": [
+          "Progress summaries",
+          "In-app progress notifications",
+          "Skills report",
+          "Per Activity report",
+          "Unit report",
+          "Hot-Spot report",
+          "Pie charts",
+          "Line graphs",
+          "Bar graphs"
+        ]
+      },
+      {
+        "title": "Customer Service Administration",
+        "paragraphs": [
+          "I integrated a dedicated Home User tab into the existing AngularJS CustomerDB application so Customer Service could manage the consumer product alongside the rest of the company's account systems.",
+          "Three Customer Service employees used the Home User administration tools in day-to-day operations."
+        ],
+        "items": [
+          "Search accounts by email",
+          "View account usage",
+          "View aggregate Home User usage",
+          "Edit user information",
+          "Resend activation emails"
+        ]
+      },
+      {
+        "title": "Subscription Administration Tools",
+        "paragraphs": [
+          "I wrote Python administration tools so Customer Service could manage subscription changes without requiring a developer to manually alter account data."
+        ],
+        "items": [
+          "Upgrade Single Student to Family",
+          "Downgrade Family to Single Student",
+          "Change monthly billing to annual",
+          "Change annual billing to monthly",
+          "Cancel subscription",
+          "Renew / reactivate subscription"
+        ]
+      },
+      {
+        "title": "Cancellation & Data Retention",
+        "paragraphs": [
+          "Cancellation did not immediately erase the customer's account data. The system retained the data for approximately 30 days so returning customers could renew without losing their family and student setup."
+        ]
+      },
+      {
+        "title": "Free Trial Architecture",
+        "paragraphs": [
+          "Home User originally supported a free trial using the same broader free-program and trial architecture used elsewhere in Essential Skills.",
+          "Detailed student marks were kept locally while only compact summary records were stored centrally, reducing the server-side storage and processing requirements. The trial system could therefore operate very cheaply."
+        ]
+      },
+      {
+        "title": "Trial Removed by Product Choice",
+        "paragraphs": [
+          "The Home User trial was later removed, not because the architecture failed, but because the paid product was inexpensive enough that the business preferred to direct parents straight to purchase."
+        ]
+      },
+      {
+        "title": "AWS Architecture",
+        "paragraphs": [
+          "Home User reused the same general AWS architecture and deployment patterns as the school platform rather than becoming a completely separate infrastructure stack.",
+          "SimpleDB stored account, licensing, and progress information, while S3, CloudFront, EC2, Elastic Beanstalk, Lambda, and SES participated in delivery, services, account workflows, and messaging."
+        ]
+      },
+      {
+        "title": "Lead & Contact Automation",
+        "paragraphs": [
+          "Infusionsoft was used primarily for lead/contact automation around the Home User product rather than as the core subscription platform."
+        ]
+      },
+      {
+        "title": "Operational Product",
+        "paragraphs": [
+          "Home User remains in operation. It grew organically with essentially no advertising because company attention remained focused on the school market.",
+          "The active subscriber base is modest, but the recurring revenue is significant relative to operating costs and offsets a substantial portion of the AWS bill supporting the broader Essential Skills platform."
+        ]
+      },
+      {
+        "title": "Current Active Subscription Mix",
+        "paragraphs": [
+          "At the latest remembered snapshot, the product had 48 active purchases."
+        ],
+        "items": [
+          "26 Individual Plans",
+          "22 Family Plans",
+          "33 Monthly Plans",
+          "15 Annual Plans"
+        ]
+      }
+    ]
+  },
+
   "media": {
     "items": [],
     "thumbnail": "images/skills/work/homeuser.gif",
@@ -32,8 +220,65 @@
       "src": "images/skills/work/homeuser.gif"
     }
   },
+
   "meta": {
-    "legacySubtitle": "Javascript, Lambda, Python, JSON, SimpleDB, PHP, Infusionsoft",
+    "historicalNotes": [
+      "Home User launched around the 2018 period and remains active.",
+      "Wix handled the storefront/payment-facing workflow.",
+      "Jamie initially experimented with Wix and designed the product integration; another web developer handled the production Wix storefront work.",
+      "Home User supported Single Student and Family-of-5 plans with monthly and annual billing.",
+      "Infusionsoft was primarily used for lead/contact automation.",
+      "Jamie built Python administration scripts for plan upgrades/downgrades, billing-frequency changes, cancellation, and renewal/reactivation.",
+      "Cancellation retained account data for approximately 30 days in case the customer returned.",
+      "Jamie added a Home User administration tab to the AngularJS CustomerDB application.",
+      "Three Customer Service employees used the Home User tools day to day.",
+      "Customer Service could inspect usage, search by email, edit user data, and resend activation emails.",
+      "Wix purchase events triggered account activation emails using Jamie's SES/Lambda email system.",
+      "Customers activated accounts by following an email link and entering parent/student information.",
+      "Home User used an email-based identity model rather than the school platform's School ID model.",
+      "Google sign-in was also supported.",
+      "The Parent Portal was a pure JavaScript/HTML/CSS/PHP application conceptually similar to a trimmed-down Teacher Dashboard, but it predates the later React Teacher Dashboard and should not be described as a rewrite of the React application.",
+      "Parents received progress summaries, in-app notifications, four report types, and graphical reporting.",
+      "The four remembered report types are Skills, Per Activity, Unit, and Hot-Spot.",
+      "Charts included pie, line, and bar graphs.",
+      "The product included the full K-6 Reading and Math suite, which represented most but not all Essential Skills programs.",
+      "The Home User trial shared the broader Essential Skills free-trial/free-program architecture rather than being a separate rewrite.",
+      "Trial architecture stored detailed marks locally and only summary records centrally, typically one summary record per student per program.",
+      "The Home User trial was later removed because the paid product was inexpensive and the business preferred direct purchase.",
+      "SimpleDB stored Home User account, licensing, and progress information.",
+      "Home User used the broader AWS topology including S3, CloudFront, EC2, Elastic Beanstalk, Lambda, and SES.",
+      "The product has served hundreds of families and may have approached roughly 1,000 over its lifetime, but the exact lifetime count is uncertain and should not be used publicly without stronger evidence.",
+      "The current remembered active snapshot is 48 purchases: 26 Individual, 22 Family, 33 Monthly, and 15 Annual.",
+      "Despite essentially no advertising, Home User continues to generate recurring revenue and offsets a substantial portion of the overall Essential Skills AWS bill.",
+      "Jamie did most of the application/platform development himself during a period when he was working heavily from home to help keep the company operating."
+    ],
+
+    "confidence": {
+      "launch2018": "high",
+      "stillOperating": "high",
+      "wixStorefrontRole": "high",
+      "twoPersonBuildTeam": "high",
+      "customerServiceOperationalUsage": "high",
+      "subscriptionPlanStructure": "high",
+      "activationSesLambdaFlow": "high",
+      "emailBasedLogin": "high",
+      "googleLogin": "high",
+      "parentPortalArchitecture": "high",
+      "fourReportTypes": "high",
+      "trialSummaryStorageArchitecture": "high",
+      "current48ActivePurchases": "high",
+      "lifetimeFamiliesHundredsToApprox1000": "low"
+    },
+
+    "projectTerminology": [
+      "Home User",
+      "Home User Subscription Platform",
+      "Parent Portal",
+      "CustomerDB",
+      "Single Student Plan",
+      "Family Plan"
+    ],
+
     "provenance": {
       "legacyCategory": "Work",
       "legacyIndex": 0

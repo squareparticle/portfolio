@@ -1,50 +1,279 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/magies/reward-system",
-  "title": "Magies",
+  "title": "Magies Student Reward & Evolution System",
   "project": "Magies",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Application"
+      "Gamification System",
+      "Student Reward Platform"
     ]
   },
+
   "technologies": [
     "Spine",
-    "Javascript",
+    "JavaScript",
     "Canvas",
-    "JQuery",
+    "jQuery",
     "HTML5",
     "CSS3",
     "Ajax",
     "PHP",
     "JSON",
-    "AWS (CloudFront",
+    "SimpleDB",
+    "AWS Lambda",
+    "Amazon S3",
+    "CloudFront",
     "EC2",
     "Ubuntu",
-    "SimpleDB)"
+    "React"
   ],
+
   "date": {
-    "from": null,
-    "to": null,
-    "display": false
+    "from": "2019",
+    "to": "2020",
+    "display": true
   },
-  "description": "I developed and help design a Magies card system in which students collect throughout their lessons.  As the students master the activities they collect gems that are used as currency to evolve their Magies.",
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Software Architect & Lead Developer",
+    "total": 4,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Character Artist"
+        ],
+        "relationship": "employee",
+        "contribution": "Created the character artwork used for the Magies and their evolution stages."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Spine Animator"
+        ],
+        "relationship": "employee",
+        "contribution": "Rigged and animated the Magies in Spine across their evolution and expression states."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Product / Game Design"
+        ],
+        "relationship": "employee",
+        "contribution": "Worked with Jamie on the overall Magies game concept and reviewed/approved the finished character progression with the team."
+      }
+    ]
+  },
+
+  "roles": [
+    "Software Architect",
+    "Senior Full-Stack Developer",
+    "Gamification Systems Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Tools Developer",
+    "Game Designer"
+  ],
+
+  "description": "I co-designed and implemented Magies, a persistent student reward system used across most Essential Skills programs. Students earned crystals by scoring 80% or higher on learning activities, then spent them in the Magie Shop to unlock more than 100 animated creatures and evolve them from Egg to Baby, Teen, and Adult stages. I also built the persistence, reward integration, asset-processing pipeline, and internal QA tools used to manage the full production system.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Reward System Design",
+        "paragraphs": [
+          "Magies was designed as a persistent reward system tied directly to student mastery rather than as an unrelated mini-game.",
+          "I worked with my boss on the overall game concept and designed the progression and reward economy that connected student performance to collection and evolution."
+        ]
+      },
+      {
+        "title": "Mastery-Based Crystal Economy",
+        "paragraphs": [
+          "Students earned one crystal whenever they scored 80% or higher on an activity or its pre-test equivalent.",
+          "Only one crystal was awarded for the completed activity, creating a simple and predictable mastery-based reward loop."
+        ]
+      },
+      {
+        "title": "Persistent Reward Integration",
+        "paragraphs": [
+          "The reward was applied by the shared activity system when the qualifying activity was completed, even if the student was not currently looking at the Magies interface.",
+          "This allowed the reward economy to remain persistent across normal lesson activity rather than requiring students to enter a separate game mode first."
+        ]
+      },
+      {
+        "title": "Magie Evolution",
+        "paragraphs": [
+          "Each Magie progressed through four visual stages."
+        ],
+        "items": [
+          "Egg",
+          "Baby",
+          "Teen",
+          "Adult"
+        ]
+      },
+      {
+        "title": "Magie Shop",
+        "paragraphs": [
+          "Students spent earned crystals in the Magie Shop to unlock new Magies and additional evolution stages.",
+          "The shop turned academic progress into a long-term collection and progression loop rather than a one-time reward animation."
+        ]
+      },
+      {
+        "title": "Collection Across Programs",
+        "paragraphs": [
+          "Each Essential Skills program could give the student another set of Magies to discover. The assignment logic avoided repeats across those program-specific sets and included rarer and epic Magies.",
+          "The exact rarity-selection algorithm is not retained strongly enough to document publicly, but rarity was part of the production collection design."
+        ]
+      },
+      {
+        "title": "Visit & Collection Viewing",
+        "paragraphs": [
+          "Students could visit Magies they already owned to view their current evolution stage and animations.",
+          "The Visit state was primarily a collection/viewing experience rather than a separate gameplay system."
+        ]
+      },
+      {
+        "title": "SimpleDB Persistence",
+        "paragraphs": [
+          "Student Magie ownership, progression, and reward state were stored in SimpleDB so collection progress persisted across sessions and applications."
+        ]
+      },
+      {
+        "title": "Part of a Broader Reward Architecture",
+        "paragraphs": [
+          "Magies was one of several persistent reward models supported by the platform. Other programs could use stars, badges, trophies, or achievement-style rewards.",
+          "Some alternate reward systems reused the same underlying currency logic. For example, earned reward currency could be applied toward badges without exposing that implementation detail to the student."
+        ]
+      },
+      {
+        "title": "Suite Integration",
+        "paragraphs": [
+          "Magies was integrated across most Essential Skills programs. Mad Minute was the main remembered exception.",
+          "Because the reward logic lived below the individual activity UI, the same progression system could work across many different learning-program and activity types."
+        ]
+      },
+      {
+        "title": "100+ Production Characters",
+        "paragraphs": [
+          "The final system contained more than 100 Magies, and all of them were live in production for years.",
+          "Each character had multiple evolution stages and animated expression states, creating a significant asset-management and QA problem in addition to the gameplay logic."
+        ]
+      },
+      {
+        "title": "Spine Animation Pipeline",
+        "paragraphs": [
+          "Character animation was produced in Spine. One artist created the character artwork and another team member animated the characters, while my boss and I reviewed and approved the results.",
+          "I built the software pipeline that moved those finished animation packages from artist output into testable production assets."
+        ]
+      },
+      {
+        "title": "React Artist Upload Tool",
+        "paragraphs": [
+          "I built a React-based upload tool so completed Spine animation packages could be submitted into the production pipeline without manually assembling all of their runtime files."
+        ]
+      },
+      {
+        "title": "AWS Lambda Asset Processing",
+        "paragraphs": [
+          "An AWS Lambda trigger processed uploaded animation packages, reformatted them into the structure expected by the runtime and testing tools, and stored the resulting assets in Amazon S3.",
+          "This automated a repetitive part of the artist-to-production workflow and made the large number of Magies easier to manage consistently."
+        ]
+      },
+      {
+        "title": "Animation & Evolution QA Tool",
+        "paragraphs": [
+          "I also built an internal testing tool that displayed all four evolution stages of a Magie at the same time.",
+          "The tester could cycle through the available animation and expression states for each evolution so problems could be found before the character was released."
+        ]
+      },
+      {
+        "title": "Production Review Workflow",
+        "paragraphs": [
+          "The production flow involved artwork creation, Spine animation, upload, automated formatting, S3 storage, technical testing, and final review.",
+          "My role covered the architecture, game/reward logic, backend integration, asset pipeline, internal tooling, and final technical validation."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/work/spine.gif",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/work/spine.gif"
+    },
+
     "items": [
       {
         "type": "image",
         "src": "images/skills/work/spine_1.gif"
       }
-    ],
-    "thumbnail": "images/skills/work/spine.gif",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/work/spine.gif"
-    }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "Spine, Javascript, Canvas, JQuery, HTML5, CSS3, Ajax, PHP, JSON, AWS (CloudFront, EC2, Ubuntu, SimpleDB) ",
+    "historicalNotes": [
+      "The Magies development period is best represented as 2019–2020 because the software system and the production integration of more than 100 animated characters took substantial time.",
+      "Spine by Esoteric Software is the correct animation technology. Older profile references to 'Spline' are typos and should be corrected to Spine.",
+      "Jamie worked with his boss on the overall game concept and personally designed the progression/reward economy and implemented the software system.",
+      "The reward currency was described historically as both gems and crystals because the currency visually resembled gem-like crystals. Public wording should standardize on 'crystals'.",
+      "Students earned one crystal when they achieved a score of 80% or higher on an activity or pre-test equivalent.",
+      "The reward could be applied even when the student did not immediately see the Magies interface.",
+      "Evolution stages were Egg, Baby, Teen, and Adult.",
+      "Crystals were used in the Magie Shop to unlock Magies and their evolution stages.",
+      "Visit meant viewing/interacting with an already-owned Magie rather than a separate gameplay mode.",
+      "Magie ownership/progression was persisted in SimpleDB.",
+      "Each program could assign another set of Magies to a student, avoiding repeats and including rare/epic variants.",
+      "The exact rarity-selection algorithm is not confidently remembered and should not be described publicly without further evidence.",
+      "The platform supported multiple persistent reward systems including Magies, badges/trophies/achievements, and simple stars.",
+      "Some alternate reward systems reused the same underlying currency mechanism while presenting a different reward experience to the student.",
+      "Mad Minute is the main remembered program that did not use the Magies system.",
+      "The internal QA tool displayed all four evolution stages simultaneously and allowed Jamie to cycle through animation/expression states for each.",
+      "The Magies production group consisted of Jamie, his boss, one character artist, and one Spine animator.",
+      "One artist created the character images and another animated the assets in Spine.",
+      "Jamie and his boss reviewed and approved the finished character work.",
+      "Jamie built a React upload tool for completed Spine animation packages.",
+      "An AWS Lambda trigger formatted uploaded animation data into testable runtime units and stored them in S3.",
+      "Jamie used the internal testing application to verify the animation/expression states of all evolutions before release.",
+      "More than 100 Magies were live in production for years.",
+      "The original portfolio card only summarized the crystal/evolution loop and materially understated the production asset pipeline, persistence, QA tooling, and cross-suite integration."
+    ],
+
+    "confidence": {
+      "date2019To2020": "high",
+      "spineTechnology": "high",
+      "rewardEconomyDesign": "high",
+      "eightyPercentThreshold": "high",
+      "oneCrystalPerActivity": "high",
+      "eggBabyTeenAdultEvolution": "high",
+      "simpleDbPersistence": "high",
+      "programSpecificNonRepeatingSets": "high",
+      "rareEpicVariants": "high",
+      "exactRarityAlgorithm": "low",
+      "reactUploader": "high",
+      "lambdaFormattingPipeline": "high",
+      "fourStageQaTool": "high",
+      "oneHundredPlusLiveMagies": "high"
+    },
+
+    "projectTerminology": [
+      "Magies",
+      "Magie Shop",
+      "Crystals",
+      "Egg",
+      "Baby",
+      "Teen",
+      "Adult",
+      "Spine",
+      "Magie Maker"
+    ],
+
     "provenance": {
       "legacyCategory": "Work",
       "legacyIndex": 1

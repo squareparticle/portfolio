@@ -1,12 +1,237 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/hydragen/activity-builder",
-  "title": "Activity Builder",
-  "project": "Hydra-Gen",
-  "platform": {"label": "Application Type", "values": ["Content Authoring System"]},
-  "technologies": [],
-  "date": {"from": null, "to": null, "display": false},
-  "description": "I constructed many activity-builder applications for content creators and program designers. Instead of programming hundreds of activities with thousands of variations, I created a tool to allow non-developers to build their own programs. Some of these tools allowed for dragging and dropping widgets, entering questions, and testing them live in the editor.",
-  "media": {"thumbnail":"images/skills/tools/actbuilder.jpg","primary":{"type":"image","src":"images/skills/tools/actbuilder.jpg"},"items":[{"type":"image","src":"images/skills/tools/actbuilder_1.jpg"},{"type":"image","src":"images/skills/tools/actbuilder_2.jpg"},{"type":"image","src":"images/skills/tools/actbuilder_3.jpg"}]},
-  "meta": {"historicalNotes":["The original portfolio described multiple activity-builder applications rather than one standalone product."]}
+  "title": "Activity Authoring Systems: SE to Hydra-Gen",
+  "project": "Essential Skills Activity Platform",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Content Authoring System",
+      "Developer Tool"
+    ]
+  },
+
+  "technologies": [
+    "Java",
+    "Swing",
+    "AWT",
+    "ISAM",
+    "XML",
+    "BNF Grammar",
+    "Hydra-Gen",
+    "EWidgets"
+  ],
+
+  "date": {
+    "from": "2001",
+    "to": "2013",
+    "display": true
+  },
+
+  "roles": [
+    "Authoring Tools Architect",
+    "Tools Developer",
+    "Content Systems Developer",
+    "UI/UX Developer",
+    "Technical Lead",
+    "Team Lead"
+  ],
+
+  "description": "I built several generations of Java/Swing activity-authoring systems used by Essential Skills content teams to turn teacher-created curriculum into production learning software. Early versions streamlined content entry, layout, formatting, media assignment, and activity configuration; the later Hydra-Gen generation allowed non-programmers to visually assemble new activity types from reusable EWidgets, configure behavior through properties and flags, save the result as a custom XML scripting language, and test activities live while editing.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Several Generations of Authoring Tools",
+        "paragraphs": [
+          "This was not one standalone Activity Builder. I created roughly three to four major generations of Java/Swing authoring tools as the Essential Skills activity engine and content architecture evolved.",
+          "Each generation improved the workflow for content creators while remaining compatible with the current engine and data model of its time."
+        ]
+      },
+      {
+        "title": "Early SE Activity Builders",
+        "paragraphs": [
+          "The earlier builders were primarily content-entry, configuration, and formatting tools tied to the Essential Skills ISAM-based data systems.",
+          "Authors selected an activity type, entered or edited its content, configured properties and flags, assigned media, and adjusted formatting so each activity fit its content correctly on screen."
+        ]
+      },
+      {
+        "title": "Why Layout Had to Be Editable",
+        "paragraphs": [
+          "Activities within the same type could still contain very different questions, answer lengths, images, paragraphs, and media. A layout that worked for one activity could be poor for another.",
+          "The authoring tools therefore allowed content teams to adjust formatting and placement for individual activities rather than requiring programmers to hand-tune every screen."
+        ]
+      },
+      {
+        "title": "From W.E.T. to Reusable Composition",
+        "paragraphs": [
+          "Before Hydra-Gen, many activity types followed what we informally called W.E.T. development: Write Every Time. A programmer would build a new activity implementation whenever a sufficiently different interaction was required.",
+          "Hydra-Gen changed that model by breaking common interaction patterns into reusable EWidgets that could be combined to create new activity types."
+        ]
+      },
+      {
+        "title": "EWidgets as Functional Building Blocks",
+        "paragraphs": [
+          "EWidgets were not simply primitive GUI controls. Each represented a reusable piece of learning behavior that could be combined with other pieces to form an activity.",
+          "A program designer could assemble an activity by combining complete functional elements rather than implementing the behavior from scratch."
+        ],
+        "items": [
+          "Clickable image used to hear a sound or question",
+          "Paragraph / reading-content display",
+          "Text or image answer-selection layouts",
+          "Question-audio controls",
+          "Reusable interaction and presentation components"
+        ]
+      },
+      {
+        "title": "Visual Drag-and-Drop Authoring",
+        "paragraphs": [
+          "The Hydra-Gen Activity Builder introduced visual drag-and-drop composition. Designers could place and arrange EWidgets directly on the activity canvas and configure them through properties.",
+          "Any Hydra-Gen activity in any program could also be switched into drag-and-drop mode for fast visual editing and layout correction."
+        ]
+      },
+      {
+        "title": "Custom XML Scripting Language",
+        "paragraphs": [
+          "Hydra-Gen saved authored activity definitions in a custom XML scripting language that we designed using a BNF grammar.",
+          "The XML described the arrangement and configuration of reusable EWidgets so the engine could interpret the activity definition at runtime rather than requiring a new compiled Java class for every activity."
+        ]
+      },
+      {
+        "title": "Content & Activity Definitions",
+        "paragraphs": [
+          "Hydra-Gen separated the reusable activity definition from the curriculum content more clearly than earlier versions. The activity's visual and behavioral structure was authored in the Activity Builder, while the lesson/question content was managed through a separate editor.",
+          "Earlier generations were more tightly coupled: content entry, layout, properties, and activity-specific configuration were often part of the same authoring workflow."
+        ]
+      },
+      {
+        "title": "Behavior Without Programming",
+        "paragraphs": [
+          "Non-programmers could change more than text and positioning. Activity-specific properties and flags controlled presentation and behavior without requiring code changes.",
+          "Depending on the activity type, properties could influence formatting, interaction rules, and data randomization."
+        ]
+      },
+      {
+        "title": "Media Authoring",
+        "paragraphs": [
+          "Content creators could associate supporting media with activities, including audio, images, and animation assets.",
+          "Reward systems were managed separately and were not part of the Activity Builder itself."
+        ]
+      },
+      {
+        "title": "Live Testing",
+        "paragraphs": [
+          "The Hydra-Gen generation supported live activity testing so program designers could immediately see how the activity behaved and looked while they were building it.",
+          "This shortened the iteration loop considerably compared with editing raw definitions and launching the student software separately."
+        ]
+      },
+      {
+        "title": "Program Designer Workflow",
+        "paragraphs": [
+          "Program designers took teacher-created curriculum and converted it into complete production learning programs using these tools.",
+          "Programmers were still required when a genuinely new activity type, engine feature, or missing EWidget had to be developed, but existing capabilities could be reused and configured by the content team without additional programming."
+        ]
+      },
+      {
+        "title": "Used by Multiple Content Teams",
+        "paragraphs": [
+          "The Activity Builders were heavily used by Essential Skills content creators over many years. I managed multiple teams of content creators who relied on these tools as part of the normal production workflow.",
+          "Authors performed their own testing while building, and the finished activities then went through the company's normal QA process."
+        ]
+      },
+      {
+        "title": "Production Scale",
+        "paragraphs": [
+          "These authoring systems contributed directly to the large Essential Skills content library. Hundreds of activity types were created using the authoring architecture, and thousands of the platform's 50,000+ production learning activities were created, adjusted, reformatted, or maintained through these tools.",
+          "The value of the system was not just faster data entry. It shifted substantial portions of content production from programmers to curriculum and program-design teams while preserving reusable engine behavior underneath."
+        ]
+      },
+      {
+        "title": "Authoring Architecture as Leverage",
+        "paragraphs": [
+          "The long-term goal was to stop treating every learning activity as a custom programming task. Reusable activity engines, configurable properties, visual layout tools, and eventually Hydra-Gen's EWidget composition model allowed a much larger content catalog to be maintained without a proportional increase in development effort."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/tools/actbuilder.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/tools/actbuilder.jpg"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/tools/actbuilder_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/tools/actbuilder_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/tools/actbuilder_3.jpg"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The portfolio screenshots represent multiple generations of Essential Skills activity-authoring tools, including SE-era and Hydra-Gen-era builders, rather than one standalone product.",
+      "Jamie remembers building approximately three to four major Activity Builder generations over the years.",
+      "The tools were Java/Swing desktop applications.",
+      "Early versions were primarily content-entry, configuration, formatting, and ISAM-database helper applications.",
+      "Early activity definitions combined content, layout, properties, flags, and formatting more tightly than the later Hydra-Gen architecture.",
+      "Hydra-Gen separated reusable activity structure from lesson/question content more clearly, with content managed in a separate editor.",
+      "Hydra-Gen allowed program designers to visually compose new activity types from reusable EWidgets.",
+      "EWidgets represented functional pieces of an activity rather than primitive GUI widgets.",
+      "Examples remembered include clickable image/audio controls, reading paragraphs, text/image answer layouts, and question-listening controls.",
+      "The purpose of EWidgets was reuse: program designers could assemble activity types from existing behavior rather than requiring programmers to Write Every Time.",
+      "W.E.T. was the informal term used for the older pattern of implementing a new activity type from scratch each time.",
+      "Hydra-Gen supported drag-and-drop visual activity composition.",
+      "Any Hydra-Gen activity could be switched into drag-and-drop mode for fast layout editing.",
+      "Hydra-Gen activity definitions were saved using a custom XML scripting language designed with BNF grammar.",
+      "Non-programmers could configure activity behavior through properties and flags.",
+      "Some activity properties controlled randomization of content/data.",
+      "Content creators could assign audio, images, and animations.",
+      "Reward systems were separate from the Activity Builder.",
+      "Hydra-Gen supported live testing while editing.",
+      "Program designers converted teacher-created curriculum into production programs using these tools.",
+      "Programmers remained responsible for genuinely new activity types, missing EWidgets, and engine capabilities.",
+      "Jamie managed multiple content-creation teams that used these tools heavily.",
+      "Builders tested their work during authoring; final validation also went through the QA team.",
+      "Hundreds of activity types were created through the authoring architecture.",
+      "Thousands of the 50,000+ production activities were created, adjusted, reformatted, or maintained with these tools.",
+      "Because every activity's actual content differed, per-activity layout and formatting controls were important even when several activities shared the same activity type.",
+      "The exact first Activity Builder year is not source-anchored. Approximately 2001 is used as a portfolio start date within the early SE/Java era.",
+      "The end around 2013 corresponds to the transition from the Java/Hydra-Gen generation toward the large browser/HTML5 migration."
+    ],
+
+    "confidence": {
+      "date2001To2013": "medium",
+      "threeToFourMajorBuilderGenerations": "high",
+      "javaSwingDesktopTools": "high",
+      "contentTeamsUsedHeavily": "high",
+      "hydraGenDragDropComposition": "high",
+      "customXmlBnfLanguage": "high",
+      "ewidgetReuseModel": "high",
+      "hundredsOfActivityTypes": "medium",
+      "thousandsOfActivitiesTouched": "high"
+    },
+
+    "projectTerminology": [
+      "Activity Builder",
+      "Activity Authoring Systems",
+      "SE Activity Builder",
+      "Hydra-Gen",
+      "EWidgets",
+      "W.E.T.",
+      "Write Every Time"
+    ]
+  }
 }
