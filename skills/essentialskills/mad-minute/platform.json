@@ -1,50 +1,226 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/mad-minute/platform",
-  "title": "Mad Minute",
+  "title": "Mad Minute Version 6 Migration & Specialized Math Engine",
   "project": "Mad Minute",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Application"
+      "Legacy Application Migration",
+      "Specialized Math Learning Engine"
     ]
   },
+
   "technologies": [
-    "Javascript",
+    "JavaScript",
     "React",
     "Canvas",
-    "JQuery",
+    "jQuery",
     "HTML5",
     "CSS3",
     "Ajax",
     "PHP",
     "JSON",
-    "AWS (CloudFront",
+    "AWS",
+    "CloudFront",
     "EC2",
     "Ubuntu",
     "SimpleDB"
   ],
+
   "date": {
-    "from": null,
-    "to": null,
-    "display": false
+    "from": "2015",
+    "to": "2016",
+    "display": true
   },
-  "description": "I developed a Math Mad Minute application as a contract role for Essential Skills. This project required integration into the React version of the Teacher Dashboard.",
+
+  "roles": [
+    "Software Architect",
+    "Senior Full-Stack Developer",
+    "Legacy Modernization Developer",
+    "Learning Platform Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Reporting Systems Developer"
+  ],
+
+  "description": "I rebuilt a legacy standalone Java Mad Minute application from scratch as a JavaScript/Canvas Version 6 program, using the original product as the functional reference while preserving its distinctive timed-drill model. The new implementation adopted the Version 6 JSON architecture and integrated with the shared Essential Skills platform for login, assignments, pretests, summaries, charts, notifications, and teacher management while using specialized reporting plugins for Mad Minute's drill-oriented analytics. It was released in 2016 and remains in use.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Legacy Java Migration",
+        "paragraphs": [
+          "The original Mad Minute was a standalone Java application that I did not create.",
+          "It did not fit the conventional Hydra-Gen activity/menu model and also used its own specialized teacher reporting workflow.",
+          "I used the Java product as the functional reference and rebuilt the student-facing application from scratch for the Version 6 web platform."
+        ]
+      },
+      {
+        "title": "Rebuilt for Version 6",
+        "paragraphs": [
+          "The new Mad Minute implementation was written for the Version 6 JavaScript/Canvas platform rather than wrapping or directly porting the original Java code.",
+          "Its content and configuration were migrated into the Version 6 JSON architecture so it could participate in the same platform ecosystem as the rest of the Essential Skills suite."
+        ]
+      },
+      {
+        "title": "Specialized Runtime, Standardized Platform Contract",
+        "paragraphs": [
+          "Mad Minute remained a specialized timed-drill application, but it still had to behave like a first-class Version 6 program across the shared teacher and student platform."
+        ],
+        "items": [
+          "Login and authentication",
+          "Assignments",
+          "Pretests",
+          "Progress summaries",
+          "Charts and analytics",
+          "Teacher notifications",
+          "Reporting",
+          "Shared teacher-management workflows"
+        ]
+      },
+      {
+        "title": "Daily Challenge Model",
+        "paragraphs": [
+          "Mad Minute was structured more like a recurring daily math challenge than a conventional progression-based Essential Skills program.",
+          "Because of that, it did not use the normal mastery-star progression model and did not award Magies or badges."
+        ]
+      },
+      {
+        "title": "Teacher Configuration",
+        "paragraphs": [
+          "I added Mad Minute-specific configuration to the React Teacher Dashboard so teachers could manage the program without relying on the old standalone desktop dashboard."
+        ],
+        "items": [
+          "Length of a drill",
+          "Number of drills per session",
+          "Mastery threshold",
+          "Horizontal or vertical question orientation",
+          "Highest / master level",
+          "Menu behavior",
+          "Reward-related configuration where applicable"
+        ]
+      },
+      {
+        "title": "React Teacher Dashboard Integration",
+        "paragraphs": [
+          "Once the React Teacher Dashboard supported Mad Minute's specialized settings and reports, it became the primary management interface for the migrated Version 6 product.",
+          "Schools that still had the older desktop Java software could continue using its original dashboard, but the modern web implementation no longer depended on it."
+        ]
+      },
+      {
+        "title": "Special Reporting Plugins",
+        "paragraphs": [
+          "Mad Minute's drill/session model did not map cleanly onto the standard Essential Skills activity reports, so I created specialized reporting plugins for it.",
+          "These plugins allowed Mad Minute to retain meaningful drill-specific analytics while still participating in the common Version 6 reporting platform."
+        ]
+      },
+      {
+        "title": "Drill-Oriented Analytics",
+        "paragraphs": [
+          "Mad Minute reporting focused on repeated timed practice and mastery rather than the normal activity/unit progression used by most other programs."
+        ],
+        "items": [
+          "Mad Minute-specific report views",
+          "Drills mastered by day",
+          "Drills mastered by month",
+          "All-time mastery",
+          "Last 30 days",
+          "Timed drill performance",
+          "Mastery-oriented performance summaries"
+        ]
+      },
+      {
+        "title": "Standard Platform Summaries & Charts",
+        "paragraphs": [
+          "Despite its specialized reporting model, Mad Minute still had to contribute to the standard Essential Skills teacher experience.",
+          "Its data was integrated into common summaries, charts, notifications, pretests, assignments, and other shared teacher-facing workflows just like a standard program."
+        ]
+      },
+      {
+        "title": "Version 6 JSON Integration",
+        "paragraphs": [
+          "The migrated implementation used the Version 6 JSON model rather than retaining a separate standalone data architecture.",
+          "This allowed the specialized runtime to remain distinct where necessary while conforming to the broader platform's content and configuration conventions."
+        ]
+      },
+      {
+        "title": "Solo Rebuild",
+        "paragraphs": [
+          "I rebuilt the Mad Minute web application and its Version 6 integration myself, including the specialized student runtime, teacher configuration integration, and reporting adapters."
+        ]
+      },
+      {
+        "title": "Production Release",
+        "paragraphs": [
+          "The rebuilt Version 6 Mad Minute was released in 2016.",
+          "It remained in production and is still in use."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/work/madminute.gif",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/work/madminute.gif"
+    },
+
     "items": [
       {
         "type": "image",
         "src": "images/skills/work/madminute_1.png"
       }
-    ],
-    "thumbnail": "images/skills/work/madminute.gif",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/work/madminute.gif"
-    }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "Javascript, React, Canvas, JQuery, HTML5, CSS3, Ajax, PHP, JSON, AWS (CloudFront, EC2, Ubuntu, SimpleDB)",
+    "historicalNotes": [
+      "The original Mad Minute was a standalone Java application that Jamie did not create.",
+      "Jamie rebuilt the student-facing application from scratch using the original Java product as the functional reference.",
+      "Development occurred during 2015-2016 and the Version 6 implementation was released in 2016.",
+      "The original Mad Minute was not compatible with the conventional Hydra-Gen menu/activity model.",
+      "The original product also had its own teacher dashboard and specialized reporting model.",
+      "The migrated implementation used the Version 6 JSON architecture.",
+      "Jamie integrated Mad Minute into the common Version 6 platform contract for login, assignments, pretests, summaries, charts, notifications, reporting, and teacher management.",
+      "Mad Minute required specialized reporting plugins because its timed-drill/session model did not map cleanly to the normal Essential Skills reports.",
+      "Known reporting included Mad Minute-specific reports plus drills mastered by day, month, all time, and the last 30 days.",
+      "Mad Minute was structured as a recurring daily challenge rather than a normal mastery-star progression program.",
+      "Because of that model it did not award Magies or badges.",
+      "Jamie added Mad Minute-specific settings to the React Teacher Dashboard.",
+      "Once the React Teacher Dashboard supported those settings and specialized reports, the old dashboard was no longer required for the modern Version 6 product.",
+      "Schools with the older desktop Java installation could continue using the original desktop dashboard.",
+      "Jamie rebuilt the Version 6 Mad Minute implementation himself.",
+      "The Version 6 implementation remains in use.",
+      "Mad Minute and Read to Succeed are useful examples of the same broader architectural pattern: specialized runtimes integrated behind standardized platform contracts."
+    ],
+
+    "confidence": {
+      "development2015To2016": "high",
+      "released2016": "high",
+      "standaloneJavaOrigin": "high",
+      "jamieDidNotCreateOriginal": "high",
+      "studentRuntimeRebuiltFromScratch": "high",
+      "version6JsonMigration": "high",
+      "reactDashboardIntegration": "high",
+      "specializedReportingPlugins": "high",
+      "dailyChallengeModel": "high",
+      "noMagiesOrBadges": "high",
+      "stillInUse": "high"
+    },
+
+    "projectTerminology": [
+      "Mad Minute",
+      "Version 6",
+      "React Teacher Dashboard",
+      "Timed Drills",
+      "Drills Mastered",
+      "Specialized Reporting"
+    ],
+
     "provenance": {
       "legacyCategory": "Work",
       "legacyIndex": 3

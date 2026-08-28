@@ -1,35 +1,229 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/read-to-succeed/platform",
-  "title": "Read to Succeed",
+  "title": "Read to Succeed Migration & Specialized Learning Engine",
   "project": "Read To Succeed",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Application"
+      "Legacy Application Migration",
+      "Specialized Learning Engine"
     ]
   },
+
   "technologies": [
-    "Javascript",
+    "JavaScript",
     "Canvas",
-    "JQuery",
+    "jQuery",
     "HTML5",
     "CSS3",
     "Ajax",
     "PHP",
     "JSON",
-    "AWS (CloudFront",
+    "AWS",
+    "CloudFront",
     "EC2",
     "Ubuntu",
     "SimpleDB"
   ],
+
   "date": {
-    "from": null,
-    "to": null,
-    "display": false
+    "from": "2018",
+    "to": "2018",
+    "display": true
   },
-  "description": "I developed nine early reading literacy applications as a contract role for Essential Skills.  These programs required an engine redesign to fit in with our Basic Skills suite.",
+
+  "roles": [
+    "Software Architect",
+    "Senior Full-Stack Developer",
+    "Legacy Modernization Developer",
+    "Learning Platform Developer",
+    "Frontend Architect",
+    "UI/UX Developer",
+    "Data Migration / Conversion Developer"
+  ],
+
+  "description": "I migrated nine legacy Read to Succeed literacy programs from their standalone platform into Essential Skills Version 6. The project required both a custom data-migration toolchain to convert the original program structures into Version 6 JSON and a specialized lesson renderer that preserved R2S's distinctive interaction model while integrating with the standard Version 6 login, assignments, reporting, progress, rewards, and cloud infrastructure. The richer component model developed for R2S later influenced the Version 7 platform redesign.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Legacy Standalone Migration",
+        "paragraphs": [
+          "Read to Succeed was originally its own standalone product family rather than a Hydra-Gen / Version 5-native suite.",
+          "My job was to migrate all nine literacy programs into the Version 6 ecosystem while preserving the parts of the original product that did not fit the normal Version 6 activity model."
+        ]
+      },
+      {
+        "title": "Two-Part Modernization",
+        "paragraphs": [
+          "The migration required two different solutions. First, the legacy content and program structures had to be converted into the Version 6 data model. Second, the student runtime needed a specialized renderer because simply moving the data was not enough to reproduce the original R2S lesson experience."
+        ],
+        "items": [
+          "Legacy content and structure conversion",
+          "Version 6 JSON generation",
+          "Specialized lesson/activity renderer",
+          "Version 6 platform integration"
+        ]
+      },
+      {
+        "title": "Custom Migration Toolchain",
+        "paragraphs": [
+          "I built a collection of HTML/JavaScript conversion utilities to transform the legacy Read to Succeed data into Version 6-compatible JSON and program structures.",
+          "The tools handled different pieces of the old content model rather than relying on a single generic import operation."
+        ]
+      },
+      {
+        "title": "Program Structure Conversion",
+        "paragraphs": [
+          "The migration utilities rebuilt program and module structures, generated identifiers and name mappings, created menus, and reconciled links between converted content."
+        ],
+        "items": [
+          "Program hierarchy",
+          "Module hierarchy",
+          "Program and story definitions",
+          "Menus",
+          "IDs and name mappings",
+          "Cross-content links"
+        ]
+      },
+      {
+        "title": "Activity & Mini-Game Conversion",
+        "paragraphs": [
+          "Different legacy activity formats required specialized conversion logic so their content could be represented correctly inside the Version 6 JSON model."
+        ],
+        "items": [
+          "Concentration",
+          "Crossword",
+          "Word Search",
+          "Vocabulary",
+          "Reading content",
+          "Additional R2S-specific activity formats"
+        ]
+      },
+      {
+        "title": "Skills & Content Repair",
+        "paragraphs": [
+          "The migration tooling also reconciled skill relationships, achievement-related structures, and content inconsistencies discovered during conversion.",
+          "Some utilities existed specifically to validate, repair, insert, remove, or reorganize data after the first conversion pass."
+        ]
+      },
+      {
+        "title": "Nine Programs on One Specialized Engine",
+        "paragraphs": [
+          "All nine migrated Read to Succeed programs ran on the same specialized R2S renderer.",
+          "They shared common rendering and interaction components while retaining their own curriculum, artwork, visual themes, and per-question layouts."
+        ]
+      },
+      {
+        "title": "Version 6 Platform Integration",
+        "paragraphs": [
+          "The R2S renderer plugged into the existing Version 6 platform rather than recreating the entire surrounding application stack."
+        ],
+        "items": [
+          "Authentication",
+          "Assignments",
+          "Student marks and progress",
+          "Reporting",
+          "Rewards / Magies",
+          "Content delivery",
+          "Version 6 JSON data model"
+        ]
+      },
+      {
+        "title": "Richer Lesson Renderer",
+        "paragraphs": [
+          "The standard Version 6 renderer was intentionally simpler than the earlier Hydra-Gen component model, but R2S needed more flexibility.",
+          "I therefore added a richer lesson-rendering layer specifically for the migrated suite."
+        ]
+      },
+      {
+        "title": "Per-Question Presentation",
+        "paragraphs": [
+          "Questions could define their own layouts and fullscreen visual treatment, allowing the nine programs to preserve much more of their original presentation style."
+        ],
+        "items": [
+          "Per-question layouts",
+          "Fullscreen backgrounds",
+          "Program-specific visual themes",
+          "Reusable presentation components"
+        ]
+      },
+      {
+        "title": "Audio & Literacy Interaction",
+        "paragraphs": [
+          "The renderer introduced stronger audio controls appropriate for early-reading and literacy activities where spoken prompts and repeatable audio were central to the learning experience."
+        ]
+      },
+      {
+        "title": "Reusable Lesson Components",
+        "paragraphs": [
+          "R2S began bringing reusable composition back into the student runtime after Version 6 had simplified the older Hydra-Gen/EWidget model.",
+          "The components were designed specifically around the needs of the nine R2S programs rather than as a complete platform-wide component system."
+        ]
+      },
+      {
+        "title": "Stateful Multi-Step Activities",
+        "paragraphs": [
+          "The specialized renderer supported richer multi-step interactions that maintained state across several actions rather than treating every question as a single isolated response."
+        ]
+      },
+      {
+        "title": "Student Navigation & Help",
+        "paragraphs": [
+          "R2S also added interface capabilities that were useful for longer or more guided literacy interactions."
+        ],
+        "items": [
+          "Question navigator",
+          "On-screen contextual help"
+        ]
+      },
+      {
+        "title": "Same Version 6 JSON Model",
+        "paragraphs": [
+          "After conversion, the migrated programs continued using the Version 6 JSON content model.",
+          "The major differences therefore lived in the specialized renderer and component behavior rather than in a permanently separate content architecture."
+        ]
+      },
+      {
+        "title": "Bridge Toward Version 7",
+        "paragraphs": [
+          "R2S exposed an architectural weakness in Version 6: the simplification of the older component model had gone too far for some richer learning experiences.",
+          "I initially considered bringing the R2S improvements back into the rest of Version 6, but instead used what I learned as input to the broader Version 7 redesign."
+        ]
+      },
+      {
+        "title": "R2S Components vs Version 7",
+        "paragraphs": [
+          "Version 7 did not simply reuse the Read to Succeed engine. The R2S components had been designed specifically for those nine programs.",
+          "For Version 7 I rebuilt and generalized the successful ideas into a new component model intended to support the entire Essential Skills platform."
+        ]
+      },
+      {
+        "title": "Content & Art Team",
+        "paragraphs": [
+          "I built the migration tooling and the specialized runtime/engine. Teachers created the curriculum and content, while artists produced the visual assets used by the migrated programs."
+        ]
+      },
+      {
+        "title": "Production Result",
+        "paragraphs": [
+          "The migration brought nine legacy literacy programs into the Version 6 production ecosystem without forcing their distinctive lesson experience into an unsuitable generic activity renderer.",
+          "The programs gained the standard Essential Skills login, assignment, reporting, reward, progress, and cloud infrastructure while preserving their specialized behavior."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/work/r2s.gif",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/work/r2s.gif"
+    },
+
     "items": [
       {
         "type": "image",
@@ -39,15 +233,56 @@
         "type": "image",
         "src": "images/skills/work/r2s_2.gif"
       }
-    ],
-    "thumbnail": "images/skills/work/r2s.gif",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/work/r2s.gif"
-    }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "Javascript, Canvas, JQuery, HTML5, CSS3, Ajax, PHP, JSON, AWS (CloudFront, EC2, Ubuntu, SimpleDB)",
+    "historicalNotes": [
+      "Recovered migration-tool files are approximately eight years old as of 2026, making 2018 the best current working date.",
+      "Read to Succeed was originally a standalone legacy system, not a Hydra-Gen / Version 5-native suite.",
+      "The previous portfolio/profile interpretation that treated R2S primarily as a Version 5-derived program is superseded.",
+      "All nine Read to Succeed programs were migrated into Version 6.",
+      "The migration required both custom data/content conversion and a specialized runtime renderer.",
+      "Jamie built multiple HTML/JavaScript utilities to convert legacy program structures into Version 6 JSON-compatible data.",
+      "Recovered migration utilities handle program/module structures, IDs, names, menus, activities, stories/content, skill mappings, achievement-related structures, validation, and repair.",
+      "Recovered converter code includes specialized handling for formats such as Concentration, Crossword, Word Search, and Vocabulary.",
+      "Converted content was written into the Version 6 JSON model.",
+      "Simply converting the legacy data was insufficient because the original R2S interaction/presentation model did not fit the normal Version 6 renderer.",
+      "Jamie therefore built a specialized R2S renderer compatible with Version 6 infrastructure.",
+      "R2S used Version 6 authentication, assignments, reporting, marks/progress, rewards/Magies, content delivery, and cloud infrastructure.",
+      "Major renderer improvements included richer per-question layouts, fullscreen backgrounds, improved audio controls, reusable components, stateful multi-step activities, on-screen help, and a question navigator.",
+      "The nine programs shared the engine but retained distinct content, visual themes, and per-question layouts.",
+      "Version 6 had simplified the Hydra-Gen/EWidget composition model substantially.",
+      "R2S reintroduced more component-style composition, but specifically for the needs of these nine programs.",
+      "Jamie originally considered bringing the R2S improvements back into Version 6 generally but instead proceeded to Version 7.",
+      "Version 7 was influenced by the successful R2S concepts but rebuilt/generalized them rather than directly reusing the R2S implementation.",
+      "Jamie built the migration tools and engine; teachers and artists produced the curriculum/content and visual assets.",
+      "No dedicated R2S content-authoring application is remembered beyond the migration utilities and standard Version 6 workflow."
+    ],
+
+    "confidence": {
+      "date2018": "medium-high",
+      "standaloneLegacyOrigin": "high",
+      "nineProgramMigration": "high",
+      "customMigrationUtilities": "high",
+      "version6JsonConversion": "high",
+      "specializedRendererArchitecture": "high",
+      "version6PlatformIntegration": "high",
+      "richerR2SComponentModel": "high",
+      "version7Influence": "high",
+      "noDedicatedR2SAuthoringTool": "medium"
+    },
+
+    "projectTerminology": [
+      "Read to Succeed",
+      "R2S",
+      "Legacy Migration",
+      "Version 6",
+      "Version 7",
+      "R2S Renderer",
+      "Learning Components"
+    ],
+
     "provenance": {
       "legacyCategory": "Work",
       "legacyIndex": 2
