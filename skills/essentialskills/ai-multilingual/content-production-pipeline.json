@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 2,
+  "id": "essentialskills/ai-multilingual/content-production-pipeline",
+  "title": "AI-Assisted Multilingual Content Production Pipeline",
+  "project": "Essential Skills Multilingual Conversion",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "AI-Assisted Content Production",
+      "Multilingual Learning Platform"
+    ]
+  },
+
+  "technologies": [
+    "OpenAI API",
+    "Google Translate",
+    "ElevenLabs",
+    "JavaScript",
+    "JSON",
+    "Python",
+    "AWS",
+    "S3",
+    "Photoshop",
+    "AI Image Editing Tools"
+  ],
+
+  "date": {
+    "from": "2023",
+    "to": "2024",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Software Architect / AI Workflow Lead",
+    "total": 4,
+    "contributors": [
+      {
+        "count": 3,
+        "roles": [
+          "Content Review",
+          "QA",
+          "Media Review",
+          "Formatting"
+        ],
+        "relationship": "employee",
+        "contribution": "Reviewed machine-translated text, compared back-translations, checked generated audio for artifacts, corrected formatting, and prepared content for translator review."
+      }
+    ]
+  },
+
+  "roles": [
+    "Software Architect",
+    "AI Workflow Architect",
+    "Senior Full-Stack Developer",
+    "Automation Developer",
+    "Prompt Engineer",
+    "Localization Systems Developer",
+    "Technical Lead"
+  ],
+
+  "description": "I designed and led a roughly two-year AI-assisted multilingual production pipeline that converted large Essential Skills learning programs into a common set of 10 languages. The workflow used OpenAI APIs for translation, Google Translate for automated back-translation and comparison, ElevenLabs for generated voice files, and human reviewers and translators for QA and approval. I designed the orchestration, prompt strategy, scripts, review loop, staging workflow, and production output. The resulting multilingual programs were released to customers.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Two-Year Production Effort",
+        "paragraphs": [
+          "Even with AI automation, converting large educational programs into multiple languages remained a major production project.",
+          "The work took roughly two years because translation was only one part of the process. Testing, formatting repair, audio review, image editing, staging, human translator validation, and production QA required substantial ongoing effort."
+        ]
+      },
+      {
+        "title": "10-Language Production Set",
+        "paragraphs": [
+          "The converted programs used the same set of 10 language options across the multilingual product line."
+        ],
+        "items": [
+          "English",
+          "Spanish",
+          "French",
+          "Portuguese",
+          "Korean",
+          "Japanese",
+          "Mandarin",
+          "German",
+          "Arabic",
+          "Hindi"
+        ]
+      },
+      {
+        "title": "Automated Translation Pipeline",
+        "paragraphs": [
+          "I designed the automated workflow and scripts that processed selected sections of program content through multiple AI and translation services.",
+          "Operators prepared the source content in an input folder, ran the conversion scripts, and reviewed the generated output in a separate working area."
+        ]
+      },
+      {
+        "title": "OpenAI Translation",
+        "paragraphs": [
+          "OpenAI APIs performed the primary translation and language transformation work.",
+          "Prompt strategy was designed around preserving educational intent, JSON structure, formatting, and the constraints of the existing learning-content system."
+        ]
+      },
+      {
+        "title": "Automated Back-Translation",
+        "paragraphs": [
+          "Translated text was passed through Google Translate back into English.",
+          "The English-speaking review team compared the back-translated result against the original source as an early QA signal for mistranslations, missing concepts, or awkward transformations."
+        ]
+      },
+      {
+        "title": "Human-in-the-Loop Review",
+        "paragraphs": [
+          "AI output was never treated as automatically production-ready.",
+          "Three English-speaking team members reviewed translation differences, formatting, generated assets, and likely language errors before content was moved to staging for professional translator review."
+        ]
+      },
+      {
+        "title": "Translator Validation",
+        "paragraphs": [
+          "Two local Spanish translators provided the primary Spanish-language review.",
+          "Reviewers for the remaining languages were sourced largely through Fiverr.",
+          "Human translators reviewed staged material before final release and identified errors that automated comparison or English-speaking reviewers could not reliably detect."
+        ]
+      },
+      {
+        "title": "Correction Loop",
+        "paragraphs": [
+          "Corrections could be handled either by sending content back through the automated pipeline or by repairing individual translations directly.",
+          "When reviewers fixed isolated problems manually, they typically used the same AI-assisted method interactively: rewording source or translated text, regenerating candidate translations, and checking the result again."
+        ]
+      },
+      {
+        "title": "ElevenLabs Voice Generation",
+        "paragraphs": [
+          "ElevenLabs generated localized voice files for translated learning content.",
+          "The internal review team listened for obvious pronunciation mistakes, strange artifacts, and malformed output before sending the content to native-language reviewers."
+        ]
+      },
+      {
+        "title": "Translated Graphics",
+        "paragraphs": [
+          "Graphics containing text were localized manually rather than simply replacing the original images.",
+          "The team used AI image-editing tools and Photoshop to recreate the visual assets so the translated versions retained the appearance and layout of the originals while replacing the embedded language."
+        ]
+      },
+      {
+        "title": "Folder-Based Operator Workflow",
+        "paragraphs": [
+          "The production system deliberately avoided a large custom UI.",
+          "Operators placed the content to be converted into an input folder, ran the scripts, and inspected the translated content produced in the output folder.",
+          "This kept the workflow simple and made it easy to process manageable sections of very large programs rather than attempting one monolithic conversion."
+        ]
+      },
+      {
+        "title": "Production JSON & Review Output",
+        "paragraphs": [
+          "The pipeline generated the JSON structures required by the production learning programs.",
+          "It also produced simplified translation lists so reviewers could quickly inspect the source and translated text without navigating the full program data structure."
+        ]
+      },
+      {
+        "title": "Staging Before Release",
+        "paragraphs": [
+          "Content was processed in sections, reviewed internally, corrected where necessary, and then uploaded to staging.",
+          "Professional translators reviewed the staged material before the final production release."
+        ]
+      },
+      {
+        "title": "Six ELL / Supporting Programs",
+        "paragraphs": [
+          "The multilingual project included six large English-language-learning and supporting programs: three ELL-focused programs and three supporting programs.",
+          "These programs contained thousands of files that had to be converted across the same 10-language set."
+        ]
+      },
+      {
+        "title": "Pedagogically Mixed-Language Content",
+        "paragraphs": [
+          "The Reading and ELL conversions were not strict full-language replacements.",
+          "Because the products were designed to teach English, portions of the English content were intentionally retained where required by the pedagogy."
+        ]
+      },
+      {
+        "title": "Spanish Math",
+        "paragraphs": [
+          "Spanish Math was an even larger conversion effort because it covered the K–3 Math program family.",
+          "Unlike the ELL products, Math contained a much larger volume of unique instructional material rather than repeated language-learning patterns, so the conversion required substantial review across questions, audio, and graphics."
+        ]
+      },
+      {
+        "title": "Full Spanish Remake",
+        "paragraphs": [
+          "The Spanish Math versions were fully localized, including questions, sounds, and graphics.",
+          "The resulting products were intended to function as native Spanish-language Math programs rather than as English-learning products with translated support."
+        ]
+      },
+      {
+        "title": "Scale of the Conversion",
+        "paragraphs": [
+          "The project involved thousands of source files multiplied across 10 language targets, plus localized audio and graphics.",
+          "The scale made automation necessary, but the volume and educational sensitivity also made human review essential."
+        ]
+      },
+      {
+        "title": "Architecture & Orchestration",
+        "paragraphs": [
+          "I personally designed the workflow/orchestration architecture, prompt strategy, review loop, automated scripts, and production pipeline.",
+          "My role was primarily architectural and managerial during the long production phase, while the review team and translators processed and validated the large content volume."
+        ]
+      },
+      {
+        "title": "Earlier AI Experience",
+        "paragraphs": [
+          "Essential Skills had previously used AI in smaller workflows such as generating spelling-list content.",
+          "The multilingual conversion project was substantially larger in scope, automation, review requirements, media generation, and production impact."
+        ]
+      },
+      {
+        "title": "Released Production Content",
+        "paragraphs": [
+          "The converted multilingual programs completed the review process and were released into production.",
+          "The system therefore represents a production AI-assisted workflow rather than a translation prototype or internal experiment."
+        ]
+      },
+      {
+        "title": "AI Accelerated, Humans Approved",
+        "paragraphs": [
+          "The architecture was intentionally human-in-the-loop.",
+          "AI services accelerated translation, back-translation, audio generation, and image-editing work, while employees and native-language translators remained responsible for reviewing and approving production educational content."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/work/multilingual.png",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/work/multilingual.png"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/work/multilingual_languages.png"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The multilingual conversion effort lasted roughly two years rather than the earlier working estimate of approximately six months.",
+      "Jamie primarily managed and architected the project during the long conversion/review phase.",
+      "The same 10 languages were used across converted multilingual programs.",
+      "The production selector shows English, Spanish, French, Portuguese, Korean, Japanese, Mandarin, German, Arabic, and Hindi.",
+      "OpenAI APIs performed the primary translation.",
+      "Google Translate was used for automated back-translation into English so the English-speaking review team could compare results against the source.",
+      "ElevenLabs generated localized voice files.",
+      "Three English-speaking team members reviewed translation differences, audio artifacts, formatting, and generated content before translator review.",
+      "Two primary Spanish translators were local to the company/user's area.",
+      "Reviewers for other languages were largely sourced through Fiverr.",
+      "Graphics containing text were localized manually using AI image-editing tools and Photoshop.",
+      "The intended output visually matched the original artwork while replacing embedded text with localized text.",
+      "Operators processed sections of programs through a folder-based automated workflow rather than using a custom GUI.",
+      "The basic workflow was: place source material in an input folder, run scripts, inspect translated output, correct problems, upload to staging, translator review, release.",
+      "Corrections could be rerun through the automation or repaired directly using the same AI-assisted translation/rewording techniques.",
+      "The pipeline generated both production JSON and simplified translation lists for quick review.",
+      "Six ELL/supporting programs were converted: three ELL-focused programs and three supporting programs.",
+      "These represented thousands of files multiplied across 10 languages.",
+      "Reading/ELL content intentionally retained English where necessary because the products were teaching English.",
+      "Spanish Math covered the K–3 Math suite and was a larger conversion project because the Math programs contained more unique concepts/material rather than the repeated patterns common in parts of the ELL suite.",
+      "Spanish Math was fully localized across questions, audio, and graphics.",
+      "Jamie designed the workflow/orchestration architecture, prompt strategy, review loop, scripts, and production pipeline.",
+      "Earlier AI spelling workflows existed but were much smaller and should not be presented as equivalent in scope.",
+      "All converted multilingual programs were released to production.",
+      "Public framing should emphasize that AI accelerated production while humans reviewed and approved educational content."
+    ],
+
+    "confidence": {
+      "twoYearDuration": "high",
+      "sameTenLanguages": "high",
+      "languageList": "high",
+      "openAIPrimaryTranslation": "high",
+      "googleBackTranslation": "high",
+      "elevenLabsVoice": "high",
+      "threeEnglishReviewers": "high",
+      "twoLocalSpanishTranslators": "high",
+      "fiverrOtherLanguages": "high",
+      "manualGraphicsLocalization": "high",
+      "folderBasedWorkflow": "high",
+      "productionJsonOutput": "high",
+      "sixEllSupportingPrograms": "high",
+      "spanishMathK3Scope": "high",
+      "releasedToProduction": "high"
+    },
+
+    "projectTerminology": [
+      "Multilingual Conversion",
+      "OpenAI API",
+      "Google Translate",
+      "Back-Translation",
+      "ElevenLabs",
+      "Human-in-the-Loop",
+      "Translation Review",
+      "Staging",
+      "Spanish Math",
+      "ELL",
+      "AI-Assisted Production"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Work",
+      "legacyIndex": null
+    }
+  }
+}

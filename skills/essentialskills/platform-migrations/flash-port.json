@@ -1,34 +1,210 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/platform-migrations/flash-port",
-  "title": "Flash Port (2007?)",
+  "title": "Version 4 Flash Web Platform",
   "project": "Platform Migrations",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Application"
+      "Web Platform Migration",
+      "Production-Scale Proof of Concept"
     ]
   },
+
   "technologies": [
-    "Director",
-    "Flash"
+    "Flash",
+    "Director"
   ],
+
   "date": {
-    "from": "2007",
-    "to": "2007",
+    "from": null,
+    "to": null,
     "display": false
   },
-  "description": "For the first web engine, we ported one program and the marks manager to the Flash platform.  This is when we discovered that our content was too large for Flash even when the media was fed in dynamically.",
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Lead Developer / Software Architect",
+    "total": 2,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Software Developer"
+        ],
+        "relationship": "employee",
+        "contribution": "Worked with Jamie on the Version 4 Flash migration and implementation."
+      }
+    ]
+  },
+
+  "roles": [
+    "Lead Developer",
+    "Software Architect",
+    "Platform Migration Developer",
+    "Web Application Developer",
+    "Technical Lead"
+  ],
+
+  "description": "I led Essential Skills Version 4, the company's first intended migration of the school platform toward a web-based offering. We recreated Sight Words and a fully functional Marks Manager in Flash to prove that the existing desktop experience could move online. The system worked functionally, but production-scale content exposed fundamental Flash stability and scalability limits: dozens of lesson lists containing hundreds of media-rich activities eventually overwhelmed the runtime. The project was discontinued, and Essential Skills continued using the existing Java WebStart platform until the later HTML5 Version 6 migration.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Essential Skills Version 4",
+        "paragraphs": [
+          "Version 4 represented the company's intended future direction for moving Essential Skills from its desktop-oriented Java platform toward an online offering.",
+          "It was more than a small technology demo: we built working student and teacher applications to determine whether Flash could support the real Essential Skills product model."
+        ]
+      },
+      {
+        "title": "Sight Words Port",
+        "paragraphs": [
+          "I selected Sight Words as the student program for the Version 4 migration.",
+          "The goal was to reproduce a real production learning program rather than create an artificial demonstration that avoided the complexity of the existing suite."
+        ]
+      },
+      {
+        "title": "Fully Functional Marks Manager",
+        "paragraphs": [
+          "We also recreated Marks Manager in Flash.",
+          "This was a functional clone rather than a visual mockup, allowing us to test whether both the student-facing and teacher-management sides of the Essential Skills platform could move to the new delivery model."
+        ]
+      },
+      {
+        "title": "Real Production Content",
+        "paragraphs": [
+          "The critical test was whether Flash could support the actual scale of an Essential Skills program.",
+          "A typical large program could contain 30–40 lesson lists, with roughly 10–15 activities in each list. Individual activities could carry their own graphics, sounds, interaction logic, and behavior."
+        ]
+      },
+      {
+        "title": "Dynamic Media Loading",
+        "paragraphs": [
+          "Media was fed into the Flash application dynamically rather than placing every asset into one monolithic package.",
+          "That reduced some immediate packaging concerns, but it did not solve the deeper runtime problem."
+        ]
+      },
+      {
+        "title": "Flash Hit Its Scaling Limit",
+        "paragraphs": [
+          "The Flash implementation worked at smaller scales but became increasingly unstable as the complete learning-content structure was added.",
+          "Hundreds of interactive activities, each carrying graphics, sound, state, and specialized behavior, pushed the runtime beyond what we considered reliable enough for a production school platform."
+        ]
+      },
+      {
+        "title": "Why We Stopped",
+        "paragraphs": [
+          "The decision to discontinue Version 4 was driven by platform suitability rather than an inability to reproduce the application features.",
+          "Sight Words and Marks Manager demonstrated that the interface and workflows could be rebuilt, but Flash could not reliably support the scale and complexity of our production learning suite."
+        ]
+      },
+      {
+        "title": "Director Desktop Support",
+        "paragraphs": [
+          "Director was also involved in the Version 4 work and is remembered as part of the approach used to support desktop execution.",
+          "The exact division of responsibilities between Director and Flash is no longer remembered strongly enough to describe in greater technical detail."
+        ]
+      },
+      {
+        "title": "Two-Person Development Team",
+        "paragraphs": [
+          "I led the Version 4 migration with one developer who worked for me.",
+          "Together we implemented the student-program port and teacher-management clone while evaluating Flash as a possible future production platform."
+        ]
+      },
+      {
+        "title": "Hydra-Gen / WebStart Remained the Production Path",
+        "paragraphs": [
+          "Hydra-Gen and the Java WebStart delivery model were already in use while Version 4 was being evaluated.",
+          "When the Flash direction was abandoned, Essential Skills continued relying on the existing WebStart platform rather than immediately replacing it with another technology."
+        ]
+      },
+      {
+        "title": "WebStart Had Its Own Deployment Problems",
+        "paragraphs": [
+          "Java WebStart was not ideal either. Browser and workstation deployment frequently depended on customers having a compatible Java runtime installed and correctly configured.",
+          "Despite those support problems, it remained more capable of running the full Essential Skills application model than the Flash implementation."
+        ]
+      },
+      {
+        "title": "Waiting for Version 6",
+        "paragraphs": [
+          "A successful full web migration did not arrive until Version 6, when the student suite was rebuilt around HTML5, JavaScript, Canvas, PHP, JSON, and the cloud-hosted platform.",
+          "Version 4 therefore became an important failed migration: it proved that moving online was desirable while also demonstrating that Flash was the wrong foundation for the scale of our software."
+        ]
+      },
+      {
+        "title": "Architecture Lesson",
+        "paragraphs": [
+          "The project reinforced a recurring platform-design lesson: successfully reproducing a feature set is not enough if the target runtime cannot sustain the real production workload.",
+          "Testing Version 4 with genuine program content exposed that limitation before Essential Skills committed the entire suite to the Flash architecture."
+        ]
+      }
+    ]
+  },
+
   "media": {
-    "items": [],
     "thumbnail": "images/skills/work/flash.png",
+
     "primary": {
       "type": "image",
       "src": "images/skills/work/flash.png"
-    }
+    },
+
+    "items": []
   },
+
   "meta": {
-    "legacySubtitle": "Director, Flash",
+    "historicalNotes": [
+      "The original portfolio card called this 'Flash Port (2007?)'; the question mark indicates the date was never considered firm.",
+      "Jamie remembers the work as occurring before Hydra-Gen, during the pre-Version 5 web-transition period.",
+      "Do not publicly claim 2007 unless stronger source evidence is recovered.",
+      "This work was identified internally as Version 4 in the Essential Skills platform lineage.",
+      "Version 4 was intended as the future web direction for Essential Skills, not merely an isolated Flash experiment.",
+      "Sight Words was the student program selected for the Flash migration.",
+      "Marks Manager was recreated as a fully functional Flash application rather than only a prototype UI.",
+      "Jamie led the work with one developer who reported to him.",
+      "Director is remembered as part of the desktop-running strategy, but the exact Director/Flash architecture is no longer remembered confidently.",
+      "The original card states that media was fed dynamically into Flash but that the overall content remained too large for the platform.",
+      "Jamie remembers the deeper failure mode primarily as Flash instability under production-scale application/content complexity.",
+      "A representative large program could contain approximately 30–40 lists with 10–15 activities each, with activities carrying their own graphics, sounds, and behavior.",
+      "The exact Flash technical failure mechanism is no longer remembered and should not be reduced to an unsupported claim such as a specific SWF-size or memory ceiling.",
+      "Hydra-Gen / Java WebStart was already deployed when Version 4 was evaluated.",
+      "After the Flash direction was abandoned, Essential Skills continued using WebStart despite JVM/browser deployment and support problems.",
+      "The next successful full web-platform migration was Version 6 using HTML5/JavaScript/Canvas.",
+      "Public framing should present Version 4 as a production-scale platform evaluation that failed because the chosen runtime could not reliably sustain the real ESS workload."
+    ],
+
+    "confidence": {
+      "exactDate": "low",
+      "preHydraGenChronology": "high",
+      "version4Designation": "high",
+      "intendedOnlineOffering": "high",
+      "sightWordsPort": "high",
+      "functionalMarksManagerClone": "high",
+      "twoPersonDevelopmentTeam": "high",
+      "directorDesktopRole": "medium-low",
+      "dynamicMediaLoading": "high",
+      "flashProductionScaleInstability": "high",
+      "programScale30To40Lists": "medium-high",
+      "activitiesPerList10To15": "medium-high",
+      "webStartAlreadyDeployed": "high",
+      "version6AsLaterSuccessfulWebMigration": "high"
+    },
+
+    "projectTerminology": [
+      "Version 4",
+      "Flash",
+      "Director",
+      "Sight Words",
+      "Marks Manager",
+      "Java WebStart",
+      "Hydra-Gen",
+      "Version 6"
+    ],
+
     "provenance": {
       "legacyCategory": "Work",
       "legacyIndex": 8

@@ -1,36 +1,320 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/assessment/diagnostic-software",
-  "title": "Student Assessment Software (2002 - 2005)",
-  "project": "Assessment",
+  "title": "Essential Skills Assessment Series & Diagnostic Engine",
+  "project": "Assessment Series",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Application"
+      "Student Assessment Platform",
+      "Diagnostic Learning System"
     ]
   },
+
   "technologies": [
-    "Java - Java",
+    "Java",
     "Swing",
-    "ISAM BTree Database",
-    "MVC"
+    "MVC",
+    "ISAM Database",
+    "Java Serialization"
   ],
+
   "date": {
     "from": "2002",
     "to": "2005",
-    "display": false
+    "display": true
   },
-  "description": "I worked together with teachers to design an early learning diagnostic application that analyses why the students get the questions incorrect. Example: A student spelled 'cave' as cav, or caiv or kaav, etc... For this project, I partnered with a Sun MicroSystems consultant in order to build a MVC swing based engine with a custom networkable ISAM database.",
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Lead Developer / Emerging Software Architect",
+    "total": 4,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Senior Software Consultant",
+          "Architecture Mentor"
+        ],
+        "relationship": "contractor",
+        "contribution": "Co-designed the MVC/Swing architecture with Jamie, reviewed architectural decisions, and mentored Jamie in MVC, Swing architecture, MVP thinking, and practical software-design discipline."
+      },
+      {
+        "count": 2,
+        "roles": [
+          "Teacher",
+          "Curriculum / Diagnostic Design"
+        ],
+        "relationship": "employee",
+        "contribution": "Worked with Jamie to design the educational assessment logic, diagnostic categories, placement rules, and literacy-testing content."
+      }
+    ]
+  },
+
+  "roles": [
+    "Lead Developer",
+    "Software Architect",
+    "Assessment Systems Developer",
+    "Database Developer",
+    "UI Developer",
+    "Diagnostic Logic Designer"
+  ],
+
+  "description": "I helped design and built the Essential Skills Assessment Series, a Java/Swing literacy assessment platform that did more than score answers: it analyzed student errors by underlying reading, phonics, decoding, and spelling concepts and used the results to guide teachers toward appropriate instructional programs and units. This was my first major architecture/design project, my first experiment with an ISAM content database, and the beginning of a long mentorship with a former Sun Microsystems consultant who helped me develop the MVC architecture and mature my software-design approach.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Assessment Series",
+        "paragraphs": [
+          "The Essential Skills Assessment Series was a family of literacy assessment products designed to measure student performance and diagnose specific reading, spelling, phonics, and decoding weaknesses.",
+          "The system combined student-facing testing with a teacher-facing Assessment Manager for assigning tests, managing students, configuring assessments, and reviewing results."
+        ]
+      },
+      {
+        "title": "Six Production Assessments",
+        "paragraphs": [
+          "Surviving Essential Skills installation material identifies six assessment products in the series."
+        ],
+        "items": [
+          "Graded Reading Comprehension Test",
+          "Graded Spelling Test",
+          "Graded Word Recognition Test",
+          "Diagnostic Phonics Test",
+          "Diagnostic Spelling Skills Test",
+          "Diagnostic Decoding Skills Test"
+        ]
+      },
+      {
+        "title": "Assessment Manager & Student Assignments",
+        "paragraphs": [
+          "Teachers used the Assessment Manager to create classes and student accounts, configure and assign tests, and review assessment results.",
+          "Students completed assigned tests through the separate Student Assignments application."
+        ]
+      },
+      {
+        "title": "Diagnostic Error Analysis",
+        "paragraphs": [
+          "The diagnostic tests were designed to determine why a student answered incorrectly rather than only recording a final score.",
+          "For spelling, different incorrect responses to the same word could expose different underlying misconceptions. For example, variations of a word such as 'cave' could indicate different weaknesses in phonics, vowel patterns, or spelling conventions."
+        ]
+      },
+      {
+        "title": "Teacher-Designed Diagnostic Logic",
+        "paragraphs": [
+          "I worked closely with two teachers, including the company's vice president, to design the diagnostic logic.",
+          "The teachers brought the literacy and curriculum expertise while I helped translate those educational concepts into rules, data structures, scoring logic, and software behavior."
+        ]
+      },
+      {
+        "title": "Concept-Level Assessment",
+        "paragraphs": [
+          "Diagnostic reports grouped performance around underlying concepts rather than treating every incorrect answer as equivalent.",
+          "This allowed the system to isolate areas such as phonics patterns, vowel sounds, consonant behavior, decoding skills, and spelling concepts."
+        ]
+      },
+      {
+        "title": "Diagnostic Phonics",
+        "paragraphs": [
+          "The Diagnostic Phonics Test evaluated multiple foundational phonics concepts and exposed weaknesses that could then be addressed through corresponding Essential Skills instructional material."
+        ],
+        "items": [
+          "Initial and final consonants",
+          "Long and short vowels",
+          "Reversals",
+          "Vowel digraphs",
+          "Diphthongs",
+          "R-controlled vowels",
+          "Consonant blends"
+        ]
+      },
+      {
+        "title": "Diagnostic Spelling Skills",
+        "paragraphs": [
+          "The Diagnostic Spelling Skills Test analyzed spelling performance at the component-skill level.",
+          "Individual words could test more than one diagnostic area, allowing a relatively compact assessment to reveal multiple types of weakness."
+        ]
+      },
+      {
+        "title": "Diagnostic Decoding Skills",
+        "paragraphs": [
+          "The Diagnostic Decoding Skills Test used auditory and nonsense-word style exercises to determine whether students could apply phonics rules rather than relying only on memorized vocabulary.",
+          "Results could expose weaknesses in consonants, vowels, blends, digraphs, diphthongs, and related decoding concepts."
+        ]
+      },
+      {
+        "title": "Graded Assessments",
+        "paragraphs": [
+          "The graded assessments measured broader student placement and performance rather than only diagnostic subskills.",
+          "Reading, spelling, and word-recognition results could be used to estimate instructional level and help teachers select appropriate Essential Skills programs."
+        ]
+      },
+      {
+        "title": "Placement Into Instruction",
+        "paragraphs": [
+          "Assessment results were intended to lead directly into instruction.",
+          "Reports could guide teachers toward the Essential Skills programs or units that addressed the weaknesses identified by the assessment rather than leaving the teacher with an isolated score."
+        ]
+      },
+      {
+        "title": "Mastery & Instructional Levels",
+        "paragraphs": [
+          "Assessment reporting classified performance into instructional categories such as mastery, independent, instructional, and frustration levels.",
+          "This gave teachers a more useful interpretation of the raw score and supported placement decisions."
+        ]
+      },
+      {
+        "title": "Configurable Testing",
+        "paragraphs": [
+          "Teachers could configure how assessments were administered rather than using a single rigid test mode."
+        ],
+        "items": [
+          "Time limits",
+          "Stopping after a configurable number of consecutive incorrect answers",
+          "Selecting specific test units or components"
+        ]
+      },
+      {
+        "title": "Teacher Reports",
+        "paragraphs": [
+          "The Assessment Manager provided multiple ways to inspect student results."
+        ],
+        "items": [
+          "Completed Assignments",
+          "Scores",
+          "Answers",
+          "Graph"
+        ]
+      },
+      {
+        "title": "Answer-Level Review",
+        "paragraphs": [
+          "The Answers report showed the individual test questions and the student's responses so teachers could inspect exactly where errors occurred rather than relying only on aggregate scores."
+        ]
+      },
+      {
+        "title": "My First Major Architecture Project",
+        "paragraphs": [
+          "This project marked one of my first major shifts from primarily implementing software into actively designing the architecture.",
+          "I was responsible for shaping the system while working with an experienced former Sun Microsystems consultant who reviewed my decisions and helped guide me toward cleaner architectural solutions."
+        ]
+      },
+      {
+        "title": "Learning MVC",
+        "paragraphs": [
+          "The consultant introduced me to Model-View-Controller architecture, which had not been covered in my college program.",
+          "We designed the Swing/MVC architecture together, with me doing the architectural and implementation work while he reviewed, challenged, and refined the design."
+        ]
+      },
+      {
+        "title": "Engineering Mentorship",
+        "paragraphs": [
+          "The collaboration also introduced me to practical engineering ideas such as Minimum Viable Product, avoiding unnecessary 'kitchen sink' features, and separating essential architecture from premature polish.",
+          "Although I already knew Swing, the project substantially deepened my understanding of building larger Swing applications cleanly."
+        ]
+      },
+      {
+        "title": "First ISAM Experiment",
+        "paragraphs": [
+          "The Assessment Series was my first experiment with using an ISAM-style database for application content.",
+          "At this stage, student marks were still persisted using serialized Java classes rather than the more mature database architecture that followed."
+        ]
+      },
+      {
+        "title": "Database Architecture Evolution",
+        "paragraphs": [
+          "The Assessment Series predates the later SE / Version 2 database redesign.",
+          "The database ideas explored here became part of the evolution toward the more mature networkable ISAM B-tree architecture used in subsequent Essential Skills systems."
+        ]
+      },
+      {
+        "title": "Network Deployment",
+        "paragraphs": [
+          "The Assessment Series was designed for real school deployment and supported shared server installations where student data could be accessed across client workstations.",
+          "That deployment model fit the wider Essential Skills environment of teacher/admin workstations, student computers, and shared school-server storage."
+        ]
+      },
+      {
+        "title": "Long-Term Architecture Influence",
+        "paragraphs": [
+          "The assessment project influenced later Essential Skills work well beyond the original tests.",
+          "Its diagnostic and placement ideas, database evolution, reporting concepts, teacher workflows, and architecture mentorship fed into later SE, Teacher Management, Hydra-Gen, and pre/post-test systems."
+        ]
+      }
+    ]
+  },
+
   "media": {
-    "items": [],
     "thumbnail": "images/skills/work/assessment.jpg",
+
     "primary": {
       "type": "image",
       "src": "images/skills/work/assessment.jpg"
-    }
+    },
+
+    "items": []
   },
+
   "meta": {
-    "legacySubtitle": "Java 1.1.8 - Java 1.2, Swing, ISAM BTree Database, MVC",
+    "historicalNotes": [
+      "The Assessment Series was built before the SE / Version 2 platform generation.",
+      "The original portfolio card dated the work to 2002-2005; retain that as the working public range unless stronger source dates are recovered.",
+      "This was Jamie's first major architecture/design project.",
+      "It was also Jamie's first experiment with an ISAM database for program/content data.",
+      "Student marks in the early Assessment implementation were saved using serialized Java classes.",
+      "The later SE / Version 2 generation introduced a more mature networkable ISAM B-tree architecture.",
+      "Jamie worked directly with two teachers on the diagnostic logic, one of whom was the Essential Skills vice president.",
+      "Jamie actively helped design the diagnostic model rather than merely implementing teacher-authored rules.",
+      "This project is when Essential Skills hired the former Sun Microsystems consultant who later worked with Jamie through the Hydra-Gen era.",
+      "The consultant was semi-retired and worked both in-house and remotely.",
+      "Jamie formally managed the consultant, but the consultant became Jamie's long-term technical mentor.",
+      "The consultant introduced Jamie to MVC and practical MVP-oriented product development.",
+      "Jamie and the consultant co-designed the MVC/Swing architecture, with the consultant reviewing and guiding Jamie's architectural decisions.",
+      "The consultant also helped Jamie deepen his Swing expertise.",
+      "Private leadership context: the consultant continued working with Essential Skills for years despite compensation being below prior Sun-level compensation because he valued the work and working relationship. This is private contextual evidence of Jamie's management/leadership environment and should not be used as a public-facing portfolio claim.",
+      "The consultant later retired fully and is deceased; do not use those personal details publicly.",
+      "Surviving Essential Skills installation material identifies six assessment products: Graded Reading Comprehension Test, Graded Spelling Test, Graded Word Recognition Test, Diagnostic Phonics Test, Diagnostic Spelling Skills Test, and Diagnostic Decoding Skills Test.",
+      "The teacher-facing application was called Assessment Manager.",
+      "The student-facing testing application was called Student Assignments.",
+      "Assessment reporting included Completed Assignments, Scores, Answers, and Graph views.",
+      "The assessments could use configurable time limits, stopping rules based on consecutive incorrect answers, and selected test units/components.",
+      "Diagnostic results were organized around underlying concepts, while graded assessments supported broader placement decisions.",
+      "Assessment results could guide teachers toward relevant Essential Skills programs/units.",
+      "Surviving installation documentation confirms server-based deployment with shared student data across client workstations."
+    ],
+
+    "confidence": {
+      "date2002To2005": "medium-high",
+      "assessmentSeriesName": "high",
+      "assessmentManagerName": "high",
+      "studentAssignmentsName": "high",
+      "sixAssessmentProducts": "high",
+      "firstArchitectureProject": "high",
+      "firstIsamExperiment": "high",
+      "serializedMarks": "high",
+      "twoTeacherCollaboration": "high",
+      "diagnosticLogicCoDesign": "high",
+      "sunConsultantMentorship": "high",
+      "mvcCoDesign": "high",
+      "networkDeployment": "high",
+      "laterArchitectureInfluence": "medium-high"
+    },
+
+    "projectTerminology": [
+      "Assessment Series",
+      "Assessment Manager",
+      "Student Assignments",
+      "Graded Reading Comprehension Test",
+      "Graded Spelling Test",
+      "Graded Word Recognition Test",
+      "Diagnostic Phonics Test",
+      "Diagnostic Spelling Skills Test",
+      "Diagnostic Decoding Skills Test",
+      "MVC",
+      "ISAM"
+    ],
+
     "provenance": {
       "legacyCategory": "Work",
       "legacyIndex": 6

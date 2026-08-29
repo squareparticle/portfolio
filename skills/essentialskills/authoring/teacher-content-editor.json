@@ -1,36 +1,308 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/authoring/teacher-content-editor",
-  "title": "Teacher Created Content Editor",
-  "project": "Authoring",
+  "title": "Desktop Spelling List Editor & Program Generator",
+  "project": "Teacher Authoring",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Developer Tool"
+      "Teacher Authoring Tool",
+      "Spelling Program Generator"
     ]
   },
+
   "technologies": [
     "Java",
     "Swing",
+    "JNI",
+    "C++",
     "QuickTime",
-    "media.dll"
+    "WAV",
+    "ISAM Database"
   ],
+
   "date": {
-    "from": null,
-    "to": null,
-    "display": false
+    "from": "2004",
+    "to": "2006",
+    "display": true
   },
-  "description": "I designed and created tools for teachers, which allows them to build their own spelling programs.  The teachers audibly record word lists into a recursive menu structure while the program generates the necessary lessons to teach the students.",
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Lead Developer / Software Designer",
+    "total": 2,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Software Consultant",
+          "Original Version 1 Developer"
+        ],
+        "relationship": "contractor",
+        "contribution": "Provided consulting assistance while Jamie designed and implemented the desktop Spelling List Editor."
+      }
+    ]
+  },
+
+  "roles": [
+    "Lead Developer",
+    "Software Designer",
+    "Teacher Tools Developer",
+    "Java Developer",
+    "JNI / C++ Developer",
+    "Database Developer",
+    "Audio Systems Developer"
+  ],
+
+  "description": "I designed and built the desktop Spelling List Editor, a customer-facing Java/Swing authoring tool that let teachers create complete Essential Skills spelling programs without programming. Teachers built recursive menu trees of spelling lists, entered their own words, recorded each word with a microphone, and the tool automatically generated the formatted activity content and inserted it into the shared ISAM database. The resulting teacher-created program behaved like a native ESS program in both the student software and Marks Manager / Teacher Dashboard.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "More Than a Spelling List Editor",
+        "paragraphs": [
+          "Although the product was called Spelling List Editor, it effectively generated complete mini spelling programs.",
+          "Teachers could build hierarchical menus, add word lists anywhere in the tree, record audio for each word, and automatically receive a complete set of student activities."
+        ]
+      },
+      {
+        "title": "Recursive Program Structure",
+        "paragraphs": [
+          "The authoring model used a true recursive menu structure stored in the Essential Skills ISAM content database.",
+          "A teacher could create menus inside menus and place word lists at any level, allowing a custom program to be organized by week, unit, topic, grade, teacher preference, or any other structure."
+        ]
+      },
+      {
+        "title": "Simple Teacher Workflow",
+        "paragraphs": [
+          "Teachers did not need to understand the internal Essential Skills activity format.",
+          "They created the menu structure, entered a list of spelling words, and then used a recording wizard to capture the pronunciation for each word."
+        ],
+        "items": [
+          "Create nested menus",
+          "Create a word list",
+          "Enter spelling words",
+          "Record each word through the microphone wizard",
+          "Play back individual recordings",
+          "Generate the student program"
+        ]
+      },
+      {
+        "title": "Automatic Lesson Generation",
+        "paragraphs": [
+          "The tool converted the teacher's small amount of authored input into fully formatted Essential Skills lesson data.",
+          "It generated the spelling activities automatically and inserted them directly into the ISAM content database."
+        ]
+      },
+      {
+        "title": "11 Core Activity Families",
+        "paragraphs": [
+          "Surviving screenshots from the later Version 7 port document 11 core spelling activity families generated from the teacher's word lists.",
+          "Several activity families also had alternate or randomized interaction variants, so repeated play could present a different version of the same activity."
+        ],
+        "items": [
+          "Hear and Match",
+          "Concentration",
+          "Type Right",
+          "Word Shape 1",
+          "Word Shape 2",
+          "Jumbled Words 1",
+          "Jumbled Words 2",
+          "Missing Letters 1",
+          "Missing Letters 2",
+          "Word Wizard",
+          "See and Spell / Flash Cards",
+          "Hear and Spell"
+        ]
+      },
+      {
+        "title": "Activity Variety",
+        "paragraphs": [
+          "The generated program was not a single repeated quiz format.",
+          "The activity set used different mechanics including listening, recognition, memory matching, typing, word shapes, letter reconstruction, missing-letter completion, flash-card study, and spelling from audio."
+        ]
+      },
+      {
+        "title": "Randomized Variants",
+        "paragraphs": [
+          "Some activities included alternate or randomized presentation modes.",
+          "This meant students could revisit the same teacher-created list without always receiving the exact same screen or interaction pattern."
+        ]
+      },
+      {
+        "title": "Microphone Recording Wizard",
+        "paragraphs": [
+          "Teachers recorded only the spelling word itself.",
+          "The wizard walked through the word list one item at a time, allowing the teacher to record and then play back each pronunciation before continuing."
+        ]
+      },
+      {
+        "title": "Custom WAV Recording",
+        "paragraphs": [
+          "I implemented the audio-recording path in JNI/C++ rather than relying on a high-level Java recording abstraction.",
+          "I wrote the WAV output logic from scratch, including creating the file header, streaming sample data, closing the recording, calculating final sizes, and updating the required WAV header fields."
+        ]
+      },
+      {
+        "title": "Cross-Platform Audio Access",
+        "paragraphs": [
+          "The application had to support both Windows and Mac teacher workstations.",
+          "QuickTime and native media APIs provided access to the microphone hardware, while JNI connected the Java/Swing application to the native recording implementation."
+        ]
+      },
+      {
+        "title": "Native ESS Program Compatibility",
+        "paragraphs": [
+          "Teacher-created content was not stored as a separate toy format.",
+          "The Spelling List Editor generated a real Essential Skills program structure inside the same content system used by production software."
+        ]
+      },
+      {
+        "title": "Student Experience",
+        "paragraphs": [
+          "Students saw teacher-created menus and activities through the normal Essential Skills student application.",
+          "They navigated the recursive menus just as they would navigate a professionally produced ESS program and reached the generated spelling activities at the end of the menu path."
+        ]
+      },
+      {
+        "title": "Marks Manager / Teacher Dashboard Integration",
+        "paragraphs": [
+          "Because the generated content conformed to the standard Essential Skills program architecture, it plugged into the normal Marks Manager / Teacher Dashboard workflow.",
+          "Teacher-created spelling programs could therefore participate in the same classroom-management and reporting ecosystem as standard ESS programs."
+        ]
+      },
+      {
+        "title": "Shared Local / Network Database",
+        "paragraphs": [
+          "The custom spelling program lived inside the Essential Skills ISAM database on either the local machine or the school's shared file server.",
+          "This matched the deployment model used by the broader desktop Essential Skills suite."
+        ]
+      },
+      {
+        "title": "Customer Product",
+        "paragraphs": [
+          "The Spelling List Editor was sold separately to customers rather than being only an internal authoring utility.",
+          "It was sufficiently used in schools that microphone configuration became a recurring technical-support issue, commonly involving muted microphones or incorrectly configured system input devices."
+        ]
+      },
+      {
+        "title": "Version 3 Era",
+        "paragraphs": [
+          "The Spelling List Editor was built after Version 2 and is best associated with the Version 3 / mid-2000s desktop generation.",
+          "It remained compatible with later Hydra-Gen-era desktop software but was not rebuilt for the Java WebStart transition."
+        ]
+      },
+      {
+        "title": "End of the Desktop Generation",
+        "paragraphs": [
+          "The original desktop editor did not carry directly into Version 6 because the HTML5 platform and content architecture were fundamentally different.",
+          "Later web-era spelling authoring systems therefore represented a new implementation rather than a straightforward continuation of the old Java tool."
+        ]
+      },
+      {
+        "title": "Later Activity Preservation",
+        "paragraphs": [
+          "The original spelling activities were important enough that screenshots of the desktop-era activity set were later retained as reference material when the activities were recreated for Version 7."
+        ]
+      }
+    ]
+  },
+
   "media": {
-    "items": [],
     "thumbnail": "images/skills/work/spelling.jpg",
+
     "primary": {
       "type": "image",
       "src": "images/skills/work/spelling.jpg"
-    }
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/work/spelling-hear-match.jpg",
+        "caption": "Hear and Match"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/work/spelling-concentration.jpg",
+        "caption": "Concentration"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/work/spelling-jumbled-words.jpg",
+        "caption": "Jumbled Words"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/work/spelling-hear-spell.jpg",
+        "caption": "Hear and Spell"
+      }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "Java 1.1.8, Swing, QuickTime, media.dll",
+    "historicalNotes": [
+      "The product's original customer-facing name was Spelling List Editor.",
+      "The portfolio title expands the name because the tool created complete mini spelling programs rather than merely editing flat word lists.",
+      "The tool was built after Version 2 and is most likely a Version 3 / mid-2000s product.",
+      "The public date range 2004-2006 is a working estimate and should be revised if stronger source evidence is recovered.",
+      "Teachers could create a true recursive menu tree in the ISAM database.",
+      "Menus could contain submenus recursively, with spelling word lists placed at any level.",
+      "Teachers entered only a list of words and recorded the pronunciation of each word.",
+      "Audio recordings contained the word only, not sentences or definitions.",
+      "A recording wizard stepped through the list and allowed playback of recorded words.",
+      "Jamie implemented WAV recording twice in JNI/C++ from scratch, including WAV header creation, data streaming, final size calculation, and header updates.",
+      "QuickTime and native media APIs were used to gain microphone hardware access on Mac and PC.",
+      "Jamie remembers media.dll as likely Microsoft-provided; exact ownership/API identity should remain low confidence unless source code is recovered.",
+      "The tool generated all required lesson/activity data and inserted it directly into the Essential Skills ISAM content database.",
+      "The database could live locally or on a remote/shared school file server.",
+      "The generated spelling program was fully compatible with the standard Essential Skills student application and Marks Manager / Teacher Dashboard.",
+      "Students saw the teacher-authored menus and activities like any regular Essential Skills program.",
+      "The product was sold separately to customers.",
+      "Frequent microphone support issues are remembered as evidence of substantial real-world use, but this should be treated as circumstantial rather than a quantified adoption metric.",
+      "Jamie built the product primarily himself with some assistance from the original Version 1 creator acting as a consultant.",
+      "The tool remained compatible through the Hydra-Gen desktop era but was not adapted to Java WebStart.",
+      "It could not be carried directly into Version 6 because the HTML5 platform represented a fundamentally different architecture.",
+      "Surviving screenshots from the later Version 7 recreation document the activity set.",
+      "The screenshots are stronger evidence than Jamie's initial rough memory of 10 activities.",
+      "The screenshot inventory supports 11 core activity families, with some families showing alternate or randomized interaction variants.",
+      "Do not claim there were only 11 total possible screens because randomized/alternate modes could produce additional presentations.",
+      "The four supporting screenshots selected for the public card should represent distinct activity mechanics rather than near-duplicate variants."
+    ],
+
+    "confidence": {
+      "version3Era": "medium-high",
+      "date2004To2006": "medium",
+      "spellingListEditorName": "high",
+      "recursiveMenuStructure": "high",
+      "isamStorage": "high",
+      "automaticProgramGeneration": "high",
+      "nativeEssCompatibility": "high",
+      "wordOnlyRecording": "high",
+      "jniCppWavRecording": "high",
+      "quickTimeAudioAccess": "high",
+      "mediaDllMicrosoft": "low",
+      "separateCustomerProduct": "high",
+      "elevenCoreActivityFamilies": "high",
+      "randomizedActivityVariants": "high",
+      "hydraGenCompatibility": "high",
+      "notWebStartCompatible": "high"
+    },
+
+    "projectTerminology": [
+      "Spelling List Editor",
+      "Spelling Program",
+      "Teacher Created Content",
+      "Recursive Menu",
+      "Word List",
+      "Marks Manager",
+      "Teacher Dashboard",
+      "ISAM",
+      "JNI",
+      "WAV"
+    ],
+
     "provenance": {
       "legacyCategory": "Work",
       "legacyIndex": 7

@@ -1,33 +1,294 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/learning-platform/school-programs",
-  "title": "School Programs (1999 - Present)",
+  "title": "Essential Skills K–6 Learning Suite",
   "project": "Learning Platform",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Application"
+      "K–6 Learning Platform",
+      "Production Program Suite"
     ]
   },
+
   "technologies": [
-    "J2SE",
+    "Java 1.1.8",
+    "Java 1.2+",
     "Java2D",
-    "ISAM DB",
-    "BerkeleyDB",
     "JNI",
-    "JNLP",
+    "ISAM DB",
+    "Berkeley DB",
+    "Java WebStart",
     "Flash",
+    "JavaScript",
+    "HTML5",
+    "Canvas",
+    "jQuery",
+    "PHP",
+    "JSON",
     "AWS",
     "SimpleDB",
-    "PHP"
+    "S3",
+    "CloudFront",
+    "EC2",
+    "Ubuntu"
   ],
+
   "date": {
     "from": "1999",
     "to": null,
-    "display": false
+    "display": true
   },
-  "description": "I designed, architected and developed or led teams to develop a total of 81 (K-6) school programs in Java, HTML5 and Flash. Programs such as Math, Science, Reading, etc... These programs were designed by many teachers and each one is expected to take a child months to complete.",
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Software Architect / Engineering Lead",
+    "total": 7,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Senior Software Contractor / Technical Mentor"
+        ],
+        "relationship": "contractor",
+        "contribution": "Worked with Jamie during the Hydra-Gen era on engineering and architecture."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Original Version 1 Designer / Developer"
+        ],
+        "relationship": "contractor",
+        "contribution": "Returned part-time during the Hydra-Gen era and contributed to program development."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Software Developer"
+        ],
+        "relationship": "employee",
+        "contribution": "Developed learning software and reusable program features."
+      },
+      {
+        "count": 2,
+        "roles": [
+          "Content Entry",
+          "QA",
+          "Technical Support",
+          "IT Support"
+        ],
+        "relationship": "employee",
+        "contribution": "Entered and validated curriculum content, tested production programs, and supported customers and internal systems."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Graphic Artist"
+        ],
+        "relationship": "employee",
+        "contribution": "Produced the primary program and activity graphics used across the suite."
+      }
+    ]
+  },
+
+  "roles": [
+    "Software Architect",
+    "Engineering Lead",
+    "Department Manager",
+    "Senior Software Developer",
+    "Full-Stack Developer",
+    "Learning Platform Architect",
+    "UI/UX Designer",
+    "Technical Support Developer"
+  ],
+
+  "description": "I helped build, modernize, and maintain the Essential Skills K–6 learning suite from 1999 onward, growing from developer help and technical support into engineering leadership and software architecture. Across multiple platform generations, I personally developed programs and frameworks, led teams building additional programs, and designed the systems that allowed teachers, content creators, artists, QA staff, and developers to produce and maintain 80+ released learning programs, 50,000+ lesson activities, and roughly 1,000 activity types.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "80+ Production Learning Programs",
+        "paragraphs": [
+          "The Essential Skills suite grew into more than 80 released K–6 learning programs spanning reading, phonics, comprehension, vocabulary, writing, grammar, spelling, mathematics, science, geography, ESL, and specialized literacy products.",
+          "The public portfolio uses 80+ rather than an exact count because some production entries represented localized, curriculum-specific, or closely related variants of the same underlying program."
+        ]
+      },
+      {
+        "title": "Large Curriculum Scope",
+        "paragraphs": [
+          "Typical programs contained hundreds of activities and were intended to support repeated practice over several months of classroom use.",
+          "A representative program could contain 30 or more units, with students working in short computer sessions and frequently repeating material until mastery."
+        ],
+        "items": [
+          "80+ production programs",
+          "50,000+ lesson activities",
+          "~1,000 activity types"
+        ]
+      },
+      {
+        "title": "Career Growth Through the Platform",
+        "paragraphs": [
+          "When I joined Essential Skills in 1999, Version 1 and Sight Words were already under development. My initial role combined developer assistance and technical support while the original developer trained me on the platform.",
+          "During that first year we worked together on programs including Super Phonics, Grammar, Spelling, and Vocabulary.",
+          "After he left, I took on larger program-development responsibilities, including Math programs developed on a royalty basis from home.",
+          "My role progressed from developer help and technical support to management, then increasingly into architecture and design as projects such as the Diagnostics platform expanded my system-level responsibilities."
+        ]
+      },
+      {
+        "title": "Multi-Disciplinary Production Pipeline",
+        "paragraphs": [
+          "The suite was produced by multidisciplinary teams rather than by developers working alone.",
+          "Teachers and curriculum experts defined the learning goals and educational content. Content-entry staff formatted and entered material. Artists created activity graphics and visual assets. Developers built the reusable engines, activity types, and program-specific behavior. QA validated the resulting programs before release."
+        ]
+      },
+      {
+        "title": "Hydra-Gen Peak Team",
+        "paragraphs": [
+          "During the Hydra-Gen era I managed a core production team of seven while also coordinating with curriculum specialists, subcontract artists, and external audio production."
+        ],
+        "items": [
+          "Jamie: project manager, architect, designer, and engineering lead",
+          "Former Sun Microsystems contractor",
+          "Original Version 1 designer/developer as a part-time subcontractor",
+          "1 additional full-time developer",
+          "2 full-time content-entry / QA / technical-support / IT staff",
+          "1 full-time graphic artist"
+        ]
+      },
+      {
+        "title": "Curriculum Collaboration",
+        "paragraphs": [
+          "The company vice president was also a teacher and worked closely with me on educational direction and program requirements.",
+          "I also worked extensively with approximately four to five of his teaching colleagues who designed curriculum and supplied educational content for the suite."
+        ]
+      },
+      {
+        "title": "Art & Audio Production",
+        "paragraphs": [
+          "In addition to the full-time in-house artist, I coordinated with several subcontract artists who improved activity artwork and supporting imagery.",
+          "A professional DJ in Ottawa recorded hundreds of hours of voice work used throughout the learning suite."
+        ]
+      },
+      {
+        "title": "Classroom Validation",
+        "paragraphs": [
+          "My team and I visited schools and tested Hydra-Gen and its activities with real classes of students.",
+          "This gave us direct feedback on usability, pacing, interaction design, and how students actually responded to the learning software in a classroom environment."
+        ]
+      },
+      {
+        "title": "Version 1",
+        "paragraphs": [
+          "The first generation targeted desktop PCs, Mac OS 9, and school-server environments using Java 1.1.8.",
+          "I joined while this generation was already underway and learned the architecture while contributing to support and program development."
+        ]
+      },
+      {
+        "title": "Version 2 / SE",
+        "paragraphs": [
+          "Version 2 was a substantial modernization for Mac OS X and newer desktop environments using Java 1.2.",
+          "The transition was difficult because JNI-based systems such as the database and sound layers had to be rewritten, and significant portions of the original Java 1.1.8 code required changes for the OS X generation."
+        ]
+      },
+      {
+        "title": "Version 3",
+        "paragraphs": [
+          "Version 3 introduced a major New Look visual overhaul and additional teacher/content capabilities such as the Spelling List Editor."
+        ]
+      },
+      {
+        "title": "Version 4",
+        "paragraphs": [
+          "Version 4 represented a desktop/web transition period and included a brief Flash-based generation while the company explored how to move beyond the traditional Java desktop architecture."
+        ]
+      },
+      {
+        "title": "Version 5 / Hydra-Gen",
+        "paragraphs": [
+          "Hydra-Gen became the most sophisticated version of the Java-era authoring/runtime architecture.",
+          "It used reusable EWidgets and Java WebStart to support a large number of configurable learning activities and became the peak period for the multidisciplinary production team."
+        ]
+      },
+      {
+        "title": "Version 5.5 / I-Planet",
+        "paragraphs": [
+          "I-Planet was a working prototype that brought the existing suite into a more heavily gamified presentation model.",
+          "The prototype supported the programs but was ultimately rejected because the product direction was considered too gamified for the company's offering."
+        ]
+      },
+      {
+        "title": "Version 6",
+        "paragraphs": [
+          "Version 6 was the major HTML5 migration that moved the school suite to a web-only student platform for PC and Mac environments.",
+          "It replaced the aging Java/Applet/WebStart delivery model with JavaScript, HTML5, Canvas, PHP, JSON, and cloud-hosted infrastructure."
+        ]
+      },
+      {
+        "title": "Version 6 Specialized Engines",
+        "paragraphs": [
+          "Several products needed specialized runtimes while still conforming to the common Version 6 platform contract."
+        ],
+        "items": [
+          "Version 6 MM: Mad Minute specialized engine",
+          "Version 6 NL: New Look overhaul",
+          "Version 6 R2S: Read to Succeed specialized engine"
+        ]
+      },
+      {
+        "title": "Version 7",
+        "paragraphs": [
+          "Version 7 moved the platform toward a generalized component-driven architecture designed around user-created content and more flexible lesson composition.",
+          "It incorporated lessons learned from earlier EWidget systems, Version 6 simplification, and the richer component behavior developed for Read to Succeed."
+        ]
+      },
+      {
+        "title": "Specialized Runtimes, Standardized Platform Contracts",
+        "paragraphs": [
+          "Programs such as Read to Succeed and Mad Minute could use specialized student runtimes while still participating in the same broader platform.",
+          "They were expected to integrate with common login, assignments, pretests, progress summaries, charts, notifications, reporting, and teacher-management systems just like conventional programs."
+        ]
+      },
+      {
+        "title": "Hierarchical Content Localization",
+        "paragraphs": [
+          "I designed a sparse-override localization system that allowed program content to vary by country, state or province, district, and in exceptional cases an individual school.",
+          "Each program retained a shared base content set while S3 localization folders stored only the questions, images, and sounds that differed for a particular location.",
+          "Customer Service configured a customer's geography during account setup. When localized content existed for that program and location, the platform selected it first and otherwise fell back to the shared base assets."
+        ]
+      },
+      {
+        "title": "Localization Without Forking Programs",
+        "paragraphs": [
+          "The localization architecture avoided making full copies of an entire program just to change a small amount of curriculum or media.",
+          "This made regional variants feel custom-built to schools while keeping the majority of the application and content synchronized with the core product."
+        ]
+      },
+      {
+        "title": "Multilingual Program Support",
+        "paragraphs": [
+          "The suite later supported multilingual program variants, including AI-assisted conversion of Spanish Math and selected K–3 Reading and ELL content.",
+          "The full AI translation workflow, team leadership, voice generation, graphics conversion, and human-review process are better represented as a separate portfolio project."
+        ]
+      },
+      {
+        "title": "Continuous Modernization",
+        "paragraphs": [
+          "The suite remained an active product line rather than a one-time development project.",
+          "Over the years I continuously remastered, migrated, maintained, and extended the programs as operating systems, browsers, delivery technologies, cloud infrastructure, reporting requirements, and curriculum needs changed."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/work/java.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/work/java.jpg"
+    },
+
     "items": [
       {
         "type": "image",
@@ -77,20 +338,9 @@
           "featureSupporting"
         ]
       }
-    ],
-    "thumbnail": "images/skills/work/java.jpg",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/work/java.jpg"
-    }
+    ]
   },
-  "meta": {
-    "legacySubtitle": "J2SE, Java2D, ISAM DB, BerkeleyDB, JNI, JNLP, Flash, AWS, SimpleDB, PHP",
-    "provenance": {
-      "legacyCategory": "Work",
-      "legacyIndex": 4
-    }
-  },
+
   "featured": {
     "heroImage": "images/Design.png",
     "supportingImages": [
@@ -98,8 +348,177 @@
       "images/Design_2.jpg",
       "images/Design_3.jpg"
     ],
-    "overlayTitle": "Web Design",
-    "overlayText": "HTML5, Canvas, CSS, CreateJS, AWS, Ajax, Custom Engine",
-    "description": "Designed and developed the UI and UX for web applications used by 1000's of daily primary school students."
+    "overlayTitle": "K–6 Learning Platform",
+    "overlayText": "80+ Programs | 50,000+ Activities | ~1,000 Activity Types",
+    "description": "Architected, developed, modernized, and led production of a multi-generation K–6 learning suite used across schools for decades."
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The original portfolio card used an exact count of 81 programs.",
+      "A later production login 'Choose Your Program' inventory contains 85 named entries.",
+      "The public count should remain 80+ because the exact total depends on whether closely related curriculum/localization variants are counted as separate programs.",
+      "Examples include Standard Measurement and Metric Measurement, which share the same core program, questions, and graphics while changing the measurement system.",
+      "The production program inventory was copied directly from the live production program-selection list rather than reconstructed from memory.",
+      "Version 1 and Sight Words were already underway when Jamie joined Essential Skills in 1999.",
+      "Jamie initially worked in developer assistance and technical support while the original developer trained him.",
+      "The original developer and Jamie worked together for approximately one year on programs including Super Phonics, Grammar, Spelling, and Vocabulary.",
+      "After that developer left, Jamie took on major Math-program development work, including royalty-based development performed from home.",
+      "Jamie progressed from developer help / technical support to management and eventually into software architecture and design.",
+      "The Diagnostics program was one of the early projects where Jamie took on explicit architecture/design responsibility.",
+      "During the Hydra-Gen era Jamie managed a core team of seven.",
+      "The Hydra-Gen core team included Jamie, a former Sun Microsystems contractor, the original Version 1 designer/developer as a part-time subcontractor, another full-time developer, two full-time content-entry/QA/technical-support/IT staff, and one full-time artist.",
+      "The vice president was a teacher and collaborated closely with Jamie on product direction.",
+      "Jamie also worked extensively with approximately four to five additional teachers who created curriculum/content.",
+      "Approximately three subcontract artists contributed activity imagery in addition to the full-time graphic artist.",
+      "A DJ in Ottawa recorded hundreds of hours of voice work for the learning suite.",
+      "Jamie and members of the team visited schools and tested Hydra-Gen with real classes of students.",
+      "Teachers and curriculum specialists designed pedagogy/content; content-entry staff entered and formatted it; artists created graphics; developers built engines/activity types; QA tested the resulting programs.",
+      "Typical programs contained hundreds of activities and were designed for repeated practice over several months of classroom use.",
+      "A typical program could contain 30+ units, but exact program size varied significantly.",
+      "Public scale metrics: 80+ production programs, 50,000+ lesson activities, ~1,000 activity types.",
+      "Platform lineage: Version 1 Java 1.1.8; Version 2 / SE Java 1.2 and OS X/JNI migration; Version 3 New Look; Version 4 desktop/web transition with brief Flash work; Version 5 Hydra-Gen/Java WebStart; Version 5.5 I-Planet prototype; Version 6 HTML5; Version 6 MM; Version 6 NL; Version 6 R2S; Version 7 component-driven/user-content-oriented architecture.",
+      "I-Planet was a working prototype containing the programs but was rejected because its presentation was considered too gamified.",
+      "Read to Succeed and Mad Minute are examples of specialized runtimes integrated behind standard Version 6 platform contracts.",
+      "Jamie designed a sparse hierarchical localization system using S3 folders containing only localized differences rather than complete program copies.",
+      "Localization could be applied at country, state/province, district, and in exceptional cases school level.",
+      "Localized overrides could replace questions, images, and sounds while falling back to the shared base content.",
+      "Texas Math was a purpose-built curriculum variant rather than merely a localization override, but it could still use the same localization mechanism.",
+      "Spanish Math was later fully remade into Spanish using an AI-assisted conversion workflow covering questions, audio, and graphics.",
+      "Several K–3 Reading and ELL programs were also converted into 10 languages, while intentionally retaining English where pedagogically appropriate.",
+      "The detailed AI multilingual production workflow should receive a separate portfolio card.",
+      "The suite remains live, and Present is used on this umbrella card to represent the long-lived product lineage and continued production use rather than continuous employment."
+    ],
+
+    "confidence": {
+      "start1999": "high",
+      "presentProductLine": "high",
+      "programCount80Plus": "high",
+      "legacyExact81": "medium",
+      "productionInventory85Entries": "high",
+      "activityCount50000Plus": "high",
+      "activityTypesApprox1000": "high",
+      "hydraGenCoreTeamSeven": "high",
+      "curriculumTeachersFourToFive": "medium-high",
+      "subcontractArtistsApproxThree": "medium-high",
+      "hundredsHoursVoiceWork": "high",
+      "classroomTesting": "high",
+      "typicalProgramHundredsActivities": "high",
+      "typicalSeveralMonthsUse": "medium-high",
+      "platformLineage": "high",
+      "hierarchicalLocalization": "high",
+      "aiMultilingualMention": "high"
+    },
+
+    "canonicalProgramInventory": [
+      "Complete Reading Grade K",
+      "Complete Reading Grade 1",
+      "Complete Reading Grade 2",
+      "Complete Reading Grade 3",
+      "Readiness Skills",
+      "Phonemic Awareness",
+      "Sight Words",
+      "Sight Words 2",
+      "Super Phonics",
+      "Super Phonics 2",
+      "Reading Comprehension",
+      "Reading Comprehension 2",
+      "Reading Comprehension 3",
+      "Reading Comprehension 4",
+      "Reading Comprehension 5",
+      "Reading Comprehension 6",
+      "Vocabulary Builder 3",
+      "Vocabulary Builder 4",
+      "Vocabulary Builder 5",
+      "Vocabulary Builder 6",
+      "Creative Writing",
+      "Writing Fundamentals",
+      "Grammar",
+      "Fun With Spelling",
+      "Fun With Spelling 2",
+      "Fun With Spelling 3",
+      "Spell Master 4",
+      "Spell Master 5",
+      "Spell Master 6",
+      "Spelling Stumpers 1 to 5",
+      "Spelling Stumpers 5 to 9",
+      "Complete Math Grade K-1",
+      "Complete Math Grade 2",
+      "Complete Math Grade 3",
+      "Español Matemáticas Grado K-1",
+      "Español Matemáticas Grado 2",
+      "Español Matemáticas Grado 3",
+      "Texas Math Grade 1",
+      "Texas Math Grade 2",
+      "Texas Math Grade 3",
+      "Mastering Numeration 1",
+      "Mastering Numeration 2",
+      "Mastering Numeration 3",
+      "Measurement 1",
+      "Metric Measurement 2",
+      "Standard Measurement 2",
+      "Metric Measurement 3",
+      "Standard Measurement 3",
+      "Patterning 1",
+      "Patterning 2",
+      "Patterning 3",
+      "Data Management 1",
+      "Data Management 2",
+      "Data Management 3",
+      "Geometry 1",
+      "Geometry 2",
+      "Geometry 3",
+      "Problem Solving 2 and 3",
+      "Problem Solving 3 and 4",
+      "Math Operations 4",
+      "Math Operations 5",
+      "Math Operations 6",
+      "Number Concepts 4",
+      "Number Concepts 5",
+      "Number Concepts 6",
+      "Earth and Space Science",
+      "Physical Science",
+      "Life Science",
+      "Map and Globe Skills",
+      "American Geography",
+      "Canadian Geography",
+      "World Geography",
+      "School Stories",
+      "Everyday English",
+      "First Words for ESL",
+      "High Low Readers 2 Plus",
+      "High Low Readers 3",
+      "High Low Readers 3 Plus",
+      "High Low Readers 4",
+      "High Low Readers 4 Plus",
+      "Early Readers Primer",
+      "Early Readers 1",
+      "Early Readers 2",
+      "Early Readers 3",
+      "Mad Minute Math"
+    ],
+
+    "projectTerminology": [
+      "Essential Skills",
+      "K–6 Learning Suite",
+      "Version 1",
+      "Version 2 / SE",
+      "Version 3",
+      "Version 4",
+      "Version 5",
+      "Hydra-Gen",
+      "Version 5.5",
+      "I-Planet",
+      "Version 6",
+      "Version 6 MM",
+      "Version 6 NL",
+      "Version 6 R2S",
+      "Version 7"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Work",
+      "legacyIndex": 4
+    }
   }
 }

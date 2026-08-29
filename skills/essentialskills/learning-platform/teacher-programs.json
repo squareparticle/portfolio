@@ -1,33 +1,378 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/learning-platform/teacher-programs",
-  "title": "Teacher Programs",
+  "title": "Essential Skills Teacher Management & Reporting Systems",
   "project": "Learning Platform",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Application"
+      "Teacher Management Platform",
+      "Assignment & Reporting System"
     ]
   },
+
   "technologies": [
+    "Java",
     "J2SE",
+    "Swing",
     "Java2D",
     "ISAM DB",
-    "BerkeleyDB",
+    "Berkeley DB",
     "JNI",
-    "JNLP",
+    "Java WebStart",
     "Flash",
+    "JavaScript",
+    "HTML5",
+    "Canvas",
+    "CSS3",
+    "jQuery",
+    "Ajax",
+    "PHP",
+    "JSON",
+    "React",
+    "React Charting",
+    "Python",
     "AWS",
     "SimpleDB",
-    "PHP"
+    "Clever",
+    "Edlink",
+    "SAML",
+    "OAuth / SSO"
   ],
+
   "date": {
-    "from": null,
+    "from": "2001",
     "to": null,
-    "display": false
+    "display": true
   },
-  "description": "I designed, architected and developed numerous assignment and reporting applications for schools. Giving teachers the capability of managing students, printing charts and reports, issuing tests and managing assignments.",
+
+  "roles": [
+    "Software Architect",
+    "Senior Full-Stack Developer",
+    "Engineering Lead",
+    "Teacher Platform Developer",
+    "Reporting Systems Developer",
+    "Database Architect",
+    "UI/UX Designer"
+  ],
+
+  "description": "I repeatedly redesigned and rebuilt the teacher-management side of the Essential Skills platform as the student suite evolved from desktop Java through WebStart, Flash, HTML5, and React. The systems gave teachers a common way to manage classes and students, create assignments, run pre/post tests, review progress, print reports, analyze skills, view summaries and charts, and configure specialized programs. Later generations also integrated rostering, SSO, notifications, rewards, R2S, Mad Minute, and the Spelling Editor.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "A Multi-Generation Teacher Platform",
+        "paragraphs": [
+          "The original Version 1 teacher-management application already existed when I joined Essential Skills.",
+          "Beginning with Version 2, I took ownership of the teacher-management lineage and repeatedly redesigned or rebuilt it as the student platform, databases, deployment model, reporting requirements, and teacher workflows changed."
+        ]
+      },
+
+      {
+        "title": "Version 1",
+        "paragraphs": [
+          "The original teacher application predates my ownership and was already in production when I joined the company.",
+          "It established the core idea of a customer-facing classroom-management application separate from the internal curriculum-authoring tools."
+        ]
+      },
+
+      {
+        "title": "Version 2: ISAM B-Tree Redesign",
+        "paragraphs": [
+          "I redesigned the teacher-management application around the new ISAM B-tree database architecture I had created.",
+          "The Java desktop application worked against shared school data stored on the local/network server so teachers could manage students and review marks produced by student workstations."
+        ],
+        "items": [
+          "Class and student management",
+          "Student password management",
+          "Four printable report types",
+          "Shared school/server database access"
+        ]
+      },
+
+      {
+        "title": "Version 3",
+        "paragraphs": [
+          "A Version 3 teacher-management generation existed between the Version 2 redesign and the later Flash migration, but the exact architectural and feature differences are not currently remembered with enough confidence to describe publicly."
+        ]
+      },
+
+      {
+        "title": "Version 4: Java-to-Flash Migration",
+        "paragraphs": [
+          "I migrated the Version 3-era teacher-management application from Java into Flash as the company explored browser-delivered software.",
+          "The core teacher workflows remained centered on class/student administration, passwords, and printable reporting."
+        ]
+      },
+
+      {
+        "title": "Version 5: Major Workflow & Reporting Redesign",
+        "paragraphs": [
+          "Version 5 was a complete redesign informed by years of customer feedback and the move toward Rosetta/cloud-backed data with Java WebStart.",
+          "The teacher platform expanded beyond basic student administration and reports into assignment management, assessment, placement, retention, skill reporting, and class-level visualization."
+        ],
+        "items": [
+          "Class and student management",
+          "Password management",
+          "Printable reports",
+          "Class-summary bar graphs",
+          "Pre-tests",
+          "Post-tests",
+          "Skill-based reporting",
+          "Add / reset / remove assignments",
+          "Excel-based rostering"
+        ]
+      },
+
+      {
+        "title": "Pre-Test Placement",
+        "paragraphs": [
+          "Pre-tests were integrated directly into the assignment system.",
+          "A student's pre-test results could automatically create an assignment containing only the sections of a program where the student showed weakness, allowing the student to skip material they had already demonstrated."
+        ]
+      },
+
+      {
+        "title": "Post-Test Retention",
+        "paragraphs": [
+          "Post-tests measured retention after a student completed the assigned learning material.",
+          "They could also be used periodically afterward, such as monthly, to determine whether previously mastered skills had been retained."
+        ]
+      },
+
+      {
+        "title": "Flexible Assignments",
+        "paragraphs": [
+          "Teachers could assign an entire program or selected sections of a program.",
+          "Assignments could target an individual student, a group of students, or an entire class."
+        ]
+      },
+
+      {
+        "title": "Version 6: One-Page Teacher Workflow",
+        "paragraphs": [
+          "For the HTML5 Version 6 migration I redesigned the teacher application around a single-page progressive workflow.",
+          "Instead of separating related tasks into independent tabs that repeatedly asked teachers to choose the same context, the interface let the teacher select a class, then student, then program, and finally choose an action such as assignments or reports.",
+          "Each step filled in and highlighted as the teacher progressed, keeping the current classroom context visible throughout the workflow."
+        ]
+      },
+
+      {
+        "title": "Shared Context Instead of Feature Tabs",
+        "paragraphs": [
+          "The Version 6 interaction model was a deliberate UI/UX departure from the Hydra-Gen teacher application.",
+          "Hydra-Gen had organized major functions into separate feature tabs, which often required teachers to reselect classes, students, and programs in each area.",
+          "Version 6 treated class, student, and program as shared context and placed reporting and assignment actions beneath that context."
+        ]
+      },
+
+      {
+        "title": "Version 6 Administration",
+        "paragraphs": [
+          "Version 6 retained the Version 5 functionality while adding separate teacher and administrator access.",
+          "Teachers operated within their own classroom context, while administrators could access the teachers under their school account."
+        ]
+      },
+
+      {
+        "title": "Version 6.1: Traditional Web Dashboard Redesign",
+        "paragraphs": [
+          "Although I liked the streamlined Version 6 workflow, ownership preferred a more conventional dashboard design, so I redesigned the application again from top to bottom.",
+          "Version 6.1 used raw HTML5, Canvas, CSS, jQuery, and JavaScript and established much of the visual language that later carried forward into the React Teacher Dashboard."
+        ],
+        "items": [
+          "Bar-chart summaries",
+          "Line-chart summaries",
+          "Pie-chart summaries",
+          "Summary lists organized by date",
+          "Notifications",
+          "Favorite programs"
+        ]
+      },
+
+      {
+        "title": "Custom Canvas Charts",
+        "paragraphs": [
+          "Before adopting a charting library in the React generation, I created the Version 6.1 bar, line, and pie charts directly in HTML5 Canvas."
+        ]
+      },
+
+      {
+        "title": "Parent Portal Design Lineage",
+        "paragraphs": [
+          "The later Parent Portal was built with the same technology stack and a closely related visual design to Version 6.1.",
+          "The surviving Parent Portal therefore provides a useful visual reference for the Version 6.1 dashboard generation even though the original Version 6.1 Teacher Dashboard is no longer available."
+        ]
+      },
+
+      {
+        "title": "Version 6.2: React Teacher Dashboard",
+        "paragraphs": [
+          "The next major generation rebuilt the teacher application in React while retaining much of the visual direction established by Version 6.1.",
+          "The React Teacher Dashboard has its own portfolio card, but it represents the culmination of this earlier teacher-management lineage."
+        ]
+      },
+
+      {
+        "title": "React Generation Expansion",
+        "paragraphs": [
+          "The React generation expanded the shared teacher platform substantially."
+        ],
+        "items": [
+          "Notifications",
+          "Multiple summary types",
+          "Charting through React chart components",
+          "Teacher favorite programs",
+          "Class settings",
+          "Reward configuration: Magies, Badges, or Stars",
+          "Summary shortcuts directly into detailed reports",
+          "Fast grouping shortcuts for reporting and assignments"
+        ]
+      },
+
+      {
+        "title": "Teacher Notifications",
+        "paragraphs": [
+          "When teachers logged in, they could see a notification count using the familiar numbered-badge interaction common to social platforms.",
+          "Notifications surfaced events that needed teacher attention."
+        ],
+        "items": [
+          "Student handed in an assignment",
+          "Student completed a program",
+          "Student completed a pre-test",
+          "Student completed a post-test"
+        ]
+      },
+
+      {
+        "title": "Standard Reporting",
+        "paragraphs": [
+          "The teacher platform exposed several standard report families for normal Essential Skills programs, including activity-, unit-, and skill-oriented reporting plus higher-level summaries and charts.",
+          "Reports were printable in the early desktop generations, when supporting different printer environments was itself a production concern."
+        ]
+      },
+
+      {
+        "title": "Skill Reporting",
+        "paragraphs": [
+          "Later generations could reorganize student performance around curriculum skills rather than only around the original activity or unit structure.",
+          "This allowed teachers to see which underlying skills a student had mastered or was still struggling with."
+        ]
+      },
+
+      {
+        "title": "Specialized Programs Inside One Teacher Platform",
+        "paragraphs": [
+          "Some products had domain models that did not naturally fit the standard teacher reports or settings.",
+          "Rather than leaving those products permanently isolated, I integrated their specialized functionality into the master teacher experience."
+        ]
+      },
+
+      {
+        "title": "Mad Minute Integration",
+        "paragraphs": [
+          "Mad Minute historically had its own standalone desktop teacher dashboard because its timed-drill model and reports differed from conventional Essential Skills programs.",
+          "For the modern platform I created specialized reporting and settings integrations so teachers could manage Mad Minute from the master React Teacher Dashboard."
+        ]
+      },
+
+      {
+        "title": "Read to Succeed Integration",
+        "paragraphs": [
+          "Read to Succeed also originated as a specialized standalone product family.",
+          "After its migration into Version 6, R2S still adhered to the common teacher-platform contract for assignments, pretests, summaries, charts, notifications, reports, and student management."
+        ]
+      },
+
+      {
+        "title": "Spelling Editor Integration",
+        "paragraphs": [
+          "The modern Angular Spelling Editor retains its own specialized interface, but teachers access it through the master React Teacher Dashboard.",
+          "This preserved a dedicated authoring experience while keeping it connected to the common classroom-management workflow."
+        ]
+      },
+
+      {
+        "title": "Rostering & Multi-Class Students",
+        "paragraphs": [
+          "Version 5 supported spreadsheet-based rostering.",
+          "Later generations integrated with external rostering and identity providers including Clever and Edlink.",
+          "For schools not using those services, the React generation also removed the older one-teacher/one-class restriction so students could be connected to multiple classes."
+        ]
+      },
+
+      {
+        "title": "Clever, Edlink & SSO Integration",
+        "paragraphs": [
+          "The React teacher platform became the management surface for increasingly complex school identity and rostering integrations."
+        ],
+        "items": [
+          "Clever Library",
+          "Clever Secure Sync",
+          "Edlink",
+          "NYC DOE SAML / SSO"
+        ]
+      },
+
+      {
+        "title": "District Portal",
+        "paragraphs": [
+          "I also built a separate District Portal for administrators managing multiple schools.",
+          "District administrators could enter the context of individual schools and teachers, run the same reports, and add, move, or remove students across schools from the district-level interface."
+        ]
+      },
+
+      {
+        "title": "District-Level Data Aggregation",
+        "paragraphs": [
+          "District-wide reporting created a scaling problem because querying every school's detailed marks live could take many minutes.",
+          "I solved this by building a nightly crawler that collected and summarized school-level marks into district-oriented data structures, allowing district dashboards to load aggregate results quickly instead of executing one enormous live query."
+        ]
+      },
+
+      {
+        "title": "Parent Portal",
+        "paragraphs": [
+          "The Parent Portal was created separately from the teacher applications because its user, permissions, and workflow were different.",
+          "It reused ideas and visual patterns from the Version 6.1 teacher generation while presenting a simplified family-oriented view of student progress."
+        ]
+      },
+
+      {
+        "title": "Customer-Facing vs Internal Tools",
+        "paragraphs": [
+          "The Teacher Dashboard, Parent Portal, and District Portal were customer-facing management products.",
+          "They were distinct from internal production tools such as Hydra-Gen and other curriculum/content-authoring systems used by Essential Skills staff."
+        ]
+      },
+
+      {
+        "title": "Version 7 Teacher Tools",
+        "paragraphs": [
+          "A complete Version 7 assignment/reporting dashboard was never finished.",
+          "I did, however, build the Version 7 teacher content-creation system to near-release status; that work eventually evolved into the modern Spelling Editor."
+        ]
+      },
+
+      {
+        "title": "Continuous Redesign",
+        "paragraphs": [
+          "The teacher platform was not a single application maintained unchanged for decades.",
+          "I repeatedly reevaluated its database model, deployment architecture, workflow, reporting, visual design, assessment model, and integrations as the learning platform evolved."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/work/marksman.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/work/marksman.jpg"
+    },
+
     "items": [
       {
         "type": "image",
@@ -45,15 +390,87 @@
         "type": "image",
         "src": "images/skills/work/marksman_4.jpg"
       }
-    ],
-    "thumbnail": "images/skills/work/marksman.jpg",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/work/marksman.jpg"
-    }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "J2SE, Java2D, ISAM DB, BerkeleyDB, JNI, JNLP, Flash, AWS, SimpleDB, PHP",
+    "historicalNotes": [
+      "The original Version 1 teacher-management application already existed when Jamie joined Essential Skills in 1999.",
+      "The umbrella card begins around 2001 because Version 2 is the first teacher-management generation Jamie remembers redesigning as his own architecture.",
+      "Version 2 was redesigned around Jamie's custom ISAM B-tree database architecture.",
+      "Exact Version 3 teacher-dashboard changes are currently not remembered with enough confidence for detailed public claims.",
+      "Version 4 migrated the prior Java teacher application to Flash.",
+      "Version 5 was a major redesign based on accumulated customer feedback and the move toward Rosetta/cloud data and Java WebStart.",
+      "Version 5 added class-summary bar charts, pre/post tests, assignment add/reset/remove, skill reporting, and Excel-based rostering.",
+      "Pre-tests could automatically build assignments containing only the program sections where the student demonstrated weakness.",
+      "Post-tests were used to measure retention after program completion and could be repeated periodically afterward.",
+      "Teachers could assign an entire program or selected sections to one student, groups of students, or an entire class.",
+      "Version 6 rebuilt the teacher application for HTML/web and used a single-page progressive Class -> Student -> Program -> Assignment/Report workflow.",
+      "The Version 6 workflow deliberately treated class/student/program as shared context rather than forcing teachers to reselect them in independent feature tabs.",
+      "Version 6 added teacher versus administrator logins, with administrators able to access all teachers under their scope.",
+      "Version 6.1 was another complete HTML redesign using raw HTML5, Canvas, CSS, jQuery, and JavaScript.",
+      "Version 6.1 added custom Canvas bar/line/pie charts, date-oriented summaries, notifications, and favorite programs.",
+      "The surviving Parent Portal uses the same general technology/design lineage and is a visual proxy for Version 6.1; it should not be represented as an actual screenshot of the missing Teacher Dashboard.",
+      "Version 6.2 was the React Teacher Dashboard and has its own dedicated portfolio card.",
+      "The React generation retained much of Version 6.1's visual language while adding richer features.",
+      "React-generation features included notifications, multiple summary types, teacher favorites, class reward settings, report shortcuts, grouping shortcuts, specialized program integrations, rostering/SSO integrations, and support for students belonging to multiple classes.",
+      "Known notification types include assignment hand-in, program completion, pre-test completion, and post-test completion.",
+      "Early Java teacher applications were installed on teacher/admin workstations and read shared ISAM/Berkeley DB school data from local/network servers.",
+      "Later generations migrated toward Rosetta/cloud/SimpleDB-backed architectures.",
+      "The early generations supported four printable standard report types; exact canonical names of all four should follow surviving screenshots/source evidence rather than memory if later needed.",
+      "Skill-based reporting was added in Version 5.",
+      "Mad Minute and Read to Succeed historically had specialized teacher/reporting systems but were integrated into the master React Teacher Dashboard.",
+      "Mad Minute required specialized reporting/settings plugins because its timed-drill model did not fit normal reports.",
+      "The Angular Spelling Editor retains its own dashboard/interface but is launched through the master React Teacher Dashboard.",
+      "The React dashboard integrated Clever Library/Secure Sync, Edlink, and NYC DOE SAML/SSO.",
+      "The District Portal was a separate customer-facing system.",
+      "Jamie created a nightly district crawler/aggregation process because live district-wide queries across every school's detailed marks were too slow.",
+      "District administrators could access teacher-level functionality across schools, including reports and student add/move/remove operations.",
+      "The Parent Portal was separate from the Teacher Dashboard and District Portal.",
+      "Teacher, Parent, and District portals were customer-facing products, unlike internal curriculum-authoring tools such as Hydra-Gen.",
+      "A full Version 7 reporting/assignment dashboard was never completed.",
+      "The Version 7 teacher content creator reached near-release form and later evolved into the Spelling Editor.",
+      "The overall teacher-management lineage demonstrates repeated visual, workflow, database, reporting, and deployment redesign rather than simple cosmetic remakes."
+    ],
+
+    "confidence": {
+      "startAround2001": "medium-high",
+      "version1PredatesJamie": "high",
+      "version2IsamRedesign": "high",
+      "version3Details": "low",
+      "version4FlashMigration": "high",
+      "version5MajorRedesign": "high",
+      "version5PrePostTesting": "high",
+      "version5SkillReporting": "high",
+      "version5ExcelRostering": "high",
+      "version6SinglePageWorkflow": "high",
+      "version61CanvasDashboard": "high",
+      "parentPortalAsVersion61VisualProxy": "high",
+      "version62ReactLineage": "high",
+      "districtNightlyAggregation": "high",
+      "specializedProgramIntegration": "high",
+      "stillActiveLineage": "high"
+    },
+
+    "projectTerminology": [
+      "Marks Manager",
+      "Teacher Dashboard",
+      "Version 2",
+      "Version 4",
+      "Hydra-Gen",
+      "Version 5",
+      "Version 6",
+      "Version 6.1",
+      "Version 6.2",
+      "React Teacher Dashboard",
+      "Pre-Test",
+      "Post-Test",
+      "Assignments",
+      "Skills Reports",
+      "District Portal",
+      "Parent Portal"
+    ],
+
     "provenance": {
       "legacyCategory": "Work",
       "legacyIndex": 5
