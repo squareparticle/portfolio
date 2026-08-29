@@ -1,31 +1,252 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/teacher-dashboard/react",
-  "title": "Teacher Dashboard",
+  "title": "React Teacher Administration & Reporting Dashboard",
   "project": "Teacher Dashboard",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Application"
+      "Teacher Administration Platform",
+      "Reporting Dashboard",
+      "Production Web Application"
     ]
   },
+
   "technologies": [
-    "React",
-    "Bootstrap",
-    "Chartjs",
+    "React 16",
+    "React Router",
     "Redux",
+    "React Redux",
     "Redux-Observable",
-    "RXJS",
+    "RxJS",
     "Axios",
-    "Lodash"
+    "Bootstrap 4",
+    "React Bootstrap",
+    "Chart.js",
+    "react-chartjs-2",
+    "Formik",
+    "Yup",
+    "Lodash",
+    "Ramda",
+    "Immer",
+    "Styled Components",
+    "PHP",
+    "AWS SimpleDB",
+    "AWS"
   ],
+
   "date": {
-    "from": null,
+    "from": "2019",
     "to": null,
-    "display": false
+    "display": true
   },
-  "description": "I redesigned and developed the Admin/Teacher dashboard using React.",
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Lead Full-Stack Developer / Software Architect",
+    "total": 1,
+    "contributors": []
+  },
+
+  "roles": [
+    "Lead Full-Stack Developer",
+    "Software Architect",
+    "React Developer",
+    "UI/UX Designer",
+    "Frontend Developer",
+    "Backend Integration Developer",
+    "Reporting Systems Developer",
+    "Database Application Developer"
+  ],
+
+  "description": "I designed and built the 2019 React replacement for the Essential Skills Teacher Dashboard, rebuilding the earlier JavaScript administration and reporting system as a production React application. I handled the UI/UX redesign, frontend architecture, request orchestration, reporting, teacher/admin workflows, and integration with the existing PHP, AWS, and SimpleDB backend. The React generation became the long-term production Teacher Dashboard and was never replaced.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "2019 React Replacement",
+        "paragraphs": [
+          "This application replaced the earlier JavaScript-based Teacher Dashboard in 2019.",
+          "I rebuilt the administration and reporting experience in React while preserving and extending the platform capabilities that schools already depended on."
+        ]
+      },
+      {
+        "title": "Solo Development",
+        "paragraphs": [
+          "I built the React Teacher Dashboard myself.",
+          "I designed the UI/UX and then reviewed the resulting direction with the company owners for approval."
+        ]
+      },
+      {
+        "title": "Production Full-Stack Architecture",
+        "paragraphs": [
+          "React formed the frontend while the existing production backend remained primarily PHP, AWS, and SimpleDB.",
+          "The application used Axios, Redux, Redux-Observable, and RxJS to coordinate communication between the browser and backend services."
+        ]
+      },
+      {
+        "title": "Centralized Request Pipeline",
+        "paragraphs": [
+          "The conventional Redux / Redux-Observable approach created excessive boilerplate for the number of backend operations in the dashboard.",
+          "A straightforward endpoint could require roughly seven related files, which did not scale well as the application grew.",
+          "I replaced the repeated per-endpoint structure with a centralized request pipeline that routed all requests through one shared set of Redux/RxJS infrastructure."
+        ]
+      },
+      {
+        "title": "Declarative Request Descriptors",
+        "paragraphs": [
+          "Feature code created request descriptors containing the backend function name and parameters rather than creating a new Redux/RxJS implementation for every operation.",
+          "The shared request system interpreted those descriptors, sent the request to the backend, and returned the results through the common state-management path."
+        ],
+        "items": [
+          "func: backend operation to execute",
+          "params: operation parameters",
+          "altName: optional alternate result/state name",
+          "nextRequest: optional chained request"
+        ]
+      },
+      {
+        "title": "Chained Request Orchestration",
+        "paragraphs": [
+          "The request model supported a nextRequest property that allowed one completed request to trigger the next request in a sequence.",
+          "This made multi-step initialization and data-loading flows declarative without scattering orchestration across many components or duplicating transport infrastructure."
+        ],
+        "items": [
+          "getCustomer",
+          "getAllPrograms",
+          "getAllUserPrograms",
+          "trackNewVersionTeacher",
+          "getAllClasses",
+          "getStudentsForClass",
+          "getAllStudentsForSchool"
+        ]
+      },
+      {
+        "title": "Teacher and Administrator Access",
+        "paragraphs": [
+          "The dashboard supported both teacher and administrator accounts.",
+          "Teachers worked within their own classes and students, while school administrators could access and manage all teachers within the school."
+        ]
+      },
+      {
+        "title": "Class and Student Management",
+        "paragraphs": [
+          "The React generation handled the core teacher-management workflows for classes and students.",
+          "This was also the generation where students could belong to multiple classes even when the school was not using an external rostering integration."
+        ],
+        "items": [
+          "Create and manage classes",
+          "Manage students",
+          "Place students in multiple classes",
+          "Group students for assignments and reports",
+          "Administrator access across teachers"
+        ]
+      },
+      {
+        "title": "Assignments and Assessment Workflows",
+        "paragraphs": [
+          "Teachers could assign complete programs or selected sections to individual students, groups, or classes.",
+          "The dashboard also integrated the suite's pretest and posttest workflows and surfaced the resulting progress information through reporting."
+        ]
+      },
+      {
+        "title": "Reports and Charts",
+        "paragraphs": [
+          "I built reporting views using Chart.js and react-chartjs-2.",
+          "The dashboard presented summary and detailed progress information through charts, reports, and drill-down views for teachers and administrators."
+        ]
+      },
+      {
+        "title": "Notifications",
+        "paragraphs": [
+          "The dashboard included teacher notifications for important student activity and completion events."
+        ],
+        "items": [
+          "Assignment handed in",
+          "Program completed",
+          "Pretest completed",
+          "Posttest completed"
+        ]
+      },
+      {
+        "title": "Favorite Programs",
+        "paragraphs": [
+          "Teachers could mark commonly used programs as favorites to make frequently assigned curriculum easier to access."
+        ]
+      },
+      {
+        "title": "Class and Reward Settings",
+        "paragraphs": [
+          "The dashboard exposed class-level configuration and reward settings used by the student applications."
+        ],
+        "items": [
+          "Magies",
+          "Badges / achievements",
+          "Stars",
+          "Program and class settings"
+        ]
+      },
+      {
+        "title": "Mad Minute Integration",
+        "paragraphs": [
+          "The React dashboard absorbed the specialized Mad Minute teacher controls into the main administration platform.",
+          "Teachers could configure Mad Minute behavior and access its specialized reporting without returning to the old standalone desktop dashboard."
+        ],
+        "items": [
+          "Drill length",
+          "Drills per session",
+          "Mastery threshold",
+          "Horizontal / vertical question layout",
+          "Highest / master level",
+          "Menu behavior",
+          "Specialized Mad Minute reports"
+        ]
+      },
+      {
+        "title": "Read to Succeed Integration",
+        "paragraphs": [
+          "Read to Succeed used a specialized student runtime but integrated into the same React administration and reporting platform.",
+          "Teachers managed its assignments, student progress, and reporting through the common dashboard."
+        ]
+      },
+      {
+        "title": "Spelling Editor Integration",
+        "paragraphs": [
+          "The later web-based Spelling Editor had its own Angular application, but teachers launched and accessed it through the React Teacher Dashboard.",
+          "This kept specialized authoring tools connected to the main teacher workflow."
+        ]
+      },
+      {
+        "title": "Roster and SSO Integrations",
+        "paragraphs": [
+          "The dashboard became the operational interface for multiple school rostering and authentication integrations."
+        ],
+        "items": [
+          "Clever Library",
+          "Clever Secure Sync",
+          "Edlink",
+          "NYC DOE SAML / SSO"
+        ]
+      },
+      {
+        "title": "Long-Term Production Generation",
+        "paragraphs": [
+          "The React dashboard was never replaced by another complete Teacher Dashboard generation.",
+          "It became the long-lived production administration and reporting system while additional features, integrations, and specialized tools continued to be added around it."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/fullstack/dashboard.gif",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/fullstack/dashboard.gif"
+    },
+
     "items": [
       {
         "type": "image",
@@ -35,15 +256,77 @@
         "type": "image",
         "src": "images/skills/fullstack/dashboard_2.gif"
       }
-    ],
-    "thumbnail": "images/skills/fullstack/dashboard.gif",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/fullstack/dashboard.gif"
-    }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "React 16, Bootstrap, Chartjs, Redux, Redux-Observable, RXJS, Axios, Lodash",
+    "historicalNotes": [
+      "The legacy portfolio card described this only as a React redesign of the Admin/Teacher Dashboard.",
+      "This was the 2019 React replacement for the earlier JavaScript Teacher Dashboard.",
+      "Jamie built the React application alone.",
+      "Jamie designed the UI/UX and reviewed the design with the owners for approval.",
+      "The backend remained primarily PHP + AWS SimpleDB / AWS while React became the frontend.",
+      "Redux, Redux-Observable, RxJS, and Axios were used for backend communication and asynchronous state orchestration.",
+      "Jamie found the conventional per-endpoint Redux/Redux-Observable structure too verbose, requiring roughly seven files per endpoint.",
+      "He consolidated request handling into one shared infrastructure path rather than creating the same Redux/RxJS boilerplate repeatedly.",
+      "Feature code supplied declarative request objects containing func, params, optional altName, and optional nextRequest.",
+      "nextRequest allowed asynchronous backend operations to be chained declaratively.",
+      "A recovered example chains getCustomer -> getAllPrograms -> getAllUserPrograms -> trackNewVersionTeacher -> getAllClasses -> getStudentsForClass -> getAllStudentsForSchool.",
+      "The request system should be described as a custom centralized pipeline built on top of Redux/RxJS rather than as replacing Redux entirely.",
+      "The dashboard supported teacher and administrator logins, with administrators able to access all teachers in their school.",
+      "This generation supported students belonging to multiple classes even without third-party roster integrations.",
+      "Major functionality included class/student management, assignments, pretests/posttests, reports/charts, notifications, favorites, class/reward settings, Mad Minute, Read to Succeed, Spelling Editor access, and school integrations.",
+      "Chart.js / react-chartjs-2 were used for charting.",
+      "The recovered package.json identifies React 16.8.6, Redux 4.0.1, Redux-Observable 1.1.0, RxJS 6.4.0, Axios 0.18.0, Bootstrap 4.3.1, Chart.js 2.8.0, React Router 5.0.0, Formik, Yup, Lodash, Ramda, Immer, and Styled Components.",
+      "The internal package/project name in the recovered package.json was arcshape2.",
+      "The React Teacher Dashboard was never replaced and remained the long-term production dashboard generation.",
+      "The broader history of Marks Manager and earlier Teacher Dashboard generations belongs in the separate Essential Skills Teacher Management & Reporting Systems umbrella card."
+    ],
+
+    "confidence": {
+      "start2019": "high",
+      "soloDevelopment": "high",
+      "uiUxDesignedByJamie": "high",
+      "ownerDesignApproval": "high",
+      "reactFrontend": "high",
+      "phpSimpleDbAwsBackend": "high",
+      "reduxRxjsTransportArchitecture": "high",
+      "sevenFilesPerEndpointProblem": "high",
+      "centralizedRequestPipeline": "high",
+      "declarativeRequestDescriptors": "high",
+      "nextRequestChaining": "high",
+      "teacherAdminAccess": "high",
+      "adminAccessAllTeachers": "high",
+      "multipleClassesWithoutRosterIntegration": "high",
+      "chartJsUsage": "high",
+      "majorDashboardFunctions": "high",
+      "madMinuteIntegration": "high",
+      "readToSucceedIntegration": "high",
+      "spellingEditorIntegration": "high",
+      "cleverEdlinkNycDoeIntegration": "high",
+      "neverReplaced": "high"
+    },
+
+    "projectTerminology": [
+      "Teacher Dashboard",
+      "React",
+      "Redux",
+      "Redux-Observable",
+      "RxJS",
+      "Axios",
+      "nextRequest",
+      "PHP",
+      "SimpleDB",
+      "AWS",
+      "Chart.js",
+      "Mad Minute",
+      "Read to Succeed",
+      "Spelling Editor",
+      "Clever",
+      "Edlink",
+      "NYC DOE"
+    ],
+
     "provenance": {
       "legacyCategory": "Fullstack",
       "legacyIndex": 0

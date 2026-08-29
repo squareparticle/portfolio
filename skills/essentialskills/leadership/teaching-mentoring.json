@@ -1,27 +1,263 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/leadership/teaching-mentoring",
-  "title": "Teaching 2004 - 2015",
+  "title": "Developer Training & Technical Mentorship Program",
   "project": "Leadership",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Technical Leadership"
+      "Technical Leadership",
+      "Developer Onboarding",
+      "Internal Training"
     ]
   },
-  "technologies": [],
+
+  "technologies": [
+    "Java",
+    "Swing",
+    "SQL",
+    "Object-Oriented Design",
+    "Design Patterns",
+    "Data Structures",
+    "Sorting Algorithms"
+  ],
+
   "date": {
     "from": "2004",
     "to": "2015",
-    "display": false
+    "display": true
   },
-  "description": "I taught new programmers with University and College backgrounds how to apply their skill-sets towards our company projects. My courses were designed to place all new programmers at the same level before allowing them access to the main code repository. My Coarse Custom build data Structures Vector LinkList HashTable Binary Tree Sorting Algorithms Insertion Bubble Quick Design Patterns Singlton Observer MVC Factory OOD Custom GUI components SQL and Entities Abstract layers Encapsulation versus Inheritance The end project was a choice of Procedural Fractal Terrain Generator Particle Editor 3D Software Pipeline",
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Technical Mentor / Department Manager",
+    "total": null,
+    "contributors": []
+  },
+
+  "roles": [
+    "Technical Mentor",
+    "Department Manager",
+    "Developer Trainer",
+    "Engineering Lead",
+    "Software Architect",
+    "Java Developer"
+  ],
+
+  "description": "I created and ran a structured Java training and onboarding program for every new developer hire joining my team. The course ran for roughly two to three months at a few hours per week alongside normal project work, and combined core programming concepts with the architecture, conventions, and expectations of our production codebase. New hires implemented data structures, sorting algorithms, design patterns, database mappings, and larger final projects before I considered them ready for deeper work in the main repository.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Why I Created the Program",
+        "paragraphs": [
+          "I created the course after repeatedly finding that academic credentials did not necessarily translate into strong production object-oriented programming or the ability to work safely inside an established codebase.",
+          "New hires could arrive from college or university with useful theoretical knowledge but still need substantial practice in code structure, architecture, maintainability, and the conventions required by our production software.",
+          "The goal was to bring every developer to a dependable common baseline before giving them deeper responsibility in the main code repository."
+        ]
+      },
+      {
+        "title": "Every New Developer Hire",
+        "paragraphs": [
+          "Every new developer I hired went through the course, regardless of educational background.",
+          "It was intended specifically for new developer hires rather than co-op students because the curriculum was too substantial for short placements.",
+          "I can remember at least five developers completing the program."
+        ]
+      },
+      {
+        "title": "Two-to-Three-Month Onboarding",
+        "paragraphs": [
+          "The course typically took about two to three months to complete.",
+          "It was not full-time training. Developers spent a few hours each week on the curriculum while continuing their normal day-to-day responsibilities.",
+          "The program evolved over the years as the production codebase and the needs of new hires changed."
+        ]
+      },
+      {
+        "title": "Pure Java Curriculum",
+        "paragraphs": [
+          "The training was taught entirely in Java.",
+          "I explained each concept first, then required the developer to implement it themselves rather than only reading examples or discussing theory."
+        ]
+      },
+      {
+        "title": "Custom Data Structures",
+        "paragraphs": [
+          "Developers implemented core data structures from scratch after learning the underlying concepts."
+        ],
+        "items": [
+          "Vector",
+          "Linked List",
+          "Hash Table",
+          "Binary Tree"
+        ]
+      },
+      {
+        "title": "Sorting Algorithms",
+        "paragraphs": [
+          "Developers also implemented sorting algorithms directly so they understood the mechanics rather than treating library calls as black boxes."
+        ],
+        "items": [
+          "Insertion Sort",
+          "Bubble Sort",
+          "Quick Sort"
+        ]
+      },
+      {
+        "title": "Design Patterns in Working Code",
+        "paragraphs": [
+          "Design patterns were not taught only as definitions. Developers were required to use them in actual code."
+        ],
+        "items": [
+          "Singleton",
+          "Observer",
+          "MVC",
+          "Factory"
+        ]
+      },
+      {
+        "title": "Object-Oriented Design",
+        "paragraphs": [
+          "A major purpose of the course was improving practical object-oriented design and helping developers understand how to extend an existing architecture without fighting it."
+        ],
+        "items": [
+          "Custom GUI components",
+          "Abstract layers",
+          "Encapsulation versus inheritance",
+          "Codebase architecture and conventions"
+        ]
+      },
+      {
+        "title": "SQL and Java Entity Mapping",
+        "paragraphs": [
+          "The curriculum included mapping relational SQL data into Java entities.",
+          "This helped developers understand the boundary between database structures and object-oriented application models."
+        ]
+      },
+      {
+        "title": "Learning the Production Codebase",
+        "paragraphs": [
+          "A significant portion of the program was about our real production codebase, not generic programming exercises.",
+          "Developers learned the architecture, coding conventions, reusable systems, and expectations they would need when contributing to the main Essential Skills software.",
+          "I did not consider a new hire fully trusted for deeper repository work until they had completed the training."
+        ]
+      },
+      {
+        "title": "Final Project Choice",
+        "paragraphs": [
+          "The course ended with a larger practical project that combined programming, architecture, UI, graphics, mathematics, and debugging.",
+          "Developers chose their own final project rather than having one assigned. The goal was practice and confidence-building, not a stress test.",
+          "Most developers chose the Particle Editor."
+        ],
+        "items": [
+          "Procedural Fractal Terrain Generator",
+          "Particle Editor",
+          "3D Software Pipeline"
+        ]
+      },
+      {
+        "title": "Practice, Not a Stress Test",
+        "paragraphs": [
+          "I deliberately let developers choose the final project because everyone needed the practice, but I did not want the onboarding process to become unnecessarily overwhelming.",
+          "The purpose was to get people productive and aligned with the team relatively quickly, not to eliminate candidates through artificial difficulty."
+        ]
+      },
+      {
+        "title": "Bidirectional Mentorship",
+        "paragraphs": [
+          "Although I was responsible for training new hires in the production architecture and programming practices, the learning was not one-way.",
+          "Some developers brought expertise that I did not have and taught me areas such as SQL Server, stored procedures, and Windows 2000 setup.",
+          "I also encouraged developers to challenge or improve the engines and codebase because they were active users of the systems I was designing."
+        ]
+      },
+      {
+        "title": "Engineering Feedback Loop",
+        "paragraphs": [
+          "New developers were not expected to silently conform to existing systems.",
+          "Once they understood the architecture, I listened to their feedback on the engines and codebase and used good ideas to improve the platform.",
+          "This made the onboarding process both a training mechanism and a practical feedback loop for the engineering organization."
+        ]
+      },
+      {
+        "title": "Long-Term Leadership Role",
+        "paragraphs": [
+          "The program ran for many years as part of my management and engineering-lead responsibilities.",
+          "It helped standardize development practices across hires with very different educational and professional backgrounds while reducing the risk of inconsistent architectural decisions entering a large shared codebase."
+        ]
+      }
+    ]
+  },
+
   "media": {
     "items": []
   },
-  "descriptionHtml": "I taught new programmers with University and College backgrounds how to apply their skill-sets towards our company projects. My courses were designed to place all new programmers at the same level before allowing them access to the main code repository. <br><br><center><u>My Coarse</u></center><br><strong><div class='row'><div class='col-md-4'>Custom build data Structures</strong><br><ul><li>Vector</li><li>LinkList</li><li>HashTable</li><li>Binary Tree</li></ul></div><div class='col-md-4'><strong>Sorting Algorithms</strong><br><ul><li>Insertion</li><li>Bubble</li><li>Quick</li></ul></div><div class='col-md-4'><strong>Design Patterns</strong><br><ul><li>Singlton</li><li>Observer</li><li>MVC</li><li>Factory</li></ul></div><div class='col-md-4'><strong>OOD</strong><br><ul><li>Custom GUI components</li><li>SQL and Entities</li><li>Abstract layers</li><li>Encapsulation versus Inheritance</li></ul></div><div class='col-md-4'><strong>The end project was a choice of</strong><br><ul><li>Procedural Fractal Terrain Generator</li><li>Particle Editor</li><li>3D Software Pipeline</li></ul></div></div>",
+
   "meta": {
-    "legacyMobileText": "I taught new programmers with University and College backgrounds how to apply their skill-sets towards our company projects. My courses were designed to place all new programmers at the same level before allowing them access to the main code repository.",
+    "historicalNotes": [
+      "The legacy portfolio card was titled 'Teaching 2004 - 2015'.",
+      "The original description stated that Jamie taught programmers with university and college backgrounds and used the course to bring new programmers to the same level before allowing access to the main code repository.",
+      "The program was for new developer hires only, not co-op students.",
+      "Every new developer hire went through the course.",
+      "Jamie remembers at least five developers completing the program.",
+      "The program evolved over time but remained a standard part of developer onboarding.",
+      "Typical duration was approximately two to three months at a few hours per week alongside normal work.",
+      "The course was taught entirely in Java.",
+      "Developers implemented custom Vector, Linked List, Hash Table, and Binary Tree structures themselves.",
+      "Developers implemented Insertion Sort, Bubble Sort, and Quick Sort after being taught the concepts.",
+      "Singleton, Observer, MVC, and Factory were required in working code rather than taught only theoretically.",
+      "SQL curriculum included mapping SQL structures to Java entities.",
+      "A substantial part of the course covered the real Essential Skills codebase, conventions, and architecture.",
+      "Jamie did not trust a new developer with deeper main-repository work until the training was completed.",
+      "The final project was chosen by the developer from Procedural Fractal Terrain Generator, Particle Editor, or 3D Software Pipeline.",
+      "Most developers chose the Particle Editor.",
+      "Jamie allowed trainees to choose the final project because the course was intended as practice rather than a stress test.",
+      "The Particle Editor and Software 3D Renderer / Model Viewer already have separate portfolio/history entries and should be cross-referenced rather than duplicated in detail here.",
+      "Mentorship was bidirectional: some hires taught Jamie SQL Server, stored procedures, Windows 2000 configuration, and other areas where they had stronger experience.",
+      "Jamie actively listened to developer feedback on the engines and production codebase rather than treating technical mentorship as one-way instruction."
+    ],
+
+    "confidence": {
+      "date2004To2015": "medium-high",
+      "newHiresOnly": "high",
+      "everyDeveloperHireCompletedCourse": "high",
+      "atLeastFiveDevelopers": "high",
+      "durationTwoToThreeMonths": "high",
+      "fewHoursPerWeek": "high",
+      "javaOnly": "high",
+      "customDataStructureImplementation": "high",
+      "sortingImplementation": "high",
+      "designPatternsUsedInCode": "high",
+      "sqlToJavaEntityMapping": "high",
+      "codebaseTraining": "high",
+      "completionAsTrustGate": "high",
+      "threeFinalProjectChoices": "high",
+      "particleEditorMostCommonChoice": "high",
+      "bidirectionalMentorship": "high"
+    },
+
+    "projectTerminology": [
+      "Developer Training",
+      "Technical Mentorship",
+      "Developer Onboarding",
+      "Java",
+      "Vector",
+      "Linked List",
+      "Hash Table",
+      "Binary Tree",
+      "Insertion Sort",
+      "Bubble Sort",
+      "Quick Sort",
+      "Singleton",
+      "Observer",
+      "MVC",
+      "Factory",
+      "SQL",
+      "Java Entities",
+      "Particle Editor",
+      "Procedural Fractal Terrain Generator",
+      "3D Software Pipeline"
+    ],
+
     "provenance": {
       "legacyCategory": "Work",
       "legacyIndex": 9

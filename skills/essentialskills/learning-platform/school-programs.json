@@ -1,9 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/learning-platform/school-programs",
-  "title": "Essential Skills K–6 Learning Suite",
+  "title": "Essential Skills K-6 Learning Suite",
   "project": "Learning Platform",
-
   "platform": {
     "label": "Application Type",
     "values": [
@@ -11,7 +10,6 @@
       "Production Program Suite"
     ]
   },
-
   "technologies": [
     "Java 1.1.8",
     "Java 1.2+",
@@ -34,13 +32,11 @@
     "EC2",
     "Ubuntu"
   ],
-
   "date": {
     "from": "1999",
     "to": null,
     "display": true
   },
-
   "team": {
     "myPosition": "lead",
     "myPositionLabel": "Software Architect / Engineering Lead",
@@ -91,7 +87,6 @@
       }
     ]
   },
-
   "roles": [
     "Software Architect",
     "Engineering Lead",
@@ -102,9 +97,7 @@
     "UI/UX Designer",
     "Technical Support Developer"
   ],
-
   "description": "I helped build, modernize, and maintain the Essential Skills K–6 learning suite from 1999 onward, growing from developer help and technical support into engineering leadership and software architecture. Across multiple platform generations, I personally developed programs and frameworks, led teams building additional programs, and designed the systems that allowed teachers, content creators, artists, QA staff, and developers to produce and maintain 80+ released learning programs, 50,000+ lesson activities, and roughly 1,000 activity types.",
-
   "details": {
     "sections": [
       {
@@ -211,6 +204,39 @@
         ]
       },
       {
+        "title": "Themeable Presentation Layer",
+        "paragraphs": [
+          "Hydra-Gen introduced a reusable theming system that continued into later platform generations, including Version 6 and beyond.",
+          "Themes changed the presentation layer without changing the underlying activity mechanics, menu behavior, curriculum structure, or reporting integration."
+        ],
+        "items": [
+          "Buttons",
+          "Backgrounds",
+          "Reward presentation",
+          "Activity and supporting imagery"
+        ]
+      },
+      {
+        "title": "Production Theme Families",
+        "paragraphs": [
+          "The same learning activities could be presented differently for younger, older, or differently branded audiences while retaining the same underlying behavior."
+        ],
+        "items": [
+          "Hydra-Gen Landscapes: scenic landscape backgrounds with bubbly buttons",
+          "Hydra-Gen School: classroom / paper-oriented presentation",
+          "Senior: restrained, plain, more mature visual treatment",
+          "Primary: colorful, playful buttons and backgrounds",
+          "Newlook: broader visual overhaul with remade consoles, backgrounds, and buttons"
+        ]
+      },
+      {
+        "title": "More Stylized Theme Concepts",
+        "paragraphs": [
+          "The in-house artist also created more stylized themes such as Outer Space, Haunted, and Crayon.",
+          "These themes still used the same menus and activities, but ownership felt the presentation looked too gamified, so they were not pursued as the main product direction."
+        ]
+      },
+      {
         "title": "Version 5.5 / I-Planet",
         "paragraphs": [
           "I-Planet was a working prototype that brought the existing suite into a more heavily gamified presentation model.",
@@ -280,15 +306,12 @@
       }
     ]
   },
-
   "media": {
     "thumbnail": "images/skills/work/java.jpg",
-
     "primary": {
       "type": "image",
       "src": "images/skills/work/java.jpg"
     },
-
     "items": [
       {
         "type": "image",
@@ -340,7 +363,6 @@
       }
     ]
   },
-
   "featured": {
     "heroImage": "images/Design.png",
     "supportingImages": [
@@ -352,7 +374,6 @@
     "overlayText": "80+ Programs | 50,000+ Activities | ~1,000 Activity Types",
     "description": "Architected, developed, modernized, and led production of a multi-generation K–6 learning suite used across schools for decades."
   },
-
   "meta": {
     "historicalNotes": [
       "The original portfolio card used an exact count of 81 programs.",
@@ -387,9 +408,19 @@
       "Spanish Math was later fully remade into Spanish using an AI-assisted conversion workflow covering questions, audio, and graphics.",
       "Several K–3 Reading and ELL programs were also converted into 10 languages, while intentionally retaining English where pedagogically appropriate.",
       "The detailed AI multilingual production workflow should receive a separate portfolio card.",
-      "The suite remains live, and Present is used on this umbrella card to represent the long-lived product lineage and continued production use rather than continuous employment."
+      "The suite remains live, and Present is used on this umbrella card to represent the long-lived product lineage and continued production use rather than continuous employment.",
+      "Hydra-Gen introduced a reusable theming system that continued into Version 6 and later platform generations.",
+      "Themes could change buttons, backgrounds, reward presentation, and supporting/activity imagery without changing the underlying menu or activity behavior.",
+      "Remembered production theme families include Hydra-Gen Landscapes, Hydra-Gen School, Senior, Primary, and Newlook.",
+      "Hydra-Gen Landscapes used scenic landscape backgrounds with bubbly buttons.",
+      "Hydra-Gen School used a classroom/paper-oriented presentation.",
+      "Senior used a restrained, plain, more mature visual treatment.",
+      "Primary used colorful, playful buttons and backgrounds.",
+      "Newlook was a broader visual refresh that remade consoles, backgrounds, and buttons.",
+      "The in-house artist also created more stylized themes such as Outer Space, Haunted, and Crayon.",
+      "The more stylized themes retained the same underlying activities and menu behavior but were not pursued heavily because ownership felt they appeared too gamified.",
+      "Architectural significance: presentation/theme assets were decoupled from core activity mechanics, allowing the same learning content to be re-skinned across audiences and product directions."
     ],
-
     "confidence": {
       "start1999": "high",
       "presentProductLine": "high",
@@ -407,9 +438,11 @@
       "typicalSeveralMonthsUse": "medium-high",
       "platformLineage": "high",
       "hierarchicalLocalization": "high",
-      "aiMultilingualMention": "high"
+      "aiMultilingualMention": "high",
+      "themeablePresentationLayer": "high",
+      "rememberedThemeFamilies": "high",
+      "stylizedThemeExamples": "medium-high"
     },
-
     "canonicalProgramInventory": [
       "Complete Reading Grade K",
       "Complete Reading Grade 1",
@@ -497,7 +530,6 @@
       "Early Readers 3",
       "Mad Minute Math"
     ],
-
     "projectTerminology": [
       "Essential Skills",
       "K–6 Learning Suite",
@@ -513,9 +545,13 @@
       "Version 6 MM",
       "Version 6 NL",
       "Version 6 R2S",
-      "Version 7"
+      "Version 7",
+      "Hydra-Gen Landscapes",
+      "Hydra-Gen School",
+      "Senior Theme",
+      "Primary Theme",
+      "Newlook Theme"
     ],
-
     "provenance": {
       "legacyCategory": "Work",
       "legacyIndex": 4
