@@ -1,38 +1,163 @@
 {
   "schemaVersion": 2,
   "id": "education/humber/cpu-emulator",
-  "title": "Software CPU Emulator",
+  "title": "Custom CPU Emulator & Assembler",
   "project": "Humber",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Educational Project"
+      "Educational Project",
+      "Computer Architecture",
+      "CPU Emulation"
     ]
   },
+
   "technologies": [
-    "Turbo C++",
+    "C++",
     "GCC",
-    "DOS",
     "AIX",
-    "VI",
-    "Pico"
+    "Turbo C++",
+    "DOS",
+    "Assembly Language",
+    "Machine Code"
   ],
+
   "date": {
     "from": null,
     "to": null,
     "display": false
   },
-  "description": "My favorite school project was to invent a custom Assembly language and compiler.  From there, we created a software CPU emulator to execute the binary files. Basically, we modeled DOS's \"debug.exe\" interface.",
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Developer",
+    "total": 1,
+    "contributors": []
+  },
+
+  "roles": [
+    "Software Developer",
+    "CPU Emulator Developer",
+    "Assembler Developer",
+    "Computer Architecture Student"
+  ],
+
+  "description": "For a second-year Computer Architecture project at Humber, I designed a custom Assembly language, wrote an assembler to convert it into machine-code binaries, and built a software CPU emulator to execute those programs. The project was based on CPU architecture concepts taught in class, but the implementation was my own. I modeled the interface after DOS debug.exe, originally built the project on AIX with GCC, and later ported and continued it independently in Turbo C++ for DOS.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Individual Computer Architecture Project",
+        "paragraphs": [
+          "This was an individual project from my second-year Computer Architecture coursework at Humber.",
+          "The class and textbooks explained how CPUs work, but we were responsible for designing and implementing our own software model."
+        ]
+      },
+      {
+        "title": "Custom Assembly Language",
+        "paragraphs": [
+          "I created my own Assembly-style instruction syntax for the emulator.",
+          "The instruction set was designed around the CPU concepts covered in class while leaving the specific implementation decisions up to me."
+        ]
+      },
+      {
+        "title": "Custom Assembler",
+        "paragraphs": [
+          "I wrote an assembler that converted the custom Assembly source into the binary machine-code format understood by the emulator.",
+          "The original legacy card described this as a compiler, but assembler is the more precise term for the implementation."
+        ]
+      },
+      {
+        "title": "Software CPU Emulator",
+        "paragraphs": [
+          "The emulator executed the generated machine-code files and modeled the major internal components expected in a simple CPU."
+        ],
+        "items": [
+          "Registers",
+          "Memory",
+          "Program counter",
+          "Flags",
+          "Stack",
+          "Jumps and branches"
+        ]
+      },
+      {
+        "title": "debug.exe-Inspired Interface",
+        "paragraphs": [
+          "I chose to model the user interface after DOS debug.exe.",
+          "That gave the project a low-level interactive feel appropriate for inspecting and executing machine state."
+        ]
+      },
+      {
+        "title": "AIX / GCC Development",
+        "paragraphs": [
+          "The original school version was developed on AIX using GCC."
+        ]
+      },
+      {
+        "title": "Turbo C++ DOS Port",
+        "paragraphs": [
+          "After completing the coursework, I ported the project to Turbo C++ for DOS and continued working on it independently because I enjoyed the project."
+        ]
+      }
+    ]
+  },
+
   "media": {
-    "items": [],
     "thumbnail": "images/skills/eng/cpu.jpg",
+
     "primary": {
       "type": "image",
       "src": "images/skills/eng/cpu.jpg"
-    }
+    },
+
+    "items": []
   },
+
   "meta": {
-    "legacySubtitle": "Turbo C++, GCC, DOS, AIX, VI, Pico",
+    "historicalNotes": [
+      "The legacy portfolio card was titled 'Software CPU Emulator'.",
+      "The legacy card described this as one of Jamie's favorite school projects.",
+      "The original project description says Jamie invented a custom Assembly language and compiler, then created a software CPU emulator to execute the resulting binary files.",
+      "Assembler is the more technically precise term for the custom Assembly-to-binary conversion step.",
+      "The implementation was an individual project.",
+      "The project was most likely from second-year Computer Architecture at Humber.",
+      "CPU architecture concepts were taught through textbooks and classroom instruction, but the implementation design was left to the student.",
+      "Jamie chose to model the interface after DOS debug.exe.",
+      "The emulator modeled registers, memory, program counter, flags, stack, and control-flow operations.",
+      "The school version was originally written on AIX using GCC.",
+      "Jamie later ported and continued the project independently in Turbo C++ for DOS.",
+      "The exact project date is not currently anchored."
+    ],
+
+    "confidence": {
+      "individualProject": "high",
+      "secondYearComputerArchitecture": "medium-high",
+      "customAssemblyLanguage": "high",
+      "customAssembler": "high",
+      "cpuEmulator": "high",
+      "registersMemoryPcFlagsStack": "high",
+      "debugExeInspired": "high",
+      "aixGccOriginal": "high",
+      "turboCppDosPort": "high",
+      "exactDate": "unknown"
+    },
+
+    "projectTerminology": [
+      "Humber",
+      "Computer Architecture",
+      "CPU Emulator",
+      "Assembler",
+      "Assembly Language",
+      "Machine Code",
+      "AIX",
+      "GCC",
+      "Turbo C++",
+      "DOS",
+      "debug.exe"
+    ],
+
     "provenance": {
       "legacyCategory": "Eng",
       "legacyIndex": 1

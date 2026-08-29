@@ -1,26 +1,123 @@
 {
   "schemaVersion": 2,
   "id": "education/humber/robot-maze",
-  "title": "Robot Maze Project",
+  "title": "68HC11 Maze-Solving Robot",
   "project": "Humber",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Educational Project"
+      "Educational Project",
+      "Embedded Systems",
+      "Robotics"
     ]
   },
+
   "technologies": [
+    "68HC11",
     "Assembly",
     "MicroC",
-    "68HC11"
+    "Turing",
+    "Embedded Systems",
+    "Optical Sensors",
+    "DC Motors",
+    "Shaft Encoder"
   ],
+
   "date": {
     "from": null,
     "to": null,
     "display": false
   },
-  "description": "Our final term project to graduate College was to create a robot that could find the solution to solve a maze. The robot runs through the maze once in order to find the end points and then a second time to solve the maze. A micro-controller was connected to a custom board that would read the optical sensors to find its location compared to the walls as well as the floor color. Black indicates the end of the maze. A message to the motor driver would power the DC motors in order to rotate the wheels a single step. Each step was measured by a shaft encoder (a hole in the gear where a laser can pass through per revolution). Steps where counted until the robot reaches a fork in the path. The first time the maze is ran, the robot would always turn right by turning both wheels in opposite directions like a tank. Along the way the robot keeps building an internal map and stores it in a secondary 8K memory card.",
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Software Lead / Board Designer",
+    "total": 2,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Electronics Developer"
+        ],
+        "relationship": "student partner",
+        "contribution": "Handled most of the electronics assembly and built the custom board Jamie designed."
+      }
+    ]
+  },
+
+  "roles": [
+    "Software Lead",
+    "Embedded Developer",
+    "Assembly Developer",
+    "Algorithm Developer",
+    "Board Designer"
+  ],
+
+  "description": "For my third-year final-term Humber project, I worked with one partner to build a 68HC11-based robot that could explore a maze, construct an internal map, and then run the maze a second time using the shortest path it had discovered. I led the software work, designed the custom controller board, implemented the microcontroller logic first in Assembly and later in MicroC, and prototyped the maze-solving algorithm in Turing before the hardware was complete.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Two-Person Robotics Project",
+        "paragraphs": [
+          "This was a two-person final-term project during my third year at Humber.",
+          "I focused primarily on the software and board design while my partner handled most of the electronics assembly."
+        ]
+      },
+      {
+        "title": "Custom Controller Board",
+        "paragraphs": [
+          "I designed the custom control board used by the robot.",
+          "My project partner assembled and wired the board."
+        ]
+      },
+      {
+        "title": "68HC11 Controller",
+        "paragraphs": [
+          "The robot was controlled by a Motorola 68HC11 microcontroller.",
+          "I first wrote the controller software in Assembly and later rewrote it in MicroC after that tool became commonly used in the class."
+        ]
+      },
+      {
+        "title": "Turing Algorithm Prototype",
+        "paragraphs": [
+          "Before the robot hardware was finished, I prototyped the maze-solving logic in Turing.",
+          "The prototype let me validate the mapping and pathfinding behavior independently of the electronics."
+        ]
+      },
+      {
+        "title": "Shortest-Path Solution",
+        "paragraphs": [
+          "The first pass through the maze explored the available routes and constructed an internal map.",
+          "The second pass used that stored map to follow the shortest route to the goal.",
+          "My Turing prototype was the first in the class to solve the shortest-path problem before the physical robot was complete."
+        ]
+      },
+      {
+        "title": "Sensors and Movement",
+        "paragraphs": [
+          "Optical sensors were used to detect the robot's position relative to maze walls and floor markings.",
+          "A black floor marker indicated the end of the maze.",
+          "DC motors drove the wheels and a shaft encoder measured wheel movement so the software could count travel steps."
+        ]
+      },
+      {
+        "title": "Maze Mapping",
+        "paragraphs": [
+          "During the initial exploration run, the robot used a consistent right-turn strategy at forks while recording the maze structure.",
+          "The resulting map was stored in secondary memory for use during the optimized second run."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "primary": {
+      "type": "youtube",
+      "id": "OfgJGQZlIQA"
+    },
+
     "items": [
       {
         "type": "image",
@@ -38,16 +135,51 @@
         "type": "image",
         "src": "images/skills/eng/mouse_4.jpg"
       }
-    ],
-    "primary": {
-      "type": "youtube",
-      "id": "OfgJGQZlIQA"
-    }
+    ]
   },
-  "descriptionHtml": "Our final term project to graduate College was to create a robot that could find the solution to solve a maze.  The robot runs through the maze once in order to find the end points and then a second time to solve the maze. <br><br>A micro-controller was connected to a custom board that would read the optical sensors to find its location compared to the walls as well as the floor color.  Black indicates the end of the maze. A message to the motor driver would power the DC motors in order to rotate the wheels a single step. Each step was measured by a shaft encoder (a hole in the gear where a laser can pass through per revolution).  Steps where counted until the robot reaches a fork in the path.<br><br>The first time the maze is ran, the robot would always turn right by turning both wheels in opposite directions like a tank.  Along the way the robot keeps building an internal map and stores it in a secondary 8K memory card.",
+
   "meta": {
-    "legacySubtitle": "Assembly, MicroC, Assembly, 68HC11",
-    "legacyMobileText": "Our final term project to graduate College was to create a robot that could find the solution to solve a maze.  The robot runs through the maze once in order to find the end points and then a second time to solve the maze.  <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+    "historicalNotes": [
+      "This was a third-year, second-semester Humber College project.",
+      "The project team consisted of Jamie and one partner.",
+      "Jamie primarily wrote the software and also helped with electronics.",
+      "Jamie designed the custom control board; his partner physically assembled it.",
+      "The controller code was first implemented in Assembly and later rewritten in MicroC.",
+      "Jamie prototyped the maze-solving algorithm in Turing before the hardware was complete.",
+      "The Turing prototype was the first in the class to solve the shortest-path problem.",
+      "The robot's first run mapped the maze and the second run followed the shortest stored route.",
+      "The original legacy card describes optical wall/floor sensing, DC motor control, shaft-encoder step counting, a right-turn exploration strategy, and secondary 8K memory."
+    ],
+
+    "confidence": {
+      "thirdYearSecondSemester": "high",
+      "teamTwo": "high",
+      "softwareLead": "high",
+      "boardDesignedByJamie": "high",
+      "partnerBuiltBoard": "high",
+      "assemblyFirst": "high",
+      "microCRewrite": "high",
+      "turingPrototype": "high",
+      "firstInClassShortestPathPrototype": "high",
+      "secondRunShortestPath": "high",
+      "68HC11": "high",
+      "opticalSensors": "high",
+      "shaftEncoder": "high",
+      "secondary8KMemory": "high"
+    },
+
+    "projectTerminology": [
+      "Humber",
+      "68HC11",
+      "Assembly",
+      "MicroC",
+      "Turing",
+      "Maze Solver",
+      "Optical Sensors",
+      "Shaft Encoder",
+      "8K Memory"
+    ],
+
     "provenance": {
       "legacyCategory": "Eng",
       "legacyIndex": 0
