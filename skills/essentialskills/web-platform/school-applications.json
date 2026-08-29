@@ -1,35 +1,298 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/web-platform/school-applications",
-  "title": "School Web Applications (2014 - Present)",
+  "title": "Version 6 HTML5 Learning Runtime & Migration",
   "project": "Web Platform",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Application"
+      "K–6 Learning Runtime",
+      "Web Platform Migration",
+      "Production Student Application"
     ]
   },
+
   "technologies": [
-    "Javascript",
-    "Canvas",
-    "JQuery",
+    "JavaScript",
     "HTML5",
+    "Canvas",
+    "jQuery",
     "CSS3",
     "Ajax",
     "PHP",
     "JSON",
-    "AWS (CloudFront",
+    "AWS",
+    "CloudFront",
     "EC2",
     "Ubuntu",
-    "SimpleDB"
+    "AWS SimpleDB",
+    "Photoshop"
   ],
+
   "date": {
     "from": "2014",
-    "to": null,
-    "display": false
+    "to": "2016",
+    "display": true
   },
-  "description": "From 2014 - 2016 I ported all Hydra-Gen school programs from Java Applet to HTML5 due to the browser war on Java. Engine life-cycles are getting shorter as technology advances; thus, I made sure to greatly simplify this engine to it's core basics.  ",
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Lead Full-Stack Developer / Software Architect",
+    "total": 3,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Junior Software Developer"
+        ],
+        "relationship": "employee",
+        "contribution": "Helped rebuild and port the large activity set into the Version 6 HTML5 runtime."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Quality Assurance"
+        ],
+        "relationship": "employee",
+        "contribution": "Validated migrated programs and rebuilt activities throughout the multi-year conversion."
+      }
+    ]
+  },
+
+  "roles": [
+    "Lead Full-Stack Developer",
+    "Software Architect",
+    "JavaScript Developer",
+    "HTML5 Canvas Developer",
+    "Migration Architect",
+    "Content Conversion Tool Developer",
+    "Runtime Developer",
+    "UI/UX Developer",
+    "Performance Optimization Developer"
+  ],
+
+  "description": "From 2014 to 2016 I led the migration of the Essential Skills school suite from the Java/Hydra-Gen generation to a web-only HTML5 runtime. I deliberately stripped the authoring-oriented Hydra-Gen architecture back to a simpler production runtime, converted the existing XML content into JSON, preserved the original content IDs, and rebuilt more than 500 student activities in raw JavaScript, Canvas, and jQuery with one junior developer and one QA. Media was aggressively optimized and lazy loaded so entire schools could use the platform without overwhelming shared networks or our servers.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Why Version 6 Existed",
+        "paragraphs": [
+          "Version 6 was created because browser support for Java Applets and Java-based delivery was disappearing.",
+          "The goal was to move the school suite to a browser-native HTML5 platform while preserving the existing curriculum and program structure."
+        ]
+      },
+      {
+        "title": "2014–2016 Full Web Migration",
+        "paragraphs": [
+          "The migration took roughly two years.",
+          "It covered the large existing school-program catalog rather than a small subset or demonstration."
+        ]
+      },
+      {
+        "title": "Raw JavaScript Student Runtime",
+        "paragraphs": [
+          "The Version 6 student runtime was built primarily with raw JavaScript, HTML5 Canvas, jQuery, CSS, and Ajax.",
+          "PHP and JSON endpoints handled backend communication with the broader Essential Skills platform."
+        ]
+      },
+      {
+        "title": "Hydra-Gen Content, New Runtime",
+        "paragraphs": [
+          "Version 6 continued using the existing Version 5 / Hydra-Gen curriculum and content.",
+          "The major change was how that content was represented and executed in the new web runtime."
+        ]
+      },
+      {
+        "title": "XML Scripting Removed",
+        "paragraphs": [
+          "Hydra-Gen content used XML plus scriptable behavior.",
+          "For Version 6 I removed the scripting layer and converted the useful content data into raw JSON."
+        ]
+      },
+      {
+        "title": "Deliberate Runtime Simplification",
+        "paragraphs": [
+          "I intentionally removed much of the machinery Hydra-Gen had accumulated to make new program authoring flexible.",
+          "Version 6 was designed around the minimum runtime architecture needed to run the existing production suite reliably in the browser."
+        ],
+        "items": [
+          "Removed scriptable content",
+          "Removed EWidget authoring abstractions",
+          "Reduced general-purpose authoring flexibility",
+          "Focused on production execution of the existing suite"
+        ]
+      },
+      {
+        "title": "MVP-Oriented Architecture",
+        "paragraphs": [
+          "The simplification was deliberate rather than accidental.",
+          "Runtime lifecycles were getting shorter as browser technology changed, so I avoided rebuilding every authoring abstraction from Hydra-Gen and focused on the production behavior the web platform actually needed."
+        ]
+      },
+      {
+        "title": "Hydra-Gen XML Conversion Tool",
+        "paragraphs": [
+          "I built a conversion tool that extracted the useful data from the Hydra-Gen XML files.",
+          "The converter removed scripting and reorganized the remaining program data into JSON grouped by menu so the migrated content was ready for the Version 6 runtime."
+        ]
+      },
+      {
+        "title": "Preserved Content IDs",
+        "paragraphs": [
+          "All important IDs from the Hydra-Gen system were cloned into Version 6.",
+          "Preserving those identifiers helped maintain continuity between programs, activities, assignments, marks, and the broader production data model."
+        ]
+      },
+      {
+        "title": "500+ Activities Rebuilt",
+        "paragraphs": [
+          "The converted JSON gave us the usable program data, but the actual interactive activities still had to be rebuilt for the browser runtime.",
+          "More than 500 activity implementations were recreated across the migration."
+        ]
+      },
+      {
+        "title": "Three-Person Migration Team",
+        "paragraphs": [
+          "I led the migration with one junior developer and one QA team member.",
+          "The junior developer and I rebuilt the activity/runtime behavior while QA continuously validated the migrated programs."
+        ]
+      },
+      {
+        "title": "Shared Canvas Rendering Model",
+        "paragraphs": [
+          "Version 6 used a common class hierarchy for Canvas-driven UI and interactive elements.",
+          "The structure was similar to a layer model and came from the same architectural ideas I had used earlier for painting and animating Java canvases."
+        ]
+      },
+      {
+        "title": "Canvas Across the Student Experience",
+        "paragraphs": [
+          "The same Canvas-oriented rendering system was used across major student-facing elements rather than limiting Canvas to isolated activities."
+        ],
+        "items": [
+          "Activities",
+          "Pretests",
+          "Rewards",
+          "Menus",
+          "Consoles"
+        ]
+      },
+      {
+        "title": "Aggressive Media Optimization",
+        "paragraphs": [
+          "Moving the suite into the browser required a major reduction in media size.",
+          "Images were resaved in Photoshop at substantially lower file sizes while keeping the visible quality close to the originals.",
+          "Audio was similarly reduced using mono and lower-bandwidth encoding where possible while keeping the audible difference small."
+        ]
+      },
+      {
+        "title": "Lazy / Pepper Loading",
+        "paragraphs": [
+          "Media was loaded incrementally rather than preloading the entire program.",
+          "Assets were lazy loaded or 'pepper loaded' as they were needed."
+        ]
+      },
+      {
+        "title": "Designed for School Networks",
+        "paragraphs": [
+          "The loading strategy was important because entire schools could be using the platform through the same shared network.",
+          "Loading every program asset up front would have placed unnecessary pressure on both school bandwidth and Essential Skills infrastructure."
+        ]
+      },
+      {
+        "title": "AWS Delivery",
+        "paragraphs": [
+          "The web platform used AWS infrastructure including CloudFront, EC2, Ubuntu-hosted services, and SimpleDB integration.",
+          "The migration therefore involved both the browser runtime and the production delivery architecture around it."
+        ]
+      },
+      {
+        "title": "Integrated Platform State",
+        "paragraphs": [
+          "Authentication itself was handled by a separate login system, but once a student was logged in Version 6 participated in the common platform state."
+        ],
+        "items": [
+          "Assigned program sections",
+          "Stored student marks",
+          "Completed-activity stars",
+          "Shared SimpleDB records",
+          "PHP backend endpoints"
+        ]
+      },
+      {
+        "title": "Assignment Awareness",
+        "paragraphs": [
+          "Students only saw program sections made available through their assignments and account state.",
+          "Completion information and marks persisted across sessions through the shared production backend."
+        ]
+      },
+      {
+        "title": "Version 6 Theming",
+        "paragraphs": [
+          "Version 6 retained the theming capability introduced during the Hydra-Gen generation.",
+          "The underlying activity and menu behavior could remain unchanged while buttons, backgrounds, reward presentation, and imagery changed."
+        ]
+      },
+      {
+        "title": "Initial Hydra-Gen Look",
+        "paragraphs": [
+          "Version 6 initially retained a presentation close to Hydra-Gen.",
+          "Ownership quickly pushed the visual direction toward a plainer style that resembled the company's earlier classic presentation."
+        ]
+      },
+      {
+        "title": "Newlook",
+        "paragraphs": [
+          "I later created the Version 6 Newlook visual overhaul to move the interface back toward a more colorful and child-friendly presentation.",
+          "Newlook changed the presentation but remained on the same Version 6 runtime rather than becoming a separate engine."
+        ]
+      },
+      {
+        "title": "Product Direction Tension",
+        "paragraphs": [
+          "There was an ongoing product-design balance between making the student experience more playful and game-like and keeping the software visually restrained and classroom-oriented.",
+          "Version 6 and Newlook reflect different points in that continuing design discussion."
+        ]
+      },
+      {
+        "title": "Read to Succeed Integration",
+        "paragraphs": [
+          "Read to Succeed was migrated later because its original standalone architecture was not Hydra-Gen-compatible.",
+          "It required a specialized Version 6 runtime while still integrating with the common platform contract."
+        ]
+      },
+      {
+        "title": "Mad Minute Integration",
+        "paragraphs": [
+          "Mad Minute was also a legacy standalone product and therefore needed its own specialized Version 6 engine rather than falling out of the normal Hydra-Gen conversion path."
+        ]
+      },
+      {
+        "title": "Specialized Engines, Shared Platform",
+        "paragraphs": [
+          "Read to Succeed and Mad Minute used specialized student runtimes, but still had to behave like normal Version 6 products for assignments, marks, reporting, and teacher-management integration."
+        ]
+      },
+      {
+        "title": "Migration Outcome",
+        "paragraphs": [
+          "Version 6 became the successful browser-native replacement for the Java-era student suite.",
+          "It allowed the production programs to continue operating after Java browser delivery became impractical while preserving the curriculum and identifiers accumulated across earlier generations."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/fullstack/canvas.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/fullstack/canvas.jpg"
+    },
+
     "items": [
       {
         "type": "image",
@@ -47,15 +310,81 @@
         "type": "image",
         "src": "images/skills/fullstack/canvas_4.jpg"
       }
-    ],
-    "thumbnail": "images/skills/fullstack/canvas.jpg",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/fullstack/canvas.jpg"
-    }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "Javascript, Canvas, JQuery, HTML5, CSS3, Ajax, PHP, JSON, AWS (CloudFront, EC2, Ubuntu, SimpleDB)",
+    "historicalNotes": [
+      "The legacy card was titled 'School Web Applications (2014 - Present)'.",
+      "The legacy description states that from 2014 to 2016 Jamie ported the Hydra-Gen school programs from Java Applet delivery to HTML5 because browsers were dropping Java.",
+      "The legacy card also states that Jamie deliberately simplified the engine because platform/runtime lifecycles were getting shorter.",
+      "This card represents the Version 6 HTML5 student runtime and migration specifically; the broader multi-generation suite belongs in the Essential Skills K–6 Learning Suite umbrella card.",
+      "The Version 6 student runtime was primarily raw JavaScript + Canvas + jQuery with PHP/JSON backend calls.",
+      "Version 6 reused Version 5 / Hydra-Gen content but converted the XML/scripted representation into raw JSON.",
+      "Jamie intentionally removed authoring-oriented Hydra-Gen features such as scriptable content and EWidgets.",
+      "The goal was a simpler MVP-oriented production runtime rather than recreating the full Hydra-Gen authoring environment.",
+      "Jamie built a conversion tool that extracted useful content from Hydra-Gen XML, removed scripting, and emitted JSON organized by menu.",
+      "All important Hydra-Gen IDs were cloned into Version 6.",
+      "More than 500 activities were rebuilt for Version 6 over approximately two years.",
+      "Migration team: Jamie + one junior developer + one QA.",
+      "Images were aggressively reduced in size using Photoshop while keeping visual quality acceptably close to the originals.",
+      "Audio was also reduced using mono / lower-bandwidth formats where practical.",
+      "Media was lazy loaded / pepper loaded rather than preloading entire programs.",
+      "The loading strategy was chosen partly to avoid saturating shared school networks and Essential Skills servers.",
+      "Activities, pretests, rewards, menus, and consoles used the same Canvas-oriented class/rendering hierarchy.",
+      "The Canvas hierarchy was conceptually descended from Jamie's earlier Java canvas painting/animation architecture.",
+      "Version 6 retained suite theming.",
+      "Version 6 initially looked similar to Hydra-Gen, then moved toward a plainer/classic visual direction at ownership request.",
+      "Version 6 Newlook later moved the presentation back toward a more kid-friendly style without replacing the runtime.",
+      "Authentication/login was a separate project and should not be treated as part of the Version 6 runtime implementation.",
+      "After authentication, Version 6 integrated with assignments, marks, completion stars, SimpleDB, and PHP endpoints.",
+      "Read to Succeed and Mad Minute were migrated later because neither original product was Hydra-Gen-compatible.",
+      "Both used specialized Version 6 runtimes while still conforming to the broader Version 6 platform contract."
+    ],
+
+    "confidence": {
+      "date2014To2016": "high",
+      "rawJavaScriptCanvasJqueryRuntime": "high",
+      "phpJsonBackend": "high",
+      "hydraGenContentReused": "high",
+      "xmlToJsonMigration": "high",
+      "scriptRemoval": "high",
+      "ewidgetsRemoved": "high",
+      "mvpRuntimeSimplification": "high",
+      "xmlConversionTool": "high",
+      "idsPreserved": "high",
+      "activities500Plus": "high",
+      "teamThree": "high",
+      "mediaOptimization": "high",
+      "lazyPepperLoading": "high",
+      "schoolNetworkOptimizationReason": "high",
+      "sharedCanvasHierarchy": "high",
+      "themingRetained": "high",
+      "newlookSameRuntime": "high",
+      "loginSeparateProject": "high",
+      "r2sSpecializedRuntime": "high",
+      "madMinuteSpecializedRuntime": "high"
+    },
+
+    "projectTerminology": [
+      "Version 6",
+      "Hydra-Gen",
+      "HTML5",
+      "JavaScript",
+      "Canvas",
+      "jQuery",
+      "PHP",
+      "JSON",
+      "XML",
+      "EWidgets",
+      "SimpleDB",
+      "CloudFront",
+      "EC2",
+      "Newlook",
+      "Read to Succeed",
+      "Mad Minute"
+    ],
+
     "provenance": {
       "legacyCategory": "Fullstack",
       "legacyIndex": 4

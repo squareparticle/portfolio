@@ -1,41 +1,254 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/magies/production-tool",
-  "title": "Magie Maker",
+  "title": "Magies Artist Production & QA Tool",
   "project": "Magies",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Application"
+      "Internal Production Tool",
+      "Artist Asset Pipeline",
+      "QA Application"
     ]
   },
+
   "technologies": [
     "React",
     "Spine",
     "NodeJS",
-    "AWS Lambda"
+    "AWS Lambda",
+    "AWS S3"
   ],
+
   "date": {
-    "from": null,
-    "to": null,
-    "display": false
+    "from": "2018",
+    "to": "2020",
+    "display": true
   },
-  "description": "I developed a tool to allow artists to collate their project work into our Magie system.  This application uploads compressed Spine files and builds a testing website for them usnig AWS Lambda.",
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Lead Developer / Tooling Architect",
+    "total": 1,
+    "contributors": []
+  },
+
+  "roles": [
+    "Lead Developer",
+    "Tooling Architect",
+    "React Developer",
+    "Production Pipeline Developer",
+    "AWS Developer",
+    "QA Tool Developer"
+  ],
+
+  "description": "I designed and built an internal React production and QA tool for the Magies character pipeline. Artists packaged all four Magie evolution stages into a single ZIP and drag-and-dropped the archive into the tool for processing. AWS Lambda prepared the assets, S3 stored the uploaded source package, and the resulting Magie became selectable in a browser-based validation environment where every generation, animation, and expression could be reviewed before approval and promotion into the development, staging, and production pipeline.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Dedicated Artist Production Tool",
+        "paragraphs": [
+          "I built the tool specifically to turn completed Spine animation packages into reviewable Magies without requiring the artist to manually prepare application-specific files.",
+          "The production workflow was designed around how the finished-animation artist actually worked: package the completed character, upload it, wait for processing, then review the result in the same environment the approval team used."
+        ]
+      },
+      {
+        "title": "Four-Generation Upload Package",
+        "paragraphs": [
+          "Each Magie consisted of four evolution stages that were packaged together for upload."
+        ],
+        "items": [
+          "Egg",
+          "Baby",
+          "Teen",
+          "Adult"
+        ]
+      },
+      {
+        "title": "Drag-and-Drop Workflow",
+        "paragraphs": [
+          "The artist zipped all four generation folders together and drag-and-dropped the archive into the upload section.",
+          "The upload could be targeted at either the 2048 or 4096 asset path.",
+          "After roughly a minute of processing, the new Magie appeared in the selectable testing list."
+        ]
+      },
+      {
+        "title": "AWS Lambda Processing",
+        "paragraphs": [
+          "AWS Lambda handled the server-side processing needed to turn the artist upload into the format consumed by the testing application.",
+          "This kept the artist workflow simple while moving repetitive preparation work into the automated backend pipeline."
+        ]
+      },
+      {
+        "title": "S3 as the Testing Source of Truth",
+        "paragraphs": [
+          "Uploaded Magie packages were stored in AWS S3 and remained there.",
+          "The testing application loaded from that uploaded location, so the artist and reviewers always knew the version visible in the QA tool was the latest package that had been submitted."
+        ]
+      },
+      {
+        "title": "Full Evolution Validation",
+        "paragraphs": [
+          "The QA application was designed to validate every evolution stage rather than checking only the final adult character.",
+          "Reviewers could inspect the Egg, Baby, Teen, and Adult forms before the Magie was approved for application integration."
+        ]
+      },
+      {
+        "title": "Animation and Expression Testing",
+        "paragraphs": [
+          "The tool exposed the complete set of animations and expressions for each generation.",
+          "The test page acted as the main character QA surface and made it possible to catch animation, expression, asset, or packaging problems before the Magie entered the student programs."
+        ]
+      },
+      {
+        "title": "Cave Store Evolution Testing",
+        "paragraphs": [
+          "Individual generations could also be loaded one at a time into the Cave Store environment.",
+          "This allowed us to test the evolution sequence in context and verify that the character animation did not visually clip against the cave/store presentation."
+        ]
+      },
+      {
+        "title": "Primary QA Surface",
+        "paragraphs": [
+          "The generated browser-based test environment was the main QA surface for completed Magies.",
+          "It allowed the finished-animation artist, me, and one of the company owners to review the same uploaded build before approval."
+        ]
+      },
+      {
+        "title": "Manual Approval Gate",
+        "paragraphs": [
+          "A Magie was not automatically promoted simply because the upload processed successfully.",
+          "The character was manually reviewed and approved before being placed into the development environment."
+        ]
+      },
+      {
+        "title": "Development to Production Pipeline",
+        "paragraphs": [
+          "After approval, the Magie was added to the development environment.",
+          "From there it followed the broader release path through staging and eventually production.",
+          "The artist-production tool therefore acted as an upstream validation gate rather than a direct production publisher."
+        ],
+        "items": [
+          "Artist upload / QA",
+          "Manual approval",
+          "Development",
+          "Staging",
+          "Production"
+        ]
+      },
+      {
+        "title": "Second-Pass Application QA",
+        "paragraphs": [
+          "Passing the standalone Magie QA tool was not the final validation step.",
+          "Once the approved Magie was integrated into the actual Essential Skills programs, we performed another pass to confirm that it behaved correctly in the full student experience."
+        ]
+      },
+      {
+        "title": "Shared Review Workflow",
+        "paragraphs": [
+          "The primary reviewers were the finished-animation artist, me, and one of the company owners.",
+          "Using the same browser-based QA environment kept the discussion centered on one known uploaded version rather than separate local copies."
+        ]
+      },
+      {
+        "title": "Solo Tool Development",
+        "paragraphs": [
+          "I designed and implemented the production tool myself.",
+          "The broader Magies character system involved artists and product stakeholders, but the React/Lambda/S3 tooling represented my own development work."
+        ]
+      },
+      {
+        "title": "Built with the Magies Pipeline",
+        "paragraphs": [
+          "Project files indicate that this tooling began around 2018 as the Magies production pipeline was being established.",
+          "The tool should be treated as a dedicated production-support system for the Magies project rather than as a separate unrelated web application."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/fullstack/magiemaker.gif",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/fullstack/magiemaker.gif"
+    },
+
     "items": [
       {
         "type": "image",
         "src": "images/skills/fullstack/magiemaker_1.gif"
       }
-    ],
-    "thumbnail": "images/skills/fullstack/magiemaker.gif",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/fullstack/magiemaker.gif"
-    }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "React, Spine, NodeJS, AWS Lambda",
+    "historicalNotes": [
+      "The legacy portfolio card was titled 'Magie Maker'.",
+      "The legacy card described a React tool that allowed artists to collate project work into the Magie system, upload compressed Spine files, and generate a testing website using AWS Lambda.",
+      "This is the same React production tool referenced in the broader Magies Student Reward & Evolution System history.",
+      "The dedicated card should focus on the artist upload, processing, validation, approval, and release-support workflow rather than repeat the broader reward/evolution-system story.",
+      "Jamie built the tool alone.",
+      "Project files indicate the tooling began around 2018.",
+      "Each upload package contained all four Magie generations: Egg, Baby, Teen, and Adult.",
+      "The finished-animation artist zipped all four generation folders together.",
+      "The ZIP was drag-and-dropped into an upload area for either a 2048 or 4096 asset path.",
+      "After approximately one minute of processing, the Magie became selectable in the testing list.",
+      "The tool validated all animations and expressions for every evolution stage.",
+      "Individual generations could also be loaded into the Cave Store to test the evolution animation and detect clipping.",
+      "AWS Lambda processed the uploaded package.",
+      "The uploaded package/assets were stored in AWS S3 and remained there.",
+      "The testing application consumed the S3 upload location so reviewers knew the tested version represented the latest artist submission.",
+      "The browser-based testing page was the primary QA environment.",
+      "Primary reviewers were Jamie, the finished-animation artist, and one of the company owners.",
+      "Approval was manual.",
+      "Approved Magies were moved into development rather than published directly to production.",
+      "The broader release progression was development -> staging -> production.",
+      "A second QA pass occurred after the Magie was integrated into the actual student programs.",
+      "The exact distinction between the 2048 and 4096 paths should not be expanded beyond asset-path/resolution selection unless more source evidence is recovered."
+    ],
+
+    "confidence": {
+      "start2018": "medium-high",
+      "end2020": "medium",
+      "soloDevelopment": "high",
+      "reactFrontend": "high",
+      "spinePipeline": "high",
+      "awsLambdaProcessing": "high",
+      "s3Storage": "high",
+      "fourGenerationPackage": "high",
+      "dragDropZipWorkflow": "high",
+      "assetPaths2048And4096": "high",
+      "approximatelyOneMinuteProcessing": "medium-high",
+      "animationExpressionValidation": "high",
+      "caveStoreTesting": "high",
+      "manualApproval": "high",
+      "reviewersArtistJamieOwner": "high",
+      "developmentStagingProductionPipeline": "high",
+      "secondPassProgramQa": "high"
+    },
+
+    "projectTerminology": [
+      "Magie Maker",
+      "Magies",
+      "Spine",
+      "Egg",
+      "Baby",
+      "Teen",
+      "Adult",
+      "2048",
+      "4096",
+      "Cave Store",
+      "AWS Lambda",
+      "AWS S3",
+      "Development",
+      "Staging",
+      "Production"
+    ],
+
     "provenance": {
       "legacyCategory": "Fullstack",
       "legacyIndex": 1

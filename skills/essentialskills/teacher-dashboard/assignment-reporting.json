@@ -1,32 +1,210 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/teacher-dashboard/assignment-reporting",
-  "title": "Teacher Assignment and Reporting App (2017)",
+  "title": "2017 Teacher Assignment, Reporting & Parent Calendar Dashboard",
   "project": "Teacher Dashboard",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Application"
+      "Teacher Administration Platform",
+      "Assignment & Reporting Dashboard",
+      "Parent Communication"
     ]
   },
+
   "technologies": [
-    "JQuery",
+    "JavaScript",
+    "jQuery",
     "Bootstrap",
     "Ajax",
     "PHP",
     "JSON",
-    "AWS (CloudFront",
+    "AWS",
+    "CloudFront",
     "EC2",
     "Ubuntu",
-    "SimpleDB"
+    "AWS SimpleDB",
+    "Canvas"
   ],
+
   "date": {
     "from": "2017",
-    "to": "2017",
-    "display": false
+    "to": "2019",
+    "display": true
   },
-  "description": "After analyzing the competition's trends, I reconstructed the teacher dashboard application to modernize its interface and user experience for today's market. ",
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Lead Full-Stack Developer / UI/UX Designer",
+    "total": 1,
+    "contributors": []
+  },
+
+  "roles": [
+    "Lead Full-Stack Developer",
+    "UI/UX Designer",
+    "JavaScript Developer",
+    "Reporting Systems Developer",
+    "Teacher Tools Developer",
+    "Parent Communication Developer"
+  ],
+
+  "description": "I redesigned and rebuilt the Essential Skills Teacher Dashboard in 2017 using JavaScript, jQuery, Bootstrap, Ajax, PHP, JSON, AWS, and SimpleDB. This generation replaced the earlier one-page dashboard with a more conventional teacher-management interface for assignments, student/class management, reporting, charts, notifications, and school administration. It also briefly supported a parent-facing calendar and marks workflow, where teachers could create class-wide events and parents could log into a separate site to see dated messages, completed tests or assignments, and related marks.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "2017 Dashboard Redesign",
+        "paragraphs": [
+          "This was the post-one-page, pre-React generation of the Essential Skills Teacher Dashboard.",
+          "After reviewing competing products and current interface trends, I rebuilt the dashboard around a more conventional and familiar teacher-management experience."
+        ]
+      },
+      {
+        "title": "Solo Development",
+        "paragraphs": [
+          "I designed and implemented this dashboard myself.",
+          "The broader requirements came from the real operational needs of teachers, Customer Service, management, and the existing Essential Skills platform."
+        ]
+      },
+      {
+        "title": "Technology Stack",
+        "paragraphs": [
+          "The dashboard used a traditional web stack centered on JavaScript and jQuery rather than a frontend framework."
+        ],
+        "items": [
+          "JavaScript",
+          "jQuery",
+          "Bootstrap",
+          "Ajax",
+          "PHP",
+          "JSON",
+          "AWS",
+          "CloudFront",
+          "EC2",
+          "Ubuntu",
+          "AWS SimpleDB"
+        ]
+      },
+      {
+        "title": "More Conventional Teacher UI",
+        "paragraphs": [
+          "The earlier Version 6 dashboard had used a one-page progressive-context workflow.",
+          "This redesign moved back toward a more conventional dashboard structure that ownership and users found easier to understand."
+        ]
+      },
+      {
+        "title": "Assignments",
+        "paragraphs": [
+          "Teachers could create and manage assignments for students, groups, and classes.",
+          "Assignments integrated with the broader Essential Skills student platform and reporting systems."
+        ]
+      },
+      {
+        "title": "Student and Class Management",
+        "paragraphs": [
+          "The dashboard provided the teacher-facing workflows needed to manage classes and students.",
+          "It remained part of the same shared Essential Skills account, assignment, marks, and reporting ecosystem."
+        ]
+      },
+      {
+        "title": "Reporting",
+        "paragraphs": [
+          "Teachers could view student and class progress through summary and detailed reports.",
+          "The application modernized the reporting experience while retaining access to the production marks and assignment data schools already depended on."
+        ]
+      },
+      {
+        "title": "Custom Charts",
+        "paragraphs": [
+          "The dashboard included custom visual reporting using charts and graphical summaries.",
+          "Canvas was used for parts of the reporting and visualization layer."
+        ]
+      },
+      {
+        "title": "Notifications",
+        "paragraphs": [
+          "The dashboard surfaced important student activity and completion information so teachers could quickly identify work requiring attention."
+        ]
+      },
+      {
+        "title": "Teacher Calendar Events",
+        "paragraphs": [
+          "This generation briefly included a teacher-created calendar/event system.",
+          "Teachers could enter class-wide events such as PA days or other group messages."
+        ]
+      },
+      {
+        "title": "Separate Parent Login",
+        "paragraphs": [
+          "Parents accessed this information through a separate Parent Login site rather than through the Teacher Dashboard itself.",
+          "Student records carried parent email information so the parent-facing site could associate a parent with the correct child."
+        ]
+      },
+      {
+        "title": "Parent Calendar and Marks View",
+        "paragraphs": [
+          "The parent calendar acted as a dated view of activity related to the child.",
+          "Entries represented either teacher/class messages or marks generated when the student completed tests and assignments."
+        ],
+        "items": [
+          "Class-wide teacher messages/events",
+          "Completed tests",
+          "Completed assignments",
+          "Links to view the related marks"
+        ]
+      },
+      {
+        "title": "Calendar as a Progress Timeline",
+        "paragraphs": [
+          "The parent-facing calendar was therefore more than a conventional event calendar.",
+          "It combined teacher-created class events with a chronological view of the child's completed schoolwork and marks."
+        ]
+      },
+      {
+        "title": "Short-Lived Parent Feature",
+        "paragraphs": [
+          "The parent calendar/login concept appears to have been abandoned relatively quickly.",
+          "It was discontinued before the later Home User subscription platform was created."
+        ]
+      },
+      {
+        "title": "Not Part of Home User",
+        "paragraphs": [
+          "The later Home User Subscription & Parent Platform did not inherit this calendar feature.",
+          "The absence of calendar code in Home User reflects that the concept had already been dropped rather than being removed from Home User later."
+        ]
+      },
+      {
+        "title": "Relationship to the React Dashboard",
+        "paragraphs": [
+          "This 2017 dashboard remained the primary teacher administration generation until I replaced it with the React Teacher Dashboard in 2019.",
+          "The React version retained and expanded the core teacher-management and reporting capabilities but did not continue the earlier parent-calendar concept."
+        ]
+      },
+      {
+        "title": "Dashboard Lineage",
+        "paragraphs": [
+          "This generation sits between the earlier Version 6 one-page dashboard and the later 2019 React dashboard."
+        ],
+        "items": [
+          "Version 6 one-page Teacher Dashboard",
+          "2017 jQuery / Bootstrap redesigned Teacher Dashboard",
+          "2019 React Teacher Dashboard"
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/fullstack/title.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/fullstack/title.jpg"
+    },
+
     "items": [
       {
         "type": "image",
@@ -76,20 +254,9 @@
           "featureSupporting"
         ]
       }
-    ],
-    "thumbnail": "images/skills/fullstack/title.jpg",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/fullstack/title.jpg"
-    }
+    ]
   },
-  "meta": {
-    "legacySubtitle": "JQuery, Bootstrap, Ajax, PHP, JSON, AWS (CloudFront, EC2, Ubuntu, SimpleDB)",
-    "provenance": {
-      "legacyCategory": "Fullstack",
-      "legacyIndex": 5
-    }
-  },
+
   "featured": {
     "heroImage": "images/Responsive.jpg",
     "supportingImages": [
@@ -97,8 +264,70 @@
       "images/Responsive_2.jpg",
       "images/Responsive_3.jpg"
     ],
-    "overlayTitle": "Responsive Design",
-    "overlayText": "Bootstrap, CSS, jQuery, Canvas",
-    "description": "Designed and currently developing a teacher friendly dashboard used to assess students, create assignments as well as view reports with the districts, schools and parents."
+    "overlayTitle": "Teacher Dashboard",
+    "overlayText": "Assignments | Reporting | Parent Progress",
+    "description": "Redesigned and built the 2017 teacher administration and reporting dashboard, including a short-lived parent-facing calendar and marks workflow."
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The legacy card was titled 'Teacher Assignment and Reporting App (2017)'.",
+      "The legacy description states that Jamie reconstructed the Teacher Dashboard after analyzing competitor trends in order to modernize its interface and user experience.",
+      "This is the post-one-page, pre-React Teacher Dashboard generation.",
+      "Jamie built this dashboard alone.",
+      "The primary stack was jQuery, Bootstrap, Ajax, PHP, JSON, AWS, and SimpleDB.",
+      "The broader Teacher Management & Reporting Systems profile already documents this generation as a more conventional redesign after the one-page Version 6 dashboard.",
+      "A newly recovered feature was a teacher-created calendar/event system connected to a separate Parent Login site.",
+      "Teachers created class-wide events such as PA days.",
+      "Student records included parent email information used by the separate Parent Login.",
+      "Parents could see dated teacher messages/events and dates when their child completed tests or assignments.",
+      "Parents could click completed work entries to view the associated marks.",
+      "The calendar represented either a teacher/class message or a marks-related completion event on a particular date.",
+      "The parent calendar/login feature was abandoned before the later Home User Subscription & Parent Platform was created.",
+      "The later Home User product therefore never contained this calendar feature.",
+      "Do not describe the calendar as having been removed from Home User.",
+      "The 2019 React Teacher Dashboard replaced this 2017 dashboard and did not continue the parent-calendar concept.",
+      "The exact font visible in surviving screenshots is not remembered and should not be treated as a stable design characteristic."
+    ],
+
+    "confidence": {
+      "date2017": "high",
+      "replacedByReact2019": "high",
+      "soloDevelopment": "high",
+      "jqueryBootstrapStack": "high",
+      "phpJsonBackend": "high",
+      "simpleDbIntegration": "high",
+      "postOnePagePreReactPosition": "high",
+      "teacherClassEvents": "high",
+      "separateParentLogin": "high",
+      "parentEmailStudentAssociation": "high",
+      "parentMarksTimeline": "high",
+      "calendarMessageOrMarksEntry": "high",
+      "calendarAbandonedBeforeHomeUser": "high",
+      "homeUserNeverHadCalendar": "high"
+    },
+
+    "projectTerminology": [
+      "Teacher Dashboard",
+      "Teacher Assignment and Reporting App",
+      "Parent Login",
+      "Parent Calendar",
+      "Assignments",
+      "Reports",
+      "Marks",
+      "jQuery",
+      "Bootstrap",
+      "Ajax",
+      "PHP",
+      "JSON",
+      "AWS",
+      "SimpleDB",
+      "Canvas"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Fullstack",
+      "legacyIndex": 5
+    }
   }
 }

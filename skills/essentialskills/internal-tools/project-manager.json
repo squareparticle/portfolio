@@ -1,34 +1,262 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/internal-tools/project-manager",
-  "title": "Project Manager",
+  "title": "Development Workload & Capacity Manager",
   "project": "Internal Tools",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Developer Tool"
+      "Internal Operations Tool",
+      "Developer Scheduling",
+      "Capacity Planning"
     ]
   },
+
   "technologies": [
     "Django",
-    "AWS"
+    "Python",
+    "Bootstrap",
+    "Bootbox",
+    "AWS",
+    "AWS SimpleDB"
   ],
+
   "date": {
-    "from": null,
+    "from": "2020-09-14",
     "to": null,
-    "display": false
+    "display": true
   },
-  "description": "I contracted a customer Project Manager application for Essential Skills.  This program is used internally to track developer project timelines. It's main purpose is to track project interruptions, predict future schedules, share tasks and analyze project history.",
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Lead Developer / Software Architect",
+    "total": 1,
+    "contributors": []
+  },
+
+  "roles": [
+    "Lead Developer",
+    "Software Architect",
+    "Django Developer",
+    "Python Developer",
+    "Internal Tools Developer",
+    "Capacity Planning Developer",
+    "Workflow Designer"
+  ],
+
+  "description": "I designed and built an internal Django workload and capacity-management application for Essential Skills. Ownership submitted work requests into the system, I estimated and scheduled them, and the application automatically recalculated projected start and end dates whenever work was reordered. It gave ownership a transparent view of developer capacity, shared work, urgent interruptions, and the historical reasons long-running projects moved on the schedule.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Why I Built It",
+        "paragraphs": [
+          "The tool was created to make development workload and schedule impact visible to ownership.",
+          "Large projects could run for many weeks while new one-off requests and urgent ideas were continually inserted into the team's workload.",
+          "The application made those interruptions explicit so a delayed project could be traced back to the work that displaced it."
+        ]
+      },
+      {
+        "title": "Ownership Work Requests",
+        "paragraphs": [
+          "Ownership submitted development requests directly through the system.",
+          "New requests arrived in my Inbox where I reviewed the work and entered an estimate that ownership could see."
+        ]
+      },
+      {
+        "title": "Inbox",
+        "paragraphs": [
+          "The Inbox represented newly submitted ownership requests waiting for review, estimation, and scheduling.",
+          "A request could remain there until I was ready to decide how it should enter the workload."
+        ]
+      },
+      {
+        "title": "Unscheduled",
+        "paragraphs": [
+          "Unscheduled was a holding area for work I wanted to remember but was not ready to place onto an active developer schedule.",
+          "It also kept the Inbox from becoming a long-term backlog."
+        ]
+      },
+      {
+        "title": "Scheduled",
+        "paragraphs": [
+          "Each developer had a personal schedule.",
+          "Moving a task into Scheduled gave it a position in that developer's workload and therefore a projected start and end date."
+        ]
+      },
+      {
+        "title": "Shared",
+        "paragraphs": [
+          "Shared was a common pool of work that any developer could take.",
+          "A developer could grab a Shared task and move it into their own schedule.",
+          "This allowed ownership work to be distributed across the team rather than being tied permanently to one person."
+        ]
+      },
+      {
+        "title": "Automatic Schedule Recalculation",
+        "paragraphs": [
+          "Tasks were reordered through drag and drop.",
+          "When I moved a task anywhere in the schedule, the application automatically realigned the dates for that task and all work after it.",
+          "Placing new work near the front pushed later work farther into the future, while placing it at the end produced a naturally later projected start date."
+        ]
+      },
+      {
+        "title": "Urgent Work Still Consumed Visible Capacity",
+        "paragraphs": [
+          "Urgent work was still entered formally by ownership as a task.",
+          "It arrived in the Inbox marked urgent and still had to be placed into a schedule or into Shared.",
+          "This prevented urgent one-off work from consuming developer time invisibly."
+        ]
+      },
+      {
+        "title": "Schedule Impact Transparency",
+        "paragraphs": [
+          "The system showed the practical impact of interruptions on long-running projects.",
+          "If a large project was repeatedly pushed back because shorter ownership requests were inserted ahead of it, the resulting date changes were visible rather than appearing arbitrary."
+        ]
+      },
+      {
+        "title": "Historical Audit Trail",
+        "paragraphs": [
+          "The application maintained a log trail of status changes and schedule movement.",
+          "Management could see when an item changed state, when it was bumped, and why its projected start date moved over time."
+        ]
+      },
+      {
+        "title": "Coarse Capacity Planning",
+        "paragraphs": [
+          "The application intentionally tracked major work at a coarse level.",
+          "A large initiative might remain one 60-work-day task rather than being decomposed into dozens of implementation subtasks.",
+          "Detailed project management continued in tools such as Asana or Basecamp."
+        ]
+      },
+      {
+        "title": "Different Problem from Asana or Basecamp",
+        "paragraphs": [
+          "This tool was not intended to replace detailed task-management software.",
+          "Its purpose was to answer a different operational question: given all of the work ownership has requested, when can a developer realistically start or finish a major project, and what caused that date to change?"
+        ]
+      },
+      {
+        "title": "Team Visibility",
+        "paragraphs": [
+          "The system supported three developers including me, plus ownership.",
+          "Everyone had their own login and ownership could see the individual developer schedules as well as the shared work pool."
+        ]
+      },
+      {
+        "title": "Management Progress Visibility",
+        "paragraphs": [
+          "Ownership could monitor progress without relying only on verbal updates.",
+          "They could see estimates, current schedule placement, projected dates, status history, and interruptions that affected delivery."
+        ]
+      },
+      {
+        "title": "Django UI",
+        "paragraphs": [
+          "The application was built in Django with a UI primarily styled using Bootstrap and Bootbox.",
+          "Drag-and-drop scheduling formed a central part of the interaction model."
+        ]
+      },
+      {
+        "title": "AWS SimpleDB",
+        "paragraphs": [
+          "AWS SimpleDB stored the application's work-request, scheduling, and history data."
+        ]
+      },
+      {
+        "title": "Solo Development",
+        "paragraphs": [
+          "I designed and built the application myself.",
+          "The workflow reflected the actual development-management problem I was dealing with rather than being a generic project-management template."
+        ]
+      },
+      {
+        "title": "Start Date",
+        "paragraphs": [
+          "Project files establish September 14, 2020 as the start date for the Django workload-management project."
+        ]
+      }
+    ]
+  },
+
   "media": {
-    "items": [],
     "thumbnail": "images/skills/fullstack/taskmanager.gif",
+
     "primary": {
       "type": "image",
       "src": "images/skills/fullstack/taskmanager.gif"
-    }
+    },
+
+    "items": []
   },
+
   "meta": {
-    "legacySubtitle": "Django, AWS",
+    "historicalNotes": [
+      "The legacy portfolio card was titled 'Project Manager'.",
+      "The legacy description said the application was used internally to track developer project timelines, project interruptions, future schedules, shared tasks, and project history.",
+      "The legacy wording 'I contracted a customer Project Manager application' is inaccurate or ambiguous; Jamie built the application himself.",
+      "Project files establish September 14, 2020 as the actual project start date.",
+      "Ownership submitted work requests through the system.",
+      "Requests arrived in Jamie's Inbox where he entered an estimate visible to ownership.",
+      "Inbox represented new work awaiting estimation/scheduling.",
+      "Unscheduled was a holding area for tasks to remember later and to keep the Inbox clean.",
+      "Scheduled represented each developer's personal ordered workload.",
+      "Shared represented a pool of work any developer could take.",
+      "Developers could move Shared items into their own schedules.",
+      "Drag-and-drop ordering automatically recalculated downstream start/end dates.",
+      "Urgent ownership requests were still entered as formal tasks and consumed visible schedule capacity.",
+      "A major project could remain one coarse-duration task, for example approximately 60 work days.",
+      "Detailed subtasks remained in Asana or Basecamp.",
+      "The system was specifically useful for showing the effect of frequent unrelated ownership interruptions on long-running development work.",
+      "A historical log recorded status changes, schedule changes, and repeated bumps so management could see why projected dates moved.",
+      "Ownership could see all developer schedules.",
+      "The primary user group was three developers including Jamie plus ownership.",
+      "The UI appears to have been primarily Django + Bootstrap + Bootbox.",
+      "AWS SimpleDB was the database.",
+      "Jamie built the application alone.",
+      "The tool should be framed as workload/capacity/schedule-impact management rather than a generic replacement for Asana or Basecamp."
+    ],
+
+    "confidence": {
+      "start2020Sep14": "high",
+      "soloDevelopment": "high",
+      "django": "high",
+      "bootstrap": "high",
+      "bootbox": "medium-high",
+      "simpleDb": "high",
+      "ownershipRequestWorkflow": "high",
+      "inboxEstimateWorkflow": "high",
+      "unscheduledMeaning": "high",
+      "scheduledMeaning": "high",
+      "sharedPoolMeaning": "high",
+      "dragDropRecalculation": "high",
+      "urgentWorkFormalized": "high",
+      "coarseProjectDurations": "high",
+      "asanaBasecampForDetailedTasks": "high",
+      "historicalAuditTrail": "high",
+      "allSchedulesVisibleToOwnership": "high",
+      "threeDevelopersPlusOwnership": "high"
+    },
+
+    "projectTerminology": [
+      "Project Manager",
+      "Development Workload",
+      "Capacity Planning",
+      "Inbox",
+      "Unscheduled",
+      "Scheduled",
+      "Shared",
+      "Django",
+      "Bootstrap",
+      "Bootbox",
+      "AWS",
+      "SimpleDB",
+      "Asana",
+      "Basecamp"
+    ],
+
     "provenance": {
       "legacyCategory": "Fullstack",
       "legacyIndex": 2

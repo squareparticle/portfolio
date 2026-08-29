@@ -1,30 +1,250 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/customer-platform/management-analysis",
-  "title": "Customer Management and Analysis (2016)",
+  "title": "Customer Operations, Sales & Usage Analytics Platform",
   "project": "Customer Platform",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Application"
+      "Internal Operations Platform",
+      "Customer Management",
+      "Sales & Marketing Analytics",
+      "Usage Analytics"
     ]
   },
+
   "technologies": [
-    "MongoDB",
-    "Express",
     "AngularJS",
-    "NodeJS",
+    "Node.js",
+    "Express",
     "Bootstrap",
+    "MongoDB",
+    "AWS SimpleDB",
     "AWS",
-    "SDB"
+    "PHP"
   ],
+
   "date": {
-    "from": "2016",
-    "to": "2016",
-    "display": false
+    "from": "2016-09-28",
+    "to": null,
+    "display": true
   },
-  "description": "Created a customer service and marketing web application. Flags potential customer issues Flags renewals and tracks contacts Charts customer usage with graphs Analyses trails Stores quotes, company messages, internal school notes and renewal notes",
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Lead Full-Stack Developer / Software Architect",
+    "total": 1,
+    "contributors": []
+  },
+
+  "roles": [
+    "Lead Full-Stack Developer",
+    "Software Architect",
+    "AngularJS Developer",
+    "Node.js Developer",
+    "Backend Developer",
+    "Database Developer",
+    "UI/UX Designer",
+    "Customer Operations Systems Developer",
+    "Sales Analytics Developer"
+  ],
+
+  "description": "I designed and built the Essential Skills Customer App / CustomerDB, an internal AngularJS and Node.js platform used by Customer Service, Sales, Marketing, and ownership to manage schools and districts, analyze real production usage, track trials and conversions, create quotes, manage renewals, record customer communications, and flag customer risks. The application connected operational customer workflows directly to production data in AWS SimpleDB while also experimenting with MongoDB for lower-risk document-style data.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "One Application, Several Names",
+        "paragraphs": [
+          "Customer App, CustomerDB, and ESS Web Customer Database all refer to the same internal web application.",
+          "The platform became a central operational tool for Customer Service, Sales, Marketing, and ownership."
+        ]
+      },
+      {
+        "title": "Solo Full-Stack Development",
+        "paragraphs": [
+          "I designed and built the application myself.",
+          "I developed the UI/UX after extensive meetings with Customer Service, Marketing, and ownership to understand the workflows, customer-management problems, and usage information each group needed."
+        ]
+      },
+      {
+        "title": "AngularJS Frontend",
+        "paragraphs": [
+          "The frontend was built in AngularJS with Bootstrap.",
+          "The interface brought customer operations, sales activity, analytics, notes, renewals, trials, quotes, and production-usage information into one internal application."
+        ]
+      },
+      {
+        "title": "Node.js / Express Backend",
+        "paragraphs": [
+          "Node.js and Express formed the primary backend API layer.",
+          "Where mature company infrastructure already existed in PHP, the Node backend called into those existing PHP systems rather than rewriting working production functionality unnecessarily."
+        ]
+      },
+      {
+        "title": "Production SimpleDB Integration",
+        "paragraphs": [
+          "AWS SimpleDB remained necessary because the Customer App needed direct access to the production Essential Skills customer and usage data.",
+          "This included operational actions such as creating schools and districts and reading real customer/product usage."
+        ]
+      },
+      {
+        "title": "MongoDB Experiment",
+        "paragraphs": [
+          "I experimented with MongoDB because I wanted to move away from SimpleDB and liked the flexibility of a JSON/document-oriented database.",
+          "I intentionally limited MongoDB to lower-risk information such as side notes and quote-related data rather than moving critical production records into it."
+        ]
+      },
+      {
+        "title": "MongoDB Risk Decision",
+        "paragraphs": [
+          "The hosted MongoDB service I was using later suffered a security compromise, which reinforced my decision not to trust important production data to that path.",
+          "The experimental data was backed up and the critical operational data remained in SimpleDB.",
+          "This should be framed as a contained technology experiment rather than a failed production migration."
+        ]
+      },
+      {
+        "title": "Customer Risk Detection",
+        "paragraphs": [
+          "The platform flagged customers whose usage patterns or account state suggested a potential issue."
+        ],
+        "items": [
+          "Low or no paid usage: possible renewal / flight risk",
+          "Unusually high usage: possible abuse or misuse",
+          "Late renewal payment",
+          "Other account conditions requiring Customer Service attention"
+        ]
+      },
+      {
+        "title": "Production Usage Analytics",
+        "paragraphs": [
+          "The application read real production usage data rather than relying only on CRM-style account records.",
+          "Ownership could use historical graphs and current activity views to understand how customers were actually using the learning platform."
+        ]
+      },
+      {
+        "title": "Monthly Usage Scale",
+        "paragraphs": [
+          "A surviving usage graph from one year shows monthly active users reaching approximately 64,000.",
+          "That screenshot is a point-in-time example rather than the company's lifetime peak."
+        ]
+      },
+      {
+        "title": "Live School Activity",
+        "paragraphs": [
+          "The usage interface also exposed current school activity such as schools active that day, login counts, and users currently online.",
+          "This let operational staff connect account conversations with actual recent platform activity."
+        ]
+      },
+      {
+        "title": "Trial Analytics",
+        "paragraphs": [
+          "The platform tracked active trials and their sales potential.",
+          "Marketing and ownership could see how many trials were active, how many converted, and what those trials would be worth if they became paying customers."
+        ]
+      },
+      {
+        "title": "Trial to Quote to Order Funnel",
+        "paragraphs": [
+          "Trials could be connected to Quotes and then Orders.",
+          "This allowed the company to follow the customer path through the sales funnel and analyze how effectively trial activity converted into revenue."
+        ],
+        "items": [
+          "Trial",
+          "Quote",
+          "Order"
+        ]
+      },
+      {
+        "title": "Quote Creation & Sales Workflow",
+        "paragraphs": [
+          "Sales and Marketing used the application to create and send customer quotes.",
+          "Quote data was linked into the broader customer, trial, message, and order workflow rather than being managed as isolated records."
+        ]
+      },
+      {
+        "title": "Renewal Management System",
+        "paragraphs": [
+          "I built a structured renewal-management workflow for Customer Service to manage annual customer renewals.",
+          "The system tracked scripted calls, emails, follow-up actions, customer responses, due dates, and renewal value."
+        ]
+      },
+      {
+        "title": "Renewal Workflow States",
+        "paragraphs": [
+          "Customer Service could track the current state and required action for each renewal rather than relying on informal notes."
+        ],
+        "items": [
+          "Trial",
+          "No Contact",
+          "Not Interested",
+          "Will Continue",
+          "Renewing",
+          "Need Follow up",
+          "Call stages",
+          "Email stages"
+        ]
+      },
+      {
+        "title": "Renewal Value Visibility",
+        "paragraphs": [
+          "Renewal views summarized both workload and business value.",
+          "Customer Service and ownership could see the number of schools, amounts due, missing/at-risk value, and total renewal value while tracking progress through the contact workflow."
+        ]
+      },
+      {
+        "title": "Central Communication History",
+        "paragraphs": [
+          "The message system was connected across the customer platform.",
+          "Messages and notes could be attached to records such as trials, quotes, orders, and customer accounts."
+        ]
+      },
+      {
+        "title": "Cross-Linked Messages",
+        "paragraphs": [
+          "Messages were logged chronologically and could be viewed either from the record they belonged to or from a central Messages view.",
+          "From the message list, staff could navigate back to the related customer, quote, trial, order, or other attached record."
+        ]
+      },
+      {
+        "title": "Customer Service & Marketing Collaboration",
+        "paragraphs": [
+          "The application gave Customer Service, Sales, Marketing, and ownership a shared operational view of customer state.",
+          "The UI and workflows were shaped through repeated discussions with the people who used the system day to day."
+        ]
+      },
+      {
+        "title": "School & District Administration",
+        "paragraphs": [
+          "Because the application connected directly to production SimpleDB data, Customer Service could perform operational account-management tasks such as creating and managing school and district records."
+        ]
+      },
+      {
+        "title": "Operational Data Plus Behavioral Data",
+        "paragraphs": [
+          "The application was more than a conventional customer database because it combined customer records with actual learning-platform usage.",
+          "That let staff interpret renewals, trials, customer risk, and support activity in the context of how schools were really using the product."
+        ]
+      },
+      {
+        "title": "Relationship to Customer SSO",
+        "paragraphs": [
+          "The later Customer SSO administration system did not replace CustomerDB.",
+          "Customer SSO focused on Free Phonics, Clever, NYC DOE, Edlink, and other SSO-related workflows, while CustomerDB continued serving broader customer operations, sales, renewals, trials, quotes, and usage analysis."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/fullstack/angular.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/fullstack/angular.jpg"
+    },
+
     "items": [
       {
         "type": "image",
@@ -74,21 +294,9 @@
           "featureSupporting"
         ]
       }
-    ],
-    "thumbnail": "images/skills/fullstack/angular.jpg",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/fullstack/angular.jpg"
-    }
+    ]
   },
-  "descriptionHtml": "Created a customer service and marketing web application.<br><ul><li>Flags potential customer issues</li><li>Flags renewals and tracks contacts</li><li>Charts customer usage with graphs</li><li>Analyses trails</li><li>Stores quotes, company messages, internal school notes and renewal notes</li></ul>",
-  "meta": {
-    "legacySubtitle": "MongoDB, Express, AngularJS, NodeJS, Bootstrap, AWS, SDB",
-    "provenance": {
-      "legacyCategory": "Fullstack",
-      "legacyIndex": 3
-    }
-  },
+
   "featured": {
     "heroImage": "images/Angular.jpg",
     "supportingImages": [
@@ -96,8 +304,94 @@
       "images/Angular_2.jpg",
       "images/Angular_3.jpg"
     ],
-    "overlayTitle": "Angular",
-    "overlayText": "Angular, Express, Node, AWS, MongoDB",
-    "description": "Designed and developed an application used to analyze customer usage, manage subscriptions and target problem areas"
+    "overlayTitle": "Customer Operations Platform",
+    "overlayText": "AngularJS | Node.js | AWS | Usage Analytics",
+    "description": "Designed and built an internal customer operations platform connecting real production usage with renewals, trials, quotes, sales workflows, and customer risk analysis."
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The legacy card was titled 'Customer Management and Analysis (2016)'.",
+      "Customer App, CustomerDB, and ESS Web Customer Database are all names for the same application.",
+      "The project start is anchored to September 28, 2016.",
+      "Jamie built the application alone.",
+      "Jamie designed the UI/UX after repeated meetings with Customer Service, Marketing, and ownership.",
+      "AngularJS and Bootstrap formed the frontend.",
+      "Node.js / Express formed the primary backend API.",
+      "The Node backend called existing PHP infrastructure when mature company functionality already existed there.",
+      "AWS SimpleDB remained the authoritative production integration for customer records, school/district creation, and usage data.",
+      "Jamie experimented with MongoDB as a possible path away from SimpleDB because he preferred the JSON/document model.",
+      "MongoDB was intentionally limited to lower-risk data such as side notes and quote-related data.",
+      "The hosted MongoDB environment was later compromised; important production data was not stored there and experimental data was backed up.",
+      "Do not frame MongoDB as having replaced SimpleDB.",
+      "Customer risk flags included low/no paid usage, unusually high usage, and overdue renewal payment.",
+      "Low/no usage was interpreted as possible flight/renewal risk.",
+      "Unusually high usage could indicate abuse or misuse.",
+      "Trial analytics included active-trial counts, conversions, and potential value if converted.",
+      "Trials could be connected to Quotes and Orders to analyze conversion.",
+      "Sales and Marketing created and sent quotes from the application.",
+      "The renewal system tracked scripted calls, emails, current status, required action, due dates, and customer value.",
+      "Surviving renewal screenshots show statuses including Trial, No Contact, Not Interested, Will Continue, Renewing, and Need Follow up.",
+      "Renewal workflow included repeated call and email stages.",
+      "Messages were date logged and linked to records including orders, trials, and quotes.",
+      "Messages could be viewed from the attached record or from a central message list with navigation back to the linked record.",
+      "A surviving annual usage screenshot shows monthly users reaching approximately 64,000 during that year.",
+      "That screenshot is not known to represent the company's highest-ever usage year.",
+      "The usage application could also show schools active today, total logins, and currently online counts.",
+      "Customer SSO did not replace CustomerDB.",
+      "Customer SSO focused on Free Phonics, Clever, NYC DOE, Edlink, and SSO-related administration.",
+      "CustomerDB remained the broader customer operations, sales, renewal, trial, quote, and usage-analysis platform."
+    ],
+
+    "confidence": {
+      "start2016Sep28": "high",
+      "sameAppMultipleNames": "high",
+      "soloDevelopment": "high",
+      "uiUxDesignedByJamie": "high",
+      "angularJsFrontend": "high",
+      "nodeExpressBackend": "high",
+      "phpIntegration": "high",
+      "simpleDbProductionIntegration": "high",
+      "mongoDbExperimentalUse": "high",
+      "mongoDbLowRiskDataOnly": "high",
+      "mongoDbHostedServiceCompromise": "high",
+      "customerRiskFlags": "high",
+      "trialAnalytics": "high",
+      "trialQuoteOrderLinkage": "high",
+      "quoteCreation": "high",
+      "renewalWorkflow": "high",
+      "renewalStatusesFromScreenshot": "high",
+      "messageCrossLinking": "high",
+      "monthlyUsageApprox64000": "high",
+      "liveUsageViews": "high",
+      "customerSsoSeparateSystem": "high"
+    },
+
+    "projectTerminology": [
+      "Customer App",
+      "CustomerDB",
+      "ESS Web Customer Database",
+      "AngularJS",
+      "Node.js",
+      "Express",
+      "Bootstrap",
+      "MongoDB",
+      "AWS",
+      "SimpleDB",
+      "PHP",
+      "Customer Service",
+      "Marketing",
+      "Ownership",
+      "Trials",
+      "Quotes",
+      "Orders",
+      "Renewals",
+      "Usage Analytics"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Fullstack",
+      "legacyIndex": 3
+    }
   }
 }
