@@ -1,36 +1,242 @@
 {
   "schemaVersion": 2,
   "id": "essentialskills/customer-platform/product-order-page",
-  "title": "Customer Product Order Page (2005 ?)",
+  "title": "ASP.NET Product Catalog & Ordering Website",
   "project": "Customer Platform",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Application"
+      "Public Website",
+      "Product Catalog",
+      "Quote & Purchase Order System"
     ]
   },
+
   "technologies": [
     "C#",
     "ASP.NET",
     "IIS",
-    "SQL Server"
+    "SQL Server",
+    "Windows Server"
   ],
+
   "date": {
     "from": "2005",
     "to": "2005",
-    "display": false
+    "display": true
   },
-  "description": "During the height of ASP.NETs popularity, I redesigned and rebuilt Essential Skill's website using ASP.NET. The code was set-up to only allow the content and title sections to change, but the header, footer and navigation bar remain static. The products and their descriptions were dynamically loaded from an SQL Server database.",
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Lead Developer / UI/UX Designer",
+    "total": 1,
+    "contributors": []
+  },
+
+  "roles": [
+    "Lead Developer",
+    "C# Developer",
+    "ASP.NET Developer",
+    "Web Developer",
+    "Database Developer",
+    "UI/UX Designer",
+    "Internal Tools Developer"
+  ],
+
+  "description": "Around 2005 I redesigned and rebuilt the main public Essential Skills website in C# and ASP.NET. The site presented the company's software catalog, loaded product information and pricing dynamically from SQL Server, and supported school purchasing through quote requests and purchase-order forms rather than credit-card checkout. I also built the internal product-management backend used to add, update, and remove products and pricing.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Main Public Company Website",
+        "paragraphs": [
+          "This was the primary consumer-facing Essential Skills website for that generation.",
+          "It acted as the company's public software catalog and purchasing entry point rather than only as a static marketing site."
+        ]
+      },
+      {
+        "title": "ASP.NET / C# Web Generation",
+        "paragraphs": [
+          "I rebuilt the site during the period when ASP.NET was becoming a major Microsoft web-development platform.",
+          "The application was written in C# and ASP.NET and hosted on the company's own Windows Server / IIS infrastructure."
+        ]
+      },
+      {
+        "title": "Reusable Site Shell",
+        "paragraphs": [
+          "The site used a common page structure where the header, footer, and navigation remained consistent while the page title and content area changed.",
+          "This avoided rebuilding common navigation and layout elements across individual product pages."
+        ]
+      },
+      {
+        "title": "Dynamic Product Catalog",
+        "paragraphs": [
+          "Product names, descriptions, pricing, and related catalog information were loaded dynamically from SQL Server rather than being hard-coded into individual pages."
+        ]
+      },
+      {
+        "title": "Quote & Purchase Order Workflow",
+        "paragraphs": [
+          "The site supported school purchasing, but not through instant credit-card checkout.",
+          "Customers submitted quote requests or purchase-order information, which matched the way schools typically bought higher-priced educational software at the time."
+        ]
+      },
+      {
+        "title": "High-Value School Purchases",
+        "paragraphs": [
+          "Individual programs could cost thousands of dollars, so purchasing was handled as a considered institutional transaction rather than impulse e-commerce.",
+          "Orders were processed offline after submission."
+        ]
+      },
+      {
+        "title": "Order Submission",
+        "paragraphs": [
+          "Customer order information was submitted through the website and was definitely emailed internally for follow-up.",
+          "Jamie also remembers the site likely storing order data in SQL Server, but that specific storage detail is less certain than the email workflow."
+        ]
+      },
+      {
+        "title": "Product Administration Backend",
+        "paragraphs": [
+          "I built an internal administration interface for maintaining the public catalog."
+        ],
+        "items": [
+          "Add products",
+          "Update products",
+          "Delete products",
+          "Maintain pricing",
+          "Maintain product descriptions and catalog data"
+        ]
+      },
+      {
+        "title": "SQL Server",
+        "paragraphs": [
+          "SQL Server stored the product/catalog data used by the public website and administration tools.",
+          "The system represented one of my early substantial web/database applications using the Microsoft stack."
+        ]
+      },
+      {
+        "title": "Solo Development",
+        "paragraphs": [
+          "I implemented the site myself even though I was already working with other developers at the company.",
+          "The public site, catalog integration, ordering workflow, database integration, and product-administration backend were all part of my work."
+        ]
+      },
+      {
+        "title": "UI/UX Design",
+        "paragraphs": [
+          "I designed the overall visual presentation and user experience.",
+          "The side-menu swirl motif was based on an idea from an earlier company website. I redrew and reinterpreted it, but the original visual concept was not mine."
+        ]
+      },
+      {
+        "title": "In-House Hosting",
+        "paragraphs": [
+          "The site ran on Essential Skills' own in-house Windows Server and IIS infrastructure rather than on later cloud-hosted infrastructure."
+        ]
+      },
+      {
+        "title": "Possible ASP.NET Web Forms",
+        "paragraphs": [
+          "ASP.NET Web Forms sounds consistent with Jamie's memory of the implementation, but the exact ASP.NET application model is not remembered strongly enough to state as a confirmed fact without source-code evidence."
+        ]
+      },
+      {
+        "title": "Frequent Website Redesigns",
+        "paragraphs": [
+          "Essential Skills treated the public website somewhat like a continuously changing company brochure and redesigned it frequently, often roughly yearly.",
+          "Jamie was responsible for several website generations over the years, but not every redesign."
+        ]
+      },
+      {
+        "title": "Short-Lived Website Generation",
+        "paragraphs": [
+          "This ASP.NET generation probably remained the main public site for only several months to around a year before another redesign replaced it.",
+          "The exact end date is not remembered."
+        ]
+      },
+      {
+        "title": "Eventually Outsourced",
+        "paragraphs": [
+          "The company eventually outsourced much of the public-website work because the constant redesign cycle was consuming too much internal development time."
+        ]
+      },
+      {
+        "title": "Career Significance",
+        "paragraphs": [
+          "This project is useful as a distinct portfolio entry because it captures a substantial early web/database phase in C# and ASP.NET before Jamie's later PHP, JavaScript, AngularJS, React, and broader full-stack work."
+        ]
+      }
+    ]
+  },
+
   "media": {
-    "items": [],
     "thumbnail": "images/skills/fullstack/asp.net.jpg",
+
     "primary": {
       "type": "image",
       "src": "images/skills/fullstack/asp.net.jpg"
-    }
+    },
+
+    "items": []
   },
+
   "meta": {
-    "legacySubtitle": "C#, ASP.NET, IIS, SQL Server",
+    "historicalNotes": [
+      "The legacy portfolio card was titled 'Customer Product Order Page (2005 ?)'.",
+      "The legacy card states that Jamie redesigned and rebuilt the Essential Skills website in ASP.NET and that product information was dynamically loaded from SQL Server.",
+      "This was the company's main public consumer-facing website for that generation.",
+      "The site catalogued Essential Skills software and supported purchasing through quote requests / purchase-order workflows rather than credit-card checkout.",
+      "Program pricing could be in the thousands of dollars, making offline school purchasing the normal workflow.",
+      "Jamie built the public website himself.",
+      "Jamie also built an internal CRUD backend for products and pricing.",
+      "Product/catalog data was stored in SQL Server.",
+      "Jamie remembers customer orders definitely being emailed internally and likely also stored in SQL Server; direct order persistence should remain qualified unless source code is recovered.",
+      "The site was hosted on Essential Skills' in-house Windows Server / IIS infrastructure.",
+      "Jamie designed the overall UI/UX.",
+      "The side-menu swirl visual idea originated in an earlier company website; Jamie redrew and reinterpreted it but did not originate the concept.",
+      "ASP.NET Web Forms sounds familiar but is not confirmed strongly enough to put in the public technology list.",
+      "Essential Skills redesigned its public website frequently, often approximately yearly.",
+      "Jamie created several of those generations but not all of them.",
+      "This ASP.NET generation likely remained live for several months to about a year.",
+      "The company later outsourced public-website work because frequent redesigns consumed too much internal development time."
+    ],
+
+    "confidence": {
+      "date2005": "medium-high",
+      "mainPublicWebsite": "high",
+      "soloDevelopment": "high",
+      "cSharpAspNet": "high",
+      "iisWindowsServer": "high",
+      "sqlServerCatalog": "high",
+      "productCatalog": "high",
+      "quotePurchaseOrderWorkflow": "high",
+      "noCreditCardCheckout": "high",
+      "internalProductCrudBackend": "high",
+      "ordersEmailedInternally": "high",
+      "ordersStoredInSqlServer": "medium",
+      "uiUxDesignedByJamie": "high",
+      "sideMenuConceptInherited": "high",
+      "aspNetWebForms": "medium-low",
+      "frequentWebsiteRedesigns": "high",
+      "durationMonthsToAboutYear": "medium",
+      "laterWebsiteOutsourcing": "high"
+    },
+
+    "projectTerminology": [
+      "Essential Skills Website",
+      "ASP.NET",
+      "C#",
+      "IIS",
+      "Windows Server",
+      "SQL Server",
+      "Product Catalog",
+      "Quote",
+      "Purchase Order",
+      "Product Administration"
+    ],
+
     "provenance": {
       "legacyCategory": "Fullstack",
       "legacyIndex": 6

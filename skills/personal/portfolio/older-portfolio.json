@@ -1,38 +1,198 @@
 {
   "schemaVersion": 2,
   "id": "personal/portfolio/older-portfolio",
-  "title": "Older Portfolio (2007)",
+  "title": "Multi-Stack Portfolio Architecture Study",
   "project": "Portfolio",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Web Application"
+      "Web Application",
+      "Architecture Study",
+      "Personal Portfolio"
     ]
   },
+
   "technologies": [
-    "ASP",
+    "Classic ASP",
+    "VBScript",
     "JSP",
+    "Java",
     "PHP",
     "MySQL",
-    "Javascript",
-    "VBScript"
+    "JavaScript",
+    "CSS",
+    "HTML"
   ],
+
   "date": {
     "from": "2007",
     "to": "2007",
-    "display": false
+    "display": true
   },
-  "description": "While hiring staff in the past, I became inspired by some creative portfolios.  Thus, I constructed my own while I was studying several server side languages.  I ended up porting the server side end to 3 languages in order to examine their differences.",
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Full-Stack Developer",
+    "total": 1,
+    "contributors": []
+  },
+
+  "roles": [
+    "Full-Stack Developer",
+    "Web Developer",
+    "Backend Developer",
+    "Database Developer",
+    "UI Developer"
+  ],
+
+  "description": "In 2007 I built my personal portfolio three times using Classic ASP/VBScript, JSP/Java, and PHP so I could directly compare server-side web technologies. All three versions used the same MySQL schema, frontend, content, graphics, CSS, and JavaScript, and switching implementations changed little more than the URL and backend syntax. The exercise helped me determine which server-side stack I wanted to use going forward, and I ultimately standardized more heavily on PHP.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "One Portfolio, Three Backends",
+        "paragraphs": [
+          "I designed the portfolio once and then implemented the server-side layer independently in three technologies.",
+          "The user-facing application remained effectively identical across all three versions."
+        ],
+        "items": [
+          "Classic ASP / VBScript",
+          "JSP / Java",
+          "PHP"
+        ]
+      },
+      {
+        "title": "Shared Frontend",
+        "paragraphs": [
+          "All three versions used the same frontend assets and presentation."
+        ],
+        "items": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Graphics",
+          "Portfolio content",
+          "Navigation",
+          "Skills",
+          "Categories"
+        ]
+      },
+      {
+        "title": "Shared MySQL Database",
+        "paragraphs": [
+          "Each backend implementation connected to the same MySQL database and schema.",
+          "Skills and portfolio categories were read dynamically from MySQL rather than being duplicated separately for each server implementation."
+        ]
+      },
+      {
+        "title": "No Framework",
+        "paragraphs": [
+          "I did not use a web framework.",
+          "I created my own reusable/component-like organization so the presentation and content could remain consistent while the server-side implementation changed underneath it."
+        ]
+      },
+      {
+        "title": "Direct Technology Comparison",
+        "paragraphs": [
+          "The purpose of the project was to learn the differences between the major server-side technologies I was considering for future work.",
+          "Because each version implemented the same application against the same database, I could compare the stacks directly rather than comparing unrelated tutorials or sample projects."
+        ]
+      },
+      {
+        "title": "Mostly Syntax Differences",
+        "paragraphs": [
+          "The comparison showed me that the three server-side stacks were fundamentally solving many of the same problems.",
+          "Moving the application between ASP/VBScript, JSP/Java, and PHP required mostly syntax changes rather than major architectural redesign."
+        ]
+      },
+      {
+        "title": "Interchangeable Implementations",
+        "paragraphs": [
+          "From the user's perspective, switching between implementations produced almost no visible difference.",
+          "The primary external difference was the URL and server technology handling the request."
+        ]
+      },
+      {
+        "title": "PHP Became My Preferred Stack",
+        "paragraphs": [
+          "After implementing the same application in all three environments, I preferred PHP and increasingly used it for later web development.",
+          "The decision came from direct comparative implementation rather than choosing a backend based only on documentation or popularity."
+        ]
+      },
+      {
+        "title": "Public Portfolio",
+        "paragraphs": [
+          "The portfolio was publicly hosted for several years.",
+          "The original hosting location or domain is no longer remembered."
+        ]
+      },
+      {
+        "title": "Historical Portfolio Role",
+        "paragraphs": [
+          "This is primarily a historical learning and architecture project rather than a flagship modern portfolio item.",
+          "It is still useful as evidence of early full-stack development, database-driven web applications, and comparative technology evaluation."
+        ]
+      }
+    ]
+  },
+
   "media": {
-    "items": [],
     "thumbnail": "images/skills/fullstack/portfolio.jpg",
+
     "primary": {
       "type": "image",
       "src": "images/skills/fullstack/portfolio.jpg"
-    }
+    },
+
+    "items": []
   },
+
   "meta": {
-    "legacySubtitle": "ASP, JSP, PHP, MySQL, Javascript, VBScript",
+    "historicalNotes": [
+      "The legacy card was titled 'Older Portfolio (2007)'.",
+      "The surviving screenshot supports the 2007 date.",
+      "Jamie built the portfolio while comparing server-side technologies for future web development.",
+      "The three implementations were Classic ASP/VBScript, JSP/Java, and PHP.",
+      "All three used the same MySQL database/schema.",
+      "The visible frontend, content, CSS, JavaScript, graphics, skills, and categories were shared across implementations.",
+      "Changing implementations primarily changed the URL and backend syntax.",
+      "No framework was used.",
+      "Jamie created his own reusable/component-like organization.",
+      "The ports required mostly syntax changes rather than substantial architectural refactoring.",
+      "Skills and Categories were loaded from MySQL.",
+      "The portfolio was publicly hosted for several years, but the original host/domain is not remembered.",
+      "The project contributed to Jamie choosing PHP as his preferred server-side web technology for later work.",
+      "This project is more likely to remain historical context than appear in a job-specific portfolio unless early ASP/JSP/PHP breadth or comparative architecture work is relevant."
+    ],
+
+    "confidence": {
+      "date2007": "high",
+      "classicAspVbscript": "high",
+      "jspJava": "high",
+      "php": "high",
+      "sharedMysqlSchema": "high",
+      "sameFrontendAcrossVersions": "high",
+      "noFramework": "high",
+      "mostlySyntaxPorting": "high",
+      "skillsCategoriesFromMysql": "high",
+      "publiclyHostedSeveralYears": "high",
+      "originalHost": "unknown",
+      "phpPreferredAfterComparison": "high"
+    },
+
+    "projectTerminology": [
+      "Classic ASP",
+      "VBScript",
+      "JSP",
+      "Java",
+      "PHP",
+      "MySQL",
+      "Portfolio",
+      "Skills",
+      "Categories"
+    ],
+
     "provenance": {
       "legacyCategory": "Fullstack",
       "legacyIndex": 7
