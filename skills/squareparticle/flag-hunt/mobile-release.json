@@ -11,16 +11,17 @@
     ]
   },
 
-  "technologies": [
-    "Java",
-    "C#",
-    "XNA",
-    "Android SDK",
-    "BlackBerry SDK",
-    "C.E.L.L.",
-    "AWS EC2",
-    "Sockets"
-  ],
+"technologies": [
+  "Java",
+  "C#",
+  "XNA",
+  "Android SDK",
+  "BlackBerry SDK",
+  "C.E.L.L.",
+  "AWS EC2",
+  "Sockets",
+  "TapForTap"
+],
 
   "date": {
     "from": "2011",
@@ -178,7 +179,23 @@
         "paragraphs": [
           "My impression was that the game found an audience because strategy and chess players were looking for something familiar enough to understand but different enough to feel new. The combination of hidden pieces, radar, asymmetric information, custom setups, and objective-based play gave it a distinct identity without requiring players to learn an entirely unfamiliar genre."
         ]
-      }
+      },
+      {
+        "title": "Mobile Stores, Promotion & Discovery",
+        "paragraphs": [
+          "The Android release was distributed through multiple storefronts during the fragmented early mobile-app era, including SlideME and AppsLib.",
+          "I also integrated mobile promotion and discovery services including Heyzap and TapForTap as part of the effort to build an audience outside the major app stores.",
+          "TapForTap provided app cross-promotion / advertising functionality, allowing participating apps to promote one another through the network."
+        ],
+        "items": [
+          "SlideME Android distribution",
+          "AppsLib Android distribution",
+          "Heyzap promotion / game discovery",
+          "TapForTap cross-promotion / advertising",
+          "Store listing and release management",
+          "Paid and network-based user acquisition"
+        ]
+      }      
     ]
   },
 
@@ -236,7 +253,12 @@
       "Because Flag Hunt was built with C.E.L.L., functional desktop builds also ran on Windows, macOS, and Linux, but compatibility should not automatically be treated as evidence of commercial storefront release.",
       "The game had no leaderboard because there was no conventional score.",
       "Jamie believes the game's strongest audience was strategy and chess players looking for a new variation on familiar strategic play.",
-      "Jamie handled development, game design, AI, engine work, UI/UX, gameplay art, level design, network programming, porting, storefront setup, releases, marketing, advertising, trailers, QA, support, maintenance, and investment."
+      "Jamie handled development, game design, AI, engine work, UI/UX, gameplay art, level design, network programming, porting, storefront setup, releases, marketing, advertising, trailers, QA, support, maintenance, and investment.",
+      "Recovered Flag Hunt project history confirms distribution through the SlideME Android store.",
+      "Recovered source code contains TapForTap integration from the mobile-release period.",
+      "TapForTap was used as part of the mobile promotion / advertising ecosystem around Square Particle games.",
+      "AppsLib, SlideME, Heyzap, TapForTap, and other promotion/store channels reflect the fragmented Android distribution environment Square Particle worked with during this period.",
+      "TapForTap integration is also remembered as being used around Santa's Route and Santa's Recession Bender; those cards should be updated separately when reviewed."      
     ],
 
     "confidence": {
@@ -245,7 +267,9 @@
       "exactPlatformBreakdown": "low",
       "germanFeatureStorefront": "low",
       "xboxActivityNumbers": "low",
-      "aiAlgorithmDetails": "low"
+      "aiAlgorithmDetails": "low",
+      "slideMeDistribution": "high",
+      "tapForTapIntegration": "high"
     },
 
     "provenance": {

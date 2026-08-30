@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 2,
+  "id": "squareparticle/bradengine/voxel-engine",
+  "title": "BradEngine Voxel Engine",
+  "project": "BradEngine",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Voxel Engine",
+      "Procedural World System",
+      "3D Engine Subsystem"
+    ]
+  },
+  "technologies": [
+    "JavaScript",
+    "HTML5 Canvas",
+    "BradEngine 3D Renderer",
+    "Web Workers",
+    "Perlin Noise",
+    "Procedural Generation",
+    "localStorage",
+    "Math"
+  ],
+  "date": {
+    "from": "2020",
+    "to": "2022",
+    "display": true
+  },
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Engine Architect / Lead Developer",
+    "total": 2,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Student Developer"
+        ],
+        "relationship": "family",
+        "contribution": "Jamie used the voxel engine while teaching his 14-year-old son 3D engine, procedural-generation, and world-building concepts."
+      }
+    ]
+  },
+  "roles": [
+    "Engine Architect",
+    "Lead Developer",
+    "Graphics Programmer",
+    "Procedural Generation Developer",
+    "World Streaming Developer",
+    "Programming Mentor"
+  ],
+  "description": "Built on BradEngine's native JavaScript software 3D renderer, the BradEngine Voxel Engine explored chunk-based procedural worlds, Perlin/noise-driven terrain, Web Worker generation, neighbor-aware mesh construction, chunk recycling, persistent voxel state, and runtime world editing through reusable 3D engine systems.",
+  "details": {
+    "sections": [
+      {
+        "title": "Built on BradEngine 3D",
+        "paragraphs": [
+          "The voxel system was a dedicated subsystem built on top of BradEngine's native JavaScript 3D renderer.",
+          "Voxel chunks were converted into BradEngine mesh data and rendered through the same software 3D pipeline."
+        ]
+      },
+      {
+        "title": "Chunk-Based World",
+        "paragraphs": [
+          "The world was divided into reusable voxel chunks instead of being represented as one monolithic mesh."
+        ],
+        "items": [
+          "Explicit chunk bounds",
+          "Reusable chunk objects",
+          "Player-relative active region",
+          "Chunk replacement / recycling",
+          "Dirty chunk rebuilding"
+        ]
+      },
+      {
+        "title": "Procedural Terrain",
+        "paragraphs": [
+          "Terrain height was generated procedurally using Perlin/noise-style functions."
+        ],
+        "items": [
+          "Noise-driven height generation",
+          "Generated voxel columns",
+          "Per-face block colors",
+          "Height-mapped world structure"
+        ]
+      },
+      {
+        "title": "Web Worker Generation",
+        "paragraphs": [
+          "Chunk terrain generation could run in Web Workers so procedural generation did not have to block the main rendering loop."
+        ]
+      },
+      {
+        "title": "Neighbor-Aware Surface Extraction",
+        "paragraphs": [
+          "The mesh builder checked neighboring voxel occupancy before generating faces.",
+          "Faces hidden between adjacent solid blocks were omitted so only visible voxel surfaces became render geometry."
+        ],
+        "items": [
+          "Adjacent-block checks",
+          "Hidden-face elimination",
+          "Visible-surface extraction",
+          "Chunk-neighbor awareness"
+        ]
+      },
+      {
+        "title": "Generated Mesh Optimization",
+        "paragraphs": [
+          "Generated voxel surfaces were converted into reusable mesh structures rather than submitted as isolated cubes."
+        ],
+        "items": [
+          "Vertex reduction",
+          "Mesh reindexing",
+          "Shared mesh representation",
+          "Per-face color data"
+        ]
+      },
+      {
+        "title": "Chunk Streaming / Recycling",
+        "paragraphs": [
+          "Chunks around the active world area could be reused or replaced as the player moved, allowing the system to maintain a bounded working set rather than permanently retaining every generated area."
+        ]
+      },
+      {
+        "title": "Persistent Voxel State",
+        "paragraphs": [
+          "Voxel chunk data could be stored in browser localStorage so generated or modified terrain could survive between runs."
+        ]
+      },
+      {
+        "title": "Runtime Voxel Editing",
+        "paragraphs": [
+          "The chunk system supported voxel lookup and modification within active chunks.",
+          "Edited chunks could be marked dirty and rebuilt so world changes were reflected in the generated render mesh."
+        ]
+      },
+      {
+        "title": "World Systems",
+        "paragraphs": [
+          "The voxel project was organized into multiple cooperating systems rather than one procedural demo."
+        ],
+        "items": [
+          "Camera",
+          "Lighting",
+          "World scene",
+          "Height mapping",
+          "Collision",
+          "Player",
+          "Mob / game objects",
+          "Game controller"
+        ]
+      },
+      {
+        "title": "Teaching Context",
+        "paragraphs": [
+          "I used the voxel project while teaching my son how larger 3D systems fit together, including chunked worlds, procedural generation, mesh construction, rendering, and runtime state."
+        ]
+      }
+    ]
+  },
+  "media": {
+    "thumbnail": "images/skills/engines/bradmc.gif",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/engines/bradmc.gif"
+    },
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/engines/bradmc_1.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/bradmc_2.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/bradmc_3.gif"
+      }
+    ]
+  },
+  "meta": {
+    "historicalNotes": [
+      "This is the JavaScript BradEngine voxel subsystem; the legacy filename containing 'java-voxel-engine' is misleading.",
+      "The legacy card dates the teaching work to Covid 2020 and identifies JavaScript, Canvas, Perlin Noise, Math, WebRTC, and Batch Scripts.",
+      "The voxel system was built on BradEngine's custom software 3D renderer.",
+      "Voxel-specific architecture is kept on this card rather than the general BradEngine 3D renderer card.",
+      "The project used chunk-based world organization, procedural/noise terrain generation, Web Workers, neighbor-aware visible-face generation, chunk recycling, and localStorage-backed state.",
+      "Runtime voxel edits could trigger dirty-chunk rebuilds."
+    ],
+    "confidence": {
+      "javascriptImplementation": "high",
+      "bradEngine3DIntegration": "high",
+      "chunkBasedWorld": "high",
+      "perlinNoiseTerrain": "high",
+      "webWorkerGeneration": "high",
+      "neighborAwareFaceElimination": "high",
+      "meshReductionAndReindexing": "high",
+      "chunkRecycling": "high",
+      "localStoragePersistence": "high",
+      "runtimeVoxelEditing": "high",
+      "teachingSonAge14": "high"
+    },
+    "projectTerminology": [
+      "BradEngine",
+      "Voxel Engine",
+      "Voxel Chunk",
+      "Web Workers",
+      "Perlin Noise",
+      "Procedural Generation",
+      "localStorage",
+      "Surface Extraction",
+      "Chunk Streaming"
+    ],
+    "provenance": {
+      "legacyCategory": "Engines",
+      "legacyIndex": 2
+    }
+  }
+}

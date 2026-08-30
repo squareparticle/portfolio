@@ -1,27 +1,165 @@
 {
   "schemaVersion": 2,
   "id": "education/high-school/rpg-project",
-  "title": "High School Project (1994)",
+  "title": "High School RPG: First Complete Graphical Game",
   "project": "High School",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Game"
+      "Game",
+      "Educational Project",
+      "RPG"
     ]
   },
+
   "technologies": [
     "Turing",
-    "Delux Paint Animation",
+    "Deluxe Paint Animation",
     "AAPlay",
-    "GWS"
+    "Graphics Workshop",
+    "PCX",
+    "BMP",
+    "Custom Asset Format"
   ],
+
   "date": {
     "from": "1994",
     "to": "1994",
-    "display": false
+    "display": true
   },
-  "description": "For my Computer Science project, I choose to create a RPG.  I successfully completed a fully playable game in two months.  You can explore the map, find secrets, talk to towns people, grind for xp and money, learn spells, level up and defeat the Wizzard King.",
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Solo Developer / Game Designer",
+    "total": 1,
+    "contributors": []
+  },
+
+  "roles": [
+    "Solo Developer",
+    "Game Designer",
+    "Gameplay Programmer",
+    "Tools Developer",
+    "Technical Artist",
+    "Level Designer",
+    "Narrative Designer"
+  ],
+
+  "description": "For my 1994 high-school Computer Science project, I built a complete graphical RPG in Turing as part of my long-running Dragon Quest-inspired game lineage. I created all of the artwork, built a large scrolling overworld, implemented turn-based combat, progression, NPCs, spells, secrets, opening and ending story sequences, and even created my own JAM asset-container format to package the game's graphics and animations.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "First Complete Graphical Game",
+        "paragraphs": [
+          "This was my first complete end-to-end game with a full graphical presentation rather than a text-only or partial prototype.",
+          "I completed the playable RPG in roughly two months for a high-school Computer Science project."
+        ]
+      },
+      {
+        "title": "Dragon Quest Lineage",
+        "paragraphs": [
+          "The game was part of the same RPG lineage that had started several years earlier with my text-based Dragon Quest-inspired work.",
+          "The combat and progression were influenced by games such as Dragon Warrior and Final Fantasy."
+        ]
+      },
+      {
+        "title": "Solo Development",
+        "paragraphs": [
+          "I created the project myself, including programming, game design, artwork, world design, story, asset processing, and gameplay systems."
+        ]
+      },
+      {
+        "title": "Complete RPG Progression",
+        "paragraphs": [
+          "The game had a complete playable progression from opening story to final boss and ending."
+        ],
+        "items": [
+          "Opening story scroll",
+          "Large explorable world",
+          "Hidden secrets",
+          "NPC conversations",
+          "XP and money progression",
+          "Spell learning",
+          "Character leveling",
+          "Turn-based combat",
+          "Final Wizzard King battle",
+          "Ending story scroll"
+        ]
+      },
+      {
+        "title": "Large Scrolling Overworld",
+        "paragraphs": [
+          "The world was not built as isolated screen-by-screen rooms.",
+          "I hand-drew a large world map and rendered only the area around the player as tiles, creating a continuously scrolling overworld."
+        ]
+      },
+      {
+        "title": "Local Tile Rendering",
+        "paragraphs": [
+          "Rather than attempting to draw the complete map every frame, the engine read the world data and rendered only the local region surrounding the player.",
+          "I arrived at this approach independently rather than being taught the technique."
+        ]
+      },
+      {
+        "title": "Original Artwork",
+        "paragraphs": [
+          "I created all of the game's graphics in Deluxe Paint Animation."
+        ]
+      },
+      {
+        "title": "Graphics Conversion Pipeline",
+        "paragraphs": [
+          "Graphics Workshop was part of my asset pipeline.",
+          "I used it to convert PCX files exported from Deluxe Paint Animation into BMP files before processing them for the game."
+        ]
+      },
+      {
+        "title": "Custom JAM Asset Files",
+        "paragraphs": [
+          "I created my own simple asset-container format for the project.",
+          "I stripped the standard BMP headers, added my own format information, and packed multiple graphics into a single file.",
+          "I called the format JAM files, based on my name."
+        ]
+      },
+      {
+        "title": "Animation Storage",
+        "paragraphs": [
+          "JAM files could also store multiple bitmap frames for animation rather than only static images."
+        ]
+      },
+      {
+        "title": "FMV Cutscenes",
+        "paragraphs": [
+          "Turing was too slow for the full-screen animation playback I wanted.",
+          "I used AAPlay.exe, a DOS FMV player, to handle the cutscene playback instead."
+        ]
+      },
+      {
+        "title": "Turn-Based Combat",
+        "paragraphs": [
+          "Combat followed the classic menu-driven, turn-based style of Dragon Warrior and Final Fantasy."
+        ]
+      },
+      {
+        "title": "Later JAM File Evolution",
+        "paragraphs": [
+          "I later continued developing the JAM-file idea in C++.",
+          "I wrote my own compression algorithm and installer tooling that could package compressed JAM data across multiple floppy disks."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/eng/rpg.gif",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/eng/rpg.gif"
+    },
+
     "items": [
       {
         "type": "image",
@@ -35,15 +173,60 @@
         "type": "image",
         "src": "images/skills/eng/dq_2.jpg"
       }
-    ],
-    "thumbnail": "images/skills/eng/rpg.gif",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/eng/rpg.gif"
-    }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "Turing, Delux Paint Animation, AAPlay, GWS",
+    "historicalNotes": [
+      "The legacy portfolio card was titled 'High School Project (1994)'.",
+      "The surviving legacy card confirms the 1994 date, Turing implementation, Deluxe Paint Animation, AAPlay, Graphics Workshop, and the complete playable RPG scope.",
+      "This project was part of Jamie's longer Dragon Quest / Dragon Warrior-inspired RPG lineage.",
+      "Jamie created the game alone.",
+      "Jamie created all graphics in Deluxe Paint Animation.",
+      "Graphics Workshop was used to convert PCX artwork into BMP files.",
+      "Jamie created a custom asset-container format called JAM files.",
+      "JAM files stripped/replaced normal BMP header handling and packed multiple graphics into one file.",
+      "JAM files could also hold animation frames.",
+      "AAPlay.exe was used for full-screen cutscene playback because Turing was too slow for the desired animation.",
+      "The overworld was a large continuously scrolling map rather than room-by-room screens.",
+      "Jamie rendered only the local tile area around the player.",
+      "The game included turn-based Dragon Warrior / Final Fantasy-style combat.",
+      "The game had both opening and ending story sequences.",
+      "Jamie later extended the JAM concept in C++ with custom compression and installer support spanning multiple floppy disks.",
+      "Jamie also experimented with hexadecimal save-file/game modification in Master of Magic during high school, but that is separate early reverse-engineering history and should not be folded into this project card."
+    ],
+
+    "confidence": {
+      "date1994": "high",
+      "soloDevelopment": "high",
+      "dragonQuestLineage": "high",
+      "allGraphicsByJamie": "high",
+      "deluxePaintAnimation": "high",
+      "graphicsWorkshopPipeline": "high",
+      "jamCustomAssetFormat": "high",
+      "jamAnimationStorage": "high",
+      "aaPlayCutscenes": "high",
+      "largeScrollingWorld": "high",
+      "localTileRendering": "high",
+      "turnBasedCombat": "high",
+      "completeGameProgression": "high",
+      "laterCppCompressionInstaller": "high"
+    },
+
+    "projectTerminology": [
+      "Turing",
+      "Dragon Quest",
+      "Dragon Warrior",
+      "Final Fantasy",
+      "Deluxe Paint Animation",
+      "Graphics Workshop",
+      "AAPlay",
+      "JAM Files",
+      "PCX",
+      "BMP",
+      "Wizzard King"
+    ],
+
     "provenance": {
       "legacyCategory": "Eng",
       "legacyIndex": 2

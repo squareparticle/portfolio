@@ -156,8 +156,8 @@
       },
       "skills": [
         "squareparticle/bradengine/engine",
-        "squareparticle/engines/java-3d-engine",
-        "squareparticle/engines/java-voxel-engine",
+        "squareparticle/engines/bradengine-3d-engine",
+        "squareparticle/engines/bradengine-voxel-engine",
         "squareparticle/cell/engine",
         "essentialskills/hydragen/engine",
         "squareparticle/engines/fx-prototype-2008",

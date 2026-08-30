@@ -3,11 +3,651 @@
   "id": "essentialskills/hydragen/engine",
   "title": "Hydra-Gen Engine",
   "project": "Hydra-Gen",
-  "platform": {"label": "Application Type", "values": ["Desktop Application Platform", "Web Application Platform", "Content Authoring System"]},
-  "technologies": ["Java", "AWS", "JNLP", "Applet", "MySQL", "ISAM", "XML", "BNF", "SimpleDB", "SQL Server", "Berkeley DB"],
-  "date": {"from": null, "to": null, "display": false},
-  "description": "At work I led a team on an ambitious SR&ED project to construct an engine capable of producing all future applications for both web and desktop. Hydra-Gen stands for one engine that can generate many application types. The principal concept was to give content creators the means to build their own software. This was accomplished by creating scriptable pages, panels, and widgets coupled with custom XML BNF syntax. Pages are usually populated from a massive database store, MassCon, where user input is saved through the Rosetta Database, SmartDB. SmartDB is compatible with SimpleDB, SQL Server, MySQL, and other flat-file formats such as Access, Berkeley DB, and our custom ISAM BTree.",
-  "media": {"thumbnail":"images/skills/engines/hydra.jpg","primary":{"type":"image","src":"images/skills/engines/hydra.jpg"},"items":[{"type":"image","src":"images/skills/engines/hydra_1.jpg"},{"type":"image","src":"images/skills/engines/hydra_2.jpg"},{"type":"image","src":"images/skills/engines/hydra_3.jpg"},{"type":"image","src":"images/skills/engines/hydra_4.jpg"},{"type":"image","src":"images/skills/engines/hydra_5.jpg"},{"type":"image","src":"images/skills/engines/hydra_6.jpg"},{"type":"image","src":"images/skills/engines/hydra_7.jpg"},{"type":"image","src":"images/skills/engines/hydra_8.jpg"},{"type":"image","src":"images/JavaSE.png","display":false,"roles":["featureHero"]},{"type":"image","src":"images/JavaSE_1.jpg","display":false,"roles":["featureSupporting"]},{"type":"image","src":"images/JavaSE_2.jpg","display":false,"roles":["featureSupporting"]},{"type":"image","src":"images/JavaSE_3.jpg","display":false,"roles":["featureSupporting"]}]},
-  "meta": {"technologyVersions":{"java":"1.6"},"architectureTerminology":{"massCon":"MassCon","rosettaDatabase":"SmartDB","customStorage":"ISAM BTree"},"historicalNotes":["The original portfolio states that the project led a team of 7 for 5 years in its Featured description."]},
-  "featured": {"heroImage":"images/JavaSE.png","supportingImages":["images/JavaSE_1.jpg","images/JavaSE_2.jpg","images/JavaSE_3.jpg"],"overlayTitle":"Java SE","overlayText":"Java 1.1 - 1.6, JNI, JNLP, XML-RPC, ISAM, AWS, Hydra-Gen","description":"Led a team of 7 for 5 years on a huge SR&ED project where I architected a widget based framework to allow non-programmers the ability to script interactive activities."}
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Enterprise Application Platform",
+      "Desktop Application Platform",
+      "Web Application Platform",
+      "Content Authoring System"
+    ]
+  },
+
+  "technologies": [
+    "Java",
+    "Java SE",
+    "Swing",
+    "AWT",
+    "JNLP",
+    "Java Applets",
+    "AWS",
+    "SimpleDB",
+    "MySQL",
+    "SQL Server",
+    "Oracle",
+    "Berkeley DB",
+    "Custom ISAM B-Tree",
+    "XML",
+    "BNF",
+    "Custom Scripting",
+    "XML-RPC"
+  ],
+
+  "date": {
+    "from": "2009",
+    "to": "2014",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Lead Architect / Department Manager",
+    "total": 7,
+    "contributors": [
+      {
+        "count": 3,
+        "roles": [
+          "Senior / Intermediate Developers",
+          "Architecture Planning Contributors"
+        ],
+        "relationship": "employee",
+        "contribution": "Participated with Jamie in recurring architecture and planning meetings. Jamie led the architecture and design while ideas and implementation approaches were actively debated with this core developer group."
+      },
+      {
+        "count": 3,
+        "roles": [
+          "Developers",
+          "Production Team Members"
+        ],
+        "relationship": "employee",
+        "contribution": "Contributed to implementation, maintenance, production integration, and supporting systems across the Hydra-Gen platform."
+      }
+    ]
+  },
+
+  "roles": [
+    "Lead Architect",
+    "Department Manager",
+    "Platform Architect",
+    "Framework Developer",
+    "Database Architect",
+    "Content-System Architect",
+    "Scripting-Language Designer",
+    "UI Framework Developer",
+    "Developer Tools Architect",
+    "Technical Lead",
+    "Mentor"
+  ],
+
+  "description": "Hydra-Gen was a five-year enterprise application-platform project I architected and led from 2009 to 2014 with a seven-person development team. The goal was to create one reusable engine capable of producing many types of desktop and web applications, with non-programmers able to assemble substantial software through visual authoring, reusable widgets, database-driven content, and custom XML/BNF scripting. In production, Hydra-Gen powered more than 60 K–6 educational programs while remaining architecturally general enough to support broader enterprise and LMS-style applications.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "One Engine, Many Applications",
+        "paragraphs": [
+          "Hydra-Gen was deliberately conceived as a general application platform rather than a framework tied to one educational product.",
+          "The name reflected that goal: Hydra represented many heads, while Gen referred to the engine/generation concept of one platform producing many kinds of applications."
+        ]
+      },
+      {
+        "title": "Five-Year SR&ED Platform Project",
+        "paragraphs": [
+          "I led the Hydra-Gen architecture from 2009 through 2014 as a major SR&ED initiative.",
+          "The development team had seven people including me."
+        ]
+      },
+      {
+        "title": "Architecture Leadership",
+        "paragraphs": [
+          "I was responsible for the overall architecture and system design.",
+          "Three developers regularly joined me in architecture and planning meetings, where implementation approaches and architectural ideas were openly debated before being committed to the platform."
+        ]
+      },
+      {
+        "title": "Production Scale",
+        "paragraphs": [
+          "Hydra-Gen became the production runtime behind more than 60 K–6 programs.",
+          "Specialized products such as Read To Succeed, Mad Minute, Spanish Math, and a handful of other legacy/specialized applications remained outside the Hydra-Gen generation."
+        ]
+      },
+      {
+        "title": "Model-Driven Application Flow",
+        "paragraphs": [
+          "Hydra-Gen treated application navigation and activity flow as reusable runtime models rather than hard-coded one-off screens.",
+          "A typical student flow could include splash/login, authentication, class/student selection, placement or assigned tests, program/unit menus, activities, reward/score pages, summary screens, and teacher tools."
+        ]
+      },
+      {
+        "title": "Shared Student and Teacher Platform",
+        "paragraphs": [
+          "The same application framework handled both student-facing programs and teacher/administrative tools."
+        ],
+        "items": [
+          "Student login and selection",
+          "Placement tests",
+          "Assigned tests",
+          "Program / unit selection",
+          "Activity sequences",
+          "Rewards / score screens",
+          "Marks and progress",
+          "Teacher tools",
+          "Assessment management",
+          "Database utilities",
+          "Spelling-list editing"
+        ]
+      },
+      {
+        "title": "Hydra-Gen Runtime Stack",
+        "paragraphs": [
+          "The platform separated presentation, business, data, translation, networking, update, and print/report responsibilities."
+        ],
+        "items": [
+          "Printing / browser reports, charts, graphs, worksheets",
+          "Presentation: Display Chain, Universal Activity, JLink",
+          "Business: Launcher/Applet, Window, Navigator, Error Handler",
+          "Data: MassCon, SUM DB, E-Script, Error DB",
+          "Translation: Rosetta",
+          "Network: School Space",
+          "Update: Master Controller"
+        ]
+      },
+      {
+        "title": "MassCon",
+        "paragraphs": [
+          "I designed MassCon as Hydra-Gen's large content/data store for application and activity content.",
+          "Activity models could populate runtime pages from MassCon rather than requiring application-specific content to be hard-coded."
+        ]
+      },
+      {
+        "title": "SmartDB / Rosetta Database",
+        "paragraphs": [
+          "I designed SmartDB as Hydra-Gen's database abstraction and persistence system.",
+          "Rosetta translated the shared data model onto multiple backend technologies so application code was not coupled to one database implementation."
+        ]
+      },
+      {
+        "title": "Database-Agnostic Rosetta Layer",
+        "paragraphs": [
+          "Rosetta was fully functional across multiple storage technologies and could be switched as needed."
+        ],
+        "items": [
+          "AWS SimpleDB",
+          "Custom ISAM B-Tree",
+          "SQL Server",
+          "MySQL",
+          "Oracle",
+          "Berkeley DB",
+          "XML / flat-file storage"
+        ]
+      },
+      {
+        "title": "Practical Database Choices",
+        "paragraphs": [
+          "Although Rosetta supported multiple backends, production primarily relied on SimpleDB and the custom ISAM implementation because those technologies met the operational needs of the platform."
+        ]
+      },
+      {
+        "title": "Activity Model Pipeline",
+        "paragraphs": [
+          "Activities were built through a model-driven runtime path."
+        ],
+        "items": [
+          "Navigator",
+          "Session / ModuleLive",
+          "ActivityModel",
+          "ActivityContainer",
+          "AbstractActivity",
+          "JLinkActivity",
+          "EScriptPanel",
+          "EWidget"
+        ]
+      },
+      {
+        "title": "Runtime Activity Composition",
+        "paragraphs": [
+          "Hydra-Gen assembled activities dynamically from layout, content, scripts, resources, and runtime models.",
+          "This separated what an activity looked like, what content it displayed, and how it behaved."
+        ]
+      },
+      {
+        "title": "XML Layout Files",
+        "paragraphs": [
+          "Activity layouts could be described in XML rather than coded directly."
+        ],
+        "items": [
+          "Images",
+          "Animations",
+          "Wrapping text",
+          "Answer grids",
+          "Backgrounds",
+          "Navigation buttons",
+          "Component IDs",
+          "Waypoints"
+        ]
+      },
+      {
+        "title": "Database-Driven Question Units",
+        "paragraphs": [
+          "Question content was stored independently from layout and behavior.",
+          "A question unit could provide the text, valid answers, incorrect answers, sounds, images, and global question attributes."
+        ]
+      },
+      {
+        "title": "Custom XML / BNF Scripting",
+        "paragraphs": [
+          "I designed a custom scripting syntax defined using BNF grammar so content creators could attach behavior to authored activities without programming in Java.",
+          "Scripts controlled widgets, events, activity flow, animations, sounds, waypoints, navigation, and other runtime actions."
+        ]
+      },
+      {
+        "title": "Script Event Binding",
+        "paragraphs": [
+          "UI and activity components could bind behavior to events."
+        ],
+        "items": [
+          "onclick",
+          "onload",
+          "mouseover",
+          "mouseexit",
+          "state changes",
+          "activity completion"
+        ]
+      },
+      {
+        "title": "Scriptable Functions",
+        "paragraphs": [
+          "Reusable script functions let authors create rich interactions from existing engine capabilities."
+        ],
+        "items": [
+          "Help",
+          "PlaySound",
+          "Quit",
+          "RunWayPoints",
+          "RunAttachedWayPoints",
+          "PlayAnimations",
+          "DisplayImage"
+        ]
+      },
+      {
+        "title": "EWidget Framework",
+        "paragraphs": [
+          "EWidget was Hydra-Gen's reusable interactive-widget abstraction.",
+          "Widgets could be authored, bound to XML/data, rendered, resized, connected to state, and attached to script events."
+        ]
+      },
+      {
+        "title": "EWidget Capabilities",
+        "items": [
+          "XML population and branch creation",
+          "Mouse interaction",
+          "Rendering",
+          "Dynamic rebuild / resizing",
+          "Right / wrong / neutral / focus state",
+          "Script function parameters",
+          "Event binding",
+          "Attached widgets",
+          "Waypoints",
+          "Shared model state",
+          "Answer observability"
+        ]
+      },
+      {
+        "title": "Standard Widgets",
+        "items": [
+          "ImageWidget",
+          "ButtonWidget",
+          "AnswerPanel",
+          "InfoPanel"
+        ]
+      },
+      {
+        "title": "Animated Widgets",
+        "items": [
+          "LayeredImageWidget",
+          "FrameAnimationWidget",
+          "RenderPanel"
+        ]
+      },
+      {
+        "title": "Effect Widgets",
+        "paragraphs": [
+          "Hydra-Gen also supported richer rendering/effect widgets used in production activities and rewards."
+        ],
+        "items": [
+          "3DWidget",
+          "FractalWidget",
+          "FireWidget",
+          "FireworkWidget"
+        ]
+      },
+      {
+        "title": "3D Reward Stars",
+        "paragraphs": [
+          "The 3DWidget was used for rotating gold, silver, and bronze stars awarded when students completed activities."
+        ]
+      },
+      {
+        "title": "Fractal Backgrounds",
+        "paragraphs": [
+          "FractalWidget generated visually interesting procedural backgrounds for activities."
+        ]
+      },
+      {
+        "title": "Reward Effects",
+        "paragraphs": [
+          "FireWidget and many other reward widgets provided immediate visual feedback for correct answers.",
+          "The platform accumulated a broad variety of reward styles rather than relying on a single presentation."
+        ]
+      },
+      {
+        "title": "Answer-State Architecture",
+        "paragraphs": [
+          "Widgets could publish answer state through observable interfaces.",
+          "Correct/incorrect results propagated upward through activity and container layers rather than being tightly coupled to one activity implementation."
+        ]
+      },
+      {
+        "title": "Activity Completion Pipeline",
+        "paragraphs": [
+          "Completion flowed from EWidgets through activity abstractions and containers into session state.",
+          "The session then updated live student/module marks and persisted results through SmartDB."
+        ]
+      },
+      {
+        "title": "Automated Marks Persistence",
+        "items": [
+          "EWidget answer event",
+          "AnswerObservable",
+          "AbstractActivity / SlideShow",
+          "ActivityContainer",
+          "Session",
+          "StudentLive / StandardModuleLive",
+          "SmartDBManager",
+          "SmartDB"
+        ]
+      },
+      {
+        "title": "Navigation History",
+        "paragraphs": [
+          "Navigator and History tracked link transitions so users could return through activity/menu flows while maintaining session state."
+        ]
+      },
+      {
+        "title": "JLink and Model-Driven Navigation",
+        "paragraphs": [
+          "Hydra-Gen's JLink system separated navigation/link models from their rendered views.",
+          "Links could resolve activities, menus, intro screens, score screens, and other destinations through reusable models."
+        ]
+      },
+      {
+        "title": "Reusable Menu Architecture",
+        "paragraphs": [
+          "Menus were model-driven and reusable rather than being rebuilt for each application."
+        ],
+        "items": [
+          "MenuModel",
+          "MenuItem",
+          "SingleMenuItem",
+          "PopupMenuItem",
+          "RandomMenuItem",
+          "MenuLink",
+          "AbstractMenu",
+          "JLinkMenu",
+          "StandardMenu",
+          "MenuPanelWidget"
+        ]
+      },
+      {
+        "title": "Multiple Activity Containers",
+        "paragraphs": [
+          "The runtime supported different higher-level activity forms while sharing the same underlying content and widget architecture."
+        ],
+        "items": [
+          "SlideShow",
+          "SinglePage",
+          "Sequence",
+          "MetaActivity"
+        ]
+      },
+      {
+        "title": "Intro / Activity / Score Lifecycle",
+        "paragraphs": [
+          "ActivityContainer could coordinate intro screens, the active learning experience, and score/reward presentation around a common activity model."
+        ]
+      },
+      {
+        "title": "Resource Loading and Caching",
+        "paragraphs": [
+          "Hydra-Gen included reusable resource loaders and caches for images, sounds, scripts, and virtual activities.",
+          "Runtime components did not need to repeatedly load the same assets independently."
+        ]
+      },
+      {
+        "title": "Visual Authoring for Non-Programmers",
+        "paragraphs": [
+          "Full-time in-house non-programmers used the Hydra-Gen visual authoring tools continuously in production.",
+          "The tools were intended to let content specialists compose complete interactive activities by arranging reusable widgets, content, scripts, and behavior."
+        ]
+      },
+      {
+        "title": "Authors Exceeded the Original Expectations",
+        "paragraphs": [
+          "The visual system became flexible enough that content creators occasionally built activities I expected would require new developer code.",
+          "They combined existing widgets and scripting in creative ways that expanded what the authoring system could produce without changes to the engine."
+        ]
+      },
+      {
+        "title": "Developer Intervention Only for New Capabilities",
+        "paragraphs": [
+          "Programmers were generally needed when the platform lacked a required widget, behavior, algorithm, or activity type rather than for routine activity construction."
+        ]
+      },
+      {
+        "title": "General Enterprise Intent",
+        "paragraphs": [
+          "Hydra-Gen was architected beyond the immediate K–6 use case.",
+          "The underlying idea was a reusable engine capable of generating many forms of enterprise software, including LMS-style systems and other data-driven applications."
+        ]
+      },
+      {
+        "title": "From Programs to Platform",
+        "paragraphs": [
+          "Hydra-Gen marked the transition from maintaining many separately implemented educational programs toward a unified data-driven application platform.",
+          "Programs became configurations of shared runtime systems, data, widgets, scripts, navigation models, and reusable activity types."
+        ]
+      },
+      {
+        "title": "Lineage to C.E.L.L.",
+        "paragraphs": [
+          "The architecture later influenced my independent game-engine work.",
+          "The name MicroGen in Square Particle's C.E.L.L. engine came directly from the idea of building a much smaller version of Hydra-Gen's reusable application-platform concepts."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/engines/hydra.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/engines/hydra.jpg"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/engines/hydra_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/hydra_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/hydra_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/hydra_4.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/hydra_5.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/hydra_6.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/hydra_7.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/hydra_8.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/JavaSE.png",
+        "display": false,
+        "roles": [
+          "featureHero"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "images/JavaSE_1.jpg",
+        "display": false,
+        "roles": [
+          "featureSupporting"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "images/JavaSE_2.jpg",
+        "display": false,
+        "roles": [
+          "featureSupporting"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "images/JavaSE_3.jpg",
+        "display": false,
+        "roles": [
+          "featureSupporting"
+        ]
+      }
+    ]
+  },
+
+  "featured": {
+    "heroImage": "images/JavaSE.png",
+    "supportingImages": [
+      "images/JavaSE_1.jpg",
+      "images/JavaSE_2.jpg",
+      "images/JavaSE_3.jpg"
+    ],
+    "overlayTitle": "Java SE",
+    "overlayText": "Java 1.1 - 1.6, JNI, JNLP, XML-RPC, ISAM, AWS, Hydra-Gen",
+    "description": "Led a seven-person development team over five years while architecting Hydra-Gen, a model-driven application platform that powered 60+ K–6 programs and enabled non-programmers to build interactive activities through reusable widgets, visual authoring, database-driven content, and custom XML/BNF scripting."
+  },
+
+  "meta": {
+    "architectureTerminology": {
+      "contentStore": "MassCon",
+      "databaseAbstraction": "SmartDB / Rosetta",
+      "customStorage": "ISAM B-Tree",
+      "activityScripting": "E-Script / EScriptPanel",
+      "widgetSystem": "EWidget",
+      "navigation": "JLink / Navigator"
+    },
+
+    "historicalNotes": [
+      "Hydra-Gen development ran from 2009 through 2014.",
+      "The team consisted of seven people total including Jamie.",
+      "Jamie led the overall architecture and design.",
+      "Three developers participated regularly in architecture/planning meetings and debated technical approaches with Jamie.",
+      "Hydra-Gen powered more than 60 K–6 production programs.",
+      "Read To Succeed, Mad Minute, Spanish Math, and several other specialized/legacy programs remained outside the Hydra-Gen runtime.",
+      "MassCon and SmartDB were both designed by Jamie specifically for Hydra-Gen.",
+      "Rosetta was fully implemented against SimpleDB, ISAM, SQL Server, MySQL, Oracle, Berkeley DB, XML/flat-file backends, and could switch storage implementations.",
+      "Production primarily used SimpleDB and the custom ISAM B-Tree because those technologies met the operational requirements.",
+      "Full-time non-programmer content creators used the visual authoring tools continuously in production.",
+      "Content creators sometimes built activities from existing widgets/scripts that Jamie expected would require new developer code.",
+      "The 3DWidget was used for rotating gold/silver/bronze activity reward stars.",
+      "FractalWidget was used for generated visual backgrounds.",
+      "FireWidget was used as one of many visual reward mechanisms for correct answers.",
+      "The platform had many different reward types.",
+      "Hydra-Gen was intended as a general enterprise/application platform and not only as an educational activity engine.",
+      "The name reflects the concept of a many-headed/many-application engine.",
+      "Square Particle's C.E.L.L. MicroGen name was inspired by the idea of a smaller Hydra-Gen.",
+      "The original legacy portfolio card described Hydra-Gen as one engine capable of producing future desktop and web applications and emphasized non-programmer software creation through scriptable pages, panels, widgets, XML/BNF syntax, MassCon, and SmartDB."
+    ],
+
+    "confidence": {
+      "date2009To2014": "high",
+      "teamSevenIncludingJamie": "high",
+      "jamieLeadArchitect": "high",
+      "threeDeveloperArchitectureGroup": "high",
+      "productionPrograms60Plus": "high",
+      "massConDesignedByJamie": "high",
+      "smartDbDesignedByJamie": "high",
+      "rosettaMultiBackend": "high",
+      "simpleDbAndIsamPrimary": "high",
+      "nonProgrammerProductionAuthoring": "high",
+      "customXmlBnfScripting": "high",
+      "eWidgetArchitecture": "high",
+      "activityModelRuntime": "high",
+      "answerObservableArchitecture": "high",
+      "smartDbMarksPipeline": "high",
+      "menuModelArchitecture": "high",
+      "resourceCaching": "high",
+      "3dRewardWidget": "high",
+      "fractalWidget": "high",
+      "fireRewardWidget": "high",
+      "generalEnterpriseIntent": "high",
+      "microGenLineage": "high"
+    },
+
+    "projectTerminology": [
+      "Hydra-Gen",
+      "MassCon",
+      "SmartDB",
+      "Rosetta",
+      "E-Script",
+      "EScriptPanel",
+      "EWidget",
+      "JLink",
+      "Navigator",
+      "Session",
+      "ActivityModel",
+      "ActivityContainer",
+      "AbstractActivity",
+      "JLinkActivity",
+      "AnswerObservable",
+      "Sharable",
+      "IXMLObject",
+      "SlideShow",
+      "SinglePage",
+      "Sequence",
+      "MetaActivity",
+      "ResourceLoader",
+      "ResourceCache",
+      "MenuModel",
+      "MenuPanelWidget",
+      "3DWidget",
+      "FractalWidget",
+      "FireWidget",
+      "FireworkWidget"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Engines",
+      "legacyIndex": 4
+    }
+  }
 }

@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 2,
+  "id": "squareparticle/bradengine/bradengine-3d-engine",
+  "title": "BradEngine Software 3D Renderer",
+  "project": "BradEngine",
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "3D Rendering Engine",
+      "Game Engine Subsystem",
+      "Graphics / Simulation Platform"
+    ]
+  },
+  "technologies": [
+    "JavaScript",
+    "HTML5 Canvas",
+    "Custom Software 3D Renderer",
+    "Cannon.js",
+    "Three.js",
+    "OBJ",
+    "DirectX .x",
+    "K3D Mesh Data",
+    "Math"
+  ],
+  "date": {
+    "from": "2020",
+    "to": "2022",
+    "display": true
+  },
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Graphics Engine Architect / Lead Developer",
+    "total": 3,
+    "contributors": [
+      {
+        "count": 2,
+        "roles": [
+          "Student Developers",
+          "3D Demo Developers"
+        ],
+        "relationship": "family",
+        "contribution": "Jamie used the BradEngine 3D system while teaching his sons graphics, game programming, physics, and related technical concepts."
+      }
+    ]
+  },
+  "roles": [
+    "Graphics Engine Architect",
+    "Lead Developer",
+    "Graphics Programmer",
+    "3D Math Programmer",
+    "Physics Programmer",
+    "Tools Developer",
+    "Programming Mentor"
+  ],
+  "description": "BradEngine included a native software 3D renderer written in JavaScript and rendered through HTML5 Canvas. I built the core 3D pipeline myself, including mesh loading, world and camera transforms, perspective projection, culling, polygon depth sorting, lighting, procedural geometry, mesh morphing, rigid-body and soft-body physics synchronization, terrain, and height-map-driven rendering.",
+  "details": {
+    "sections": [
+      {
+        "title": "Custom Software 3D Pipeline",
+        "paragraphs": [
+          "The renderer was a native BradEngine subsystem rather than a wrapper around an external rendering engine.",
+          "BradEngine transformed and projected 3D mesh data itself before drawing polygons to HTML5 Canvas."
+        ]
+      },
+      {
+        "title": "Transform & Camera Pipeline",
+        "paragraphs": [
+          "The renderer implemented reusable model, world, and camera transformations together with perspective projection and camera-relative movement."
+        ],
+        "items": [
+          "Scaling",
+          "Translation",
+          "X/Y/Z rotation",
+          "World-space transforms",
+          "Camera-space transforms",
+          "Perspective projection",
+          "Pitch / yaw camera controls",
+          "Forward / backward movement using the rotated camera direction"
+        ]
+      },
+      {
+        "title": "3D Math",
+        "paragraphs": [
+          "I implemented the vector and geometry math used throughout the renderer, lighting, cameras, physics, and procedural systems."
+        ],
+        "items": [
+          "Vector normalization",
+          "Dot products",
+          "Cross products",
+          "Magnitude",
+          "Distance calculations",
+          "Vector arithmetic",
+          "Random 3D vectors",
+          "Polygon-normal calculation"
+        ]
+      },
+      {
+        "title": "Scene & Mesh Architecture",
+        "paragraphs": [
+          "Scene objects owned cameras, mesh collections, lights, ambient-light settings, and render modes.",
+          "MeshObject encapsulated reusable geometry with independent position, rotation, color, rendering state, and optional physics state."
+        ]
+      },
+      {
+        "title": "Model Loading",
+        "paragraphs": [
+          "The pipeline converted external model data into BradEngine's internal mesh representation."
+        ],
+        "items": [
+          "Custom DirectX .x parser",
+          "K3D mesh conversion",
+          "OBJ mesh use",
+          "Vertices",
+          "Polygon indexes",
+          "Normals",
+          "Normal indexes",
+          "UV data container"
+        ]
+      },
+      {
+        "title": "Visibility & Depth",
+        "paragraphs": [
+          "The renderer rejected polygons that did not need to be drawn and sorted visible polygons before rendering."
+        ],
+        "items": [
+          "Back-face culling",
+          "Screen-bounds rejection",
+          "Near/far depth rejection",
+          "Optional two-sided surfaces",
+          "Painter-style polygon depth sorting"
+        ]
+      },
+      {
+        "title": "Lighting & Render Modes",
+        "paragraphs": [
+          "BradEngine calculated polygon lighting from face normals, directional light vectors, light colors, and ambient light."
+        ],
+        "items": [
+          "Directional lighting",
+          "Ambient lighting",
+          "Per-face shaded colors",
+          "Wireframe rendering",
+          "Filled rendering",
+          "Solid rendering"
+        ]
+      },
+      {
+        "title": "Procedural Geometry",
+        "paragraphs": [
+          "The renderer could generate geometry in code rather than relying only on imported models."
+        ],
+        "items": [
+          "Cube generation",
+          "Plane generation",
+          "Quad surfaces",
+          "Triangle surfaces"
+        ]
+      },
+      {
+        "title": "Mesh Morph Animation",
+        "paragraphs": [
+          "BradEngine supported vertex-level mesh morphing between authored model frames.",
+          "The animation code advanced through multiple OBJ meshes and linearly interpolated corresponding vertices into the live render mesh."
+        ]
+      },
+      {
+        "title": "Rigid-Body Physics",
+        "paragraphs": [
+          "Mesh objects could create Cannon.js rigid bodies and synchronize simulated position and rotation back into BradEngine's renderer."
+        ],
+        "items": [
+          "Box bodies",
+          "Sphere bodies",
+          "Mass configuration",
+          "Position synchronization",
+          "Quaternion-to-Euler rotation synchronization"
+        ]
+      },
+      {
+        "title": "Soft-Body / Cloth Physics",
+        "paragraphs": [
+          "Generated plane meshes could be turned into Cannon particle-and-constraint structures.",
+          "Simulated particle positions were written back into the mesh vertices so the software renderer displayed the deformation."
+        ]
+      },
+      {
+        "title": "Three.js Utility Use",
+        "paragraphs": [
+          "Three.js did not render the BradEngine scene.",
+          "It was used as a math utility for quaternion-to-Euler conversion when synchronizing Cannon.js physics rotation with BradEngine's own renderer."
+        ]
+      },
+      {
+        "title": "Terrain & Height Maps",
+        "paragraphs": [
+          "BradEngine's native 3D work also included terrain and height-map-driven geometry as part of the same rendering system."
+        ]
+      },
+      {
+        "title": "BradEngine Integration",
+        "paragraphs": [
+          "The 3D renderer was integrated with BradEngine's level lifecycle, resource loading, Canvas rendering, input, physics, particles, and reusable project architecture."
+        ]
+      }
+    ]
+  },
+  "media": {
+    "thumbnail": "images/skills/engines/bradeng3d.gif",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/engines/bradeng3d.gif"
+    },
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad3d_1.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad3d_2.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad3d_3.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad3d_4.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad3d_5.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad3d_6.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad3d_7.gif"
+      }
+    ]
+  },
+  "meta": {
+    "historicalNotes": [
+      "This is the JavaScript BradEngine 3D subsystem; the legacy filename containing 'java-3d-engine' is misleading.",
+      "The renderer used JavaScript and HTML5 Canvas.",
+      "BradEngine implemented its own transforms, cameras, projection, culling, lighting, polygon sorting, and Canvas drawing.",
+      "Three.js did not render the scene in the core pipeline; it was used for quaternion-to-Euler conversion for Cannon.js physics synchronization.",
+      "Mesh morphing interpolated corresponding vertices between authored OBJ frames.",
+      "Soft-body cloth used Cannon particle bodies and distance constraints with simulated positions written back into mesh vertices.",
+      "Voxel-specific systems are intentionally excluded from this card and belong to the dedicated BradEngine Voxel Engine card."
+    ],
+    "confidence": {
+      "javascriptImplementation": "high",
+      "html5CanvasRendering": "high",
+      "customSoftware3DRenderer": "high",
+      "worldAndCameraTransforms": "high",
+      "perspectiveProjection": "high",
+      "custom3DMath": "high",
+      "directXParser": "high",
+      "k3dConversion": "high",
+      "objUsage": "high",
+      "backFaceCulling": "high",
+      "painterDepthSorting": "high",
+      "directionalLighting": "high",
+      "proceduralGeometry": "high",
+      "meshMorphing": "high",
+      "cannonRigidBodyIntegration": "high",
+      "softBodyCloth": "high",
+      "terrainHeightMaps": "high"
+    },
+    "projectTerminology": [
+      "BradEngine",
+      "Pipeline3D",
+      "Scene",
+      "Camera3D",
+      "MeshObject",
+      "HTML5 Canvas",
+      "Cannon.js",
+      "Three.js",
+      "DirectX .x",
+      "OBJ",
+      "K3D",
+      "Mesh Morphing",
+      "Soft-Body Physics",
+      "Painter's Algorithm"
+    ],
+    "provenance": {
+      "legacyCategory": "Engines",
+      "legacyIndex": 1
+    }
+  }
+}

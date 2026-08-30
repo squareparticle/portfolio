@@ -1,25 +1,194 @@
 {
   "schemaVersion": 2,
   "id": "education/high-school/pre-rendered-graphics",
-  "title": "High School Pre-rendered Graphics",
+  "title": "Pre-Rendered 3D Starship Game Prototype",
   "project": "High School",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Educational Project"
+      "Game Prototype",
+      "Educational Project",
+      "Pre-Rendered 3D Engine"
     ]
   },
+
   "technologies": [
     "Turing",
-    "3DS4"
+    "3DS4",
+    "JAM Files",
+    "Pre-Rendered Graphics",
+    "FMV",
+    "Sprite Animation"
   ],
+
   "date": {
-    "from": null,
-    "to": null,
-    "display": false
+    "from": "1993",
+    "to": "1994",
+    "display": true
   },
-  "description": "A friend and I started playing with 3DS4 back in high school to create pre-rendered graphics for our games about a year before Donkey Kong Country made it the new trend.",
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Solo Developer / 3D Artist",
+    "total": 1,
+    "contributors": []
+  },
+
+  "roles": [
+    "Solo Developer",
+    "Game Designer",
+    "3D Modeler",
+    "Technical Artist",
+    "Gameplay Programmer",
+    "Tools Developer"
+  ],
+
+  "description": "Around 1993 I built a Turing-based starship game using hand-created 3DS4 models and a custom JAM asset system to simulate an interactive 3D bridge experience years before I had access to real-time 3D rendering. Pre-rendered ships, planets, targeting views, diagnostics, battles, navigation, and cinematic sequences were combined into a playable command interface. This project became the earliest recognizable ancestor of my later Bridge Captain games.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Earliest Bridge Captain Prototype",
+        "paragraphs": [
+          "This high-school project was effectively my first Bridge Captain-style game.",
+          "At the time I presented it as a Star Trek game, with the idea that the ships and branding could be changed later if I ever turned it into something commercial."
+        ]
+      },
+      {
+        "title": "1993 Turing Game",
+        "paragraphs": [
+          "I was introduced to Turing in 1992 and was building this starship project by approximately 1993.",
+          "I created the game myself and hand-built every 3D model used in my version."
+        ]
+      },
+      {
+        "title": "Pre-Rendered Interactive 3D",
+        "paragraphs": [
+          "The project used pre-rendered 3D graphics as a substitute for real-time 3D.",
+          "Rather than treating the renders as passive artwork, I connected them to gameplay state so they behaved like interactive tactical, navigation, and diagnostic displays."
+        ]
+      },
+      {
+        "title": "Main Viewscreen",
+        "paragraphs": [
+          "The main bridge viewscreen changed based on the current situation.",
+          "While in orbit, for example, a rendered planet rotated on the viewscreen."
+        ]
+      },
+      {
+        "title": "Targeting Camera",
+        "paragraphs": [
+          "The targeting display used pre-rendered ship views to simulate a camera rotating around the selected enemy ship.",
+          "An animated targeting reticle zoomed into the selected part of the ship.",
+          "Changing targets changed the rendered ship orientation so the selected subsystem or area could be shown."
+        ]
+      },
+      {
+        "title": "Rotatable Damage Diagnostics",
+        "paragraphs": [
+          "The diagnostics console displayed a pre-rendered Enterprise-D with visible areas of damage.",
+          "The ship could be rotated around any axis so damage could be inspected from different directions."
+        ]
+      },
+      {
+        "title": "Navigable Star Chart",
+        "paragraphs": [
+          "The game included a navigable star chart used to move through the game world and select destinations."
+        ]
+      },
+      {
+        "title": "Turn-Based Starship Combat",
+        "paragraphs": [
+          "Ships could appear on the tactical/viewscreen display and engage in turn-based combat.",
+          "The battle presentation used sequences of pre-rendered JAM assets rather than real-time polygon rendering."
+        ]
+      },
+      {
+        "title": "Combat Animation Sequences",
+        "paragraphs": [
+          "Pre-rendered ship assets were used for multiple combat states and cinematic movements."
+        ],
+        "items": [
+          "Enemy ships swooping into view",
+          "Enemy weapons firing toward the player's ship",
+          "Player weapons firing at the enemy",
+          "Targeted ship reactions",
+          "Ship destruction animations"
+        ]
+      },
+      {
+        "title": "Starbase Departure Sequence",
+        "paragraphs": [
+          "The game began inside a starbase.",
+          "The bridge viewscreen showed the station bay doors opening and then played a pre-rendered sequence of the ship flying out into space."
+        ]
+      },
+      {
+        "title": "JAM Asset System",
+        "paragraphs": [
+          "The project used my custom JAM asset-container system to organize graphics and animation frames.",
+          "Pre-rendered ships could be stored from multiple angles or as ordered animation sequences and selected by the game at runtime."
+        ]
+      },
+      {
+        "title": "Sprites and FMV",
+        "paragraphs": [
+          "The rendering pipeline used several forms of pre-rendered presentation.",
+          "Some 3DS4 output became multi-angle sprite/JAM assets controlled interactively by the game, while longer sequences were treated more like FMV."
+        ]
+      },
+      {
+        "title": "All 3D Models Created by Me",
+        "paragraphs": [
+          "Every 3D model used in my starship game was created by me in 3DS4.",
+          "The renders were then prepared for use inside the Turing/JAM game pipeline."
+        ]
+      },
+      {
+        "title": "Before Pre-Rendered Graphics Became Mainstream",
+        "paragraphs": [
+          "This work was underway around 1993.",
+          "Donkey Kong Country arrived in 1994 and helped make pre-rendered 3D sprites highly visible in mainstream games.",
+          "At the time, my friend and I believed our use of pre-rendered 3D gave us a potential visual advantage."
+        ]
+      },
+      {
+        "title": "Parallel Work With a Friend",
+        "paragraphs": [
+          "A friend and I were both experimenting with pre-rendered 3D game graphics, but we were building separate games.",
+          "I was developing this starship project while he pursued his own ideas."
+        ]
+      },
+      {
+        "title": "Commercial Ambition",
+        "paragraphs": [
+          "We talked seriously about forming a game company after high school.",
+          "Our technical concern was less about whether we could build games and more about not knowing how to handle publishing, retail distribution, sales, and marketing.",
+          "By the time we finished high school, commercial games such as Donkey Kong Country and The 7th Guest had made similar pre-rendered presentation techniques much more visible, so we felt the visual advantage we had imagined was disappearing."
+        ]
+      },
+      {
+        "title": "Long-Term Design Lineage",
+        "paragraphs": [
+          "The basic idea of commanding a starship through bridge consoles, navigation, tactical combat, targeting, and diagnostics continued through my later Bridge Captain projects."
+        ],
+        "items": [
+          "1993 Turing starship prototype",
+          "Later Bridge Captain concepts",
+          "C.E.L.L. / Android Bridge Captain",
+          "Unity / VR Bridge Captain"
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "primary": {
+      "type": "youtube",
+      "id": "K2Pn5qwa0Bg"
+    },
+
     "items": [
       {
         "type": "image",
@@ -37,14 +206,69 @@
         "type": "image",
         "src": "images/skills/eng/perrender_4.gif"
       }
-    ],
-    "primary": {
-      "type": "youtube",
-      "id": "K2Pn5qwa0Bg"
-    }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "Turing, 3DS4",
+    "historicalNotes": [
+      "The legacy card was titled 'High School Pre-rendered Graphics'.",
+      "The legacy description states that Jamie and a friend experimented with 3DS4 pre-rendered graphics in high school roughly a year before Donkey Kong Country made the technique a major trend.",
+      "Jamie and his friend were building separate games rather than one shared project.",
+      "Jamie's game was a Turing-based Star Trek-style starship game and the earliest recognizable Bridge Captain precursor.",
+      "Jamie created every 3D model used in his game.",
+      "The pre-rendered assets were used directly in gameplay.",
+      "The main viewscreen could display animated orbital planets.",
+      "The targeting display simulated rotation around a Klingon ship and used an animated reticle that zoomed into the selected target area.",
+      "Changing targets selected different pre-rendered orientations/views.",
+      "The diagnostics display showed the Enterprise-D with damage information and allowed the rendered ship to be rotated around any axis for inspection.",
+      "The game included a navigable star chart.",
+      "The game included turn-based starship battles.",
+      "JAM animations depicted ships swooping into view, firing weapons, taking fire, and being destroyed.",
+      "The game began with a pre-rendered starbase departure sequence showing bay doors opening and the ship flying out.",
+      "Some rendered assets were multi-angle sprites/JAM sequences and others were FMV-style sequences.",
+      "Jamie was introduced to Turing in 1992 and was building this game by approximately 1993.",
+      "Donkey Kong Country released in 1994, providing a useful chronology anchor.",
+      "Jamie and his friend considered forming a game company but did not know how to solve publishing, sales, marketing, and retail distribution.",
+      "By the end of high school, mainstream commercial games had caught up substantially with pre-rendered visual techniques.",
+      "The surviving uploaded perrender_1.gif available in this conversation appears static to the assistant; animation behavior is therefore documented from Jamie's direct recollection rather than visual verification of that specific uploaded file."
+    ],
+
+    "confidence": {
+      "date1993To1994": "high",
+      "soloGameProject": "high",
+      "friendWorkedSeparately": "high",
+      "bridgeCaptainLineage": "high",
+      "allModelsByJamie": "high",
+      "turingImplementation": "high",
+      "jamAssetSystem": "high",
+      "interactivePreRendered3D": "high",
+      "orbitingPlanetAnimation": "high",
+      "targetingRotationAndReticle": "high",
+      "rotatableDamageDiagnostics": "high",
+      "starChartNavigation": "high",
+      "turnBasedStarshipCombat": "high",
+      "combatAnimationSequences": "high",
+      "starbaseDepartureSequence": "high",
+      "mixOfSpritesAndFmv": "high",
+      "preDkcChronology": "high",
+      "commercialAmbition": "high"
+    },
+
+    "projectTerminology": [
+      "Turing",
+      "3DS4",
+      "JAM Files",
+      "Pre-Rendered Graphics",
+      "FMV",
+      "Star Chart",
+      "Targeting Camera",
+      "Diagnostics",
+      "Turn-Based Starship Combat",
+      "Bridge Captain Lineage",
+      "Donkey Kong Country",
+      "The 7th Guest"
+    ],
+
     "provenance": {
       "legacyCategory": "Eng",
       "legacyIndex": 3

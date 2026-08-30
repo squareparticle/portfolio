@@ -1,13 +1,588 @@
 {
   "schemaVersion": 2,
   "id": "squareparticle/cell/engine",
-  "title": "C.E.L.L. (Cross Emulation Library Layer)",
+  "title": "C.E.L.L. Cross-Platform Game Engine",
   "project": "C.E.L.L.",
-  "platform": {"label": "Application Type", "values": ["Cross-Platform Game Engine"]},
-  "technologies": ["XNA", "JME", "BlackBerry SDK", "Android SDK", "Java", "C#"],
-  "date": {"from": null, "to": null, "display": false},
-  "description": "Every language has a unique API to draw images, play sounds, manage files, store arrays, and handle input. However, most languages share a C-like syntax. By building a native layer per platform, I could create a common UI engine, MicroGen, above any C-like language. Using MicroGen, I proceeded to construct PlatformerLib, a game engine with physics, common AI, collision, and scripting abilities.",
-  "descriptionHtml": "Every language has a unique API to draw images, play sounds, manage files, store arrays, and handle input. However, most languages share a C-like syntax. By building a native layer per platform, I could create a common UI engine (MicroGen) above any C-like language. Using the MicroGen engine, I proceeded to construct a game engine (PlatformerLib) with physics, common AI, collision, and scripting abilities.<br><br>To create a game, the developer has four choices: <ul><li>Start coding above the PlatformerLib layer beginning with a skeleton template.</li><li>Create scripts for graphic layers, mobs, player, and game events.</li><li>Use the GUI editor to build the game like Unity.</li><li>Use a combination of any of the choices above.</li></ul><br>I wrote an article for the Software Developer Journal explaining the entire engine and how I made C# syntax compatible with Java.",
-  "media": {"thumbnail": "images/skills/engines/cell.jpg", "primary": {"type": "image", "src": "images/skills/engines/cell.jpg"}, "items": [{"type": "image", "src": "images/skills/engines/cell_9.jpg"}, {"type": "image", "src": "images/skills/engines/cell_6.jpg"}, {"type": "image", "src": "images/skills/engines/cell_7.jpg"}, {"type": "image", "src": "images/skills/engines/cell_8.jpg"}]},
-  "meta": {"architectureLineage": ["Native platform layers", "MicroGen", "PlatformerLib"], "acronym": "Cross Emulation Library Layer", "historicalNotes": ["The original portfolio described Java and C# syntax compatibility."]}
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Cross-Platform Game Engine",
+      "2D Game Framework",
+      "Rapid Prototyping Platform"
+    ]
+  },
+
+  "technologies": [
+    "Java",
+    "C#",
+    "Java SE",
+    "Java ME",
+    "Android SDK",
+    "BlackBerry SDK",
+    "XNA",
+    "JBox2D",
+    "Box2D.XNA",
+    "Swing",
+    "JNLP",
+    "Java Applets",
+    "Custom Scripting",
+    "Custom Java-to-C# Translator"
+  ],
+
+  "date": {
+    "from": "2010",
+    "to": "2014",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Engine Architect / Lead Developer",
+    "total": 1,
+    "contributors": []
+  },
+
+  "roles": [
+    "Engine Architect",
+    "Lead Developer",
+    "Framework Developer",
+    "Graphics Programmer",
+    "Gameplay Systems Developer",
+    "Tools Developer",
+    "Scripting-System Developer",
+    "Cross-Platform Developer"
+  ],
+
+  "description": "C.E.L.L. (Cross-Platform Emulation Library Layer) was a proprietary 2D game engine I designed to let the same game architecture run across Java- and C#-based platforms including Windows, Xbox 360, Windows Phone 7, Android, BlackBerry, OS X, Linux, and Java web deployment. The engine used a layered architecture consisting of native platform adapters, the MicroGen application/UI framework, the PlatformerLib gameplay layer, game-specific code, scripting, and an optional visual game editor. By 2012 it had already powered three released games, three 48-hour game jams, and roughly ten prototypes spanning platformers, RPGs, RTS games, space shooters, and puzzle games.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Cross-Platform Architecture",
+        "paragraphs": [
+          "C.E.L.L. was designed around the idea that Java and C# were similar enough to support a common engine architecture if platform APIs and language differences were isolated behind carefully designed interfaces.",
+          "The engine was primarily authored in Java 1.4-era syntax so the shared code stayed within a language subset that could be translated and reused across Java and C# targets."
+        ]
+      },
+      {
+        "title": "Four-Layer Engine",
+        "paragraphs": [
+          "The engine was divided into four primary runtime layers, each building on the layer beneath it."
+        ],
+        "items": [
+          "Native C.E.L.L. platform abstraction",
+          "MicroGen application / UI framework",
+          "PlatformerLib gameplay systems",
+          "Game-specific code"
+        ]
+      },
+      {
+        "title": "Native C.E.L.L. Layer",
+        "paragraphs": [
+          "The native layer was the portability boundary.",
+          "A platform-specific implementation exposed one common interface to the higher layers while wrapping each platform's graphics, sound, input, file, resource, collection, display, and utility APIs."
+        ],
+        "items": [
+          "Event Handler",
+          "Resource Handler",
+          "Sound Handler",
+          "Collection Wrappers",
+          "Graphics Context",
+          "File Handler",
+          "Display / Window",
+          "Bitmap",
+          "Tools",
+          "Math Tools"
+        ]
+      },
+      {
+        "title": "Platform-Specific Native Wrappers",
+        "paragraphs": [
+          "The same C.E.L.L. abstractions wrapped very different native APIs."
+        ],
+        "items": [
+          "Java SE: AWT / Swing / BufferedImage / Graphics2D",
+          "Android: Canvas / Bitmap / SoundPool",
+          "BlackBerry: FullScreen / Bitmap / Graphics / media Player",
+          "XNA: Texture2D / SpriteBatch / SoundEffect"
+        ]
+      },
+      {
+        "title": "Unified Graphics API",
+        "paragraphs": [
+          "C.E.L.L. normalized platform-specific graphics APIs into a shared drawing interface.",
+          "Game code could perform operations such as bitmap rendering, arbitrary rotation, text drawing, alpha blending, shapes, lines, and color changes without knowing which platform graphics API was underneath."
+        ]
+      },
+      {
+        "title": "Resource Management",
+        "paragraphs": [
+          "The Resource Handler maintained a central cache for images and sounds so the same asset was not repeatedly loaded into memory.",
+          "Resources could be released in groups when changing ScreenPanels, helping manage the much tighter memory limits of mobile devices."
+        ]
+      },
+      {
+        "title": "Cross-Platform File & Save System",
+        "paragraphs": [
+          "The native file layer hid differences between desktop file systems, web resources, Xbox project/external storage, and smart-device internal/external storage.",
+          "C.E.L.L. also implemented its own save-file mechanism by packing game/session values into a binary .SAV format rather than relying on incompatible native serialization systems."
+        ]
+      },
+      {
+        "title": "MicroGen",
+        "paragraphs": [
+          "MicroGen was the second C.E.L.L. layer and acted as a small cross-platform application framework inspired by the basic ideas of Java Swing.",
+          "It provided enough reusable UI and navigation infrastructure to build complete menu-driven applications without using platform-specific UI code."
+        ],
+        "items": [
+          "ScreenPanels",
+          "ScreenComponents",
+          "Image buttons",
+          "Text buttons",
+          "Tables",
+          "Scrollbars",
+          "Focus management",
+          "Animation",
+          "Common algorithms",
+          "Game thread",
+          "Screen navigation"
+        ]
+      },
+      {
+        "title": "ScreenPanel Architecture",
+        "paragraphs": [
+          "Games were organized as interchangeable full-screen ScreenPanels for title screens, options, individual levels, win/lose screens, credits, and other application states.",
+          "Only one ScreenPanel was active at a time, and the Navigator and Session systems connected otherwise isolated screens."
+        ]
+      },
+      {
+        "title": "Cross-Platform Focus System",
+        "paragraphs": [
+          "MicroGen included a focus system so UI screens could work across touch, mouse, keyboard, and controller-based devices.",
+          "The same menu could therefore be clicked with a mouse or touch screen and navigated with an Xbox controller."
+        ]
+      },
+      {
+        "title": "Animation System",
+        "paragraphs": [
+          "MicroGen provided reusable named animations that could be played individually or chained into sequences.",
+          "Animation definitions were later incorporated into entity scripting and game behavior."
+        ]
+      },
+      {
+        "title": "Independent Game / AI Timing",
+        "paragraphs": [
+          "The engine game loop could optionally separate rendering from game or AI calculations.",
+          "This allowed expensive simulation work to run at a lower update rate than the display frame rate."
+        ]
+      },
+      {
+        "title": "PlatformerLib",
+        "paragraphs": [
+          "PlatformerLib was the layer where C.E.L.L. became a general-purpose 2D game engine.",
+          "Although named after platform games, its systems were designed broadly enough to support side scrollers, RPGs, RTS games, shooters, puzzles, and other genres."
+        ],
+        "items": [
+          "Physics Engine",
+          "Generic AI",
+          "Collision Handler",
+          "Script Parser",
+          "Camera",
+          "Input Handler",
+          "Sound Queue",
+          "Entities",
+          "DefaultPlayScreen",
+          "Generic rendering layers"
+        ]
+      },
+      {
+        "title": "Physics",
+        "paragraphs": [
+          "C.E.L.L. integrated the Box2D family at the PlatformerLib layer.",
+          "Java targets used JBox2D while Xbox and Windows Phone targets used Box2D.XNA."
+        ]
+      },
+      {
+        "title": "Multiple Collision Systems",
+        "paragraphs": [
+          "PlatformerLib supported several collision approaches so each AI/entity implementation could use the technique appropriate to the game."
+        ],
+        "items": [
+          "Box2D collision",
+          "Pixel-mask collision",
+          "Tile-mask collision",
+          "Rectangle intersection collision"
+        ]
+      },
+      {
+        "title": "Generic AI",
+        "paragraphs": [
+          "Entities could have interchangeable intelligence components attached in code or script.",
+          "PlatformerLib included default behavior suitable for gravity-based side-scrollers and top-down RPG-style movement, while games could provide their own custom AI."
+        ]
+      },
+      {
+        "title": "Entity Architecture",
+        "paragraphs": [
+          "Entities represented players, NPCs, interactive objects, and even scriptable background elements.",
+          "Entity definitions connected named animation, sound, and input capabilities to either AI or player-control logic."
+        ]
+      },
+      {
+        "title": "Layered Rendering",
+        "paragraphs": [
+          "Game levels were composed from reusable rendering layers that could be stacked in arbitrary combinations."
+        ],
+        "items": [
+          "ImageLayer",
+          "TileLayer",
+          "EntityLayer",
+          "CodedLayer",
+          "Scrolling backgrounds",
+          "Parallax backgrounds",
+          "HUD layers",
+          "Custom game-specific layers"
+        ]
+      },
+      {
+        "title": "Camera System",
+        "paragraphs": [
+          "C.E.L.L. supported multiple camera objects with one active camera.",
+          "Attaching the current camera to an entity allowed scrolling worlds to follow the player automatically."
+        ]
+      },
+      {
+        "title": "Sound Queue",
+        "paragraphs": [
+          "The sound queue coordinated music and audio playback.",
+          "It could replay music, sequence short music clips into continuous soundtracks, or change musical sequences dynamically based on game state."
+        ]
+      },
+      {
+        "title": "Scripting System",
+        "paragraphs": [
+          "C.E.L.L. moved level layout, entity creation, layers, input behavior, and event actions into external scripts where doing so improved portability and rapid development.",
+          "The scripting system intentionally complemented native Java/C# code rather than trying to replace it."
+        ]
+      },
+      {
+        "title": "Scripted Actions",
+        "paragraphs": [
+          "Script commands could be grouped into batches and attached to triggers such as collision regions."
+        ],
+        "items": [
+          "ExitLevel()",
+          "player.jumpToLocation(x,y)",
+          "player.attachCamera(camera)",
+          "enemy.wakeUp()",
+          "AI commands",
+          "Entity commands",
+          "Camera actions",
+          "Level transitions"
+        ]
+      },
+      {
+        "title": "Scriptable Game Screens",
+        "paragraphs": [
+          "DefaultPlayScreen could construct complete game screens from scripts while custom ScreenPanels could still be hard-coded.",
+          "A single game could therefore freely mix scripted screens with specialized coded screens."
+        ]
+      },
+      {
+        "title": "Interchangeable Game Systems",
+        "paragraphs": [
+          "ScreenPanels, AI, layers, and entities were intentionally reusable between games.",
+          "Game-specific components could be copied into another project and connected through configuration and scripts."
+        ]
+      },
+      {
+        "title": "Session & Navigation",
+        "paragraphs": [
+          "A centralized Session object held play-session state while Navigator controlled screen transitions.",
+          "This separated individual screens from global state and simplified saving, loading, memory management, and screen reuse."
+        ]
+      },
+      {
+        "title": "Cross-Platform Input Commands",
+        "paragraphs": [
+          "Game code did not consume raw platform input directly.",
+          "C.E.L.L. mapped keyboard, mouse, touch, gesture, controller, virtual controls, and scripted behavior into a shared command vocabulary."
+        ],
+        "items": [
+          "8-direction movement",
+          "Jump",
+          "Multiple shoot actions",
+          "Action buttons",
+          "Streaming drag / analog-stick commands"
+        ]
+      },
+      {
+        "title": "Input as Gameplay Commands",
+        "paragraphs": [
+          "ScreenPanels, layers, AI systems, and entities registered for logical commands instead of physical buttons.",
+          "Scripts could issue the same commands as a player, making the input system useful for cutscenes, scripted movement, and AI-controlled sequences."
+        ]
+      },
+      {
+        "title": "Touch and Controller Abstraction",
+        "paragraphs": [
+          "The command layer made it possible to map the same gameplay action to different physical controls.",
+          "For example, movement could come from a keyboard, Xbox D-pad or stick, Android touch button, swipe, virtual thumbstick, or script trigger."
+        ]
+      },
+      {
+        "title": "Resolution & Aspect Ratio Management",
+        "paragraphs": [
+          "C.E.L.L. handled major differences in display resolution and aspect ratio between phones, tablets, desktops, and televisions.",
+          "The engine could render into a design-resolution buffer and scale while preserving aspect ratio, or use alternate-resolution asset sets while keeping game coordinates unchanged."
+        ]
+      },
+      {
+        "title": "Cross-Platform Fonts",
+        "paragraphs": [
+          "The engine wrapped font behavior behind the native layer and generally favored broadly available system fonts or bitmap fonts.",
+          "XNA-specific font-resource requirements were handled inside the platform implementation."
+        ]
+      },
+      {
+        "title": "Portable Resource Naming",
+        "paragraphs": [
+          "C.E.L.L. normalized differences in how platforms stored and named resources.",
+          "A logical path such as level1/init.script could be translated by the native platform layer into a flattened or indexed platform-specific representation without changing the game code."
+        ]
+      },
+      {
+        "title": "Java-to-C# Translator",
+        "paragraphs": [
+          "I created a custom translator specifically for the C.E.L.L. codebase so Java engine and game code could be moved into XNA/C# projects with minimal manual work.",
+          "The translator recursively processed a Java project, scanned class and method hierarchies, converted .java files into .cs files, identified virtual/override methods, and translated the Java syntax patterns used by C.E.L.L."
+        ]
+      },
+      {
+        "title": "Java / C# Compatibility Rules",
+        "paragraphs": [
+          "C.E.L.L. development deliberately avoided Java constructs that did not translate cleanly into C#.",
+          "Helper APIs and coding conventions were used so the Java source remained compatible with the eventual C# representation."
+        ],
+        "items": [
+          "extends → :",
+          "implements → :",
+          "boolean → bool",
+          "super → base",
+          "package → namespace",
+          "import → using",
+          "Java/C# string-method differences",
+          "Virtual / override method generation",
+          "Avoidance of incompatible anonymous inner-class behavior"
+        ]
+      },
+      {
+        "title": "Cross-Platform Targets",
+        "paragraphs": [
+          "The 2012 engine article documents C.E.L.L. as supporting a wide range of Java- and C#-based deployment targets."
+        ],
+        "items": [
+          "Windows",
+          "Xbox 360 / XNA",
+          "Windows Phone 7",
+          "Android",
+          "BlackBerry",
+          "OS X",
+          "Linux",
+          "Java WebStart / JNLP",
+          "Java Applets"
+        ]
+      },
+      {
+        "title": "Multiple Authoring Workflows",
+        "paragraphs": [
+          "C.E.L.L. deliberately supported several ways to create a game."
+        ],
+        "items": [
+          "Code directly above PlatformerLib",
+          "Author game content through scripts",
+          "Build through the C.E.L.L. Visual Game Editor",
+          "Mix code, scripting, and visual editing in the same project"
+        ]
+      },
+      {
+        "title": "Visual Game Editor Integration",
+        "paragraphs": [
+          "The optional visual editor generated and edited the same scripts used by the runtime.",
+          "The editor exposed layers, entities, AI, triggers, actions, collisions, and play testing to non-programmers while developers could still edit scripts or add custom code when needed.",
+          "The editor is documented separately in its dedicated portfolio card."
+        ]
+      },
+      {
+        "title": "Rapid Prototyping",
+        "paragraphs": [
+          "The combination of reusable screens, layers, entities, AI, scripting, and visual editing made C.E.L.L. a rapid-prototyping environment.",
+          "In the 2012 article I described the editor as sometimes being capable of producing roughly 80% of a working game idea before custom programming was required."
+        ]
+      },
+      {
+        "title": "Proven Across Multiple Genres",
+        "paragraphs": [
+          "By the time I documented C.E.L.L. publicly in 2012, it had already been used well beyond a single test project."
+        ],
+        "items": [
+          "3 released games",
+          "3 48-hour game jams",
+          "Approximately 10 working prototypes",
+          "Side scrollers",
+          "RPGs",
+          "RTS games",
+          "Space shooters",
+          "Puzzle games"
+        ]
+      },
+      {
+        "title": "Released Game Lineage",
+        "paragraphs": [
+          "C.E.L.L. became the common technology behind multiple Square Particle releases and prototypes, including Santa's Route, Santa's Recession Bender, Flag Hunt, and the later Android-era Bridge Captain work."
+        ]
+      },
+      {
+        "title": "Published Engine Architecture",
+        "paragraphs": [
+          "In 2012 I authored the Software Developer's Journal article \"Designing a Cross Platform 2D Game Engine,\" a detailed technical walkthrough of C.E.L.L.",
+          "The article spans more than twenty pages and documents the engine layers, visual game editor and scripting, native-platform adapters, Java-to-C# translation, cross-platform input, resolution handling, fonts, and resource portability."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/engines/cell.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/engines/cell.jpg"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/engines/cell_9.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/cell_6.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/cell_7.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/cell_8.jpg"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "C.E.L.L. expands to Cross-Platform Emulation Library Layer.",
+      "The original portfolio phrased the acronym as Cross Emulation Library Layer; Jamie's 2012 published article uses Cross-Platform Emulation Library Layer.",
+      "The 2012 Software Developer's Journal article is titled 'Designing a Cross Platform 2D Game Engine'.",
+      "The article begins on magazine page 53 and continues through page 74.",
+      "The published architecture identifies four primary runtime layers: Native C.E.L.L., MicroGen, PlatformerLib, and game-specific code.",
+      "The visual editor and scripting system interact with these runtime layers but are documented separately in the dedicated C.E.L.L. Visual Game Editor portfolio card.",
+      "C.E.L.L. was primarily authored using Java 1.4-era syntax as a lowest-common-denominator strategy.",
+      "The engine deliberately restricted use of Java-specific features to preserve C# compatibility.",
+      "Jamie created a custom Java-to-C# translator specialized for the C.E.L.L. codebase rather than a general-purpose language translator.",
+      "The translator recursively processed project trees, scanned class and method hierarchies, generated .cs files, handled virtual/override behavior, and translated known syntax differences.",
+      "By the time of the 2012 article, C.E.L.L. had been used for three released games, three 48-hour game jams, and roughly ten prototypes.",
+      "The article explicitly lists Windows, Xbox, WP7, Web/JNLP/Applet, OS X, Linux, Android, and BlackBerry as supported targets.",
+      "iOS was discussed as a possible future target through MonoTouch, not as an established C.E.L.L. platform.",
+      "Native C.E.L.L. abstracted events, graphics, resources, sound, collections, files, display/window behavior, bitmap handling, and utility/math behavior.",
+      "MicroGen provided ScreenPanels, ScreenComponents, focus handling, animation, common algorithms, a game thread, and screen navigation.",
+      "PlatformerLib provided physics, generic AI, collision handling, script parsing, cameras, input, sound queues, entities, generic layers, and DefaultPlayScreen.",
+      "C.E.L.L. used JBox2D on Java targets and Box2D.XNA on XNA targets.",
+      "Collision approaches included Box2D, pixel masks, tile masks, and rectangle intersection.",
+      "C.E.L.L. used logical input commands rather than directly exposing platform input to game code.",
+      "Scripts could issue the same input commands used by players.",
+      "C.E.L.L. supported resolution scaling, aspect-ratio preservation, alternate-resolution asset sets, font abstraction, and platform-normalized resource naming.",
+      "The article documents custom binary .SAV serialization to avoid incompatible platform-specific serialization.",
+      "The article describes the GUI editor as sometimes producing roughly 80% of a working game idea before custom code was needed.",
+      "The exact C.E.L.L. start/end dates are reconstructed from project chronology rather than stated as one explicit range in the article."
+    ],
+
+    "confidence": {
+      "engineName": "high",
+      "articleTitle": "high",
+      "article2012": "high",
+      "fourLayerArchitecture": "high",
+      "nativeCell": "high",
+      "microGen": "high",
+      "platformerLib": "high",
+      "gameSpecificLayer": "high",
+      "java14Strategy": "high",
+      "javaToCSharpTranslator": "high",
+      "windowsSupport": "high",
+      "xbox360Support": "high",
+      "windowsPhone7Support": "high",
+      "androidSupport": "high",
+      "blackBerrySupport": "high",
+      "osXSupport": "high",
+      "linuxSupport": "high",
+      "javaWebSupport": "high",
+      "iOSSupport": "not implemented in cited article",
+      "resourceManagement": "high",
+      "binarySaveSystem": "high",
+      "screenPanelArchitecture": "high",
+      "focusSystem": "high",
+      "gameThread": "high",
+      "physics": "high",
+      "genericAi": "high",
+      "collisionSystems": "high",
+      "entitySystem": "high",
+      "layerSystem": "high",
+      "cameraSystem": "high",
+      "soundQueue": "high",
+      "scripting": "high",
+      "crossPlatformInput": "high",
+      "resolutionHandling": "high",
+      "resourcePortability": "high",
+      "threeReleasedGamesBy2012": "high",
+      "threeGameJamsBy2012": "high",
+      "approximatelyTenPrototypesBy2012": "high",
+      "releasedGameLineage": "high",
+      "dateStart2010": "medium-high",
+      "dateEnd2014": "medium"
+    },
+
+    "projectTerminology": [
+      "C.E.L.L.",
+      "Cross-Platform Emulation Library Layer",
+      "Native C.E.L.L.",
+      "MicroGen",
+      "PlatformerLib",
+      "ScreenPanel",
+      "ScreenComponent",
+      "DefaultPlayScreen",
+      "Session",
+      "Navigator",
+      "Entity",
+      "Generic AI",
+      "ImageLayer",
+      "TileLayer",
+      "EntityLayer",
+      "CodedLayer",
+      "Script Parser",
+      "Input Commands",
+      "JBox2D",
+      "Box2D.XNA",
+      "Java-to-C# Translator"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Engines",
+      "legacyIndex": 3,
+      "publishedArticle": "Designing a Cross Platform 2D Game Engine",
+      "publication": "Software Developer's Journal",
+      "publicationYear": 2012
+    }
+  }
 }
