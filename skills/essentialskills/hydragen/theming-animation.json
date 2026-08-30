@@ -1,0 +1,360 @@
+{
+  "schemaVersion": 2,
+  "id": "essentialskills/hydragen/theming-animation",
+  "title": "Hydra-Gen Theming, Animation & Visual Effects",
+  "project": "Hydra-Gen",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Theming System",
+      "Animation Framework",
+      "Visual Effects System",
+      "Declarative UI Prototype"
+    ]
+  },
+
+  "technologies": [
+    "Java",
+    "Java SE",
+    "AWT",
+    "Canvas",
+    "XML",
+    "Custom XML Scripting",
+    "BNF",
+    "3D Rendering",
+    "Particle Effects",
+    "Fractals",
+    "Clipping",
+    "Image Effects"
+  ],
+
+  "date": {
+    "from": "2008",
+    "to": "2014",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Lead Architect / Visual Systems Designer",
+    "total": 2,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Artist",
+          "Theme Artist"
+        ],
+        "relationship": "employee",
+        "contribution": "Created the visual artwork for Hydra-Gen themes based on Jamie's art direction and requirements."
+      }
+    ]
+  },
+
+  "roles": [
+    "Lead Architect",
+    "Framework Developer",
+    "UI Systems Developer",
+    "Graphics Programmer",
+    "Animation-System Developer",
+    "Scripting-System Developer",
+    "Visual Systems Designer",
+    "Art Director"
+  ],
+
+  "description": "Before Hydra-Gen, I built a 2008 Java prototype that explored a JavaFX/XAML-like declarative presentation model using our own XML scripting. Layout, data binding, event handling, code binding, animation, and visual effects could be described outside the Java code. Those ideas evolved directly into Hydra-Gen's production theming, animation, widget, and reward systems, where the same activity mechanics could be presented through different visual themes without rewriting the underlying learning logic.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "2008 FX Prototype",
+        "paragraphs": [
+          "The project began as a working Java prototype before Hydra-Gen.",
+          "The goal was to explore a declarative presentation model similar in spirit to JavaFX or XAML, but implemented through Java Canvas/AWT and our own XML scripting."
+        ]
+      },
+      {
+        "title": "Declarative Presentation",
+        "paragraphs": [
+          "The prototype moved much of the presentation configuration out of hard-coded Java and into XML."
+        ],
+        "items": [
+          "Component layout",
+          "Data binding",
+          "Event handling",
+          "Code binding",
+          "Animations",
+          "Visual effects"
+        ]
+      },
+      {
+        "title": "Prototype Visual Effects",
+        "paragraphs": [
+          "The prototype also explored richer rendering components that could be treated as reusable parts of the presentation system."
+        ],
+        "items": [
+          "3D effects",
+          "Particle effects",
+          "Blurring",
+          "Fractal effects",
+          "Clipping",
+          "Animated components"
+        ]
+      },
+      {
+        "title": "From Prototype to Hydra-Gen",
+        "paragraphs": [
+          "The prototype became an important precursor to Hydra-Gen's production presentation architecture.",
+          "The same core idea carried forward: application behavior and learning mechanics should not be tightly coupled to one fixed visual presentation."
+        ]
+      },
+      {
+        "title": "Reusable Production Themes",
+        "paragraphs": [
+          "I designed the Hydra-Gen theming system and worked directly with our full-time artist to produce the visual theme sets. I defined what each theme needed and directed the visual requirements while he created the production artwork.",
+          "The completed themes could change the appearance of large portions of the K-6 suite without changing the underlying activity mechanics."
+        ],
+        "items": [
+          "Landscapes",
+          "School",
+          "Senior",
+          "Primary",
+          "Newlook"
+        ]
+      },
+      {
+        "title": "Themeable Presentation",
+        "paragraphs": [
+          "Themes could alter shared presentation elements across programs while preserving activity behavior and content structure."
+        ],
+        "items": [
+          "Buttons",
+          "Backgrounds",
+          "Images",
+          "Reward presentation",
+          "General visual treatment"
+        ]
+      },
+      {
+        "title": "Presentation Decoupled from Mechanics",
+        "paragraphs": [
+          "A central design goal was to separate how an activity looked from how the activity worked.",
+          "The same underlying activity logic could therefore be reused while themes, imagery, buttons, backgrounds, and reward styles changed around it."
+        ]
+      },
+      {
+        "title": "Theme Exploration",
+        "paragraphs": [
+          "We explored a wider range of visual directions during development."
+        ],
+        "items": [
+          "Outer Space",
+          "Haunted",
+          "Crayon"
+        ]
+      },
+      {
+        "title": "Rejected Over-Gamification",
+        "paragraphs": [
+          "Some of the more stylized theme directions were ultimately rejected because ownership felt they pushed the educational software too far toward a game-like presentation.",
+          "The final theme system therefore remained flexible while still respecting the intended classroom/product identity."
+        ]
+      },
+      {
+        "title": "Hydra-Gen EWidget Integration",
+        "paragraphs": [
+          "The mature Hydra-Gen presentation system worked through the reusable EWidget architecture.",
+          "Widgets could be configured from XML, bound to runtime state, animated, resized, themed, and connected to scripted events."
+        ]
+      },
+      {
+        "title": "Animated Widget Types",
+        "items": [
+          "LayeredImageWidget",
+          "FrameAnimationWidget",
+          "RenderPanel"
+        ]
+      },
+      {
+        "title": "Visual Effect Widgets",
+        "items": [
+          "3DWidget",
+          "FractalWidget",
+          "FireWidget",
+          "FireworkWidget"
+        ]
+      },
+      {
+        "title": "3D Reward Stars",
+        "paragraphs": [
+          "The 3DWidget was used in production for rotating gold, silver, and bronze stars awarded when students completed activities."
+        ]
+      },
+      {
+        "title": "Procedural Backgrounds",
+        "paragraphs": [
+          "FractalWidget provided generated visual backgrounds that could add variety without requiring every visual treatment to be pre-rendered artwork."
+        ]
+      },
+      {
+        "title": "Reward Effects",
+        "paragraphs": [
+          "FireWidget and other visual-effect components were used as reward feedback for correct answers.",
+          "Hydra-Gen accumulated many different reward styles so activities could provide varied visual reinforcement."
+        ]
+      },
+      {
+        "title": "Shared Rendering Components",
+        "paragraphs": [
+          "Visual effects were implemented as reusable engine components rather than one-off code embedded into individual activities.",
+          "This made it possible for content creators and developers to reuse the same effects across many programs."
+        ]
+      },
+      {
+        "title": "XML / Script-Driven Behavior",
+        "paragraphs": [
+          "Presentation components could be configured through XML and connected to Hydra-Gen's scripting system.",
+          "This allowed animation, event behavior, state changes, and visual feedback to be combined without requiring every variation to be implemented directly in Java."
+        ]
+      },
+      {
+        "title": "Non-Programmer Authoring",
+        "paragraphs": [
+          "The mature Hydra-Gen system was used continuously by full-time non-programmer content creators.",
+          "Because themes, widgets, animations, rewards, and scripted behavior were reusable, authors could build visually different activities from the same underlying platform capabilities."
+        ]
+      },
+      {
+        "title": "Evolution Across Generations",
+        "paragraphs": [
+          "The theme architecture introduced during the Hydra-Gen generation remained useful beyond Hydra-Gen itself.",
+          "The same idea of separating presentation from activity mechanics continued into later Essential Skills platform generations."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/engines/javafx.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/engines/javafx.jpg"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/engines/javafx_1.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/javafx_4.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/javafx_3.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/javafx_2.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/hydratheme_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/hydratheme_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/hydratheme_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/hydratheme_4.jpg"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "This is an Essential Skills project, not a Square Particle project.",
+      "The legacy card was titled 'FX Engine Prototype(2008)' and was incorrectly organized under the Square Particle engine section.",
+      "The 2008 prototype predates Hydra-Gen and directly influenced its production theming, animation, scripting, and widget-presentation architecture.",
+      "The prototype used Java rather than JavaFX itself; the comparison is architectural, describing a JavaFX/XAML-like declarative model built with Java Canvas/AWT and custom XML scripting.",
+      "The prototype supported XML-defined data binding, event handling, component layout, animations, and code binding.",
+      "The prototype included 3D, particle, blur, fractal, clipping, and animation effects.",
+      "Hydra-Gen production themes included Landscapes, School, Senior, Primary, and Newlook.",
+      "Themeable presentation included buttons, backgrounds, images, and reward presentation.",
+      "Outer Space, Haunted, and Crayon were explored but rejected as too game-like for the intended educational presentation.",
+      "Hydra-Gen deliberately decoupled visual presentation from activity mechanics.",
+      "The 3DWidget was used for rotating gold/silver/bronze reward stars.",
+      "FractalWidget was used for generated visual backgrounds.",
+      "FireWidget was used as one of many correct-answer reward effects.",
+      "Hydra-Gen supported many different reward types.",
+      "The four legacy javafx_* images represent the 2008 prototype.",
+      "Four additional media slots are reserved for production Hydra-Gen theme examples.",
+      "The production Hydra-Gen themes were a collaboration between Jamie and Essential Skills' full-time artist.",
+      "Jamie designed the theming system, defined the theme concepts/requirements, and provided art direction; the artist created the production theme artwork."      
+    ],
+
+    "confidence": {
+      "essentialSkillsProject": "high",
+      "prototype2008": "high",
+      "javaImplementation": "high",
+      "javaFxXamlLikeArchitecture": "high",
+      "customXmlScripting": "high",
+      "xmlDataBinding": "high",
+      "xmlEventBinding": "high",
+      "xmlComponentLayout": "high",
+      "xmlAnimationBinding": "high",
+      "prototype3dEffects": "high",
+      "prototypeParticles": "high",
+      "prototypeBlur": "high",
+      "prototypeFractals": "high",
+      "prototypeClipping": "high",
+      "hydraGenLineage": "high",
+      "landscapesTheme": "high",
+      "schoolTheme": "high",
+      "seniorTheme": "high",
+      "primaryTheme": "high",
+      "newlookTheme": "high",
+      "outerSpaceRejectedTheme": "high",
+      "hauntedRejectedTheme": "high",
+      "crayonRejectedTheme": "high",
+      "presentationMechanicsSeparation": "high",
+      "3dRewardStars": "high",
+      "fractalBackgrounds": "high",
+      "fireRewardEffects": "high"
+    },
+
+    "projectTerminology": [
+      "Hydra-Gen",
+      "FX Prototype",
+      "EWidget",
+      "3DWidget",
+      "FractalWidget",
+      "FireWidget",
+      "FireworkWidget",
+      "LayeredImageWidget",
+      "FrameAnimationWidget",
+      "RenderPanel",
+      "Landscapes",
+      "School",
+      "Senior",
+      "Primary",
+      "Newlook",
+      "Outer Space",
+      "Haunted",
+      "Crayon"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Engines",
+      "legacyIndex": 5
+    }
+  }
+}
