@@ -162,7 +162,7 @@
         "essentialskills/hydragen/engine",
         "essentialskills/hydragen/theming-animation",
         "squareparticle/engines/3d-engine-2007",
-        "squareparticle/engines/voxel-2012"
+        "squareparticle/engines/shaderbox"
       ]
     },
     {

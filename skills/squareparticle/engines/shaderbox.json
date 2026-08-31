@@ -1,0 +1,392 @@
+{
+  "schemaVersion": 2,
+  "id": "squareparticle/engines/shaderbox",
+  "title": "ShaderBox 3D, Shader & Voxel Engine",
+  "project": "ShaderBox",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "3D Rendering Engine",
+      "Shader Framework",
+      "Voxel Engine",
+      "Graphics Experimentation Platform"
+    ]
+  },
+
+  "technologies": [
+    "Java",
+    "LWJGL",
+    "OpenGL",
+    "GLSL",
+    "Framebuffer Objects",
+    "Qubicle",
+    "QEF",
+    "OBJ Models",
+    "DirectX .X Models",
+    "Perlin Noise",
+    "Cellular Automata"
+  ],
+
+  "date": {
+    "from": "2012",
+    "to": "2013",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Engine Architect / Developer",
+    "total": 1,
+    "contributors": []
+  },
+
+  "roles": [
+    "Engine Architect",
+    "Graphics Programmer",
+    "Game Engine Developer",
+    "Shader Developer",
+    "Procedural Generation Developer",
+    "Gameplay Programmer"
+  ],
+
+  "description": "ShaderBox was a Java/LWJGL/OpenGL graphics and game-engine framework I developed around real-time shaders, 3D rendering, framebuffer effects and procedural voxel worlds. The project grew beyond its original voxel work into a reusable graphics playground supporting models, terrain, cameras, lighting, shader-driven effects and off-screen rendering. Its voxel subsystem generated chunked terrain, materials, underground caves and biomes, performed lighting and hidden-face optimization, streamed world regions around the player, and imported voxel assets created in Qubicle.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Java / LWJGL Rendering Framework",
+        "paragraphs": [
+          "ShaderBox was built in Java using LWJGL and OpenGL as a reusable 3D graphics framework rather than as a single voxel demonstration.",
+          "The recovered source contains shared engine systems for scenes, models, meshes, terrain, cameras, lighting, textures, shaders and framebuffer rendering."
+        ]
+      },
+      {
+        "title": "Reusable 3D Engine Components",
+        "items": [
+          "Object3D-based runtime objects",
+          "Models and meshes",
+          "Terrain",
+          "Skyboxes",
+          "Cameras",
+          "Lighting",
+          "Textures and resource helpers",
+          "OBJ model loading",
+          "DirectX .X model loading",
+          "Cached model and resource handling"
+        ]
+      },
+      {
+        "title": "GLSL Shader Framework",
+        "paragraphs": [
+          "I built reusable abstractions around OpenGL shader programs so shaders could be compiled, linked, inspected and reused across different rendering experiments."
+        ],
+        "items": [
+          "Vertex and fragment shader programs",
+          "Shader compilation and linking",
+          "Compile/link error reporting",
+          "Uniform discovery and storage",
+          "Attribute discovery",
+          "Float and integer uniforms",
+          "Vector uniforms",
+          "Matrix uniforms",
+          "Reusable and derived shader programs"
+        ]
+      },
+      {
+        "title": "ShaderToy-Style Shader Playground",
+        "paragraphs": [
+          "One branch of ShaderBox provided a full-screen procedural fragment-shader playground using the common real-time shader inputs of elapsed time, mouse position and rendering resolution.",
+          "The test harness allowed many shader programs and categories to be switched interactively, giving me a practical environment for studying and adapting procedural GPU effects."
+        ],
+        "items": [
+          "Time-driven shaders",
+          "Mouse-driven shaders",
+          "Resolution-aware shaders",
+          "Procedural effects",
+          "Fractals",
+          "Plasma effects",
+          "Water",
+          "Fire",
+          "Space and sun effects",
+          "Waves",
+          "Tunnels",
+          "Abstract effects",
+          "3D-style procedural effects"
+        ]
+      },
+      {
+        "title": "Large Shader Test Library",
+        "paragraphs": [
+          "The recovered shader test harness defines 19 effect categories with approximately 249 shader slots, showing that ShaderBox became a substantial shader experimentation environment rather than a handful of isolated tests."
+        ]
+      },
+      {
+        "title": "Voxel Side-Scrolling Shooter",
+        "paragraphs": [
+          "I also started building a side-scrolling shooter on top of ShaderBox. The player's spacecraft flew through the procedural voxel world rather than over a fixed level.",
+          "Weapons could destroy individual voxels, allowing the player to carve paths into the terrain, break through the surface, and fly underground through the generated world. The game also supported changing between different spacecraft."
+        ],
+        "items": [
+          "Side-scrolling spacecraft gameplay",
+          "Destructible voxel terrain",
+          "Weapons modifying the world at runtime",
+          "Surface-to-underground traversal",
+          "Procedural terrain used directly as game space",
+          "Multiple selectable spacecraft"
+        ]
+      },
+      {
+        "title": "3D Material & Lighting Experiments",
+        "paragraphs": [
+          "ShaderBox also applied programmable shaders to 3D models and scenes rather than limiting shader work to full-screen effects."
+        ],
+        "items": [
+          "Phong-style per-pixel lighting",
+          "Textured lighting",
+          "Toon shading",
+          "Bump-mapping experiments",
+          "Specular effects",
+          "Water shaders",
+          "Procedural material effects"
+        ]
+      },
+      {
+        "title": "Framebuffer & Post-Processing",
+        "paragraphs": [
+          "The engine included framebuffer-object support for rendering scenes into textures and processing the result through additional shader passes."
+        ],
+        "items": [
+          "Off-screen rendering",
+          "Render-to-texture",
+          "Framebuffer Objects",
+          "Post-processing",
+          "Blur experiments",
+          "Shader effects applied to rendered scenes",
+          "Reflection experiments",
+          "Shadow-mapping experiments"
+        ]
+      },
+      {
+        "title": "Voxel World Engine",
+        "paragraphs": [
+          "A major ShaderBox subsystem was a Minecraft-style procedural voxel engine.",
+          "The original implementation organized the world into 3D chunks and maintained a player-relative region of active terrain."
+        ],
+        "items": [
+          "Chunk-based voxel storage",
+          "Player-relative world regions",
+          "Runtime chunk loading",
+          "Background chunk generation",
+          "Procedural voxel materials",
+          "Generated terrain",
+          "Underground terrain",
+          "Caves",
+          "Biomes",
+          "Voxel lighting",
+          "Texture atlases"
+        ]
+      },
+      {
+        "title": "Procedural Terrain & Materials",
+        "paragraphs": [
+          "Terrain generation used noise functions to create surface shape and underground material distribution.",
+          "The original portfolio documentation also records 3D Perlin noise and cellular-automata techniques for creating materials, ground level, caves and biomes."
+        ],
+        "items": [
+          "3D Perlin / turbulence sampling",
+          "Height-based terrain",
+          "Depth-dependent material generation",
+          "Multiple voxel material types",
+          "Underground strata",
+          "Procedural cave generation",
+          "Biome generation"
+        ]
+      },
+      {
+        "title": "Chunk Streaming",
+        "paragraphs": [
+          "The recovered source contains a ClusterManager that tracks world regions around the current camera/player position.",
+          "When movement exposes a missing region, new clusters can be queued and generated on a background loading thread before being placed into the visible world."
+        ]
+      },
+      {
+        "title": "Voxel Rendering Optimization",
+        "paragraphs": [
+          "The voxel renderer avoided blindly drawing every cube in the world.",
+          "Hidden voxels and internal faces were eliminated so geometry was generated primarily for visible surfaces."
+        ],
+        "items": [
+          "Hidden-cube culling",
+          "Hidden-face elimination",
+          "Surface-only geometry construction",
+          "Chunk-level geometry generation"
+        ]
+      },
+      {
+        "title": "Voxel Lighting",
+        "paragraphs": [
+          "Lighting information was calculated for voxel geometry so generated worlds were not rendered as uniformly illuminated blocks."
+        ]
+      },
+      {
+        "title": "Qubicle Asset Pipeline",
+        "paragraphs": [
+          "I created a QEF voxel loader so authored voxel objects and structures could be created in Qubicle and inserted into the generated world.",
+          "The recovered engine includes routines for loading and positioning QEF voxel data inside terrain clusters."
+        ],
+        "items": [
+          "Qubicle-authored models",
+          "QEF loading",
+          "Voxel structure placement",
+          "Tile offsets",
+          "Placement into generated terrain",
+          "Optional clearing of terrain before insertion"
+        ]
+      },
+      {
+        "title": "Games & Engine Experiments",
+        "paragraphs": [
+          "ShaderBox became a reusable base for graphics experiments and small game projects rather than remaining a rendering demonstration."
+        ],
+        "items": [
+          "Voxel side-scrolling shooter",
+          "Destructible procedural worlds",
+          "Minecraft-style world experiments",
+          "Voxel demos",
+          "Qubicle/QEF demos",
+          "Procedural shader demos",
+          "3D model shader tests",
+          "Fighter experiments",
+          "Framebuffer experiments"
+        ]
+      },
+      {
+        "title": "Engine Lineage",
+        "paragraphs": [
+          "Years later I revisited voxel-engine architecture inside BradEngine using a very different JavaScript and software-rendering stack.",
+          "ShaderBox represents the earlier Java/LWJGL/OpenGL generation of that continuing interest in procedural worlds, rendering architecture and engine development."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/engines/voxel.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/engines/voxel.jpg"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/engines/voxel_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/voxel_2.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/voxel_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/voxel_4.jpg"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The legacy portfolio card was titled 'Voxel (2012)' and represented only the voxel portion of what surviving source identifies as the broader ShaderBox/cell3d graphics framework.",
+      "The original portfolio description records a 3D array of voxel chunks, initially described as 8x8x8 cubes per chunk with an 8x8x4 chunk region on screen.",
+      "The recovered source contains later or alternate cluster-management configurations, so the exact visible chunk dimensions varied during development.",
+      "The original portfolio documentation explicitly records generation of materials, ground level, caves and biomes using 3D Perlin noise and a cellular-automata method.",
+      "Jamie specifically remembers creating underground voxel caves in this engine.",
+      "The recovered ShaderBox source confirms broad noise-based terrain and underground material generation, but the specific surviving cellular-automata voxel cave implementation has not yet been identified.",
+      "A separately recovered CaveGen.java contains a Java cellular-automata cave generator, but it generates a 2D top-down bitmap and collision map and likely belongs to a separate TOJam-era project rather than serving as direct evidence of ShaderBox's 3D cave implementation.",
+      "CaveGen.java should therefore be documented with the appropriate TOJam project rather than folded into ShaderBox.",
+      "The recovered source includes a ShaderToy-style procedural shader test harness using time, mouse and resolution uniforms.",
+      "The phrase 'ShaderToy-style' is used rather than claiming universal ShaderToy source compatibility because the recovered source proves the runtime pattern but not complete compatibility with every ShaderToy shader.",
+      "The recovered shader harness defines approximately 249 shader slots across 19 effect categories.",
+      "The source contains both custom framework code and adapted/tutorial/reference OpenGL code.",
+      "Some low-level framebuffer, shadow, camera and OBJ examples retain third-party attribution and should not be represented as entirely original implementations.",
+      "Jamie integrated and experimented with those graphics techniques within the larger ShaderBox framework.",
+      "The project was developed under the Square Particle personal/game-development lineage.",
+      "MollyJam 2013 used work from this general era, but MollyJam is being maintained as a separate portfolio card and is not treated here as a ShaderBox feature.",
+      "Jamie developed a side-scrolling spacecraft game prototype using the ShaderBox voxel world.",
+      "The player's weapons could destroy voxels, allowing the spacecraft to enter and travel through underground terrain.",
+      "The prototype supported changing spacecraft.",
+      "Jamie stopped pursuing the prototype after online feedback characterized the voxel-world concept as too similar to Minecraft; this affected continuation of the game, not development of the underlying ShaderBox engine."
+    ],
+
+    "confidence": {
+      "shaderBoxName": "high",
+      "java": "high",
+      "lwjgl": "high",
+      "openGL": "high",
+      "glsl": "high",
+      "general3DEngine": "high",
+      "shaderFramework": "high",
+      "shaderToyStyleRuntime": "high",
+      "approximately249ShaderSlots": "high",
+      "framebufferSupport": "high",
+      "renderToTexture": "high",
+      "postProcessingExperiments": "high",
+      "reflectionExperiments": "high",
+      "shadowMappingExperiments": "high",
+      "modelRendering": "high",
+      "terrainRendering": "high",
+      "cameraSystem": "high",
+      "lightingSystem": "high",
+      "objLoading": "high",
+      "directXModelLoading": "high",
+      "voxelEngine": "high",
+      "chunkedVoxelWorld": "high",
+      "backgroundChunkGeneration": "high",
+      "hiddenFaceCulling": "high",
+      "voxelLighting": "high",
+      "qefLoader": "high",
+      "qubiclePipeline": "high",
+      "3dPerlinGeneration": "high",
+      "voxelCaves": "high",
+      "cellularAutomataVoxelCaves": "medium-high",
+      "biomes": "high",
+      "developmentStart2012": "high",
+      "continuedInto2013": "medium-high",
+      "mollyJamSeparateProject": "high"
+    },
+
+    "projectTerminology": [
+      "ShaderBox",
+      "cell3d",
+      "ShaderProgram",
+      "ShaderTools",
+      "Uniform",
+      "Attribute",
+      "FrameBuffer",
+      "FBOHelper",
+      "Object3D",
+      "Model",
+      "Mesh",
+      "Terrain",
+      "Skybox",
+      "ClusterManager",
+      "Voxel",
+      "VoxelCamera",
+      "QefVoxelLoader",
+      "Qubicle",
+      "QEF"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Engines",
+      "legacyIndex": 7,
+      "legacyTitle": "Voxel (2012)",
+      "legacySubtitle": "Java 1.5, LWJGL, OpenGL 2.0, Qubicle"
+    }
+  }
+}

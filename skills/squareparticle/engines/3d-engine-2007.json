@@ -1,39 +1,341 @@
 {
   "schemaVersion": 2,
-  "id": "squareparticle/engines/3d-engine-2007",
-  "title": "3D Engine (2007)",
-  "project": "3D Engine (2007)",
+  "id": "squareparticle/engines/openuniverse-2d-3d-engine",
+  "title": "OpenUniverse 2D/3D Game Engine",
+  "project": "OpenUniverse",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Game Engine"
+      "2D Game Engine",
+      "3D Game Engine",
+      "Declarative Scene Framework",
+      "Networked Game Prototype"
     ]
   },
+
   "technologies": [
     "Java",
+    "Java SE",
+    "Swing",
+    "AWT",
+    "Java2D",
     "JOGL",
-    "OpenGL"
+    "OpenGL",
+    "XML",
+    "Reflection",
+    "TCP/IP",
+    "Client/Server Networking",
+    "DirectX .X Models",
+    "Height Maps"
   ],
+
   "date": {
     "from": "2007",
-    "to": "2007",
-    "display": false
+    "to": "2009",
+    "display": true
   },
-  "description": "To learn OpenGL I developed a comprehensive 2D/3D game engine in Java using JOGL.  This engine had XAML like scripting abilities in that all the UI layout, object transformations, animations and code binding was scriptable in XML format. Later I ended up creating a two player cart racing game. My experience making this project gave me the idea for creating the FX Engine.",
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Engine Architect / Developer",
+    "total": 1,
+    "contributors": []
+  },
+
+  "roles": [
+    "Engine Architect",
+    "Game Engine Developer",
+    "Graphics Programmer",
+    "Networking Developer",
+    "Tools and Scripting Developer",
+    "Gameplay Programmer"
+  ],
+
+  "description": "I developed a reusable Java game-engine architecture that combined the 2D OpenWorld engine with the JOGL/OpenGL-based 3D OpenGalaxy engine through a higher-level OpenUniverse framework. Both engines used declarative XML scene authoring to construct runtime objects, configure cameras, animation, movement, AI, collision, rendering and other behavior. The 3D engine was ultimately used to build a working client/server two-player kart racing game. This work directly influenced the later FX prototype and Hydra-Gen's declarative presentation architecture.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Three-Layer Engine Architecture",
+        "paragraphs": [
+          "The project evolved as a family of related engine layers rather than a single monolithic renderer.",
+          "OpenWorld provided the reusable 2D systems, OpenGalaxy provided the reusable 3D systems, and OpenUniverse acted as the higher-level framework connecting the two approaches."
+        ],
+        "items": [
+          "OpenWorld: 2D runtime and scene engine",
+          "OpenGalaxy: 3D JOGL/OpenGL runtime and scene engine",
+          "OpenUniverse: higher-level integration and application shell"
+        ]
+      },
+      {
+        "title": "Declarative XML Scene Architecture",
+        "paragraphs": [
+          "A central design goal was to move scene construction and presentation out of hard-coded Java and into external XML.",
+          "Runtime classes could be named in XML and instantiated through reflection, allowing scenes to be assembled from reusable engine objects."
+        ],
+        "items": [
+          "Scene composition",
+          "Runtime class instantiation",
+          "Object transforms",
+          "Camera configuration",
+          "Animation configuration",
+          "Texture and model references",
+          "Lighting",
+          "AI and waypoint configuration",
+          "Collision configuration",
+          "HUD and presentation elements"
+        ]
+      },
+      {
+        "title": "OpenWorld 2D Engine",
+        "paragraphs": [
+          "OpenWorld implemented the 2D side of the architecture using Java's 2D rendering stack."
+        ],
+        "items": [
+          "Reusable Object2D hierarchy",
+          "XML-authored scenes",
+          "Sprite rendering",
+          "Frame-based animation",
+          "External animation definitions",
+          "Camera following",
+          "Layered depth rendering",
+          "Scaling and rotation",
+          "Alpha blending",
+          "Anti-aliasing",
+          "Collision maps",
+          "Object collision",
+          "Collision-mask logic",
+          "Player abstractions",
+          "NPC abstractions",
+          "Waypoint AI",
+          "Side-scroller gravity and movement"
+        ]
+      },
+      {
+        "title": "OpenGalaxy 3D Engine",
+        "paragraphs": [
+          "OpenGalaxy was the 3D half of the system and used JOGL/OpenGL while retaining the same externally authored scene philosophy."
+        ],
+        "items": [
+          "Reusable Object3D hierarchy",
+          "Scene management",
+          "Position, direction and scale transforms",
+          "Yaw, pitch and roll",
+          "Parent/child object composition",
+          "Materials and textures",
+          "Lighting",
+          "Skyboxes",
+          "Mesh and model rendering",
+          "Terrain",
+          "Height-map generation",
+          "Billboards",
+          "Sprites",
+          "HUD rendering",
+          "Text rendering"
+        ]
+      },
+      {
+        "title": "3D Camera System",
+        "paragraphs": [
+          "OpenGalaxy supported several reusable camera behaviors that could be selected and configured through the scene scripts."
+        ],
+        "items": [
+          "Free camera",
+          "Player camera",
+          "Chase camera",
+          "Free-chase camera",
+          "Orbital camera",
+          "Network-aware camera",
+          "Camera attachment to scene objects"
+        ]
+      },
+      {
+        "title": "Models and Geometry",
+        "paragraphs": [
+          "The renderer supported both engine-generated geometry and externally authored 3D assets."
+        ],
+        "items": [
+          "DirectX .X model loading",
+          "Mesh objects",
+          "Triangles and quads",
+          "Procedural terrain",
+          "Height-map terrain",
+          "Texture mapping",
+          "Compound scene objects"
+        ]
+      },
+      {
+        "title": "Animation",
+        "paragraphs": [
+          "Animation was treated as a reusable engine capability rather than being hard-coded into individual game objects."
+        ],
+        "items": [
+          "Frame animation",
+          "Named animation states",
+          "Timed animation frames",
+          "Keyframe entities",
+          "Looping animations",
+          "Animated models",
+          "XML-authored animation definitions"
+        ]
+      },
+      {
+        "title": "AI and Movement",
+        "paragraphs": [
+          "The engine contained reusable live-object and NPC abstractions for moving game entities."
+        ],
+        "items": [
+          "Basic NPC behavior",
+          "Waypoint-driven NPCs",
+          "Player-controlled objects",
+          "Speed and movement limits",
+          "Object direction and orientation",
+          "Waypoint tools"
+        ]
+      },
+      {
+        "title": "Collision",
+        "paragraphs": [
+          "Collision support existed on both sides of the engine family, with implementations appropriate to the different rendering environments."
+        ],
+        "items": [
+          "2D collision maps",
+          "2D collision masks",
+          "Object-to-object collision",
+          "Live-object collision hooks",
+          "3D collision checks"
+        ]
+      },
+      {
+        "title": "Client/Server Networking",
+        "paragraphs": [
+          "The surviving OpenGalaxy code contains an implemented TCP client/server networking system rather than only planned networking hooks.",
+          "The engine could operate in NONE, CLIENT or SERVER modes and exchange runtime player state through a network thread."
+        ],
+        "items": [
+          "TCP sockets",
+          "ServerSocket listener",
+          "Client connections",
+          "Background receive thread",
+          "Remote key press and release messages",
+          "Player position synchronization",
+          "Direction synchronization",
+          "Speed synchronization"
+        ]
+      },
+      {
+        "title": "Two-Player Kart Racing Game",
+        "paragraphs": [
+          "I used OpenGalaxy to build a working kart racing game that exercised the engine's scene, camera, model, AI, HUD and networking systems.",
+          "The surviving scripts show the race itself being assembled declaratively from player vehicles, opponents, track assets, cameras, lights, skybox, HUD elements and GPS-style markers."
+        ],
+        "items": [
+          "Networked player vehicle",
+          "AI opponents",
+          "Race track",
+          "Multiple cameras",
+          "HUD",
+          "GPS / waypoint indicators",
+          "Skybox",
+          "Lighting",
+          "Externally authored models and textures"
+        ]
+      },
+      {
+        "title": "2D and 3D in One Architecture",
+        "paragraphs": [
+          "OpenWorld and OpenGalaxy were separate rendering engines but shared many of the same architectural ideas: reusable runtime objects, externally authored scenes, cameras, animation, movement, AI and collision.",
+          "OpenUniverse provided the conceptual and application-level bridge between the 2D OpenWorld and 3D OpenGalaxy systems."
+        ]
+      },
+      {
+        "title": "Architecture Lineage",
+        "paragraphs": [
+          "The XML-driven architecture became an important precursor to my later FX prototype, which expanded the declarative model into UI layout, data and event binding, animations, code binding and visual effects.",
+          "Those experiments subsequently influenced Hydra-Gen's production XML scripting, EWidget, animation and theming systems."
+        ]
+      }
+    ]
+  },
+
   "media": {
-    "items": [],
     "thumbnail": "images/skills/engines/xaml3d.gif",
     "primary": {
       "type": "image",
       "src": "images/skills/engines/xaml3d.gif"
-    }
+    },
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/engines/xaml3d.gif"
+      }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "Java 1.4, JOGL, OpenGL",
-    "legacyMobileText": "To learn OpenGL I developed a comprehensive 2D/3D game engine in Java using JOGL. <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+    "historicalNotes": [
+      "This was a personal engine project created before Square Particle existed.",
+      "It is grouped under the Square Particle umbrella in the modern portfolio to keep Jamie's personal game-engine lineage together.",
+      "It was not developed as an Essential Skills project.",
+      "Jamie may have reused or adapted a small amount of code from an earlier Essential Skills SE engine, but OpenWorld, OpenGalaxy and OpenUniverse were developed as Jamie's personal engine architecture."
+    ],
+
+    "confidence": {
+      "openWorld2DEngine": "high",
+      "openGalaxy3DEngine": "high",
+      "openUniverseIntegrationRole": "high",
+      "java": "high",
+      "jogl": "high",
+      "openGL": "high",
+      "xmlSceneAuthoring": "high",
+      "reflectionBasedInstantiation": "high",
+      "object2DHierarchy": "high",
+      "object3DHierarchy": "high",
+      "cameraSystem": "high",
+      "heightMapTerrain": "high",
+      "directXModelLoading": "high",
+      "animationSystem": "high",
+      "waypointAI": "high",
+      "collisionSystems": "high",
+      "tcpClientServerNetworking": "high",
+      "playerStateSynchronization": "high",
+      "workingKartGame": "high",
+      "twoPlayerNetworkedKartGame": "high",
+      "startDate2007": "medium",
+      "developmentThrough2009": "high",
+      "openUniverseStartedBy2006": "medium",
+      "directInfluenceOnFxPrototype": "high",
+      "personalProject": "high",
+      "predatesSquareParticle": "high",
+      "portfolioGroupedUnderSquareParticle": "high",
+      "notEssentialSkillsProject": "high",
+      "possibleSEEngineCodeReuse": "medium"
+    },
+
+    "projectTerminology": [
+      "OpenUniverse",
+      "OpenWorld",
+      "OpenGalaxy",
+      "OpenWorldEngine",
+      "OpenGalaxyEngine",
+      "Object2D",
+      "Object3D",
+      "LiveObject",
+      "BasicNPC",
+      "WayPointNPC",
+      "PlayerCamera",
+      "ChaseCamera",
+      "OrbitalCamera",
+      "NetworkFreeCamera",
+      "AnimEntity",
+      "KeyFrameEntity"
+    ],
+
     "provenance": {
       "legacyCategory": "Engines",
-      "legacyIndex": 6
+      "legacyIndex": 6,
+      "legacyTitle": "3D Engine (2007)"
     }
   }
 }
