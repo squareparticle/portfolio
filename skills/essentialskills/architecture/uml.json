@@ -1,26 +1,169 @@
 {
   "schemaVersion": 2,
-  "id": "essentialskills/architecture/uml",
-  "title": "UML",
-  "project": "Architecture",
+  "id": "essentialskills/architecture/uml-documentation",
+  "title": "UML & Architecture Documentation",
+  "project": "Architecture Documentation",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Documentation"
+      "Architecture Documentation",
+      "Technical Communication",
+      "System Design",
+      "Reverse Engineering"
     ]
   },
+
   "technologies": [
+    "UML",
     "Visio",
-    "Paper",
-    "Photoshop"
+    "Lucidchart",
+    "Photoshop",
+    "Whiteboards",
+    "Paper"
   ],
+
   "date": {
     "from": null,
     "to": null,
     "display": false
   },
-  "description": "I find UML style documentation to be a highly affect tool when designing projects, retaining a reference, reverse engineering for refactoring or debugging, as well as learning or teaching an application's structure. The images bellow show diagrams I created of 3DForge's weapons firing for both beam and projectile weapons. Since they decided to create a singleton to fire all weapons in the game, it was extremely difficult for me to work with multiple weapons. Thus, I refactored their code into the 3rd diagram. This not only removes the singleton and allows me to instantiate new weapons on the fly, but it also combines the beams and projectiles as just weapons.",
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Software Architect / Technical Lead",
+    "total": null,
+    "contributors": []
+  },
+
+  "roles": [
+    "Software Architect",
+    "Technical Lead",
+    "Technical Mentor",
+    "Systems Designer",
+    "Documentation Author"
+  ],
+
+  "description": "UML and architecture diagrams were a standard engineering communication tool throughout my work at Essential Skills and Square Particle. I used them to design systems, map execution and event flow, reverse-engineer unfamiliar code, plan refactors, debug complex interactions, document architecture, teach new developers, and create shared visual models that teams could understand quickly. For large production systems such as Hydra-Gen, I often created multiple complementary diagrams of the same architecture so each view could focus on a specific concern without overloading a single diagram.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Architecture as Visual Communication",
+        "paragraphs": [
+          "I treated UML primarily as a shared visual language for real engineering work rather than as an academic documentation exercise.",
+          "The goal was to make architecture, relationships and runtime behavior understandable at a glance to the people designing, maintaining and extending the software."
+        ]
+      },
+      {
+        "title": "Standard Team Practice",
+        "paragraphs": [
+          "Architecture diagrams were a normal part of development across both Essential Skills and Square Particle.",
+          "Over the years my teams and I created hundreds of diagrams using whatever medium best fit the discussion, including paper, whiteboards, Visio, Photoshop and Lucidchart."
+        ]
+      },
+      {
+        "title": "Uses",
+        "items": [
+          "System and engine design",
+          "Class and component relationships",
+          "Runtime execution flow",
+          "Event propagation",
+          "Data flow",
+          "Persistence flow",
+          "Initialization and construction",
+          "Reverse engineering",
+          "Refactoring",
+          "Debugging",
+          "Onboarding",
+          "Developer training",
+          "Architecture reviews"
+        ]
+      },
+      {
+        "title": "UML Training & Practical Use",
+        "paragraphs": [
+          "I completed a week-long UML course through Sun Microsystems.",
+          "In practice, I followed established UML conventions where they improved shared understanding, but the diagrams were optimized for the team and the engineering question being solved rather than for notation compliance alone."
+        ]
+      },
+      {
+        "title": "Designed for Rapid Comprehension",
+        "paragraphs": [
+          "I often arranged diagrams spatially to make important relationships visible without requiring the reader to trace a long procedural path.",
+          "For event-driven systems, for example, I would place the dispatcher or central system at the visual center so inputs, listeners, outputs and their relative distance from the dispatcher could be understood immediately."
+        ]
+      },
+      {
+        "title": "Multiple Views for Complex Systems",
+        "paragraphs": [
+          "For large production platforms such as Hydra-Gen, I was more formal in the sense that I created multiple diagrams of the same architecture from different perspectives.",
+          "Rather than forcing class structure, runtime flow, persistence, construction, authoring and event relationships into one diagram, each view focused on the concern it needed to explain."
+        ],
+        "items": [
+          "Class and object relationships",
+          "Runtime activity flow",
+          "Construction and initialization",
+          "Menu and navigation architecture",
+          "Widget relationships",
+          "Completion and marks flow",
+          "Data and persistence architecture",
+          "Authoring and scripting flow"
+        ]
+      },
+      {
+        "title": "Team Communication & Mentoring",
+        "paragraphs": [
+          "The diagrams were consumed by developers, managers, contractors and new hires with a wide range of experience levels.",
+          "I used them regularly to explain unfamiliar systems, teach new developers how the architecture worked, and create a common model before implementation or refactoring."
+        ]
+      },
+      {
+        "title": "3DForge Weapon-System Refactor",
+        "paragraphs": [
+          "One portfolio example documents my reverse engineering of 3DForge's weapon-firing architecture.",
+          "The original implementation used a singleton-based firing system and treated beam and projectile weapons through separate paths, which made supporting multiple independent weapons difficult."
+        ]
+      },
+      {
+        "title": "Refactoring from the Diagram",
+        "paragraphs": [
+          "I first mapped the existing beam and projectile flows visually, then designed the replacement architecture in a third diagram.",
+          "The refactor removed the singleton bottleneck and introduced a common weapon-firing abstraction so beam and projectile implementations could be treated as weapons and instantiated independently at runtime."
+        ]
+      },
+      {
+        "title": "Customer Operations Architecture",
+        "paragraphs": [
+          "The large AngularJS architecture diagram shown in the portfolio documents the Customer Operations, Sales & Usage Analytics Platform.",
+          "It was used to map the relationships across the application's AngularJS, service, data and operational layers."
+        ]
+      },
+      {
+        "title": "Kingdom Earth Event-Driven Flow",
+        "paragraphs": [
+          "The 'Move Player One Space' diagram came from an unfinished RPG prototype called Kingdom Earth built on MicroGen/C.E.L.L.",
+          "It maps player input, movement, event dispatch, listeners, map logic, state persistence and navigation outcomes around the engine's event dispatcher."
+        ]
+      },
+      {
+        "title": "Influence on C.E.L.L.",
+        "paragraphs": [
+          "During Kingdom Earth development, one collaborator strongly preferred an event-driven architecture.",
+          "That work led me to add an Event Dispatcher into C.E.L.L., making event-based coordination available as a reusable engine capability."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/doc/uml.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/doc/uml.jpg"
+    },
+
     "items": [
       {
         "type": "image",
@@ -38,20 +181,67 @@
         "type": "image",
         "src": "images/skills/doc/doc_1.jpg"
       }
-    ],
-    "thumbnail": "images/skills/doc/uml.jpg",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/doc/uml.jpg"
-    }
+    ]
   },
-  "descriptionHtml": "I find UML style documentation to be a highly affect tool when designing projects, retaining a reference, reverse engineering for refactoring or debugging, as well as learning or teaching an application's structure.<br><br> The images bellow show diagrams I created of 3DForge's weapons firing for both beam and projectile weapons.  Since they decided to create a singleton to fire all weapons in the game, it was extremely difficult for me to work with multiple weapons.  Thus, I refactored their code into the 3rd diagram. This not only removes the singleton and allows me to instantiate new weapons on the fly, but it also combines the beams and projectiles as just weapons.",
+
   "meta": {
-    "legacySubtitle": "Visio, Paper, Photoshop",
-    "legacyMobileText": "I find UML style documentation to be a highly affect tool when designing projects, retaining a reference, reverse engineering for refactoring or debugging... <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+    "historicalNotes": [
+      "The legacy portfolio card was titled simply 'UML'.",
+      "UML and architecture diagrams were a standard engineering practice across both Essential Skills and Square Particle rather than a single project.",
+      "Jamie estimates that he and the teams working with him created hundreds of architecture diagrams over the years.",
+      "Media included paper, whiteboards, Visio, Photoshop, Lucidchart and other diagramming tools.",
+      "Jamie completed a week-long UML course through Sun Microsystems.",
+      "Jamie's working philosophy was to follow useful UML conventions while prioritizing shared understanding and rapid comprehension by the engineering team.",
+      "The diagrams were used by developers with university backgrounds, senior developers, contractors, a developer with a PhD in computer science, and Jamie's former Sun Microsystems manager/mentor.",
+      "Architecture diagrams were frequently used when teaching and onboarding new developers.",
+      "For complex production systems such as Hydra-Gen, Jamie routinely created several different views of the same architecture rather than forcing every concern into one diagram.",
+      "The large AngularJS diagram in the media represents the Customer Operations, Sales & Usage Analytics Platform.",
+      "The 'Move Player One Space' diagram belongs to an unfinished RPG called Kingdom Earth.",
+      "Kingdom Earth used MicroGen/C.E.L.L.",
+      "A collaborator on Kingdom Earth advocated for a strongly event-driven design, which contributed to Jamie adding an Event Dispatcher to C.E.L.L.",
+      "Kingdom Earth is intentionally not maintained as a separate public portfolio card because the portfolio already contains many unfinished game projects.",
+      "The 3DForge diagrams document reverse engineering and refactoring of a weapon-firing system from separate singleton-based beam/projectile paths into a reusable weapon abstraction."
+    ],
+
+    "confidence": {
+      "umlUsedRegularly": "high",
+      "essentialSkillsUsage": "high",
+      "squareParticleUsage": "high",
+      "hundredsOfDiagrams": "high",
+      "sunMicrosystemsUmlCourse": "high",
+      "teamWideConsumption": "high",
+      "newHireTrainingUse": "high",
+      "visio": "high",
+      "lucidchart": "high",
+      "photoshop": "high",
+      "whiteboardUse": "high",
+      "paperUse": "high",
+      "hydraGenMultipleArchitectureViews": "high",
+      "customerOperationsDiagram": "high",
+      "kingdomEarthDiagram": "high",
+      "kingdomEarthUsedCellMicroGen": "high",
+      "kingdomEarthInfluencedCellEventDispatcher": "high",
+      "threeDForgeReverseEngineeringExample": "high"
+    },
+
+    "projectTerminology": [
+      "UML",
+      "Architecture Documentation",
+      "Event Dispatcher",
+      "Hydra-Gen",
+      "C.E.L.L.",
+      "MicroGen",
+      "Kingdom Earth",
+      "3DForge",
+      "WeaponFire",
+      "Customer Operations, Sales & Usage Analytics Platform"
+    ],
+
     "provenance": {
       "legacyCategory": "Doc",
-      "legacyIndex": 1
+      "legacyIndex": 1,
+      "legacyTitle": "UML",
+      "legacySubtitle": "Visio, Paper, Photoshop"
     }
   }
 }

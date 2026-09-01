@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 2,
+  "id": "essentialskills/docs/technical-knowledge-base",
+  "title": "Internal Technical Knowledge & Research Base",
+  "project": "Technical Knowledge Base",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Internal Documentation",
+      "Technical Knowledge Base",
+      "Research Library"
+    ]
+  },
+
+  "technologies": [
+    "WordPress",
+    "PHP",
+    "MySQL",
+    "Ubuntu",
+    "AWS EC2",
+    "Prism Syntax Highlighter",
+    "Custom Sidebars",
+    "Media Library",
+    "TablePress"
+  ],
+
+  "date": {
+    "from": "2020",
+    "to": null,
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Technical Research & Documentation Lead",
+    "total": 1,
+    "contributors": []
+  },
+
+  "roles": [
+    "Technical Research Lead",
+    "Documentation Author",
+    "Knowledge Base Administrator",
+    "WordPress Administrator",
+    "Linux Server Administrator",
+    "Database Administrator",
+    "Technical Mentor"
+  ],
+
+  "description": "I created and maintained a private internal technical knowledge base for Essential Skills using WordPress on AWS. I used it to continuously research emerging development practices, languages, frameworks and infrastructure technologies, document what I learned, evaluate whether those technologies were appropriate for our production systems, and then transfer that knowledge to the other developers and support staff.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Continuous Technical Research",
+        "paragraphs": [
+          "A major purpose of the knowledge base was to keep our development practices current as web and software technologies changed.",
+          "I would research and learn unfamiliar technologies first, document what I discovered, evaluate whether they made sense for Essential Skills, and then teach or introduce the useful concepts to the rest of the development team."
+        ],
+        "items": [
+          "Framework evaluation",
+          "Architecture research",
+          "Programming techniques",
+          "Infrastructure research",
+          "Development practices",
+          "Technical reference material"
+        ]
+      },
+      {
+        "title": "Research Topics",
+        "paragraphs": [
+          "The knowledge base accumulated research and technical documentation across the technologies and architectural approaches we were evaluating at the time."
+        ],
+        "items": [
+          "Functional programming",
+          "React",
+          "Redux",
+          "Django",
+          "Docker",
+          "TypeScript",
+          "Web development",
+          "Server and deployment technologies"
+        ]
+      },
+      {
+        "title": "Internal Knowledge Sharing",
+        "paragraphs": [
+          "The site was used by both the development team and support staff.",
+          "I authored most of the material. Other employees would occasionally find useful information or resources and pass them to me to evaluate and add to the knowledge base."
+        ]
+      },
+      {
+        "title": "Documentation Platform",
+        "paragraphs": [
+          "I configured WordPress as an internal technical documentation system rather than as a conventional public blog."
+        ],
+        "items": [
+          "Syntax-highlighted source examples",
+          "Structured navigation and sidebars",
+          "Images and technical diagrams",
+          "Reference tables",
+          "Programming guides",
+          "Technical research notes"
+        ]
+      },
+      {
+        "title": "Infrastructure & Administration",
+        "paragraphs": [
+          "I provisioned and administered the underlying AWS/Linux environment in addition to configuring WordPress itself."
+        ],
+        "items": [
+          "AWS EC2",
+          "Ubuntu",
+          "Web server configuration",
+          "PHP",
+          "MySQL",
+          "WordPress installation",
+          "WordPress upgrades",
+          "Plugin management",
+          "Backups"
+        ]
+      },
+      {
+        "title": "Private Internal Access",
+        "paragraphs": [
+          "The knowledge base was kept private for internal company use.",
+          "The exact access-control configuration is no longer certain; during this period I used approaches including application authentication and restricting EC2 services to company IP addresses."
+        ]
+      },
+      {
+        "title": "Active Research Period",
+        "paragraphs": [
+          "During its active period I added research and documentation frequently, often adding material daily for months.",
+          "Use declined later as the company development team became smaller and the need for a shared internal research library decreased."
+        ]
+      },
+      {
+        "title": "Learning Before Leading",
+        "paragraphs": [
+          "The knowledge base reflected my normal approach to technical leadership: learn and test a technology myself before deciding whether it should enter the production stack or teaching it to other developers."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/doc/wordpress.gif",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/doc/wordpress.gif"
+    },
+    "items": []
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The legacy portfolio card was titled simply 'Wordpress', but WordPress was the implementation technology rather than the primary purpose of the project.",
+      "The system was an internal Essential Skills technical knowledge base and research library.",
+      "Jamie authored most of the material; coworkers occasionally supplied useful material for Jamie to review and add.",
+      "Primary users included developers and support staff.",
+      "Jamie provisioned and administered the EC2/Ubuntu, web-server, PHP, MySQL and WordPress environment.",
+      "Jamie does not remember whether this particular installation used Apache or NGINX, so neither web server should be claimed specifically on the public card.",
+      "Jamie separately configured another WordPress server environment for an outside company that converted Essential Skills' main Drupal website to WordPress.",
+      "Jamie did not create the preceding Drupal storefront.",
+      "Jamie had stopped being the primary developer of the Essential Skills public storefront after the earlier ASP.NET generation.",
+      "The knowledge base was private. Exact access control is uncertain; it may have used WordPress authentication or EC2/network access restricted to the Essential Skills business IP.",
+      "Jamie added documentation frequently, often daily for months during the active period.",
+      "The site eventually fell out of use as the company development team became smaller due to financial constraints.",
+      "Exact article/page count is unknown.",
+      "Exact retirement date is unknown."
+    ],
+
+    "confidence": {
+      "essentialSkillsProject": "high",
+      "internalKnowledgeBase": "high",
+      "wordpress": "high",
+      "awsEc2": "high",
+      "ubuntu": "high",
+      "php": "high",
+      "mysql": "high",
+      "wordpressAdministration": "high",
+      "serverAdministration": "high",
+      "privateInternalAccess": "high",
+      "exactAccessControlMethod": "low",
+      "apacheOrNginx": "uncertain",
+      "primarilyAuthoredByJamie": "high",
+      "developerUsers": "high",
+      "supportUsers": "high",
+      "continuousTechnologyResearch": "high",
+      "technicalMentoringPurpose": "high",
+      "exactContentCount": "low",
+      "exactEndDate": "low"
+    },
+
+    "projectTerminology": [
+      "Technical Knowledge Base",
+      "WordPress",
+      "Prism Syntax Highlighter",
+      "Custom Sidebars",
+      "Media Library",
+      "TablePress"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Doc",
+      "legacyIndex": 0,
+      "legacyTitle": "Wordpress"
+    }
+  }
+}

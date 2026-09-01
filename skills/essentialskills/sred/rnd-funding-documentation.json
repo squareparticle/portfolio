@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 2,
+  "id": "essentialskills/sred/rnd-funding-documentation",
+  "title": "SR&ED & OIDMTC R&D Funding Documentation",
+  "project": "R&D Funding & Compliance",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "R&D Documentation",
+      "Technical Writing",
+      "Funding & Compliance",
+      "Technical Program Management"
+    ]
+  },
+
+  "technologies": [
+    "SR&ED",
+    "OIDMTC",
+    "GitHub",
+    "Asana"
+  ],
+
+  "date": {
+    "from": "2001",
+    "to": "2025",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Technical R&D Documentation Lead",
+    "total": null,
+    "contributors": []
+  },
+
+  "roles": [
+    "R&D Documentation Lead",
+    "Technical Writer",
+    "Technical Program Manager",
+    "Engineering Manager",
+    "Funding & Compliance Liaison"
+  ],
+
+  "description": "From 2001 through 2025, I was the primary technical owner for Essential Skills' SR&ED and OIDMTC documentation. I helped prepare early claims, then took full ownership of the process before an external specialist was brought in. After outsourcing, I remained the technical point person: selecting qualifying projects, preparing first drafts, documenting technical uncertainty, experimentation and advancement, maintaining supporting evidence, and supplying the technical content used by the external firm.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "SR&ED Responsibility",
+        "paragraphs": [
+          "I began helping with SR&ED documentation from 2001 to 2003 and took full ownership of the process from 2004 to 2009.",
+          "During that period I wrote the claims myself and was responsible for the complete technical documentation."
+        ]
+      },
+      {
+        "title": "Full Claim Ownership",
+        "paragraphs": [
+          "I identified which development projects were appropriate to claim and wrote the technical narratives around the work."
+        ],
+        "items": [
+          "Technological uncertainty",
+          "Experimental development",
+          "Approaches attempted",
+          "Failures and iteration",
+          "Technological advancement",
+          "Supporting technical evidence",
+          "Project scope and chronology"
+        ]
+      },
+      {
+        "title": "Engineering Financial Tracking",
+        "paragraphs": [
+          "I was also involved in the financial side for the technical department so the claims could be supported by accurate engineering effort and cost information."
+        ],
+        "items": [
+          "Development time tracking",
+          "Timesheets",
+          "Salary-related engineering costs",
+          "Contractor costs",
+          "Project cost tracking"
+        ]
+      },
+      {
+        "title": "External SR&ED Specialists",
+        "paragraphs": [
+          "Around 2009, Essential Skills brought in an external specialist because preparing the claims was taking too much time away from software development.",
+          "The work was outsourced, but the technical ownership was not. I continued selecting the projects, preparing the initial technical drafts and working directly with the external firm."
+        ]
+      },
+      {
+        "title": "Primary Technical Contact",
+        "paragraphs": [
+          "After the external firm became involved, I was their main technical point of contact through 2025.",
+          "I remained the primary source of the technical content while the outside specialists refined the submission and handled the broader filing process."
+        ]
+      },
+      {
+        "title": "OIDMTC",
+        "paragraphs": [
+          "We also used Ontario Interactive Digital Media Tax Credit documentation when it was a better fit for the work than SR&ED.",
+          "For OIDMTC I identified the applicable projects and assembled the technical claims and supporting evidence, while the external firm handled the remaining filing paperwork."
+        ]
+      },
+      {
+        "title": "Choosing the Appropriate Program",
+        "paragraphs": [
+          "Over the years we moved between SR&ED and OIDMTC depending on the nature of the work and which program best matched the qualifying development activity."
+        ]
+      },
+      {
+        "title": "Continuous Evidence Collection",
+        "paragraphs": [
+          "I did not wait until filing time to reconstruct the history of a project. Supporting evidence was maintained continuously throughout development."
+        ],
+        "items": [
+          "GitHub history",
+          "Asana records",
+          "Internal project-management records",
+          "Weekly technical email logs sent to a dedicated SR&ED account",
+          "Developer notes and project documentation"
+        ]
+      },
+      {
+        "title": "Engineering Team Coordination",
+        "paragraphs": [
+          "Before the external firm was involved, I worked with ownership and the development team to gather the information needed for each claim, but responsibility for producing the final technical submission rested with me.",
+          "After outsourcing, the technical relationship was primarily between me and the specialist firm, while ownership supplied the broader financial information they required."
+        ]
+      },
+      {
+        "title": "Claims & Reviews",
+        "paragraphs": [
+          "The claims I prepared were accepted without significant difficulty.",
+          "Across the full period there were two government reviews/audits. The first occurred during the early years of the program, and another occurred much later on a relatively small claim prepared with the external firm. Both ultimately proceeded successfully."
+        ]
+      },
+      {
+        "title": "Broad R&D Coverage",
+        "paragraphs": [
+          "The work covered a wide range of Essential Skills research and development efforts rather than a single product or technology.",
+          "Claims drew from software architecture, learning platforms, rendering and engine work, databases, cloud systems, authoring systems, web platforms and other areas where genuine technical uncertainty and experimental development occurred."
+        ]
+      },
+      {
+        "title": "R&D Leadership, Not Just Paperwork",
+        "paragraphs": [
+          "The value of the work was not simply completing government forms. It required understanding the engineering deeply enough to identify genuine experimental development, distinguish routine implementation from technological uncertainty, preserve evidence, explain the work clearly, and connect months or years of development activity into a defensible technical narrative."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/doc/doc_1.png",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/doc/doc_1.png"
+    },
+    "items": []
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The legacy portfolio card was titled 'Taxes and Grants' and significantly understated the duration and technical ownership of this work.",
+      "Jamie helped write SR&ED claims from 2001 to 2003.",
+      "Jamie took full ownership of the SR&ED documentation process from 2004 through approximately 2009.",
+      "An external specialist firm was brought in around 2009 because preparing claims was consuming development time.",
+      "Jamie remained the primary technical point person with the external firm through 2025.",
+      "Jamie continued selecting qualifying projects and writing the initial technical drafts after outsourcing.",
+      "Jamie was the primary source of technical content supplied to the external firm.",
+      "Jamie handled technical-department cost tracking, including timesheets, salaries and contractor costs, before external specialists became involved.",
+      "Ownership supplied broader financial information directly to the external firm after outsourcing.",
+      "Jamie was responsible for identifying technological uncertainty, experimentation, failures, iteration, technological advancement and supporting evidence.",
+      "Jamie selected the projects to claim rather than having the projects selected for him by accountants or ownership.",
+      "Supporting evidence was collected continuously through GitHub, Asana, internal project-management records and weekly emails to a dedicated SR&ED account.",
+      "Jamie did not normally need to reconstruct project history retrospectively because technical activity was documented as development occurred.",
+      "Essential Skills alternated between SR&ED and OIDMTC when appropriate to the work.",
+      "For OIDMTC, Jamie selected the projects and assembled the technical claims and supporting evidence while the external firm handled the remaining filing paperwork.",
+      "Jamie reports that all claims he prepared were accepted without significant trouble.",
+      "There were two government audits/reviews across the period; both ultimately proceeded successfully.",
+      "One later review involved a relatively small claim for a year with limited SR&ED activity and reinforced the decision not to pursue marginal claims.",
+      "Detailed claim contents, financial amounts, salary information, contractor costs and confidential company evidence should not be published in the portfolio.",
+      "The public portfolio should describe responsibility, process and outcomes at a high level rather than reproducing confidential SR&ED or OIDMTC submissions."
+    ],
+
+    "confidence": {
+      "start2001": "high",
+      "fullOwnershipFrom2004": "high",
+      "outsourcedAround2009": "high",
+      "continuedThrough2025": "high",
+      "primaryTechnicalContact": "high",
+      "selectedQualifyingProjects": "high",
+      "wroteCompleteClaimsBeforeOutsourcing": "high",
+      "wroteFirstDraftsAfterOutsourcing": "high",
+      "technicalUncertaintyDocumentation": "high",
+      "experimentalDevelopmentDocumentation": "high",
+      "advancementDocumentation": "high",
+      "supportingEvidenceOwnership": "high",
+      "engineeringCostTracking": "high",
+      "timesheetTracking": "high",
+      "salaryCostTracking": "high",
+      "contractorCostTracking": "high",
+      "gitHubEvidence": "high",
+      "asanaEvidence": "high",
+      "weeklySredEmailLogs": "high",
+      "oidmtcResponsibility": "high",
+      "twoGovernmentReviews": "high",
+      "claimsAccepted": "high"
+    },
+
+    "projectTerminology": [
+      "SR&ED",
+      "Scientific Research and Experimental Development",
+      "OIDMTC",
+      "Ontario Interactive Digital Media Tax Credit",
+      "Technological Uncertainty",
+      "Experimental Development",
+      "Technological Advancement",
+      "Supporting Evidence"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Doc",
+      "legacyIndex": 2,
+      "legacyTitle": "Taxes and Grants",
+      "legacySubtitle": "SR&ED, OMDC"
+    }
+  }
+}
