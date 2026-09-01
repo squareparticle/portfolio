@@ -1,42 +1,218 @@
 {
   "schemaVersion": 2,
   "id": "squareparticle/game-jams/molyjam-2012",
-  "title": "Molly Jam (2012)",
+  "title": "MolyJam 2012: Escape from Mirror Mansion",
   "project": "Game Jams",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Game"
+      "Game Jam",
+      "2D Action Game"
     ]
   },
+
   "technologies": [
     "Java",
-    "C.E.L.L. Theme (Only see enemies in the mirrors"
+    "C.E.L.L.",
+    "C.E.L.L. Visual Editor"
   ],
+
   "date": {
     "from": "2012",
     "to": "2012",
-    "display": false
+    "display": true
   },
-  "description": "Escape from Mirror Mansion was mentioned in an article on the Wired Magazine's mobile site. The theme I choose for this game was \"Only see enemies in the mirrors.\"",
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Solo Developer",
+    "total": 1,
+    "contributors": []
+  },
+
+  "roles": [
+    "Game Designer",
+    "Gameplay Programmer",
+    "Engine Developer",
+    "Level Designer",
+    "Artist"
+  ],
+
+  "description": "For the 48-hour worldwide MolyJam 2012, I created Escape from Mirror Mansion as a solo Java game using my C.E.L.L. engine and visual editor. The central mechanic was that ghosts could only be seen in mirrors, forcing the player to navigate and fight threats that were invisible in normal view. I completed and uploaded the game within the jam deadline, and it was later included in Wired's online/mobile MolyJam coverage.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "48-Hour Solo Game Jam",
+        "paragraphs": [
+          "I participated remotely from home in the worldwide MolyJam 2012 event and completed the game as a solo developer within the 48-hour deadline."
+        ],
+        "items": [
+          "Game design",
+          "Programming",
+          "Level design",
+          "Artwork",
+          "Submission and packaging"
+        ]
+      },
+      {
+        "title": "Mirror-Only Enemy Mechanic",
+        "paragraphs": [
+          "The game was built around the theme 'Only see enemies in the mirrors.'",
+          "Ghosts were invisible in the normal game view and became visible only when they appeared inside mirrors placed throughout the mansion."
+        ]
+      },
+      {
+        "title": "Ghost Behaviors",
+        "paragraphs": [
+          "I created three ghost types with distinct behaviors so the mirror mechanic affected both navigation and combat."
+        ],
+        "items": [
+          "Green ghosts: stationary obstacles",
+          "Yellow ghosts: moved vertically",
+          "Red ghosts: actively attacked the player"
+        ]
+      },
+      {
+        "title": "Combat",
+        "paragraphs": [
+          "The player could jump over threats or fire energy plasma at the ghosts.",
+          "The plasma attack used the same energy concept as the ghosts, so the projectile itself was also only visible in mirrors."
+        ]
+      },
+      {
+        "title": "C.E.L.L. Engine",
+        "paragraphs": [
+          "The game was built entirely in my C.E.L.L. engine rather than in a third-party game engine.",
+          "The project used C.E.L.L.'s reusable runtime systems for gameplay, rendering, input, entities, collision and level execution."
+        ]
+      },
+      {
+        "title": "Visual Level Authoring",
+        "paragraphs": [
+          "I built the mansion level using the C.E.L.L. Visual Editor, allowing the level layout and game objects to be authored visually rather than entirely through hand-coded placement."
+        ]
+      },
+      {
+        "title": "Original Art",
+        "paragraphs": [
+          "I created the game's visual artwork myself for the jam."
+        ],
+        "items": [
+          "Player character",
+          "Ghosts",
+          "Mansion environment",
+          "Mirrors",
+          "Interface artwork"
+        ]
+      },
+      {
+        "title": "Audio",
+        "paragraphs": [
+          "The game reused existing Square Particle audio assets rather than relying on newly composed jam-specific music or sound."
+        ]
+      },
+      {
+        "title": "Completed on Deadline",
+        "paragraphs": [
+          "Escape from Mirror Mansion was finished and uploaded in time for the MolyJam deadline."
+        ]
+      },
+      {
+        "title": "Wired Online Coverage",
+        "paragraphs": [
+          "After the jam, two Wired staff members contacted me while preparing upcoming MolyJam coverage.",
+          "The completed game was subsequently included in Wired's online/mobile coverage of the event."
+        ]
+      },
+      {
+        "title": "Game Jam Lineage",
+        "paragraphs": [
+          "This was the 2012 MolyJam project and should not be confused with my separate MolyJam 2013 voxel-based game, which was built the following year."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/jams/molly1.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/jams/molly1.jpg"
+    },
+
     "items": [
       {
         "type": "embed",
         "src": "//www.youtube.com/embed/PbdGYPc9oEE?rel=0"
       }
-    ],
-    "thumbnail": "images/skills/jams/molly1.jpg",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/jams/molly1.jpg"
-    }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "Java 1.5, C.E.L.L. Theme (Only see enemies in the mirrors)",
+    "historicalNotes": [
+      "The legacy portfolio card was titled 'Molly Jam (2012)', but the event name is MolyJam with one 'l'.",
+      "The game title was Escape from Mirror Mansion.",
+      "Jamie participated remotely from home in the worldwide MolyJam 2012 event.",
+      "The game was created solo.",
+      "The jam duration was 48 hours.",
+      "The theme chosen for the game was 'Only see enemies in the mirrors.'",
+      "Ghosts were visible only in mirrors.",
+      "Green ghosts were stationary blockers.",
+      "Yellow ghosts moved vertically.",
+      "Red ghosts actively attacked the player.",
+      "The player could jump and fire plasma attacks.",
+      "The plasma attack was also visible only in mirrors because it used the same fictional energy concept as the ghosts.",
+      "The game was built entirely in C.E.L.L.",
+      "Jamie used the C.E.L.L. Visual Editor to author the level.",
+      "Jamie created all visual artwork for the game.",
+      "Audio appears to have reused prior Square Particle assets; exact audio authorship is uncertain and should not be attributed solely to Jamie.",
+      "The game was completed and uploaded before the jam deadline.",
+      "Jamie retains email correspondence showing that two Wired staff members independently contacted him on September 21, 2012 while preparing MolyJam coverage.",
+      "Jamie later saw the game included in Wired's online/mobile coverage rather than the print magazine.",
+      "The Wired correspondence is private provenance and does not need to be published in the portfolio.",
+      "Wired coverage should be treated as a secondary validation rather than the primary focus of the card.",
+      "MolyJam 2013 was a separate voxel-based project and should have its own card."
+    ],
+
+    "confidence": {
+      "molyJam2012": "high",
+      "soloDevelopment": "high",
+      "fortyEightHourJam": "high",
+      "java": "high",
+      "cellEngine": "high",
+      "cellVisualEditor": "high",
+      "mirrorOnlyGhostMechanic": "high",
+      "greenGhostBehavior": "high",
+      "yellowGhostBehavior": "high",
+      "redGhostBehavior": "high",
+      "jumpMechanic": "high",
+      "plasmaAttack": "high",
+      "mirrorOnlyPlasma": "high",
+      "originalArtworkByJamie": "high",
+      "audioReusedFromPriorAssets": "medium",
+      "completedOnTime": "high",
+      "wiredOnlineCoverage": "high",
+      "wiredPrintMagazineCoverage": "low",
+      "wiredEmailProvenance": "high"
+    },
+
+    "projectTerminology": [
+      "MolyJam",
+      "MolyJam 2012",
+      "Escape from Mirror Mansion",
+      "C.E.L.L.",
+      "C.E.L.L. Visual Editor",
+      "Only see enemies in the mirrors"
+    ],
+
     "provenance": {
       "legacyCategory": "Jams",
-      "legacyIndex": 0
+      "legacyIndex": 0,
+      "legacyTitle": "Molly Jam (2012)",
+      "legacySubtitle": "Java 1.5, C.E.L.L. Theme (Only see enemies in the mirrors)"
     }
   }
 }

@@ -1,27 +1,206 @@
 {
   "schemaVersion": 2,
   "id": "squareparticle/game-jams/molyjam-2013",
-  "title": "Molly Jam (2013)",
+  "title": "MolyJam 2013",
   "project": "Game Jams",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Game"
+      "Game Jam",
+      "First-Person Adventure Game",
+      "Voxel Game"
     ]
   },
+
   "technologies": [
     "Java",
     "LWJGL",
-    "Qubicle Theme (Combinded 5 themes"
+    "ShaderBox",
+    "OpenGL",
+    "Qubicle",
+    "Perlin Noise"
   ],
+
   "date": {
     "from": "2013",
     "to": "2013",
-    "display": false
+    "display": true
   },
-  "description": "Rescue the red headed princess from the big bad trolls while looking awesome! This game was based off a few quotes from Peter Molyneux. The quotes I choose where: \"If you go into battle, you could win a ginger-haired person\" \"What do the taps mean ?\" \"Pull the right trigger to see the most interesting thing in the world\" \"Golden acorn\" \"Collect a million gold coins\"",
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Solo Developer / Game Designer",
+    "total": 2,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Character Artist",
+          "Cutscene Artist"
+        ],
+        "relationship": "collaborator",
+        "contribution": "Created the character artwork and still-image cutscene artwork."
+      }
+    ]
+  },
+
+  "roles": [
+    "Game Designer",
+    "Gameplay Programmer",
+    "Engine Developer",
+    "Level Designer",
+    "3D World Designer",
+    "Texture Artist"
+  ],
+
+  "description": "For the 48-hour MolyJam 2013, I built a complete first-person voxel adventure game on my Java/LWJGL ShaderBox engine. The game combined five Peter Molydeux-inspired prompts into a single progression-driven world with sword combat, exploration, collectibles, animated environments, scripted objectives, a giant boss encounter, and a princess rescue. I hand-built the entire voxel level in Qubicle, created the textures, and completed and submitted the game within the jam deadline.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "48-Hour Solo Development",
+        "paragraphs": [
+          "I participated remotely from home through the worldwide MolyJam website, where developers registered, posted progress during the weekend, and submitted completed games for community rating.",
+          "I completed the game within the 48-hour deadline as the sole developer."
+        ]
+      },
+      {
+        "title": "Built on ShaderBox",
+        "paragraphs": [
+          "The game was built directly on my ShaderBox Java/LWJGL 3D engine rather than a commercial game engine.",
+          "ShaderBox provided the underlying 3D rendering, world, camera, model, shader, and voxel systems used by the game."
+        ]
+      },
+      {
+        "title": "Hand-Built Voxel World",
+        "paragraphs": [
+          "I hand-authored the complete game world in Qubicle rather than generating the terrain procedurally.",
+          "The level was designed as a connected adventure space with exterior terrain, water, temples, a mountain interior, lava areas, a castle, and a summit encounter."
+        ]
+      },
+      {
+        "title": "Adventure Progression",
+        "paragraphs": [
+          "The player begins outside the mountain and must explore the world to discover how to gain access to the interior.",
+          "A tap/lever opens the mouth of a giant goblin-head mountain, allowing the player to enter and continue through lava areas, a temple, and a castle before climbing toward the summit."
+        ]
+      },
+      {
+        "title": "Final Rescue",
+        "paragraphs": [
+          "At the top of the mountain, a giant guards the red-haired princess.",
+          "The giant cannot be defeated directly; the player must avoid its crushing attacks long enough to reach and rescue the princess."
+        ]
+      },
+      {
+        "title": "First-Person Combat",
+        "paragraphs": [
+          "The game uses a first-person viewpoint and gives the player a sword for close-range combat.",
+          "Several troll enemy variants populate the level and can be defeated with the sword, while the giant boss functions as an environmental threat rather than a conventional killable enemy."
+        ]
+      },
+      {
+        "title": "Exploration & Optional Areas",
+        "paragraphs": [
+          "The world includes optional and side areas beyond the main rescue path."
+        ],
+        "items": [
+          "A pirate ship located in the water",
+          "Additional coin locations",
+          "A small boat that chases the player around a river",
+          "Cannon fire from the pursuing boat",
+          "A guarded temple containing the golden acorn",
+          "Traps and environmental hazards"
+        ]
+      },
+      {
+        "title": "Five Molydeux Prompts",
+        "paragraphs": [
+          "The game intentionally combined five separate Molydeux-style prompts into one playable adventure rather than treating them as unrelated jokes."
+        ]
+      },
+      {
+        "title": "Win a Ginger-Haired Person",
+        "paragraphs": [
+          "The prompt about going into battle and winning a ginger-haired person became the main objective: surviving the journey and rescuing the red-haired princess."
+        ]
+      },
+      {
+        "title": "What Do the Taps Mean?",
+        "paragraphs": [
+          "The tap became a functional progression device.",
+          "Activating it opens the giant goblin-head mountain and gives the player access to the interior portion of the level."
+        ]
+      },
+      {
+        "title": "The Most Interesting Thing in the World",
+        "paragraphs": [
+          "Pulling the appropriate trigger activates the joke associated with the prompt 'see the most interesting thing in the world': an image of Peter Molydeux begins following the player around the game world."
+        ]
+      },
+      {
+        "title": "Golden Acorn",
+        "paragraphs": [
+          "The golden acorn is hidden in a guarded temple.",
+          "After surviving the surrounding traps, the player can collect it and receives a message acknowledging that they survived and may keep the acorn."
+        ]
+      },
+      {
+        "title": "Collect a Million Gold Coins",
+        "paragraphs": [
+          "Coins are distributed throughout the world and are worth 10,000 each.",
+          "Collecting all of the coins and successfully rescuing the princess contributes to a special completion ending."
+        ]
+      },
+      {
+        "title": "Animated Environment",
+        "paragraphs": [
+          "The sky and lava were animated using Perlin-noise-driven effects, adding continuous motion to the voxel environment."
+        ]
+      },
+      {
+        "title": "Artwork",
+        "paragraphs": [
+          "I created the game's textures and environment presentation myself.",
+          "A collaborating artist in Sweden created the character artwork and still-image cutscene artwork."
+        ]
+      },
+      {
+        "title": "Completed Adventure",
+        "paragraphs": [
+          "The final submission was not just a technical voxel demo. It was a complete playable adventure with an opening area, progression gates, interior regions, combat, collectibles, side content, a final boss-avoidance sequence, a rescue objective, and an ending."
+        ]
+      },
+      {
+        "title": "Performance Testing",
+        "paragraphs": [
+          "I also used the completed level as a ShaderBox performance test and demonstrated approximately 50,000 animated red stick-figure characters running inside the world while maintaining smooth performance on 2013-era hardware."
+        ]
+      },
+      {
+        "title": "MolyJam Submission",
+        "paragraphs": [
+          "The game was completed and uploaded to the MolyJam site before the submission deadline.",
+          "The site provided each participant with a dedicated project page for progress updates, final submission, and community ratings."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/jams/molly2.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/jams/molly2.jpg"
+    },
+
     "items": [
+      {
+        "type": "embed",
+        "src": "//www.youtube.com/embed/WIh6rzRBa4o?rel=0"
+      },
       {
         "type": "image",
         "src": "images/skills/jams/voxel_1.gif"
@@ -38,20 +217,109 @@
         "type": "image",
         "src": "images/skills/jams/voxel_4.gif"
       }
-    ],
-    "thumbnail": "images/skills/jams/molly2.jpg",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/jams/molly2.jpg"
-    }
+    ]
   },
-  "descriptionHtml": "Rescue the red headed princess from the big bad trolls while looking awesome! This game was based off a few quotes from Peter Molyneux. The quotes I choose where: <br><br><ul><li>\"If you go into battle, you could win a ginger-haired person\"</li><li>\"What do the taps mean ?\"</li><li>\"Pull the right trigger to see the most interesting thing in the world\"</li><li>\"Golden acorn\"</li><li>\"Collect a million gold coins\"</li></ui>",
+
   "meta": {
-    "legacySubtitle": "Java 1.5, LWJGL, Qubicle Theme (Combinded 5 themes)",
-    "legacyMobileText": "Rescue the red headed princess from the big bad trolls while looking awesome! This game was based off a few quotes from Peter Molyneux. The quotes I choose where: <a class=\"readmorelink\" onclick=\"readmore('$READMORE')\" >Read More</a>",
+    "historicalNotes": [
+      "The legacy portfolio card incorrectly spelled the event 'Molly Jam'; canonical spelling is 'MolyJam'.",
+      "This is the separate 2013 MolyJam project, not Escape from Mirror Mansion from MolyJam 2012.",
+      "The game was built during a 48-hour jam and submitted on time.",
+      "Jamie participated remotely from home through the worldwide MolyJam website.",
+      "Jamie was the sole developer.",
+      "The game was built directly on ShaderBox.",
+      "The level was hand-built in Qubicle rather than procedurally generated.",
+      "The voxel terrain was not destructible or editable during gameplay.",
+      "The game used a first-person perspective.",
+      "The player used a sword for combat.",
+      "There were approximately three troll enemy types.",
+      "The giant guarding the princess could not be killed; touching or being crushed by it killed the player.",
+      "The main progression path included the exterior world, the goblin-head mountain entrance, mountain interior, lava, temple, castle, summit, giant encounter, and princess rescue.",
+      "A pirate ship and river boat encounter provided additional exploration/gameplay.",
+      "The pursuing small boat fired a cannon at the player.",
+      "The tap opened the mouth of the giant goblin-head mountain.",
+      "The Peter Molydeux image-follow mechanic represented the 'most interesting thing in the world' prompt.",
+      "The golden acorn was obtained from a guarded/trapped temple.",
+      "Coins were worth 10,000 each.",
+      "Collecting all coins and rescuing the princess produced a special completion ending.",
+      "The sky and lava used animated Perlin noise.",
+      "Jamie created the game's textures.",
+      "A Swedish collaborating artist created character artwork and still-image cutscene artwork.",
+      "The artist's name is not currently recovered.",
+      "The complete gameplay video is available on YouTube and is stronger evidence of project scope than screenshots alone.",
+      "Jamie also demonstrated approximately 50,000 animated red stick figures inside the completed level as a ShaderBox performance test.",
+      "The exact hardware and measured frame rate for the 50,000-character test should not be claimed unless recovered from the original performance media.",
+      "This project is not the CaveGen game jam; CaveGen belongs to a separate upcoming card.",
+      "The original legacy wording 'Combined 5 themes' referred to combining five Molydeux quotes/prompts into one game."
+    ],
+
+    "confidence": {
+      "molyJam2013": "high",
+      "fortyEightHourJam": "high",
+      "soloDeveloper": "high",
+      "remoteWorldwideSubmission": "high",
+
+      "shaderBox": "high",
+      "java": "high",
+      "lwjgl": "high",
+      "qubicle": "high",
+      "handBuiltVoxelLevel": "high",
+      "nonDestructibleTerrain": "high",
+
+      "firstPersonGameplay": "high",
+      "swordCombat": "high",
+      "threeTrollTypesApproximate": "medium",
+      "giantBossUnkillable": "high",
+
+      "mountainProgression": "high",
+      "goblinHeadEntrance": "high",
+      "castleInterior": "high",
+      "temple": "high",
+      "lava": "high",
+      "pirateShip": "high",
+      "riverBoatCannon": "high",
+
+      "fiveMolydeuxPrompts": "high",
+      "tapMechanic": "high",
+      "molydeuxFollowerMechanic": "high",
+      "goldenAcorn": "high",
+      "coinsWorth10000": "high",
+      "specialCompletionEnding": "high",
+
+      "perlinNoiseSky": "high",
+      "perlinNoiseLava": "high",
+
+      "texturesByJamie": "high",
+      "characterArtistContributor": "high",
+      "cutsceneArtistContributor": "high",
+      "artistName": "low",
+
+      "completedOnTime": "high",
+      "gameplayVideo": "high",
+
+      "fiftyThousandAnimatedCharacters": "high",
+      "performanceTestExactFrameRate": "low",
+
+      "separateFromCaveGen": "high"
+    },
+
+    "projectTerminology": [
+      "MolyJam",
+      "MolyJam 2013",
+      "ShaderBox",
+      "cell3d",
+      "Qubicle",
+      "LWJGL",
+      "Peter Molydeux",
+      "Golden Acorn",
+      "Goblin Head Mountain"
+    ],
+
     "provenance": {
       "legacyCategory": "Jams",
-      "legacyIndex": 1
+      "legacyIndex": 1,
+      "legacyTitle": "Molly Jam (2013)",
+      "legacySubtitle": "Java 1.5, LWJGL, Qubicle Theme (Combinded 5 themes)"
     }
   }
 }
