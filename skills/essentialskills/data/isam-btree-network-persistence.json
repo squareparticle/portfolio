@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 2,
+  "id": "essentialskills/data/isam-btree-network-persistence",
+  "title": "Custom ISAM BTree Database & Network Persistence",
+  "project": "SE → Hydra-Gen Persistence",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Persistence Architecture",
+      "Embedded Database",
+      "Networked File Database"
+    ]
+  },
+
+  "technologies": [
+    "Java",
+    "JNI",
+    "C++",
+    "ISAM",
+    "BTree",
+    "Binary File Storage",
+    "File Locking",
+    "Berkeley DB",
+    "SQL Server"
+  ],
+
+  "date": {
+    "from": "2001",
+    "to": "2014",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Database Architect / Developer",
+    "total": 3,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Architecture Consultant"
+        ],
+        "relationship": "contractor",
+        "contribution": "Provided architecture and implementation consultation during development of the custom database."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Original Product Designer"
+        ],
+        "relationship": "employee",
+        "contribution": "The original Version 1 designer, later working part-time, provided domain and architectural consultation."
+      }
+    ]
+  },
+
+  "roles": [
+    "Database Architect",
+    "Database Developer",
+    "Persistence Architect",
+    "Concurrency Developer",
+    "Cross-Platform Systems Developer"
+  ],
+
+  "description": "I designed and implemented a custom ISAM BTree database used across the SE through Hydra-Gen generation of the Essential Skills suite, ultimately supporting 60+ production programs. The system could run locally on a workstation or from a shared school file server, allowing teachers and students to work concurrently without requiring a dedicated database server. I built the BTree storage engine, binary record format, indexing, partitioning, locking, retry and recovery architecture, and later integrated the persistence model into Hydra-Gen's broader multi-backend database framework.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Production Database for 60+ Programs",
+        "paragraphs": [
+          "The custom ISAM database became part of the core persistence architecture used throughout the SE to Hydra-Gen product lineage rather than remaining an isolated database experiment.",
+          "It ultimately supported more than 60 Essential Skills production programs."
+        ]
+      },
+      {
+        "title": "Built for Real School Infrastructure",
+        "paragraphs": [
+          "Many schools had shared file servers but did not have dedicated SQL or application servers available for educational software.",
+          "The persistence layer was therefore designed to work using infrastructure schools already had, with both local-workstation and shared-file-server deployment modes."
+        ]
+      },
+      {
+        "title": "Local Workstation Mode",
+        "paragraphs": [
+          "Schools could keep persistence entirely on an individual workstation for simple deployment and fast access."
+        ],
+        "items": [
+          "No dedicated database server required",
+          "Local student data",
+          "Local marks where appropriate",
+          "Local reward/star state"
+        ]
+      },
+      {
+        "title": "Shared Network File-Server Mode",
+        "paragraphs": [
+          "The network version placed the persistence files on a shared school file server.",
+          "Teachers could modify students, assignments and reports while students were simultaneously using the learning programs."
+        ]
+      },
+      {
+        "title": "Filesystem Partitioning",
+        "paragraphs": [
+          "Rather than forcing every user through one monolithic shared database, I partitioned persistence through the filesystem to reduce contention.",
+          "Student and teacher data could be separated into individual database areas while only genuinely shared information required coordinated write locking."
+        ],
+        "items": [
+          "Per-student persistence",
+          "Per-teacher persistence",
+          "Shared marks/reporting data",
+          "Reduced contention between unrelated users"
+        ]
+      },
+      {
+        "title": "Custom BTree Storage Engine",
+        "paragraphs": [
+          "I implemented the BTree storage engine myself rather than wrapping an existing database library.",
+          "The recovered source confirms a disk-backed BTree with binary records and indexes."
+        ],
+        "items": [
+          "Fixed-size BTree index nodes",
+          "Recursive BTree insertion",
+          "Node splitting",
+          "Median-key promotion",
+          "New-root creation",
+          "Composite indexes",
+          "Partial-key lookup",
+          "Logical deletion",
+          "Index checking",
+          "Index rebuild"
+        ]
+      },
+      {
+        "title": "Binary Record Storage",
+        "paragraphs": [
+          "Logical tables used binary record and index files rather than serialized Java object graphs."
+        ],
+        "items": [
+          "Variable-length records",
+          "Leading and trailing record-size metadata",
+          "Record relocation when updated data no longer fit in place",
+          "Logical deletion markers",
+          "Binary entity serialization",
+          "Separate data and index files"
+        ]
+      },
+      {
+        "title": "On-Disk File Structure",
+        "paragraphs": [
+          "The recovered implementation stores table data and indexes in separate files and reserves metadata space for index definitions."
+        ],
+        "items": [
+          ".rec record files",
+          ".ind BTree index files",
+          ".lck lock files",
+          "512-byte BTree nodes",
+          "Reserved record-file header space for index definitions"
+        ]
+      },
+      {
+        "title": "Composite & Partial-Key Indexing",
+        "paragraphs": [
+          "Indexes could be built from multiple ordered key parts rather than only single primitive keys.",
+          "The engine also supported partial-key matching, which allowed application-specific lookup patterns without scanning the entire record set."
+        ]
+      },
+      {
+        "title": "Record Update & Relocation",
+        "paragraphs": [
+          "When an updated record still fit in its existing space it could be rewritten in place.",
+          "When it grew beyond the available space, the engine could append the replacement record and leave relocation information behind."
+        ]
+      },
+      {
+        "title": "Concurrency & File Locking",
+        "paragraphs": [
+          "The network generation used native/JNI support and filesystem locking behavior to coordinate writes across workstations.",
+          "Filesystem permissions and lock files were used as part of the locking strategy."
+        ]
+      },
+      {
+        "title": "Retry & Timeout Strategy",
+        "paragraphs": [
+          "When another workstation held a required lock, the application retried the operation approximately every half second.",
+          "If the lock could not be obtained after roughly 30 seconds, the operation failed with an error rather than hanging indefinitely."
+        ]
+      },
+      {
+        "title": "Stale-Lock Recovery",
+        "paragraphs": [
+          "Network failures or abnormal shutdowns could occasionally leave stale locking state.",
+          "Teachers or administrators had access to a recovery utility that could flush/reset the lock state and allow normal operation to continue."
+        ]
+      },
+      {
+        "title": "Different Historical Generations",
+        "paragraphs": [
+          "A recovered SmartDB-era copy contains a Java RandomAccessFile version of the ISAM engine where older native locking hooks remain but are disabled.",
+          "This appears to represent a different generation or deployment configuration from the earlier network-file-server implementation that used JNI/native locking."
+        ]
+      },
+      {
+        "title": "Hydra-Gen Multi-Backend Evolution",
+        "paragraphs": [
+          "The custom ISAM engine later became one backend within Hydra-Gen's broader SmartDB/Rosetta persistence architecture.",
+          "The same application-level persistence concepts were extended to additional database implementations so deployments were not permanently tied to the original ISAM storage engine."
+        ]
+      },
+      {
+        "title": "Later Database Options",
+        "paragraphs": [
+          "Later Hydra-Gen work included additional supported persistence plugins such as Berkeley DB and SQL Server.",
+          "These were supported alternatives within the evolving database architecture, although I do not remember whether any schools actually deployed those particular backends in production."
+        ],
+        "items": [
+          "Custom ISAM BTree",
+          "Berkeley DB",
+          "SQL Server",
+          "Other SmartDB/Rosetta backends documented separately"
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/databases/btree.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/databases/btree.jpg"
+    },
+    "items": []
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The legacy portfolio card described the ISAM BTree as being used by only a few projects, but Jamie later clarified that it became part of the SE through Hydra-Gen persistence architecture and supported 60+ production programs.",
+      "Jamie wrote the custom BTree implementation himself with consultation from the former Sun Microsystems manager/consultant and the original Version 1 product designer.",
+      "The original network generation supported both local-workstation and shared-school-file-server deployment.",
+      "Jamie remembers JNI/native calls being used for cross-platform concurrency and locking in the network version.",
+      "Filesystem permissions and lock files were used for locking.",
+      "Locked write attempts retried approximately every 500 milliseconds and timed out after approximately 30 seconds.",
+      "A teacher/admin utility could reset stale locking state.",
+      "Student and teacher persistence was partitioned through the filesystem to reduce contention.",
+      "Shared marks/reporting information required coordinated locking.",
+      "Some schools could keep marks/stars locally for faster access, with the tradeoff that students needed to return to the same workstation.",
+      "Recovered SmartDB-era source contains a different or later Java-only ISAM implementation where native locking hooks exist historically but active native file I/O/locking is disabled in favor of RandomAccessFile.",
+      "This recovered SmartDB snapshot therefore should not be treated as proof that the earlier JNI/network-locking generation never existed.",
+      "Recovered source confirms a disk-backed BTree implementation with recursive insertion, node splitting, median promotion, root creation, composite indexes, partial-key matching, variable-length records, logical deletion, record relocation, index checking and rebuild facilities.",
+      "Recovered table storage uses .rec, .ind and .lck files.",
+      "Recovered BTree nodes are fixed at approximately 512 bytes.",
+      "Later Hydra-Gen work supported Berkeley DB and SQL Server as additional database plugins based on Jamie's direct recollection of implementing them.",
+      "Berkeley DB and SQL Server should be presented as supported backends, not necessarily as broadly deployed school configurations.",
+      "Jamie does not remember whether any schools actually selected Berkeley DB or SQL Server for production deployments.",
+      "The exact Berkeley DB API/integration generation is not present in the recovered SmartDB snapshot and should be documented if later source is recovered."
+    ],
+
+    "confidence": {
+      "usedAcross60PlusPrograms": "high",
+      "seToHydraGenLineage": "high",
+      "customBTreeAuthorship": "high",
+      "localWorkstationMode": "high",
+      "networkFileServerMode": "high",
+      "studentTeacherPartitioning": "high",
+      "sharedMarksPool": "high",
+      "jniConcurrencyEarlierGeneration": "high",
+      "filesystemPermissionLocking": "high",
+      "lockFileMechanism": "high",
+      "retryEveryHalfSecond": "high",
+      "thirtySecondTimeout": "high",
+      "staleLockRecoveryUtility": "high",
+
+      "btreeDiskImplementation": "high",
+      "fixedSizeBtreeNodes": "high",
+      "recursiveInsertion": "high",
+      "nodeSplitting": "high",
+      "medianPromotion": "high",
+      "newRootCreation": "high",
+      "compositeIndexes": "high",
+      "partialKeyLookup": "high",
+      "variableLengthRecords": "high",
+      "recordRelocation": "high",
+      "logicalDeletion": "high",
+      "indexCheckAndRebuild": "high",
+
+      "berkeleyDbSupportedPlugin": "high",
+      "sqlServerSupportedPlugin": "high",
+      "berkeleyDbSchoolDeployment": "unknown",
+      "sqlServerSchoolDeployment": "unknown",
+      "exactBerkeleyDbImplementation": "unknown"
+    },
+
+    "projectTerminology": [
+      "SE",
+      "Hydra-Gen",
+      "SmartDB",
+      "Rosetta",
+      "ISAM",
+      "BTree",
+      "JNI",
+      "RandomAccessFile",
+      "Shared Marks Pool",
+      "Lock File",
+      "Berkeley DB",
+      "SQL Server"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Databases",
+      "legacyIndex": 0,
+      "legacyTitle": "ISAM BTree",
+      "legacySubtitle": "Java 1.1.8 - 1.6, Hex Editor"
+    }
+  }
+}

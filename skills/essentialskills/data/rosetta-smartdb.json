@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 2,
+  "id": "essentialskills/data/rosetta-smartdb",
+  "title": "Rosetta / SmartDB Multi-Backend Persistence Architecture",
+  "project": "Hydra-Gen",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Persistence Architecture",
+      "Database Abstraction Layer",
+      "Backend Adapter Framework"
+    ]
+  },
+
+  "technologies": [
+    "Java",
+    "Reflection",
+    "JDBC",
+    "AWS SimpleDB",
+    "MySQL",
+    "SQL Server",
+    "Microsoft Access",
+    "Apache Derby",
+    "Berkeley DB",
+    "Custom ISAM BTree",
+    "CSV",
+    "XML"
+  ],
+
+  "date": {
+    "from": "2009",
+    "to": "2014",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Lead Architect / Developer",
+    "total": 3,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Architecture Consultant"
+        ],
+        "relationship": "contractor",
+        "contribution": "Provided architecture and implementation consultation during development of the persistence framework."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Original Product Designer"
+        ],
+        "relationship": "employee",
+        "contribution": "The original Version 1 designer, later working part-time, provided domain and architectural consultation."
+      }
+    ]
+  },
+
+  "roles": [
+    "Lead Architect",
+    "Database Architect",
+    "Persistence Framework Developer",
+    "Backend Integration Developer",
+    "API Designer"
+  ],
+
+  "description": "I designed Rosetta / SmartDB as Hydra-Gen's multi-backend persistence architecture so the application layer could work against a stable domain API while different database implementations handled the actual storage. Deployments could select among cloud, SQL, embedded and file-based backends without rewriting the application's business logic. Over several generations the architecture supported production SimpleDB and custom ISAM storage as well as additional SQL, embedded and lightweight persistence plugins.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "One Application API, Multiple Backends",
+        "paragraphs": [
+          "The central goal was to prevent Hydra-Gen's business and application logic from becoming permanently coupled to one database technology.",
+          "Application code worked through a common persistence API while the selected backend implementation handled the native storage details."
+        ]
+      },
+      {
+        "title": "Domain-Level Persistence API",
+        "paragraphs": [
+          "SmartDB exposed persistence in terms of Essential Skills domain operations rather than as a generic ORM or universal SQL language."
+        ],
+        "items": [
+          "Students",
+          "Teachers",
+          "Classes",
+          "Marks",
+          "Assignments",
+          "Pretests",
+          "Sign-ons",
+          "Settings",
+          "Licences",
+          "Logs",
+          "Backup",
+          "Restore"
+        ]
+      },
+      {
+        "title": "Rosetta Backend Selection",
+        "paragraphs": [
+          "Recovered source shows Rosetta acting as the active persistence-manager selector and registry.",
+          "A configured manager class could be instantiated through reflection and exposed to the rest of the application through the common SmartDBManager interface."
+        ],
+        "items": [
+          "Configuration-driven backend selection",
+          "Reflection-based manager construction",
+          "Stable application-facing persistence contract",
+          "Backend-specific implementation hidden behind the common API"
+        ]
+      },
+      {
+        "title": "Runtime Backend Portability",
+        "paragraphs": [
+          "The same application calls could route to different persistence implementations without rewriting the business-layer code.",
+          "The abstraction was intentionally at the application-service level rather than attempting to force every database into one shared query language."
+        ]
+      },
+      {
+        "title": "Production SimpleDB",
+        "paragraphs": [
+          "Hydra-Gen's WebStart production generation primarily used AWS SimpleDB.",
+          "This allowed the same application architecture to move from local and school-network storage toward cloud-hosted persistence while preserving the higher-level SmartDB/Rosetta boundary."
+        ]
+      },
+      {
+        "title": "Custom ISAM BTree Backend",
+        "paragraphs": [
+          "The earlier custom ISAM BTree engine remained one of the persistence implementations behind the broader architecture.",
+          "That backend provided local and network-file persistence for the SE through Hydra-Gen suite and could operate without a dedicated SQL server."
+        ]
+      },
+      {
+        "title": "Recovered SmartDB Generation",
+        "paragraphs": [
+          "A recovered SmartDB source snapshot verifies a substantial earlier generation of the architecture with several working backend families."
+        ],
+        "items": [
+          "MySQL",
+          "Apache Derby server",
+          "Apache Derby embedded",
+          "Custom ISAM BTree",
+          "CSV",
+          "XML / folder-backed persistence"
+        ]
+      },
+      {
+        "title": "SQL Backends",
+        "paragraphs": [
+          "SQL implementations used JDBC and backend-specific entity/table adapters rather than one generic SQL translator.",
+          "Recovered code verifies MySQL and Apache Derby implementations, while later Hydra-Gen work also included SQL Server as a supported plugin."
+        ]
+      },
+      {
+        "title": "Additional Supported Backends",
+        "paragraphs": [
+          "The architecture evolved through multiple generations and supported additional persistence plugins beyond those surviving in the recovered source snapshot."
+        ],
+        "items": [
+          "SQL Server",
+          "Microsoft Access / OLE DB",
+          "Berkeley DB",
+          "AWS SimpleDB"
+        ]
+      },
+      {
+        "title": "Server, Embedded & File-Based Storage",
+        "paragraphs": [
+          "Rosetta/SmartDB was designed to bridge very different deployment environments rather than merely switch between SQL vendors."
+        ],
+        "items": [
+          "Cloud persistence",
+          "Network SQL databases",
+          "Embedded SQL databases",
+          "Custom indexed binary files",
+          "CSV persistence",
+          "XML / folder-backed persistence"
+        ]
+      },
+      {
+        "title": "Custom ISAM Integration",
+        "paragraphs": [
+          "Recovered source shows the custom BTree storage engine integrated as a real SmartDB backend rather than operating as a separate legacy system.",
+          "Domain operations such as student and mark persistence could flow from SmartDB into ISAM table adapters and ultimately into binary record and BTree index files."
+        ]
+      },
+      {
+        "title": "Shared Entity Model",
+        "paragraphs": [
+          "Common application entities were reused across persistence implementations while each backend handled its own storage representation.",
+          "SQL adapters mapped the entities into tables, while embedded implementations serialized the same logical data into ISAM, CSV or XML/folder structures."
+        ]
+      },
+      {
+        "title": "Backup & Restore Abstraction",
+        "paragraphs": [
+          "The common persistence contract also included logical backup and restore operations.",
+          "This provided a backend-independent vocabulary for moving or rebuilding application data even though the underlying databases used very different physical formats."
+        ]
+      },
+      {
+        "title": "Different Backend Capabilities",
+        "paragraphs": [
+          "The architecture did not pretend every persistence engine had identical capabilities.",
+          "Different implementations had different performance, query, consistency and deployment characteristics, but the common API allowed the application to remain largely insulated from those differences."
+        ]
+      },
+      {
+        "title": "Evolution Across Hydra-Gen",
+        "paragraphs": [
+          "Rosetta / SmartDB evolved over several generations.",
+          "The recovered source represents an earlier implementation with MySQL, Derby, ISAM, CSV and XML/folder storage, while the mature Hydra-Gen architecture expanded the backend set and used SimpleDB extensively in production."
+        ]
+      },
+      {
+        "title": "Architecture Goal",
+        "paragraphs": [
+          "The purpose was not database abstraction for its own sake. Essential Skills software had to run in very different environments over many years, ranging from individual school workstations and file servers to SQL servers and later cloud-hosted WebStart applications.",
+          "Rosetta / SmartDB allowed the application architecture to survive those infrastructure changes without repeatedly rewriting the business layer."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/databases/db_1.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/databases/db_1.jpg"
+    },
+    "items": []
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The legacy portfolio card was titled 'Rosetta Layer'.",
+      "The original card described Rosetta as an API allowing applications to choose among multiple database backends, including server-based and flat-file databases.",
+      "The legacy backend list included SQL Server, MySQL, Access, ISAM, SimpleDB and Berkeley DB.",
+      "Hydra-Gen architecture documentation also refers to the persistence system as Rosetta Database / SmartDB.",
+      "Recovered source confirms that SmartDBManager was the common domain-level persistence contract.",
+      "Recovered source confirms Rosetta selected the active SmartDBManager implementation through configuration and reflection.",
+      "In the recovered generation, Rosetta itself was not a generic SQL dialect or query translator.",
+      "The actual persistence translation occurred through backend-specific implementations of the common SmartDBManager domain API.",
+      "Recovered source verifies working MySQL, Apache Derby server, Apache Derby embedded, custom ISAM BTree, CSV and XML/folder-backed persistence implementations.",
+      "The recovered source appears to be an older SmartDB/Rosetta generation and should not be treated as the final Hydra-Gen persistence source tree.",
+      "Jamie directly remembers implementing later SQL Server and Berkeley DB plugins.",
+      "SQL Server and Berkeley DB were supported alternatives, but Jamie does not remember whether schools actually selected those backends in production.",
+      "Microsoft Access / OLE DB appears in the original Rosetta architecture/card and should be preserved as part of the historical supported-backend set.",
+      "Hydra-Gen WebStart production primarily used AWS SimpleDB, although the recovered SmartDB snapshot does not contain the later SimpleDB implementation.",
+      "SimpleDB therefore represents a later production generation not preserved in the recovered source archive.",
+      "The mature architecture should be described as a multi-backend persistence abstraction / adapter framework rather than as a universal SQL translator.",
+      "The common API was domain-specific and included students, teachers, classes, marks, assignments, pretests, sign-ons, settings, licences, logs, backup and restore.",
+      "Backend feature parity was not complete; some implementations supported only subsets of the full interface.",
+      "Earlier Hydra-Gen architectural material also references Oracle as part of the broader database-translation concept, but Oracle is not present in the recovered SmartDB source or the current legacy Rosetta card. Keep Oracle historical/private unless later evidence or direct recollection confirms the implemented adapter.",
+      "Rosetta / SmartDB was developed with the same small architecture team involved in the custom ISAM database.",
+      "Jamie remained the lead architect and primary developer, with consultation from the former Sun Microsystems manager/consultant and the original Version 1 product designer."
+    ],
+
+    "confidence": {
+      "hydraGenProject": "high",
+      "rosettaName": "high",
+      "smartDbName": "high",
+      "multiBackendPersistenceArchitecture": "high",
+      "domainLevelApi": "high",
+      "reflectionBackendSelection": "high",
+      "runtimeBackendPortability": "high",
+
+      "simpleDbProductionUse": "high",
+      "customIsamBackend": "high",
+      "mysqlBackend": "high",
+      "apacheDerbyServerBackend": "high",
+      "apacheDerbyEmbeddedBackend": "high",
+      "csvBackend": "high",
+      "xmlFolderBackend": "high",
+
+      "sqlServerSupportedPlugin": "high",
+      "berkeleyDbSupportedPlugin": "high",
+      "accessOleDbSupport": "medium-high",
+
+      "sqlServerSchoolDeployment": "unknown",
+      "berkeleyDbSchoolDeployment": "unknown",
+      "accessSchoolDeployment": "unknown",
+
+      "genericSqlTranslation": "low",
+      "universalQueryLanguage": "low",
+      "oracleImplementedAdapter": "unknown"
+    },
+
+    "projectTerminology": [
+      "Hydra-Gen",
+      "Rosetta",
+      "Rosetta Layer",
+      "Rosetta Database",
+      "SmartDB",
+      "SmartDBManager",
+      "SimpleDB",
+      "ISAM",
+      "BTree",
+      "MySQL",
+      "Apache Derby",
+      "SQL Server",
+      "Microsoft Access",
+      "OLE DB",
+      "Berkeley DB",
+      "CSV",
+      "XML"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Databases",
+      "legacyTitle": "Rosetta Layer",
+      "legacyProject": "Hydra-Gen"
+    }
+  }
+}

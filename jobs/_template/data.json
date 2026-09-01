@@ -193,10 +193,10 @@
         "image": "images/skills/databases/title.png"
       },
       "skills": [
-        "essentialskills/data/isam-btree",
-        "essentialskills/data/rosetta-layer",
-        "essentialskills/data/sql",
-        "essentialskills/data/amazon-simpledb"
+        "essentialskills/data/isam-btree-network-persistence",
+        "essentialskills/data/rosetta-smartdb",
+        "essentialskills/data/relational-database-sql",
+        "essentialskills/data/cloud-database-architecture-migration"
       ]
     },
     {

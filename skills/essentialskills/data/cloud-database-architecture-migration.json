@@ -1,0 +1,424 @@
+{
+  "schemaVersion": 2,
+  "id": "essentialskills/data/cloud-database-architecture-migration",
+  "title": "Cloud Database Architecture & Migration",
+  "project": "Data Architecture",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Cloud Database Architecture",
+      "NoSQL Persistence",
+      "Database Migration",
+      "Disaster Recovery"
+    ]
+  },
+
+  "technologies": [
+    "AWS SimpleDB",
+    "Amazon DynamoDB",
+    "Amazon Aurora MySQL",
+    "Amazon RDS MySQL",
+    "Amazon S3",
+    "MongoDB",
+    "Azure Cosmos DB",
+    "Azure Virtual Machines",
+    "Google Cloud Datastore",
+    "Apache Cassandra",
+    "Python",
+    "CSV",
+    "JSON"
+  ],
+
+  "date": {
+    "from": "2011",
+    "to": "2025",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Cloud Data Architect / Developer",
+    "total": null,
+    "contributors": []
+  },
+
+  "roles": [
+    "Cloud Data Architect",
+    "Database Architect",
+    "Backend Developer",
+    "Migration Developer",
+    "AWS Developer",
+    "Database Administrator",
+    "Disaster-Recovery Architect"
+  ],
+
+  "description": "I designed and maintained Essential Skills' cloud persistence architecture beginning with the 2011 migration of Hydra-Gen into a WebStart/cloud model. AWS SimpleDB became the long-running production core because it delivered very low operating cost, fast access and effectively maintenance-free scaling for our workload, even at roughly 80,000 monthly users. Over the years I repeatedly evaluated and implemented alternatives including DynamoDB, Aurora MySQL, RDS MySQL, MongoDB, Cassandra, Azure Cosmos DB and Google Cloud options, while also building backup, migration and multi-cloud contingency tooling in Python.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Hydra-Gen Cloud Migration",
+        "paragraphs": [
+          "The original reason for adopting AWS persistence was to move Hydra-Gen into a WebStart/cloud deployment model around 2011.",
+          "SimpleDB became the central production database for the cloud generation of Essential Skills applications."
+        ]
+      },
+      {
+        "title": "SimpleDB Production Core",
+        "paragraphs": [
+          "SimpleDB stored the major operational data used by the Essential Skills platform."
+        ],
+        "items": [
+          "Schools",
+          "Districts",
+          "Teachers",
+          "Students",
+          "Classes",
+          "Assignments",
+          "Marks",
+          "Settings",
+          "Login data",
+          "Usage tracking",
+          "Rostering",
+          "Trials",
+          "Home-user data",
+          "Free-program data",
+          "School-order data"
+        ]
+      },
+      {
+        "title": "Cost & Scale",
+        "paragraphs": [
+          "One of the reasons SimpleDB remained in production for so long was its unusually strong cost/performance fit for our workload.",
+          "Even when the platform was serving roughly 80,000 monthly users, the core SimpleDB cost was typically only about $20–$40 per month while requiring essentially no manual scaling administration."
+        ]
+      },
+      {
+        "title": "SimpleDB Domain Design",
+        "paragraphs": [
+          "I deliberately organized SimpleDB domains similarly to relational tables even though AWS guidance often encouraged a less structured approach.",
+          "The service had relatively small domain-size limits at the time, and separating concepts into clear logical domains made the system easier to manage and optimize."
+        ]
+      },
+      {
+        "title": "Logical Data Separation",
+        "paragraphs": [
+          "I also separated major product and business concerns into different logical areas and, where useful, separate AWS organizational/account structures."
+        ],
+        "items": [
+          "School customers",
+          "Trials",
+          "Home users",
+          "Free programs",
+          "Orders",
+          "Other product-specific data"
+        ]
+      },
+      {
+        "title": "Manual Join Optimization",
+        "paragraphs": [
+          "SimpleDB did not provide relational joins, so the application layer handled cross-domain relationships.",
+          "I designed the data access around that limitation rather than performing many small dependent queries."
+        ],
+        "items": [
+          "Bulk-reading smaller domains",
+          "Joining data in application memory",
+          "Avoiding record-by-record dependent queries",
+          "Creating correlation domains for frequently requested summaries",
+          "Pre-shaping data for reporting workloads"
+        ]
+      },
+      {
+        "title": "Correlation & Reporting Domains",
+        "paragraphs": [
+          "For expensive cross-domain reporting, I created purpose-specific domains containing already-correlated data.",
+          "For example, district-wide summaries could be generated without repeatedly traversing every school, program and student record at report time."
+        ]
+      },
+      {
+        "title": "Large Data via S3",
+        "paragraphs": [
+          "When individual records required data too large or unsuitable for SimpleDB attributes, I stored the larger payload in Amazon S3 and kept only the reference in SimpleDB.",
+          "This provided a practical BLOB-style pattern without forcing oversized content into the database."
+        ]
+      },
+      {
+        "title": "Batch Operations",
+        "paragraphs": [
+          "Wherever possible I used batch operations to reduce network overhead and improve throughput for bulk reads and writes."
+        ]
+      },
+      {
+        "title": "Version 5 to Version 6 Persistence",
+        "paragraphs": [
+          "Hydra-Gen / Version 5 used the SmartDB/Rosetta persistence abstraction.",
+          "For Version 6 I built a new persistence layer focused specifically on SimpleDB while retaining compatibility with the same underlying production data, allowing both platform generations to operate during the migration."
+        ]
+      },
+      {
+        "title": "Maintaining an Unsupported SDK",
+        "paragraphs": [
+          "When AWS required Elastic Beanstalk applications to move away from PHP 5, the existing SimpleDB SDK was no longer maintained for the newer environment.",
+          "Rather than abandon a stable production database, I updated the SimpleDB SDK myself so the applications could continue operating on the newer Beanstalk runtime."
+        ]
+      },
+      {
+        "title": "DynamoDB",
+        "paragraphs": [
+          "I used DynamoDB both as a production database for newer systems and as an extension to the SimpleDB architecture."
+        ],
+        "items": [
+          "Version 7 / Spelling List Editor persistence",
+          "ESS email-campaign system",
+          "Error reporting",
+          "Non-critical Version 6 extensions",
+          "Newer side systems where DynamoDB fit naturally"
+        ]
+      },
+      {
+        "title": "Version 7 / Aurora MySQL",
+        "paragraphs": [
+          "Version 7 initially used Amazon Aurora MySQL as a serious attempt to create a future migration path away from SimpleDB.",
+          "I designed and administered the Version 7 application database and ran Aurora in production for several years."
+        ]
+      },
+      {
+        "title": "Retiring Aurora",
+        "paragraphs": [
+          "I adopted Aurora while the service was still relatively early and found that its rapid operational changes created too much maintenance overhead for our small team.",
+          "After repeatedly adapting to service changes, I retired Aurora rather than continue investing in a database that was not delivering enough practical advantage over the simpler alternatives."
+        ]
+      },
+      {
+        "title": "RDS MySQL Evaluation",
+        "paragraphs": [
+          "I also evaluated standard Amazon RDS MySQL before selecting Aurora for the Version 7 relational database work."
+        ]
+      },
+      {
+        "title": "S3 / JSON Persistence",
+        "paragraphs": [
+          "Version 7 also includes a working S3/JSON persistence mode inspired by the partitioning concepts used in the earlier ISAM architecture.",
+          "Schools, teachers, students and custom assignment data can be organized into hierarchical JSON objects/folders in S3."
+        ],
+        "items": [
+          "School partitioning",
+          "Teacher partitioning",
+          "Student partitioning",
+          "Custom assignment data",
+          "JSON storage",
+          "S3-backed persistence"
+        ]
+      },
+      {
+        "title": "Hybrid Version 7 Persistence",
+        "paragraphs": [
+          "The S3/JSON path currently works alongside DynamoDB rather than existing only as a theoretical alternative.",
+          "Different persistence mechanisms are used where each fits the data and operational needs best."
+        ]
+      },
+      {
+        "title": "MongoDB",
+        "paragraphs": [
+          "I used MongoDB for selected lower-risk internal data in the Customer Operations platform, including quote-related data and internal messaging linked to customer records.",
+          "Authoritative school and student data remained in SimpleDB rather than being moved into MongoDB."
+        ]
+      },
+      {
+        "title": "Azure Disaster-Recovery Migration",
+        "paragraphs": [
+          "In 2018 I built a functioning Azure contingency environment as a vendor-exit and disaster-recovery option.",
+          "I cloned the AWS EC2 application environment onto Azure Virtual Machines and wrote Python migration tooling to move SimpleDB data into Azure Cosmos DB."
+        ]
+      },
+      {
+        "title": "Azure Staging Validation",
+        "paragraphs": [
+          "The staging software ran successfully against the Azure environment after migration.",
+          "The Azure/Cosmos configuration remained a fallback rather than becoming the primary platform because my testing found it slower and more expensive than the existing AWS/SimpleDB architecture."
+        ]
+      },
+      {
+        "title": "Google Cloud Migration Research",
+        "paragraphs": [
+          "I also investigated Google Cloud as another vendor-exit path around 2018.",
+          "I prototyped a migration approach using Google's managed NoSQL services, but the effort did not reach the same level of completeness as the Azure contingency environment."
+        ]
+      },
+      {
+        "title": "Cassandra Evaluation",
+        "paragraphs": [
+          "Apache Cassandra was another candidate I evaluated while looking for alternatives to SimpleDB.",
+          "As with the other replacements, it did not provide a compelling enough combination of simplicity, performance and cost for the Essential Skills workload."
+        ]
+      },
+      {
+        "title": "Repeated Replacement Testing",
+        "paragraphs": [
+          "SimpleDB remained in production because I repeatedly tested alternatives rather than because the platform was unable to migrate.",
+          "DynamoDB, Aurora, RDS MySQL, Cassandra, Cosmos DB and Google Cloud options were all evaluated against the real operational requirements of the system."
+        ]
+      },
+      {
+        "title": "Python Data Tooling",
+        "paragraphs": [
+          "Python became my primary language for cloud-data administration, migration and maintenance scripts.",
+          "Over the years I accumulated roughly 50 Python utilities that crawled, transformed, analyzed, backed up or migrated SimpleDB data."
+        ]
+      },
+      {
+        "title": "Weekly Backup Architecture",
+        "paragraphs": [
+          "I created automated SimpleDB backup scripts that export production data approximately weekly into CSV files stored in S3.",
+          "Weekly scheduling kept backup costs controlled while still maintaining a practical recovery path."
+        ]
+      },
+      {
+        "title": "Simple Restore Model",
+        "paragraphs": [
+          "SimpleDB was straightforward to restore because preserving the original item keys allowed records to be recreated directly without complex relational reconstruction."
+        ]
+      },
+      {
+        "title": "Vendor Exit & Disaster Recovery",
+        "paragraphs": [
+          "Cloud portability was a deliberate architectural concern.",
+          "The Azure environment and Google Cloud research were designed to answer a concrete operational question: could Essential Skills continue operating if AWS became unavailable, unsuitable or commercially unacceptable?"
+        ]
+      },
+      {
+        "title": "Architecture Principle",
+        "paragraphs": [
+          "I chose databases based on measured operational fit rather than vendor recommendations or architectural fashion.",
+          "AWS teams regularly recommended newer services, but for this particular workload my testing repeatedly showed that SimpleDB delivered an unusually effective combination of speed, simplicity, low cost and automatic scaling."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/databases/cloud.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/databases/cloud.jpg"
+    },
+    "items": []
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The legacy portfolio card was titled 'Amazon SDB' and contained only a brief statement about using SimpleDB for thousands of concurrent students.",
+      "The broader canonical card now represents Jamie's cloud-database architecture and migration work rather than SimpleDB alone.",
+      "The initial AWS/SimpleDB migration was driven by the goal of moving Hydra-Gen into WebStart/cloud operation around 2011.",
+      "SimpleDB became the primary production persistence layer for schools, teachers, students, classes, marks, assignments, login, usage, rostering, settings and related operational data.",
+      "At approximately 80,000 monthly users, Jamie remembers SimpleDB typically costing only about $20-$40 per month.",
+      "Jamie was the primary designer of the application's SimpleDB data model and optimization strategies.",
+      "Domains were intentionally treated similarly to relational tables despite AWS guidance encouraging less structured organization.",
+      "Jamie created application-level joins, bulk reads and correlation domains to avoid slow record-by-record cross-domain querying.",
+      "Large/BLOB-like payloads were stored in S3 with references from SimpleDB.",
+      "Jamie used batch operations where practical.",
+      "SmartDB/Rosetta served the Version 5 persistence generation.",
+      "Jamie created a new SimpleDB-focused persistence abstraction for Version 6 while preserving compatibility with the same production backend so Version 5 and Version 6 could coexist.",
+      "When Elastic Beanstalk deprecated PHP 5 and the SimpleDB SDK was no longer maintained for the newer environment, Jamie repaired/updated the SDK himself to keep production operating.",
+      "DynamoDB was used for Version 7 / Spelling List Editor, the ESS email-campaign system and supplementary non-critical services such as error reporting.",
+      "Aurora MySQL was intended as a serious migration path away from SimpleDB, not merely as an isolated Version 7 database.",
+      "Jamie adopted Aurora relatively early and later retired it because operational changes created disproportionate maintenance overhead.",
+      "Jamie evaluated RDS MySQL before Aurora.",
+      "MongoDB was used for lower-risk quote/internal-message data in the Customer Operations platform; authoritative school/student data remained in SimpleDB.",
+      "Do not include the hosted Mongo provider security incident in the public portfolio.",
+      "In 2018 Jamie cloned EC2 application workloads to Azure Virtual Machines and wrote Python tooling to migrate SimpleDB data into Azure Cosmos DB.",
+      "The migrated staging environment functioned in Azure but remained a disaster-recovery/vendor-exit fallback because Jamie found the Azure/Cosmos configuration slower and more expensive than the existing AWS/SimpleDB system.",
+      "Jamie also investigated Google Cloud around 2018 but did not complete a migration to the same level as Azure.",
+      "The likely Google NoSQL service explored was Cloud Datastore; exact historical service selection should be treated with medium confidence unless old scripts/configuration are recovered.",
+      "Apache Cassandra was also evaluated as a possible replacement.",
+      "Jamie repeatedly tested alternatives to SimpleDB; SimpleDB remained because it continued to perform unusually well for the actual workload.",
+      "Jamie has approximately 50 Python data-management scripts associated with crawling, transforming, backing up or migrating SimpleDB data.",
+      "SimpleDB data was backed up approximately weekly to CSV files stored in S3.",
+      "Restore was simplified by retaining original SimpleDB item keys.",
+      "Version 7 includes a working S3/JSON persistence mode partitioned hierarchically by school, teacher, student and custom-assignment data.",
+      "The S3/JSON persistence currently works alongside DynamoDB rather than only existing as a dormant alternative.",
+      "Cloud vendor-exit and disaster recovery were explicit architectural goals rather than hypothetical concerns."
+    ],
+
+    "confidence": {
+      "simpleDbProductionCore": "high",
+      "hydraGenCloudMigration2011": "high",
+      "simpleDbAllCoreDomains": "high",
+      "monthlyUsersAround80000": "high",
+      "simpleDbMonthlyCost20To40": "high",
+
+      "domainAsTableDesign": "high",
+      "manualJoinOptimization": "high",
+      "correlationDomains": "high",
+      "s3ForLargePayloads": "high",
+      "batchOperations": "high",
+
+      "version5SmartDbRosetta": "high",
+      "version6SimpleDbAbstraction": "high",
+      "sharedVersion5Version6Backend": "high",
+      "simpleDbSdkRepair": "high",
+
+      "dynamoDbVersion7": "high",
+      "dynamoDbEmailSystem": "high",
+      "dynamoDbErrorReporting": "high",
+
+      "auroraMysqlVersion7": "high",
+      "auroraReplacementStrategy": "high",
+      "auroraRetiredDueMaintenance": "high",
+      "rdsMysqlEvaluation": "high",
+
+      "mongoDbCustomerOperations": "high",
+      "mongoDbNonAuthoritativeData": "high",
+
+      "azureVmMigration": "high",
+      "cosmosDbMigration": "high",
+      "pythonAzureMigrationScripts": "high",
+      "azureStagingWorked": "high",
+      "azureFallbackPurpose": "high",
+
+      "googleCloudMigrationResearch": "high",
+      "googleCloudDatastoreSpecificService": "medium",
+
+      "cassandraEvaluation": "high",
+
+      "pythonDataScriptsAround50": "high",
+      "weeklySimpleDbBackup": "high",
+      "csvBackupToS3": "high",
+
+      "s3JsonVersion7Persistence": "high",
+      "s3JsonHierarchicalPartitioning": "high",
+      "s3JsonWorksAlongsideDynamoDb": "high",
+
+      "vendorExitStrategy": "high",
+      "disasterRecoveryStrategy": "high"
+    },
+
+    "projectTerminology": [
+      "AWS SimpleDB",
+      "SimpleDB",
+      "DynamoDB",
+      "Aurora MySQL",
+      "RDS MySQL",
+      "MongoDB",
+      "Azure Cosmos DB",
+      "Azure Virtual Machines",
+      "Google Cloud Datastore",
+      "Cassandra",
+      "S3",
+      "JSON",
+      "SmartDB",
+      "Rosetta",
+      "Version 5",
+      "Version 6",
+      "Version 7",
+      "Spelling List Editor"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Databases",
+      "legacyIndex": 3,
+      "legacyTitle": "Amazon SDB"
+    }
+  }
+}

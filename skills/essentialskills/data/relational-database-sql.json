@@ -1,0 +1,326 @@
+{
+  "schemaVersion": 2,
+  "id": "essentialskills/data/relational-database-sql",
+  "title": "Relational Database Design & SQL Development",
+  "project": "Data Architecture",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Relational Database Development",
+      "Persistence Architecture",
+      "Data Access & Reporting"
+    ]
+  },
+
+  "technologies": [
+    "SQL",
+    "DB2",
+    "SQL Server",
+    "MySQL",
+    "Amazon Aurora MySQL",
+    "Microsoft Access",
+    "Apache Derby",
+    "SQLite",
+    "JDBC",
+    "ADO.NET",
+    "ODBC",
+    "OLE DB",
+    "Stored Procedures"
+  ],
+
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Software Architect / Database Developer",
+    "total": null,
+    "contributors": []
+  },
+
+  "roles": [
+    "Software Architect",
+    "Database Designer",
+    "SQL Developer",
+    "Data Access Developer",
+    "Application Developer",
+    "Database Administrator"
+  ],
+
+  "description": "I have used relational databases throughout my career for educational platforms, customer-support systems, knowledge bases, business applications, reporting tools and internal administration. My work has included schema design, CRUD, joins, indexes, views, constraints, stored procedures, reporting, schema evolution and custom entity/data-access layers across DB2, SQL Server, MySQL, Aurora MySQL, Access, Derby and SQLite. I generally used explicit SQL and application entities rather than ORMs, and chose relational or NoSQL persistence according to the operational needs of each system.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "SQL Foundations",
+        "paragraphs": [
+          "I first learned SQL using DB2 while studying computer programming in college, working against DB2 from AIX.",
+          "That foundation carried into professional Java, .NET, web and cloud applications using several relational database platforms."
+        ]
+      },
+      {
+        "title": "Relational Database Platforms",
+        "items": [
+          "IBM DB2",
+          "Microsoft SQL Server",
+          "MySQL",
+          "Amazon Aurora MySQL",
+          "Microsoft Access",
+          "Apache Derby",
+          "SQLite"
+        ]
+      },
+      {
+        "title": "Early Essential Skills SQL Systems",
+        "paragraphs": [
+          "Essential Skills maintained SQL Server internally during our years as a Microsoft Partner, and I used relational databases for several early internal systems."
+        ],
+        "items": [
+          "Java / Microsoft Access knowledge base",
+          "Java / SQL Server customer-service and technical-support tracking",
+          "Internal support and administration databases",
+          "Activity and content catalogs"
+        ]
+      },
+      {
+        "title": "Public Business Applications",
+        "paragraphs": [
+          "My first substantial production-facing SQL web application was the Essential Skills ASP.NET business website and ordering system.",
+          "I built the application in C#/ASP.NET using ADO.NET with SQL Server for the product catalog, customer/order workflow and administrative data."
+        ]
+      },
+      {
+        "title": "VB.NET / Access Application",
+        "paragraphs": [
+          "I also developed a public-facing funeral-home application using VB.NET and Microsoft Access.",
+          "Access was otherwise used primarily for smaller applications, internal tools and persistence experiments rather than as the main database for the later Essential Skills production platform."
+        ]
+      },
+      {
+        "title": "Schema & Data Modeling",
+        "paragraphs": [
+          "I designed the relational schemas used by my applications rather than treating the database as an externally supplied black box."
+        ],
+        "items": [
+          "Tables and relationships",
+          "Primary and foreign keys",
+          "Indexes",
+          "Joins",
+          "Views",
+          "Constraints",
+          "Field types",
+          "Schema changes",
+          "Reporting structures"
+        ]
+      },
+      {
+        "title": "Practical SQL Workloads",
+        "paragraphs": [
+          "Most of the systems I built had straightforward business and educational data relationships, so the SQL emphasized maintainable application queries rather than unnecessarily complex database logic."
+        ],
+        "items": [
+          "Schools",
+          "Districts",
+          "Teachers",
+          "Students",
+          "Classes",
+          "Assignments",
+          "Marks",
+          "Customer accounts",
+          "Support issues",
+          "Knowledge-base references",
+          "Usage tracking",
+          "Orders and products"
+        ]
+      },
+      {
+        "title": "CRUD, Reporting & Joins",
+        "paragraphs": [
+          "My day-to-day relational work was primarily CRUD, reporting, joins and schema design.",
+          "The application domains generally required only a small number of understandable joins rather than highly specialized analytical SQL."
+        ]
+      },
+      {
+        "title": "Stored Procedures",
+        "paragraphs": [
+          "Where several database operations needed to be grouped into one controlled operation, I used stored procedures to encapsulate the chained calls.",
+          "I learned and experimented with T-SQL but did not build the production architecture around extensive T-SQL-specific programming."
+        ]
+      },
+      {
+        "title": "Explicit Data Access",
+        "paragraphs": [
+          "I generally did not use ORMs.",
+          "Application data was commonly loaded into Java- or application-style entity objects, with explicit persistence classes responsible for converting between those entities and the underlying database."
+        ],
+        "items": [
+          "Domain entity classes",
+          "Explicit SQL",
+          "Backend-specific adapters",
+          "Prepared statements where appropriate",
+          "Custom persistence abstractions"
+        ]
+      },
+      {
+        "title": "Database Connectivity",
+        "paragraphs": [
+          "I worked through multiple database-access technologies as application stacks changed over time."
+        ],
+        "items": [
+          "JDBC from Java",
+          "ADO.NET from C# / ASP.NET",
+          "ODBC",
+          "OLE DB",
+          "Native platform database providers"
+        ]
+      },
+      {
+        "title": "SmartDB / Rosetta Integration",
+        "paragraphs": [
+          "SQL databases later became interchangeable persistence plugins behind the Hydra-Gen SmartDB/Rosetta architecture.",
+          "This allowed the business layer to work with common application entities while individual adapters handled differences between SQL and non-SQL storage engines."
+        ],
+        "items": [
+          "MySQL",
+          "SQL Server",
+          "Apache Derby",
+          "Microsoft Access",
+          "SQLite proof-of-concept",
+          "Other relational and non-relational backends"
+        ]
+      },
+      {
+        "title": "Proof of Portability",
+        "paragraphs": [
+          "I implemented Access and SQLite SmartDB adapters partly as proof-of-concept backends to demonstrate that the abstraction was not tied to one database vendor.",
+          "Apache Derby was also supported; I believe another member of the SmartDB team implemented that plugin."
+        ]
+      },
+      {
+        "title": "MySQL",
+        "paragraphs": [
+          "I used MySQL in several contexts, including my earlier personal portfolio and later production architecture."
+        ]
+      },
+      {
+        "title": "Amazon Aurora / Version 7",
+        "paragraphs": [
+          "The Essential Skills Version 7 database used Amazon Aurora with MySQL compatibility.",
+          "I designed and administered the application database while AWS supplied and managed the underlying Aurora database service."
+        ]
+      },
+      {
+        "title": "Schema Evolution",
+        "paragraphs": [
+          "Our schemas were generally stable and deliberately kept understandable, so they did not require elaborate migration frameworks.",
+          "When tables or fields changed, I kept application versions compatible with the data wherever possible and performed rebuilds or reindexing when necessary."
+        ]
+      },
+      {
+        "title": "Choosing SQL When It Fit",
+        "paragraphs": [
+          "SQL was an important part of my persistence experience, but I did not treat relational databases as the automatic answer for every system.",
+          "As our architecture moved into AWS, I often selected SimpleDB or other cloud-oriented persistence approaches when their deployment simplicity, scaling model and operating cost better matched the application."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/databases/sql.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/databases/sql.jpg"
+    },
+    "items": []
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The legacy portfolio card was titled simply 'SQL' and summarized decades of relational database work in a single paragraph.",
+      "Jamie first learned SQL using DB2 on AIX in college.",
+      "Essential Skills operated an internal SQL Server environment during its Microsoft Partner years.",
+      "Jamie created an early Java/Microsoft Access knowledge base.",
+      "Jamie created an early Java/SQL Server customer-service and technical-support tracking system.",
+      "The screenshot used by the legacy SQL card is not the original SQL Server support system. It is a later Java customer-management/usage application using SmartDB with AWS SimpleDB; student login tracking makes the cloud-era lineage identifiable.",
+      "Jamie's first substantial production-facing SQL web application was the ASP.NET/C#/ADO.NET Essential Skills public business and ordering site using SQL Server.",
+      "Jamie developed a public-facing funeral-home application using VB.NET and Microsoft Access.",
+      "Jamie used MySQL for an earlier personal portfolio.",
+      "Essential Skills Version 7 used Amazon Aurora MySQL; Jamie designed and administered the application database while AWS managed the Aurora service.",
+      "Jamie used SQL Server, MySQL, Access, Derby and SQLite within or alongside the broader SmartDB/Rosetta persistence work.",
+      "Access and SQLite SmartDB support included proof-of-concept work demonstrating backend portability.",
+      "Jamie believes another SmartDB team member implemented the Apache Derby plugin.",
+      "Jamie regularly designed schemas, relationships, indexes, views, constraints and queries.",
+      "Production SQL work was primarily CRUD, joins, reporting and schema management rather than unusually complex analytical SQL.",
+      "Jamie used stored procedures when chained database operations benefited from being grouped together.",
+      "Jamie experimented with T-SQL but did not rely heavily on T-SQL-specific programming in production.",
+      "Jamie generally did not use ORMs.",
+      "Application persistence commonly mapped database rows into explicit Java/application entity objects through custom data-access layers.",
+      "Jamie's SQL applications generally had understandable domain schemas involving schools, teachers, students, marks, customer/support data, products and orders.",
+      "Schema changes were generally handled pragmatically through compatible application versions, occasional field/table changes and rebuild/reindex operations when required.",
+      "The later cloud-database card should document SimpleDB/NoSQL preferences in greater depth, but this SQL card should retain a brief note that Jamie selected persistence technologies according to operational fit rather than defaulting to relational databases."
+    ],
+
+    "confidence": {
+      "db2CollegeExperience": "high",
+      "sqlServerExperience": "high",
+      "mysqlExperience": "high",
+      "accessExperience": "high",
+      "derbyExperience": "high",
+      "sqliteSmartDbProofOfConcept": "high",
+      "auroraMysqlExperience": "high",
+
+      "jdbc": "high",
+      "adoNet": "high",
+      "odbc": "high",
+      "oleDb": "high",
+
+      "schemaDesign": "high",
+      "indexes": "high",
+      "joins": "high",
+      "views": "high",
+      "constraints": "high",
+      "storedProcedures": "high",
+      "crud": "high",
+      "reporting": "high",
+
+      "heavyTsqlProductionUse": "low",
+      "ormUse": "low",
+      "explicitEntityDataAccess": "high",
+
+      "legacyScreenshotUsesSimpleDb": "high",
+      "funeralHomeAccessBackend": "high",
+      "aspNetSqlServerBackend": "high",
+      "version7AuroraMysql": "high"
+    },
+
+    "projectTerminology": [
+      "SQL",
+      "DB2",
+      "SQL Server",
+      "MySQL",
+      "Aurora MySQL",
+      "Microsoft Access",
+      "Apache Derby",
+      "SQLite",
+      "JDBC",
+      "ADO.NET",
+      "ODBC",
+      "OLE DB",
+      "Stored Procedures",
+      "SmartDB",
+      "Rosetta"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Databases",
+      "legacyIndex": 2,
+      "legacyTitle": "SQL",
+      "legacySubtitle": "SQL Server, MySQL, AccessDB, ODBC, ADO.NET, JDBC"
+    }
+  }
+}
