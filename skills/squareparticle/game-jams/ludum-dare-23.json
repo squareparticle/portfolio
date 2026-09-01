@@ -1,43 +1,254 @@
 {
   "schemaVersion": 2,
   "id": "squareparticle/game-jams/ludum-dare-23",
-  "title": "Lumdum Dare 23 (2012)",
+  "title": "Ludum Dare 23: Tiny World",
   "project": "Game Jams",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Game"
+      "Game Jam",
+      "Civilization Simulation",
+      "Strategy Game"
     ]
   },
+
   "technologies": [
     "Java",
-    "C.E.L.L. Theme (Tiny World"
+    "C.E.L.L.",
+    "Procedural Generation"
   ],
+
   "date": {
     "from": "2012",
     "to": "2012",
-    "display": false
+    "display": true
   },
-  "description": "You start off 5000 years in the past where you need to grow five nations in your tiny world. These nations will fight/trade with each other, but be careful as the wrong decision can spark civil wars that can overthrow your control. Link",
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Solo Developer",
+    "total": 1,
+    "contributors": []
+  },
+
+  "roles": [
+    "Game Designer",
+    "Gameplay Programmer",
+    "Simulation Programmer",
+    "Engine Developer",
+    "Procedural Generation Developer",
+    "UI Designer",
+    "Artist"
+  ],
+
+  "description": "For the 48-hour Ludum Dare 23 'Tiny World' jam, I built a planet-scale civilization simulation in Java using my C.E.L.L. engine and procedural planet-generation code. The player influences five autonomous nations across 5,000 simulated years, directing trade and warfare while balancing population growth, territory, resources, national happiness, civil unrest, and natural disasters to keep civilization from destroying itself.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "48-Hour Solo Game Jam",
+        "paragraphs": [
+          "I created Tiny World as a solo entry for Ludum Dare 23 and completed and submitted the game within the 48-hour deadline."
+        ],
+        "items": [
+          "Game design",
+          "Programming",
+          "Simulation systems",
+          "Procedural world generation",
+          "UI",
+          "Artwork"
+        ]
+      },
+      {
+        "title": "Planet-Scale Civilization Simulation",
+        "paragraphs": [
+          "The player does not directly control a single nation. Instead, the player influences the development of the entire planet's civilization.",
+          "The challenge is to guide five autonomous nations through 5,000 years without allowing unchecked growth, territorial dominance, war, peace, or natural events to destabilize the world."
+        ]
+      },
+      {
+        "title": "Five Autonomous Nations",
+        "paragraphs": [
+          "The 48-hour version used five fixed nations."
+        ],
+        "items": [
+          "Egypt",
+          "Persia",
+          "China",
+          "Mexico",
+          "England"
+        ]
+      },
+      {
+        "title": "Indirect Influence",
+        "paragraphs": [
+          "The nations act independently while the player influences major relationships and strategic pressures.",
+          "The player can initiate trade or warfare between any combination of nations rather than issuing every action directly."
+        ]
+      },
+      {
+        "title": "Trade",
+        "paragraphs": [
+          "The player can establish trade relationships between two or more nations.",
+          "Trade helps nations grow by allowing them to benefit from resources controlled by other parts of the world."
+        ]
+      },
+      {
+        "title": "War",
+        "paragraphs": [
+          "The player can initiate wars between two or more nations as a way to limit excessive growth or prevent one nation from becoming too dominant."
+        ]
+      },
+      {
+        "title": "Civil War & Stability",
+        "paragraphs": [
+          "National happiness had to be balanced carefully.",
+          "Too much warfare could destabilize a nation, but keeping a nation at peace for too long could also create dissatisfaction.",
+          "Poor influence decisions could trigger civil wars and cause the player to lose control of the situation."
+        ]
+      },
+      {
+        "title": "Territory-Based Resources",
+        "paragraphs": [
+          "Resources came from the terrain controlled by each nation.",
+          "As nations expanded, they gained access to more land and therefore more resources and trading power."
+        ],
+        "items": [
+          "Forests",
+          "Water",
+          "Food-related land resources",
+          "Mountains",
+          "Deserts"
+        ]
+      },
+      {
+        "title": "Geographic Tradeoffs",
+        "paragraphs": [
+          "Not all territory was equally valuable.",
+          "Forests and water supported useful resources, while mountains and deserts primarily consumed territorial space without providing the same economic benefit."
+        ]
+      },
+      {
+        "title": "Procedural Planet",
+        "paragraphs": [
+          "The world was procedurally generated using my existing planet-generation code rather than hand-authored.",
+          "The game then placed and simulated the five nations within that generated world."
+        ]
+      },
+      {
+        "title": "Simulation Clock",
+        "paragraphs": [
+          "Time normally advances at approximately one simulated year per real-world second.",
+          "The player can accelerate time, but doing so increases the risk of missing important changes or cascading events."
+        ]
+      },
+      {
+        "title": "Natural Events",
+        "paragraphs": [
+          "Random natural events such as volcanic eruptions could disrupt otherwise stable nations.",
+          "This made aggressive time acceleration risky because multiple political, economic, and environmental problems could develop before the player reacted."
+        ]
+      },
+      {
+        "title": "5,000-Year Objective",
+        "paragraphs": [
+          "The player's goal is to keep the world civilization functioning across the full 5,000-year simulation rather than simply conquer the map."
+        ]
+      },
+      {
+        "title": "C.E.L.L. Engine",
+        "paragraphs": [
+          "Tiny World was built in my C.E.L.L. Java game engine.",
+          "Unlike several other C.E.L.L. projects, this one did not use the visual editor."
+        ]
+      },
+      {
+        "title": "Artwork & Audio",
+        "paragraphs": [
+          "I created the game's visual artwork and interface myself.",
+          "There was no time to add audio during the 48-hour jam."
+        ]
+      },
+      {
+        "title": "Post-Jam Evolution",
+        "paragraphs": [
+          "After Ludum Dare, I continued developing the Tiny World codebase for another several months.",
+          "That work evolved into the much larger Pocket Planet Defender 2012 project, with expanded research, influence, economic, military, and endgame systems."
+        ]
+      }
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/jams/ludum.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/jams/ludum.jpg"
+    },
     "items": [
       {
         "type": "embed",
         "src": "//www.youtube.com/embed/jDLuFf02_KU?rel=0"
       }
-    ],
-    "thumbnail": "images/skills/jams/ludum.jpg",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/jams/ludum.jpg"
-    }
+    ]
   },
-  "descriptionHtml": "You start off 5000 years in the past where you need to grow five nations in your tiny world. These nations will fight/trade with each other, but be careful as the wrong decision can spark civil wars that can overthrow your control. <a href=\"http://ludumdare.com/compo/ludum-dare-23/?action=preview&uid=12696\">Link</a>",
+
   "meta": {
-    "legacySubtitle": "Java 1.5, C.E.L.L. Theme (Tiny World)",
+    "historicalNotes": [
+      "The legacy portfolio card misspelled Ludum Dare as 'Lumdum Dare'.",
+      "This was a solo 48-hour Ludum Dare 23 submission.",
+      "The Ludum Dare theme was 'Tiny World'.",
+      "The game was built in C.E.L.L. without using the C.E.L.L. Visual Editor.",
+      "The procedural world reused Jamie's planet-generation code.",
+      "The player influences the entire civilization system rather than directly controlling one nation.",
+      "The five nations were fixed because of the 48-hour scope.",
+      "The five nations were Egypt, Persia, China, Mexico, and England.",
+      "Time advanced approximately one simulated year per real-world second and could be accelerated.",
+      "Trade and war were initiated by the player while nations otherwise behaved autonomously.",
+      "Civil unrest could result from too much war or too much peace.",
+      "Natural events such as volcanoes could destabilize nations.",
+      "Resources were derived from controlled terrain.",
+      "The game was completed and submitted on time.",
+      "Only a small number of Ludum Dare users commented or rated the project.",
+      "Tiny World later became the code/design foundation for Pocket Planet Defender 2012."
+    ],
+
+    "confidence": {
+      "ludumDare23": "high",
+      "tinyWorldTheme": "high",
+      "soloDeveloper": "high",
+      "fortyEightHourJam": "high",
+      "cellEngine": "high",
+      "cellEditorNotUsed": "high",
+      "proceduralPlanet": "high",
+      "fiveFixedNations": "high",
+      "indirectCivilizationControl": "high",
+      "tradeSystem": "high",
+      "warSystem": "high",
+      "civilWarSystem": "high",
+      "territoryResources": "high",
+      "oneYearPerSecond": "high",
+      "naturalEvents": "high",
+      "artByJamie": "high",
+      "noAudio": "high",
+      "completedOnTime": "high",
+      "foundationForPocketPlanetDefender": "high"
+    },
+
+    "projectTerminology": [
+      "Ludum Dare 23",
+      "Tiny World",
+      "C.E.L.L.",
+      "Civilization Simulation",
+      "Procedural Planet"
+    ],
+
     "provenance": {
       "legacyCategory": "Jams",
-      "legacyIndex": 2
+      "legacyIndex": 2,
+      "legacyTitle": "Lumdum Dare 23 (2012)",
+      "legacySubtitle": "Java 1.5, C.E.L.L. Theme (Tiny World)"
     }
   }
 }

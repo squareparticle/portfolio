@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 2,
+  "id": "squareparticle/games/pocket-planet-defender-2012",
+  "title": "Pocket Planet Defender 2012",
+  "project": "Games",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Civilization Simulation",
+      "Strategy Game",
+      "Grand Strategy Prototype"
+    ]
+  },
+
+  "technologies": [
+    "Java",
+    "C.E.L.L.",
+    "Procedural Generation"
+  ],
+
+  "date": {
+    "from": "2012",
+    "to": "2012",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Solo Developer / Game Designer",
+    "total": 1,
+    "contributors": []
+  },
+
+  "roles": [
+    "Game Designer",
+    "Gameplay Programmer",
+    "Simulation Programmer",
+    "Engine Developer",
+    "Systems Designer",
+    "UI Designer",
+    "Artist"
+  ],
+
+  "description": "Pocket Planet Defender 2012 was an expanded civilization strategy game I developed for roughly two to three months after Ludum Dare 23, using Tiny World's C.E.L.L. codebase as its foundation. The player is part of an alien civilization that arrives on Earth 5,000 years before an invasion armada and can only guide humanity indirectly from the shadows. The goal is to balance military research, civil research, military influence, civil influence, economics, politics, warfare, and peace well enough for humanity to survive the coming invasion.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "From Game Jam to Full Project",
+        "paragraphs": [
+          "After finishing Tiny World for Ludum Dare 23, I continued developing the codebase for roughly another two to three months.",
+          "The project expanded far beyond the original 48-hour simulation and was intended as a commercial release."
+        ]
+      },
+      {
+        "title": "Alien Influence Premise",
+        "paragraphs": [
+          "The player represents an Illuminati-like alien group that has arrived on Earth approximately 5,000 years before a hostile alien armada.",
+          "Because the player is an outsider rather than a human ruler, civilization cannot simply be commanded directly. The player must influence humanity from the shadows."
+        ]
+      },
+      {
+        "title": "Prepare Humanity for Invasion",
+        "paragraphs": [
+          "The long-term goal is to shape humanity into a civilization capable of surviving the eventual alien invasion.",
+          "Winning requires more than maximizing military technology; social, political, economic, and technological development all have to remain sufficiently balanced."
+        ]
+      },
+      {
+        "title": "Four Core Progression Pressures",
+        "paragraphs": [
+          "The expanded design was organized around four major strategic development pressures."
+        ],
+        "items": [
+          "Civil Research",
+          "Military Research",
+          "Civil Influence",
+          "Military Influence"
+        ]
+      },
+      {
+        "title": "Balanced Development",
+        "paragraphs": [
+          "The player could not simply rush the military technology tree.",
+          "Civil development was needed to support long-term growth, research, industry, political stability, and the systems required to sustain military progress."
+        ]
+      },
+      {
+        "title": "War & Peace",
+        "paragraphs": [
+          "War was useful because nations needed real conflict to develop military experience and capability.",
+          "Peace was equally necessary because societies needed stability and time to build infrastructure, economies, research, and long-term development.",
+          "The intended strategy was therefore to deliberately create periods of conflict and peace rather than maximizing either one."
+        ]
+      },
+      {
+        "title": "Research Trees",
+        "paragraphs": [
+          "The project greatly expanded the progression systems from Tiny World with multiple research paths and interconnected unlocks."
+        ],
+        "items": [
+          "Civil research",
+          "Military research",
+          "Military technology",
+          "Civilization development",
+          "Specialized upgrades",
+          "Interdependent progression requirements"
+        ]
+      },
+      {
+        "title": "Influence Systems",
+        "paragraphs": [
+          "Civil and military influence represented the player's ability to manipulate nations indirectly.",
+          "Different forms of influence affected politics, religion, military priorities, national behavior, and world projects."
+        ]
+      },
+      {
+        "title": "World Views",
+        "paragraphs": [
+          "Nations had political and religious world views that could be influenced over time.",
+          "These systems helped determine how each nation behaved and responded to the player's hidden intervention."
+        ]
+      },
+      {
+        "title": "Markets & Companies",
+        "paragraphs": [
+          "The expanded game included economic systems for influencing companies and markets."
+        ],
+        "items": [
+          "Food",
+          "Market investment",
+          "Weapons",
+          "Drugs",
+          "Energy",
+          "Factories",
+          "Technology"
+        ]
+      },
+      {
+        "title": "National Resources",
+        "paragraphs": [
+          "Nations controlled geographically derived resources that affected economic and strategic development."
+        ],
+        "items": [
+          "Desert",
+          "Forest",
+          "Mountains",
+          "Water",
+          "Farms",
+          "Cities",
+          "Gold",
+          "Spices",
+          "Oil"
+        ]
+      },
+      {
+        "title": "World Projects",
+        "paragraphs": [
+          "The player could initiate and influence large-scale national and world projects tied to military and civil progression."
+        ]
+      },
+      {
+        "title": "Rank & Influence",
+        "paragraphs": [
+          "The interface tracked the player's influence rank and available influence points, reinforcing the idea that the player works indirectly rather than directly controlling civilization."
+        ]
+      },
+      {
+        "title": "Military Development",
+        "paragraphs": [
+          "Military development expanded into technology trees, military priorities, influence projects, and strategic capabilities required for the eventual invasion."
+        ]
+      },
+      {
+        "title": "Civil Development",
+        "paragraphs": [
+          "Civil advancement supported the economy, infrastructure, political development, research, and long-term stability needed to sustain humanity's growth."
+        ]
+      },
+      {
+        "title": "Autonomous World Simulation",
+        "paragraphs": [
+          "As in Tiny World, nations continued to operate as autonomous actors rather than simple player-controlled units.",
+          "The player's role was to influence the conditions under which civilization developed."
+        ]
+      },
+      {
+        "title": "Procedural Planet Foundation",
+        "paragraphs": [
+          "The game retained the procedural planet-generation foundation developed for Tiny World and my earlier planet-generation work."
+        ]
+      },
+      {
+        "title": "Alien Invasion Endgame",
+        "paragraphs": [
+          "The 5,000-year civilization-management phase ultimately leads to an alien invasion.",
+          "Humanity's ability to resist depends on the military, technological, civil, and strategic development achieved during the simulation."
+        ]
+      },
+      {
+        "title": "Expanded Interface",
+        "paragraphs": [
+          "I designed and created the greatly expanded game interface and visual presentation myself.",
+          "Some individual icons were third-party or pre-existing assets rather than original artwork."
+        ]
+      },
+      {
+        "title": "Release Ambition",
+        "paragraphs": [
+          "Pocket Planet Defender 2012 was intended to become a released game rather than remaining only an internal experiment."
+        ]
+      },
+      {
+        "title": "Scope & Balance",
+        "paragraphs": [
+          "As the interconnected systems expanded, balancing the game became increasingly demanding for a solo developer.",
+          "The design required research, influence, war, peace, economics, nation behavior, resources, and long-term progression to remain viable across thousands of simulated years."
+        ]
+      },
+      {
+        "title": "Missed 2012 Window",
+        "paragraphs": [
+          "The project's apocalyptic 2012 premise was also time-sensitive.",
+          "By the time the expanded game had grown substantially, the real-world 2012 release window was nearly over, reducing the value of continuing to push the themed project toward release."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/games/pocket-planet-defender.jpg",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/games/pocket-planet-defender.jpg"
+    },
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/games/pocket-planet-defender-collage.jpg"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "Pocket Planet Defender 2012 evolved directly from the Ludum Dare 23 Tiny World codebase.",
+      "The project remained in C.E.L.L.",
+      "Jamie continued development for approximately two to three months after the 48-hour jam.",
+      "The project was intended for release.",
+      "The earlier/alternate remembered title was '2012 Apocalypse'.",
+      "'Pocket Planet Defender 2012' was a later title Jamie strongly preferred and should be treated as the canonical public title.",
+      "The premise was that the player belonged to an alien civilization that arrived on Earth 5,000 years before a hostile armada.",
+      "The player acted as an Illuminati-like hidden influence rather than directly ruling humanity.",
+      "The four major progression areas were Civil Research, Military Research, Civil Influence, and Military Influence.",
+      "War was deliberately useful for military experience and development.",
+      "Peace was deliberately useful for infrastructure, research, economic growth, and civilization building.",
+      "The game was designed so that maximizing military technology alone would not be a viable strategy.",
+      "The screenshot collage shows expanded systems including research trees, influence, national resources, markets, companies, world views, world projects, ranks, military technology, global reporting, map controls, and alien invasion/endgame systems.",
+      "Jamie created the expanded artwork and UI himself, except for individual icon assets.",
+      "The project became increasingly difficult to balance as a solo developer.",
+      "A second reason for stopping was that the real-world 2012 apocalypse-themed release window had effectively passed.",
+      "Publicly, describe the end as a combination of expanding solo balancing complexity and the loss of the project's time-sensitive 2012 release window.",
+      "Do not frame the project as unfinished because of technical inability; the limiting factors were scope, balancing burden, and timing."
+    ],
+
+    "confidence": {
+      "canonicalTitlePocketPlanetDefender2012": "high",
+      "alternateTitle2012Apocalypse": "high",
+      "derivedFromTinyWorld": "high",
+      "cellEngine": "high",
+      "twoToThreeMonthsAdditionalDevelopment": "high",
+      "intendedForRelease": "high",
+
+      "alienInfluencePremise": "high",
+      "fiveThousandYearPreparation": "high",
+      "alienArmadaEndgame": "high",
+      "indirectInfluence": "high",
+
+      "civilResearch": "high",
+      "militaryResearch": "high",
+      "civilInfluence": "high",
+      "militaryInfluence": "high",
+
+      "warForMilitaryPractice": "high",
+      "peaceForDevelopment": "high",
+      "balancedProgressionRequired": "high",
+
+      "markets": "high",
+      "companies": "high",
+      "worldViews": "high",
+      "nationalResources": "high",
+      "worldProjects": "high",
+      "militaryTechTree": "high",
+
+      "expandedArtByJamie": "high",
+      "thirdPartyIcons": "high",
+
+      "soloBalancingComplexity": "high",
+      "missed2012ReleaseWindow": "high"
+    },
+
+    "projectTerminology": [
+      "Pocket Planet Defender 2012",
+      "2012 Apocalypse",
+      "Tiny World",
+      "C.E.L.L.",
+      "Civil Research",
+      "Military Research",
+      "Civil Influence",
+      "Military Influence"
+    ],
+
+    "provenance": {
+      "derivedFrom": "squareparticle/game-jams/ludum-dare-23",
+      "legacyTitle": "2012 Apocalypse",
+      "preferredLaterTitle": "Pocket Planet Defender 2012"
+    }
+  }
+}
