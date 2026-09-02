@@ -1,1 +1,439 @@
-{"schemaVersion":2,"id":"squareparticle/bridge-captain/oculus-vr-2017","title":"Bridge Captain VR (2017)","project":"Bridge Captain","platform":{"label":"Application Type","values":["Desktop VR Game"]},"technologies":["Unity","Oculus VR"],"date":{"from":"2017","to":"2017","display":false},"description":"It became clear after a few months that targeting the Gear VR was limiting the gameplay considerably. Thus, I dropped support and started over again, this time targeting VR on desktop. Now I can create fully working consoles and add greater depth to the battles and exploration.","media":{"primary":{"type":"youtube","id":"zuMqoZhQKjE"},"items":[{"type":"image","src":"images/skills/company/bcvr_1.gif"},{"type":"image","src":"images/skills/company/bcvr_2.gif"},{"type":"image","src":"images/skills/company/bcvr_3.jpg"},{"type":"image","src":"images/skills/company/bcvr_4.png"}]}}
+{
+  "schemaVersion": 2,
+  "id": "squareparticle/bridge-captain/oculus-vr-2017",
+  "title": "Bridge Captain: Oculus VR",
+  "project": "Bridge Captain",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Desktop VR Game",
+      "Bridge Simulation",
+      "Tactical Strategy Game",
+      "Interactive Narrative"
+    ]
+  },
+
+  "technologies": [
+    "Unity",
+    "C#",
+    "Oculus VR",
+    "JSON",
+    "RenderTexture",
+    "Secondary Cameras"
+  ],
+
+  "date": {
+    "from": "2017",
+    "to": "2018",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Lead Developer / Game Designer",
+    "total": null,
+    "contributors": []
+  },
+
+  "roles": [
+    "Lead Developer",
+    "Game Designer",
+    "VR Developer",
+    "Gameplay Programmer",
+    "Systems Designer",
+    "Narrative Systems Developer",
+    "Tools Developer",
+    "UI/UX Designer"
+  ],
+
+  "description": "After proving Bridge Captain in mobile VR, I moved the project to desktop Oculus VR so I could keep the same spatial bridge and narrative model without being constrained by the Gear VR's mobile rendering budget. I expanded the bridge consoles into deeper tactical systems for weapons, targeting, navigation, engineering, communications, radar, fleet control, and system-level strategy. The interfaces were intentionally designed to look intimidating at first, but become simple and rewarding once learned, giving the player the feeling that they genuinely knew how to operate a starship.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "From Mobile VR to Desktop VR",
+        "paragraphs": [
+          "The Gear VR version proved that the physical bridge, spatial interaction, and crew-driven narrative worked well in VR.",
+          "Moving to desktop Oculus VR let me preserve that interaction model while substantially increasing the visual, animation, simulation, and gameplay budget."
+        ]
+      },
+      {
+        "title": "A Richer Physical Bridge",
+        "paragraphs": [
+          "The player remained physically present on the bridge with crew, displays, ship systems, tactical information, and external space events surrounding them.",
+          "With desktop hardware I no longer had to reduce geometry, animation, and active content as aggressively as I had on the Galaxy S6 / Gear VR version."
+        ]
+      },
+      {
+        "title": "Narrative System Carried Forward",
+        "paragraphs": [
+          "The interactive narrative architecture from the desktop Unity and Gear VR generations continued into this version.",
+          "Crew conversations, mission events, branching responses, alerts, ship actions, and resource changes remained integrated into the live bridge environment."
+        ]
+      },
+      {
+        "title": "Diegetic Communications",
+        "paragraphs": [
+          "Remote conversations were presented through bridge displays rather than conventional cutaway scenes.",
+          "I used secondary cameras pointed at off-bridge character sets and rendered those views into in-world communication displays, keeping the player's perspective anchored on the bridge while still supporting face-to-face narrative scenes."
+        ]
+      },
+      {
+        "title": "The Bridge Became the Game Interface",
+        "paragraphs": [
+          "As development continued, I expanded the consoles from simple ship controls into deeper tactical and strategy interfaces.",
+          "The bridge itself became the player's command center for understanding and manipulating the underlying simulation."
+        ]
+      },
+      {
+        "title": "Learnable Complexity",
+        "paragraphs": [
+          "I deliberately designed the consoles to look dense and intimidating at first glance while keeping their actual interaction rules straightforward.",
+          "The goal was to create a strong mastery curve: after a short period of learning, the player could rapidly read the displays and issue complex-looking orders with confidence."
+        ]
+      },
+      {
+        "title": "Starship Command Fantasy",
+        "paragraphs": [
+          "The interface design was intended to make the player feel like they had genuinely learned how to operate a starship rather than merely learned where a few game buttons were located.",
+          "That sense of competence became one of the central design goals of the desktop VR generation."
+        ]
+      },
+      {
+        "title": "Modular Console Architecture",
+        "paragraphs": [
+          "The bridge used modular console modes and layouts that could change depending on the current task.",
+          "Different large, small, left, middle, and right console configurations allowed the same physical bridge space to support multiple tactical roles."
+        ],
+        "items": [
+          "Battle",
+          "Targeting",
+          "Navigation",
+          "Radar",
+          "Weapons",
+          "Diagnostics",
+          "Engineering",
+          "Communications",
+          "System Map",
+          "Sector Map",
+          "Planet / terrain views"
+        ]
+      },
+      {
+        "title": "Battle Orders",
+        "paragraphs": [
+          "Combat evolved beyond simply selecting a target and firing a weapon.",
+          "The battle interface allowed the player to build tactical orders involving weapons, targets, ship sections, friendly and enemy vessels, firing solutions, and execution timing."
+        ]
+      },
+      {
+        "title": "Weapon Selection",
+        "paragraphs": [
+          "Weapons could be selected according to characteristics such as range, damage, temperature, charge time, and weapon type.",
+          "The player could inspect weapon capabilities before assigning them to targets."
+        ]
+      },
+      {
+        "title": "Targeting Ship Systems",
+        "paragraphs": [
+          "Targeting could operate below the whole-ship level.",
+          "The interface supported targeting specific systems or sections, allowing tactical decisions such as attacking communications, radar, electronics, structural systems, or other ship components."
+        ]
+      },
+      {
+        "title": "Firing Solutions",
+        "paragraphs": [
+          "Targeting interfaces presented hit probability, critical-hit information, weapon condition, target condition, and other tactical data before executing an attack."
+        ]
+      },
+      {
+        "title": "Tactical Navigation",
+        "paragraphs": [
+          "The navigation console developed into a tactical map showing friendly ships, enemies, movement, engagement ranges, and local spatial relationships.",
+          "This moved combat toward a command-level strategy experience rather than requiring the player to manually pilot every ship."
+        ]
+      },
+      {
+        "title": "Fleet Command",
+        "paragraphs": [
+          "Friendly and enemy ships could be represented as fleets rather than only individual targets.",
+          "The interface supported selecting friendly ships, enemies, issuing orders, communicating with ships, and coordinating movement and attacks."
+        ]
+      },
+      {
+        "title": "Order Sequencing",
+        "paragraphs": [
+          "The battle interface included an order queue where tactical actions could be assembled and then executed.",
+          "This allowed combat to feel like issuing command decisions rather than directly controlling every moment of an engagement."
+        ]
+      },
+      {
+        "title": "Engineering & Damage Control",
+        "paragraphs": [
+          "Engineering consoles exposed the internal state of ship systems rather than reducing damage to a single health bar."
+        ],
+        "items": [
+          "Subsystem status",
+          "Temperature",
+          "Damage",
+          "Repair time",
+          "Crew assignment",
+          "Parts availability",
+          "Power allocation",
+          "Surplus power",
+          "Power consumption"
+        ]
+      },
+      {
+        "title": "Power Management",
+        "paragraphs": [
+          "Ship power could be redistributed between components and systems.",
+          "This allowed damage control and resource management to become tactical decisions during missions and combat."
+        ]
+      },
+      {
+        "title": "Ship Component Simulation",
+        "paragraphs": [
+          "The underlying ship model contained significantly more detail than the original Bridge Captain release."
+        ],
+        "items": [
+          "Power generation",
+          "Power storage",
+          "Fuel",
+          "Crew",
+          "Marines",
+          "Cargo",
+          "Hull integrity",
+          "Damage",
+          "Resistances",
+          "Agility",
+          "Precision",
+          "Stealth / cross-section",
+          "Multiple weapon components"
+        ]
+      },
+      {
+        "title": "Damage Types & Resistances",
+        "paragraphs": [
+          "The ship simulation distinguished between multiple damage and resistance categories rather than using only one generic damage value.",
+          "These systems provided a foundation for weapons with different tactical strengths and weaknesses."
+        ]
+      },
+      {
+        "title": "Expanded Weapon Systems",
+        "paragraphs": [
+          "The simulation included multiple weapon concepts rather than a single generic weapon."
+        ],
+        "items": [
+          "Particle / energy weapons",
+          "Laser-based weapons",
+          "Plasma weapons",
+          "Missiles / seekers",
+          "Rapid-fire weapons",
+          "Specialized tactical weapons"
+        ]
+      },
+      {
+        "title": "Radar Backed by the Simulation",
+        "paragraphs": [
+          "The tactical radar was connected to actual universe and ship-state data rather than being only decorative mission graphics.",
+          "Ships were plotted from their positions and could be visually distinguished based on faction relationships."
+        ]
+      },
+      {
+        "title": "Faction Relationships",
+        "paragraphs": [
+          "The broader universe architecture included factions and relationships between them.",
+          "Those relationships could feed into tactical presentation, including whether ships appeared friendly, hostile, or otherwise significant to the player."
+        ]
+      },
+      {
+        "title": "Galaxy, Sector & System Structure",
+        "paragraphs": [
+          "The underlying game architecture continued expanding beyond an isolated bridge scene."
+        ],
+        "items": [
+          "Galaxy map",
+          "Sectors",
+          "Star systems",
+          "Planets",
+          "Stations",
+          "Asteroids",
+          "Nebulae",
+          "Ships",
+          "Space objects"
+        ]
+      },
+      {
+        "title": "Hex-Based System Strategy",
+        "paragraphs": [
+          "The system-level interface used a hex-based strategic presentation for navigating and understanding larger areas of space.",
+          "This represented my growing interest in combining the first-person bridge fantasy with a larger strategy-game layer."
+        ]
+      },
+      {
+        "title": "Strategy Through the Consoles",
+        "paragraphs": [
+          "Rather than switching to a completely separate strategy-game interface, I wanted the larger simulation to remain accessible from the physical bridge.",
+          "System maps, fleet information, targeting, engineering, navigation, and tactical decisions were therefore presented through the consoles surrounding the player."
+        ]
+      },
+      {
+        "title": "Dynamic Holographic Displays",
+        "paragraphs": [
+          "Target and tactical interfaces could generate holographic-style representations of selected ships and objects.",
+          "These displays reinforced the idea that the player was operating advanced equipment inside the fictional bridge rather than interacting with conventional game menus."
+        ]
+      },
+      {
+        "title": "Inherited Mission & Tooling Architecture",
+        "paragraphs": [
+          "The desktop VR branch continued using the broader command, event, resource, and story architecture that had evolved through the earlier Unity generations.",
+          "This allowed the increasingly complex tactical simulation to remain connected to authored missions and interactive narrative."
+        ]
+      },
+      {
+        "title": "Narrative + Strategy",
+        "paragraphs": [
+          "The direction of the project was increasingly a hybrid of interactive narrative and strategy.",
+          "The player could speak to crew and experience scripted events at character scale, then turn to the consoles and make command-level tactical decisions affecting ships, systems, resources, and battles."
+        ]
+      },
+      {
+        "title": "Bridge Captain Generation Lineage",
+        "paragraphs": [
+          "This card represents the desktop Oculus VR generation.",
+          "It retained the spatial interaction and narrative model proven in Gear VR while using desktop hardware to deepen the consoles, battle simulation, visuals, animation, and strategic layer."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "primary": {
+      "type": "youtube",
+      "id": "zuMqoZhQKjE"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/company/bcvr_1.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/bcvr_2.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/bcvr_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/bcvr_4.png"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The legacy portfolio card was titled 'Bridge Captain VR (2017)'.",
+      "Canonical public title should be 'Bridge Captain: Oculus VR'.",
+      "This generation targeted desktop Oculus VR after the Gear VR version proved too restrictive for the growing gameplay scope.",
+      "The fundamental spatial interaction and narrative model remained similar to the Gear VR branch.",
+      "Desktop hardware allowed substantially higher polygon, animation, lighting, simulation, and content budgets.",
+      "Jamie describes the desktop VR version as working fundamentally like the Gear VR version but without having to hold back as aggressively on polygons and animations.",
+      "The interactive narrative architecture continued into desktop VR.",
+      "Remote/on-screen character conversations could be produced using a secondary camera pointed at an off-bridge room/set that the player could not directly see.",
+      "The secondary camera's output was displayed through an in-world bridge screen, creating diegetic remote communications.",
+      "The desktop VR period increasingly emphasized deeper strategy and tactical gameplay through the bridge consoles.",
+      "Recovered source contains modular console modes and layouts including battle, target, radar, weapons, navigation, diagnostics, communications, system maps, sector maps, and related bridge functions.",
+      "Console layouts could dynamically reconfigure between different large/small and left/middle/right arrangements depending on mode.",
+      "The design intent was for consoles to look intimidating while remaining straightforward to learn and operate.",
+      "Jamie's explicit design goal was to make players feel skilled and powerful after learning how to operate the starship interfaces.",
+      "Recovered code includes GalaxyMap, sectors, systems, factions, faction relationships, planets, stations, asteroids, nebulae, ships, weapons, and related simulation structures.",
+      "Radar data is connected to actual ship/sector positioning and faction relationship information.",
+      "The ship simulation includes component/stat concepts for power generation/storage, fuel, crew, marines, cargo, hull, multiple damage/resistance categories, agility, precision, and stealth/cross-section.",
+      "Recovered code includes multiple weapon concepts and player-ship weapon components.",
+      "Weapons consoles support target selection, holographic target representations, ship-section/directional targeting, turret tracking, weapon switching, firing, cease-fire, and tactical presentation.",
+      "Do not assume every class or broader galaxy system present in the source reached complete production gameplay.",
+      "Screenshots show a mature battle-orders interface including weapon selection, enemy/friendly targets, specific target systems, firing solutions, order sequencing, and time points.",
+      "Screenshots show a tactical navigation map with friendly/enemy fleet members, engagement regions, movement paths, weapons, targeting, and navigation controls.",
+      "Screenshots show an engineering/electronics interface with subsystem status, temperature, damage, repair time, assigned crew, parts, power allocation, power surplus, and power consumed.",
+      "Screenshots show a hex-based system-map interface, demonstrating the larger strategy direction that was being integrated into the bridge.",
+      "Public framing should emphasize 'learnable complexity': visually dense starship controls that become intuitive with use.",
+      "This generation increasingly combined character-scale narrative with command-level strategy without taking the player out of the physical bridge."
+    ],
+
+    "confidence": {
+      "year2017": "high",
+      "unity": "high",
+      "cSharp": "high",
+      "oculusVr": "high",
+
+      "inheritsGearVrInteraction": "high",
+      "higherDesktopPerformanceBudget": "high",
+      "morePolygonsAndAnimation": "high",
+
+      "secondaryCameraCommunications": "high",
+      "diegeticRemoteConversation": "high",
+
+      "modularConsoleArchitecture": "high",
+      "battleConsole": "high",
+      "weaponsConsole": "high",
+      "targetingConsole": "high",
+      "navigationConsole": "high",
+      "radarConsole": "high",
+      "engineeringConsole": "high",
+      "systemMap": "high",
+      "sectorMap": "high",
+
+      "learnableComplexityDesign": "high",
+      "starshipMasteryFantasy": "high",
+
+      "battleOrders": "high",
+      "orderSequencing": "high",
+      "fleetCommand": "high",
+      "shipSystemTargeting": "high",
+      "firingSolutions": "high",
+
+      "engineeringDamageControl": "high",
+      "crewRepairAssignment": "high",
+      "partsManagement": "high",
+      "powerManagement": "high",
+
+      "galaxyMapArchitecture": "high",
+      "sectorSystemArchitecture": "high",
+      "factionRelationships": "high",
+      "radarBackedBySimulation": "high",
+
+      "hexSystemStrategy": "high",
+      "strategyDirection": "high",
+
+      "everySimulationSystemFullyCompleted": "medium"
+    },
+
+    "projectTerminology": [
+      "Bridge Captain",
+      "Oculus VR",
+      "Battle Orders",
+      "Tactical Map",
+      "System Map",
+      "Galaxy Map",
+      "Fleet",
+      "Faction",
+      "Radar",
+      "Engineering",
+      "Power Management",
+      "Firing Solution",
+      "Target System",
+      "Diegetic Communications"
+    ],
+
+    "provenance": {
+      "legacyTitle": "Bridge Captain VR (2017)",
+      "legacyProject": "Bridge Captain"
+    }
+  }
+}

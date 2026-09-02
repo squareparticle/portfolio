@@ -1,12 +1,403 @@
 {
   "schemaVersion": 2,
   "id": "squareparticle/bridge-captain/gear-vr-2016",
-  "title": "Bridge Captain Gear VR (2016)",
+  "title": "Bridge Captain: Gear VR",
   "project": "Bridge Captain",
-  "platform": {"label": "Application Type", "values": ["Mobile VR Game"]},
-  "technologies": ["Unity", "Gear VR"],
-  "date": {"from":"2016","to":"2016","display":false},
-  "description": "Once I got the Gear VR for Christmas 2016, I never left my room for a week and determined that VR was the future of gaming! I quickly learned that VR game design is considerably different than typical game design. Thus, I had to scrap Bridge Captain 3D and start over again. I was able to get the entire polygon count to ~10K polygons, and it ran pretty smoothly on my S6 Edge.",
-  "media": {"thumbnail":"images/skills/company/gvr.gif","primary":{"type":"image","src":"images/skills/company/gvr.gif"},"items":[{"type":"image","src":"images/skills/company/gvr_1.gif"},{"type":"image","src":"images/skills/company/gvr_2.gif"},{"type":"image","src":"images/skills/company/gvr_3.gif"},{"type":"image","src":"images/skills/company/gvr_4.gif"},{"type":"image","src":"images/skills/company/gvr_5.gif"},{"type":"image","src":"images/skills/company/gvr_6.gif"},{"type":"image","src":"images/skills/company/gvr_7.gif"},{"type":"image","src":"images/skills/company/gvr_8.gif"},{"type":"image","src":"images/Gaming.jpg","display":false,"roles":["featureHero"]},{"type":"image","src":"images/Gaming_1.jpg","display":false,"roles":["featureSupporting"]},{"type":"image","src":"images/Gaming_2.jpg","display":false,"roles":["featureSupporting"]},{"type":"image","src":"images/Gaming_3.jpg","display":false,"roles":["featureSupporting"]}]},
-  "featured": {"heroImage":"images/Gaming.jpg","supportingImages":["images/Gaming_1.jpg","images/Gaming_2.jpg","images/Gaming_3.jpg"],"overlayTitle":"Gaming","overlayText":"Unity, C#, GearVR, Oculus VR","description":"Built many 2D/3D games and graphic engines with XAML like scripting using Direct X and Open GL. This includes an optimized procedurally generated Voxel engine."}
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Mobile VR Game",
+      "Bridge Simulation",
+      "Interactive Narrative"
+    ]
+  },
+
+  "technologies": [
+    "Unity",
+    "C#",
+    "Gear VR",
+    "Oculus SDK",
+    "OVRTouchpad",
+    "JSON"
+  ],
+
+  "date": {
+    "from": "2016",
+    "to": "2016",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Lead Developer / Game Designer",
+    "total": null,
+    "contributors": []
+  },
+
+  "roles": [
+    "Lead Developer",
+    "Game Designer",
+    "VR Developer",
+    "Gameplay Programmer",
+    "Narrative Systems Developer",
+    "Tools Developer",
+    "Performance Optimization Developer",
+    "UI/Interaction Designer"
+  ],
+
+  "description": "I rebuilt Bridge Captain for Samsung Gear VR as a seated mobile-VR bridge simulation running on a Galaxy S6 Edge. The desktop Unity version's JSON-driven mission, command, resource, and dialogue architecture carried forward, but I redesigned the bridge interaction model around head-directed gaze, spatial controls, and Gear VR touchpad input. I also aggressively optimized the bridge, crew, and active content for mobile VR, bringing the complete visible bridge scene to roughly 10,000 polygons while retaining scripted crew interactions, combat, navigation, viewscreen events, and branching narrative gameplay.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "From Desktop 3D to Mobile VR",
+        "paragraphs": [
+          "Moving Bridge Captain onto Gear VR changed the interaction and performance constraints of the project.",
+          "The player was no longer looking at a conventional monitor and mouse-driven interface; the bridge had to work as a spatial environment viewed stereoscopically through a mobile headset."
+        ]
+      },
+      {
+        "title": "Seated VR Bridge",
+        "paragraphs": [
+          "The player remained physically present on the bridge with crew members, stations, displays, and the main viewscreen surrounding them.",
+          "The environment was designed for a seated VR experience rather than free room-scale movement."
+        ]
+      },
+      {
+        "title": "Gaze-Driven Interaction",
+        "paragraphs": [
+          "I replaced conventional mouse-style interaction with a head-directed reticle system.",
+          "The active VR camera projected a ray forward into interactive layers, allowing the player to select bridge controls simply by looking at them."
+        ]
+      },
+      {
+        "title": "Spatial Raycast Controls",
+        "paragraphs": [
+          "The reticle system used physics raycasts to detect interactive targets in the player's view."
+        ],
+        "items": [
+          "Button interaction",
+          "View interaction",
+          "Space interaction",
+          "Hover enter / exit state",
+          "Target descriptions",
+          "Distance-aware reticle placement",
+          "Distance-aware reticle scaling"
+        ]
+      },
+      {
+        "title": "Gear VR Touchpad Input",
+        "paragraphs": [
+          "Selection was tied to Gear VR-compatible input, including OVRTouchpad initialization and the project's Fire1 interaction mapping.",
+          "This let gaze determine the target while the headset/touchpad input confirmed the action."
+        ]
+      },
+      {
+        "title": "VR-Friendly Bridge Controls",
+        "paragraphs": [
+          "Bridge systems were redesigned around large spatial interfaces that could be comfortably targeted from inside the headset.",
+          "The result was a bridge-control model based on looking and selecting rather than precise mouse pointing."
+        ]
+      },
+      {
+        "title": "Narrative Architecture Carried Forward",
+        "paragraphs": [
+          "The Gear VR version did not throw away the desktop Unity narrative architecture.",
+          "The existing GameEvent, Command, JSON mission, dialogue, and resource systems survived and evolved into the VR branch."
+        ]
+      },
+      {
+        "title": "Command-Driven Missions",
+        "paragraphs": [
+          "Scripted missions continued to use reusable commands for story and gameplay orchestration."
+        ],
+        "items": [
+          "Dialogue",
+          "Crew interactions",
+          "Branching responses",
+          "Alerts",
+          "Viewscreens",
+          "Warp sequences",
+          "Ship targeting",
+          "Weapons",
+          "Resource changes",
+          "Nested events",
+          "Conditions"
+        ]
+      },
+      {
+        "title": "Branching Crew Conversations",
+        "paragraphs": [
+          "Crew characters retained interactive dialogue structures with selectable player responses.",
+          "Responses could trigger additional GameEvents or advance into other dialogue nodes, allowing story choices to remain part of the VR bridge experience."
+        ]
+      },
+      {
+        "title": "Playable Scripted Bridge Experience",
+        "paragraphs": [
+          "Surviving mission data includes complete interactive sequences rather than static demonstrations."
+        ],
+        "items": [
+          "Receive a distress signal",
+          "Order a course plotted",
+          "Enter warp",
+          "Encounter enemy ships",
+          "Perform science scans",
+          "Trigger red alert",
+          "Control the viewscreen",
+          "Target ships",
+          "Hail ships",
+          "Interact with crew",
+          "Highlight console controls",
+          "Fire weapons"
+        ]
+      },
+      {
+        "title": "Mobile VR Performance Target",
+        "paragraphs": [
+          "The target hardware was a Samsung Galaxy S6 Edge running Gear VR, so performance had to be treated as a core gameplay constraint rather than an afterthought."
+        ]
+      },
+      {
+        "title": "Approximately 10K Polygon Bridge",
+        "paragraphs": [
+          "I rebuilt and optimized the bridge, crew, and visible scene to keep the active polygon count at approximately 10,000 polygons.",
+          "The goal was to retain a complete bridge experience while remaining practical for stereoscopic mobile rendering."
+        ]
+      },
+      {
+        "title": "Performance-Aware Resource System",
+        "paragraphs": [
+          "The inherited ResourceController architecture supported performance-level classifications that were actively used when composing scene content.",
+          "Resources could be included or excluded based on the selected performance tier rather than requiring one fixed scene configuration."
+        ]
+      },
+      {
+        "title": "Runtime Performance Levels",
+        "paragraphs": [
+          "The resource system supported multiple content classifications."
+        ],
+        "items": [
+          "Low",
+          "Normal",
+          "High",
+          "Low + Normal",
+          "High + Normal",
+          "All"
+        ]
+      },
+      {
+        "title": "Dynamic Resource Composition",
+        "paragraphs": [
+          "Resource groups and runtime activation/deactivation allowed the game to control which objects and content were present during a mission.",
+          "This architecture was especially valuable on mobile VR, where unnecessary active content had a direct performance cost."
+        ]
+      },
+      {
+        "title": "Live Authoring Tools",
+        "paragraphs": [
+          "The Gear VR source retained the live authoring and resource-management tools developed during the earlier Unity generation."
+        ],
+        "items": [
+          "Live Command Console",
+          "Command Manager",
+          "Command Watcher",
+          "Resource Manager",
+          "Resource Group Manager",
+          "JSON save/load",
+          "Backup tooling"
+        ]
+      },
+      {
+        "title": "Broader Game Architecture",
+        "paragraphs": [
+          "The VR project source also retained broader universe and simulation concepts including factions, galaxy/sector/system structures, planets, space objects, ships, weapons, and story systems.",
+          "These classes show that the Gear VR branch sat on top of a larger game architecture rather than being only a one-room VR demonstration."
+        ]
+      },
+      {
+        "title": "Rebuilt for VR, Not Started From Zero",
+        "paragraphs": [
+          "The bridge presentation, control model, and content had to be heavily redesigned for VR, but the underlying command, mission, dialogue, and resource architecture clearly carried forward from the desktop Unity generation.",
+          "This was therefore a major VR-specific rearchitecture rather than a complete restart."
+        ]
+      },
+      {
+        "title": "Mobile VR Design Lessons",
+        "paragraphs": [
+          "The Gear VR version forced me to treat interaction distance, readability, spatial targeting, headset input, stereoscopic performance, and active-scene complexity as first-class design concerns.",
+          "Those constraints fundamentally changed how the bridge was authored and how players interacted with it."
+        ]
+      },
+      {
+        "title": "Bridge Captain Generation Lineage",
+        "paragraphs": [
+          "This card represents the Gear VR mobile-VR generation.",
+          "The pre-VR Unity 3D version and later VR/PC-VR generations are documented separately."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/company/gvr.gif",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/company/gvr.gif"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/company/gvr_1.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/gvr_2.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/gvr_3.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/gvr_4.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/gvr_5.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/gvr_6.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/gvr_7.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/gvr_8.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/Gaming.jpg",
+        "display": false,
+        "roles": [
+          "featureHero"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "images/Gaming_1.jpg",
+        "display": false,
+        "roles": [
+          "featureSupporting"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "images/Gaming_2.jpg",
+        "display": false,
+        "roles": [
+          "featureSupporting"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "images/Gaming_3.jpg",
+        "display": false,
+        "roles": [
+          "featureSupporting"
+        ]
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The legacy portfolio card was titled 'Bridge Captain Gear VR (2016)'.",
+      "Canonical public title should be 'Bridge Captain: Gear VR'.",
+      "The target device was a Samsung Galaxy S6 Edge running Gear VR.",
+      "Jamie remembers receiving Gear VR around Christmas and rapidly concluding that VR required substantially different game-design assumptions.",
+      "The old legacy wording that Bridge Captain 3D was completely 'scrapped' and restarted is too strong.",
+      "The recovered Gear VR source clearly retains the GameEvent, Command, JSON mission, dialogue, resource, and authoring architectures developed in the pre-VR Unity branch.",
+      "The VR-specific bridge presentation, interaction model, assets, and performance strategy were heavily rebuilt.",
+      "Reticle.cs confirms camera-forward Physics.Raycast-based gaze interaction.",
+      "Reticle interaction includes hover enter/exit, target text, distance-aware reticle placement/scaling, and selectable ButtonInterface targets.",
+      "OVRTouchpad initialization is explicitly present, confirming Gear VR/Oculus-specific interaction support.",
+      "Selection used the gaze target plus input/touchpad confirmation.",
+      "The source retains GameEvent/Command-driven mission sequences and JSON-authored narrative data.",
+      "Character dialogue supports selectable responses that can trigger additional GameEvents or advance to other dialog nodes.",
+      "Recovered scripted mission content includes distress signals, course plotting, warp, enemy encounters, science scans, red alert, viewscreen changes, targeting, hailing, crew interactions, console highlighting, and weapon firing.",
+      "ResourceController actively filters resources by configured performance level.",
+      "Performance classifications include Low, Normal, High, LowNormal, HighNormal, and All.",
+      "This confirms performance tier metadata was part of runtime scene composition rather than merely unused editor metadata.",
+      "The Gear VR source retains live authoring infrastructure including Live Command Console, Command Manager, Command Watcher, Resource Manager, Resource Group Manager, JSON save/load, and backup tools.",
+      "Broader architecture classes include factions, galaxy maps, sectors, system maps, planets, space objects, ships, weapons, and story systems.",
+      "Do not overstate those broader classes as proof that every faction/economy/galaxy gameplay system was fully implemented in the Gear VR release.",
+      "Jamie remembers optimizing the complete visible bridge/crew scene to approximately 10,000 polygons.",
+      "Publicly frame the ~10K number as an approximate optimization target rather than a formally benchmarked exact count.",
+      "Historical legacy copy says the game ran smoothly on Jamie's Galaxy S6 Edge.",
+      "This generation demonstrates the transition from desktop 3D interaction to mobile-VR-specific gaze controls and performance-aware content composition.",
+      "Later PC-VR or expanded VR generations should remain separate cards."
+    ],
+
+    "confidence": {
+      "year2016": "high",
+      "unity": "high",
+      "cSharp": "high",
+      "gearVr": "high",
+      "oculusSdk": "high",
+      "ovrTouchpad": "high",
+
+      "galaxyS6EdgeTarget": "high",
+      "seatedVr": "high",
+      "gazeInteraction": "high",
+      "physicsRaycastReticle": "high",
+      "touchpadSelection": "high",
+
+      "gameEventArchitectureInherited": "high",
+      "commandArchitectureInherited": "high",
+      "jsonMissionSystemInherited": "high",
+      "branchingCrewDialogue": "high",
+
+      "liveAuthoringToolsInherited": "high",
+      "resourceManagerInherited": "high",
+      "resourceGroupsInherited": "high",
+      "performanceTierFiltering": "high",
+
+      "approximately10000Polygons": "high",
+      "smoothS6EdgePerformance": "high",
+
+      "completeRestart": "low",
+      "majorVrRearchitecture": "high",
+
+      "factionClassesPresent": "high",
+      "galaxySectorSystemClassesPresent": "high",
+      "fullFactionGameplayImplemented": "medium",
+      "fullGalaxyGameplayImplemented": "medium"
+    },
+
+    "projectTerminology": [
+      "Bridge Captain",
+      "Gear VR",
+      "Oculus",
+      "OVRTouchpad",
+      "Reticle",
+      "GameEvent",
+      "Command",
+      "ResourceController",
+      "Resource Group",
+      "Performance Level",
+      "Galaxy S6 Edge"
+    ],
+
+    "provenance": {
+      "legacyTitle": "Bridge Captain Gear VR (2016)",
+      "legacyProject": "Bridge Captain"
+    }
+  }
 }
