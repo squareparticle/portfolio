@@ -1,1 +1,367 @@
-{"schemaVersion":2,"id":"squareparticle/bridge-captain/unity-3d-2015","title":"Bridge Captain 3D (2015)","project":"Bridge Captain","platform":{"label":"Application Type","values":["Desktop Game"]},"technologies":["Unity"],"date":{"from":"2015","to":"2015","display":false},"description":"Unity 4.0 and its asset store proved to me that I could never compete building my own engines. It quickly became apparent that I could make Bridge Captain a fully 3D game with a much richer story by switching to Unity and starting over.","media":{"primary":{"type":"youtube","id":"-rSYTdV3iKI"},"items":[{"type":"image","src":"images/skills/company/bc3d_1.gif"},{"type":"image","src":"images/skills/company/bc3d_2.jpg"},{"type":"image","src":"images/skills/company/bc3d_3.png"},{"type":"image","src":"images/skills/company/bc3d_4.jpg"},{"type":"image","src":"images/skills/company/bc3d_5.jpg"},{"type":"image","src":"images/skills/company/bc3d_8.jpg"},{"type":"image","src":"images/skills/company/bc3d_7.jpg"},{"type":"image","src":"images/skills/company/bc3d_6.png"},{"type":"embed","src":"//www.youtube.com/embed/WlEQLc5vK14?rel=0"}]},"meta":{"technologyVersions":{"unity":"4.0"}}}
+{
+  "schemaVersion": 2,
+  "id": "squareparticle/bridge-captain/unity-3d-2015",
+  "title": "Bridge Captain: Unity 3D",
+  "project": "Bridge Captain",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Desktop Game",
+      "3D Narrative Game",
+      "Bridge Simulation"
+    ]
+  },
+
+  "technologies": [
+    "Unity",
+    "C#",
+    "ProBuilder",
+    "JSON",
+    "LipSync",
+    "Cinema Director"
+  ],
+
+  "date": {
+    "from": "2015",
+    "to": "2015",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Lead Developer / Game Designer",
+    "total": null,
+    "contributors": []
+  },
+
+  "roles": [
+    "Lead Developer",
+    "Game Designer",
+    "Gameplay Programmer",
+    "Narrative Systems Developer",
+    "Tools Developer",
+    "3D Systems Developer",
+    "UI Developer"
+  ],
+
+  "description": "Moving Bridge Captain to Unity let me turn the game from a console-driven bridge interface into a fully 3D narrative space. I built an interactable bridge with crew characters, branching conversations, scripted ship events, character cameras, audio, animations, cutscenes, alerts, and dynamic scene changes. I also created a JSON-driven command/event architecture and live authoring tools so mission content could be assembled from reusable commands rather than hard-coded one scene at a time.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "From Console Interface to Physical Bridge",
+        "paragraphs": [
+          "The Unity generation changed the basic interaction model of Bridge Captain.",
+          "Instead of commanding the ship primarily through a 2D dashboard, the player could physically exist on a fully 3D bridge with crew members positioned around the room."
+        ]
+      },
+      {
+        "title": "Fully 3D Bridge",
+        "paragraphs": [
+          "I prototyped the bridge geometry in Unity using ProBuilder and built the gameplay around physically located bridge stations and crew.",
+          "The purpose of the 3D bridge was not only visual; it created a space where narrative, ship systems, and character interaction could happen together."
+        ]
+      },
+      {
+        "title": "Interactable Crew",
+        "paragraphs": [
+          "Crew members became interactive characters rather than portraits or abstract bridge-console representations.",
+          "The player could approach crew, receive reports, trigger conversations, and choose responses while events continued around the bridge."
+        ]
+      },
+      {
+        "title": "Branching Conversations",
+        "paragraphs": [
+          "Dialogue could present multiple player responses and continue into different scripted actions.",
+          "This allowed mission storytelling to happen as interactive conversations between the captain and crew instead of only through static message panels."
+        ]
+      },
+      {
+        "title": "Narrative Inside the Simulation",
+        "paragraphs": [
+          "Story interactions could occur while the bridge remained an active game environment.",
+          "Crew conversations, ship alerts, external threats, combat effects, and viewscreen events could all contribute to the same scene."
+        ]
+      },
+      {
+        "title": "Command & Event Runtime",
+        "paragraphs": [
+          "I built a reusable runtime around GameEvent objects containing ordered command sequences.",
+          "Missions could orchestrate story and gameplay by combining commands rather than embedding every sequence directly into custom MonoBehaviour code."
+        ]
+      },
+      {
+        "title": "Reusable Narrative Commands",
+        "paragraphs": [
+          "The command system supported a broad range of narrative and gameplay actions."
+        ],
+        "items": [
+          "Timed delays",
+          "Dialogue",
+          "Lip-synced dialogue",
+          "Dialogue bubbles",
+          "Character-targeted actions",
+          "Red alert",
+          "Animations",
+          "Resource changes",
+          "Resource groups",
+          "Cutscenes",
+          "Nested game events",
+          "Conditions"
+        ]
+      },
+      {
+        "title": "Character-Targeted Story Actions",
+        "paragraphs": [
+          "Commands could target specific bridge roles and crew members, allowing missions to coordinate characters such as Navigation, Weapons, Science, Communications, Engineering, and the Captain."
+        ]
+      },
+      {
+        "title": "Character Cameras",
+        "paragraphs": [
+          "Dialogue sequences could temporarily shift the camera toward the speaking crew member, giving conversations a more cinematic presentation while keeping them inside the live bridge environment."
+        ]
+      },
+      {
+        "title": "Audio & Lip Sync",
+        "paragraphs": [
+          "Dialogue commands could trigger character audio and lip-sync behavior.",
+          "The architecture integrated spoken character presentation into the same reusable command/event system as the rest of the mission."
+        ]
+      },
+      {
+        "title": "Animation & Expression",
+        "paragraphs": [
+          "Narrative commands could control talk animations, character states, and related presentation changes as conversations played."
+        ]
+      },
+      {
+        "title": "Cutscene Integration",
+        "paragraphs": [
+          "The runtime included cutscene support through Cinema Director, allowing larger cinematic events to be invoked from the same mission scripting architecture."
+        ]
+      },
+      {
+        "title": "JSON-Driven Mission Data",
+        "paragraphs": [
+          "Mission and sequence data could be serialized to JSON rather than existing only as hard-coded scene logic.",
+          "This made story content more data-driven and easier to author, inspect, save, reload, and evolve."
+        ]
+      },
+      {
+        "title": "Live Command Authoring",
+        "paragraphs": [
+          "I built live authoring tools around the command system so mission sequences could be assembled and tested directly rather than requiring a code edit for every narrative change."
+        ],
+        "items": [
+          "Live Command Console",
+          "Command Manager",
+          "Command Watcher",
+          "Command picker",
+          "Character picker",
+          "Parameter editor"
+        ]
+      },
+      {
+        "title": "Resource Management Tools",
+        "paragraphs": [
+          "The tooling also included runtime resource management for controlling what objects, environments, and content were active during a mission."
+        ],
+        "items": [
+          "Resource Manager",
+          "Resource Group Manager",
+          "Logical resource names",
+          "Prefab paths",
+          "Hierarchy relationships",
+          "Custom loading methods",
+          "Runtime activation and deactivation"
+        ]
+      },
+      {
+        "title": "Resource Groups",
+        "paragraphs": [
+          "Resources could be organized into groups representing scene or mission states.",
+          "Commands could activate and remove these groups as the story progressed, letting missions dynamically reshape the environment."
+        ]
+      },
+      {
+        "title": "Performance-Level Variants",
+        "paragraphs": [
+          "The resource architecture already supported multiple performance classifications so content could be enabled or excluded depending on the target performance level."
+        ],
+        "items": [
+          "Low",
+          "Normal",
+          "High",
+          "Low + Normal",
+          "High + Normal",
+          "All"
+        ]
+      },
+      {
+        "title": "Save, Reload & Backup",
+        "paragraphs": [
+          "The authoring system supported saving and loading mission/script data as well as backup workflows, allowing narrative content to be iterated without rebuilding the entire game."
+        ]
+      },
+      {
+        "title": "Interactive Scripted Playthrough",
+        "paragraphs": [
+          "A surviving build from this generation contains a fully interactable scripted playthrough, demonstrating that the architecture was already functional even though the recovered snapshot does not contain the complete later mission set."
+        ]
+      },
+      {
+        "title": "Foundation for the VR Generations",
+        "paragraphs": [
+          "This pre-VR Unity version established much of the runtime architecture that later Bridge Captain VR development could build on.",
+          "The move to VR extended an existing 3D bridge, narrative, command, and resource architecture rather than starting from an empty project."
+        ]
+      },
+      {
+        "title": "Why Unity Changed the Project",
+        "paragraphs": [
+          "Unity let me stop spending most of my effort recreating general-purpose 3D engine and editor infrastructure and instead invest that time in the actual Bridge Captain experience.",
+          "The result was the design I had wanted from the beginning: a character-driven bridge where the player could physically participate in the story."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "primary": {
+      "type": "youtube",
+      "id": "-rSYTdV3iKI"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/company/bc3d_1.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/bc3d_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/bc3d_3.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/bc3d_4.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/bc3d_5.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/bc3d_8.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/bc3d_7.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/bc3d_6.png"
+      },
+      {
+        "type": "embed",
+        "src": "//www.youtube.com/embed/WlEQLc5vK14?rel=0"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The legacy portfolio card was titled 'Bridge Captain 3D (2015)'.",
+      "Canonical public title should be 'Bridge Captain: Unity 3D'.",
+      "This card represents the pre-VR Unity generation.",
+      "The recovered Unity source appears older than the complete later mission set, but a surviving build contains a fully interactable scripted playthrough.",
+      "The project moved from a semi-3D LibGDX bridge architecture to a fully physical 3D bridge in Unity.",
+      "Bridge geometry was prototyped using ProBuilder.",
+      "The player could physically exist on the bridge with crew characters rather than interacting only through abstract bridge panels.",
+      "Crew conversations supported selectable player responses and branching story behavior.",
+      "The recovered code contains GameEvent objects composed from reusable Command sequences.",
+      "Supported command concepts include delays, dialogue, lip-synced dialogue, dialog bubbles, red alert, animations, resource groups, cutscenes, nested events, and conditions.",
+      "Commands could target specific bridge roles including Science, Communications, Weapons, Navigation, Engineering, and Captain-related characters.",
+      "Dialogue could use temporary character cameras, spoken audio, talk animations, face/presentation state changes, and portrait/dialog UI.",
+      "LipSync integration is present in the recovered source.",
+      "Cinema Director cutscene integration is present in the recovered source.",
+      "Mission/event data could be serialized to JSON under a gamescripts-style content path.",
+      "The recovered source contains live authoring infrastructure including Live Command Console, Command Manager, Command Watcher, Resource Manager, Resource Group Manager, character selection, command selection, and parameter editing.",
+      "The authoring/runtime system includes JSON save/load and backup workflows.",
+      "Resource architecture includes logical resource names, prefab paths, hierarchy relationships, optional custom loading, runtime activation/deactivation, and resource groups.",
+      "Resource groups could be dynamically added and removed to compose mission/scene states.",
+      "The resource system includes performance classifications: Low, Normal, High, LowNormal, HighNormal, and All.",
+      "The performance-level architecture is especially relevant to the later mobile VR generation, but its foundation already exists in this pre-VR Unity code.",
+      "Do not attribute every mature later VR editor feature to this specific snapshot unless independently verified; frame this version as the foundation of the later system.",
+      "The old legacy description saying Unity proved Jamie could 'never compete building my own engines' should not be preserved literally in modern public copy.",
+      "Better framing: Unity provided mature commodity 3D engine/editor infrastructure, allowing Jamie to spend his effort on game-specific interaction, narrative, tools, and content instead.",
+      "This generation established the fully 3D bridge and character-driven narrative direction that later Bridge Captain VR versions inherited."
+    ],
+
+    "confidence": {
+      "year2015": "high",
+      "unity": "high",
+      "cSharp": "high",
+      "proBuilder": "high",
+
+      "fully3DBridge": "high",
+      "interactableCrew": "high",
+      "branchingDialogue": "high",
+      "physicalBridgePresence": "high",
+
+      "gameEventArchitecture": "high",
+      "commandArchitecture": "high",
+      "jsonMissionData": "high",
+
+      "dialogueCommands": "high",
+      "lipSync": "high",
+      "characterCameras": "high",
+      "animations": "high",
+      "cutsceneIntegration": "high",
+      "conditions": "high",
+      "nestedEvents": "high",
+
+      "liveCommandTools": "high",
+      "resourceManager": "high",
+      "resourceGroups": "high",
+      "runtimeActivation": "high",
+      "performanceLevels": "high",
+      "saveLoadBackup": "high",
+
+      "fullyInteractableRecoveredBuild": "high",
+      "recoveredMissionSetIncomplete": "high",
+
+      "foundationForVr": "high",
+      "allLaterVrFeaturesAlreadyPresent": "medium"
+    },
+
+    "projectTerminology": [
+      "Bridge Captain",
+      "Unity 3D",
+      "GameEvent",
+      "Command",
+      "Live Command Console",
+      "Command Manager",
+      "Command Watcher",
+      "Resource Manager",
+      "Resource Group Manager",
+      "gamescripts",
+      "LipSync",
+      "Cinema Director",
+      "ProBuilder"
+    ],
+
+    "provenance": {
+      "legacyTitle": "Bridge Captain 3D (2015)",
+      "legacyProject": "Bridge Captain",
+      "legacyTechnologyVersions": {
+        "unity": "4.0"
+      }
+    }
+  }
+}

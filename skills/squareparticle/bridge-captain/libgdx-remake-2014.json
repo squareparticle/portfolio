@@ -1,12 +1,306 @@
 {
   "schemaVersion": 2,
   "id": "squareparticle/bridge-captain/libgdx-remake-2014",
-  "title": "Bridge Captain Remake (2014)",
+  "title": "Bridge Captain: LibGDX Remake",
   "project": "Bridge Captain",
-  "platform": {"label":"Application Type","values":["Desktop Game"]},
-  "technologies":["Java","LibGDX","OpenGL"],
-  "date":{"from":"2014","to":"2014","display":false},
-  "description":"After the mild success of the original Bridge Captain, I wanted to continue to expand the game and make it more interesting. I did this by inserting the player into a 3D universe and adding more features to the bridge. While the writers were building additional missions, I was remastering the game.",
-  "media":{"primary":{"type":"youtube","id":"kzdRXIpKMRg"},"items":[{"type":"image","src":"images/skills/company/bcr_1.jpg"},{"type":"image","src":"images/skills/company/bcr_2.jpg"},{"type":"image","src":"images/skills/company/bcr_3.jpg"},{"type":"image","src":"images/skills/company/bcr_4.jpg"},{"type":"embed","src":"//www.youtube.com/embed/ILICI8YQq3Q?rel=0"}]},
-  "meta":{"technologyVersions":{"java":"1.6","opengl":"1.2"}}
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Desktop Game",
+      "3D Game Prototype",
+      "Bridge Simulation"
+    ]
+  },
+
+  "technologies": [
+    "Java",
+    "LibGDX",
+    "OpenGL",
+    "GLSL",
+    "Framebuffer Objects",
+    "Procedural Generation",
+    "Fractal Noise",
+    "Height Maps",
+    "3D Model Rendering"
+  ],
+
+  "date": {
+    "from": "2014",
+    "to": "2014",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Lead Developer / Game Designer",
+    "total": null,
+    "contributors": []
+  },
+
+  "roles": [
+    "Lead Developer",
+    "Game Designer",
+    "Gameplay Programmer",
+    "Engine Developer",
+    "3D Graphics Programmer",
+    "Procedural Generation Developer",
+    "UI Designer"
+  ],
+
+  "description": "After the original Android release of Bridge Captain, I rebuilt the game in LibGDX as a semi-3D evolution of the C.E.L.L. version. The bridge remained primarily a command-console interface while I added 3D ships, space views, solar-system navigation, procedural planets, terrain generation, scanning, target visualization, and expanded bridge systems. I ultimately moved the project to Unity because my long-term vision was a fully 3D bridge with interactable crew characters rather than a hybrid 2D/3D interface.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Semi-3D Remake",
+        "paragraphs": [
+          "The LibGDX generation was designed as a semi-3D port and expansion of the original Android/C.E.L.L. version.",
+          "Rather than immediately rebuilding every bridge interaction in full 3D, I kept the proven console-based interface while moving more of the universe and visualization systems into 3D."
+        ]
+      },
+      {
+        "title": "Hybrid Bridge Architecture",
+        "paragraphs": [
+          "The bridge remained largely a 2D command interface, but individual panels and full-screen modes could render 3D content.",
+          "This let me preserve the original bridge workflow while introducing progressively richer 3D systems."
+        ],
+        "items": [
+          "2D console and panel UI",
+          "Embedded 3D views",
+          "Full-screen 3D modes",
+          "Framebuffer-composited content",
+          "Multiple specialized bridge layouts"
+        ]
+      },
+      {
+        "title": "3D Space Views",
+        "paragraphs": [
+          "The remake added a real-time 3D universe around the bridge experience."
+        ],
+        "items": [
+          "3D ships",
+          "Skyboxes",
+          "Perspective cameras",
+          "Model rendering",
+          "Lighting",
+          "Shader-backed rendering"
+        ]
+      },
+      {
+        "title": "3D Navigation",
+        "paragraphs": [
+          "Navigation expanded beyond the original 2D presentation into a 3D solar-system view.",
+          "The navigation interface rendered system objects with a perspective camera and allowed the player to inspect the system spatially."
+        ]
+      },
+      {
+        "title": "Planet Scanning",
+        "paragraphs": [
+          "Planet scanning became a substantial subsystem in the LibGDX remake rather than a simple static report.",
+          "A scanned planet could be represented through multiple visual modes including conventional map views, 3D height-map terrain, and generated scan imagery."
+        ]
+      },
+      {
+        "title": "Procedural Planet & Terrain Generation",
+        "paragraphs": [
+          "I integrated my procedural planet and terrain work directly into Bridge Captain during this generation.",
+          "The system used fractal/noise-based generation to create planet maps and height data that could be visualized both in 2D and as 3D terrain."
+        ],
+        "items": [
+          "Fractal generation",
+          "Noise functions",
+          "Height maps",
+          "Terrain meshes",
+          "Procedural color mapping",
+          "Generated planet textures"
+        ]
+      },
+      {
+        "title": "Dynamic 2D-to-3D Scan Pipeline",
+        "paragraphs": [
+          "The scan architecture could render a generated map into a framebuffer and then use that result as a texture on a 3D terrain model.",
+          "This connected the bridge's 2D scan presentation directly to the generated 3D planetary representation."
+        ]
+      },
+      {
+        "title": "Framebuffer Rendering",
+        "paragraphs": [
+          "Framebuffer objects were used to render intermediate visual content that could then be reused elsewhere in the interface or applied to 3D geometry.",
+          "This made the bridge panels more than static UI windows; they could act as composited rendering surfaces."
+        ]
+      },
+      {
+        "title": "Shaders",
+        "paragraphs": [
+          "The LibGDX version used custom shader paths for selected 3D rendering and visual effects.",
+          "GLSL became part of the rendering stack alongside LibGDX's model and camera systems."
+        ]
+      },
+      {
+        "title": "Expanded Bridge Tools",
+        "paragraphs": [
+          "The remake expanded the number and purpose of bridge displays beyond the original release."
+        ],
+        "items": [
+          "Main bridge",
+          "Planet scan",
+          "3D terrain / height-map views",
+          "Navigation",
+          "Target ship views",
+          "Blueprint / diagnostics",
+          "Mining interface",
+          "Environment / walking prototype",
+          "Full-screen space modes"
+        ]
+      },
+      {
+        "title": "Target & Diagnostics Views",
+        "paragraphs": [
+          "The architecture included dedicated target-ship and blueprint/diagnostic displays for inspecting ships and other objects."
+        ]
+      },
+      {
+        "title": "Mining Prototype",
+        "paragraphs": [
+          "Mining had reached at least the interface/prototype stage during this LibGDX generation, with dedicated bridge-panel support."
+        ]
+      },
+      {
+        "title": "Environment / Walking Prototype",
+        "paragraphs": [
+          "I also experimented with a character-scale environment mode inside the LibGDX branch.",
+          "The surviving code includes a 3D environment panel with character rendering and camera movement, showing that I was already exploring gameplay beyond a fixed bridge interface."
+        ]
+      },
+      {
+        "title": "Remastering While Content Expanded",
+        "paragraphs": [
+          "While additional mission content was being developed, I was rebuilding and extending the technology underneath the game.",
+          "This generation therefore acted as both a remaster of the original release and a technology bridge toward the larger version I ultimately wanted to build."
+        ]
+      },
+      {
+        "title": "Why I Moved to Unity",
+        "paragraphs": [
+          "The LibGDX remake was technically successful as a semi-3D evolution, but it was not my final vision for Bridge Captain.",
+          "I wanted the player physically present on a fully 3D bridge with interactable crew characters.",
+          "Unity provided a much better foundation for that direction, so I stopped investing in the hybrid LibGDX architecture and moved the project to Unity."
+        ]
+      },
+      {
+        "title": "Bridge Captain Generation Lineage",
+        "paragraphs": [
+          "This card represents the LibGDX transition generation only.",
+          "The original C.E.L.L./Android release and the later fully 3D Unity/VR generations are documented separately."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "primary": {
+      "type": "youtube",
+      "id": "kzdRXIpKMRg"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/company/bcr_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/bcr_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/bcr_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/bcr_4.jpg"
+      },
+      {
+        "type": "embed",
+        "src": "//www.youtube.com/embed/ILICI8YQq3Q?rel=0"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The legacy portfolio card was titled 'Bridge Captain Remake (2014)'.",
+      "Canonical public title should be 'Bridge Captain: LibGDX Remake'.",
+      "This generation was a semi-3D port/evolution of the Android/C.E.L.L. Bridge Captain version, not the final fully 3D design.",
+      "The bridge remained primarily a 2D console/interface architecture while ships, space, navigation, planets, terrain, scans, and other content moved into 3D.",
+      "Surviving code appears to come from an early 2014 snapshot, with timestamps spanning approximately late November 2013 through February 2014.",
+      "The surviving snapshot contains LibGDX PerspectiveCamera, ModelBatch, ModelInstance, lighting, skybox, shader, framebuffer, procedural terrain, planet scanning, navigation, target, diagnostics, mining, and environment-panel work.",
+      "The procedural terrain/planet generator previously documented separately is directly integrated into the Bridge Captain LibGDX source and belongs to this project generation.",
+      "Surviving terrain classes include FractalGen, Noise, HeightMapTexture, HeightMapModelFactory, Terrain, and TerrainColor.",
+      "The code supports 2D planet maps, 3D height-map terrain, generated scan textures, and applying framebuffer-rendered scan imagery to generated terrain.",
+      "A mining panel is present, confirming mining had reached at least UI/prototype implementation in this branch.",
+      "An EnvironmentPanel provides evidence of early character-scale / walking-environment experimentation.",
+      "Do not automatically attribute later trading, faction, broader economy, approximately 10 handcrafted star systems, mature exploration, or later Unity systems to this early LibGDX snapshot unless supported by separate evidence.",
+      "Jamie ultimately stopped the LibGDX remake because his intended Bridge Captain design was a fully 3D bridge with interactable characters.",
+      "The transition to Unity was an architectural/product-direction decision rather than a failure of the LibGDX implementation.",
+      "Later Bridge Captain Unity and VR generations should remain separate portfolio cards."
+    ],
+
+    "confidence": {
+      "year2014": "high",
+      "java": "high",
+      "libGdx": "high",
+      "openGl": "high",
+      "glsl": "high",
+      "framebufferObjects": "high",
+
+      "semi3DPort": "high",
+      "twoDBridgeThreeDUniverse": "high",
+      "threeDShips": "high",
+      "threeDSpace": "high",
+      "threeDNavigation": "high",
+
+      "planetScanning": "high",
+      "proceduralPlanetGeneration": "high",
+      "fractalNoise": "high",
+      "heightMaps": "high",
+      "threeDTerrain": "high",
+      "dynamicScanTexturePipeline": "high",
+
+      "targetShipViews": "high",
+      "diagnosticViews": "high",
+      "miningPrototype": "high",
+      "environmentWalkingPrototype": "high",
+
+      "laterTradingInThisSnapshot": "low",
+      "laterFactionSystemInThisSnapshot": "low",
+      "tenHandcraftedSystemsInThisSnapshot": "low",
+
+      "unityTransitionReason": "high",
+      "fully3DBridgeVision": "high",
+      "interactableCrewVision": "high"
+    },
+
+    "projectTerminology": [
+      "Bridge Captain",
+      "LibGDX Remake",
+      "LibGDX",
+      "Planet Scan",
+      "Height Map",
+      "Procedural Terrain",
+      "Environment Panel",
+      "Mining Panel",
+      "Unity Transition"
+    ],
+
+    "provenance": {
+      "legacyTitle": "Bridge Captain Remake (2014)",
+      "legacyProject": "Bridge Captain",
+      "legacyTechnologyVersions": {
+        "java": "1.6",
+        "opengl": "1.2"
+      }
+    }
+  }
 }

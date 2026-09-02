@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 2,
+  "id": "personal/games/tetris-challenge-1997",
+  "title": "Tetris Challenge: College Programming Contest",
+  "project": "Games",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "DOS Game",
+      "Programming Challenge"
+    ]
+  },
+
+  "technologies": [
+    "Turbo C++",
+    "DOS",
+    "VGA Mode 13h",
+    "Software Double Buffering",
+    "Direct VGA Memory",
+    "8-bit BMP Graphics",
+    "Palette Graphics"
+  ],
+
+  "date": {
+    "from": "1997",
+    "to": "1997",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Solo Developer",
+    "total": 1,
+    "contributors": []
+  },
+
+  "roles": [
+    "Game Developer",
+    "Gameplay Programmer",
+    "Graphics Programmer",
+    "UI Programmer",
+    "Artist"
+  ],
+
+  "description": "While I was in college, a group of friends challenged each other to see who could build the best Tetris game. I built a Mario-themed DOS version in Turbo C++ with custom graphics, animated block skins, scoring, levels, line clearing, next-piece preview, and my own low-level VGA rendering pipeline. My entry won the challenge.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Informal College Programming Challenge",
+        "paragraphs": [
+          "A group of friends in college challenged each other to build the best Tetris game.",
+          "I created this version as my entry and won the challenge."
+        ]
+      },
+      {
+        "title": "Mario-Themed Tetris",
+        "paragraphs": [
+          "I wrapped standard Tetris mechanics in a custom Mario-themed presentation.",
+          "The different block graphics were animated visual skins rather than different gameplay pieces."
+        ]
+      },
+      {
+        "title": "Core Tetris Systems",
+        "paragraphs": [
+          "I implemented the game logic directly rather than using an existing game framework."
+        ],
+        "items": [
+          "Tetromino movement",
+          "Rotation states",
+          "Board collision",
+          "Piece placement",
+          "Line clearing",
+          "Score tracking",
+          "High-score tracking",
+          "Level progression",
+          "Line-count tracking",
+          "Next-piece preview"
+        ]
+      },
+      {
+        "title": "DOS VGA Rendering",
+        "paragraphs": [
+          "The game rendered in VGA Mode 13h at 320 x 200 with 256 colors.",
+          "Rather than relying on slow high-level graphics calls for every sprite and pixel, I rendered frames into an off-screen software buffer and copied the completed frame directly into VGA video memory."
+        ]
+      },
+      {
+        "title": "Software Double Buffering",
+        "paragraphs": [
+          "The rendering system used a 64,000-byte back buffer corresponding to the full 320 x 200 Mode 13h framebuffer.",
+          "Game graphics were drawn into normal memory first, then the completed frame was copied to VGA memory in one operation."
+        ]
+      },
+      {
+        "title": "From Roughly 1 FPS to Real-Time Rendering",
+        "paragraphs": [
+          "This project came from a period when I was learning why straightforward DOS graphics APIs were too slow for sprite-heavy games.",
+          "Learning to render into an off-screen framebuffer and copy the finished image directly to video memory transformed the kind of games I could build, taking my earlier graphics experiments from roughly 1 FPS into the range of smooth real-time animation."
+        ]
+      },
+      {
+        "title": "Direct VGA Memory",
+        "paragraphs": [
+          "The surviving code writes completed frames directly to VGA memory rather than drawing the full game through BIOS graphics services.",
+          "It also includes vertical-retrace synchronization and direct palette manipulation."
+        ]
+      },
+      {
+        "title": "Custom Graphics Utilities",
+        "paragraphs": [
+          "I built reusable low-level graphics routines around the DOS framebuffer."
+        ],
+        "items": [
+          "Pixel drawing",
+          "Lines",
+          "Rectangles",
+          "Polygons",
+          "Circles",
+          "Filled circles",
+          "Transparent bitmap blitting",
+          "Bitmap extraction",
+          "Screen-buffer copying",
+          "Palette handling",
+          "Palette fades and animation",
+          "Vertical-retrace waiting"
+        ]
+      },
+      {
+        "title": "8-bit Bitmap Pipeline",
+        "paragraphs": [
+          "The game loads 8-bit BMP graphics and palette data for sprites, tiles, and presentation assets.",
+          "This let me build a custom sprite-based interface while still working within the 256-color VGA environment."
+        ]
+      },
+      {
+        "title": "Animated Presentation",
+        "paragraphs": [
+          "The presentation included animated Mario-themed elements, background animation, stars, custom block artwork, and a custom title screen rather than using a plain Tetris board."
+        ]
+      },
+      {
+        "title": "Artwork",
+        "paragraphs": [
+          "I drew the Mario and Luigi characters, the title-screen presentation, and some of the tile graphics myself.",
+          "Some tile graphics were adapted from existing Mario game artwork."
+        ]
+      },
+      {
+        "title": "No Audio",
+        "paragraphs": [
+          "This version did not include sound or music."
+        ]
+      },
+      {
+        "title": "Low-Level Graphics Learning",
+        "paragraphs": [
+          "This project represents an important stage in my transition from using built-in DOS graphics routines toward writing my own real-time rendering infrastructure.",
+          "The same period included separate experiments with assembly and BIOS interrupts, but the surviving Tetris implementation itself is primarily Turbo C++ with direct framebuffer and VGA-memory access."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/jams/tetris.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/jams/tetris.jpg"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/jams/tetris_1.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/jams/tetris_2.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/jams/tetris_3.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/jams/tetris_4.gif"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The legacy portfolio card was titled 'Tetris Challenge (1997)'.",
+      "This was an informal programming challenge between Jamie and college friends, not an official institutional competition.",
+      "Jamie remembers his entry winning the challenge.",
+      "The surviving source is Turbo C++ / DOS-era code.",
+      "The surviving code explicitly switches to VGA Mode 13h, 320 x 200, 256 colors.",
+      "The source uses a 64,000-byte software back buffer and copies the completed frame into VGA video memory.",
+      "Jamie's historical term 'Shadow RAM' appears to refer to the off-screen software framebuffer/back-buffer technique taught in college.",
+      "For modern public terminology, use 'software double buffering', 'off-screen framebuffer', or 'back buffer' rather than relying on the ambiguous term 'Shadow RAM'.",
+      "The old portfolio card listed Assembly, but no convincing assembly implementation survives in the current Tetris source and Jamie does not remember using assembly in the finished game.",
+      "Remove Assembly from the public Tetris technology list.",
+      "Jamie did separately experiment with assembly and BIOS interrupts during the same learning period.",
+      "Jamie remembers attempting sprite graphics using interrupt-driven approaches before learning the framebuffer technique and finding the interrupt-based approach too slow.",
+      "The surviving Tetris source contains low-level DOS graphics code including BIOS mode switching, direct VGA memory access, palette I/O, back-buffer copying, bitmap loading, drawing primitives, and vertical-retrace handling.",
+      "Some unrelated RPG/game-development code is mixed into the surviving source folder and should not automatically be attributed to the finished Tetris game.",
+      "Jamie drew the Mario and Luigi characters, title-screen presentation, and some tile artwork.",
+      "Some tile graphics were adapted from existing Mario game assets.",
+      "The Mario-themed block graphics were cosmetic/animated skins; standard Tetris gameplay remained underneath.",
+      "There was no sound or music.",
+      "The approximate improvement from roughly 1 FPS to around 30 FPS belongs to Jamie's broader contemporary graphics-learning recollection and should not be presented as a benchmark measured specifically from the surviving Tetris build unless stronger evidence is recovered."
+    ],
+
+    "confidence": {
+      "year1997": "high",
+      "informalCollegeChallenge": "high",
+      "wonChallenge": "high",
+
+      "turboCpp": "high",
+      "dos": "high",
+      "vgaMode13h": "high",
+      "resolution320x200": "high",
+      "palette256Colors": "high",
+
+      "softwareDoubleBuffer": "high",
+      "directVgaMemory": "high",
+      "bufferSize64000": "high",
+      "verticalRetraceHandling": "high",
+
+      "assemblyInFinishedTetris": "low",
+      "assemblyExperimentsSamePeriod": "high",
+      "shadowRamHistoricalTerminology": "medium",
+
+      "customTetrisLogic": "high",
+      "pieceRotation": "high",
+      "collision": "high",
+      "lineClearing": "high",
+      "score": "high",
+      "highScore": "high",
+      "levelProgression": "high",
+      "nextPiecePreview": "high",
+
+      "marioCharactersDrawnByJamie": "high",
+      "titleArtByJamie": "high",
+      "someTilesByJamie": "high",
+      "someTilesAdaptedFromMarioAssets": "high",
+      "animatedVisualSkinsOnly": "high",
+
+      "noAudio": "high",
+
+      "approximate1FpsTo30FpsLearningStory": "medium"
+    },
+
+    "projectTerminology": [
+      "Tetris Challenge",
+      "Turbo C++",
+      "DOS",
+      "VGA Mode 13h",
+      "Software Double Buffering",
+      "Back Buffer",
+      "Shadow RAM",
+      "Direct VGA Memory"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Jams",
+      "legacyIndex": 5,
+      "legacyTitle": "Tetris Challenge (1997)",
+      "legacySubtitle": "Turbo C++, Assembly, Shadow RAM"
+    }
+  }
+}

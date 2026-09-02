@@ -1,1 +1,310 @@
-{"schemaVersion":2,"id":"squareparticle/bridge-captain/ludum-dare-october-challenge","title":"Ludum Dare 30 Challenge (2012)","project":"Bridge Captain","platform":{"label":"Application Type","values":["Desktop Game","Mobile Game"]},"technologies":["Java","Android SDK","C.E.L.L."],"date":{"from":"2012","to":"2012","display":false},"description":"In 2012 I built a game called Bridge Captain for the 30-day Ludum Dare Challenge. The rules were to design, build, release, and sell a game within the month of October. I ended up selling 300 copies within a couple of days of launch. However, I pulled it off the store in order to complete the story mode.","descriptionHtml":"In 2012 I built a game called Bridge Captain for the 30-day Ludum Dare Challenge. The rules were to design, build, release, and sell a game within the month of October. I ended up selling 300 copies within a couple of days of launch. However, I pulled it off the store in order to complete the story mode. <a href=\"http://ludumdare.com/compo/october-challenge-2012/?action=preview&uid=12696\">Link</a>","media":{"thumbnail":"images/skills/jams/bc.jpg","primary":{"type":"image","src":"images/skills/jams/bc.jpg"},"items":[{"type":"image","src":"images/skills/jams/bc_1.jpg"},{"type":"image","src":"images/skills/jams/bc_2.jpg"},{"type":"image","src":"images/skills/jams/bc_3.jpg"},{"type":"image","src":"images/skills/jams/bc_4.jpg"}]}}
+{
+  "schemaVersion": 2,
+  "id": "squareparticle/bridge-captain/ludum-dare-october-challenge",
+  "title": "Bridge Captain: Ludum Dare October Challenge 2012",
+  "project": "Bridge Captain",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Desktop Game",
+      "Mobile Game",
+      "Commercial Release",
+      "Game Jam Challenge"
+    ]
+  },
+
+  "technologies": [
+    "Java",
+    "Android SDK",
+    "C.E.L.L."
+  ],
+
+  "date": {
+    "from": "2012",
+    "to": "2012",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Lead Developer / Game Designer",
+    "total": 4,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Character Artist"
+        ],
+        "relationship": "collaborator",
+        "contribution": "Created the comic-book-style on-screen character artwork."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Mission Writer"
+        ],
+        "relationship": "collaborator",
+        "contribution": "Wrote the bulk of the game's mission/story content in collaboration with Jamie."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Audio Designer",
+          "Composer"
+        ],
+        "relationship": "collaborator",
+        "contribution": "Created the game's sound effects and music."
+      }
+    ]
+  },
+
+  "roles": [
+    "Lead Developer",
+    "Game Designer",
+    "Gameplay Programmer",
+    "Engine Developer",
+    "UI Designer",
+    "Artist",
+    "Narrative Designer",
+    "Release Developer"
+  ],
+
+  "description": "For the 2012 Ludum Dare October Challenge, I designed, built, released, and sold the first commercial version of Bridge Captain in under 30 days using my C.E.L.L. cross-platform game engine. The game combined starship bridge management, navigation, combat, resource control, crew interactions, and a complete branching story. I released a free desktop version through Ludum Dare and a paid Android version on Google Play, selling roughly 300 copies within the first few days before withdrawing the initial release to expand the project into a larger game.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "30-Day Commercial Game Challenge",
+        "paragraphs": [
+          "The Ludum Dare October Challenge was not a standard 48-hour jam. The goal was to create a game during October and take it all the way through release and actual sales.",
+          "I completed Bridge Captain and released it near the end of the month, around day 28 or 29."
+        ]
+      },
+      {
+        "title": "Built on C.E.L.L.",
+        "paragraphs": [
+          "Bridge Captain was built using my C.E.L.L. cross-platform game engine.",
+          "The same codebase supported both the free desktop build and the Android commercial release."
+        ]
+      },
+      {
+        "title": "Starship Bridge Gameplay",
+        "paragraphs": [
+          "The player acts as captain of a starship and interacts with multiple bridge systems and crew stations rather than controlling the ship through a single conventional game interface."
+        ],
+        "items": [
+          "Captain controls",
+          "Weapons",
+          "Engineering",
+          "Navigation",
+          "Communications",
+          "Computer systems"
+        ]
+      },
+      {
+        "title": "Navigation & System Map",
+        "paragraphs": [
+          "The game included navigation and system-map interfaces for moving between locations and managing mission travel."
+        ]
+      },
+      {
+        "title": "Ship Systems & Resource Management",
+        "paragraphs": [
+          "Players managed ship resources and systems during missions."
+        ],
+        "items": [
+          "Power",
+          "Shields",
+          "Weapons",
+          "Engines",
+          "Hull condition",
+          "Damage",
+          "Repairs"
+        ]
+      },
+      {
+        "title": "Combat",
+        "paragraphs": [
+          "Ship-to-ship encounters used dedicated targeting and combat controls.",
+          "The player could select targets, aim weapons, manage charging and firing, and monitor ship condition during combat."
+        ]
+      },
+      {
+        "title": "Crew & Communications",
+        "paragraphs": [
+          "Crew stations and communications were part of the game flow rather than simple decorative UI.",
+          "Mission information, dialogue, and story decisions were presented through the bridge and its crew interfaces."
+        ]
+      },
+      {
+        "title": "Branching Story",
+        "paragraphs": [
+          "The challenge release contained a complete branching story rather than an unfinished story mode.",
+          "A first-time playthrough was approximately 40 minutes, while an experienced player who already knew the routes and decisions could complete it in roughly 20 minutes."
+        ]
+      },
+      {
+        "title": "Mission Writing",
+        "paragraphs": [
+          "A long-time collaborator who had previously worked with me on the BlackBerry-era projects wrote the bulk of the mission content.",
+          "I collaborated on the story structure, gameplay integration, and mission implementation."
+        ]
+      },
+      {
+        "title": "Character Art",
+        "paragraphs": [
+          "I created the game's UI, ship/interface artwork, and general visual presentation.",
+          "A collaborating comic-book artist created the illustrated on-screen character portraits."
+        ]
+      },
+      {
+        "title": "Music & Sound",
+        "paragraphs": [
+          "A long-time audio collaborator created the game's sound effects and music.",
+          "The game did not use voice acting."
+        ]
+      },
+      {
+        "title": "Free Desktop Release",
+        "paragraphs": [
+          "I released a desktop version for free through the Ludum Dare challenge portal as part of the October Challenge submission."
+        ]
+      },
+      {
+        "title": "Google Play Commercial Release",
+        "paragraphs": [
+          "I also released Bridge Captain commercially on Google Play for Android.",
+          "The price was approximately $1, consistent with the challenge's goal of actually selling the finished game."
+        ]
+      },
+      {
+        "title": "Approximately 300 Paid Sales",
+        "paragraphs": [
+          "The Android version sold roughly 300 paid copies within the first few days of release before I withdrew it from the store."
+        ]
+      },
+      {
+        "title": "Why I Withdrew the Initial Release",
+        "paragraphs": [
+          "The initial game was complete, but early customer response made me realize that some players expected a much larger experience than the compact challenge release.",
+          "Rather than leave the smaller version on sale, I withdrew it and began expanding Bridge Captain into a substantially larger project."
+        ]
+      },
+      {
+        "title": "Beginning of a Larger Project",
+        "paragraphs": [
+          "The October Challenge release became the foundation for later generations of Bridge Captain.",
+          "Those later versions expanded far beyond this initial release and are documented separately."
+        ]
+      },
+      {
+        "title": "Complete Release Pipeline",
+        "paragraphs": [
+          "The challenge required more than building a prototype: I took the project through design, development, packaging, release, store publication, pricing, and actual commercial sales within the month."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/jams/bc.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/jams/bc.jpg"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/jams/bc_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/jams/bc_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/jams/bc_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/jams/bc_4.jpg"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The legacy portfolio card called this 'Ludum Dare 30 Challenge (2012)'; the canonical framing is Ludum Dare October Challenge 2012.",
+      "This card represents only the original October 2012 Bridge Captain release generation. Later Bridge Captain generations should remain separate cards.",
+      "Jamie completed and released the project around day 28 or 29 of the October Challenge.",
+      "The game was built in C.E.L.L.",
+      "The desktop version was released free through the Ludum Dare portal.",
+      "The Android version was sold through Google Play.",
+      "Jamie remembers the Android price as approximately $1.",
+      "Approximately 300 paid copies sold within the first few days before Jamie withdrew the game.",
+      "The challenge release already contained a complete branching story.",
+      "First-time playthrough length was approximately 40 minutes.",
+      "An experienced player who knew the game could finish in roughly 20 minutes.",
+      "The legacy statement that Jamie pulled the game 'in order to complete the story mode' is inaccurate; the story was already complete.",
+      "The specific trigger Jamie remembers was a customer comment saying they had bought the game and booked off the weekend to play it.",
+      "That comment made Jamie realize some customers expected a substantially longer experience than the compact challenge release.",
+      "Keep the customer comment as private historical provenance rather than quoting it publicly in the portfolio.",
+      "Publicly frame the withdrawal as a response to early customer expectations and Jamie's decision to expand the project into a larger game.",
+      "Jamie created the game's UI, ship/interface graphics, and general artwork.",
+      "A comic-book artist created the illustrated on-screen character artwork.",
+      "A long-time collaborator from the earlier BlackBerry-era work wrote the bulk of the missions.",
+      "A long-time audio collaborator created the game's music and sound effects.",
+      "There was no voice acting in this release.",
+      "The broader Bridge Captain project later grew dramatically in scope and team size, but those facts belong to later-generation cards rather than this October Challenge card."
+    ],
+
+    "confidence": {
+      "octoberChallenge2012": "high",
+      "bridgeCaptainTitle": "high",
+      "cellEngine": "high",
+      "java": "high",
+      "androidSdk": "high",
+
+      "releasedDay28Or29": "high",
+      "desktopLudumDareRelease": "high",
+      "googlePlayRelease": "high",
+      "approximatelyOneDollarPrice": "medium",
+      "approximately300PaidSales": "high",
+      "salesWithinFewDays": "high",
+
+      "completeBranchingStory": "high",
+      "firstPlaythroughApproximately40Minutes": "high",
+      "experiencedPlaythroughApproximately20Minutes": "high",
+
+      "characterArtistContributor": "high",
+      "missionWriterContributor": "high",
+      "audioContributor": "high",
+      "noVoiceActing": "high",
+
+      "uiAndGeneralArtByJamie": "high",
+      "comicCharacterArtByContributor": "high",
+
+      "withdrawnToExpandProject": "high",
+      "customerExpectationTrigger": "high",
+
+      "laterBridgeCaptainGenerationsSeparate": "high"
+    },
+
+    "projectTerminology": [
+      "Bridge Captain",
+      "Ludum Dare October Challenge",
+      "October Challenge 2012",
+      "C.E.L.L.",
+      "Google Play"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Jams",
+      "legacyTitle": "Ludum Dare 30 Challenge (2012)",
+      "legacyProject": "Bridge Captain"
+    }
+  }
+}

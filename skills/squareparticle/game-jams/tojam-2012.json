@@ -1,26 +1,326 @@
 {
   "schemaVersion": 2,
   "id": "squareparticle/game-jams/tojam-2012",
-  "title": "ToJam (2012)",
+  "title": "Game Over: TOJam 2012",
   "project": "Game Jams",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Game"
+      "Game Jam",
+      "2D RPG",
+      "Procedural World"
     ]
   },
+
   "technologies": [
     "Java",
-    "C.E.L.L. Theme (The World is NOT Ending"
+    "Java2D",
+    "C.E.L.L.",
+    "Cellular Automata",
+    "Procedural Generation",
+    "BMP Tile Maps",
+    "JavaZoom"
   ],
+
   "date": {
     "from": "2012",
     "to": "2012",
-    "display": false
+    "display": true
   },
-  "description": "I created a RPG where the hero has already beat the last boss and saved the world.  Now it's up to you to keep him from getting bored. You have to do quests, such as going fishing, cleaning the basement, finding the King's cat and making the king's dinner all before you get too bored.",
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Solo Developer / Game Designer",
+    "total": 3,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Composer"
+        ],
+        "relationship": "collaborator",
+        "contribution": "Created the game's music."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Graphic Artist"
+        ],
+        "relationship": "collaborator",
+        "contribution": "Created a small number of graphics, including the title-screen artwork."
+      }
+    ]
+  },
+
+  "roles": [
+    "Game Designer",
+    "Gameplay Programmer",
+    "Engine Developer",
+    "Procedural Generation Developer",
+    "Level Designer",
+    "Quest Designer",
+    "AI Programmer",
+    "UI Designer",
+    "Artist"
+  ],
+
+  "description": "For TOJam 2012's theme, 'The World is NOT Ending,' I created Game Over, a 2D RPG where the hero has already defeated the final boss and saved the world. The new challenge is simply keeping him from getting bored while completing everyday quests for the King. Built over a weekend in my Java C.E.L.L. engine, the game combined quests, AI, scripted triggers, tile-based exploration, a boredom-pressure mechanic, and a procedurally generated overworld that I refined and completed using my visual editor.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "The World is NOT Ending",
+        "paragraphs": [
+          "The TOJam theme was 'The World is NOT Ending.'",
+          "I inverted the usual RPG structure by starting after the dramatic part was already over: the hero had defeated the final boss and saved the world."
+        ]
+      },
+      {
+        "title": "Game Over",
+        "paragraphs": [
+          "The game was titled Game Over.",
+          "With no apocalypse left to stop, the hero's new problem is boredom."
+        ]
+      },
+      {
+        "title": "Everyday Hero Quests",
+        "paragraphs": [
+          "The King assigns deliberately mundane post-adventure quests to keep the hero occupied."
+        ],
+        "items": [
+          "Clean the basement",
+          "Make the King's dinner",
+          "Find the King's missing cat",
+          "Go fishing"
+        ]
+      },
+      {
+        "title": "Bored Meter",
+        "paragraphs": [
+          "A visible Bored Meter provided the game's central pressure mechanic.",
+          "The joke and gameplay both revolve around completing enough ordinary tasks to keep a legendary hero occupied after his great adventure is already finished."
+        ]
+      },
+      {
+        "title": "Weekend Development",
+        "paragraphs": [
+          "I built the game mostly myself over the TOJam weekend.",
+          "Because C.E.L.L. already provided the reusable engine foundation, the jam work focused on the game-specific world, menus, quests, AI, scripting, and artwork."
+        ]
+      },
+      {
+        "title": "C.E.L.L. Engine",
+        "paragraphs": [
+          "Game Over was built using my C.E.L.L. Java game engine.",
+          "At the time, C.E.L.L. already provided the standard systems I needed for rapid 2D game production."
+        ],
+        "items": [
+          "Sprite animation",
+          "Collision detection",
+          "Input",
+          "Scripting",
+          "Tile maps",
+          "Sound",
+          "GUI editing"
+        ]
+      },
+      {
+        "title": "Layered Map & Event Architecture",
+        "paragraphs": [
+          "The game world used separate data layers for visual tiles, foreground/overlay tiles, collision, and scripted actions.",
+          "A dedicated event mask triggered scripted game actions when the player entered specific tiles."
+        ],
+        "items": [
+          "Base visual tile map",
+          "Foreground/overlay tile map",
+          "Independent collision map",
+          "Independent action/trigger map"
+        ]
+      },
+      {
+        "title": "Scripted World Transitions",
+        "paragraphs": [
+          "Action-map tiles connected the generated overworld to authored locations including the castle, basement, town, store, and caves.",
+          "The same event system drove quest interactions such as the King, cat, keys, milk, and boredom-related messages."
+        ]
+      },
+      {
+        "title": "World Entities & AI",
+        "paragraphs": [
+          "The finished world contained multiple independently configured entity types with their own animation, collision, movement, and AI behaviors."
+        ],
+        "items": [
+          "Rats",
+          "Hostile mobs",
+          "Mushroom enemies",
+          "Chickens",
+          "Fish",
+          "Cat",
+          "Guards",
+          "King",
+          "Townspeople"
+        ]
+      },
+      {
+        "title": "Java2D & Audio",
+        "paragraphs": [
+          "The Java version of the engine used Java2D for rendering.",
+          "JavaZoom was used for MP3 playback."
+        ]
+      },
+      {
+        "title": "Cross-Platform Engine Lineage",
+        "paragraphs": [
+          "The engine architecture was intentionally kept basic enough to maintain parallel implementations for other platforms.",
+          "At the time I also had related C.E.L.L. implementations targeting XNA, Android, and BlackBerry."
+        ]
+      },
+      {
+        "title": "Procedural World Generation",
+        "paragraphs": [
+          "I procedurally generated the initial world-map topology using a cellular-automata cave-generation technique that I found on RogueBasin and translated/adapted into Java.",
+          "The cave-generation algorithm itself was third-party/reference material; my work was the Java adaptation and the larger world-generation and authoring pipeline built around it."
+        ]
+      },
+      {
+        "title": "Cellular Automata Configuration",
+        "paragraphs": [
+          "The generator began with randomly seeded floor/wall cells and applied cellular-automata smoothing."
+        ],
+        "items": [
+          "fill probability: 0.40",
+          "one generation configuration",
+          "r1 cutoff: 5",
+          "r2 cutoff: 2",
+          "three smoothing repetitions"
+        ]
+      },
+      {
+        "title": "128 x 128 Tile World",
+        "paragraphs": [
+          "The generated maps were 128 x 128 tiles.",
+          "Individual tiles were 64 x 50 pixels, making the resulting world relatively large for the mobile-oriented engine generation."
+        ]
+      },
+      {
+        "title": "BMP Tile-Map Encoding",
+        "paragraphs": [
+          "I saved the generated floor/wall values into a BMP and used pixel values as tile IDs.",
+          "Using a 24-bit BMP provided a very large theoretical tile-ID range while keeping the map file compact; this game used roughly 90 tile types."
+        ]
+      },
+      {
+        "title": "Separate Collision Map",
+        "paragraphs": [
+          "I maintained collision data in a separate BMP rather than deriving collision directly from the visual tile map.",
+          "This allowed visual presentation and walkability rules to evolve independently."
+        ]
+      },
+      {
+        "title": "Terrain Post-Processing",
+        "paragraphs": [
+          "After generating the initial floor/wall topology, I post-processed the map to turn the raw binary result into a more natural overworld."
+        ],
+        "items": [
+          "Detect water borders",
+          "Replace adjacent land with appropriate shoreline/border tile values",
+          "Find interior water regions",
+          "Convert selected regions into trees",
+          "Convert regions into cliffs",
+          "Convert regions into marshland and other terrain"
+        ]
+      },
+      {
+        "title": "Generate, Select, Edit",
+        "paragraphs": [
+          "I repeatedly generated worlds until I found an interesting layout rather than treating the first random result as final.",
+          "Once I selected a good world, I opened it in my GUI editor and continued authoring it by hand."
+        ]
+      },
+      {
+        "title": "Visual World Editing",
+        "paragraphs": [
+          "The generated map became the foundation rather than the finished level.",
+          "I used the C.E.L.L. GUI editor to add and refine authored gameplay areas such as towns, castles, paths, entrances, and other level details."
+        ]
+      },
+      {
+        "title": "Trigger / Action Map",
+        "paragraphs": [
+          "In addition to the visual map and collision map, I maintained another map for scripted trigger actions.",
+          "Walking over a trigger tile could execute an action script, such as warping the player from the exterior castle door to the interior castle map."
+        ]
+      },
+      {
+        "title": "Scripted RPG Structure",
+        "paragraphs": [
+          "The game combined tile-based exploration with scripted transitions, quests, AI, menus, and RPG-style interfaces.",
+          "The map-generation system and editor provided the world, while C.E.L.L.'s scripting and trigger systems connected that world into playable quest logic."
+        ]
+      },
+      {
+        "title": "Artwork & Music",
+        "paragraphs": [
+          "I created most of the game's artwork and UI during the weekend.",
+          "A friend contributed the music, and another friend created a small number of graphics including the title screen."
+        ]
+      },
+      {
+        "title": "Completed & Distributed",
+        "paragraphs": [
+          "Game Over was completed as a playable TOJam submission.",
+          "I publicly shared both a gameplay video and a downloadable build after the event."
+        ]
+      },
+      {
+        "title": "10-Minute Boredom Clock",
+        "paragraphs": [
+          "The Bored Meter is a real timed lose condition rather than just a visual joke.",
+          "The game gives the player approximately 10 minutes to complete the remaining quests before the hero becomes completely bored and the game ends."
+        ]
+      },
+      {
+        "title": "Three Main Quests",
+        "paragraphs": [
+          "The submitted game contains three tracked quests, each removed from the quest list when completed."
+        ],
+        "items": [
+          "Clean Basement: find and defeat all 4 rats",
+          "Make Dinner: collect 3 fish, 1 mushroom, 3 chickens, and 1 milk",
+          "Find the King's Cat: locate the cat hidden in a maze of trees"
+        ]
+      },
+      {
+        "title": "Projectile Combat",
+        "paragraphs": [
+          "The player has a directional projectile attack implemented through a reusable pool of 50 projectiles.",
+          "The attack is used against hostile creatures such as basement rats and mushroom enemies."
+        ]
+      },
+      {
+        "title": "Post-Game RPG Parody",
+        "paragraphs": [
+          "The inventory, magic, status, and quest systems deliberately parody an overpowered RPG hero who has already completed the important adventure.",
+          "The hero begins with legendary equipment, huge supplies, and exaggerated magic while the actual remaining objectives are chores such as catching chickens and buying milk."
+        ]
+      }      
+    ]
+  },
+
   "media": {
+    "thumbnail": "images/skills/jams/tojam.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/jams/tojam.jpg"
+    },
+
     "items": [
+      {
+        "type": "embed",
+        "src": "//www.youtube.com/embed/H3M4sNgcqJ0?rel=0"
+      },
       {
         "type": "image",
         "src": "images/skills/jams/go_1.gif"
@@ -37,18 +337,117 @@
         "type": "image",
         "src": "images/skills/jams/go_4.gif"
       }
-    ],
-    "thumbnail": "images/skills/jams/tojam.jpg",
-    "primary": {
-      "type": "image",
-      "src": "images/skills/jams/tojam.jpg"
-    }
+    ]
   },
+
   "meta": {
-    "legacySubtitle": "Java 1.5, C.E.L.L. Theme (The World is NOT Ending)",
+    "historicalNotes": [
+      "The legacy portfolio card was titled 'ToJam (2012)'; the actual game title was Game Over.",
+      "Canonical public title should be 'Game Over: TOJam 2012'.",
+      "The TOJam theme was 'The World is NOT Ending'.",
+      "The game premise begins after the hero has already defeated the final boss and saved the world.",
+      "The player completes mundane quests to keep the hero occupied and prevent boredom.",
+      "Known quests included fishing, cleaning the basement, finding the King's missing cat, and making the King's dinner.",
+      "Jamie built the game mostly himself over the weekend.",
+      "One friend created the music.",
+      "Another friend created a small number of graphics, including the title screen.",
+      "Jamie created most of the remaining art and UI.",
+      "The game used Jamie's C.E.L.L. Java engine.",
+      "Jamie's contemporary 2012 description of C.E.L.L. listed sprite animation, collision detection, input, scripting, tiles, sounds, and GUI editing.",
+      "The Java engine used Java2D and JavaZoom for MP3 playback.",
+      "Jamie also maintained related C.E.L.L. implementations targeting XNA, Android, and BlackBerry.",
+      "The procedural-generation seed algorithm came from the RogueBasin cellular-automata cave-generation tutorial/reference and was translated/adapted to Java by Jamie.",
+      "Do not publicly imply that Jamie invented the underlying cellular-automata cave algorithm.",
+      "Jamie's original Java configuration used fillprob 0.40f, one generation configuration, r1_cutoff 5, r2_cutoff 2, and reps 3.",
+      "The generated maps were 128 x 128 tiles.",
+      "Tiles were 64 x 50 pixels.",
+      "The visual tile map was stored in a 24-bit BMP.",
+      "Jamie noted that 24-bit encoding allowed a huge theoretical number of tile IDs, though the game used approximately 90.",
+      "A separate BMP stored collision information.",
+      "A separate map also stored scripted trigger/action information.",
+      "Jamie post-processed generated water boundaries into shoreline/border tile IDs.",
+      "Interior water regions could be transformed into terrain such as trees, cliffs, marshland, and related map features.",
+      "Jamie repeatedly generated maps until he found an interesting layout.",
+      "The selected procedural map was then opened in Jamie's GUI editor for manual level authoring.",
+      "Castles, towns, paths, and other authored locations were added after procedural generation.",
+      "Trigger tiles could execute scripts such as warping the player through a castle entrance into an interior map.",
+      "Game Over was publicly shared through a YouTube gameplay video and downloadable S3 build.",
+      "The downloadable build was historically hosted at https://s3.amazonaws.com/SquareParticle/gameover.zip.",
+      "The gameplay video was historically posted at https://www.youtube.com/watch?v=H3M4sNgcqJ0.",
+      "CaveGen should be treated primarily as a subsystem/tool within this project rather than a standalone invention card unless intentionally showcased separately.",
+      "This is the correct project lineage for CaveGen; it should not be associated with ShaderBox or the MolyJam 2013 voxel game.",
+      "Surviving C.E.L.L. scripts confirm four map-data layers: base visual map, overlay visual map, collision map, and event/action map.",
+      "Surviving scripts confirm authored transitions to castle, basement, town, store, cave, and other interior areas.",
+      "Entity scripts confirm dedicated AI types for rats, hostile mobs, mushroom enemies, chickens, fish, and mushrooms.",
+      "Quest/event scripts reference the King, cat, keys, milk, flowers, boredom, basement, cave, town, and store interactions.",
+      "The game configuration explicitly loads gamemusic.mp3 as its main music track.",
+      "Input mappings were data-driven through C.E.L.L. script configuration rather than being embedded only in game-specific code."      
+    ],
+
+    "confidence": {
+      "gameTitleGameOver": "high",
+      "toJam2012": "high",
+      "themeWorldIsNotEnding": "high",
+
+      "mostlySoloDevelopment": "high",
+      "musicContributor": "high",
+      "graphicsContributor": "high",
+
+      "cellEngine": "high",
+      "java2D": "high",
+      "javaZoom": "high",
+
+      "boredomPremise": "high",
+      "mundaneQuestStructure": "high",
+      "fishingQuest": "high",
+      "basementQuest": "high",
+      "missingCatQuest": "high",
+      "dinnerQuest": "high",
+
+      "rogueBasinAlgorithmSource": "high",
+      "javaAdaptationByJamie": "high",
+      "fillProbability040": "high",
+      "r1Cutoff5": "high",
+      "r2Cutoff2": "high",
+      "threeRepetitions": "high",
+
+      "map128x128": "high",
+      "tileSize64x50": "high",
+      "bmpTileMap": "high",
+      "separateCollisionBmp": "high",
+      "separateTriggerMap": "high",
+      "approximately90TileTypes": "high",
+
+      "terrainBorderPostProcessing": "high",
+      "interiorTerrainReplacement": "high",
+      "generateThenSelect": "high",
+      "guiEditorRefinement": "high",
+      "manualTownsAndCastles": "high",
+
+      "completedSubmission": "high",
+      "publicGameplayVideo": "high",
+      "publicDownloadBuild": "high"
+    },
+
+    "projectTerminology": [
+      "Game Over",
+      "TOJam 2012",
+      "The World is NOT Ending",
+      "C.E.L.L.",
+      "CaveGen",
+      "Cellular Automata",
+      "Procedural World Generation",
+      "BMP Tile Map",
+      "Collision Map",
+      "Trigger Map",
+      "Bored Meter"
+    ],
+
     "provenance": {
       "legacyCategory": "Jams",
-      "legacyIndex": 4
+      "legacyIndex": 4,
+      "legacyTitle": "ToJam (2012)",
+      "legacySubtitle": "Java 1.5, C.E.L.L. Theme (The World is NOT Ending)"
     }
   }
 }
