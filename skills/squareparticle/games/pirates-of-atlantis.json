@@ -1,0 +1,310 @@
+{
+  "schemaVersion": 2,
+  "id": "squareparticle/pirates-of-atlantis",
+  "title": "Pirates of Atlantis",
+  "project": "Pirates of Atlantis",
+
+  "platform": {
+  "label": "Application Type",
+  "values": [
+        "Working Prototype",
+        "Unreleased Side Project",
+        "Persistent Online Strategy Game",
+        "3D Naval Combat Game",
+        "Desktop + Web Hybrid"
+    ]
+  },
+
+  "technologies": [
+    "C++",
+    "DirectX",
+    "3D Graphics",
+    "Server-Side Persistence",
+    "Web Application",
+    "Asynchronous Multiplayer",
+    "Ballistic Projectile Simulation"
+  ],
+
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Solo Developer / Game Designer",
+    "total": 1,
+    "contributors": []
+  },
+
+  "roles": [
+    "Solo Developer",
+    "Game Designer",
+    "Gameplay Programmer",
+    "Network Programmer",
+    "Backend Developer",
+    "Web Developer",
+    "3D Graphics Programmer",
+    "Systems Designer",
+    "UI/UX Developer",
+    "Game Artist"
+  ],
+
+  "description": "Pirates of Atlantis was a persistent online naval strategy game I designed around short 3D combat sessions and a world that continued while the player was away. The desktop client used turn-based, Scorched Earth-style cannon combat, while player position, ships, forts, resources, and orders persisted on a server and could also be managed through a web interface. The world included conventional Earth pirates and an Atlantis faction connected through portals, with different strengths and weaknesses but an intentionally balanced competitive model where every captain ultimately played for themselves.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Project Status",
+        "paragraphs": [
+            "This was a working unreleased side project rather than a commercially released game.",
+            "The prototype implemented substantial gameplay and systems, but development stopped before a production release."
+        ]
+      },
+      {
+        "title": "Persistent Pirate World",
+        "paragraphs": [
+          "Pirates of Atlantis was designed as a persistent multiplayer world rather than a sequence of isolated matches.",
+          "Player position, ship state, forts, resources, and longer-running orders could remain active even when the desktop game was not running."
+        ]
+      },
+      {
+        "title": "Desktop + Web Hybrid",
+        "paragraphs": [
+          "The project combined a 3D C++/DirectX desktop game with a web-based strategic interface.",
+          "The desktop client was intended for active combat and exploration, while the website let players check their status, view the world map, and issue commands when they were away from the game."
+        ]
+      },
+      {
+        "title": "Short Active Sessions + Long-Term Orders",
+        "paragraphs": [
+          "The design deliberately separated high-attention gameplay from low-attention persistent strategy.",
+          "Players could spend short bursts actively fighting at home, then leave ships and other assets following orders while they were offline."
+        ]
+      },
+      {
+        "title": "Scorched Earth-Style Naval Combat",
+        "paragraphs": [
+          "Ship combat was turn-based and inspired by the ballistic aiming of Scorched Earth.",
+          "The player selected a cannon, aimed it at an enemy ship, fired, and watched the projectile travel through the 3D scene."
+        ]
+      },
+      {
+        "title": "Individual Cannon Control",
+        "paragraphs": [
+          "Cannons were treated as individual weapons rather than one abstract ship attack.",
+          "The player could aim and fire them one at a time, making trajectory and placement part of the combat decision."
+        ]
+      },
+      {
+        "title": "Earth Pirates & Atlantis",
+        "paragraphs": [
+          "The world was built around two visually and mechanically distinct faction themes: conventional Earth pirates and Atlantis.",
+          "Portals connected the normal world with Atlantis so players could move between both spaces."
+        ]
+      },
+      {
+        "title": "Balanced Faction Design",
+        "paragraphs": [
+          "The two factions were intended to have different advantages and disadvantages while remaining evenly competitive overall.",
+          "The exact historical bonus structure is no longer remembered well enough to reconstruct, so the portfolio should preserve only the broader asymmetric-but-balanced design intent."
+        ]
+      },
+      {
+        "title": "Every Captain for Themselves",
+        "paragraphs": [
+          "Faction selection did not automatically turn the game into team-vs-team warfare.",
+          "At least in the first planned version, every player ultimately competed for themselves regardless of whether they chose Earth pirates or Atlantis."
+        ]
+      },
+      {
+        "title": "Portals Between Worlds",
+        "paragraphs": [
+          "Atlantis was more than a cosmetic faction label.",
+          "The design included portals that connected the Earth-side world to an Atlantis region, creating a second visual and strategic space to explore."
+        ]
+      },
+      {
+        "title": "Coastal Forts",
+        "paragraphs": [
+          "Players could establish forts along coastlines as persistent strategic assets.",
+          "The forts were intended to act as both resource sites and defensive positions."
+        ]
+      },
+      {
+        "title": "Resource Gathering & Mining",
+        "paragraphs": [
+          "Coastal forts could gather or mine materials over time.",
+          "This gave players a reason to establish and protect fixed positions instead of relying only on mobile ships."
+        ]
+      },
+      {
+        "title": "Automated Fort Defense",
+        "paragraphs": [
+          "Forts could defend themselves with automated cannons.",
+          "Any player travelling too close could come under fire even when the fort's owner was not actively playing."
+        ]
+      },
+      {
+        "title": "Persistent Risk",
+        "paragraphs": [
+          "The combination of resource-producing forts and automated defenses made geography matter.",
+          "A valuable coastline could generate resources, but placing infrastructure there also created something another player could approach, avoid, or potentially attack."
+        ]
+      },
+      {
+        "title": "Asynchronous Multiplayer",
+        "paragraphs": [
+          "The larger multiplayer model was influenced by TradeWars 2002.",
+          "Players could issue commands and allow their ships or persistent assets to continue operating while they were offline rather than requiring everyone to be connected at the same time."
+        ]
+      },
+      {
+        "title": "Server-Persisted State",
+        "paragraphs": [
+          "Player location and game status were stored on the server so the world could persist independently from one running desktop client."
+        ]
+      },
+      {
+        "title": "Browser Strategy Interface",
+        "paragraphs": [
+          "The website acted as a companion strategy interface for the persistent world.",
+          "Players could log in, inspect their status and position, and issue longer-running orders without launching the 3D desktop game."
+        ]
+      },
+      {
+        "title": "Office Status Client",
+        "paragraphs": [
+          "I also prototyped a very small status window intended for players checking the game from work before smartphones were common.",
+          "It provided quick game-state updates and was deliberately easy to hide, allowing players to monitor their ship without running the full game."
+        ]
+      },
+      {
+        "title": "Pre-Smartphone Companion Design",
+        "paragraphs": [
+          "The desktop, web, and small status-client approach was effectively an early companion-interface model.",
+          "The goal was to let the player interact with the same persistent world through different levels of attention depending on where they were."
+        ]
+      },
+      {
+        "title": "Visual Design Freedom",
+        "paragraphs": [
+          "Part of the appeal of the Earth/Atlantis split was creative rather than purely systemic.",
+          "I wanted an excuse to design visually different ships, forts, and environments while still keeping both sides balanced within the same game."
+        ]
+      },
+      {
+        "title": "Project Status",
+        "paragraphs": [
+          "Pirates of Atlantis did not reach commercial release, but the concept and prototypes established a substantial combination of 3D naval combat, persistent multiplayer state, asynchronous orders, web integration, resource infrastructure, faction design, and companion-style interaction."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/company/piratesofatlantis.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/company/piratesofatlantis.jpg"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/company/piratesofatlantis_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/piratesofatlantis_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/piratesofatlantis_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/piratesofatlantis_4.jpg"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "Pirates of Atlantis was a substantial unreleased prototype/project rather than a shipped title.",
+      "The active game client was built in C++ with DirectX and used a 3D naval-combat presentation.",
+      "Combat was turn-based and inspired by Scorched Earth-style ballistic aiming.",
+      "Cannons could be aimed and fired individually, with the projectile visibly travelling through the scene.",
+      "Player location/status was intended to persist on a server.",
+      "The project included a web interface for checking the world map/status and issuing commands while away from the desktop client.",
+      "The broader multiplayer concept was influenced by TradeWars 2002 and emphasized asynchronous/offline orders.",
+      "Jamie prototyped a small status popup intended for office use before smartphones were common, allowing players to quickly check the game while at work.",
+      "The title refers to two intended faction/world themes: conventional Earth pirates and Atlantis.",
+      "Portals connected the Earth-side world with Atlantis.",
+      "The two faction styles were intended to have different strengths and weaknesses while remaining balanced overall.",
+      "The exact historical faction bonuses are no longer remembered and should not be reconstructed.",
+      "At least in the intended first version, faction choice did not create mandatory team warfare; every player ultimately competed for themselves.",
+      "Players could establish forts along coastlines.",
+      "Forts gathered/mined materials and acted as persistent strategic infrastructure.",
+      "Forts could defend themselves with automated cannons against players who travelled too close.",
+      "The Earth/Atlantis split was also deliberately chosen to give Jamie creative freedom to design distinct ships, forts, and environments.",
+      "Only pieces, screenshots, and partial materials may remain; do not imply that a complete source archive has been recovered.",
+      "Pirates of Atlantis should remain outside the canonical six released-game count."
+    ],
+
+    "confidence": {
+      "title": "high",
+      "cpp": "high",
+      "directX": "high",
+      "threeDNavalCombat": "high",
+
+      "scorchedEarthInfluence": "high",
+      "turnBasedCombat": "high",
+      "individualCannonAiming": "high",
+      "ballisticProjectiles": "high",
+
+      "serverPersistedState": "high",
+      "webCompanionInterface": "high",
+      "asynchronousOrders": "high",
+      "tradeWars2002Influence": "high",
+      "officeStatusClient": "high",
+
+      "earthPirateFaction": "high",
+      "atlantisFaction": "high",
+      "portalWorldConnection": "high",
+      "balancedFactionIntent": "high",
+      "exactFactionAdvantages": "low",
+      "freeForAllVersionOne": "high",
+
+      "coastalForts": "high",
+      "resourceGathering": "high",
+      "automatedFortCannons": "high",
+
+      "completeSourceRecovered": "low",
+      "commercialRelease": "low"
+    },
+
+    "projectTerminology": [
+      "Pirates of Atlantis",
+      "Earth Pirates",
+      "Atlantis",
+      "Portals",
+      "Persistent World",
+      "Asynchronous Multiplayer",
+      "Ballistic Naval Combat",
+      "Coastal Forts",
+      "Automated Cannons",
+      "Resource Gathering",
+      "Companion Interface"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Unfinished Games",
+      "primaryClient": "C++ / DirectX Desktop",
+      "supportingInterface": "Web",
+      "multiplayerModel": "Persistent / Asynchronous"
+    }
+  }
+}

@@ -332,6 +332,22 @@
       {
         "type": "image",
         "src": "images/skills/company/bcvr_4.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/bcvr_5.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/bcvr_6.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/bcvr_7.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/bcvr_8.png"
       }
     ]
   },

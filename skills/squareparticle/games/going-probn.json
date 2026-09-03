@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 2,
+  "id": "squareparticle/games/going-probn",
+  "title": "Going Prob'n",
+  "project": "Going Prob'n",
+
+  "platform": {
+  "label": "Application Type",
+  "values": [
+        "Working Prototype",
+        "Unreleased Side Project",
+        "Action Game",
+        "Physics Game",
+        "Mobile Game Prototype"
+    ]
+  },
+
+  "technologies": [
+    "C.E.L.L.",
+    "Java",
+    "Unity",
+    "C#",
+    "Android",
+    "Physics",
+    "Mesh Combining",
+    "Draw Call Optimization"
+  ],
+
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Lead Developer / Game Designer",
+    "total": 4,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Artist"
+        ],
+        "relationship": "project partner",
+        "contribution": "Created the original C.E.L.L. game's character, environment, and supporting visual artwork."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Story Contributor",
+          "Voice Contributor"
+        ],
+        "relationship": "project partner",
+        "contribution": "Helped develop the original C.E.L.L. version's comedic story, dialogue, character ideas, and voice material."
+      },
+      {
+        "count": 1,
+        "roles": [
+          "Audio Developer"
+        ],
+        "relationship": "project partner",
+        "contribution": "Created music and sound for the original C.E.L.L. version."
+      }
+    ]
+  },
+
+  "roles": [
+    "Lead Developer",
+    "Game Designer",
+    "Gameplay Programmer",
+    "Engine Developer",
+    "Physics Programmer",
+    "Unity Developer",
+    "Android Developer",
+    "Systems Designer",
+    "UI/UX Developer",
+    "Performance Optimization Developer"
+  ],
+
+  "description": "Going Prob'n began as a substantial C.E.L.L.-based action game built with my regular Square Particle collaborators. The player controls a UFO, abducts humans, converts civilians into zombies, destroys buildings, and uses absurd physics-style alien weapons while conquering cities, towns, farms, and military bases. I later revisited the same game in Unity for Android, moving the presentation into 3D, using real physics to expand the destruction and object-based weapons, and optimizing the city for mobile rendering.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Project Status",
+        "paragraphs": [
+            "This was a working unreleased side project rather than a commercially released game.",
+            "The prototype implemented substantial gameplay and systems, but development stopped before a production release."
+        ]
+      },        
+      {
+        "title": "Original C.E.L.L. Game",
+        "paragraphs": [
+          "Going Prob'n was originally developed on my C.E.L.L. cross-platform game-engine architecture.",
+          "The C.E.L.L. version established the game's core identity: side-view UFO gameplay, alien weapons, human abduction, zombie conversion, environmental destruction, world conquest, and the comedic story."
+        ]
+      },
+      {
+        "title": "C.E.L.L. Team Production",
+        "paragraphs": [
+          "The original version was a four-person Square Particle collaboration.",
+          "I led the technical implementation and game design while working with my regular artist, story/voice collaborator, and audio contributor."
+        ],
+        "items": [
+          "Jamie: Lead Developer / Game Designer",
+          "Artist: original character, environment, and game artwork",
+          "Story / voice contributor: narrative, character ideas, dialogue, and voice material",
+          "Audio contributor: music and sound"
+        ]
+      },
+      {
+        "title": "The Premise",
+        "paragraphs": [
+          "Going Prob'n followed two aliens who arrive on Earth convinced that their mission is to conquer it.",
+          "The comedy came from the fact that they had completely misunderstood their orders."
+        ]
+      },
+      {
+        "title": "Side-View UFO Gameplay",
+        "paragraphs": [
+          "The core presentation had a Choplifter-like side-view structure, with the player piloting a UFO over populated environments.",
+          "The UFO could attack, abduct, manipulate physical objects, and interact with the world below."
+        ]
+      },
+      {
+        "title": "Abduction & Zombie Conversion",
+        "paragraphs": [
+          "Humans could be abducted and converted into zombies.",
+          "Those zombies could then be used to attack other locations, turning captured civilians into part of the larger conquest loop."
+        ]
+      },
+      {
+        "title": "Physics-Style Alien Weapons",
+        "paragraphs": [
+          "The weapon design focused on playful systemic interactions rather than only conventional projectiles."
+        ],
+        "items": [
+          "Tractor beam",
+          "Reverse-gravity bombs",
+          "Improvised object weapons",
+          "Environmental destruction"
+        ]
+      },
+      {
+        "title": "Tractor Beam Combat",
+        "paragraphs": [
+          "The tractor beam could pick up objects such as cars and cows.",
+          "The player could swing captured objects beneath the UFO like pendulum weapons and use them against people, vehicles, or structures."
+        ]
+      },
+      {
+        "title": "Reverse-Gravity Bombs",
+        "paragraphs": [
+          "Reverse-gravity attacks could launch people upward toward the UFO.",
+          "This worked both as crowd control and as an alternate way to abduct civilians."
+        ]
+      },
+      {
+        "title": "Destructible World",
+        "paragraphs": [
+          "Buildings and environmental objects could be destroyed during normal play.",
+          "The destruction gave the game a Rampage-like sense of chaos while preserving the UFO-based control model."
+        ]
+      },
+      {
+        "title": "World Conquest",
+        "paragraphs": [
+          "The design extended beyond one isolated level.",
+          "The larger game world included cities, towns, farmland, and military bases that the aliens could progressively attack and conquer."
+        ]
+      },
+      {
+        "title": "Comedic Story Payoff",
+        "paragraphs": [
+          "The ending was written around the central misunderstanding.",
+          "After the protagonists proudly survey the destruction they caused, the rest of the alien armada arrives and reveals that they were actually supposed to save Earth."
+        ]
+      },
+      {
+        "title": "Later Unity / Android Remake",
+        "paragraphs": [
+          "I later returned to Going Prob'n and began rebuilding it in Unity for Android.",
+          "This was an evolution of the same game rather than a separate project, so both generations belong on the same portfolio card."
+        ]
+      },
+      {
+        "title": "3D Presentation",
+        "paragraphs": [
+          "The Unity version moved the visual presentation toward 3D while preserving the original side-view UFO gameplay concept."
+        ]
+      },
+      {
+        "title": "Unity Physics",
+        "paragraphs": [
+          "Unity's built-in physics made the game's destruction and object-based weapons much more dynamic.",
+          "Picking up, swinging, throwing, and blowing up objects became a much richer part of the gameplay."
+        ]
+      },
+      {
+        "title": "Android Draw-Call Optimization",
+        "paragraphs": [
+          "The hardest technical problem in the Unity remake was rendering a large number of city buildings efficiently on contemporary Android hardware.",
+          "I reduced draw calls by sharing textures/materials across groups of buildings and combining meshes so the city could be rendered with far fewer submissions."
+        ]
+      },
+      {
+        "title": "Systemic Game Design",
+        "paragraphs": [
+          "The game's strongest design idea was that the player's tools created unscripted moments.",
+          "A car could become a pendulum weapon, a crowd could be launched upward by reverse gravity, destroyed buildings could reshape the encounter, and abducted civilians could become units used against another location."
+        ]
+      },
+      {
+        "title": "Project Status",
+        "paragraphs": [
+          "Going Prob'n did not reach commercial release, but the original C.E.L.L. version developed into a substantial team project with a defined story, world structure, and gameplay loop.",
+          "The later Unity/Android remake extended the same design into 3D physics and mobile-performance experimentation."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/company/goingprobn.gif",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/company/goingprobn.gif"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/company/goingprobn_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/goingprobn_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/goingprobn_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/goingprobn_4.jpg"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "Going Prob'n began as a C.E.L.L.-based Square Particle game and was later partially rebuilt in Unity for Android.",
+      "The four-person team applies to the original C.E.L.L. generation.",
+      "The original team consisted of Jamie plus his recurring artist, story/voice contributor, and audio contributor.",
+      "The later Unity/Android remake was a subsequent technical evolution of the same game.",
+      "The C.E.L.L. generation established the core side-view gameplay, comedy, alien weapons, abduction, zombie conversion, destruction, and world-conquest structure.",
+      "The Unity version moved the presentation into 3D and used Unity physics to expand physical interaction and destruction.",
+      "The Unity Android version required draw-call optimization because of the large number of background city buildings.",
+      "Jamie reduced draw calls through shared textures/materials and mesh combining.",
+      "Only partial source/material appears to survive, so public technical claims should remain grounded in direct memory and surviving media.",
+      "Going Prob'n is a substantial unreleased project and must remain outside the canonical six released-game count."
+    ],
+
+    "confidence": {
+      "title": "high",
+      "originalCellVersion": "high",
+      "cellTeamSizeFour": "high",
+      "cellTeamAttribution": "high",
+
+      "unityRemake": "high",
+      "androidTarget": "high",
+
+      "sideViewUfoGameplay": "high",
+      "choplifterInfluence": "high",
+      "humanAbduction": "high",
+      "zombieConversion": "high",
+      "tractorBeamWeapons": "high",
+      "reverseGravityWeapons": "high",
+      "destructibleBuildings": "high",
+      "worldConquestStructure": "high",
+
+      "comedicNarrative": "high",
+      "endingTwist": "high",
+
+      "unityPhysics": "high",
+      "meshCombining": "high",
+      "sharedTexturesMaterials": "high",
+      "drawCallOptimization": "high",
+
+      "completeOriginalSourceRecovered": "low",
+      "commercialRelease": "low"
+    },
+
+    "projectTerminology": [
+      "Going Prob'n",
+      "C.E.L.L.",
+      "Unity Remake",
+      "Tractor Beam",
+      "Reverse Gravity",
+      "Abduction",
+      "Zombie Conversion",
+      "Destructible Environment",
+      "Draw Call Optimization",
+      "Mesh Combining"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Unfinished Games",
+      "originalEngine": "C.E.L.L.",
+      "laterEngine": "Unity",
+      "laterTarget": "Android"
+    }
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 2,
+  "id": "squareparticle/game-prototypes-concepts",
+  "title": "Game Prototypes & Concepts",
+  "project": "Square Particle",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Working Prototypes",
+      "Unreleased Side Projects",
+      "Game Concepts",
+      "Gameplay Experiments"
+    ]
+  },
+
+  "technologies": [
+    "C.E.L.L.",
+    "Java",
+    "C++",
+    "DirectX",
+    "Unity",
+    "C#",
+    "Android",
+    "Xbox 360",
+    "Game Systems Design",
+    "Event-Driven Architecture"
+  ],
+
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Game Designer / Lead Developer",
+    "total": null,
+    "contributors": []
+  },
+
+  "roles": [
+    "Game Designer",
+    "Lead Developer",
+    "Gameplay Programmer",
+    "Engine Developer",
+    "Systems Designer",
+    "UI/UX Developer",
+    "Game Artist",
+    "Technical Designer",
+    "Rapid Prototyper"
+  ],
+
+  "description": "Alongside my larger games, I have built many working prototypes and side projects to explore new mechanics, engine ideas, platforms, visual styles, and production approaches. Some were short experiments, while others developed into substantial playable projects before being set aside. These were development prototypes and unreleased side projects rather than commercially released games.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Project Status",
+        "paragraphs": [
+          "The projects collected here are working concepts, prototypes, and unreleased side projects.",
+          "They are included to show game-design breadth, technical experimentation, collaboration, and the evolution of ideas that sometimes influenced later engines and games."
+        ]
+      },
+      {
+        "title": "Revisionist: Tower Defense Prototype",
+        "paragraphs": [
+          "Revisionist was a multi-month tower-defense project built using my C.E.L.L. engine while I was exploring the possibility of forming another game company.",
+          "I worked with another developer and three artists distributed around the world."
+        ],
+        "items": [
+          "C.E.L.L.-based gameplay",
+          "Map / strategic presentation",
+          "Playable tower-defense levels",
+          "Five-person distributed development group",
+          "Game design, engine integration, and technical leadership"
+        ]
+      },
+      {
+        "title": "Revisionist Team History",
+        "paragraphs": [
+          "The original project was being developed around the reusable C.E.L.L. architecture.",
+          "The other developer was still learning game development and eventually rebuilt the work into a separate hard-coded tower-defense implementation with a different story and artwork.",
+          "At that point the project had moved far enough away from the original shared direction that I stepped away."
+        ]
+      },
+      {
+        "title": "Dragon Run",
+        "paragraphs": [
+          "Dragon Run was a playful team prototype created by converting the existing Santa's Route game into a dragon-themed version.",
+          "Because it was a quick reuse experiment, some Santa-era graphics were still visible while the new dragon gameplay and presentation were being developed."
+        ],
+        "items": [
+          "C.E.L.L. engine reuse",
+          "Existing-game conversion",
+          "Rapid theme and gameplay experimentation",
+          "Team-based prototype development"
+        ]
+      },
+      {
+        "title": "H-0P3 Xbox Prototype",
+        "paragraphs": [
+          "I also experimented with extending the H-0P3 space-game direction toward Xbox.",
+          "The prototype explored a more elaborate space-combat presentation while carrying forward the ships, combat, and systems-driven ideas from the earlier H-0P3 lineage."
+        ],
+        "items": [
+          "Xbox-oriented prototype",
+          "Space combat",
+          "3D presentation",
+          "Continuation of the H-0P3 design lineage"
+        ]
+      },
+      {
+        "title": "Kingdom Earth",
+        "paragraphs": [
+          "Kingdom Earth was another RPG-style prototype and is especially useful in my portfolio because it was the project where I built an Event Dispatcher architecture.",
+          "The dispatcher helped decouple gameplay systems by allowing parts of the game to publish and respond to events rather than requiring direct dependencies between every subsystem."
+        ],
+        "items": [
+          "RPG / adventure prototype",
+          "Event-driven architecture",
+          "Event Dispatcher",
+          "Gameplay-system decoupling"
+        ]
+      },
+      {
+        "title": "Kingdom Earth Artwork Attribution",
+        "paragraphs": [
+          "The surviving Kingdom Earth screenshot combines prototype gameplay with artwork from multiple sources.",
+          "Not all graphics visible in the screenshot were created by me, so the image is presented as evidence of the working prototype rather than as a claim of sole art production."
+        ]
+      },
+      {
+        "title": "Space Quest 3D Prototype",
+        "paragraphs": [
+          "I experimented with rebuilding the feel of a classic Space Quest-style adventure in Unity as a 3D game.",
+          "The prototype explored how a traditional adventure-game presentation could translate into a fully modeled environment with characters, rooms, props, and direct 3D staging."
+        ],
+        "items": [
+          "Unity",
+          "3D environment building",
+          "Adventure-game experimentation",
+          "Character and scene staging"
+        ]
+      },
+      {
+        "title": "Space Strategy Board Game",
+        "paragraphs": [
+          "I also designed a digital space-strategy board-game prototype that I think of as Battleship meets Risk in space.",
+          "The design combined a strategic hex map, territory control, fleets, resources, faction identities, and a separate tactical combat layer."
+        ],
+        "items": [
+          "Hex-based strategic map",
+          "Territory control",
+          "Fleet management",
+          "Resources",
+          "Multiple factions",
+          "Turn-based strategy",
+          "Tactical ship combat"
+        ]
+      },
+      {
+        "title": "Strategic Map",
+        "paragraphs": [
+          "The larger map used connected hex territories containing planets and strategic locations.",
+          "Players could move fleets through the map, compete for territory and resources, and interact with multiple faction powers."
+        ]
+      },
+      {
+        "title": "Tactical Fleet Combat",
+        "paragraphs": [
+          "Combat moved from the larger strategic layer into a more focused ship battle interface.",
+          "The tactical presentation emphasized individual ships, target selection, weapons, hull condition, engineering, and combat decisions while preserving the board-game-like structure of the larger design."
+        ]
+      },
+      {
+        "title": "Design Laboratory",
+        "paragraphs": [
+          "These projects were useful because I did not need every prototype to become a commercial game.",
+          "They gave me room to test ideas quickly, reuse existing engine technology, explore new genres, try different interaction models, and build architectural pieces that could influence later work."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/company/revisionist.jpg",
+
+    "primary": {
+      "type": "youtube",
+      "id": "_INxF5p1qfw",
+      "title": "Revisionist Tower Defense Prototype"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/company/prototype_dragonrun.jpg",
+        "title": "Dragon Run"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/prototype_h0p3_xbox.jpg",
+        "title": "H-0P3 Xbox Prototype"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/prototype_kingdomearth.jpg",
+        "title": "Kingdom Earth"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/prototype_spacequest3d.jpg",
+        "title": "Space Quest 3D Prototype"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/prototype_spaceboardgame_map.jpg",
+        "title": "Space Strategy Board Game: Strategic Map"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/prototype_spaceboardgame_combat.jpg",
+        "title": "Space Strategy Board Game: Tactical Combat"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "This card replaces the older negative 'Unfinished Games' framing with a broader working-prototype / concept-project framing.",
+      "These projects are not part of Jamie's canonical six released games.",
+      "Going Prob'n and Pirates of Atlantis were removed from this umbrella because they are substantial enough for their own standalone working-prototype cards.",
+      "GameEngineTS prototypes should remain separate and eventually receive their own GameEngineTS Prototypes & Samples card.",
+      "Revisionist remains the primary media item because the existing video shows both map-level presentation and level gameplay.",
+      "Revisionist was developed over several months using C.E.L.L. with another developer and three internationally distributed artists.",
+      "The original Revisionist collaboration diverged after the second developer rebuilt the project as a separate hard-coded tower-defense game with changed story and artwork.",
+      "Public wording should keep that history neutral and avoid interpersonal criticism.",
+      "Dragon Run was a team conversion/remix of Santa's Route using dragons and retained some Santa graphics during prototype development.",
+      "The H-0P3 Xbox material represents an unreleased Xbox-oriented continuation/prototype and must not be treated as a shipped H-0P3 Xbox release.",
+      "Kingdom Earth is important partly because Jamie built the Event Dispatcher architecture in that project.",
+      "Not all artwork visible in the surviving Kingdom Earth screenshot was created by Jamie.",
+      "The Space Quest 3D project was an unreleased Unity prototype exploring a 3D reinterpretation of a classic adventure-game style.",
+      "The space strategy board-game prototype is remembered as 'Battleship meets Risk in space.'",
+      "The space strategy prototype included hex territories, fleets, resources, factions, and a tactical ship-combat layer.",
+      "The strategic and tactical screenshots belong to the same space-board-game prototype."
+    ],
+
+    "confidence": {
+      "umbrellaUnreleasedStatus": "high",
+
+      "revisionistTitle": "high",
+      "revisionistCell": "high",
+      "revisionistMultiMonthDevelopment": "high",
+      "revisionistTeamSizeFive": "high",
+      "revisionistDistributedArtists": "high",
+      "revisionistPrimaryVideo": "high",
+
+      "dragonRun": "high",
+      "dragonRunSantaRouteConversion": "high",
+      "dragonRunTeamProject": "high",
+
+      "h0p3XboxPrototype": "high",
+      "h0p3XboxCommercialRelease": "low",
+
+      "kingdomEarth": "high",
+      "kingdomEarthEventDispatcher": "high",
+      "kingdomEarthAllArtworkByJamie": "low",
+
+      "spaceQuest3dPrototype": "high",
+      "spaceQuestUnity": "high",
+
+      "spaceBoardGame": "high",
+      "spaceBoardGameBattleshipRiskConcept": "high",
+      "spaceBoardGameHexMap": "high",
+      "spaceBoardGameFleetSystems": "high",
+      "spaceBoardGameResources": "high",
+      "spaceBoardGameTacticalCombat": "high"
+    },
+
+    "projectTerminology": [
+      "Game Prototypes & Concepts",
+      "Working Prototypes",
+      "Unreleased Side Projects",
+      "Revisionist",
+      "Dragon Run",
+      "H-0P3 Xbox Prototype",
+      "Kingdom Earth",
+      "Event Dispatcher",
+      "Space Quest 3D",
+      "Space Strategy Board Game"
+    ],
+
+    "provenance": {
+      "legacyTitle": "Unfinished Games",
+      "replacementTitle": "Game Prototypes & Concepts",
+      "primaryMediaProject": "Revisionist",
+      "releasedGameCountImpact": "none"
+    }
+  }
+}
