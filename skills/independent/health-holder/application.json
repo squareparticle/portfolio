@@ -3,33 +3,201 @@
   "id": "independent/health-holder/application",
   "title": "Health Holder",
   "project": "Health Holder",
+
   "platform": {
-    "label": "Platform",
-    "values": ["Desktop Application"]
+    "label": "Application Type",
+    "values": [
+      "Desktop Application",
+      "Nutrition Tracking Software"
+    ]
   },
-  "technologies": ["Java"],
+
+  "technologies": [
+    "Java",
+    "Hydra-Gen",
+    "XML"
+  ],
+
   "date": {
     "from": null,
     "to": null,
     "display": false
   },
-  "description": "Worked with a nutritionist to turn her dietary program into a desktop application. Health Holder tracked food-group targets and detailed nutritional values, supported daily meal and exercise scheduling, and provided status and charting tools to help users monitor progress.",
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Software Developer / System Designer",
+    "total": 2,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Nutritionist",
+          "Domain Expert"
+        ],
+        "relationship": "collaborator",
+        "contribution": "Provided the dietary methodology and nutrition-domain requirements that I translated into the application."
+      }
+    ]
+  },
+
+  "roles": [
+    "Software Developer",
+    "System Designer",
+    "Desktop Application Developer",
+    "UI/UX Developer",
+    "Data Modeling"
+  ],
+
+  "description": "I worked with a nutritionist to turn her dietary program into a Java desktop application built on my Hydra-Gen application engine. Health Holder tracked food-group targets and detailed nutritional values, supported daily meal and exercise scheduling, and provided status and charting tools to help users monitor their progress.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Nutrition Tracking",
+        "paragraphs": [
+          "I translated the nutritionist's dietary system into a structured application that tracked both food-group targets and detailed nutritional information.",
+          "Users could monitor values such as calories, fat, cholesterol, sodium, carbohydrates, fibre, sugar, protein, vitamins, and minerals."
+        ]
+      },
+      {
+        "title": "Food & Nutrient Model",
+        "paragraphs": [
+          "The application used structured domain objects for foods, portions, food groups, nutrient definitions, time periods, schedules, and daily reports.",
+          "Food records supported serving conversions such as cups, grams, and ounces together with food-group and nutrient values."
+        ]
+      },
+      {
+        "title": "Meal & Exercise Scheduling",
+        "paragraphs": [
+          "Users could plan meals and exercise across daily and weekly schedules rather than simply recording food after it had been consumed.",
+          "The application organized activity into configurable time slots and day-based schedules."
+        ]
+      },
+      {
+        "title": "Progress & Reporting",
+        "paragraphs": [
+          "Health Holder included status and reporting views that helped users compare their activity and nutrition against their targets.",
+          "The interface also included charting and daily-report functionality for reviewing progress."
+        ]
+      },
+      {
+        "title": "Built with Hydra-Gen",
+        "paragraphs": [
+          "I built Health Holder on my Hydra-Gen application engine rather than creating an unrelated one-off Java UI.",
+          "The application used Hydra-Gen's reusable widget, navigation, session, display, and XML infrastructure, demonstrating that the platform could support applications well outside its original educational-software domain."
+        ]
+      },
+      {
+        "title": "Reusable Application Components",
+        "paragraphs": [
+          "Health Holder was assembled from application-specific widgets and views layered on top of Hydra-Gen.",
+          "Examples included food entry, food search, calorie tracking, eating-time configuration, schedule editing, food-group displays, information views, and today's-status views."
+        ],
+        "items": [
+          "Add Food",
+          "Find Food",
+          "Calories",
+          "Food Groups",
+          "Eating Times",
+          "Schedule",
+          "Daily Status"
+        ]
+      },
+      {
+        "title": "Working with a Domain Expert",
+        "paragraphs": [
+          "The project required turning a specialist's existing dietary methodology into software concepts, data structures, workflows, and user interfaces.",
+          "That made Health Holder as much a requirements-and-domain-modeling project as a programming exercise."
+        ]
+      }
+    ]
+  },
+
   "media": {
     "thumbnail": "images/skills/company/health.jpg",
+
     "primary": {
       "type": "image",
       "src": "images/skills/company/health.jpg"
     },
+
     "items": [
-      {"type": "image", "src": "images/skills/company/health_1.jpg"},
-      {"type": "image", "src": "images/skills/company/health_2.jpg"},
-      {"type": "image", "src": "images/skills/company/health_3.jpg"},
-      {"type": "image", "src": "images/skills/company/health_4.jpg"}
+      {
+        "type": "image",
+        "src": "images/skills/company/health_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/health_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/health_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/health_4.jpg"
+      }
     ]
   },
+
   "meta": {
-    "technologyVersions": {
-      "java": "1.2"
+    "historicalNotes": [
+      "Health Holder was developed in Java in collaboration with a nutritionist whose dietary methodology formed the application's domain requirements.",
+      "The original legacy card identified Java 1.2.",
+      "Surviving source confirms that Health Holder was built directly on the Hydra-Gen application engine.",
+      "Health Holder imports and uses Hydra-Gen session, widget, display, navigation, and XML infrastructure.",
+      "This is direct surviving-code evidence that Hydra-Gen was a general-purpose application platform rather than being limited to educational applications.",
+      "Health Holder contains application-specific widgets including AddFoodWidget, CaloriesWidget, EatTimesWidget, EditSlotWidget, FindFoodWidget, GroupsWidget, InfoWidget, ScheduleWidget, and TodayWidget.",
+      "The domain model includes FoodItem, Facts, Portion, Groups, GroupDefinition, NutrientDefinition, TimeDefinition, TimeSlot, Day, and DayReport structures.",
+      "FoodItem supports portion conversions including cups, grams, and ounces together with nutritional and food-group values.",
+      "JavaZoom/JLayer source is present alongside the Hydra-Gen runtime used by Health Holder.",
+      "Hydra-Gen contains Hydra-specific JLayer integration classes including HydraDecoder, HydraAdvancedPlayer, and HydraSoundAudioDevice.",
+      "The JavaZoom/JLayer integration should be treated as Hydra-Gen's shared audio/playback infrastructure rather than as a Health Holder-specific technology.",
+      "Hydra-Gen's shared audio subsystem could therefore be inherited by applications across the platform, including the 60+ educational programs that required speech, music, sound effects, or other audio.",
+      "The Spelling List Editor had additional recording requirements, but the surviving evidence does not establish that it was the original reason JavaZoom/JLayer was integrated.",
+      "Do not list JavaZoom/JLayer as a headline Health Holder technology unless future source archaeology shows that Health Holder itself actively used audio."
+    ],
+
+    "confidence": {
+      "javaApplication": "high",
+      "hydraGenApplication": "high",
+      "nutritionistCollaboration": "high",
+      "nutritionTracking": "high",
+      "foodGroupTracking": "high",
+      "nutrientTracking": "high",
+      "mealScheduling": "high",
+      "exerciseScheduling": "high",
+      "dailyReporting": "high",
+      "charting": "high",
+      "structuredFoodModel": "high",
+      "xmlInfrastructure": "high",
+      "hydraGenGeneralPurposeEvidence": "high",
+      "javaZoomSharedHydraInfrastructure": "high",
+      "javaZoomHealthHolderSpecificUse": "low",
+      "exactProjectDate": "unknown"
+    },
+
+    "projectTerminology": [
+      "Health Holder",
+      "Hydra-Gen",
+      "Nutrition Tracking",
+      "Food Groups",
+      "Nutrients",
+      "Portions",
+      "Meal Scheduling",
+      "Exercise Scheduling",
+      "Daily Report",
+      "Java"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Company",
+      "legacyTechnology": "Java",
+      "legacyJavaVersion": "1.2",
+      "survivingSource": "Health Holder Java source excluding the main Hydra-Gen source tree",
+      "architectureEvidence": "Direct Hydra-Gen imports and application-specific Hydra-Gen widgets/views"
     }
   }
 }

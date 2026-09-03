@@ -1,37 +1,223 @@
 {
   "schemaVersion": 2,
-  "id": "cd-software-developers/a-helping-hand/application",
+  "id": "cd-software-developers/a-helping-hand",
   "title": "A Helping Hand",
   "project": "A Helping Hand",
+
   "platform": {
     "label": "Application Type",
     "values": [
-      "Application"
+      "Commercial Desktop Application",
+      "Windows Application",
+      "Estate Planning Software"
     ]
   },
+
   "technologies": [
     "Visual Basic 6",
-    "OLE"
+    "OLE",
+    "ADO",
+    "ADOX",
+    "ActiveX",
+    "Microsoft Jet",
+    "Windows API"
   ],
+
   "date": {
-    "from": null,
-    "to": null,
-    "display": false
+    "from": 2002,
+    "to": 2004,
+    "display": true
   },
-  "description": "I became a stake stakeholder in the early days of CD Software Developers when a friend and I developed an application they sold to funeral homes.",
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Developer / Partner",
+    "total": 7,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Developer"
+        ],
+        "relationship": "business partner",
+        "contribution": "Co-developed the application with me."
+      },
+      {
+        "count": 2,
+        "roles": [
+          "Sales"
+        ],
+        "relationship": "business partners",
+        "contribution": "Handled sales and helped bring the product to funeral-home customers."
+      },
+      {
+        "count": 3,
+        "roles": [
+          "Investor"
+        ],
+        "relationship": "business partners",
+        "contribution": "Invested in the company and participated as partners in the business."
+      }
+    ]
+  },
+
+  "roles": [
+    "Software Developer",
+    "Desktop Application Developer",
+    "UI/UX Developer",
+    "Database Developer",
+    "Business Partner",
+    "Shareholder"
+  ],
+
+  "description": "A Helping Hand was a commercial Windows estate-planning application that I co-developed with a friend during the early years of CD Software Developers. The application was built primarily in Visual Basic 6 and used OLE/ActiveX-era Windows technologies, database-backed content, rich-text interfaces, navigation trees, forms, printing, and supporting automation components. A surviving source snapshot dates to 2002, while a Version 1.0 CD distribution is documented from March 2004.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Commercial Desktop Application",
+        "paragraphs": [
+          "A Helping Hand was developed as a packaged Windows application intended for distribution to funeral homes and their customers.",
+          "The software organized estate-planning information, reference material, financial topics, forms, and related guidance inside a structured desktop interface."
+        ]
+      },
+      {
+        "title": "Visual Basic 6 Application",
+        "paragraphs": [
+          "The surviving source is a Visual Basic 6 project rather than VB.NET.",
+          "The application used traditional VB6 forms, modules, classes, ActiveX controls, OLE automation, and Windows APIs."
+        ]
+      },
+      {
+        "title": "Database & Data Access",
+        "paragraphs": [
+          "The application used Microsoft's ADO-era data-access stack, including ADO and ADOX components, along with Jet-related database technology."
+        ],
+        "items": [
+          "ADO data access",
+          "ADOX schema/catalog access",
+          "Microsoft Jet components",
+          "Structured estate and user data",
+          "Database-backed application content"
+        ]
+      },
+      {
+        "title": "Desktop UI",
+        "paragraphs": [
+          "The application used a multi-pane Windows interface with hierarchical navigation, rich formatted content, menus, dialogs, forms, and supporting reference tools."
+        ],
+        "items": [
+          "Tree-based navigation",
+          "Rich text presentation",
+          "Form-based data entry",
+          "Printing",
+          "Dialog and common-control integration",
+          "Windows desktop UI"
+        ]
+      },
+      {
+        "title": "OLE / Automation Components",
+        "paragraphs": [
+          "The project used OLE and ActiveX-era integration patterns typical of Windows desktop software of the period.",
+          "The surviving source also includes a separate VB6 project that built an OLE DLL supporting the application."
+        ]
+      },
+      {
+        "title": "Distribution & Installation",
+        "paragraphs": [
+          "The application was distributed on CD with a Windows installer and supporting installation documentation.",
+          "The confirmed Version 1.0 distribution is dated March 28, 2004 and supported Windows 95, 98, Me, 2000, and XP."
+        ],
+        "items": [
+          "CD-ROM distribution",
+          "SETUP.EXE installer",
+          "ActiveX/runtime dependencies",
+          "Adobe Acrobat Reader integration",
+          "Installation troubleshooting",
+          "Legacy Windows compatibility"
+        ]
+      },
+      {
+        "title": "Early Business Experience",
+        "paragraphs": [
+          "The project was also part of my early experience as a software-business stakeholder.",
+          "I became a shareholder in CD Software Developers while helping build a real commercial product intended for sale to funeral homes."
+        ]
+      },
+      {
+        "title": "Project Timeline",
+        "paragraphs": [
+          "The surviving source snapshot appears to represent the application around 2002.",
+          "Later documentation confirms a Version 1.0 CD build in March 2004. I do not treat that as evidence of two full years of continuous development; the later period may have included smaller edits, content changes, testing, packaging, and installer work."
+        ]
+      }
+    ]
+  },
+
   "media": {
-    "items": [],
     "thumbnail": "images/skills/company/vb.jpg",
+
     "primary": {
       "type": "image",
       "src": "images/skills/company/vb.jpg"
-    }
+    },
+
+    "items": []
   },
+
   "meta": {
-    "legacySubtitle": "Visual Basic 6, OLE",
+    "historicalNotes": [
+      "A Helping Hand was developed during the early years of CD Software Developers and sold/distributed for use by funeral homes.",
+      "Jamie co-developed the application with a friend and became a shareholder in the company.",
+      "The surviving source snapshot is Visual Basic 6 source, not VB.NET.",
+      "The main surviving VB6 project builds HelpingHand.exe.",
+      "The source uses VB6 forms/modules/classes and OLE/ActiveX-era Windows technologies.",
+      "The surviving code references ADO, ADOX, Jet-related components, RichTextBox, FlexGrid, CommonDialog, media controls, and Windows API calls.",
+      "A second VB6 project builds an OLE DLL used as part of the application architecture.",
+      "Source/project metadata strongly anchors the surviving code to 2002.",
+      "A Version 1.0 README is dated March 28, 2004 and documents CD-ROM installation and Windows 95 through XP compatibility.",
+      "The README copyright is 2002-2004 CDSoftware Developers Inc.",
+      "Do not publicly imply that the application required two years of continuous development.",
+      "Safest chronology: application substantially built around 2002, potentially edited/maintained afterward, with a confirmed 2004 Version 1.0 CD distribution.",
+      "The 2004 build may represent packaging/installer/documentation work in addition to or instead of major application-code changes.",
+      "CD Software Developers had seven partners associated with this project/business: Jamie, one additional developer, two sales partners, and three investor partners.",
+      "All seven participants were partners in the business.",
+      "Jamie was one of the two developers and also a shareholder/partner."
+    ],
+
+    "confidence": {
+      "visualBasic6": "high",
+      "ole": "high",
+      "ado": "high",
+      "adox": "high",
+      "activeX": "high",
+      "jetDatabase": "high",
+      "commercialDesktopApplication": "high",
+      "funeralHomeDistribution": "high",
+      "shareholderRole": "high",
+      "twoDeveloperTeam": "high",
+      "sourceSnapshot2002": "high",
+      "version1CdBuild2004": "high",
+      "continuousDevelopmentThrough2004": "low",
+      "majorCodeChangesAfter2002": "unknown"
+    },
+
+    "projectTerminology": [
+      "A Helping Hand",
+      "CD Software Developers",
+      "Visual Basic 6",
+      "OLE",
+      "ADO",
+      "ActiveX",
+      "Estate Planning",
+      "Commercial Desktop Application"
+    ],
+
     "provenance": {
       "legacyCategory": "Company",
-      "legacyIndex": 5
+      "legacyIndex": 5,
+      "sourceSnapshot": "2002-era VB6 source",
+      "confirmedDistribution": "Version 1.0 CD, March 28 2004"
     }
   }
 }

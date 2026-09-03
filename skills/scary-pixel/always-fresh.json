@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 2,
+  "id": "scary-pixel/always-fresh",
+  "title": "Always Fresh",
+  "project": "Always Fresh",
+
+  "platform": {
+    "label": "Application Type",
+    "values": [
+      "Functional Business Prototype",
+      "Retail Operations Software",
+      "Production & Waste Management"
+    ]
+  },
+
+  "technologies": [
+    "C#",
+    ".NET",
+    "Java",
+    "C++",
+    "Win32",
+    "ADO.NET",
+    "OLE DB",
+    "Microsoft Access",
+    "XML",
+    "Windows Forms"
+  ],
+
+  "date": {
+    "from": 2003,
+    "to": 2004,
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Developer / System Designer",
+    "total": 2,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Developer",
+          "Business / Proposal Lead"
+        ],
+        "relationship": "project partner",
+        "contribution": "Co-developed the prototype with me and led the business relationship that resulted in a presentation to Tim Hortons corporate."
+      }
+    ]
+  },
+
+  "roles": [
+    "Software Developer",
+    "System Designer",
+    "Desktop Application Developer",
+    "Database Developer",
+    "UI/UX Developer",
+    "Reporting Developer",
+    "Tools Developer"
+  ],
+
+  "description": "Always Fresh was a functional bakery production and waste-management system that I built with a friend for a Tim Hortons corporate proposal. The prototype helped staff record production and waste, monitor product freshness and shelf life, review historical performance, and analyze waste by product and time period. The broader prototype included a C#/.NET operational application, Java reporting tools, and a small native C++/Win32 helper utility. Our proposal reached a corporate presentation but was ultimately not awarded to us.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "Production & Freshness Management",
+        "paragraphs": [
+          "Always Fresh was designed around the day-to-day problem of producing enough bakery product to meet demand without creating unnecessary waste.",
+          "Staff could record how many items were made or thrown out at different times during the day while the system tracked product freshness and production history."
+        ]
+      },
+      {
+        "title": "Made vs. Thrown",
+        "paragraphs": [
+          "Production activity was recorded by product and time period, including separate quantities for items made and items thrown away.",
+          "This provided the raw data needed to understand production patterns and identify products or periods associated with excessive waste."
+        ]
+      },
+      {
+        "title": "Shelf-Life Monitoring",
+        "paragraphs": [
+          "Products had configurable shelf-life information so the application could determine which batches were still good, approaching expiration, or expired.",
+          "The monitoring interface grouped products according to their current freshness state rather than relying on staff to manually calculate expiration times."
+        ],
+        "items": [
+          "Good",
+          "Expiring",
+          "Expired"
+        ]
+      },
+      {
+        "title": "Production-Time Scheduling",
+        "paragraphs": [
+          "The production interface organized bakery activity around hourly production periods.",
+          "Staff could associate production quantities with specific times so current inventory and freshness could be understood in the context of when each batch was produced."
+        ]
+      },
+      {
+        "title": "Historical Review",
+        "paragraphs": [
+          "The application retained historical production and waste information so previous dates and production periods could be reviewed.",
+          "This turned the prototype into more than a live entry screen: production decisions could be compared against actual historical results."
+        ]
+      },
+      {
+        "title": "Product Administration",
+        "paragraphs": [
+          "I also built supporting product-management tooling instead of hard-coding the bakery catalog into the main application.",
+          "Product information included fields such as product name, category, price, quantity, shelf life, description, and image data."
+        ]
+      },
+      {
+        "title": "C# / .NET Operational Application",
+        "paragraphs": [
+          "The surviving main implementation is a C#/.NET desktop application with separate areas for production entry, freshness monitoring, historical review, login, and product administration.",
+          "The project used a database-backed architecture rather than functioning as a static demonstration."
+        ]
+      },
+      {
+        "title": "Data Architecture",
+        "paragraphs": [
+          "The prototype used Microsoft database technologies together with XML-based production records.",
+          "Product configuration, waste information, and daily production history were separated into appropriate data structures rather than stored directly in the UI."
+        ],
+        "items": [
+          "Microsoft Access / Jet data",
+          "OLE DB / ADO.NET access",
+          "Product database",
+          "Waste data",
+          "Serialized XML production history"
+        ]
+      },
+      {
+        "title": "Production Record Model",
+        "paragraphs": [
+          "Historical production records captured operational context such as product, category, production time, made quantity, thrown quantity, record type, baker, and saved date.",
+          "This allowed reporting to analyze both individual products and broader production patterns."
+        ]
+      },
+      {
+        "title": "Java Reporting Application",
+        "paragraphs": [
+          "Java was used for a separate reporting and analysis application rather than as a rewrite of the main C# program.",
+          "The reporting interface could analyze weekly production and waste by product, display waste percentages, select historical periods and product categories, and produce printable reports."
+        ]
+      },
+      {
+        "title": "Waste Analytics",
+        "paragraphs": [
+          "The reporting tool compared production and waste across days of the week and calculated waste percentages for individual products.",
+          "A manager could therefore see patterns such as consistently overproducing a particular product on certain days rather than evaluating waste only as an overall total."
+        ]
+      },
+      {
+        "title": "Browser & Printing Support",
+        "paragraphs": [
+          "The Java reporting interface included printing support and options for opening generated chart/report content in the system's default web browser.",
+          "This provided another presentation path for reports beyond the desktop application itself."
+        ]
+      },
+      {
+        "title": "Native C++ / Win32 Helper",
+        "paragraphs": [
+          "The prototype suite also included a small native C++/Win32 helper executable used for supporting file and printing operations.",
+          "The surviving source includes low-level Windows printer handling and product-list processing using Win32 APIs."
+        ],
+        "items": [
+          "CreateFile / ReadFile",
+          "Windows printer device contexts",
+          "StartDoc / StartPage",
+          "Native text printing",
+          "Product-list parsing"
+        ]
+      },
+      {
+        "title": "Multi-Application Prototype",
+        "paragraphs": [
+          "Always Fresh was therefore not one isolated executable.",
+          "The working prototype combined the primary operational application with reporting, administration, database, and native support utilities, using different technologies where they made sense."
+        ]
+      },
+      {
+        "title": "Tim Hortons Proposal",
+        "paragraphs": [
+          "The system was built as a live proposal for Tim Hortons rather than as a purely speculative mockup.",
+          "My project partner secured a corporate meeting where the functional concept was presented."
+        ]
+      },
+      {
+        "title": "Proposal Outcome",
+        "paragraphs": [
+          "The proposal advanced to Tim Hortons corporate but was ultimately not awarded to our team.",
+          "I kept the working prototype and supporting development material as an example of early business-software architecture, operational UX, and data-driven product design."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/company/th.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/company/th.jpg"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/company/alwaysfresh_report.jpg",
+        "title": "Weekly Product & Waste Reporting"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "Always Fresh was a substantial functional prototype built for a Tim Hortons corporate proposal.",
+      "Jamie and one project partner developed the system together.",
+      "The partner also drove the business/proposal relationship and obtained the corporate presentation.",
+      "The surviving implementation shows that Always Fresh was a multi-application tool suite rather than one UI mockup.",
+      "The main surviving operational application is C#/.NET.",
+      "The C# solution includes the primary Tim Hortons application plus supporting ProductEntry, THUtil, and database/tooling code.",
+      "The operational application includes production entry, Made/Thrown tracking, freshness monitoring, historical review, product administration, login, and date/time-oriented workflows.",
+      "Product data was database-backed and included information such as product name, category, price, quantity, shelf life, description, and image data.",
+      "Separate waste-related data also existed.",
+      "Daily production records were represented in XML and included fields such as product, category, time, made quantity, thrown quantity, type, baker, and date.",
+      "Freshness-monitoring code categorized products as good, expiring, or expired based on product life and current time.",
+      "The Java application was a separate reporting/analysis tool, not a Java remake of the C# operational application.",
+      "The surviving Java release/report screenshot shows weekly product reporting, Made/Thrown data, waste percentage calculation, historical week selection, category selection, printing, and browser-view functionality.",
+      "Visible reporting dates in surviving Java material cover May-June 2003.",
+      "A native C++/Win32 helper source file is dated June 1, 2003.",
+      "The C++ helper was an executable rather than a DLL and was intended for supporting printing/file-export operations.",
+      "Its surviving implementation includes low-level Win32 file and printer APIs.",
+      "The C++ source also contains product/week structures with Made and Thrown quantities, tying it directly to the Always Fresh production domain.",
+      "The current best chronology is approximately 2003-2004.",
+      "The proposal reached a Tim Hortons corporate presentation and was not awarded to Jamie's team.",
+      "Jamie remembers his partner reporting that Tim Hortons chose to have its existing software provider implement the idea instead.",
+      "External historical research confirms that Quick Service Software, later branded CLEARVIEW, had a Tim Hortons/QSR software relationship dating to approximately this period.",
+      "Later Tim Hortons documentation identifies Clearview by Quick Service Software as part of its restaurant-management software environment.",
+      "This supports the plausibility that Jamie's partner correctly remembered the incumbent software provider, but there is no recovered public evidence proving that Tim Hortons specifically transferred the Always Fresh concept to that company.",
+      "Do not publicly accuse Tim Hortons, Clearview, Quick Service Software, or any other party of taking/copying the proposal.",
+      "For public portfolio wording, state only that the working proposal reached Tim Hortons corporate and was ultimately not awarded to Jamie's team."
+    ],
+
+    "confidence": {
+      "functionalPrototype": "high",
+      "timHortonsProposal": "high",
+      "corporatePresentation": "high",
+      "proposalNotAwarded": "high",
+
+      "teamSizeTwo": "high",
+      "csharpOperationalApplication": "high",
+      "dotNet": "high",
+      "windowsForms": "high",
+      "accessJetData": "high",
+      "oleDb": "high",
+      "xmlProductionRecords": "high",
+
+      "madeThrownTracking": "high",
+      "shelfLifeMonitoring": "high",
+      "goodExpiringExpiredStates": "high",
+      "historicalReview": "high",
+      "productAdministration": "high",
+      "wasteAnalytics": "high",
+
+      "javaReportingApplication": "high",
+      "javaAsMainApplicationRewrite": "low",
+
+      "cppHelper": "high",
+      "cppWin32": "high",
+      "cppDll": "low",
+      "cppPrintingSupport": "high",
+
+      "projectStart2003": "high",
+      "developmentInto2004": "medium",
+
+      "clearviewTimHortonsRelationship": "high",
+      "proposalTransferredToClearview": "unverified"
+    },
+
+    "projectTerminology": [
+      "Always Fresh",
+      "Tim Hortons",
+      "Production Management",
+      "Waste Management",
+      "Freshness Monitoring",
+      "Shelf Life",
+      "Made",
+      "Thrown",
+      "Product Report",
+      "Waste Percentage",
+      "C#",
+      ".NET",
+      "Java",
+      "C++",
+      "Win32"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Company",
+      "legacyIndex": 6,
+      "legacySubtitle": "C#.Net, Java",
+      "survivingPrimarySource": "C#/.NET operational application source",
+      "survivingJavaEvidence": "Java reporting application release/screenshots",
+      "survivingCppEvidence": "C++/Win32 helper source",
+      "proposalCustomer": "Tim Hortons",
+      "proposalResult": "Not awarded"
+    }
+  }
+}
