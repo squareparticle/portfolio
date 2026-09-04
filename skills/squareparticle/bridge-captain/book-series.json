@@ -1,11 +1,222 @@
 {
   "schemaVersion": 2,
   "id": "squareparticle/bridge-captain/book-series",
-  "title": "Book Series",
+  "title": "Bridge Captain Book Series",
   "project": "Bridge Captain",
-  "platform": {"label": "Application Type", "values": ["Book Series"]},
+
+  "platform": {
+    "label": "Project Type",
+    "values": [
+      "Published Book Series",
+      "Science-Fiction Universe",
+      "Cross-Media IP"
+    ]
+  },
+
   "technologies": [],
-  "date": {"from": null, "to": null, "display": false},
-  "description": "To build Bridge Captain's backstory, I collaborated with writers at a California media company to create a book series that I released on Amazon.",
-  "media": {"thumbnail":"images/skills/company/books.jpg","primary":{"type":"image","src":"images/skills/company/books.jpg"},"items":[{"type":"image","src":"images/skills/company/books_1.jpg"},{"type":"image","src":"images/skills/company/books_2.jpg"},{"type":"image","src":"images/skills/company/books_3.jpg"},{"type":"image","src":"images/skills/company/book_4.jpg"}]}
+
+  "date": {
+    "from": "2015",
+    "to": "2015",
+    "display": true
+  },
+
+  "team": {
+    "myPosition": "lead",
+    "myPositionLabel": "Universe Creator / Story Designer / Publisher",
+    "total": 2,
+    "contributors": [
+      {
+        "count": 1,
+        "roles": [
+          "Science-Fiction Writer",
+          "Prose Author"
+        ],
+        "relationship": "contractor",
+        "contribution": "Worked from my universe, lore, story framework, characters, factions, technology, and broad narrative direction to turn the Bridge Captain setting into novel-length prose."
+      }
+    ]
+  },
+
+  "roles": [
+    "Universe Creator",
+    "Story Designer",
+    "Worldbuilding",
+    "IP Development",
+    "Creative Direction",
+    "Cross-Media Development",
+    "Publisher"
+  ],
+
+  "description": "I expanded the Bridge Captain game universe into a six-book science-fiction series by creating the underlying setting, lore, factions, technology, characters, conflicts, and broad story framework. I then collaborated with a California science-fiction writer through Heavy Cat Media to turn that material into novel-length prose. All six books were released on Amazon under the Michael Carter pen name, with Square Particle publishing the series.",
+
+  "details": {
+    "sections": [
+      {
+        "title": "From Game Backstory to Science-Fiction Universe",
+        "paragraphs": [
+          "The book series grew out of my work on Bridge Captain and my desire to give the game a much deeper history and fictional universe.",
+          "Rather than treating the game's story as a small amount of background text, I developed a broader setting with its own history, factions, political relationships, technology, ships, characters, conflicts, and military structure."
+        ]
+      },
+      {
+        "title": "Universe & Story Development",
+        "paragraphs": [
+          "I created the underlying universe, lore, major story direction, and broad narrative framework before working with an outside writer on the prose.",
+          "My contribution centered on what the universe was, how it worked, the conflicts taking place within it, and the science-fiction and military concepts that supported the larger Bridge Captain setting."
+        ]
+      },
+      {
+        "title": "Six-Book Series",
+        "paragraphs": [
+          "The collaboration ultimately produced six complete science-fiction books.",
+          "All six books were released through Amazon, turning the Bridge Captain setting into a published cross-media property rather than leaving the worldbuilding solely inside the game."
+        ]
+      },
+      {
+        "title": "Technical Space Combat",
+        "paragraphs": [
+          "A major part of the setting was ship-based tactical warfare.",
+          "The books developed battles around command decisions, sensors, weapons, missiles, propulsion, reactors, fleet positioning, damage, boarding, jump-gate travel, and the operational behavior of ships and crews."
+        ]
+      },
+      {
+        "title": "Factions, Fleets & Political Structure",
+        "paragraphs": [
+          "The series expanded Bridge Captain beyond a single ship or crew by establishing competing governments, military forces, fleets, alliances, enemies, and historical conflicts.",
+          "This gave the game universe a larger strategic context in which individual ships and captains could operate."
+        ]
+      },
+      {
+        "title": "Cross-Media Worldbuilding",
+        "paragraphs": [
+          "The books and game were conceived as parts of the same broader science-fiction IP.",
+          "The book project let me explore history, politics, characters, technology, and large-scale conflicts that would have been difficult to communicate entirely through the game itself."
+        ]
+      },
+      {
+        "title": "Working with an Outside Writer",
+        "paragraphs": [
+          "I collaborated with a California science-fiction writer associated with Heavy Cat Media to convert my story framework and worldbuilding into full novel prose.",
+          "That required communicating the underlying rules of the setting, major plot direction, characters, technology, and intended tone while another creator handled the detailed prose writing."
+        ]
+      },
+      {
+        "title": "Michael Carter Pen Name",
+        "paragraphs": [
+          "The books were released under the Michael Carter pen name rather than my personal name.",
+          "The pen name was used on the recommendation of the California media company involved in the project."
+        ]
+      },
+      {
+        "title": "Square Particle Publishing",
+        "paragraphs": [
+          "Square Particle published the completed books and released them through Amazon.",
+          "The surviving ebook metadata identifies Square Particle as the publisher, connecting the series directly to the same independent studio behind Bridge Captain."
+        ]
+      },
+      {
+        "title": "Bridge Captain IP Development",
+        "paragraphs": [
+          "The book series became another branch of Bridge Captain's development rather than a separate unrelated writing project.",
+          "It reflects my interest in designing not only games and game systems, but the larger fictional worlds, technology, history, and conflicts that give those systems context."
+        ]
+      }
+    ]
+  },
+
+  "media": {
+    "thumbnail": "images/skills/company/books.jpg",
+
+    "primary": {
+      "type": "image",
+      "src": "images/skills/company/books.jpg"
+    },
+
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/company/books_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/books_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/books_3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/company/book_4.jpg"
+      }
+    ]
+  },
+
+  "meta": {
+    "historicalNotes": [
+      "The book series was created to expand the Bridge Captain backstory and fictional universe.",
+      "Jamie created the underlying universe, lore, story outline, broad narrative direction, factions, technology, conflicts, and worldbuilding.",
+      "A California science-fiction writer handled the detailed prose.",
+      "The writer was associated with Heavy Cat Media and was its CEO.",
+      "Jamie also remembers Palace in the Sky Productions LLC being associated with the writer/company relationship.",
+      "The exact business relationship between Heavy Cat Media and Palace in the Sky Productions LLC should not be stated more specifically without additional documentation.",
+      "Jamie attempted to participate in editing the manuscripts but did not have final editorial control over the prose.",
+      "Do not publicly frame disagreements over editing or prose quality negatively; they are private historical context only.",
+      "The Michael Carter author name was a pen name rather than Jamie's personal name.",
+      "Jamie remembers being advised by the California media company not to publish the books under his real name.",
+      "Recovered MOBI files form a six-book sequence and contain complete chapter structures.",
+      "Recovered ebook metadata identifies Michael Carter as author and Square Particle as publisher.",
+      "Recovered files carry 2015 copyright information.",
+      "All six books have now been confirmed by Jamie as currently listed on Amazon.",
+      "The series contains substantial recurring science-fiction worldbuilding involving starships, crews, factions, political structures, military organizations, technologies, and continuing conflicts.",
+      "Technical and tactical starship combat is a significant recurring component of the books.",
+      "Recurring operational concepts include sensors, fleet actions, missiles, reactors, jump-gate travel, tactical positioning, ship damage, boarding, command decisions, and crew operations.",
+      "The books should be treated as an extension of the Bridge Captain IP rather than as an unrelated publishing project.",
+      "Public attribution must distinguish Jamie's universe/story/worldbuilding work from the contracted writer's prose authorship."
+    ],
+
+    "confidence": {
+      "bridgeCaptainUniverseConnection": "high",
+      "jamieUniverseCreator": "high",
+      "jamieStoryFramework": "high",
+      "jamieLoreAndWorldbuilding": "high",
+      "outsideProseWriter": "high",
+      "heavyCatMedia": "high",
+      "palaceInTheSkyAssociation": "medium",
+      "michaelCarterPenName": "high",
+      "squareParticlePublisher": "high",
+      "sixCompleteBooks": "high",
+      "sixBooksReleased": "high",
+      "amazonRelease": "high",
+      "copyright2015": "high",
+      "technicalSpaceCombat": "high",
+      "crossMediaIp": "high",
+      "jamieFinalEditorialControl": "low"
+    },
+
+    "projectTerminology": [
+      "Bridge Captain",
+      "Michael Carter",
+      "Heavy Cat Media",
+      "Palace in the Sky Productions LLC",
+      "Square Particle",
+      "Science-Fiction",
+      "Worldbuilding",
+      "Cross-Media IP",
+      "Starships",
+      "Fleet Combat",
+      "Space Combat",
+      "Military Science Fiction"
+    ],
+
+    "provenance": {
+      "legacyCategory": "Company",
+      "legacyProject": "Bridge Captain",
+      "survivingSource": "Six MOBI ebook files",
+      "publisherMetadata": "Square Particle",
+      "authorMetadata": "Michael Carter",
+      "releaseVerification": "All six books confirmed by Jamie as listed on Amazon"
+    }
+  }
 }
