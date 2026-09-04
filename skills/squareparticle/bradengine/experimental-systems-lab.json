@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 2,
+  "id": "squareparticle/bradengine/experimental-systems-lab",
+  "title": "BradEngine — Experimental Systems Lab",
+  "project": "BradEngine",
+  "platform": {
+    "label": "Project Type",
+    "values": []
+  },
+  "technologies": [],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "",
+  "details": {
+    "sections": []
+  },
+  "media": {
+    "items": []
+  },
+  "meta": {
+    "stage3Placeholder": true
+  }
+}

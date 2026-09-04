@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 2,
+  "id": "personal/design/programmer-art",
+  "title": "Programmer Art",
+  "project": "Programmer Art",
+  "platform": {
+    "label": "Project Type",
+    "values": []
+  },
+  "technologies": [],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "",
+  "details": {
+    "sections": []
+  },
+  "media": {
+    "items": []
+  },
+  "meta": {
+    "stage3Placeholder": true
+  }
+}

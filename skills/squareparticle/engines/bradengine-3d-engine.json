@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "id": "squareparticle/bradengine/bradengine-3d-engine",
+  "id": "squareparticle/engines/bradengine-3d-engine",
   "title": "BradEngine Software 3D Renderer",
   "project": "BradEngine",
   "platform": {

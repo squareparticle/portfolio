@@ -92,12 +92,9 @@
         "image": "images/skills/work/title.jpg"
       },
       "skills": [
-        "essentialskills/home-user/platform",
-        "essentialskills/magies/reward-system",
         "essentialskills/read-to-succeed/platform",
         "essentialskills/mad-minute/platform",
         "essentialskills/learning-platform/school-programs",
-        "essentialskills/learning-platform/teacher-programs",
         "essentialskills/assessment/diagnostic-software",
         "essentialskills/authoring/teacher-content-editor",
         "essentialskills/platform-migrations/flash-port",
@@ -115,10 +112,7 @@
         "image": "images/skills/fullstack/title.jpg"
       },
       "skills": [
-        "essentialskills/teacher-dashboard/react",
         "essentialskills/magies/production-tool",
-        "essentialskills/internal-tools/project-manager",
-        "essentialskills/customer-platform/management-analysis",
         "essentialskills/web-platform/school-applications",
         "essentialskills/teacher-dashboard/assignment-reporting",
         "essentialskills/customer-platform/product-order-page",
@@ -155,8 +149,6 @@
         "image": "images/skills/engines/title.jpg"
       },
       "skills": [
-        "squareparticle/bradengine/engine",
-        "squareparticle/engines/bradengine-3d-engine",
         "squareparticle/engines/bradengine-voxel-engine",
         "squareparticle/cell/engine",
         "essentialskills/hydragen/engine",
@@ -177,7 +169,6 @@
         "image": "images/skills/doc/title.jpg"
       },
       "skills": [
-        "essentialskills/docs/technical-knowledge-base",
         "essentialskills/architecture/uml",
         "essentialskills/sred/rnd-funding-documentation"
       ]
@@ -195,8 +186,7 @@
       "skills": [
         "essentialskills/data/isam-btree-network-persistence",
         "essentialskills/data/rosetta-smartdb",
-        "essentialskills/data/relational-database-sql",
-        "essentialskills/data/cloud-database-architecture-migration"
+        "essentialskills/data/relational-database-sql"
       ]
     },
     {
@@ -239,6 +229,125 @@
         "scary-pixel/always-fresh",
         "independent/health-holder/application",
         "squareparticle/bridge-captain/book-series"
+      ]
+    },
+    {
+      "id": "FullStackBusiness",
+      "name": "Full-Stack & Business Platforms",
+      "icon": "images/categories/mean.png",
+      "color": "#FFB000",
+      "intro": {
+        "title": "Full-Stack & Business Platforms",
+        "text": ""
+      },
+      "skills": [
+        "essentialskills/customer-platform/management-analysis",
+        "essentialskills/learning-platform/teacher-programs",
+        "essentialskills/home-user/platform",
+        "essentialskills/internal-tools/project-manager",
+        "essentialskills/data/cloud-database-architecture-migration",
+        "essentialskills/customer-platform/server-driven-customer-sso-dashboard",
+        "essentialskills/teacher-dashboard/react",
+        "essentialskills/docs/technical-knowledge-base",
+        "essentialskills/customer-platform/customerio-migration",
+        "essentialskills/customer-platform/quote-workflow"
+      ]
+    },
+    {
+      "id": "EdTech",
+      "name": "EdTech Products & Systems",
+      "icon": "images/categories/ess.png",
+      "color": "#EEEEEE",
+      "intro": {
+        "title": "EdTech Products & Systems",
+        "text": ""
+      },
+      "skills": [
+        "essentialskills/magies/reward-system",
+        "essentialskills/authoring/teacher-authored-content-platform",
+        "essentialskills/authoring/angular-spelling-list-editor-2021",
+        "essentialskills/identity/sso-authentication-rostering-platform",
+        "essentialskills/free-phonics/platform",
+        "essentialskills/student-experience/avatar-system",
+        "essentialskills/ui/glassui"
+      ]
+    },
+    {
+      "id": "AIEngineering",
+      "name": "AI & Agentic Engineering",
+      "icon": "images/categories/engine.png",
+      "color": "#307099",
+      "intro": {
+        "title": "AI & Agentic Engineering",
+        "text": ""
+      },
+      "skills": [
+        "essentialskills/ai-multilingual/content-production-pipeline",
+        "squareparticle/games/cave-game-ai-story-experiment",
+        "squareparticle/gameenginets/agentic-human-ai-overhaul"
+      ]
+    },
+    {
+      "id": "GameEngines",
+      "name": "Game Engines & Technical R&D",
+      "icon": "images/categories/engine.png",
+      "color": "#99CD7A",
+      "intro": {
+        "title": "Game Engines & Technical R&D",
+        "text": ""
+      },
+      "skills": [
+        "squareparticle/bradengine/engine",
+        "squareparticle/engines/bradengine-3d-engine",
+        "squareparticle/bradengine/experimental-systems-lab",
+        "squareparticle/gameenginets/original-engine",
+        "squareparticle/gameenginets/prototypes-samples"
+      ]
+    },
+    {
+      "id": "GamesInteractive",
+      "name": "Games & Interactive Projects",
+      "icon": "images/categories/company.png",
+      "color": "#595EA4",
+      "intro": {
+        "title": "Games & Interactive Projects",
+        "text": ""
+      },
+      "skills": [
+        "squareparticle/games/calling-home",
+        "squareparticle/games/late-for-school",
+        "personal/dragon-quest/early-rpg-engine-development",
+        "squareparticle/games/going-probn",
+        "squareparticle/games/pirates-of-atlantis",
+        "squareparticle/games/pocket-planet-defender-2012"
+      ]
+    },
+    {
+      "id": "Research",
+      "name": "Research",
+      "icon": "images/categories/uml.png",
+      "color": "#6535B3",
+      "intro": {
+        "title": "Research",
+        "text": ""
+      },
+      "skills": [
+        "personal/cbf/causal-budget-framework"
+      ]
+    },
+    {
+      "id": "DesignCreative",
+      "name": "Design & Creative Work",
+      "icon": "images/categories/blender.png",
+      "color": "#5B40B8",
+      "intro": {
+        "title": "Design & Creative Work",
+        "text": ""
+      },
+      "skills": [
+        "personal/design/level-design",
+        "personal/design/game-design",
+        "personal/design/programmer-art"
       ]
     }
   ]

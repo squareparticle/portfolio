@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 2,
+  "id": "essentialskills/customer-platform/quote-workflow",
+  "title": "Quote Workflow",
+  "project": "Quote Workflow",
+  "platform": {
+    "label": "Project Type",
+    "values": []
+  },
+  "technologies": [],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "",
+  "details": {
+    "sections": []
+  },
+  "media": {
+    "items": []
+  },
+  "meta": {
+    "stage3Placeholder": true
+  }
+}

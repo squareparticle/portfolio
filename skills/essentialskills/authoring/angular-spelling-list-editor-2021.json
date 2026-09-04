@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 2,
+  "id": "essentialskills/authoring/angular-spelling-list-editor-2021",
+  "title": "Spelling List Editor — 2021 Angular Product",
+  "project": "Spelling List Editor",
+  "platform": {
+    "label": "Project Type",
+    "values": []
+  },
+  "technologies": [],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "",
+  "details": {
+    "sections": []
+  },
+  "media": {
+    "items": []
+  },
+  "meta": {
+    "stage3Placeholder": true
+  }
+}

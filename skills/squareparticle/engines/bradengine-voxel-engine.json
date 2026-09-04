@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "id": "squareparticle/bradengine/voxel-engine",
+  "id": "squareparticle/engines/bradengine-voxel-engine",
   "title": "BradEngine Voxel Engine",
   "project": "BradEngine",
   "platform": {

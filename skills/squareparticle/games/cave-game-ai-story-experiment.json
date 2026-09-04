@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 2,
+  "id": "squareparticle/games/cave-game-ai-story-experiment",
+  "title": "Cave Game — AI Story Experiment",
+  "project": "Cave Game",
+  "platform": {
+    "label": "Project Type",
+    "values": []
+  },
+  "technologies": [],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "",
+  "details": {
+    "sections": []
+  },
+  "media": {
+    "items": []
+  },
+  "meta": {
+    "stage3Placeholder": true
+  }
+}

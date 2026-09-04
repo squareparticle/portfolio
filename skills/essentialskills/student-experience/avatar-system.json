@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 2,
+  "id": "essentialskills/student-experience/avatar-system",
+  "title": "Avatar System",
+  "project": "Avatar System",
+  "platform": {
+    "label": "Project Type",
+    "values": []
+  },
+  "technologies": [],
+  "date": {
+    "from": null,
+    "to": null,
+    "display": false
+  },
+  "description": "",
+  "details": {
+    "sections": []
+  },
+  "media": {
+    "items": []
+  },
+  "meta": {
+    "stage3Placeholder": true
+  }
+}
