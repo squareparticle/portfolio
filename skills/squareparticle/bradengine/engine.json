@@ -3,16 +3,14 @@
   "id": "squareparticle/bradengine/engine",
   "title": "BradEngine",
   "project": "BradEngine",
-
   "platform": {
     "label": "Application Type",
     "values": [
       "Game Engine",
-      "Application Framework",
-      "Teaching & Experimentation Platform"
+      "Teaching Platform",
+      "Application Framework"
     ]
   },
-
   "technologies": [
     "JavaScript",
     "HTML5 Canvas",
@@ -20,20 +18,14 @@
     "PeerJS",
     "Box2D",
     "Cannon.js",
-    "Three.js",
     "Web Workers",
-    "Custom 3D Renderer",
-    "Artificial Neural Networks",
-    "Cellular Automata",
-    "Ray Casting"
+    "Custom 3D Renderer"
   ],
-
   "date": {
     "from": "2019",
     "to": "2022",
     "display": true
   },
-
   "team": {
     "myPosition": "lead",
     "myPositionLabel": "Engine Architect / Lead Developer",
@@ -50,33 +42,42 @@
       }
     ]
   },
-
   "roles": [
     "Engine Architect",
     "Lead Developer",
-    "Graphics Programmer",
     "Gameplay Programmer",
     "Networking Developer",
-    "Physics Programmer",
-    "Tools Developer",
+    "Graphics Programmer",
     "Programming Mentor"
   ],
-
-  "description": "BradEngine is a reusable JavaScript and HTML5 Canvas game/application engine I developed from 2019 through roughly 2022. It grew into a broad platform for games, custom 2D and 3D rendering, networking, physics, voxel terrain, ray casting, cellular automata, machine learning, and technical experimentation. Its modular lifecycle and reusable engine structure became an important architectural precursor to GameEngineTS. <p> <a href='https://github.com/squareparticle/BradEngine_Public' target='_blank'>View the source and demos on GitHub</a></p>",
-
+  "description": "I built BradEngine as a reusable JavaScript and HTML5 Canvas game engine and used it extensively to teach my two sons real game-programming concepts through hands-on projects. Instead of hiding complexity behind a simplified educational framework, they worked with the same engine lifecycle, rendering, physics, networking, and reusable systems I was developing. Together we built games and multiplayer demos using WebRTC and PeerJS, while the engine also grew to support my own 3D, voxel, physics, AI, and simulation experiments. BradEngine became an important architectural precursor to GameEngineTS. <p> <a href='https://github.com/squareparticle/BradEngine_Public' target='_blank'>View the source and demos on GitHub</a></p>",
   "details": {
     "sections": [
       {
+        "title": "A Real Engine for Teaching",
+        "paragraphs": [
+          "I built BradEngine partly as a practical environment for teaching my two sons programming and game development.",
+          "Rather than creating a simplified educational tool, I taught with the same reusable engine systems, classes, lifecycle, rendering, input, physics, and networking concepts used by the projects themselves."
+        ]
+      },
+      {
+        "title": "Learning by Building Games",
+        "paragraphs": [
+          "The teaching approach was project-driven: we used BradEngine to build playable games, technical demos, and small experiments together.",
+          "This let my sons learn how individual programming concepts fit into a larger application architecture instead of treating each topic as an isolated exercise."
+        ]
+      },
+      {
         "title": "Reusable Engine Architecture",
         "paragraphs": [
-          "BradEngine was designed to minimize project-specific programming by moving common application and game responsibilities into reusable engine systems.",
-          "Projects were built from cooperating classes and shared engine services rather than one large procedural script."
+          "BradEngine moved common application and game responsibilities into reusable systems so individual projects could focus on their own behavior.",
+          "Projects were assembled from cooperating classes and shared services rather than one large procedural script."
         ]
       },
       {
         "title": "Level Lifecycle",
         "paragraphs": [
-          "Levels derived from a shared LevelInterface-style abstraction and implemented focused lifecycle responsibilities."
+          "Levels followed a shared lifecycle abstraction with focused responsibilities that made the structure of a running game explicit."
         ],
         "items": [
           "loadResources()",
@@ -86,221 +87,121 @@
         ]
       },
       {
-        "title": "Resource Management",
+        "title": "Resource & Runtime Support",
         "paragraphs": [
-          "BradEngine supported project resource discovery and shared media loading for images, sounds, fonts, meshes, and other assets.",
-          "Projects could use common shared media while keeping their own resources organized separately."
+          "The engine provided shared media loading and project configuration so examples could reuse common infrastructure.",
+          "Projects could configure display size, debugging, networking, frame rate, physics timing, and script loading."
         ]
       },
       {
-        "title": "Configurable Runtime",
+        "title": "WebRTC Multiplayer",
         "paragraphs": [
-          "Each project could configure engine behavior from its own page, including display sizing, debugging, networking, frame rate, physics timing, and script loading."
+          "WebRTC / PeerJS networking became a native BradEngine feature rather than a one-off experiment.",
+          "My sons used the networking support with me to build and run multiplayer games and demos across separate computers, giving them direct experience with real peer-to-peer game communication."
         ]
       },
       {
-        "title": "Canvas Rendering",
+        "title": "Canvas, Physics & Gameplay",
         "paragraphs": [
-          "HTML5 Canvas was the primary rendering surface.",
-          "The engine supported 2D drawing, UI, particles, software-rendered 3D, overlays, diagnostic displays, and offscreen rendering."
+          "HTML5 Canvas was the main rendering surface, supporting 2D games, UI, particles, diagnostics, and composited visual layers.",
+          "BradEngine also supported homemade collision experiments and established physics libraries such as Box2D and Cannon.js, which gave us additional systems to use in teaching projects."
         ]
       },
       {
-        "title": "Layered and Offscreen Rendering",
+        "title": "3D Engine Work",
         "paragraphs": [
-          "Projects could combine independent visual systems in one frame, such as a 3D scene, particle field, HUD, radar, cockpit graphics, and diagnostic monitors.",
-          "Secondary Canvas buffers could be rendered independently and composited into the main display."
+          "BradEngine later grew a native software 3D renderer with its own meshes, cameras, projection, lighting, terrain, height maps, and related systems.",
+          "That graphics work became substantial enough to have its own dedicated portfolio card."
         ]
       },
       {
-        "title": "Homemade 3D Rendering Pipeline",
+        "title": "Voxel World System",
         "paragraphs": [
-          "BradEngine included a native software 3D rendering pipeline.",
-          "The dedicated 3D portfolio card covers the renderer in greater depth."
-        ],
-        "items": [
-          "Meshes",
-          "Cameras",
-          "Projection",
-          "Lighting",
-          "Terrain",
-          "Height maps",
-          "Morphing meshes",
-          "Voxel chunks"
+          "The engine also supported a dedicated voxel subsystem with chunked procedural terrain, Web Worker generation, mesh construction, streaming, persistence, and runtime editing.",
+          "The voxel work likewise has its own portfolio card."
         ]
       },
       {
-        "title": "Voxel Terrain",
+        "title": "Experimental Systems",
         "paragraphs": [
-          "BradEngine included voxel-world experiments with generated chunks and persistent terrain data.",
-          "Web Workers were used for voxel terrain generation so heavier generation work could run outside the main rendering thread."
-        ]
-      },
-      {
-        "title": "Ray Casting",
-        "paragraphs": [
-          "The engine workspace included ray-casting experiments, including textured raycasting for early first-person rendering techniques."
-        ]
-      },
-      {
-        "title": "Particle Systems",
-        "paragraphs": [
-          "BradEngine included reusable particle-system support used across visual and gameplay experiments."
-        ]
-      },
-      {
-        "title": "Physics and Collision",
-        "paragraphs": [
-          "I built homemade 2D physics and collision experiments and also used established libraries when appropriate."
-        ],
-        "items": [
-          "Custom 2D collision and physics experiments",
-          "Box2D",
-          "Cannon.js",
-          "Three.js experiments",
-          "Cloth simulation experiments"
-        ]
-      },
-      {
-        "title": "Working Multiplayer Networking",
-        "paragraphs": [
-          "BradEngine included working browser-to-browser multiplayer using WebRTC and PeerJS.",
-          "My sons and I successfully ran multiplayer technology demos together on separate machines."
-        ]
-      },
-      {
-        "title": "Networking as an Engine System",
-        "paragraphs": [
-          "Networking was handled as reusable engine infrastructure rather than embedded independently into every project.",
-          "Projects could configure network behavior and update timing alongside rendering and physics timing."
-        ]
-      },
-      {
-        "title": "Artificial Neural Networks",
-        "paragraphs": [
-          "BradEngine also became a platform for machine-learning exercises and neural-network experiments."
-        ],
-        "items": [
-          "Artificial neural network training examples",
-          "XOR learning visualization",
-          "Graph and training experiments",
-          "Pong-related machine-learning experiments"
-        ]
-      },
-      {
-        "title": "Cellular Automata",
-        "paragraphs": [
-          "The project included original JavaScript implementations of cellular-automata systems and interactive simulation experiments."
-        ],
-        "items": [
-          "Conway's Game of Life",
-          "Elementary cellular automata rule experiments",
-          "Sand simulation",
-          "Interactive fire simulation"
-        ]
-      },
-      {
-        "title": "Event-Driven and Arcade Projects",
-        "paragraphs": [
-          "BradEngine supported a wide range of game and architecture experiments, including event-driven action games, arcade-style projects, drawing tools, simulations, and reusable gameplay systems."
-        ]
-      },
-      {
-        "title": "Example Project Ecosystem",
-        "paragraphs": [
-          "The repository contains a broad collection of standalone examples and learning projects built on the shared engine."
-        ],
-        "items": [
-          "3D Asteroids",
-          "Space Boss",
-          "Voxel Engine",
-          "Textured Raycasting",
-          "Cloth Flag Physics",
-          "Fire Finger",
-          "Solar System",
-          "Cellular Automaton Sand Simulation",
-          "Starfield",
-          "ANN XOR"
-        ]
-      },
-      {
-        "title": "3D Asteroids Architecture Example",
-        "paragraphs": [
-          "The 3D Asteroids project demonstrates the engine's modular structure.",
-          "A MainLevel class assembles reusable systems such as GameController, SkyBox, Particles, OuterSpace, Cockpit, Computer, MiniMap, and Camera while the engine supplies common lifecycle, rendering, resource, input, and scene infrastructure."
+          "I also used BradEngine independently as a technical laboratory for studying unfamiliar concepts such as neural networks, evolutionary algorithms, cellular automata, physics, and simulation.",
+          "Those experiments are documented in the separate BradEngine Experimental Systems Lab card so this umbrella card can remain focused on the engine and its teaching role."
         ]
       },
       {
         "title": "Teaching Through Real Systems",
         "paragraphs": [
-          "BradEngine was also used as a practical teaching environment for my sons.",
-          "Rather than hiding programming behind a simplified educational interface, they learned by working with real classes, engine lifecycles, graphics, multiplayer networking, physics, and application structure."
+          "The most important teaching idea behind BradEngine was that my sons worked with real software structure rather than a toy abstraction.",
+          "They learned by seeing how reusable engine code, game-specific code, graphics, physics, networking, and application lifecycle responsibilities fit together in working projects."
         ]
       },
       {
         "title": "Basic Reusable Application Designer",
         "paragraphs": [
           "The name BradEngine came from my son's name and the backronym Basic Reusable Application Designer.",
-          "Although the name started playfully, the engine ultimately became broad enough that the description fit surprisingly well."
+          "The name started playfully, but the engine's emphasis on reusable systems ultimately made the description surprisingly accurate."
         ]
       },
       {
         "title": "Precursor to GameEngineTS",
         "paragraphs": [
           "BradEngine became an important architectural ancestor of GameEngineTS.",
-          "Both emphasize reusable engine systems, explicit lifecycle responsibilities, modular project code, and reducing the amount of custom programming needed to assemble a game.",
-          "GameEngineTS later formalized and significantly expanded ideas that were already emerging in BradEngine."
+          "Both emphasize reusable systems, explicit lifecycle responsibilities, modular project code, and reducing the amount of project-specific programming needed to assemble a game.",
+          "GameEngineTS later formalized and significantly expanded ideas that were already emerging here."
         ]
       }
     ]
   },
-
-"media": {
-  "thumbnail": "images/skills/engines/bradeng.gif",
-
-  "primary": {
-    "type": "image",
-    "src": "images/skills/engines/bradeng.gif"
+  "media": {
+    "thumbnail": "images/skills/engines/bradeng.gif",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/engines/bradeng.gif"
+    },
+    "items": [
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad_1.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad_2.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad_3.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad_4.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad_5.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad_6.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad_7.gif"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/engines/brad_8.gif"
+      }
+    ]
   },
-
-  "items": [
-    {
-      "type": "image",
-      "src": "images/skills/engines/brad_1.gif"
-    },
-    {
-      "type": "image",
-      "src": "images/skills/engines/brad_2.gif"
-    },
-    {
-      "type": "image",
-      "src": "images/skills/engines/brad_3.gif"
-    },
-    {
-      "type": "image",
-      "src": "images/skills/engines/brad_4.gif"
-    },
-    {
-      "type": "image",
-      "src": "images/skills/engines/brad_5.gif"
-    },
-    {
-      "type": "image",
-      "src": "images/skills/engines/brad_6.gif"
-    },
-    {
-      "type": "image",
-      "src": "images/skills/engines/brad_7.gif"
-    },
-    {
-      "type": "image",
-      "src": "images/skills/engines/brad_8.gif"
-    }
-  ]
-},
-
   "meta": {
     "historicalNotes": [
+      "The umbrella BradEngine card should primarily tell the engine-and-teaching story; deep 3D, voxel, and experimental-system details belong on dedicated cards.",
+      "Jamie built BradEngine partly to teach his two sons programming and game development through real projects rather than a simplified educational framework.",
+      "Jamie and his sons used BradEngine's WebRTC / PeerJS networking to build and run multiplayer games and demos on separate computers.",
+      "WebRTC / PeerJS was a reusable native BradEngine feature, not merely an isolated experiment.",
+      "Jamie's sons participated as student developers / game prototype developers in the broader BradEngine teaching projects.",
+      "Jamie's ANN, evolutionary, cellular-automata, and physics learning experiments were his own work and belong primarily on the Experimental Systems Lab card.",
+      "The custom software 3D renderer and voxel engine are substantial enough to remain separate portfolio cards.",
       "BradEngine development began in 2019 and continued for approximately three years.",
       "BradEngine expands to Basic Reusable Application Designer and is also a reference to Jamie's son's name.",
       "The platform was used for games, teaching projects, physics demos, networking demos, graphics experiments, machine-learning work, and simulation projects.",
@@ -322,7 +223,6 @@
       "The architecture was modular and class-based but was not yet the fully formalized component-oriented architecture later used by GameEngineTS.",
       "BradEngine is a direct architectural precursor to GameEngineTS."
     ],
-
     "confidence": {
       "start2019": "high",
       "approximatelyThreeYears": "high",
@@ -353,7 +253,6 @@
       "largeExampleEcosystem": "high",
       "gameEngineTsPrecursor": "high"
     },
-
     "projectTerminology": [
       "BradEngine",
       "Basic Reusable Application Designer",
@@ -372,7 +271,6 @@
       "Cellular Automata",
       "GameEngineTS"
     ],
-
     "provenance": {
       "legacyCategory": "Engines",
       "legacyIndex": 0

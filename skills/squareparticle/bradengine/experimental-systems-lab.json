@@ -1,26 +1,200 @@
 {
   "schemaVersion": 2,
   "id": "squareparticle/bradengine/experimental-systems-lab",
-  "title": "BradEngine — Experimental Systems Lab",
+  "title": "BradEngine Experimental Systems Lab",
   "project": "BradEngine",
   "platform": {
-    "label": "Project Type",
-    "values": []
+    "label": "Application Type",
+    "values": [
+      "Technical Experimentation Platform",
+      "AI / Algorithm Learning Lab",
+      "Physics & Simulation Playground"
+    ]
   },
-  "technologies": [],
+  "technologies": [
+    "JavaScript",
+    "HTML5 Canvas",
+    "BradEngine",
+    "Artificial Neural Networks",
+    "Evolutionary Algorithms",
+    "Genetic Algorithms",
+    "Cellular Automata",
+    "Physics Simulation",
+    "Math"
+  ],
   "date": {
-    "from": null,
-    "to": null,
-    "display": false
+    "from": "2019",
+    "to": "2022",
+    "display": true
   },
-  "description": "",
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Developer / Technical Experimenter",
+    "total": 1,
+    "contributors": []
+  },
+  "roles": [
+    "Software Developer",
+    "Technical Experimenter",
+    "AI / Machine Learning Developer",
+    "Simulation Developer",
+    "Physics Programmer",
+    "Algorithm Developer"
+  ],
+  "description": "I used BradEngine as a hands-on technical laboratory for exploring unfamiliar algorithms, AI concepts, evolutionary systems, cellular automata, and physics. While working through courses and tutorials from sources including Dr. Penny de Byl's Holistic3D material and Daniel Shiffman's Coding Train, I implemented the concepts myself inside my own reusable JavaScript engine so I could inspect, visualize, modify, and experiment with how the systems worked.",
   "details": {
-    "sections": []
+    "sections": [
+      {
+        "title": "Learning Through Implementation",
+        "paragraphs": [
+          "BradEngine became more than a game engine; I used it as a reusable environment for learning technical concepts by implementing them myself.",
+          "Rather than treating courses and tutorials as passive demonstrations, I rebuilt the ideas inside BradEngine so I could change parameters, visualize intermediate behavior, combine systems, and understand how the algorithms behaved inside an engine architecture I controlled."
+        ]
+      },
+      {
+        "title": "Course & Tutorial Inspiration",
+        "paragraphs": [
+          "Many of these experiments grew out of material I was studying from Dr. Penny de Byl's Holistic3D courses and Daniel Shiffman's Coding Train tutorials.",
+          "The value of the work was in translating the concepts into my own BradEngine implementations and then using those implementations as interactive experiments rather than presenting the underlying algorithms as original inventions."
+        ]
+      },
+      {
+        "title": "ANN / Machine Learning Experiments",
+        "paragraphs": [
+          "I used BradEngine to explore artificial neural-network and machine-learning concepts through small visual experiments."
+        ],
+        "items": [
+          "XOR learning experiment",
+          "Pong neural-network experiment",
+          "Train Line learning experiment"
+        ]
+      },
+      {
+        "title": "Evolution / DNA Experiments",
+        "paragraphs": [
+          "I also explored evolutionary and genetic-algorithm concepts by representing candidate solutions as populations that could be evaluated, selected, and evolved over repeated generations."
+        ],
+        "items": [
+          "Traveling Salesman",
+          "Choose Fittest",
+          "Monkey Typing",
+          "Rocket Training"
+        ]
+      },
+      {
+        "title": "Cellular & Emergent Simulation",
+        "paragraphs": [
+          "BradEngine provided an interactive environment for experimenting with rule-based systems where complex behavior emerged from simple local rules."
+        ],
+        "items": [
+          "Generic cellular automata",
+          "Conway's Game of Life",
+          "Interactive fire simulation"
+        ]
+      },
+      {
+        "title": "Physics Experiments",
+        "paragraphs": [
+          "I used the same laboratory approach for physics concepts, building visual experiments that made forces, constraints, rigid-body interactions, and deformable systems easy to inspect."
+        ],
+        "items": [
+          "Cube Tower",
+          "Rope / spring constraint",
+          "Cloth simulation"
+        ]
+      },
+      {
+        "title": "Interactive BradEngine Experiment Gallery",
+        "paragraphs": [
+          "The experiments were organized as runnable BradEngine examples rather than isolated code snippets.",
+          "They could be launched and viewed through the BradEngine project site, giving me a common visual environment for testing and comparing different algorithms and simulations."
+        ]
+      },
+      {
+        "title": "Why BradEngine Worked Well as a Lab",
+        "paragraphs": [
+          "Because BradEngine already provided a reusable application lifecycle, rendering, input, timing, math, and project structure, each new experiment could focus on the concept being studied rather than repeatedly rebuilding application infrastructure.",
+          "That made the engine a practical sandbox for moving quickly between machine learning, evolutionary computation, cellular systems, and physics."
+        ]
+      },
+      {
+        "title": "Separate from BradEngine's Production Features",
+        "paragraphs": [
+          "This card focuses on experimental systems I built while learning and exploring technical subjects.",
+          "More mature BradEngine capabilities such as its native WebRTC / PeerJS networking, custom software 3D renderer, and voxel subsystem are documented separately because they became reusable engine features rather than remaining individual experiments."
+        ]
+      }
+    ]
   },
   "media": {
+    "thumbnail": "images/skills/engines/bradeng.gif",
+    "primary": {
+      "type": "image",
+      "src": "images/skills/engines/bradeng.gif"
+    },
     "items": []
   },
   "meta": {
-    "stage3Placeholder": true
+    "stage3Placeholder": false,
+    "historicalNotes": [
+      "The Experimental Systems Lab card is intentionally separate from the BradEngine core-engine, software 3D renderer, and voxel-engine cards.",
+      "Jamie personally implemented the experiments on this card; his sons were not contributors to these specific experiments.",
+      "The experiments were built while Jamie was using BradEngine to explore concepts from technical courses and tutorials.",
+      "Important learning sources included Dr. Penny de Byl's Holistic3D courses and Daniel Shiffman's Coding Train tutorials.",
+      "Public wording should clearly distinguish implementing and experimenting with learned concepts from claiming invention of the underlying algorithms.",
+      "ANN / ML experiments include XOR, Pong, and Train Line.",
+      "Evolution / DNA experiments include Traveling Salesman, Choose Fittest, Monkey Typing, and Rocket Training.",
+      "Cellular / emergent experiments include generic cellular automata, Conway's Game of Life, and an interactive fire simulation.",
+      "Physics experiments include Cube Tower, rope/spring constraints, and cloth simulation.",
+      "WebRTC / PeerJS should not be framed as an experiment on this card because it became a native BradEngine networking feature and was used in teaching examples.",
+      "The BradEngine website presented many of these experiments as selectable runnable examples."
+    ],
+    "confidence": {
+      "soloExperimentDevelopment": "high",
+      "holistic3dLearningSource": "high",
+      "codingTrainLearningSource": "high",
+      "annXor": "high",
+      "annPong": "high",
+      "trainLine": "high",
+      "travelingSalesman": "high",
+      "chooseFittest": "high",
+      "monkeyTyping": "high",
+      "rocketTraining": "high",
+      "genericCellularAutomata": "high",
+      "gameOfLife": "high",
+      "fireSimulation": "high",
+      "cubeTower": "high",
+      "ropeSpringConstraint": "high",
+      "clothSimulation": "high",
+      "webRtcExcludedAsExperiment": "high",
+      "bradEngineWebsiteExperimentGallery": "high"
+    },
+    "projectTerminology": [
+      "BradEngine",
+      "Experimental Systems Lab",
+      "ANN",
+      "XOR",
+      "Pong",
+      "Train Line",
+      "Traveling Salesman",
+      "Choose Fittest",
+      "Monkey Typing",
+      "Rocket Training",
+      "Cellular Automata",
+      "Conway's Game of Life",
+      "Fire",
+      "Cube Tower",
+      "Rope",
+      "Cloth",
+      "Holistic3D",
+      "Coding Train"
+    ],
+    "provenance": {
+      "derivedFrom": [
+        "BradEngine website experiment gallery",
+        "BradEngine canonical portfolio cards",
+        "Stage 3 user clarification"
+      ]
+    }
   }
 }

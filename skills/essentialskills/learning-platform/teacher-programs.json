@@ -38,7 +38,8 @@
     "Clever",
     "Edlink",
     "SAML",
-    "OAuth / SSO"
+    "OAuth / SSO",
+    "Photoshop"
   ],
 
   "date": {
@@ -54,7 +55,9 @@
     "Teacher Platform Developer",
     "Reporting Systems Developer",
     "Database Architect",
-    "UI/UX Designer"
+    "UI/UX Designer",
+    "Product Designer",
+    "Visual UI Designer"    
   ],
 
   "description": "I repeatedly redesigned and rebuilt the teacher-management side of the Essential Skills platform as the student suite evolved from desktop Java through WebStart, Flash, HTML5, and React. The systems gave teachers a common way to manage classes and students, create assignments, run pre/post tests, review progress, print reports, analyze skills, view summaries and charts, and configure specialized programs. Later generations also integrated rostering, SSO, notifications, rewards, R2S, Mad Minute, and the Spelling Editor.",
@@ -168,6 +171,15 @@
       },
 
       {
+        "title": "2017 Suite-Wide Visual Modernization",
+        "paragraphs": [
+          "In 2017 I began a broader visual modernization of the Essential Skills educational suite while redesigning the Teacher Dashboard.",
+          "I created the new visual direction and UI graphics in Photoshop and carried that presentation across student-facing menus, progress and summary screens, rewards, badges, and other shared product surfaces.",
+          "The pure-JavaScript Teacher Dashboard was therefore part of a larger product modernization rather than an isolated administration-screen redesign."
+        ]
+      },
+
+      {
         "title": "Version 6 Administration",
         "paragraphs": [
           "Version 6 retained the Version 5 functionality while adding separate teacher and administrator access.",
@@ -176,10 +188,10 @@
       },
 
       {
-        "title": "Version 6.1: Traditional Web Dashboard Redesign",
+        "title": "Version 6.1: 2017 JavaScript Dashboard Redesign",
         "paragraphs": [
-          "Although I liked the streamlined Version 6 workflow, ownership preferred a more conventional dashboard design, so I redesigned the application again from top to bottom.",
-          "Version 6.1 used raw HTML5, Canvas, CSS, jQuery, and JavaScript and established much of the visual language that later carried forward into the React Teacher Dashboard."
+          "As part of the 2017 modernization effort, I redesigned the Teacher Dashboard again from top to bottom using raw HTML5, Canvas, CSS, jQuery, and JavaScript.",
+          "The new dashboard established much of the visual language that later carried forward into the React Teacher Dashboard."
         ],
         "items": [
           "Bar-chart summaries",
@@ -389,7 +401,23 @@
       {
         "type": "image",
         "src": "images/skills/work/marksman_4.jpg"
-      }
+      },
+      {
+        "type": "image",
+        "src": "images/skills/work/marksman_5.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/work/marksman_6.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/work/marksman_7.png"
+      },
+      {
+        "type": "image",
+        "src": "images/skills/work/marksman_8.jpg"
+      }      
     ]
   },
 
