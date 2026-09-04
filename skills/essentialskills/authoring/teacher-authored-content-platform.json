@@ -2,25 +2,299 @@
   "schemaVersion": 2,
   "id": "essentialskills/authoring/teacher-authored-content-platform",
   "title": "Teacher-Authored Content Platform",
-  "project": "Teacher-Authored Content Platform",
+  "project": "Version 7 Teacher Authoring",
   "platform": {
-    "label": "Project Type",
-    "values": []
+    "label": "Application Type",
+    "values": [
+      "Teacher Content Authoring Platform",
+      "Course / Lesson / Quiz Builder",
+      "EdTech Authoring System"
+    ]
   },
-  "technologies": [],
+  "technologies": [
+    "Angular 9–14",
+    "JavaScript",
+    "TypeScript",
+    "HTML5",
+    "Canvas",
+    "GraphQL",
+    "Node.js",
+    "PHP",
+    "AWS Lambda",
+    "Amazon DynamoDB",
+    "Amazon S3",
+    "CloudFront",
+    "AWS SimpleDB",
+    "EC2",
+    "Docker",
+    "JSON"
+  ],
   "date": {
-    "from": null,
-    "to": null,
-    "display": false
+    "from": "2020-03-16",
+    "to": "2022",
+    "display": true
   },
-  "description": "",
+  "team": {
+    "myPosition": "solo",
+    "myPositionLabel": "Software Architect / Lead Full-Stack Developer",
+    "total": 1,
+    "contributors": []
+  },
+  "roles": [
+    "Software Architect",
+    "Lead Full-Stack Developer",
+    "Angular Developer",
+    "EdTech Platform Developer",
+    "Authoring Tools Developer",
+    "Backend Developer",
+    "Cloud Architect",
+    "UI/UX Designer"
+  ],
+  "description": "I designed and built a complete teacher-facing content platform that let educators create Courses, Lessons, and Quizzes from reusable interactive activity templates. The system brought the compositional ideas of my earlier Hydra-Gen/EWidget architecture into a modern Angular and HTML5 workflow, while integrating authored content with the existing Essential Skills Teacher Dashboard, assignments, student marks, and reporting. I built the platform on a mostly serverless AWS architecture centered on DynamoDB, Lambda, S3, and CloudFront while preserving compatibility with the existing SimpleDB-based production ecosystem.",
   "details": {
-    "sections": []
+    "sections": [
+      {
+        "title": "Complete Teacher Authoring Platform",
+        "paragraphs": [
+          "I designed and built the platform as a complete teacher-facing authoring environment rather than a simple quiz form.",
+          "Teachers could create structured Courses containing Lessons and Quizzes, build interactive student content, preview it, test it privately, publish it into their teaching environment, assign it, and review the resulting student marks through the normal Essential Skills workflow."
+        ]
+      },
+      {
+        "title": "Course / Lesson / Quiz Model",
+        "paragraphs": [
+          "The authoring hierarchy was deliberately simple for teachers while allowing much richer content underneath."
+        ],
+        "items": [
+          "Course: a teacher-defined collection of Lessons and Quizzes",
+          "Lesson: instructional or practice content assembled from reusable activity templates",
+          "Quiz: assessable content integrated with assignment, marks, and reporting"
+        ]
+      },
+      {
+        "title": "Reusable Activity Templates",
+        "paragraphs": [
+          "Instead of forcing teachers to author one fixed activity type at a time, I built reusable question and activity templates that could be combined inside Lessons and Quizzes."
+        ],
+        "items": [
+          "Column Match",
+          "Column Match with Shapes",
+          "Ordered",
+          "Spelling",
+          "Math Facts",
+          "Multiple Choice",
+          "Multiple Choice with Images",
+          "Word Match"
+        ]
+      },
+      {
+        "title": "Composable Version 7 Runtime",
+        "paragraphs": [
+          "The runtime deliberately reintroduced the nested, compositional ideas from my earlier Hydra-Gen/EWidget architecture into the simpler Version 6 web lineage.",
+          "An authored activity could contain parent and child components rather than being limited to one monolithic question widget."
+        ]
+      },
+      {
+        "title": "Multiple Interactions in One Content Block",
+        "paragraphs": [
+          "A single sentence or authored block could combine several response mechanisms, allowing richer educational interactions without requiring the teacher to program."
+        ],
+        "items": [
+          "Type over or replace a word",
+          "Choose from alternative answers",
+          "Select part of a sentence to replace",
+          "Spaced or character-by-character typing",
+          "Image and sound resources",
+          "Nested interactive widgets"
+        ]
+      },
+      {
+        "title": "Linked Interactive Components",
+        "paragraphs": [
+          "The component system also supported coordinated visual and mathematical interactions rather than only isolated form controls.",
+          "One recovered trigonometry example displayed multiple sine/cosine-style representations together so dragging one control updated the related visual representations."
+        ]
+      },
+      {
+        "title": "Teacher-Owned Media",
+        "paragraphs": [
+          "Teachers could maintain their own image and sound resources, search their media library from the authoring environment, and reuse those resources while building Lessons and Quizzes.",
+          "This made teacher-created content a persistent personal resource rather than a one-off upload attached to a single question."
+        ]
+      },
+      {
+        "title": "Companion Mobile Media Uploader",
+        "paragraphs": [
+          "I also led an outsourced companion mobile-app experiment intended to make teacher media capture faster.",
+          "The external team wrote the Angular-based mobile application while I handled the product design, AWS account and topology, technical direction, QA, debugging, integration, and ongoing project management.",
+          "The goal was to let a teacher take a photo on a phone and upload it directly into the same personal media repository used by the Lesson Builder."
+        ]
+      },
+      {
+        "title": "Angular Evolution",
+        "paragraphs": [
+          "The authoring application evolved through Angular 9 to Angular 14 as the framework versions advanced.",
+          "I kept the application moving forward rather than freezing the authoring stack on its original Angular generation."
+        ]
+      },
+      {
+        "title": "Mostly Serverless AWS Architecture",
+        "paragraphs": [
+          "I designed the new content side primarily around DynamoDB, AWS Lambda, S3, and CloudFront so teacher-authored content and media could scale independently from the older production stack.",
+          "Serverless processing handled content and media workflows while released content could be delivered efficiently through S3 and CloudFront."
+        ]
+      },
+      {
+        "title": "Backward-Compatible Platform Modernization",
+        "paragraphs": [
+          "The new architecture did not require replacing the existing SimpleDB-backed school, student, assignment, and marks systems.",
+          "Teacher-authored content could therefore run inside the current Essential Skills ecosystem while the newer DynamoDB/Lambda/S3 content services evolved independently."
+        ]
+      },
+      {
+        "title": "Existing Teacher Dashboard Integration",
+        "paragraphs": [
+          "Once content was published to the teacher or school, it behaved like normal Essential Skills curriculum from the teacher's point of view.",
+          "Teachers could access it through the Teacher Dashboard, assign it to students, and use the normal reporting and marks workflow rather than switching to a separate administration product."
+        ]
+      },
+      {
+        "title": "Private Testing and School Publishing",
+        "paragraphs": [
+          "Teachers could build and test content privately before making it available for normal classroom use.",
+          "The production descendant of this architecture allowed a teacher to publish authored content to their own account, to the school, or to both, so other teachers at the same school could use it through the standard Teacher Dashboard."
+        ]
+      },
+      {
+        "title": "Content Lifecycle and Version Safety",
+        "paragraphs": [
+          "The platform separated rough authoring content from released content and was designed so later edits or deletion would not invalidate historical student results.",
+          "Content identity, release versions, marks, and media lifecycle were treated as separate concerns so teachers could continue improving material without corrupting earlier assignments."
+        ]
+      },
+      {
+        "title": "Phase-Two Sharing / Marketplace Architecture",
+        "paragraphs": [
+          "The longer-term design included a second phase where teachers could share, sell, or edit content across schools while Essential Skills participated in the transaction.",
+          "The initial product scope focused on teachers creating and using their own content; broader cross-school sharing and marketplace discovery were planned as a later layer."
+        ]
+      },
+      {
+        "title": "GraphQL API Experiment",
+        "paragraphs": [
+          "The original Version 7 authoring architecture used GraphQL substantially as the API and data-access layer.",
+          "After building and exercising the system, I concluded that the additional schema, resolver, and middle-layer complexity was not earning enough value for the narrowed production use case, so GraphQL was removed before the later Spelling List Editor release."
+        ]
+      },
+      {
+        "title": "Backend Architecture Experiments",
+        "paragraphs": [
+          "The broader Version 7 work also compared different backend and deployment approaches rather than assuming one stack was automatically best.",
+          "I experimented with PHP and Node services across EC2 and Lambda, along with Docker and multiple persistence options. The deeper database and platform tradeoffs are documented separately in the Version 7 architecture card."
+        ]
+      },
+      {
+        "title": "From Broad Authoring to Production Spelling",
+        "paragraphs": [
+          "The full Course/Lesson/Quiz platform reached a functional, near-release state before the product scope was narrowed to a simpler teacher workflow.",
+          "I evolved the same authoring architecture into the production Spelling List Editor rather than discarding the work."
+        ]
+      },
+      {
+        "title": "Production Lineage in the Spelling List Editor",
+        "paragraphs": [
+          "A meaningful part of the original authoring model survived in production through the Spelling List Editor.",
+          "Teachers could create spelling content, test it privately, publish it to their own account or the whole school, and then use that content through the Teacher Dashboard like a normal program, including assignment and reporting workflows."
+        ]
+      }
+    ]
   },
   "media": {
+    "thumbnail": null,
+    "primary": null,
     "items": []
   },
   "meta": {
-    "stage3Placeholder": true
+    "stage3Placeholder": false,
+    "historicalNotes": [
+      "The dated project anchor for the teacher-authored content platform is March 16, 2020.",
+      "Jamie designed and built the main Course/Lesson/Quiz authoring platform solo.",
+      "The Angular authoring application evolved through Angular 9 to Angular 14 as framework versions became available.",
+      "The broad platform was functional and close to release, with remaining QA work, before ownership decided the workflow was too complex for the target teacher audience.",
+      "Public wording should avoid framing the scope reduction as a dispute; describe the product as being narrowed before full launch into the production Spelling List Editor.",
+      "The main platform should be treated as solo development even though a separate outsourced mobile uploader involved an external development team.",
+      "The mobile media uploader was an outsourcing experiment led by Jamie with a team in India.",
+      "The outsourced team wrote the mobile app code; Jamie handled product design, AWS account setup, AWS topology, technical direction, QA, debugging, integration, meetings, and project management.",
+      "The outsourcing effort lasted approximately four months and consumed substantially more Jamie involvement than intended. Keep this context in meta rather than public-facing criticism.",
+      "The mobile app was Angular-based and wrapped for Android and iOS using a technology Jamie remembers as something like Capacitor; the exact wrapper technology is not confirmed and should not be listed publicly without source verification.",
+      "The companion app's purpose was to let teachers take photos and upload them directly into their personal media repository.",
+      "The original authoring system supported Courses, Lessons, and Quizzes.",
+      "Reusable templates included Column Match, Column Match (Shapes), Ordered, Spelling, Math Facts, Multiple Choice with Images, Multiple Choice, and Word Match.",
+      "The runtime reintroduced Hydra-Gen/EWidget-style nested and composable components into the Version 6 HTML5 lineage.",
+      "Authored content could mix multiple response mechanisms within a single content block.",
+      "A recovered trigonometry example demonstrates linked visual components where manipulating one representation updates related sine/cosine-style representations.",
+      "Teachers could maintain and search their own image and sound media.",
+      "The new content architecture was primarily DynamoDB + Lambda + S3, with CloudFront for released content delivery.",
+      "The system preserved interoperability with the existing SimpleDB-based Teacher Dashboard, assignments, marks, and reporting rather than requiring a full production rewrite.",
+      "GraphQL was used substantially in the broader Version 7 architecture and was removed before the narrowed production Spelling List Editor because the additional complexity did not justify itself for that use case.",
+      "The broader Version 7 work also compared PHP versus Node, EC2 versus Lambda, Docker, and multiple persistence approaches. Keep deeper infrastructure detail on the Version 7 Platform / Database Architecture card.",
+      "The intended content lifecycle included teacher rough/private content, teacher/class release, school release, and a later optional cross-school marketplace/sharing phase.",
+      "The planned marketplace was phase two: teachers could share, sell, or edit content across schools and Essential Skills would take a cut. It was not implemented as the initial product.",
+      "A substantial subset of the lifecycle reached production through the Spelling List Editor.",
+      "In the production Spelling List Editor lineage, teachers could create and privately test lists, publish them to their own account and/or the whole school, and access them from the Teacher Dashboard like regular programs.",
+      "Other teachers in the same school could use school-published lists and assign them through the normal dashboard/reporting workflow.",
+      "The missing piece for broader sharing was a user-facing interface for discovering/sharing content across schools.",
+      "Versioning/deletion semantics were designed to protect historical student marks when authored content changed or was removed.",
+      "The full platform was narrowed rather than technically abandoned; the Spelling List Editor is its focused production descendant."
+    ],
+    "confidence": {
+      "start2020Mar16": "high",
+      "soloMainPlatform": "high",
+      "angular9To14Evolution": "high",
+      "courseLessonQuizModel": "high",
+      "reusableActivityTemplates": "high",
+      "nestedComposableRuntime": "high",
+      "teacherOwnedMedia": "high",
+      "outsourcedMobileUploader": "high",
+      "mobileUploaderAngular": "high",
+      "mobileWrapperExactTechnology": "low",
+      "dynamoDbLambdaS3Architecture": "high",
+      "simpleDbCompatibility": "high",
+      "graphqlUse": "high",
+      "graphqlRemovedForProductionDescendant": "high",
+      "functionalNearReleasePlatform": "high",
+      "scopeNarrowedToSpellingEditor": "high",
+      "privateTeacherPublishing": "high",
+      "schoolPublishing": "high",
+      "teacherDashboardIntegration": "high",
+      "crossSchoolMarketplacePlannedPhaseTwo": "high",
+      "historicalMarksProtectedAcrossVersions": "high"
+    },
+    "projectTerminology": [
+      "Teacher-Authored Content Platform",
+      "Version 7",
+      "Course",
+      "Lesson",
+      "Quiz",
+      "Lesson Builder",
+      "Angular",
+      "Hydra-Gen",
+      "EWidget",
+      "GraphQL",
+      "DynamoDB",
+      "AWS Lambda",
+      "Amazon S3",
+      "CloudFront",
+      "SimpleDB",
+      "Teacher Dashboard",
+      "Spelling List Editor"
+    ],
+    "provenance": {
+      "derivedFrom": [
+        "Master Profile",
+        "Version 7 architecture archaeology",
+        "Stage 3 user clarification"
+      ]
+    }
   }
 }
